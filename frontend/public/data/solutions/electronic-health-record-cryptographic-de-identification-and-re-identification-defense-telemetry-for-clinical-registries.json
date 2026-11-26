@@ -17,7 +17,7 @@
   "firstSentence": "Sanitize Electronic Health Records for clinical trial registries with cryptographic k-anonymity and differential privacy, preventing linkage and re-identification attacks under DISHA mandates.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries",
   "paragraphs": [
     "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Sophisticated adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
@@ -113,7 +113,7 @@
     "subheadline": "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Sophisticated adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Preserves epidemiological statistical integrity while removing patient identity."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Preserves epidemiological statistical integrity while removing patient identity."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries Performance Telemetry",
       "layout": "centered-card"
     }

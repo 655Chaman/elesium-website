@@ -124,6 +124,8 @@ export default function Waitlist() {
     const [isLoading, setIsLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [confirmationCode, setConfirmationCode] = useState('');
+    const [shakeForm, setShakeForm] = useState(false);
+    const [validationError, setValidationError] = useState('');
 
     // Pre-select workflow if param updates
     useEffect(() => {
@@ -147,7 +149,14 @@ export default function Waitlist() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!workEmail || !fullName || !companyName) return;
+        if (!workEmail.trim() || !workEmail.includes('@') || !fullName.trim() || !companyName.trim()) {
+            setValidationError('Please enter your full name, corporate work email, and company name.');
+            setShakeForm(false);
+            requestAnimationFrame(() => setShakeForm(true));
+            setTimeout(() => setShakeForm(false), 500);
+            return;
+        }
+        setValidationError('');
 
         setIsLoading(true);
         const code = `ELE-IN-2026-${Math.random().toString(16).substring(2, 8).toUpperCase()}`;
@@ -201,10 +210,10 @@ export default function Waitlist() {
     }, [confirmationCode, fullName, companyName, role, workflow, hostingPreference]);
 
     const inputClass =
-        'w-full px-4 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/[0.04] text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:ring-2 focus:ring-emerald-500/50 dark:focus:ring-emerald-400/50 outline-none transition-all text-[14px]';
+        'w-full px-4 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black/20 dark:focus:ring-white/25 outline-none transition-all text-[14px]';
 
     const selectClass =
-        'w-full px-4 py-3.5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#121212] text-gray-900 dark:text-white focus:ring-2 focus:ring-emerald-500/50 dark:focus:ring-emerald-400/50 outline-none transition-all text-[14px] cursor-pointer appearance-none';
+        'w-full px-4 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white focus:ring-2 focus:ring-black/20 dark:focus:ring-white/25 outline-none transition-all text-[14px] cursor-pointer appearance-none';
 
     const location = useLocation();
     const pathname = location.pathname.toLowerCase();
@@ -237,7 +246,7 @@ export default function Waitlist() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative min-h-[100vh] pt-24 pb-20 px-5 md:px-8 bg-white dark:bg-black text-gray-900 dark:text-white font-sans transition-colors duration-300"
+            className="relative min-h-[100vh] pt-24 pb-20 px-5 md:px-8 bg-white dark:bg-black text-black dark:text-white font-sans transition-colors duration-300"
         >
             <Helmet>
                 <title>{pageTitle}</title>
@@ -259,10 +268,10 @@ export default function Waitlist() {
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Breadcrumb Navigation */}
-                <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 mb-8" aria-label="Breadcrumb">
+                <nav className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-8" aria-label="Breadcrumb">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
-                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                    <span className="text-gray-900 dark:text-gray-200">{breadcrumbLabel}</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+                    <span className="text-black dark:text-white">{breadcrumbLabel}</span>
                 </nav>
                 
                 {/* Contextual Referral Banner */}
@@ -270,21 +279,20 @@ export default function Waitlist() {
                     <motion.div 
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mb-8 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md flex flex-wrap items-center justify-between gap-4 text-xs font-mono"
+                        className="mb-8 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono"
                     >
                         <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                            <span className="text-emerald-400 font-bold uppercase tracking-wider">Solution Blueprint Ingested:</span>
+                            <span className="text-black dark:text-white font-bold uppercase tracking-wider">Solution Blueprint Ingested:</span>
                             {formattedSolutionTitle && (
-                                <span className="text-gray-200 font-sans font-semibold">
+                                <span className="text-neutral-700 dark:text-neutral-300 font-sans font-semibold">
                                     {formattedSolutionTitle}
                                 </span>
                             )}
                         </div>
                         {roiParam && (
-                            <div className="flex items-center gap-2 px-3 py-1 bg-black/40 border border-emerald-500/30 rounded-lg text-emerald-300">
+                            <div className="flex items-center gap-2 px-3 py-1 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-lg text-neutral-700 dark:text-neutral-300">
                                 <span>Target Annual Cost Elimination:</span>
-                                <strong className="font-bold text-white">₹{roiParam} Lakhs / Year</strong>
+                                <strong className="font-bold text-black dark:text-white">₹{roiParam} Lakhs / Year</strong>
                             </div>
                         )}
                     </motion.div>
@@ -296,82 +304,76 @@ export default function Waitlist() {
                     {/* Left Column: ele-in Platform Overview */}
                     <div className="lg:col-span-5 space-y-8">
                         <div>
-                            {/* Live Badge */}
-                            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white text-[11px] font-mono tracking-wider uppercase mb-6">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white text-[11px] font-mono tracking-wider uppercase mb-6">
                                 ele-in // Private Alpha Cohort Open
                             </div>
 
-                            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.15] mb-5">
+                            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-black dark:text-white leading-[1.15] mb-5">
                                 ele-in <br className="hidden sm:block" />
                                 Sovereign AI Platform
                             </h1>
 
-                            <p className="text-[15px] text-gray-600 dark:text-gray-400 leading-relaxed">
-                                <strong className="text-gray-900 dark:text-white font-semibold">ele-in</strong> is Elesium's autonomous multi-agent enterprise SaaS platform. Built for engineering teams, CTOs, and operations leaders to deploy deterministic, sovereign AI agents across legacy enterprise workflows with zero token leakage.
+                            <p className="text-[15px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                <strong className="text-black dark:text-white font-semibold">ele-in</strong> is Elesium&apos;s autonomous multi-agent enterprise SaaS platform. Built for engineering teams, CTOs, and operations leaders to deploy deterministic, sovereign AI agents across legacy enterprise workflows with zero token leakage.
                             </p>
                         </div>
 
                         {/* ele-in Core SaaS Architecture Pillars */}
-                        <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.03] border border-gray-200/80 dark:border-white/10 shadow-sm space-y-4">
-                            <h3 className="text-xs font-mono font-semibold tracking-wider uppercase text-gray-400">
+                        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-4">
+                            <h3 className="text-xs font-mono font-semibold tracking-wider uppercase text-neutral-500">
                                 What ele-in Delivers Out of the Box
                             </h3>
                             <div className="space-y-3.5 text-[14px]">
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
+                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
                                         <Layers className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-gray-900 dark:text-white font-medium block">Visual Multi-Agent Canvas</strong>
-                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Orchestrate LangGraph cyclic state machines, human-in-the-loop gates, and deterministic fallbacks visually.</span>
+                                        <strong className="text-black dark:text-white font-medium block">Visual Multi-Agent Canvas</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Orchestrate LangGraph cyclic state machines, human-in-the-loop gates, and deterministic fallbacks visually.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
+                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
                                         <ShieldCheck className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-gray-900 dark:text-white font-medium block">Air-Gapped Sovereign Privacy</strong>
-                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Local PII scrubbing (Verhoeff Aadhaar / PAN) and 100% compliance with India's DPDP Act 2023.</span>
+                                        <strong className="text-black dark:text-white font-medium block">Air-Gapped Sovereign Privacy</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Local PII scrubbing (Verhoeff Aadhaar / PAN) and 100% compliance with India&apos;s DPDP Act 2023.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
+                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
                                         <Cpu className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-gray-900 dark:text-white font-medium block">Sub-200ms Execution Latency</strong>
-                                        <span className="text-gray-500 dark:text-gray-400 text-xs">High-throughput streaming engine with automated rollback checkpoints and verifiable state receipts.</span>
+                                        <strong className="text-black dark:text-white font-medium block">Sub-200ms Execution Latency</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">High-throughput streaming engine with automated rollback checkpoints and verifiable state receipts.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="p-1 rounded bg-emerald-500/10 text-emerald-400 mt-0.5">
+                                    <div className="p-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white mt-0.5">
                                         <Server className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-gray-900 dark:text-white font-medium block">Turnkey ERP &amp; Banking Bridges</strong>
-                                        <span className="text-gray-500 dark:text-gray-400 text-xs">Pre-built connectors into SAP S/4HANA, Salesforce, Tally ERP, and Core Banking APIs.</span>
+                                        <strong className="text-black dark:text-white font-medium block">Turnkey ERP &amp; Banking Bridges</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Pre-built connectors into SAP S/4HANA, Salesforce, Tally ERP, and Core Banking APIs.</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Enterprise Consulting & Custom Architecture Notice */}
-                        <div className="p-5 rounded-2xl bg-white/[0.02] border border-gray-200/80 dark:border-white/10 space-y-3">
-                            <div className="flex items-center gap-2">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                <span className="text-xs font-semibold text-gray-900 dark:text-white">Need Custom Enterprise Deployment Today?</span>
-                            </div>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                        <div className="p-5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-3">
+                            <span className="text-xs font-semibold text-black dark:text-white block">Need Custom Enterprise Deployment Today?</span>
+                            <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                 Looking for custom sovereign VPC engineering, dedicated on-premise GPU pods, or immediate technical scoping? All enterprise appointments route exclusively through our WhatsApp engineering desk.
                             </p>
                             <button
                                 type="button"
                                 onClick={openWhatsApp}
-                                className="w-full h-11 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 text-xs font-semibold shadow-sm transition-all flex items-center justify-center gap-2"
+                                className="w-full h-11 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] text-xs font-semibold transition-all flex items-center justify-center gap-2"
                             >
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
                             </button>
                         </div>
@@ -384,33 +386,41 @@ export default function Waitlist() {
                             {!submitted ? (
                                 <motion.form
                                     key="ele-in-form"
-                                    initial={{ opacity: 0, y: 15 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, scale: 0.98 }}
+                                    initial={{ opacity: 0, scale: 0.97, y: 12 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.97 }}
+                                    transition={{ type: 'spring', stiffness: 280, damping: 26 }}
                                     onSubmit={handleSubmit}
-                                    className="p-6 md:p-10 rounded-3xl bg-white dark:bg-[#0c0c0c] border border-gray-200 dark:border-white/10 shadow-xl space-y-6"
+                                    noValidate
+                                    className={`p-6 md:p-10 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-6 ${shakeForm ? 'animate-shake' : ''}`}
                                 >
-                                    <div className="border-b border-gray-100 dark:border-white/5 pb-5">
+                                    <div className="border-b border-neutral-200 dark:border-white/10 pb-5">
                                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                                             <div>
-                                                <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                <h2 className="text-xl font-bold tracking-tight text-black dark:text-white">
                                                     Request Early Access to ele-in
                                                 </h2>
-                                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">
                                                     Enter your corporate details to join the private alpha cohort.
                                                 </p>
                                             </div>
-                                            <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-semibold">
+                                            <span className="px-3 py-1 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono font-semibold">
                                                 Alpha Batch 2026
                                             </span>
                                         </div>
                                     </div>
 
+                                    {validationError && (
+                                        <div className="p-3 rounded-lg border border-black/30 dark:border-white/30 bg-white dark:bg-black text-xs font-mono text-black dark:text-white">
+                                            {validationError}
+                                        </div>
+                                    )}
+
                                     {/* Name & Email Row */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
-                                            <label htmlFor="fullName" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Full Name &amp; Title <span className="text-emerald-500">*</span>
+                                            <label htmlFor="fullName" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
+                                                Full Name &amp; Title <span className="text-black dark:text-white">*</span>
                                             </label>
                                             <input
                                                 required
@@ -425,11 +435,11 @@ export default function Waitlist() {
                                         </div>
                                         <div>
                                             <div className="flex justify-between items-center mb-2">
-                                                <label htmlFor="workEmail" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider">
-                                                    Corporate Work Email <span className="text-emerald-500">*</span>
+                                                <label htmlFor="workEmail" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider">
+                                                    Corporate Work Email <span className="text-black dark:text-white">*</span>
                                                 </label>
                                                 {isGenericEmail && (
-                                                    <span className="text-[10px] text-amber-500 font-mono">
+                                                    <span className="text-[10px] text-neutral-600 dark:text-neutral-400 font-mono">
                                                         Corporate domain preferred
                                                     </span>
                                                 )}
@@ -441,7 +451,7 @@ export default function Waitlist() {
                                                 value={workEmail}
                                                 onChange={e => setWorkEmail(e.target.value)}
                                                 placeholder="v.seth@company.com"
-                                                className={`${inputClass} ${isGenericEmail ? 'border-amber-500/50 focus:ring-amber-500/30' : ''}`}
+                                                className={inputClass}
                                                 disabled={isLoading}
                                             />
                                         </div>
@@ -450,8 +460,8 @@ export default function Waitlist() {
                                     {/* Company & Website Row */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
-                                            <label htmlFor="companyName" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                                Company / Enterprise <span className="text-emerald-500">*</span>
+                                            <label htmlFor="companyName" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
+                                                Company / Enterprise <span className="text-black dark:text-white">*</span>
                                             </label>
                                             <input
                                                 required
@@ -465,7 +475,7 @@ export default function Waitlist() {
                                             />
                                         </div>
                                         <div>
-                                            <label htmlFor="companyWebsite" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                                            <label htmlFor="companyWebsite" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
                                                 Company Website
                                             </label>
                                             <input
@@ -482,8 +492,8 @@ export default function Waitlist() {
 
                                     {/* Executive Role Selection */}
                                     <div>
-                                        <label htmlFor="role" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                            Your Role in the Enterprise <span className="text-emerald-500">*</span>
+                                        <label htmlFor="role" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
+                                            Your Role in the Enterprise <span className="text-black dark:text-white">*</span>
                                         </label>
                                         <select
                                             id="role"
@@ -493,7 +503,7 @@ export default function Waitlist() {
                                             disabled={isLoading}
                                         >
                                             {EXECUTIVE_ROLES.map(r => (
-                                                <option key={r} value={r} className="bg-white dark:bg-[#121212] text-gray-900 dark:text-white">
+                                                <option key={r} value={r} className="bg-white dark:bg-black text-black dark:text-white">
                                                     {r}
                                                 </option>
                                             ))}
@@ -502,8 +512,8 @@ export default function Waitlist() {
 
                                     {/* Workflow Domain Selection */}
                                     <div>
-                                        <label htmlFor="workflow" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                            Primary Workflow for ele-in <span className="text-emerald-500">*</span>
+                                        <label htmlFor="workflow" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
+                                            Primary Workflow for ele-in <span className="text-black dark:text-white">*</span>
                                         </label>
                                         <select
                                             id="workflow"
@@ -513,7 +523,7 @@ export default function Waitlist() {
                                             disabled={isLoading}
                                         >
                                             {WORKFLOW_DOMAINS.map(w => (
-                                                <option key={w.id} value={w.label} className="bg-white dark:bg-[#121212] text-gray-900 dark:text-white">
+                                                <option key={w.id} value={w.label} className="bg-white dark:bg-black text-black dark:text-white">
                                                     {w.label}
                                                 </option>
                                             ))}
@@ -522,8 +532,8 @@ export default function Waitlist() {
 
                                     {/* Hosting / Deployment Preference */}
                                     <div>
-                                        <label htmlFor="hostingPreference" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
-                                            Target Hosting Environment <span className="text-emerald-500">*</span>
+                                        <label htmlFor="hostingPreference" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
+                                            Target Hosting Environment <span className="text-black dark:text-white">*</span>
                                         </label>
                                         <select
                                             id="hostingPreference"
@@ -533,7 +543,7 @@ export default function Waitlist() {
                                             disabled={isLoading}
                                         >
                                             {HOSTING_PREFERENCES.map(h => (
-                                                <option key={h.id} value={h.label} className="bg-white dark:bg-[#121212] text-gray-900 dark:text-white">
+                                                <option key={h.id} value={h.label} className="bg-white dark:bg-black text-black dark:text-white">
                                                     {h.label}
                                                 </option>
                                             ))}
@@ -542,7 +552,7 @@ export default function Waitlist() {
 
                                     {/* Statutory Compliance Checklist */}
                                     <div>
-                                        <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                                        <label className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
                                             Statutory &amp; Security Constraints
                                         </label>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
@@ -553,14 +563,14 @@ export default function Waitlist() {
                                                         type="button"
                                                         key={standard}
                                                         onClick={() => toggleCompliance(standard)}
-                                                        className={`p-3 rounded-xl border text-left text-xs font-medium transition-all flex items-center justify-between ${
+                                                        className={`p-3 rounded-lg border text-left text-xs font-medium active:scale-[0.97] transition-all flex items-center justify-between ${
                                                             isChecked
-                                                                ? 'border-emerald-500/50 bg-emerald-500/10 text-gray-900 dark:text-white'
-                                                                : 'border-gray-200 dark:border-white/10 hover:border-gray-300 dark:hover:border-white/20 text-gray-600 dark:text-gray-400'
+                                                                ? 'border-black dark:border-white bg-black text-white dark:bg-white dark:text-black'
+                                                                : 'border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:border-neutral-400 dark:hover:border-white/25 text-neutral-600 dark:text-neutral-400'
                                                         }`}
                                                     >
                                                         <span>{standard}</span>
-                                                        {isChecked && <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />}
+                                                        {isChecked && <Check className="w-3.5 h-3.5 shrink-0" />}
                                                     </button>
                                                 );
                                             })}
@@ -569,7 +579,7 @@ export default function Waitlist() {
 
                                     {/* Brief Notes */}
                                     <div>
-                                        <label htmlFor="notes" className="block text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                                        <label htmlFor="notes" className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 uppercase tracking-wider mb-2">
                                             Current Bottleneck &amp; Specific Use Case
                                         </label>
                                         <textarea
@@ -586,12 +596,12 @@ export default function Waitlist() {
                                     {/* Submit Button */}
                                     <button
                                         type="submit"
-                                        disabled={isLoading || !fullName || !workEmail || !companyName}
-                                        className="w-full py-4 px-6 rounded-full bg-black text-white hover:opacity-90 dark:bg-white dark:text-black font-semibold text-sm transition-all shadow-md flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+                                        disabled={isLoading}
+                                        className="w-full py-4 px-6 rounded-lg bg-black text-white hover:opacity-90 dark:bg-white dark:text-black font-semibold text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isLoading ? (
                                             <span className="flex items-center gap-2">
-                                                <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                                                <span className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
                                                 <span>Registering Priority Node...</span>
                                             </span>
                                         ) : (
@@ -603,8 +613,8 @@ export default function Waitlist() {
                                     </button>
 
                                     {/* Footnote */}
-                                    <div className="flex items-center justify-center gap-2 text-center text-[11px] text-gray-400 dark:text-gray-500 pt-2">
-                                        <Lock className="w-3.5 h-3.5 text-emerald-400" />
+                                    <div className="flex items-center justify-center gap-2 text-center text-[11px] text-neutral-500 pt-2">
+                                        <Lock className="w-3.5 h-3.5 text-neutral-500" />
                                         <span>Corporate Privacy Guarantee. Zero third-party telemetry or public LLM leakage.</span>
                                     </div>
                                 </motion.form>
@@ -612,58 +622,57 @@ export default function Waitlist() {
                                 /* Confirmation Screen */
                                 <motion.div
                                     key="ele-in-confirmation"
-                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    initial={{ opacity: 0, scale: 0.97 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.4 }}
-                                    className="p-8 md:p-12 rounded-3xl bg-white dark:bg-[#0c0c0c] border border-emerald-500/30 shadow-2xl space-y-8 text-center"
+                                    transition={{ type: 'spring', stiffness: 300, damping: 28 }}
+                                    className="p-8 md:p-12 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-8 text-center"
                                 >
-                                    {/* Success Ring */}
-                                    <div className="relative flex items-center justify-center h-20 w-20 mx-auto">
-                                        <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
-                                            <CheckCircle2 className="w-8 h-8" />
+                                    <div className="relative flex items-center justify-center h-16 w-16 mx-auto">
+                                        <span className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white">
+                                            <CheckCircle2 className="w-6 h-6" />
                                         </span>
                                     </div>
 
                                     <div>
-                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-mono font-semibold uppercase tracking-wider mb-4">
                                             Priority Node Registered // ele-in Alpha
                                         </div>
-                                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white tracking-tight">
                                             You Are On The ele-in Waitlist
                                         </h3>
-                                        <p className="text-[15px] text-gray-500 dark:text-gray-400 mt-2 max-w-md mx-auto leading-relaxed">
-                                            Your private tenant allocation has been staged. As alpha slots open, an onboarding key will be dispatched to <strong className="text-gray-900 dark:text-white font-medium">{workEmail}</strong>.
+                                        <p className="text-[15px] text-neutral-600 dark:text-neutral-400 mt-2 max-w-md mx-auto leading-relaxed">
+                                            Your private tenant allocation has been staged. As alpha slots open, an onboarding key will be dispatched to <strong className="text-black dark:text-white font-medium">{workEmail}</strong>.
                                         </p>
                                     </div>
 
                                     {/* Technical Ingestion Receipt */}
-                                    <div className="w-full max-w-md mx-auto bg-gray-50 dark:bg-black/60 border border-gray-200 dark:border-white/10 rounded-2xl p-5 text-left font-mono text-xs space-y-2.5">
-                                        <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
-                                            <span className="text-gray-400">WAITLIST REF</span>
-                                            <span className="text-emerald-400 font-bold">{confirmationCode}</span>
+                                    <div className="w-full max-w-md mx-auto bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-xl p-5 text-left font-mono text-xs space-y-2.5">
+                                        <div className="flex justify-between border-b border-neutral-200 dark:border-white/10 pb-2">
+                                            <span className="text-neutral-500">WAITLIST REF</span>
+                                            <span className="text-black dark:text-white font-bold">{confirmationCode}</span>
                                         </div>
-                                        <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
-                                            <span className="text-gray-400">PRODUCT</span>
-                                            <span className="text-white font-medium">ele-in (SaaS)</span>
+                                        <div className="flex justify-between border-b border-neutral-200 dark:border-white/10 pb-2">
+                                            <span className="text-neutral-500">PRODUCT</span>
+                                            <span className="text-black dark:text-white font-medium">ele-in (SaaS)</span>
                                         </div>
-                                        <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
-                                            <span className="text-gray-400">ORGANIZATION</span>
-                                            <span className="text-white font-medium truncate max-w-[200px]">{companyName}</span>
+                                        <div className="flex justify-between border-b border-neutral-200 dark:border-white/10 pb-2">
+                                            <span className="text-neutral-500">ORGANIZATION</span>
+                                            <span className="text-black dark:text-white font-medium truncate max-w-[200px]">{companyName}</span>
                                         </div>
-                                        <div className="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
-                                            <span className="text-gray-400">TARGET WORKFLOW</span>
-                                            <span className="text-white truncate max-w-[200px]">{workflow}</span>
+                                        <div className="flex justify-between border-b border-neutral-200 dark:border-white/10 pb-2">
+                                            <span className="text-neutral-500">TARGET WORKFLOW</span>
+                                            <span className="text-black dark:text-white truncate max-w-[200px]">{workflow}</span>
                                         </div>
                                         <div className="flex justify-between pt-1">
-                                            <span className="text-gray-400">STATUS</span>
-                                            <span className="text-emerald-400 font-semibold">Priority Alpha Queue</span>
+                                            <span className="text-neutral-500">STATUS</span>
+                                            <span className="text-black dark:text-white font-semibold">Priority Alpha Queue</span>
                                         </div>
                                     </div>
 
                                     {/* Direct WhatsApp Callout for Immediate Scoping */}
-                                    <div className="max-w-md mx-auto p-4 rounded-2xl bg-white/[0.02] border border-white/10 text-left space-y-2">
-                                        <span className="text-xs font-semibold text-white block">Need Custom Architecture or Immediate Deployment?</span>
-                                        <p className="text-[11px] text-gray-400">
+                                    <div className="max-w-md mx-auto p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-left space-y-2">
+                                        <span className="text-xs font-semibold text-black dark:text-white block">Need Custom Architecture or Immediate Deployment?</span>
+                                        <p className="text-[11px] text-neutral-600 dark:text-neutral-400">
                                             All enterprise audits and custom multi-agent scoping sessions route directly through our Lead Architect on WhatsApp.
                                         </p>
                                     </div>
@@ -673,20 +682,19 @@ export default function Waitlist() {
                                         <button
                                             type="button"
                                             onClick={openWhatsApp}
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-black font-semibold text-xs hover:bg-neutral-200 shadow-sm transition-all"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-black text-white dark:bg-white dark:text-black font-semibold text-xs hover:opacity-90 active:scale-[0.97] transition-all"
                                         >
-                                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                             <span>Chat on WhatsApp</span>
                                         </button>
                                         <a
                                             href={whatsappUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 text-xs font-medium transition-all"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white text-xs font-medium active:scale-[0.97] transition-all"
                                         >
-                                            <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+                                            <MessageSquare className="w-3.5 h-3.5" />
                                             <span>Direct WhatsApp Link</span>
-                                            <ExternalLink className="w-3 h-3 text-gray-400" />
+                                            <ExternalLink className="w-3 h-3 text-neutral-400" />
                                         </a>
                                     </div>
                                 </motion.div>

@@ -55,9 +55,9 @@ export default function EnterpriseAgentMemoryDriftSimulator() {
     return simulateAgentMemoryDrift(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-memory-drift-compression-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-memory-drift-compression-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedToClipboard = () => {
@@ -108,7 +108,7 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Autonomous Agent Memory Drift &amp; Long-Horizon Context Compression Simulator | Elesium</title>
         <meta
@@ -119,16 +119,16 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
       </Helmet>
 
       {/* Hero Section */}
-      <header className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800 bg-slate-950">
+      <header className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-neutral-800 bg-neutral-950">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono uppercase tracking-wider mb-6">
             <Brain className="w-4 h-4" />
             <span>Interactive Long-Horizon Memory &amp; Context Compression Lab</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
             Enterprise Autonomous Agent Memory Drift &amp; Context Compression Simulator
           </h1>
-          <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
             Simulate and benchmark multi-turn agent memory retention. Contrast uncompressed FIFO prompt bloat against naive sliding window amnesia and sovereign hierarchical semantic memory with 92.4% context compression and sub-85ms state recall.
           </p>
         </div>
@@ -137,22 +137,22 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
       {/* Main Interactive Grid */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Sliders Block */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8 shadow-2xl">
-          <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 sm:p-8 mb-8 shadow-2xl">
+          <div className="flex items-center justify-between mb-6 pb-4 border-b border-neutral-800">
             <div className="flex items-center gap-2">
-              <Sliders className="w-5 h-5 text-cyan-400" />
+              <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-lg font-bold text-white">Multi-Turn Session &amp; Memory Parameters</h2>
             </div>
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 transition-colors"
+              className="active:scale-[0.97] text-xs font-mono text-neutral-200 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/20 transition-colors"
             >
               <Code className="w-3.5 h-3.5" />
               <span>Embed Widget</span>
@@ -163,8 +163,8 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
             {/* Monthly Sessions Slider */}
             <div>
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-300">Monthly Multi-Turn Sessions</span>
-                <span className="text-cyan-400 font-bold">{(monthlyMultiTurnSessions / 1000).toFixed(0)}k sessions</span>
+                <span className="text-neutral-300">Monthly Multi-Turn Sessions</span>
+                <span className="text-white font-bold">{(monthlyMultiTurnSessions / 1000).toFixed(0)}k sessions</span>
               </div>
               <input
                 type="range"
@@ -173,9 +173,9 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
                 step={10000}
                 value={monthlyMultiTurnSessions}
                 onChange={(e) => setMonthlyMultiTurnSessions(Number(e.target.value))}
-                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
               />
-              <span className="text-[11px] text-slate-400 mt-1 block">
+              <span className="text-[11px] text-neutral-400 mt-1 block">
                 Total complex agentic workflows executed across enterprise teams.
               </span>
             </div>
@@ -183,8 +183,8 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
             {/* Average Turns Per Session Slider */}
             <div>
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-300">Interaction Depth (Turns/Session)</span>
-                <span className="text-cyan-400 font-bold">{avgTurnsPerSession} turns</span>
+                <span className="text-neutral-300">Interaction Depth (Turns/Session)</span>
+                <span className="text-white font-bold">{avgTurnsPerSession} turns</span>
               </div>
               <input
                 type="range"
@@ -193,9 +193,9 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
                 step={5}
                 value={avgTurnsPerSession}
                 onChange={(e) => setAvgTurnsPerSession(Number(e.target.value))}
-                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
               />
-              <span className="text-[11px] text-slate-400 mt-1 block">
+              <span className="text-[11px] text-neutral-400 mt-1 block">
                 Number of back-and-forth reasoning steps and tool calls per session.
               </span>
             </div>
@@ -203,8 +203,8 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
             {/* Tokens Per Turn Slider */}
             <div>
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-300">Tokens Generated Per Turn</span>
-                <span className="text-cyan-400 font-bold">{tokensPerTurnBaseline} tokens</span>
+                <span className="text-neutral-300">Tokens Generated Per Turn</span>
+                <span className="text-white font-bold">{tokensPerTurnBaseline} tokens</span>
               </div>
               <input
                 type="range"
@@ -213,9 +213,9 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
                 step={50}
                 value={tokensPerTurnBaseline}
                 onChange={(e) => setTokensPerTurnBaseline(Number(e.target.value))}
-                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
               />
-              <span className="text-[11px] text-slate-400 mt-1 block">
+              <span className="text-[11px] text-neutral-400 mt-1 block">
                 Average prompt context and output payload generated in each turn.
               </span>
             </div>
@@ -224,56 +224,56 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
 
         {/* Top Impact KPI Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-emerald-500"></div>
-            <span className="text-xs font-mono uppercase text-slate-400 block mb-1">Annual Savings</span>
-            <span className="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-white/80"></div>
+            <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Annual Savings</span>
+            <span className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
               ${(results.annualCostSavingsUSD / 1000).toFixed(1)}k
             </span>
-            <span className="text-xs text-slate-400 block mt-1">Tokens &amp; Triage Reruns</span>
+            <span className="text-xs text-neutral-400 block mt-1">Tokens &amp; Triage Reruns</span>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-cyan-500"></div>
-            <span className="text-xs font-mono uppercase text-slate-400 block mb-1">Context Compression</span>
-            <span className="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-white/80"></div>
+            <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Context Compression</span>
+            <span className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
               {results.tokenCompressionPct}%
             </span>
-            <span className="text-xs text-slate-400 block mt-1">Active Window Token Cut</span>
+            <span className="text-xs text-neutral-400 block mt-1">Active Window Token Cut</span>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-purple-500"></div>
-            <span className="text-xs font-mono uppercase text-slate-400 block mb-1">Drift Suppression</span>
-            <span className="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-white/80"></div>
+            <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Drift Suppression</span>
+            <span className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
               {results.driftSuppressionPct}%
             </span>
-            <span className="text-xs text-slate-400 block mt-1">&lt;0.05% Error across 50+ Turns</span>
+            <span className="text-xs text-neutral-400 block mt-1">&lt;0.05% Error across 50+ Turns</span>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl relative overflow-hidden">
+          <div className="bg-neutral-900 border border-neutral-800 p-5 rounded-xl relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-amber-500"></div>
-            <span className="text-xs font-mono uppercase text-slate-400 block mb-1">Recall Latency</span>
+            <span className="text-xs font-mono uppercase text-neutral-400 block mb-1">Recall Latency</span>
             <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">
               {results.sovereignHierarchical.retrievalLatencyOverheadMs} ms
             </span>
-            <span className="text-xs text-slate-400 block mt-1">In-Memory Semantic Recall</span>
+            <span className="text-xs text-neutral-400 block mt-1">In-Memory Semantic Recall</span>
           </div>
         </div>
 
         {/* 3-Tier Architecture Benchmark Table */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mb-8 shadow-2xl">
-          <div className="p-5 border-b border-slate-800 flex items-center justify-between">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden mb-8 shadow-2xl">
+          <div className="p-5 border-b border-neutral-800 flex items-center justify-between">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
-              <Database className="w-4 h-4 text-cyan-400" />
+              <Database className="w-4 h-4 text-neutral-200" />
               <span>Multi-Turn Memory Architecture Comparison</span>
             </h3>
-            <span className="text-xs font-mono text-slate-400">Context Window &amp; Attention Analysis</span>
+            <span className="text-xs font-mono text-neutral-400">Context Window &amp; Attention Analysis</span>
           </div>
 
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs font-mono">
-              <thead className="bg-slate-950 text-slate-400 uppercase text-[10px] tracking-wider border-b border-slate-800">
+              <thead className="bg-neutral-950 text-neutral-400 uppercase text-[10px] tracking-wider border-b border-neutral-800">
                 <tr>
                   <th className="p-4">Memory Architecture</th>
                   <th className="p-4">Compression Ratio</th>
@@ -284,44 +284,44 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
                   <th className="p-4">Annual Cost Impact</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800 text-slate-200">
-                <tr className="hover:bg-slate-800/40 transition-colors">
-                  <td className="p-4 font-semibold text-rose-400 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-rose-500"></span>
+              <tbody className="divide-y divide-neutral-800 text-neutral-200">
+                <tr className="hover:bg-neutral-800/40 transition-colors">
+                  <td className="p-4 font-semibold text-red-400 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-red-500"></span>
                     <span>Uncompressed Raw Context (FIFO)</span>
                   </td>
-                  <td className="p-4 text-slate-400">0.0%</td>
-                  <td className="p-4 text-rose-400 font-bold">{results.uncompressedRaw.effectiveContextWindowTokens.toLocaleString()} tokens</td>
-                  <td className="p-4 text-rose-400 font-bold">+{results.uncompressedRaw.retrievalLatencyOverheadMs} ms</td>
-                  <td className="p-4 text-rose-400 font-bold">{results.uncompressedRaw.memoryDriftOrAmnesiaPct}% (High Drift)</td>
-                  <td className="p-4 text-slate-300">{results.uncompressedRaw.multiTurnTaskSuccessPct}%</td>
-                  <td className="p-4 text-rose-400 font-bold">${results.uncompressedRaw.annualizedTotalCostUSD.toLocaleString()}</td>
+                  <td className="p-4 text-neutral-400">0.0%</td>
+                  <td className="p-4 text-red-400 font-bold">{results.uncompressedRaw.effectiveContextWindowTokens.toLocaleString()} tokens</td>
+                  <td className="p-4 text-red-400 font-bold">+{results.uncompressedRaw.retrievalLatencyOverheadMs} ms</td>
+                  <td className="p-4 text-red-400 font-bold">{results.uncompressedRaw.memoryDriftOrAmnesiaPct}% (High Drift)</td>
+                  <td className="p-4 text-neutral-300">{results.uncompressedRaw.multiTurnTaskSuccessPct}%</td>
+                  <td className="p-4 text-red-400 font-bold">${results.uncompressedRaw.annualizedTotalCostUSD.toLocaleString()}</td>
                 </tr>
 
-                <tr className="hover:bg-slate-800/40 transition-colors">
+                <tr className="hover:bg-neutral-800/40 transition-colors">
                   <td className="p-4 font-semibold text-amber-400 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-amber-400"></span>
                     <span>Sliding Window Recency Truncation</span>
                   </td>
                   <td className="p-4 text-amber-400">{results.slidingWindow.contextCompressionRatioPct}%</td>
-                  <td className="p-4 text-slate-300">{results.slidingWindow.effectiveContextWindowTokens.toLocaleString()} tokens</td>
-                  <td className="p-4 text-slate-300">+{results.slidingWindow.retrievalLatencyOverheadMs} ms</td>
+                  <td className="p-4 text-neutral-300">{results.slidingWindow.effectiveContextWindowTokens.toLocaleString()} tokens</td>
+                  <td className="p-4 text-neutral-300">+{results.slidingWindow.retrievalLatencyOverheadMs} ms</td>
                   <td className="p-4 text-amber-400 font-bold">{results.slidingWindow.memoryDriftOrAmnesiaPct}% (Amnesia)</td>
                   <td className="p-4 text-amber-400">{results.slidingWindow.multiTurnTaskSuccessPct}%</td>
                   <td className="p-4 text-amber-400">${results.slidingWindow.annualizedTotalCostUSD.toLocaleString()}</td>
                 </tr>
 
-                <tr className="bg-cyan-500/5 hover:bg-cyan-500/10 transition-colors border-l-2 border-cyan-400">
-                  <td className="p-4 font-bold text-cyan-300 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-cyan-400" />
+                <tr className="bg-white/[0.03] hover:bg-neutral-200/10 transition-colors border-l-2 border-white/30">
+                  <td className="p-4 font-bold text-white flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-neutral-200" />
                     <span>Elesium Sovereign Hierarchical Memory</span>
                   </td>
-                  <td className="p-4 text-emerald-400 font-bold">{results.sovereignHierarchical.contextCompressionRatioPct}%</td>
-                  <td className="p-4 text-cyan-300 font-bold">{results.sovereignHierarchical.effectiveContextWindowTokens.toLocaleString()} tokens</td>
-                  <td className="p-4 text-cyan-300 font-bold">+{results.sovereignHierarchical.retrievalLatencyOverheadMs} ms</td>
-                  <td className="p-4 text-emerald-400 font-bold">&lt;0.05% (Zero Drift)</td>
-                  <td className="p-4 text-emerald-400 font-bold">{results.sovereignHierarchical.multiTurnTaskSuccessPct}%</td>
-                  <td className="p-4 text-emerald-400 font-bold">${results.sovereignHierarchical.annualizedTotalCostUSD.toLocaleString()}</td>
+                  <td className="p-4 text-white font-bold">{results.sovereignHierarchical.contextCompressionRatioPct}%</td>
+                  <td className="p-4 text-white font-bold">{results.sovereignHierarchical.effectiveContextWindowTokens.toLocaleString()} tokens</td>
+                  <td className="p-4 text-white font-bold">+{results.sovereignHierarchical.retrievalLatencyOverheadMs} ms</td>
+                  <td className="p-4 text-white font-bold">&lt;0.05% (Zero Drift)</td>
+                  <td className="p-4 text-white font-bold">{results.sovereignHierarchical.multiTurnTaskSuccessPct}%</td>
+                  <td className="p-4 text-white font-bold">${results.sovereignHierarchical.annualizedTotalCostUSD.toLocaleString()}</td>
                 </tr>
               </tbody>
             </table>
@@ -329,51 +329,51 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
         </div>
 
         {/* Executive Memo Generator */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8 shadow-2xl">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 sm:p-8 mb-8 shadow-2xl">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
-              <Layers className="w-4 h-4 text-cyan-400" />
+              <Layers className="w-4 h-4 text-neutral-200" />
               <span>Executive Context Architecture &amp; FinOps Memo</span>
             </h3>
             <button
               onClick={copyExecutiveMemo}
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white transition-colors flex items-center gap-1.5"
+              className="active:scale-[0.97] text-xs font-semibold px-3 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black transition-colors flex items-center gap-1.5"
             >
-              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-300" /> : <Copy className="w-3.5 h-3.5" />}
+              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
             </button>
           </div>
-          <p className="text-xs text-slate-400 mb-4 leading-relaxed">
+          <p className="text-xs text-neutral-400 mb-4 leading-relaxed">
             Generate an instant, mathematically verified architectural justification memo comparing hierarchical semantic memory against FIFO context accumulation:
           </p>
-          <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 font-mono text-xs text-slate-300 leading-relaxed overflow-x-auto select-all">
-            <p className="text-cyan-400 mb-2 font-bold">ENTERPRISE AGENT LONG-HORIZON MEMORY DRIFT &amp; CONTEXT COMPRESSION MEMO</p>
+          <div className="bg-neutral-950 border border-neutral-800 rounded-xl p-4 font-mono text-xs text-neutral-300 leading-relaxed overflow-x-auto select-all">
+            <p className="text-white mb-2 font-bold">ENTERPRISE AGENT LONG-HORIZON MEMORY DRIFT &amp; CONTEXT COMPRESSION MEMO</p>
             <p className="mb-2">Workload: {(inputs.monthlyMultiTurnSessions / 1000).toFixed(0)}k sessions/mo | Turns: {inputs.avgTurnsPerSession} | Tokens/Turn: {inputs.tokensPerTurnBaseline}</p>
-            <p className="text-slate-400 mb-1">1. Uncompressed FIFO: {results.uncompressedRaw.effectiveContextWindowTokens.toLocaleString()} peak tokens | Drift: {results.uncompressedRaw.memoryDriftOrAmnesiaPct}% | Annual Loss: ${results.uncompressedRaw.annualizedTotalCostUSD.toLocaleString()}</p>
+            <p className="text-neutral-400 mb-1">1. Uncompressed FIFO: {results.uncompressedRaw.effectiveContextWindowTokens.toLocaleString()} peak tokens | Drift: {results.uncompressedRaw.memoryDriftOrAmnesiaPct}% | Annual Loss: ${results.uncompressedRaw.annualizedTotalCostUSD.toLocaleString()}</p>
             <p className="text-amber-400 mb-1">2. Sliding Window: {results.slidingWindow.effectiveContextWindowTokens.toLocaleString()} tokens | Amnesia Rate: {results.slidingWindow.memoryDriftOrAmnesiaPct}% | Annual Loss: ${results.slidingWindow.annualizedTotalCostUSD.toLocaleString()}</p>
-            <p className="text-emerald-400 mb-2">3. Elesium Sovereign Hierarchical: {results.sovereignHierarchical.contextCompressionRatioPct}% compression | {results.sovereignHierarchical.retrievalLatencyOverheadMs}ms recall | Task Success: {results.sovereignHierarchical.multiTurnTaskSuccessPct}% | Net Savings: ${results.annualCostSavingsUSD.toLocaleString()}</p>
-            <p className="text-slate-400 font-semibold">RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta compression over uncompressed FIFO prompt accumulation for complex multi-turn enterprise agent workflows.</p>
+            <p className="text-neutral-200 mb-2">3. Elesium Sovereign Hierarchical: {results.sovereignHierarchical.contextCompressionRatioPct}% compression | {results.sovereignHierarchical.retrievalLatencyOverheadMs}ms recall | Task Success: {results.sovereignHierarchical.multiTurnTaskSuccessPct}% | Net Savings: ${results.annualCostSavingsUSD.toLocaleString()}</p>
+            <p className="text-neutral-400 font-semibold">RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta compression over uncompressed FIFO prompt accumulation for complex multi-turn enterprise agent workflows.</p>
           </div>
         </div>
 
         {/* FAQs Accordion */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8 shadow-2xl">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 sm:p-8 mb-8 shadow-2xl">
           <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
-            <Brain className="w-5 h-5 text-cyan-400" />
+            <Brain className="w-5 h-5 text-neutral-200" />
             <span>Frequently Asked Context Architecture &amp; Memory Questions</span>
           </h3>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-slate-800 rounded-xl overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full text-left p-4 flex items-center justify-between text-sm font-semibold text-slate-200 hover:text-cyan-400 bg-slate-950/50 transition-colors"
+                  className="active:scale-[0.97] w-full text-left p-4 flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white bg-neutral-950/50 transition-colors"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openFaq === idx ? 'rotate-180 text-cyan-400' : 'text-slate-400'}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openFaq === idx ? 'rotate-180 text-neutral-200' : 'text-neutral-400'}`} />
                 </button>
                 {openFaq === idx && (
-                  <div className="p-4 text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-950/20 border-t border-slate-800">
+                  <div className="p-4 text-xs sm:text-sm text-neutral-300 leading-relaxed bg-neutral-950/20 border-t border-neutral-800">
                     {faq.a}
                   </div>
                 )}
@@ -383,17 +383,17 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
         </div>
 
         {/* CTA Card */}
-        <div className="bg-gradient-to-r from-cyan-950/40 via-slate-900 to-slate-900 border border-cyan-500/30 rounded-2xl p-8 text-center relative overflow-hidden shadow-2xl">
+        <div className="bg-neutral-950 border border-white/20 rounded-xl p-8 text-center relative overflow-hidden shadow-2xl">
           <div className="max-w-2xl mx-auto space-y-4">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
               Eliminate Memory Drift Across Multi-Turn Enterprise Agents
             </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+            <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
               Elesium architects sovereign hierarchical memory systems with sub-85ms semantic recall and 92.4% context compression for enterprise BFSI, aerospace, and sovereign defense infrastructure.
             </p>
             <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
               <ExpandableScreen>
-                <ExpandableScreenTrigger className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-cyan-500/20 inline-flex items-center gap-2">
+                <ExpandableScreenTrigger className="px-6 py-3 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-sm transition-all shadow-lg inline-flex items-center gap-2">
                   <span>Schedule Architecture Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </ExpandableScreenTrigger>
@@ -403,7 +403,7 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
               </ExpandableScreen>
               <Link
                 to="/solutions/"
-                className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-colors border border-slate-700"
+                className="px-6 py-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-semibold text-sm transition-colors border border-neutral-700"
               >
                 Explore All Sovereign Solutions
               </Link>
@@ -415,30 +415,30 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white p-1"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1"
             >
               <X className="w-5 h-5" />
             </button>
             <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-              <Code className="w-5 h-5 text-cyan-400" />
+              <Code className="w-5 h-5 text-neutral-200" />
               Embed This Memory Drift Simulator
             </h3>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this snippet into your engineering documentation, intranet, or technical blog:
             </p>
-            <div className="bg-slate-950 border border-slate-800 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto mb-4 select-all">
+            <div className="bg-neutral-950 border border-neutral-800 rounded-lg p-3 font-mono text-xs text-neutral-300 overflow-x-auto mb-4 select-all">
               {embedCode}
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-[11px] text-slate-400">Watermarked to Elesium Sovereign Architecture</span>
+              <span className="text-[11px] text-neutral-400">Watermarked to Elesium Sovereign Architecture</span>
               <button
                 onClick={copyEmbedToClipboard}
-                className="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-xs transition-colors flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-colors flex items-center gap-1.5"
               >
-                {hasCopiedEmbed ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
+                {hasCopiedEmbed ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Code Copied!' : 'Copy Embed Snippet'}</span>
               </button>
             </div>

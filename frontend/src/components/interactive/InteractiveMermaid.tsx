@@ -95,11 +95,11 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
             {/* Toolbar */}
             <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-[#0C0F17] border-b border-white/5">
                 <div className="flex items-center gap-2">
-                    <GitBranch className="h-4 w-4 text-cyan-400" />
+                    <GitBranch className="h-4 w-4 text-neutral-200" />
                     <span className="text-xs font-mono font-semibold text-white/90">
                         {title}
                     </span>
-                    <span className="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                    <span className="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-neutral-200 border border-white/20">
                         Interactive SVG
                     </span>
                 </div>
@@ -134,7 +134,7 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                         onClick={handleCopyDsl}
                         className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 transition-colors"
                     >
-                        {copied ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                        {copied ? <Check className="h-3.5 w-3.5 text-neutral-200" /> : <Copy className="h-3.5 w-3.5" />}
                         <span>Mermaid DSL</span>
                     </button>
 
@@ -236,13 +236,13 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                 <div className="p-4 bg-[#0a0d14] border-t border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                         <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs font-mono font-bold text-cyan-400">
+                            <span className="text-xs font-mono font-bold text-neutral-200">
                                 Inspecting Node: {selectedNode.label}
                             </span>
                             <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-white/60">
                                 Zone: {selectedNode.zone}
                             </span>
-                            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">
+                            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-neutral-200">
                                 {selectedNode.latency}
                             </span>
                         </div>

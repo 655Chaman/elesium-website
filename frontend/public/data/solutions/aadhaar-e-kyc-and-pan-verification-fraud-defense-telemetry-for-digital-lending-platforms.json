@@ -17,7 +17,7 @@
   "firstSentence": "Defend digital lending platforms against synthetic identity fraud with real-time Aadhaar e-KYC XML verification, NSDL PAN cross-checking, and deepfake liveness telemetry.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms",
   "paragraphs": [
     "Digital lending apps and instant personal loan platforms in India face escalating losses from sophisticated fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
@@ -113,7 +113,7 @@
     "subheadline": "Digital lending apps and instant personal loan platforms in India face escalating losses from sophisticated fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Instant automated verification vs 24-hour manual back-office review."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Instant automated verification vs 24-hour manual back-office review."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms Performance Telemetry",
       "layout": "centered-card"
     }

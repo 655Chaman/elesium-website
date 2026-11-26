@@ -35,33 +35,33 @@ export default function EmbedAgentSequenceParallelismSimulator() {
   const results = useMemo(() => calculateSequenceParallelism(inputs), [inputs]);
 
   return (
-    <div className="bg-[#07090e] text-slate-100 p-5 rounded-xl border border-slate-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Sequence Parallelism Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-sequence-parallelism-simulator" />
       </Helmet>
 
       {/* Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-4">
+      <div className="flex items-center justify-between pb-3 border-b border-neutral-800/80 mb-4">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-cyan-950/80 border border-cyan-800/60 text-cyan-400">
+          <div className="p-1.5 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200">
             <Network className="w-4 h-4" />
           </div>
           <div>
             <h2 className="text-sm font-bold text-white leading-tight">
               Sequence Parallelism Simulator
             </h2>
-            <p className="text-[11px] text-slate-400">
+            <p className="text-[11px] text-neutral-400">
               Ring Self-Attention · P2P KV Overlap · 1M+ Context Token Inference
             </p>
           </div>
         </div>
         <span className={`text-[10px] font-bold px-2 py-0.5 rounded border ${
           results.slaStatus === 'SUB_10MS_1M_OPTIMAL'
-            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
+            ? 'bg-white/10 text-neutral-200 border-white/30'
             : results.slaStatus === 'ACCEPTABLE_PARTIAL_OVERLAP'
             ? 'bg-amber-500/20 text-amber-400 border-amber-500/40'
-            : 'bg-rose-500/20 text-rose-400 border-rose-500/40'
+            : 'bg-red-500/20 text-red-400 border-red-500/40'
         }`}>
           {results.slaStatus.replace(/_/g, ' ')}
         </span>
@@ -71,11 +71,11 @@ export default function EmbedAgentSequenceParallelismSimulator() {
       <div className="space-y-3 mb-4">
         <div className="grid grid-cols-2 gap-2 text-xs">
           <div>
-            <label className="text-[11px] text-slate-400 block mb-1">Architecture</label>
+            <label className="text-[11px] text-neutral-400 block mb-1">Architecture</label>
             <select
               value={modelArchitecture}
               onChange={(e) => setModelArchitecture(e.target.value as ModelArchitecture)}
-              className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white"
+              className="w-full bg-neutral-900 border border-neutral-700 rounded p-1.5 text-xs text-white"
             >
               <option value="llama_3_1_70b">Llama-3.1-70B</option>
               <option value="deepseek_v2_236b">DeepSeek-V2 MoE</option>
@@ -84,11 +84,11 @@ export default function EmbedAgentSequenceParallelismSimulator() {
             </select>
           </div>
           <div>
-            <label className="text-[11px] text-slate-400 block mb-1">Ring Mode</label>
+            <label className="text-[11px] text-neutral-400 block mb-1">Ring Mode</label>
             <select
               value={ringMode}
               onChange={(e) => setRingMode(e.target.value as RingMode)}
-              className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white"
+              className="w-full bg-neutral-900 border border-neutral-700 rounded p-1.5 text-xs text-white"
             >
               <option value="async_p2p_overlap">Async P2P Overlap</option>
               <option value="double_buffered_ring">Double-Buffered Ring</option>
@@ -99,11 +99,11 @@ export default function EmbedAgentSequenceParallelismSimulator() {
 
         <div className="grid grid-cols-2 gap-2 text-xs">
           <div>
-            <label className="text-[11px] text-slate-400 block mb-1">Interconnect Fabric</label>
+            <label className="text-[11px] text-neutral-400 block mb-1">Interconnect Fabric</label>
             <select
               value={interconnect}
               onChange={(e) => setInterconnect(e.target.value as InterconnectType)}
-              className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white"
+              className="w-full bg-neutral-900 border border-neutral-700 rounded p-1.5 text-xs text-white"
             >
               <option value="nvlink_4_900gb">NVLink 4.0 (900 GB/s)</option>
               <option value="nvlink_3_600gb">NVLink 3.0 (600 GB/s)</option>
@@ -112,11 +112,11 @@ export default function EmbedAgentSequenceParallelismSimulator() {
             </select>
           </div>
           <div>
-            <label className="text-[11px] text-slate-400 block mb-1">SP Degree</label>
+            <label className="text-[11px] text-neutral-400 block mb-1">SP Degree</label>
             <select
               value={spDegree}
               onChange={(e) => setSpDegree(Number(e.target.value) as SpDegree)}
-              className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white"
+              className="w-full bg-neutral-900 border border-neutral-700 rounded p-1.5 text-xs text-white"
             >
               <option value={2}>SP-2 (2 GPUs)</option>
               <option value={4}>SP-4 (4 GPUs)</option>
@@ -128,9 +128,9 @@ export default function EmbedAgentSequenceParallelismSimulator() {
         </div>
 
         <div>
-          <div className="flex justify-between text-[11px] text-slate-400 mb-1">
+          <div className="flex justify-between text-[11px] text-neutral-400 mb-1">
             <span>Total Context Tokens</span>
-            <span className="text-cyan-400 font-mono">{totalContextTokens.toLocaleString()} tokens</span>
+            <span className="text-neutral-200 font-mono">{totalContextTokens.toLocaleString()} tokens</span>
           </div>
           <input
             type="range"
@@ -139,38 +139,38 @@ export default function EmbedAgentSequenceParallelismSimulator() {
             step={16384}
             value={totalContextTokens}
             onChange={(e) => setTotalContextTokens(Number(e.target.value))}
-            className="w-full accent-cyan-500 bg-slate-800"
+            className="w-full accent-white bg-neutral-800"
           />
         </div>
       </div>
 
       {/* Real-Time KPIs */}
-      <div className="grid grid-cols-3 gap-2 p-3 bg-slate-900/90 rounded-lg border border-slate-800 mb-4">
+      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/90 rounded-lg border border-neutral-800 mb-4">
         <div className="text-center">
-          <div className="text-[10px] text-slate-400">Step Latency</div>
-          <div className="text-lg font-black text-cyan-400 font-mono">{results.effectiveStepLatencyMs}ms</div>
-          <div className="text-[9px] text-slate-500">P99 Forward Step</div>
+          <div className="text-[10px] text-neutral-400">Step Latency</div>
+          <div className="text-lg font-black text-neutral-200 font-mono">{results.effectiveStepLatencyMs}ms</div>
+          <div className="text-[9px] text-neutral-500">P99 Forward Step</div>
         </div>
         <div className="text-center">
-          <div className="text-[10px] text-slate-400">Overlap Ratio</div>
-          <div className="text-lg font-black text-teal-400 font-mono">{results.commOverlapEfficiencyPercent}%</div>
-          <div className="text-[9px] text-slate-500">P2P Network</div>
+          <div className="text-[10px] text-neutral-400">Overlap Ratio</div>
+          <div className="text-lg font-black text-neutral-200 font-mono">{results.commOverlapEfficiencyPercent}%</div>
+          <div className="text-[9px] text-neutral-500">P2P Network</div>
         </div>
         <div className="text-center">
-          <div className="text-[10px] text-slate-400">Per-GPU VRAM</div>
-          <div className="text-lg font-black text-indigo-400 font-mono">{results.peakKvVramGb}GB</div>
-          <div className="text-[9px] text-slate-500">KV Cache Limit</div>
+          <div className="text-[10px] text-neutral-400">Per-GPU VRAM</div>
+          <div className="text-lg font-black text-neutral-200 font-mono">{results.peakKvVramGb}GB</div>
+          <div className="text-[9px] text-neutral-500">KV Cache Limit</div>
         </div>
       </div>
 
       {/* Watermark & Attribution Footer */}
-      <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800/80">
+      <div className="flex items-center justify-between text-[11px] text-neutral-400 pt-2 border-t border-neutral-800/80">
         <span>Powered by Elesium Sovereign AI Engineering</span>
         <a
           href="https://elesium.online/tools/enterprise-agent-sequence-parallelism-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center gap-0.5"
+          className="text-white hover:text-white font-semibold inline-flex items-center gap-0.5"
         >
           Open Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>

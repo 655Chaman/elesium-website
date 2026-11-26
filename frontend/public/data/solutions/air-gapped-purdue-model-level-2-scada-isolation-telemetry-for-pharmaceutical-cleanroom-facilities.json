@@ -17,7 +17,7 @@
   "firstSentence": "Enforce strict Purdue Model Level 2 SCADA network isolation for sterile pharmaceutical cleanrooms with air-gapped unidirectional telemetry replication.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities",
   "paragraphs": [
     "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
@@ -113,7 +113,7 @@
     "subheadline": "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Continuous SHA-256 hash validation across all historical environmental records."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Continuous SHA-256 hash validation across all historical environmental records."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities Performance Telemetry",
       "layout": "centered-card"
     }

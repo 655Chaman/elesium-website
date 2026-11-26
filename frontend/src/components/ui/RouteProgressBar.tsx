@@ -5,11 +5,11 @@
  */
 export default function RouteProgressBar() {
     return (
-        <div 
+        <div
             className="fixed top-0 left-0 right-0 z-[9999] h-[2px] bg-transparent overflow-hidden pointer-events-none"
             aria-hidden="true"
         >
-            <div className="h-full bg-gradient-to-r from-emerald-500 via-blue-500 to-indigo-500 animate-pulse w-full" />
+            <div className="h-full w-full bg-black dark:bg-white animate-pulse" />
         </div>
     )
 }

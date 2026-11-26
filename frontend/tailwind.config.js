@@ -12,15 +12,15 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                heading: ['Outfit', 'sans-serif'],
-                body: ['Inter', 'sans-serif'],
+                heading: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                body: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
             },
             colors: {
                 brand: {
-                    dark: '#121317',
-                    gray: '#202124',
-                    light: '#E8EAED',
-                    accent: '#4285F4',
+                    dark: '#000000',
+                    gray: '#171717',
+                    light: '#F5F5F5',
+                    accent: '#000000',
                 }
             },
             fontSize: {

@@ -72,7 +72,7 @@ export default function EnterpriseAgentContextParallelismSimulator() {
     setCurrency('INR');
   };
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-context-parallelism-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #e5e7eb;"></iframe><div style="font-size:12px;color:#6b7280;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-context-parallelism-simulator" target="_blank" rel="noopener" style="color:#2563eb;text-decoration:underline;">Elesium Context Parallelism Simulator</a></div>`;
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-context-parallelism-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-context-parallelism-simulator" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Context Parallelism Simulator</a></div>`;
 
   const copyEmbedCode = () => {
     navigator.clipboard.writeText(embedCode);
@@ -134,7 +134,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
   ];
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <Helmet>
         <title>Enterprise Context Parallelism & Ring KV Simulator | Elesium</title>
         <meta
@@ -146,20 +146,20 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
 
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header Breadcrumb & Controls */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-800 pb-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 mb-2 uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-xs font-mono text-neutral-200 mb-2 uppercase tracking-wider">
               <span>Tools</span>
               <span>/</span>
               <span>Distributed LLM Infrastructure</span>
               <span>/</span>
-              <span className="text-slate-400">Tool #64</span>
+              <span className="text-neutral-400">Tool #64</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight flex items-center gap-3">
-              <Network className="w-8 h-8 text-cyan-400 " />
+              <Network className="w-8 h-8 text-neutral-200 " />
               Context Parallelism &amp; Ring KV Overlap Simulator
             </h1>
-            <p className="text-sm sm:text-base text-slate-400 mt-2 max-w-3xl">
+            <p className="text-sm sm:text-base text-neutral-400 mt-2 max-w-3xl">
               Model distributed attention head sharding, peer-to-peer Ring KV communication overlapping, causal block-triangular masking, and 2M+ token inference on sovereign multi-GPU clusters.
             </p>
           </div>
@@ -167,27 +167,27 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCurrency(currency === 'INR' ? 'USD' : 'INR')}
-              className="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900 text-xs font-mono text-slate-300 hover:text-white hover:border-slate-600 transition"
+              className="active:scale-[0.97] px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900 text-xs font-mono text-neutral-300 hover:text-white hover:border-neutral-600 transition"
             >
-              Currency: <strong className="text-cyan-400">{currency}</strong>
+              Currency: <strong className="text-neutral-200">{currency}</strong>
             </button>
             <button
               onClick={handleReset}
-              className="p-2 rounded-lg border border-slate-700 bg-slate-900 text-slate-400 hover:text-white hover:border-slate-600 transition"
+              className="active:scale-[0.97] p-2 rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-400 hover:text-white hover:border-neutral-600 transition"
               title="Reset to Baseline"
             >
               <RotateCcw className="w-4 h-4" />
             </button>
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="px-3 py-1.5 rounded-lg border border-cyan-800/60 bg-cyan-950/40 text-xs font-semibold text-cyan-300 hover:bg-cyan-900/60 transition flex items-center gap-1.5"
+              className="active:scale-[0.97] px-3 py-1.5 rounded-lg border border-white/15 bg-white/[0.05] text-xs font-semibold text-white hover:bg-white/10 transition flex items-center gap-1.5"
             >
               <Code className="w-3.5 h-3.5" />
               Embed
@@ -199,25 +199,25 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 bg-slate-900/80 border border-slate-800 rounded-2xl space-y-6 shadow-xl backdrop-blur-sm">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h2 className="text-sm font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-cyan-400" />
+            <div className="p-6 bg-neutral-900/80 border border-neutral-800 rounded-xl space-y-6 shadow-xl backdrop-blur-sm">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-200 flex items-center gap-2">
+                  <Sliders className="w-4 h-4 text-neutral-200" />
                   Cluster &amp; Sequence Parameters
                 </h2>
-                <span className="text-xs text-slate-500 font-mono">H100 / Blackwell Cluster</span>
+                <span className="text-xs text-neutral-500 font-mono">H100 / Blackwell Cluster</span>
               </div>
 
               {/* Model Architecture */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-slate-300 flex justify-between">
+                <label className="text-xs font-semibold text-neutral-300 flex justify-between">
                   <span>Foundation Model Architecture</span>
-                  <span className="text-cyan-400 font-mono text-[11px]">{modelArchitecture}</span>
+                  <span className="text-neutral-200 font-mono text-[11px]">{modelArchitecture}</span>
                 </label>
                 <select
                   value={modelArchitecture}
                   onChange={(e) => setModelArchitecture(e.target.value as CpModelArchitecture)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-white/40"
                 >
                   <option value="llama_3_1_70b_128k">Llama-3.1 70B (80 Layers, 8 KV Heads)</option>
                   <option value="deepseek_v3_128k">DeepSeek-V3 671B (61 Layers, 8 KV Heads)</option>
@@ -229,19 +229,19 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
 
               {/* Context Parallel Degree Slider */}
               <div className="space-y-2">
-                <div className="flex justify-between text-xs font-semibold text-slate-300">
+                <div className="flex justify-between text-xs font-semibold text-neutral-300">
                   <span>Context Parallel Degree (CP)</span>
-                  <span className="text-cyan-400 font-mono">CP-{cpDegree} ({cpDegree} GPUs)</span>
+                  <span className="text-neutral-200 font-mono">CP-{cpDegree} ({cpDegree} GPUs)</span>
                 </div>
                 <div className="grid grid-cols-6 gap-1.5">
                   {[2, 4, 8, 16, 32, 64].map((degree) => (
                     <button
                       key={degree}
                       onClick={() => setCpDegree(degree as CpDegree)}
-                      className={`py-2 text-xs font-mono font-bold rounded-lg border transition ${
+                      className={`active:scale-[0.97] py-2 text-xs font-mono font-bold rounded-lg border transition ${
                         cpDegree === degree
-                          ? 'bg-cyan-500/20 border-cyan-500 text-cyan-300'
-                          : 'bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-700'
+                          ? 'bg-white/10 border-white/30 text-neutral-200'
+                          : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:border-neutral-700'
                       }`}
                     >
                       {degree}x
@@ -252,9 +252,9 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
 
               {/* Sequence Length Tokens Slider */}
               <div className="space-y-2">
-                <div className="flex justify-between text-xs font-semibold text-slate-300">
+                <div className="flex justify-between text-xs font-semibold text-neutral-300">
                   <span>Sequence Length (Context Window)</span>
-                  <span className="text-teal-400 font-mono font-bold">
+                  <span className="text-white font-mono font-bold">
                     {(sequenceLengthTokens / 1024).toFixed(0)}k ({sequenceLengthTokens.toLocaleString()} tokens)
                   </span>
                 </div>
@@ -265,9 +265,9 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
                   step={65536}
                   value={sequenceLengthTokens}
                   onChange={(e) => setSequenceLengthTokens(Number(e.target.value))}
-                  className="w-full accent-teal-400 bg-slate-950 h-2 rounded cursor-pointer"
+                  className="w-full accent-white bg-neutral-950 h-2 rounded cursor-pointer"
                 />
-                <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                   <span>128k Tokens</span>
                   <span>512k</span>
                   <span>1M</span>
@@ -277,11 +277,11 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
 
               {/* Interconnect Fabric */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-slate-300">Cluster Interconnect Fabric</label>
+                <label className="text-xs font-semibold text-neutral-300">Cluster Interconnect Fabric</label>
                 <select
                   value={interconnect}
                   onChange={(e) => setInterconnect(e.target.value as CpInterconnectType)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-white/40"
                 >
                   <option value="nvlink_4_900gb">NVLink 4.0 Intra-Node (900 GB/s bidirectional)</option>
                   <option value="nvlink_3_600gb">NVLink 3.0 Intra-Node (600 GB/s bidirectional)</option>
@@ -293,11 +293,11 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
 
               {/* Attention Mechanism */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-slate-300">Distributed Attention Architecture</label>
+                <label className="text-xs font-semibold text-neutral-300">Distributed Attention Architecture</label>
                 <select
                   value={attentionMechanism}
                   onChange={(e) => setAttentionMechanism(e.target.value as CpAttentionMechanism)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-white/40"
                 >
                   <option value="ring_attention">Ring Attention (P2P Overlapped KV Exchange)</option>
                   <option value="deepspeed_ulysses">DeepSpeed Ulysses (All-to-All Head Sharding)</option>
@@ -307,16 +307,16 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
               </div>
 
               {/* Causal Masking Toggle */}
-              <div className="flex items-center justify-between p-3 bg-slate-950 rounded-xl border border-slate-800">
+              <div className="flex items-center justify-between p-3 bg-neutral-950 rounded-xl border border-neutral-800">
                 <div>
                   <div className="text-xs font-semibold text-white">Causal Block-Triangular Optimization</div>
-                  <div className="text-[11px] text-slate-400">Prune upper-diagonal blocks in autoregressive decoding</div>
+                  <div className="text-[11px] text-neutral-400">Prune upper-diagonal blocks in autoregressive decoding</div>
                 </div>
                 <button
                   type="button"
                   onClick={() => setCausalMasking(!causalMasking)}
-                  className={`w-12 h-6 flex items-center rounded-full p-1 transition ${
-                    causalMasking ? 'bg-cyan-500 justify-end' : 'bg-slate-700 justify-start'
+                  className={`active:scale-[0.97] w-12 h-6 flex items-center rounded-full p-1 transition ${
+                    causalMasking ? 'bg-white/80 justify-end' : 'bg-neutral-700 justify-start'
                   }`}
                 >
                   <span className="w-4 h-4 bg-white rounded-full shadow-md transform transition" />
@@ -326,16 +326,16 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
               {/* Memo Export Button */}
               <button
                 onClick={copyExecutiveMemo}
-                className="w-full py-2.5 px-4 rounded-full border border-slate-700 bg-slate-800 text-xs font-semibold text-slate-200 hover:text-white hover:border-slate-600 transition flex items-center justify-center gap-2"
+                className="active:scale-[0.97] w-full py-2.5 px-4 rounded-lg border border-neutral-700 bg-neutral-800 text-xs font-semibold text-neutral-200 hover:text-white hover:border-neutral-600 transition flex items-center justify-center gap-2"
               >
                 {hasCopiedMemo ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-neutral-200" />
                     Copied Executive Architecture Memo!
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-slate-400" />
+                    <Copy className="w-4 h-4 text-neutral-400" />
                     Copy Architecture Memo for Engineering Leads
                   </>
                 )}
@@ -346,12 +346,12 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
           {/* Telemetry Results Column */}
           <div className="lg:col-span-7 space-y-6">
             {/* Top SLA Badge */}
-            <div className={`p-4 rounded-2xl border flex items-center justify-between ${
+            <div className={`p-4 rounded-xl border flex items-center justify-between ${
               results.slaStatus === 'SUB_12MS_CP_OPTIMAL'
-                ? 'bg-emerald-950/40 border-emerald-500/50 text-emerald-300'
+                ? 'bg-white/[0.05] border-white/30 text-neutral-200'
                 : results.slaStatus === 'ACCEPTABLE_PARTIAL_OVERLAP'
                 ? 'bg-amber-950/40 border-amber-500/50 text-amber-300'
-                : 'bg-rose-950/40 border-rose-500/50 text-rose-300'
+                : 'bg-red-950/40 border-red-500/50 text-red-300'
             }`}>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="w-6 h-6 flex-shrink-0" />
@@ -375,121 +375,121 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
 
             {/* KPI Cards Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 bg-slate-900/90 border border-slate-800 rounded-xl text-center">
-                <div className="text-xs text-slate-400">Step Latency</div>
-                <div className="text-2xl font-black text-cyan-400 font-mono mt-1">
+              <div className="p-4 bg-neutral-900/90 border border-neutral-800 rounded-xl text-center">
+                <div className="text-xs text-neutral-400">Step Latency</div>
+                <div className="text-2xl font-black text-neutral-200 font-mono mt-1">
                   {results.effectiveStepLatencyMs}ms
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">Forward Step P99</div>
+                <div className="text-[10px] text-neutral-500 mt-1">Forward Step P99</div>
               </div>
 
-              <div className="p-4 bg-slate-900/90 border border-slate-800 rounded-xl text-center">
-                <div className="text-xs text-slate-400">Overlap Ratio</div>
-                <div className="text-2xl font-black text-teal-400 font-mono mt-1">
+              <div className="p-4 bg-neutral-900/90 border border-neutral-800 rounded-xl text-center">
+                <div className="text-xs text-neutral-400">Overlap Ratio</div>
+                <div className="text-2xl font-black text-neutral-200 font-mono mt-1">
                   {results.commOverlapEfficiencyPercent}%
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">Wire Speed Overlap</div>
+                <div className="text-[10px] text-neutral-500 mt-1">Wire Speed Overlap</div>
               </div>
 
-              <div className="p-4 bg-slate-900/90 border border-slate-800 rounded-xl text-center">
-                <div className="text-xs text-slate-400">Sharded KV VRAM</div>
-                <div className="text-2xl font-black text-emerald-400 font-mono mt-1">
+              <div className="p-4 bg-neutral-900/90 border border-neutral-800 rounded-xl text-center">
+                <div className="text-xs text-neutral-400">Sharded KV VRAM</div>
+                <div className="text-2xl font-black text-neutral-200 font-mono mt-1">
                   {results.shardedKvMemoryGb}GB
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">Per GPU (vs {results.unpartitionedKvMemoryGb}GB OOM)</div>
+                <div className="text-[10px] text-neutral-500 mt-1">Per GPU (vs {results.unpartitionedKvMemoryGb}GB OOM)</div>
               </div>
 
-              <div className="p-4 bg-slate-900/90 border border-slate-800 rounded-xl text-center">
-                <div className="text-xs text-slate-400">FinOps Savings</div>
+              <div className="p-4 bg-neutral-900/90 border border-neutral-800 rounded-xl text-center">
+                <div className="text-xs text-neutral-400">FinOps Savings</div>
                 <div className="text-2xl font-black text-amber-400 font-mono mt-1">
                   {results.annualFinOpsSavings}
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">Annual GPU OPEX Cut</div>
+                <div className="text-[10px] text-neutral-500 mt-1">Annual GPU OPEX Cut</div>
               </div>
             </div>
 
             {/* Detailed Performance Decomposition Card */}
-            <div className="p-6 bg-slate-900/80 border border-slate-800 rounded-2xl space-y-4">
-              <h3 className="text-sm font-bold text-white flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="p-6 bg-neutral-900/80 border border-neutral-800 rounded-xl space-y-4">
+              <h3 className="text-sm font-bold text-white flex items-center justify-between border-b border-neutral-800 pb-3">
                 <span className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-cyan-400" />
+                  <Sparkles className="w-4 h-4 text-neutral-200" />
                   Computational &amp; Collective Communication Breakdown
                 </span>
-                <span className="text-xs font-mono text-cyan-400">
+                <span className="text-xs font-mono text-neutral-200">
                   {results.tokensPerSecondThroughput.toLocaleString()} tokens/sec
                 </span>
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <div className="p-4 bg-slate-950 rounded-xl border border-slate-800/80 space-y-2">
-                  <div className="font-semibold text-slate-300">Local Attention Compute</div>
-                  <div className="flex justify-between text-slate-400">
+                <div className="p-4 bg-neutral-950 rounded-xl border border-neutral-800/80 space-y-2">
+                  <div className="font-semibold text-neutral-300">Local Attention Compute</div>
+                  <div className="flex justify-between text-neutral-400">
                     <span>Local Tokens / GPU:</span>
                     <span className="font-mono text-white">{results.tokensPerGpu.toLocaleString()} tokens</span>
                   </div>
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between text-neutral-400">
                     <span>Local QK^T &amp; AV GEMM:</span>
-                    <span className="font-mono text-cyan-300">{results.localComputeLatencyMs} ms</span>
+                    <span className="font-mono text-neutral-200">{results.localComputeLatencyMs} ms</span>
                   </div>
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between text-neutral-400">
                     <span>Causal Pruning Factor:</span>
-                    <span className="font-mono text-emerald-400">{causalMasking ? '55% FLOP Reduction' : '100% Full Attention'}</span>
+                    <span className="font-mono text-neutral-200">{causalMasking ? '55% FLOP Reduction' : '100% Full Attention'}</span>
                   </div>
                 </div>
 
-                <div className="p-4 bg-slate-950 rounded-xl border border-slate-800/80 space-y-2">
-                  <div className="font-semibold text-slate-300">Peer-to-Peer Ring Communication</div>
-                  <div className="flex justify-between text-slate-400">
+                <div className="p-4 bg-neutral-950 rounded-xl border border-neutral-800/80 space-y-2">
+                  <div className="font-semibold text-neutral-300">Peer-to-Peer Ring Communication</div>
+                  <div className="flex justify-between text-neutral-400">
                     <span>Ring KV Shift Time:</span>
-                    <span className="font-mono text-teal-300">{results.ringTransferLatencyMs} ms</span>
+                    <span className="font-mono text-neutral-200">{results.ringTransferLatencyMs} ms</span>
                   </div>
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between text-neutral-400">
                     <span>Unpartitioned Memory:</span>
-                    <span className="font-mono text-rose-400">{results.unpartitionedKvMemoryGb} GB (Crash without CP)</span>
+                    <span className="font-mono text-red-400">{results.unpartitionedKvMemoryGb} GB (Crash without CP)</span>
                   </div>
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between text-neutral-400">
                     <span>OOM Fault Prevented:</span>
-                    <span className="font-mono text-emerald-400">{results.oomRiskPrevented ? 'YES (Sovereign Guard)' : 'Within Single VRAM'}</span>
+                    <span className="font-mono text-neutral-200">{results.oomRiskPrevented ? 'YES (Sovereign Guard)' : 'Within Single VRAM'}</span>
                   </div>
                 </div>
               </div>
 
               {/* Visual Ring KV Shift Diagram */}
-              <div className="p-4 bg-slate-950 rounded-xl border border-slate-800/80">
-                <div className="text-xs font-semibold text-slate-300 mb-3 flex items-center justify-between">
+              <div className="p-4 bg-neutral-950 rounded-xl border border-neutral-800/80">
+                <div className="text-xs font-semibold text-neutral-300 mb-3 flex items-center justify-between">
                   <span>Ring Topology KV Streaming Flow (Logical GPU Ranks)</span>
-                  <span className="text-[11px] text-teal-400 font-mono">CUDA Stream 2 Active</span>
+                  <span className="text-[11px] text-neutral-200 font-mono">CUDA Stream 2 Active</span>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-2 py-2">
                   {Array.from({ length: Math.min(8, cpDegree) }).map((_, idx) => (
                     <div key={idx} className="flex items-center gap-1.5">
-                      <div className="px-3 py-2 bg-slate-900 border border-cyan-500/40 rounded-lg text-center font-mono">
-                        <div className="text-[10px] text-slate-400">GPU {idx}</div>
-                        <div className="text-xs font-bold text-cyan-300">{(results.tokensPerGpu / 1024).toFixed(0)}k Tok</div>
+                      <div className="px-3 py-2 bg-neutral-900 border border-white/30 rounded-lg text-center font-mono">
+                        <div className="text-[10px] text-neutral-400">GPU {idx}</div>
+                        <div className="text-xs font-bold text-white">{(results.tokensPerGpu / 1024).toFixed(0)}k Tok</div>
                       </div>
                       {idx < Math.min(8, cpDegree) - 1 && (
-                        <ArrowRight className="w-3.5 h-3.5 text-teal-400 " />
+                        <ArrowRight className="w-3.5 h-3.5 text-neutral-200 " />
                       )}
                     </div>
                   ))}
                   {cpDegree > 8 && (
-                    <div className="text-xs text-slate-500 font-mono">... +{cpDegree - 8} more GPUs in Ring</div>
+                    <div className="text-xs text-neutral-500 font-mono">... +{cpDegree - 8} more GPUs in Ring</div>
                   )}
                 </div>
               </div>
             </div>
 
             {/* CTA Audit Banner */}
-            <div className="p-6 bg-gradient-to-r from-cyan-950/60 via-slate-900 to-teal-950/60 border border-cyan-500/30 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-6 bg-neutral-950 border border-white/20 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <h4 className="text-base font-bold text-white">Deploy Sovereign 2M-Token Context Parallelism</h4>
-                <p className="text-xs text-slate-400 mt-1 max-w-xl">
+                <p className="text-xs text-neutral-400 mt-1 max-w-xl">
                   Eliminate GPU out-of-memory crashes and slash multi-million token forward step latency to sub-12ms across your sovereign enterprise datacenters.
                 </p>
               </div>
               <a
                 href="#audit"
-                className="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition flex items-center gap-2 whitespace-nowrap shadow-lg shadow-cyan-500/20"
+                className="px-5 py-2.5 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-xs transition flex items-center gap-2 whitespace-nowrap shadow-lg"
               >
                 Schedule Architecture Audit
                 <ArrowRight className="w-4 h-4" />
@@ -499,12 +499,12 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
         </div>
 
         {/* Technical Architecture Deep Dive & FAQ */}
-        <div className="p-8 bg-slate-900/60 border border-slate-800 rounded-2xl space-y-6">
+        <div className="p-8 bg-neutral-900/60 border border-neutral-800 rounded-xl space-y-6">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-cyan-400" />
+            <Sparkles className="w-5 h-5 text-neutral-200" />
             Context Parallelism Architecture &amp; Ring Attention Telemetry
           </h2>
-          <div className="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-4">
+          <div className="text-xs sm:text-sm text-neutral-300 leading-relaxed space-y-4">
             <p>
               In foundation model inference across two-million-token sequence horizons, the computational bottleneck shifts decisively from parameter weights to the dynamic <strong>Key-Value (KV) cache activation memory</strong>. A single 70B parameter model operating at 2M sequence length generates over <strong>512 GB of uncompressed FP16 KV states</strong>, exceeding the 80 GB VRAM physical capacity of single H100 GPUs by over 6.4x.
             </p>
@@ -514,21 +514,21 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
           </div>
 
           {/* Accordion FAQ */}
-          <div className="border-t border-slate-800 pt-6 space-y-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">
+          <div className="border-t border-neutral-800 pt-6 space-y-3">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-400 mb-4">
               Frequently Asked Technical Questions
             </h3>
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/60">
+              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950/60">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full p-4 text-left flex items-center justify-between text-xs sm:text-sm font-semibold text-white hover:text-cyan-400 transition"
+                  className="active:scale-[0.97] w-full p-4 text-left flex items-center justify-between text-xs sm:text-sm font-semibold text-white hover:text-white transition"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 transform transition-transform ${openFaq === idx ? 'rotate-180 text-cyan-400' : 'text-slate-500'}`} />
+                  <ChevronDown className={`w-4 h-4 transform transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : 'text-neutral-500'}`} />
                 </button>
                 {openFaq === idx && (
-                  <div className="p-4 pt-0 text-xs text-slate-400 leading-relaxed border-t border-slate-800/40">
+                  <div className="p-4 pt-0 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/40">
                     {faq.a}
                   </div>
                 )}
@@ -540,23 +540,23 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
         {/* Mandate Application Section */}
         <div id="audit" className="pt-8">
           {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-full bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -569,29 +569,29 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="bg-neutral-900 border border-neutral-700 rounded-xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 Embed Context Parallelism Simulator
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white transition"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white transition"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-neutral-400 leading-relaxed">
               Copy and paste this snippet into your internal engineering docs, corporate wiki, or client portal. The interactive widget includes live Ring Attention calculations and attribution back to Elesium Enterprise AI Solutions.
             </p>
             <div className="relative">
-              <pre className="p-3 bg-slate-950 border border-slate-800 rounded-lg text-[11px] font-mono text-cyan-300 overflow-x-auto whitespace-pre-wrap max-h-36">
+              <pre className="p-3 bg-neutral-950 border border-neutral-800 rounded-lg text-[11px] font-mono text-neutral-200 overflow-x-auto whitespace-pre-wrap max-h-36">
                 {embedCode}
               </pre>
               <button
                 onClick={copyEmbedCode}
-                className="absolute top-2 right-2 px-3 py-1 bg-cyan-600 hover:bg-cyan-500 text-white rounded text-xs font-semibold flex items-center gap-1 transition shadow"
+                className="active:scale-[0.97] absolute top-2 right-2 px-3 py-1 bg-white hover:bg-neutral-200 text-black rounded text-xs font-semibold flex items-center gap-1 transition shadow"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied!' : 'Copy Code'}

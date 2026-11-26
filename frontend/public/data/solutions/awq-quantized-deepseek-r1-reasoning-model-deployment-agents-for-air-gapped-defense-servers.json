@@ -17,7 +17,7 @@
   "firstSentence": "Deploy 4-bit Activation-aware Weight Quantized (AWQ) DeepSeek-R1 reasoning models on ruggedized defense edge servers with zero accuracy loss.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers",
   "paragraphs": [
     "Forward-deployed military command posts, naval combat vessels, and airborne surveillance platforms have strict space, weight, and power (SWaP) constraints. Running full-precision 671B DeepSeek-R1 reasoning models requires multi-rack datacenter clusters that cannot fit inside tactical shelters or naval server rooms. Conventional uncalibrated 4-bit quantization degrades complex mathematical and tactical reasoning capabilities.",
@@ -113,7 +113,7 @@
     "subheadline": "Forward-deployed military command posts, naval combat vessels, and airborne surveillance platforms have strict space, weight, and power (SWaP) constraints. Running full-precision 671B DeepSeek-R1 reasoning models requires multi-rack datacenter clusters that cannot fit inside tactical shelters or naval server rooms. Conventional uncalibrated 4-bit quantization degrades complex mathematical and tactical reasoning capabilities.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Essential for field generators and battery-backed tactical operational centers."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Essential for field generators and battery-backed tactical operational centers."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers Performance Telemetry",
       "layout": "centered-card"
     }

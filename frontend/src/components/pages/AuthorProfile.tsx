@@ -177,54 +177,54 @@ export default function AuthorProfile() {
         </nav>
 
         {/* Hero Bio Card */}
-        <div className="bg-gray-50/60 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-8 sm:p-12 mb-12 shadow-sm">
+        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-8 sm:p-12 mb-12">
           <div className="flex flex-col md:flex-row gap-8 items-start">
             
             {/* Avatar / Visual Placeholder with Monogram */}
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-mono text-2xl sm:text-3xl font-bold shadow-md shrink-0">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-mono text-2xl sm:text-3xl font-bold shrink-0">
               CS
             </div>
 
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white border border-gray-200 dark:border-white/10">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Verified Author &amp; Systems Architect
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-white dark:bg-black text-black dark:text-white border border-neutral-200 dark:border-white/10">
+                  <ShieldCheck className="w-3.5 h-3.5 text-black dark:text-white" /> Verified Author &amp; Systems Architect
                 </span>
-                <span className="inline-flex items-center gap-1 text-xs font-mono text-gray-500 dark:text-gray-400">
+                <span className="inline-flex items-center gap-1 text-xs font-mono text-neutral-600 dark:text-neutral-400">
                   <MapPin className="w-3.5 h-3.5" /> Shivamogga, Karnataka, India
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 dark:text-white mb-2">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-black dark:text-white mb-2">
                 Chaman Shah
               </h1>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-medium mb-4">
+              <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 font-medium mb-4">
                 Principal AI Systems Architect &amp; Founder, Elesium
               </p>
 
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+              <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                 Chaman Shah leads architectural engineering at Elesium, designing production-grade multi-agent execution graphs and dedicated private VPC inference infrastructure. Over 8+ years, his engineering focus has centered on eliminating manual operational latency across supply chain logistics, core banking, and manufacturing plants via high-throughput LangGraph state machines and statutory DPDP Act 2023 compliance enclaves.
               </p>
 
-              {/* AEO Answer Capsule */}
-              <div className="answer-capsule mb-6 p-5 sm:p-6 rounded-2xl bg-white dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 shadow-sm">
-                <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
-                  <Cpu className="w-4 h-4" />
-                  Definitive Answer Capsule • Principal Systems Architect Dossier
+              {/* Technical Overview */}
+              <div className="answer-capsule mb-6 p-5 sm:p-6 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white">
+                <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
+                  <Cpu className="w-4 h-4 text-black dark:text-white" />
+                  Principal Systems Architect Dossier
                 </div>
-                <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+                <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
                   {aeoAnswerCapsule}
                 </p>
               </div>
 
               {/* Verified Links & Actions */}
-              <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-200 dark:border-white/10">
+              <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-neutral-200 dark:border-white/10">
                 <div className="flex flex-wrap items-center gap-4">
                   <a 
                     href="https://github.com/655Chaman" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-mono text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
                   >
                     <Github className="w-4 h-4" /> GitHub / 655Chaman
                   </a>
@@ -232,7 +232,7 @@ export default function AuthorProfile() {
                     href="https://linkedin.com/in/chaman-shah-elesium" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-mono text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
                   >
                     <Linkedin className="w-4 h-4" /> LinkedIn Profile
                   </a>
@@ -240,7 +240,7 @@ export default function AuthorProfile() {
                     href="https://x.com/chamanshah_ai" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-mono text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
                   >
                     <Twitter className="w-4 h-4" /> @chamanshah_ai
                   </a>
@@ -249,14 +249,14 @@ export default function AuthorProfile() {
                 <div className="flex flex-wrap items-center gap-3">
                   <button
                     onClick={openWhatsApp}
-                    className="inline-flex items-center gap-2 h-10 px-5 bg-black hover:opacity-90 text-white dark:bg-white dark:text-black font-semibold text-xs rounded-full transition-all shadow-sm"
+                    className="inline-flex items-center gap-2 h-10 px-5 bg-black hover:opacity-90 text-white dark:bg-white dark:text-black font-semibold text-xs rounded-lg active:scale-[0.97] transition-all"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 text-emerald-500" />
+                    <MessageSquare className="w-3.5 h-3.5" />
                     <span>Chat on WhatsApp</span>
                   </button>
                   <Link
                     to="/waitlist/"
-                    className="inline-flex items-center gap-1.5 h-10 px-5 border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs rounded-full transition-all shadow-sm"
+                    className="inline-flex items-center gap-1.5 h-10 px-5 border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs rounded-lg active:scale-[0.97] transition-all"
                   >
                     <span>ele-in SaaS Waitlist</span>
                     <span>&rarr;</span>
@@ -270,50 +270,50 @@ export default function AuthorProfile() {
 
         {/* Technical Domain Competencies */}
         <div className="mb-14">
-          <h2 className="text-xl font-bold text-gray-950 dark:text-white mb-6 flex items-center gap-2">
-            <Cpu className="w-5 h-5 text-emerald-500" /> Core Engineering &amp; Architecture Specializations
+          <h2 className="text-xl font-bold text-black dark:text-white mb-6 flex items-center gap-2">
+            <Cpu className="w-5 h-5 text-black dark:text-white" /> Core Engineering &amp; Architecture Specializations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div className="p-6 bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                <Layers className="w-4 h-4 text-emerald-500" /> Multi-Agent State Topologies
+            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl">
+              <h3 className="font-semibold text-black dark:text-white mb-2 flex items-center gap-2">
+                <Layers className="w-4 h-4 text-black dark:text-white" /> Multi-Agent State Topologies
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                 Architecture of cyclic and acyclic LangGraph execution state machines with deterministic state boundaries, checkpoint rollback, and sub-200ms end-to-end execution latency.
               </p>
-              <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-gray-500">
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">LangGraph</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">FastAPI</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">PostgreSQL</span>
+              <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">LangGraph</span>
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">FastAPI</span>
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">PostgreSQL</span>
               </div>
             </div>
 
-            <div className="p-6 bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-emerald-500" /> Private High-Throughput Inference
+            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl">
+              <h3 className="font-semibold text-black dark:text-white mb-2 flex items-center gap-2">
+                <Terminal className="w-4 h-4 text-black dark:text-white" /> Private High-Throughput Inference
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                 Design and optimization of air-gapped on-premise GPU clusters running vLLM with PagedAttention, FlashDecoding, and FP8 microscaling for zero-token-leakage compliance.
               </p>
-              <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-gray-500">
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">vLLM</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">Triton</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">NVIDIA TensorRT</span>
+              <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">vLLM</span>
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">Triton</span>
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">NVIDIA TensorRT</span>
               </div>
             </div>
 
-            <div className="p-6 bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                <Award className="w-4 h-4 text-emerald-500" /> DPDP Act 2023 Statutory Governance
+            <div className="p-6 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl">
+              <h3 className="font-semibold text-black dark:text-white mb-2 flex items-center gap-2">
+                <Award className="w-4 h-4 text-black dark:text-white" /> DPDP Act 2023 Statutory Governance
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                 Engineering statutory consent artifacts, air-gapped data principal verification mechanisms, and zero-trust audit trails satisfying RBI, SEBI, and Indian data localization mandates.
               </p>
-              <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-gray-500">
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">DPDP Act</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">SOC-2</span>
-                <span className="px-2 py-0.5 bg-white dark:bg-white/5 rounded-full border border-gray-200 dark:border-white/10">ISO 27001</span>
+              <div className="flex flex-wrap gap-1.5 font-mono text-[11px] text-neutral-600 dark:text-neutral-400">
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">DPDP Act</span>
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">SOC-2</span>
+                <span className="px-2 py-0.5 bg-white dark:bg-black rounded border border-neutral-200 dark:border-white/10">ISO 27001</span>
               </div>
             </div>
 
@@ -323,10 +323,10 @@ export default function AuthorProfile() {
         {/* Authored Whitepapers & Research Catalog */}
         <div className="mb-14">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-gray-950 dark:text-white flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-emerald-500" /> Key Authored Technical Systems Whitepapers
+            <h2 className="text-xl font-bold text-black dark:text-white flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-black dark:text-white" /> Key Authored Technical Systems Whitepapers
             </h2>
-            <Link to="/signals/" className="text-xs font-mono text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <Link to="/signals/" className="text-xs font-mono text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
               View All 119 Whitepapers &rarr;
             </Link>
           </div>
@@ -336,19 +336,19 @@ export default function AuthorProfile() {
               <Link
                 key={paper.slug}
                 to={paper.path || `/signals/${paper.slug}/`}
-                className="block p-5 bg-gray-50/50 dark:bg-white/[0.02] hover:bg-gray-100 dark:hover:bg-white/[0.05] border border-gray-200 dark:border-white/10 rounded-2xl transition-all group"
+                className="block p-5 bg-neutral-50 dark:bg-neutral-950 hover:bg-neutral-100 dark:hover:bg-black border border-neutral-200 dark:border-white/10 rounded-xl transition-all group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                  <span className="text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wide">
+                  <span className="text-xs font-mono font-medium text-black dark:text-white uppercase tracking-wide">
                     {paper.category}
                   </span>
-                  <div className="flex items-center gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center gap-3 text-xs font-mono text-neutral-600 dark:text-neutral-400">
                     <span>{paper.date}</span>
-                    <span>•</span>
+                    <span>&middot;</span>
                     <span>{paper.readTime}</span>
                   </div>
                 </div>
-                <h3 className="text-base font-semibold text-gray-950 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors">
+                <h3 className="text-base font-semibold text-black dark:text-white transition-colors">
                   {paper.title}
                 </h3>
               </Link>
@@ -357,31 +357,30 @@ export default function AuthorProfile() {
         </div>
 
         {/* Direct Architecture Audit CTA */}
-        <div className="rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02] p-8 sm:p-12 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-xs font-mono text-gray-700 dark:text-gray-300 mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+        <div className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-6">
             <span>Direct Systems Architect Consultation</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black dark:text-white mb-3">
             Consult Directly with Principal Architect Chaman Shah
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto mb-8 leading-relaxed">
             Review your enterprise system architecture, private VPC deployment parameters, and statutory DPDP Act 2023 compliance posture directly with the systems engineering lead.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <button
               onClick={openWhatsApp}
-              className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm"
+              className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
             >
-              <MessageSquare className="w-4 h-4 text-emerald-500" />
+              <MessageSquare className="w-4 h-4" />
               <span>Chat on WhatsApp with Chaman</span>
             </button>
             <Link
               to="/waitlist/"
-              className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+              className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
             >
               <span>ele-in SaaS Waitlist</span>
               <span>&rarr;</span>

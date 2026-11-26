@@ -17,7 +17,7 @@
   "firstSentence": "Deploy air-gapped semantic search and dense passage retrieval across decades of internal banking circulars, credit manuals, and board minutes on 100% sovereign Indian soil.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization",
   "paragraphs": [
     "Public sector banks headquartered in New Delhi manage massive archives of internal credit manuals, circular letters, staff handbooks, and board minutes spanning decades. Bank officers spend thousands of hours weekly manually searching through unindexed PDFs and scanned photocopies, leading to delayed loan appraisals and inconsistent policy enforcement. Cloud-hosted enterprise search tools violate statutory banking secrecy acts and RBI on-soil data residency regulations.",
@@ -113,7 +113,7 @@
     "subheadline": "Public sector banks headquartered in New Delhi manage massive archives of internal credit manuals, circular letters, staff handbooks, and board minutes spanning decades. Bank officers spend thousands of hours weekly manually searching through unindexed PDFs and scanned photocopies, leading to delayed loan appraisals and inconsistent policy enforcement. Cloud-hosted enterprise search tools violate statutory banking secrecy acts and RBI on-soil data residency regulations.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero external network egress, ap-south-1 and Delhi NCR sovereign hosts."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero external network egress, ap-south-1 and Delhi NCR sovereign hosts."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization Performance Telemetry",
       "layout": "centered-card"
     }

@@ -160,8 +160,8 @@ export default function CompareDetail() {
                     >
                         {copied ? (
                             <>
-                                <Check className="w-3.5 h-3.5 text-emerald-500" />
-                                <span className="text-emerald-500">Copied</span>
+                                <Check className="w-3.5 h-3.5 text-black dark:text-white" />
+                                <span className="text-black dark:text-white">Copied</span>
                             </>
                         ) : (
                             <>
@@ -175,30 +175,30 @@ export default function CompareDetail() {
                 {/* Hero Title Section */}
                 <header className="mb-10">
                     <div className="flex flex-wrap items-center gap-2 mb-4">
-                        <span className="px-3 py-1 rounded-full text-xs font-mono font-medium bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white uppercase tracking-wider">
+                        <span className="px-3 py-1 rounded-md text-xs font-mono font-medium bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white uppercase tracking-wider">
                             {battlecard.category}
                         </span>
-                        <span className="text-xs font-mono text-gray-500 dark:text-gray-400">
-                            Updated {battlecard.dateModified} • By Chaman Shah, Principal AI Systems Architect
+                        <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400">
+                            Updated {battlecard.dateModified} &middot; By Chaman Shah, Principal AI Systems Architect
                         </span>
                     </div>
 
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-950 dark:text-white mb-6 leading-tight">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black dark:text-white mb-6 leading-tight">
                         {battlecard.h1}
                     </h1>
 
                     {/* Head-to-Head Visual Hero Banner */}
-                    <div className="p-6 rounded-2xl bg-gray-50 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 mb-8">
+                    <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 mb-8">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                            <div className="p-4 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-white/10">
-                                <span className="text-[11px] font-mono font-semibold text-gray-400 uppercase tracking-wider block mb-1">Architecture A</span>
-                                <div className="text-lg font-bold text-gray-950 dark:text-white">{battlecard.entityALabel}</div>
-                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{battlecard.entityA}</div>
+                            <div className="p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                <span className="text-[11px] font-mono font-semibold text-neutral-500 uppercase tracking-wider block mb-1">Architecture A</span>
+                                <div className="text-lg font-bold text-black dark:text-white">{battlecard.entityALabel}</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">{battlecard.entityA}</div>
                             </div>
-                            <div className="p-4 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-white/10">
-                                <span className="text-[11px] font-mono font-semibold text-gray-400 uppercase tracking-wider block mb-1">Architecture B</span>
-                                <div className="text-lg font-bold text-gray-950 dark:text-white">{battlecard.entityBLabel}</div>
-                                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{battlecard.entityB}</div>
+                            <div className="p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                <span className="text-[11px] font-mono font-semibold text-neutral-500 uppercase tracking-wider block mb-1">Architecture B</span>
+                                <div className="text-lg font-bold text-black dark:text-white">{battlecard.entityBLabel}</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">{battlecard.entityB}</div>
                             </div>
                         </div>
                     </div>
@@ -206,31 +206,31 @@ export default function CompareDetail() {
                     {/* Fast Facts Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                         {battlecard.fastFacts.map((fact, idx) => (
-                            <div key={idx} className="p-4 rounded-xl bg-gray-50 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10">
-                                <span className="text-xs text-gray-500 dark:text-gray-400 block mb-1 font-mono">{fact.label}</span>
-                                <div className="text-base sm:text-lg font-bold text-gray-950 dark:text-white font-mono mb-1">{fact.value}</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-snug">{fact.description}</p>
+                            <div key={idx} className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                                <span className="text-xs text-neutral-600 dark:text-neutral-400 block mb-1 font-mono">{fact.label}</span>
+                                <div className="text-base sm:text-lg font-bold text-black dark:text-white font-mono mb-1">{fact.value}</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-snug">{fact.description}</p>
                             </div>
                         ))}
                     </div>
                 </header>
 
                 {/* Executive Engineering Verdict Box */}
-                <section className="mb-12 p-6 sm:p-8 rounded-2xl bg-gray-50 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 shadow-sm">
+                <section className="mb-12 p-6 sm:p-8 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                     <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-black dark:bg-white text-white dark:text-black flex items-center justify-center shrink-0">
                             <Scale className="w-5 h-5" />
                         </div>
                         <div>
-                            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
                                 Definitive Technical Finding
                             </span>
-                            <h2 className="text-xl font-bold text-gray-950 dark:text-white">
+                            <h2 className="text-xl font-bold text-black dark:text-white">
                                 Executive Engineering Verdict
                             </h2>
                         </div>
                     </div>
-                    <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200 leading-relaxed">
+                    <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
                         {battlecard.verdictSummary}
                     </p>
                 </section>
@@ -239,42 +239,42 @@ export default function CompareDetail() {
                 <section className="mb-16">
                     <div className="flex items-center justify-between mb-4">
                         <div>
-                            <span className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                            <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
                                 Empirical Evaluation Matrix
                             </span>
-                            <h2 className="text-2xl font-bold text-gray-950 dark:text-white">
+                            <h2 className="text-2xl font-bold text-black dark:text-white">
                                 Side-by-Side Dimension Breakdown
                             </h2>
                         </div>
                     </div>
 
-                    <div className="overflow-x-auto rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm bg-white dark:bg-black">
+                    <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
                         <table className="w-full text-left border-collapse text-xs sm:text-sm">
                             <thead>
-                                <tr className="bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-white/10">
+                                <tr className="bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white border-b border-neutral-200 dark:border-white/10">
                                     <th className="p-4 font-semibold w-1/4">Evaluation Dimension</th>
                                     <th className="p-4 font-semibold w-1/4">{battlecard.entityALabel}</th>
                                     <th className="p-4 font-semibold w-1/4">{battlecard.entityBLabel}</th>
-                                    <th className="p-4 font-semibold w-1/4">Verdict & Rationale</th>
+                                    <th className="p-4 font-semibold w-1/4">Verdict &amp; Rationale</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-gray-200 dark:divide-white/10">
+                            <tbody className="divide-y divide-neutral-200 dark:divide-white/10">
                                 {battlecard.matrix.map((row, idx) => (
-                                    <tr key={idx} className="hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors">
-                                        <td className="p-4 font-medium text-gray-950 dark:text-white align-top">
+                                    <tr key={idx} className="hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors">
+                                        <td className="p-4 font-medium text-black dark:text-white align-top">
                                             {row.dimension}
                                         </td>
-                                        <td className="p-4 text-gray-700 dark:text-gray-300 align-top">
+                                        <td className="p-4 text-neutral-700 dark:text-neutral-300 align-top">
                                             {row.optionA}
                                         </td>
-                                        <td className="p-4 text-gray-700 dark:text-gray-300 align-top">
+                                        <td className="p-4 text-neutral-700 dark:text-neutral-300 align-top">
                                             {row.optionB}
                                         </td>
                                         <td className="p-4 align-top space-y-1.5">
-                                            <span className="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono font-medium bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-white/10">
+                                            <span className="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono font-medium bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white border border-neutral-200 dark:border-white/10">
                                                 {row.verdict}
                                             </span>
-                                            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                                            <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                                 {row.technicalExplanation}
                                             </p>
                                         </td>
@@ -288,50 +288,50 @@ export default function CompareDetail() {
                 {/* Deep Architectural Teardown Pillars */}
                 <section className="mb-16 space-y-10">
                     <div>
-                        <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                        <span className="text-xs font-semibold font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">
                             In-Depth Engineering Teardown
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white mt-1">
-                            Architectural Mechanics & Failure Modes
+                        <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mt-1">
+                            Architectural Mechanics &amp; Failure Modes
                         </h2>
                     </div>
 
                     {battlecard.pillars.map((pillar, idx) => (
                         <div
                             key={idx}
-                            className="p-6 sm:p-8 rounded-2xl bg-gray-50 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10"
+                            className="p-6 sm:p-8 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10"
                         >
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-gray-200 dark:border-white/10 mb-6">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-neutral-200 dark:border-white/10 mb-6">
                                 <div>
-                                    <span className="text-xs font-mono font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    <span className="text-xs font-mono font-medium text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">
                                         Pillar 0{idx + 1}
                                     </span>
-                                    <h3 className="text-xl font-bold text-gray-950 dark:text-white mt-1">
+                                    <h3 className="text-xl font-bold text-black dark:text-white mt-1">
                                         {pillar.title}
                                     </h3>
-                                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+                                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-0.5">
                                         {pillar.subtitle}
                                     </p>
                                 </div>
 
                                 {/* Metric Highlight Card */}
-                                <div className="p-3 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-white/10 shrink-0">
-                                    <span className="text-[11px] text-gray-400 block mb-1 font-mono font-medium">{pillar.keyMetric.label}</span>
+                                <div className="p-3 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 shrink-0">
+                                    <span className="text-[11px] text-neutral-500 block mb-1 font-mono font-medium">{pillar.keyMetric.label}</span>
                                     <div className="flex items-center gap-3 text-xs font-mono">
                                         <div>
-                                            <span className="text-gray-500 text-[10px] block">{battlecard.entityALabel}</span>
-                                            <span className="font-bold text-gray-900 dark:text-white">{pillar.keyMetric.optionAValue} {pillar.keyMetric.unit}</span>
+                                            <span className="text-neutral-500 text-[10px] block">{battlecard.entityALabel}</span>
+                                            <span className="font-bold text-black dark:text-white">{pillar.keyMetric.optionAValue} {pillar.keyMetric.unit}</span>
                                         </div>
-                                        <div className="h-6 w-px bg-gray-200 dark:border-white/10" />
+                                        <div className="h-6 w-px bg-neutral-200 dark:bg-white/10" />
                                         <div>
-                                            <span className="text-gray-500 text-[10px] block">{battlecard.entityBLabel}</span>
-                                            <span className="font-bold text-gray-900 dark:text-white">{pillar.keyMetric.optionBValue} {pillar.keyMetric.unit}</span>
+                                            <span className="text-neutral-500 text-[10px] block">{battlecard.entityBLabel}</span>
+                                            <span className="font-bold text-black dark:text-white">{pillar.keyMetric.optionBValue} {pillar.keyMetric.unit}</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                            <div className="space-y-4 text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
                                 {pillar.analysisParagraphs.map((paragraph, pIdx) => (
                                     <p key={pIdx}>{paragraph}</p>
                                 ))}
@@ -342,22 +342,22 @@ export default function CompareDetail() {
 
                 {/* Related Solution CTA Banner */}
                 {battlecard.relatedSolutionSlug && (
-                    <section className="mb-16 p-6 rounded-2xl bg-gray-50 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10">
+                    <section className="mb-16 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                             <div>
-                                <span className="text-xs font-mono font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
+                                <span className="text-xs font-mono font-medium text-neutral-600 dark:text-neutral-400 uppercase tracking-wider block mb-1">
                                     Production Implementation Path
                                 </span>
-                                <h3 className="text-lg font-bold text-gray-950 dark:text-white">
+                                <h3 className="text-lg font-bold text-black dark:text-white">
                                     Ready to deploy a sovereign, deterministic solution?
                                 </h3>
-                                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1 max-w-xl">
+                                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1 max-w-xl">
                                     Review the complete production architecture, security whitepapers, and SLA guarantees for our turnkey enterprise deployments.
                                 </p>
                             </div>
                             <Link
                                 to={`/solutions/${battlecard.relatedSolutionSlug}/`}
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black dark:bg-white text-white dark:text-black font-medium text-xs sm:text-sm transition-all hover:opacity-90 shrink-0"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-black dark:bg-white text-white dark:text-black font-medium text-xs sm:text-sm active:scale-[0.97] transition-all hover:opacity-90 shrink-0"
                             >
                                 <span>Inspect Production Solution</span>
                                 <ArrowRight className="w-4 h-4" />
@@ -369,11 +369,11 @@ export default function CompareDetail() {
                 {/* FAQ Accordion */}
                 <section className="mb-16">
                     <div className="mb-6">
-                        <span className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                        <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
                             Frequently Asked Architecture Questions
                         </span>
-                        <h2 className="text-2xl font-bold text-gray-950 dark:text-white mt-1">
-                            Enterprise Evaluation & Migration Inquiries
+                        <h2 className="text-2xl font-bold text-black dark:text-white mt-1">
+                            Enterprise Evaluation &amp; Migration Inquiries
                         </h2>
                     </div>
 
@@ -383,24 +383,25 @@ export default function CompareDetail() {
                             return (
                                 <div
                                     key={idx}
-                                    className="rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#0A0A0A] overflow-hidden"
+                                    className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 overflow-hidden"
                                 >
                                     <button
                                         onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                                        className="w-full p-4 sm:p-5 flex items-center justify-between text-left text-sm font-semibold text-gray-950 dark:text-white hover:text-black dark:hover:text-white transition-colors"
+                                        className="w-full p-4 sm:p-5 flex items-center justify-between text-left text-sm font-semibold text-black dark:text-white transition-colors"
                                     >
                                         <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+                                        <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                                     </button>
-                                    <AnimatePresence>
+                                    <AnimatePresence initial={false}>
                                         {isOpen && (
                                             <motion.div
                                                 initial={{ height: 0, opacity: 0 }}
                                                 animate={{ height: 'auto', opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.2 }}
+                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                className="accordion-panel overflow-hidden"
                                             >
-                                                <div className="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-gray-600 dark:text-gray-300 border-t border-gray-200/50 dark:border-white/5 leading-relaxed">
+                                                <div className="p-4 sm:p-5 pt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200 dark:border-white/10 leading-relaxed">
                                                     {faq.answer}
                                                 </div>
                                             </motion.div>
@@ -416,11 +417,11 @@ export default function CompareDetail() {
                 {relatedBattlecards.length > 0 && (
                     <section className="mb-16">
                         <div className="flex items-center justify-between mb-6">
-                            <h2 className="text-xl font-bold text-gray-950 dark:text-white">
+                            <h2 className="text-xl font-bold text-black dark:text-white">
                                 Adjacent Architecture Battlecards
                             </h2>
-                            <Link to="/compare/" className="text-xs font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">
-                                View All 6 Comparisons →
+                            <Link to="/compare/" className="text-xs font-mono font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white">
+                                View All 6 Comparisons &rarr;
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -428,20 +429,20 @@ export default function CompareDetail() {
                                 <Link
                                     key={item.id}
                                     to={`/compare/${item.slug}/`}
-                                    className="p-5 rounded-2xl bg-gray-50/80 dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 hover:border-black dark:hover:border-white/40 transition-all group flex flex-col justify-between"
+                                    className="p-5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/40 transition-all group flex flex-col justify-between"
                                 >
                                     <div>
-                                        <span className="text-[10px] font-mono font-medium text-gray-500 uppercase tracking-wider block mb-1">
+                                        <span className="text-[10px] font-mono font-medium text-neutral-500 uppercase tracking-wider block mb-1">
                                             {item.category}
                                         </span>
-                                        <h3 className="text-sm font-bold text-gray-950 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors line-clamp-2 mb-2">
+                                        <h3 className="text-sm font-bold text-black dark:text-white transition-colors line-clamp-2 mb-2">
                                             {item.title}
                                         </h3>
-                                        <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-3">
+                                        <p className="text-xs text-neutral-600 dark:text-neutral-400 line-clamp-2 mb-3">
                                             {item.verdictSummary}
                                         </p>
                                     </div>
-                                    <div className="flex items-center justify-between text-xs font-semibold text-gray-900 dark:text-white pt-2 border-t border-gray-200 dark:border-white/10">
+                                    <div className="flex items-center justify-between text-xs font-semibold text-black dark:text-white pt-2 border-t border-neutral-200 dark:border-white/10">
                                         <span>Inspect Battlecard</span>
                                         <ArrowRight className="w-3.5 h-3.5" />
                                     </div>
@@ -452,32 +453,29 @@ export default function CompareDetail() {
                 )}
 
                 {/* Conversion & Direct Audit CTA */}
-                <section className="text-center p-8 sm:p-12 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 shadow-2xl relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+                <section className="text-center p-8 sm:p-12 rounded-xl bg-black text-white border border-neutral-200 dark:border-white/10 relative overflow-hidden">
                     <div className="relative z-10 max-w-3xl mx-auto space-y-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-mono tracking-wider uppercase">
-                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        <span className="text-xs font-mono tracking-wider uppercase text-neutral-400 block">
                             Enterprise Systems Advisory
-                        </div>
+                        </span>
                         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight">
                             Evaluating Between These Stacks for Your Enterprise?
                         </h2>
-                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                            Do not commit budget to fragile orchestration or shared-tenant API bottlenecks. Connect directly with Chaman Shah to architect your deterministic, production-grade agent framework.
+                        <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
+                            Connect directly with Chaman Shah to architect your deterministic, production-grade agent framework.
                         </p>
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                             >
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                                className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                             >
                                 <span>ele-in SaaS Waitlist</span>
                                 <span>&rarr;</span>

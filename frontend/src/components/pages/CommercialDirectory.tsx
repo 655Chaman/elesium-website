@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
     Search,
     X,
@@ -270,20 +271,19 @@ export default function CommercialDirectory() {
                 </nav>
             </div>
 
-            {/* Clean, High-Trust Hero Header (SolutionsHub congruent) */}
+            {/* Hero Header */}
             <header className="max-w-6xl mx-auto px-6 mb-16 md:mb-24">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 mb-6">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    <span className="text-xs font-mono uppercase tracking-widest text-gray-600 dark:text-gray-300">
-                        System 2 • Commercial Priority Directory (Top 100)
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 mb-6">
+                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+                        Commercial Priority Directory (Top 100)
                     </span>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] mb-6 max-w-4xl text-gray-900 dark:text-white">
-                    Top 100 Commercial Enterprise AI Solutions & Sovereign Architecture Directory
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] mb-6 max-w-4xl text-black dark:text-white">
+                    Top 100 Commercial Enterprise AI Solutions &amp; Sovereign Architecture Directory
                 </h1>
 
-                <div className="max-w-3xl space-y-4 text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
+                <div className="max-w-3xl space-y-4 text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
                     <p>
                         Elesium engineers deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise leaders who require contractual execution guarantees, zero data leakage, and rigorous statutory compliance.
                     </p>
@@ -293,40 +293,39 @@ export default function CommercialDirectory() {
                 </div>
 
                 {/* Trust Metrics Bar */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 pt-8 border-t border-gray-100 dark:border-white/10">
-                    <div className="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
-                        <div className="text-2xl font-mono font-semibold text-gray-900 dark:text-white">100</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Priority Architecture Hubs</div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 pt-8 border-t border-neutral-200 dark:border-white/10">
+                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">100</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Priority Architecture Hubs</div>
                     </div>
-                    <div className="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
-                        <div className="text-2xl font-mono font-semibold text-gray-900 dark:text-white">&lt; 200ms</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Deterministic Latency SLA</div>
+                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">&lt; 200ms</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Deterministic Latency SLA</div>
                     </div>
-                    <div className="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
-                        <div className="text-2xl font-mono font-semibold text-gray-900 dark:text-white">100%</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Private VPC Data Isolation</div>
+                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">100%</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Private VPC Data Isolation</div>
                     </div>
-                    <div className="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02]">
-                        <div className="text-2xl font-mono font-semibold text-emerald-600 dark:text-emerald-400">90-Day</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">Hard Contracted ROI SLA</div>
+                    <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">90-Day</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Hard Contracted ROI SLA</div>
                     </div>
                 </div>
 
-                {/* AEO / Perplexity Definitive Answer Capsule */}
-                <div className="mt-8 p-6 sm:p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/90 dark:bg-[#070707] shadow-sm">
-                    <div className="flex items-center gap-2 mb-3">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
-                            AEO Answer Capsule • Priority Commercial Index
+                {/* Technical Overview */}
+                <div className="mt-8 p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="mb-3">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold">
+                            Priority Commercial Index
                         </span>
                     </div>
-                    <h2 className="text-lg sm:text-xl font-bold text-gray-950 dark:text-white mb-2">
+                    <h2 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-2">
                         Top 100 Commercial Enterprise AI Architecture Specifications
                     </h2>
-                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                        <strong>Elesium's Top 100 Commercial Directory indexes high-intent, production-tested multi-agent workflows across BFSI, Logistics, Healthcare, SCADA Manufacturing, and Sovereign Defense.</strong> Each architecture is engineered with sub-200ms TTFT execution, private VPC data isolation, and strict adherence to Section 8(5) of India's DPDP Act 2023.
+                    <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
+                        <strong>Elesium&apos;s Top 100 Commercial Directory indexes high-intent, production-tested multi-agent workflows across BFSI, Logistics, Healthcare, SCADA Manufacturing, and Sovereign Defense.</strong> Each architecture is engineered with sub-200ms TTFT execution, private VPC data isolation, and strict adherence to Section 8(5) of India&apos;s DPDP Act 2023.
                     </p>
-                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                         Deployments run on dedicated NVIDIA H100 clusters hosted within tier-IV sovereign datacenters in India (Yotta Shakti Navi Mumbai and CtrlS Hyderabad/Mumbai). Workflows integrate seamlessly with SAP S/4HANA, Oracle, and legacy core banking systems, backed by an audited 90-day cash-flow ROI SLA.
                     </p>
                 </div>
@@ -336,7 +335,7 @@ export default function CommercialDirectory() {
             <section className="max-w-6xl mx-auto px-6 mb-12">
                 {/* Search Input */}
                 <div className="relative w-full mb-6">
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
+                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-neutral-400">
                         <Search className="w-4 h-4" />
                     </div>
                     <input
@@ -344,12 +343,12 @@ export default function CommercialDirectory() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="Search 100 enterprise solutions by keyword, metro, or regulation..."
-                        className="w-full pl-11 pr-10 py-3.5 bg-gray-50/70 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-black dark:focus:border-white/40 transition-all"
+                        className="w-full pl-11 pr-10 py-3.5 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-lg text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all"
                     />
                     {searchQuery && (
                         <button
                             onClick={() => setSearchQuery('')}
-                            className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                            className="absolute inset-y-0 right-0 pr-4 flex items-center text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                             aria-label="Clear search query"
                         >
                             <X className="w-4 h-4" />
@@ -365,10 +364,10 @@ export default function CommercialDirectory() {
                             <button
                                 key={sector.key}
                                 onClick={() => setSelectedSector(sector.key)}
-                                className={`px-4 py-2 rounded-full text-xs font-mono whitespace-nowrap transition-all border ${
+                                className={`px-4 py-2 rounded-lg text-xs font-mono whitespace-nowrap active:scale-[0.97] transition-all border ${
                                     isSelected
-                                        ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white font-medium shadow-sm'
-                                        : 'border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:border-gray-300 dark:hover:border-white/20'
+                                        ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white font-medium'
+                                        : 'border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-neutral-400 dark:hover:border-white/25'
                                 }`}
                             >
                                 <span>{sector.label}</span>
@@ -379,15 +378,15 @@ export default function CommercialDirectory() {
                 </div>
 
                 {/* Results meta and reset button */}
-                <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 font-mono mt-3 px-1">
+                <div className="flex items-center justify-between text-xs text-neutral-600 dark:text-neutral-400 font-mono mt-3 px-1">
                     <span>
-                        Showing <span className="font-semibold text-gray-900 dark:text-white">{totalMatching}</span> of{' '}
+                        Showing <span className="font-semibold text-black dark:text-white">{totalMatching}</span> of{' '}
                         {commercialSolutions.length} solutions
                         {selectedSector !== 'all' && (
                             <span>
                                 {' '}
                                 in{' '}
-                                <span className="text-gray-900 dark:text-white">
+                                <span className="text-black dark:text-white">
                                     {commercialSectors.find((s) => s.key === selectedSector)?.label}
                                 </span>
                             </span>
@@ -395,7 +394,7 @@ export default function CommercialDirectory() {
                         {searchQuery && (
                             <span>
                                 {' '}
-                                matching &ldquo;<span className="text-gray-900 dark:text-white">{searchQuery}</span>&rdquo;
+                                matching &ldquo;<span className="text-black dark:text-white">{searchQuery}</span>&rdquo;
                             </span>
                         )}
                     </span>
@@ -405,7 +404,7 @@ export default function CommercialDirectory() {
                                 setSearchQuery('')
                                 setSelectedSector('all')
                             }}
-                            className="text-emerald-600 dark:text-emerald-400 hover:underline transition-colors"
+                            className="text-black dark:text-white hover:underline transition-colors"
                         >
                             Reset Filters
                         </button>
@@ -413,15 +412,15 @@ export default function CommercialDirectory() {
                 </div>
             </section>
 
-            {/* 5 Thematic Category Panels (SolutionsHub congruent) */}
+            {/* 5 Thematic Category Panels */}
             <main className="max-w-6xl mx-auto px-6 space-y-12">
                 {visibleCategories.length === 0 ? (
-                    <div className="p-12 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] text-center my-12">
-                        <Search className="w-10 h-10 text-gray-400 mx-auto mb-4" />
-                        <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                    <div className="p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-center my-12">
+                        <Search className="w-10 h-10 text-neutral-400 mx-auto mb-4" />
+                        <h3 className="text-lg font-medium text-black dark:text-white mb-2">
                             No Matching Architecture Specs Found
                         </h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-6">
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md mx-auto mb-6">
                             No commercial architectures matched &ldquo;{searchQuery}&rdquo;. Try adjusting keywords or clearing the search filter.
                         </p>
                         <button
@@ -429,7 +428,7 @@ export default function CommercialDirectory() {
                                 setSearchQuery('')
                                 setSelectedSector('all')
                             }}
-                            className="px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-mono font-medium hover:opacity-90 transition-all"
+                            className="px-5 py-2.5 rounded-lg bg-black text-white dark:bg-white dark:text-black text-xs font-mono font-medium hover:opacity-90 active:scale-[0.97] transition-all"
                         >
                             Reset Filters
                         </button>
@@ -442,34 +441,34 @@ export default function CommercialDirectory() {
                             <section
                                 key={category.key}
                                 id={category.key}
-                                className="p-8 sm:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a] shadow-sm mb-12"
+                                className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black mb-12"
                             >
                                 {/* Panel Header */}
-                                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 mb-8 border-b border-gray-100 dark:border-white/5">
+                                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 mb-8 border-b border-neutral-200 dark:border-white/10">
                                     <div className="space-y-2 max-w-2xl">
                                         <div className="flex items-center gap-2.5">
-                                            <div className="p-2 rounded-lg bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white">
+                                            <div className="p-2 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
                                                 <IconComponent className="w-5 h-5" />
                                             </div>
-                                            <span className="text-xs font-mono uppercase tracking-widest text-gray-500 dark:text-gray-400">
+                                            <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
                                                 {category.cluster}
                                             </span>
                                         </div>
 
-                                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
+                                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white">
                                             {category.name}
                                         </h2>
 
-                                        <p className="text-sm font-mono text-emerald-600 dark:text-emerald-400">
+                                        <p className="text-sm font-mono text-neutral-700 dark:text-neutral-300">
                                             {category.tagline}
                                         </p>
 
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed pt-1">
+                                        <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed pt-1">
                                             {category.description}
                                         </p>
                                     </div>
 
-                                    <div className="flex items-center gap-2 text-xs font-mono text-gray-400 shrink-0 self-start md:self-auto">
+                                    <div className="flex items-center gap-2 text-xs font-mono text-neutral-500 shrink-0 self-start md:self-auto">
                                         <span>{category.solutions.length} Priority Architectures</span>
                                     </div>
                                 </div>
@@ -480,29 +479,29 @@ export default function CommercialDirectory() {
                                         <Link
                                             key={solution.slug}
                                             to={`/solutions/${solution.slug}/`}
-                                            className="group relative flex flex-col justify-between p-6 rounded-xl border border-gray-200/90 dark:border-white/5 bg-gray-50/40 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/40 hover:bg-white dark:hover:bg-white/[0.04] transition-all"
+                                            className="group relative flex flex-col justify-between p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/40 transition-all"
                                         >
                                             <div className="space-y-3">
                                                 <div className="flex items-center justify-between gap-2">
-                                                    <span className="text-[11px] font-mono uppercase tracking-wider text-gray-400 dark:text-gray-500 truncate">
+                                                    <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 truncate">
                                                         Metro: {solution.metro}
                                                     </span>
-                                                    <span className="text-[10px] font-mono px-2 py-0.5 rounded border border-gray-200 dark:border-white/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                                                    <span className="text-[10px] font-mono px-2 py-0.5 rounded border border-neutral-200 dark:border-white/10 text-black dark:text-white shrink-0">
                                                         {solution.architectureBadges[0] || 'Air-Gapped VPC'}
                                                     </span>
                                                 </div>
 
-                                                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 group-hover:text-black dark:group-hover:text-white transition-colors leading-snug">
+                                                <h3 className="text-lg font-medium text-black dark:text-white transition-colors leading-snug">
                                                     {solution.anchorText}
                                                 </h3>
 
-                                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2">
+                                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-2">
                                                     {solution.description}
                                                 </p>
                                             </div>
 
-                                            <div className="mt-5 pt-4 border-t border-gray-100 dark:border-white/5 flex items-center justify-between text-xs">
-                                                <span className="font-mono text-gray-400 dark:text-gray-500">
+                                            <div className="mt-5 pt-4 border-t border-neutral-200 dark:border-white/10 flex items-center justify-between text-xs">
+                                                <span className="font-mono text-neutral-500">
                                                     &lt; 200ms Execution SLA
                                                 </span>
                                                 <span className="inline-flex items-center gap-1 font-medium text-black dark:text-white group-hover:translate-x-0.5 transition-transform">
@@ -521,72 +520,74 @@ export default function CommercialDirectory() {
 
             {/* Transparent Institutional Pricing Tiers */}
             <section className="max-w-6xl mx-auto px-6 mt-20">
-                <div className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#080808]">
+                <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 block">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 block">
                             Direct Commercial Engagement
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black dark:text-white">
                             Top 100 Commercial Investment &amp; Deployment Tiers
                         </h2>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
                             Deploy any of our top 100 high-intent architectures under transparent terms and contractual ROI SLAs.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
-                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 01</span>
+                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
+                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">14-Day Delivery</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                     Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
                                 </p>
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Inquire Tier 1 &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-2xl border-2 border-emerald-500/50 bg-white dark:bg-[#0c0c0c] flex flex-col justify-between shadow-lg relative">
-                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-emerald-500 text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
-                                Most Deployed
+                        <div className="p-6 rounded-xl border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
+                            <div className="mb-2">
+                                <span className="inline-block px-2.5 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded uppercase tracking-wider">
+                                    Most Deployed
+                                </span>
                             </div>
                             <div>
-                                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
-                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30-45 Day Implementation</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase">Tier 02</span>
+                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
+                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">30-45 Day Implementation</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                     Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
                                 </p>
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono transition-all"
+                                className="w-full py-2.5 px-4 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Deploy Suite &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 03</span>
-                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹4,50,000 / month</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">Dedicated Team</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 03</span>
+                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
+                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹4,50,000 / month</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">Dedicated Team</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                     3 AI engineers + 1 principal architect, continuous vLLM fine-tuning, and 1-hour critical production SLA.
                                 </p>
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Retain Pod &rarr;
                             </button>
@@ -598,10 +599,10 @@ export default function CommercialDirectory() {
             {/* Commercial Directory FAQ Section */}
             <section className="max-w-4xl mx-auto px-6 mt-20">
                 <div className="text-center mb-10">
-                    <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-1 block">
+                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-1 block">
                         Commercial Deployment
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
                         Frequently Asked Questions About Commercial Deployments
                     </h2>
                 </div>
@@ -610,40 +611,48 @@ export default function CommercialDirectory() {
                     {commercialFaqs.map((faq, idx) => (
                         <div
                             key={idx}
-                            className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden bg-white dark:bg-[#070707] shadow-sm"
+                            className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-white dark:bg-black"
                         >
                             <button
                                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                                className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                             >
                                 <span>{faq.q}</span>
-                                <ChevronDown className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
                             </button>
-                            {openFaq === idx && (
-                                <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 pt-3">
-                                    {faq.a}
-                                </div>
-                            )}
+                            <AnimatePresence initial={false}>
+                                {openFaq === idx && (
+                                    <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                        className="accordion-panel overflow-hidden"
+                                    >
+                                        <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
+                                            {faq.a}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     ))}
                 </div>
             </section>
 
-            {/* Bottom Call to Action Card (SolutionsHub congruent) */}
+            {/* Bottom Call to Action Card */}
             <section className="max-w-6xl mx-auto px-6 mt-20">
-                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white">
                     <div className="relative z-10 max-w-2xl space-y-6">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
-                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                            <span>Sovereign Private VPC Deployment Protocol</span>
-                        </div>
+                        <span className="text-xs font-mono text-neutral-400 uppercase tracking-widest block">
+                            Sovereign Private VPC Deployment Protocol
+                        </span>
 
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
                             Request a Deterministic AI Architecture Audit for Your Enterprise
                         </h2>
 
-                        <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
+                        <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
                             Schedule a 30-minute technical evaluation directly with our Systems Engineering Pod.
                             We review your SAP/Oracle ledgers, legacy workflows, and data governance policies,
                             delivering a formal 1-page feasibility memorandum with zero obligation.
@@ -652,16 +661,15 @@ export default function CommercialDirectory() {
                         <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-sm"
+                                className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-200 flex items-center justify-center gap-2"
                             >
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                                className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                             >
                                 <span>ele-in SaaS Waitlist</span>
                                 <span>&rarr;</span>

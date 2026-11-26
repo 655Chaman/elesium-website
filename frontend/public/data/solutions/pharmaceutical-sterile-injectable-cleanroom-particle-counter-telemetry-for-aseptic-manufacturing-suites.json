@@ -17,7 +17,7 @@
   "firstSentence": "Deploy continuous real-time airborne particle counter telemetry for Grade A aseptic filling lines conforming to EU GMP Annex 1 2022 standards.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites",
   "paragraphs": [
     "Under the revised EU GMP Annex 1 2022 regulations, manufacturers of sterile injectable pharmaceuticals must maintain continuous, non-viable airborne particle counting in Grade A aseptic filling zones. Intermittent spot-checking or batch-end data collection is no longer compliant. Detecting non-viable particles (0.5 µm and 5.0 µm) during vial filling requires instantaneous alerting to prevent sterile drug batch contamination.",
@@ -113,7 +113,7 @@
     "subheadline": "Under the revised EU GMP Annex 1 2022 regulations, manufacturers of sterile injectable pharmaceuticals must maintain continuous, non-viable airborne particle counting in Grade A aseptic filling zones. Intermittent spot-checking or batch-end data collection is no longer compliant. Detecting non-viable particles (0.5 µm and 5.0 µm) during vial filling requires instantaneous alerting to prevent sterile drug batch contamination.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "From threshold excursion detection to physical filling machine stop signal."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "From threshold excursion detection to physical filling machine stop signal."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites Performance Telemetry",
       "layout": "centered-card"
     }

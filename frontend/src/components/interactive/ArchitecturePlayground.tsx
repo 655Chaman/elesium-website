@@ -229,12 +229,12 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
     };
 
     return (
-        <div className="interactive-asset my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-b from-gray-950 via-[#0a0a0c] to-black border border-cyan-500/20 shadow-2xl text-white font-sans overflow-hidden">
+        <div className="interactive-asset my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-b from-gray-950 via-[#0a0a0c] to-black border border-white/20 shadow-2xl text-white font-sans overflow-hidden">
             {/* Header with Title and Mode Badges */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-5">
                 <div>
                     <div className="flex items-center gap-2 mb-1.5">
-                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 flex items-center gap-1">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-white/10 text-neutral-200 border border-white/30 flex items-center gap-1">
                             <Activity className="h-3 w-3 " />
                             Live Architecture Simulator
                         </span>
@@ -253,7 +253,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                         onClick={() => setSelectedWorkflow('bfsi')}
                         className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                             selectedWorkflow === 'bfsi'
-                                ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/25'
+                                ? 'bg-white text-black shadow-lg shadow-white/25'
                                 : 'text-white/60 hover:text-white'
                         }`}
                     >
@@ -263,7 +263,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                         onClick={() => setSelectedWorkflow('supply_chain')}
                         className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                             selectedWorkflow === 'supply_chain'
-                                ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/25'
+                                ? 'bg-white text-black shadow-lg shadow-white/25'
                                 : 'text-white/60 hover:text-white'
                         }`}
                     >
@@ -281,9 +281,9 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
 
                         let statusColor = "border-white/10 bg-white/[0.03]";
                         if (node.status === 'processing' || isActive) {
-                            statusColor = "border-cyan-400 bg-cyan-950/40 shadow-lg shadow-cyan-500/20";
+                            statusColor = "border-neutral-200 bg-neutral-950/40 shadow-lg shadow-white/20";
                         } else if (node.status === 'success') {
-                            statusColor = "border-emerald-500/60 bg-emerald-950/20";
+                            statusColor = "border-white/60 bg-neutral-950/20";
                         } else if (node.status === 'fallback') {
                             statusColor = "border-amber-500/60 bg-amber-950/30";
                         }
@@ -298,14 +298,14 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className={`text-left p-4 rounded-xl border transition-all duration-300 relative flex flex-col justify-between min-h-[140px] ${statusColor} ${
-                                    isSelected ? 'ring-2 ring-cyan-400/80' : ''
+                                    isSelected ? 'ring-2 ring-neutral-200/80' : ''
                                 }`}
                             >
                                 <div>
                                     <div className="flex items-center justify-between text-[11px] font-mono text-white/50 mb-2">
                                         <span>0{idx + 1}. STAGE</span>
-                                        {node.status === 'success' && <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />}
-                                        {node.status === 'processing' && <Zap className="h-3.5 w-3.5 text-cyan-400 animate-spin" />}
+                                        {node.status === 'success' && <CheckCircle2 className="h-3.5 w-3.5 text-neutral-200" />}
+                                        {node.status === 'processing' && <Zap className="h-3.5 w-3.5 text-neutral-200 animate-spin" />}
                                         {node.status === 'fallback' && <AlertTriangle className="h-3.5 w-3.5 text-amber-400" />}
                                     </div>
                                     <div className="text-sm font-bold text-white mb-1 leading-snug">
@@ -339,8 +339,8 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                             disabled={isRunning}
                             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wide transition-all ${
                                 isRunning
-                                    ? 'bg-cyan-500/30 text-white/50 cursor-not-allowed'
-                                    : 'bg-cyan-500 hover:bg-cyan-400 text-black shadow-lg shadow-cyan-500/20 active:scale-95'
+                                    ? 'bg-white/30 text-white/50 cursor-not-allowed'
+                                    : 'bg-white hover:bg-neutral-200 text-black shadow-lg shadow-white/20 active:scale-95'
                             }`}
                         >
                             <Play className={`h-4 w-4 ${isRunning ? '' : 'fill-current'}`} />
@@ -366,7 +366,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                                     setChaosMode(e.target.checked);
                                     onTelemetry?.('playground_chaos_toggled', { enabled: e.target.checked });
                                 }}
-                                className="rounded bg-black border-white/20 text-cyan-500 focus:ring-0 cursor-pointer"
+                                className="rounded bg-black border-white/20 text-white focus:ring-0 cursor-pointer"
                             />
                             <span className="flex items-center gap-1.5">
                                 <AlertTriangle className="h-3.5 w-3.5 text-amber-400" />
@@ -379,7 +379,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                     <div className="pt-2">
                         <div className="flex items-center justify-between text-xs font-mono text-white/60 mb-1.5">
                             <span>Target Concurrency:</span>
-                            <span className="text-cyan-400 font-bold">{throughputReqPerSec} req/sec</span>
+                            <span className="text-neutral-200 font-bold">{throughputReqPerSec} req/sec</span>
                         </div>
                         <input
                             type="range"
@@ -392,7 +392,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                                 setThroughputReqPerSec(val);
                                 onTelemetry?.('playground_concurrency_adjusted', { reqPerSec: val });
                             }}
-                            className="w-full accent-cyan-400 h-1.5 bg-white/10 rounded-lg cursor-pointer"
+                            className="w-full accent-neutral-200 h-1.5 bg-white/10 rounded-lg cursor-pointer"
                         />
                         <div className="flex justify-between text-[10px] font-mono text-white/40 mt-1">
                             <span>20 rps (Pilot)</span>
@@ -406,7 +406,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                     <div>
                         <div className="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
                             <div className="flex items-center gap-2">
-                                <Server className="h-4 w-4 text-cyan-400" />
+                                <Server className="h-4 w-4 text-neutral-200" />
                                 <span className="text-xs font-bold font-mono text-white">
                                     Stage Inspector: {selectedNodeDetails.title}
                                 </span>
@@ -420,7 +420,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                             {selectedNodeDetails.description}
                         </p>
 
-                        <div className="bg-gray-950 rounded-lg p-3 border border-white/5 font-mono text-[11px] text-cyan-300 overflow-x-auto max-h-[110px]">
+                        <div className="bg-gray-950 rounded-lg p-3 border border-white/5 font-mono text-[11px] text-neutral-200 overflow-x-auto max-h-[110px]">
                             <pre>{selectedNodeDetails.payloadPreview}</pre>
                         </div>
                     </div>
@@ -428,7 +428,7 @@ export const ArchitecturePlayground: React.FC<ArchitecturePlaygroundProps> = ({
                     {/* Live Telemetry Summary */}
                     <div className="mt-4 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-white/60">
                         <div className="flex items-center gap-4">
-                            <span>Pipeline Latency: <strong className="text-emerald-400">{totalLatency > 0 ? `${totalLatency}ms` : '665ms nominal'}</strong></span>
+                            <span>Pipeline Latency: <strong className="text-neutral-200">{totalLatency > 0 ? `${totalLatency}ms` : '665ms nominal'}</strong></span>
                             <span>SLA Target: <strong className="text-white">&lt; 1,800ms</strong></span>
                         </div>
                         <span className="text-[10px] text-white/40">Zero Model Training on Customer Data</span>

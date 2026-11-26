@@ -17,7 +17,7 @@
   "firstSentence": "Automate zero-rated export invoice filing under Letter of Undertaking (LUT) with Tally Prime, ensuring seamless GST Form RFD-11 compliance and instant Shipping Bill reconciliation.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime",
   "paragraphs": [
     "Export-oriented units (EOUs) and software services exporters in India executing zero-rated supplies under Letter of Undertaking (LUT) face complex accounting and documentation burdens. Issuing export invoices without paying integrated tax requires strict adherence to statutory LUT validity periods, foreign currency realization tracking, and precise disclosure in GSTR-1 Table 6A. Errors in export invoice endorsement phrases or currency conversion dates lead to frozen export refunds and tax demand notices.",
@@ -113,7 +113,7 @@
     "subheadline": "Export-oriented units (EOUs) and software services exporters in India executing zero-rated supplies under Letter of Undertaking (LUT) face complex accounting and documentation burdens. Issuing export invoices without paying integrated tax requires strict adherence to statutory LUT validity periods, foreign currency realization tracking, and precise disclosure in GSTR-1 Table 6A. Errors in export invoice endorsement phrases or currency conversion dates lead to frozen export refunds and tax demand notices.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Continuous automated tracking of foreign inward remittance deadlines."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Continuous automated tracking of foreign inward remittance deadlines."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime Performance Telemetry",
       "layout": "centered-card"
     }

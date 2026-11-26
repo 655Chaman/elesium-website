@@ -11,10 +11,10 @@ export default function AgentIntro() {
     const div2Ref = useRef<HTMLDivElement>(null)
     const div3Ref = useRef<HTMLDivElement>(null)
 
-    // Beam Colors - Subtle Monochrome & Emerald (No jarring pinks or indigos)
-    const pathColor = "rgba(100, 100, 100, 0.12)"
-    const gradientStartColor = "#10B981" // Emerald
-    const gradientStopColor = "#059669" // Deep Emerald
+    // Beam Colors - Strictly Monochrome
+    const pathColor = "rgba(128,128,128,0.18)"
+    const gradientStartColor = "#ffffff"
+    const gradientStopColor = "#737373"
 
     return (
         <section

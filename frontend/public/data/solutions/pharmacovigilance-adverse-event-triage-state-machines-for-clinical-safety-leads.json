@@ -17,7 +17,7 @@
   "firstSentence": "Automate adverse drug reaction (ADR) detection and MedDRA coding across clinical trial records, classifying critical safety events in sub-45ms under CDSCO and FDA FAERS mandates.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads",
   "paragraphs": [
     "Pharmaceutical drug sponsors and clinical research organizations (CROs) in India process thousands of adverse event reports, post-marketing spontaneous complaints, and patient registries weekly. Pharmacovigilance safety teams spend weeks manually reading unstructured physician notes, determining drug causality, and mapping reported side effects to the Medical Dictionary for Regulatory Activities (MedDRA). Regulatory delays in reporting Serious Adverse Events (SAEs) within statutory 7-day or 15-day windows trigger clinical trial suspensions and massive regulatory fines.",
@@ -113,7 +113,7 @@
     "subheadline": "Pharmaceutical drug sponsors and clinical research organizations (CROs) in India process thousands of adverse event reports, post-marketing spontaneous complaints, and patient registries weekly. Pharmacovigilance safety teams spend weeks manually reading unstructured physician notes, determining drug causality, and mapping reported side effects to the Medical Dictionary for Regulatory Activities (MedDRA). Regulatory delays in reporting Serious Adverse Events (SAEs) within statutory 7-day or 15-day windows trigger clinical trial suspensions and massive regulatory fines.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete case triage to E2B XML compilation vs 14 days manual review."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete case triage to E2B XML compilation vs 14 days manual review."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads Performance Telemetry",
       "layout": "centered-card"
     }

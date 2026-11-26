@@ -82,7 +82,7 @@ export default function EnterpriseGpuCostCalculator() {
   const activeHardware = GPU_HARDWARE_SPECS[hardware];
   const activeHyperscaler = HYPERSCALER_PRICING_SPECS[hyperscalerComparison];
 
-  const embedCode = `<iframe src="https://elesium.online/embed/gpu-cost-calculator" width="100%" height="760" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;box-shadow:0 10px 25px -5px rgba(0,0,0,0.5);"></iframe><div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Solutions</a></div>`;
+  const embedCode = `<iframe src="https://elesium.online/embed/gpu-cost-calculator" width="100%" height="760" frameborder="0" style="border-radius:12px;border:1px solid #262626;box-shadow:0 10px 25px -5px rgba(0,0,0,0.5);"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Solutions</a></div>`;
 
   const copyEmbedSnippet = () => {
     navigator.clipboard.writeText(embedCode);
@@ -170,28 +170,28 @@ export default function EnterpriseGpuCostCalculator() {
         <script type="application/ld+json">{JSON.stringify(schemaJson)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-sky-500 selection:text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-black text-neutral-100 selection:bg-white/20 selection:text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           
           {/* Breadcrumb & Navigation */}
-          <nav className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-6">
-            <Link to="/" className="hover:text-sky-400 transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-6">
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
-            <Link to="/solutions/" className="hover:text-sky-400 transition-colors">Solutions</Link>
+            <Link to="/solutions/" className="hover:text-white transition-colors">Solutions</Link>
             <span>/</span>
-            <span className="text-slate-200">GPU FinOps &amp; Throughput Calculator</span>
+            <span className="text-neutral-200">GPU FinOps &amp; Throughput Calculator</span>
           </nav>
 
           {/* Hero Header */}
           <header className="mb-10 text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-800 text-sky-400 text-xs font-mono font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200 text-xs font-mono font-medium mb-4">
               <Cpu className="w-3.5 h-3.5" />
               <span>NVIDIA Hopper &amp; HBM3e Roofline Hardware Model • 3-Year TCO Sizer</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
               Enterprise GPU FinOps &amp; Throughput Calculator
             </h1>
-            <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+            <p className="text-base sm:text-lg text-neutral-400 leading-relaxed">
               Compare the total cost of ownership, VRAM allocation, and continuous batch throughput of self-hosted sovereign GPU clusters versus closed hyperscaler API token consumption.
             </p>
 
@@ -199,39 +199,39 @@ export default function EnterpriseGpuCostCalculator() {
             <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 text-xs font-mono transition-all hover:bg-slate-850"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-mono transition-all hover:bg-neutral-850"
               >
-                <Code className="w-3.5 h-3.5 text-sky-400" />
+                <Code className="w-3.5 h-3.5 text-neutral-200" />
                 <span>Embed On Your Site</span>
               </button>
               <button
                 onClick={copyFinOpsMemo}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 text-xs font-mono transition-all hover:bg-slate-850"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-mono transition-all hover:bg-neutral-850"
               >
                 {hasCopiedMemo ? (
                   <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-400">Procurement Memo Copied!</span>
+                    <Check className="w-3.5 h-3.5 text-neutral-200" />
+                    <span className="text-neutral-200">Procurement Memo Copied!</span>
                   </>
                 ) : (
                   <>
-                    <FileText className="w-3.5 h-3.5 text-sky-400" />
+                    <FileText className="w-3.5 h-3.5 text-neutral-200" />
                     <span>Copy FinOps Memo (JSON)</span>
                   </>
                 )}
               </button>
               
               {/* Currency Toggle */}
-              <div className="inline-flex items-center bg-slate-900 border border-slate-800 rounded-lg p-1 text-xs font-mono">
+              <div className="inline-flex items-center bg-neutral-900 border border-neutral-800 rounded-lg p-1 text-xs font-mono">
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`px-2.5 py-1 rounded transition-colors ${currency === 'USD' ? 'bg-sky-600 text-white font-bold' : 'text-slate-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded transition-colors ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                 >
                   USD ($)
                 </button>
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`px-2.5 py-1 rounded transition-colors ${currency === 'INR' ? 'bg-sky-600 text-white font-bold' : 'text-slate-400 hover:text-white'}`}
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded transition-colors ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                 >
                   INR (₹)
                 </button>
@@ -246,9 +246,9 @@ export default function EnterpriseGpuCostCalculator() {
             <div className="lg:col-span-7 space-y-6">
 
               {/* Workload Parameters Card */}
-              <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                <div className="flex items-center gap-2 pb-4 border-b border-slate-800 mb-5">
-                  <Activity className="w-5 h-5 text-sky-400" />
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+                <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-5">
+                  <Activity className="w-5 h-5 text-neutral-200" />
                   <h2 className="text-lg font-bold text-white tracking-tight">1. Workload Concurrency &amp; Token Scale</h2>
                 </div>
 
@@ -256,8 +256,8 @@ export default function EnterpriseGpuCostCalculator() {
                   {/* Monthly Token Volume */}
                   <div>
                     <div className="flex justify-between items-center text-sm font-medium mb-2">
-                      <span className="text-slate-300">Monthly Token Volume</span>
-                      <span className="font-mono text-sky-400 font-bold bg-sky-950/80 px-2.5 py-0.5 rounded border border-sky-800">
+                      <span className="text-neutral-300">Monthly Token Volume</span>
+                      <span className="font-mono text-white font-bold bg-white/[0.05] px-2.5 py-0.5 rounded border border-white/15">
                         {monthlyTokenVolumeMillions}M tokens / month
                       </span>
                     </div>
@@ -268,9 +268,9 @@ export default function EnterpriseGpuCostCalculator() {
                       step="10"
                       value={monthlyTokenVolumeMillions}
                       onChange={(e) => setMonthlyTokenVolumeMillions(Number(e.target.value))}
-                      className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
+                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                     />
-                    <div className="flex justify-between text-[11px] font-mono text-slate-400 mt-1">
+                    <div className="flex justify-between text-[11px] font-mono text-neutral-400 mt-1">
                       <span>10M (Proof of Concept)</span>
                       <span>250M (Enterprise Scale)</span>
                       <span>1,500M (High-Volume Tier)</span>
@@ -280,8 +280,8 @@ export default function EnterpriseGpuCostCalculator() {
                   {/* Average Context Window */}
                   <div>
                     <div className="flex justify-between items-center text-sm font-medium mb-2">
-                      <span className="text-slate-300">Average Context Window (Input + Output)</span>
-                      <span className="font-mono text-sky-400 font-bold bg-sky-950/80 px-2.5 py-0.5 rounded border border-sky-800">
+                      <span className="text-neutral-300">Average Context Window (Input + Output)</span>
+                      <span className="font-mono text-white font-bold bg-white/[0.05] px-2.5 py-0.5 rounded border border-white/15">
                         {averageContextLengthTokens.toLocaleString()} tokens
                       </span>
                     </div>
@@ -292,9 +292,9 @@ export default function EnterpriseGpuCostCalculator() {
                       step="1024"
                       value={averageContextLengthTokens}
                       onChange={(e) => setAverageContextLengthTokens(Number(e.target.value))}
-                      className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
+                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                     />
-                    <div className="flex justify-between text-[11px] font-mono text-slate-400 mt-1">
+                    <div className="flex justify-between text-[11px] font-mono text-neutral-400 mt-1">
                       <span>1,024 (Short RPC)</span>
                       <span>8,192 (Multi-Turn Chat)</span>
                       <span>32,768 (Document RAG)</span>
@@ -304,8 +304,8 @@ export default function EnterpriseGpuCostCalculator() {
                   {/* Peak Concurrent Streams */}
                   <div>
                     <div className="flex justify-between items-center text-sm font-medium mb-2">
-                      <span className="text-slate-300">Peak Concurrent In-Flight Streams</span>
-                      <span className="font-mono text-sky-400 font-bold bg-sky-950/80 px-2.5 py-0.5 rounded border border-sky-800">
+                      <span className="text-neutral-300">Peak Concurrent In-Flight Streams</span>
+                      <span className="font-mono text-white font-bold bg-white/[0.05] px-2.5 py-0.5 rounded border border-white/15">
                         {peakConcurrentRequests} concurrent users
                       </span>
                     </div>
@@ -316,9 +316,9 @@ export default function EnterpriseGpuCostCalculator() {
                       step="5"
                       value={peakConcurrentRequests}
                       onChange={(e) => setPeakConcurrentRequests(Number(e.target.value))}
-                      className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
+                      className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                     />
-                    <div className="flex justify-between text-[11px] font-mono text-slate-400 mt-1">
+                    <div className="flex justify-between text-[11px] font-mono text-neutral-400 mt-1">
                       <span>5 streams</span>
                       <span>50 streams (Standard Pod)</span>
                       <span>250 streams (Peak Event)</span>
@@ -328,16 +328,16 @@ export default function EnterpriseGpuCostCalculator() {
               </div>
 
               {/* Model & Precision Selection Card */}
-              <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                <div className="flex items-center gap-2 pb-4 border-b border-slate-800 mb-5">
-                  <Layers className="w-5 h-5 text-sky-400" />
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+                <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-5">
+                  <Layers className="w-5 h-5 text-neutral-200" />
                   <h2 className="text-lg font-bold text-white tracking-tight">2. Open-Weight Model &amp; Quantization</h2>
                 </div>
 
                 <div className="space-y-4">
                   {/* Model Tier Grid */}
                   <div>
-                    <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-mono text-neutral-400 uppercase tracking-wider mb-2">
                       Foundation Model Parameter Class
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -348,17 +348,17 @@ export default function EnterpriseGpuCostCalculator() {
                           <button
                             key={key}
                             onClick={() => setModelTier(key)}
-                            className={`p-3 rounded-xl border text-left transition-all ${
+                            className={`active:scale-[0.97] p-3 rounded-xl border text-left transition-all ${
                               isSelected
-                                ? 'bg-sky-950/70 border-sky-500 ring-1 ring-sky-500 text-white'
-                                : 'bg-slate-950/50 border-slate-800 hover:border-slate-700 text-slate-300'
+                                ? 'bg-white/[0.05] border-white/30 ring-1 ring-white/20 text-white'
+                                : 'bg-neutral-950/50 border-neutral-800 hover:border-neutral-700 text-neutral-300'
                             }`}
                           >
                             <div className="font-bold text-sm text-white flex justify-between items-center">
                               <span>{m.name}</span>
-                              <span className="font-mono text-xs text-sky-400">{m.parameterCountBillions}B</span>
+                              <span className="font-mono text-xs text-neutral-200">{m.parameterCountBillions}B</span>
                             </div>
-                            <p className="text-[11px] text-slate-400 mt-1 line-clamp-2">{m.description}</p>
+                            <p className="text-[11px] text-neutral-400 mt-1 line-clamp-2">{m.description}</p>
                           </button>
                         );
                       })}
@@ -367,7 +367,7 @@ export default function EnterpriseGpuCostCalculator() {
 
                   {/* Quantization Precision Toggle */}
                   <div className="pt-2">
-                    <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-mono text-neutral-400 uppercase tracking-wider mb-2">
                       Quantization Engine Precision (Weights &amp; KV Cache)
                     </label>
                     <div className="grid grid-cols-3 gap-2">
@@ -379,14 +379,14 @@ export default function EnterpriseGpuCostCalculator() {
                         <button
                           key={item.id}
                           onClick={() => setQuantization(item.id as QuantizationPrecision)}
-                          className={`p-2.5 rounded-lg border text-left transition-all ${
+                          className={`active:scale-[0.97] p-2.5 rounded-lg border text-left transition-all ${
                             quantization === item.id
-                              ? 'bg-sky-950 border-sky-500 text-white ring-1 ring-sky-500'
-                              : 'bg-slate-950/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                              ? 'bg-white/[0.05] border-white/30 text-white ring-1 ring-white/20'
+                              : 'bg-neutral-950/60 border-neutral-800 hover:border-neutral-700 text-neutral-300'
                           }`}
                         >
                           <div className="font-bold text-xs text-white">{item.label}</div>
-                          <div className="text-[10px] text-slate-400 mt-0.5">{item.sub}</div>
+                          <div className="text-[10px] text-neutral-400 mt-0.5">{item.sub}</div>
                         </button>
                       ))}
                     </div>
@@ -395,16 +395,16 @@ export default function EnterpriseGpuCostCalculator() {
               </div>
 
               {/* Hardware & Comparison Profile Card */}
-              <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                <div className="flex items-center gap-2 pb-4 border-b border-slate-800 mb-5">
-                  <Server className="w-5 h-5 text-sky-400" />
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+                <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 mb-5">
+                  <Server className="w-5 h-5 text-neutral-200" />
                   <h2 className="text-lg font-bold text-white tracking-tight">3. Cluster Hardware &amp; Benchmark API</h2>
                 </div>
 
                 <div className="space-y-4">
                   {/* Hardware Target */}
                   <div>
-                    <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-mono text-neutral-400 uppercase tracking-wider mb-2">
                       Self-Hosted Infrastructure Architecture
                     </label>
                     <div className="space-y-2">
@@ -415,22 +415,22 @@ export default function EnterpriseGpuCostCalculator() {
                           <button
                             key={key}
                             onClick={() => setHardware(key)}
-                            className={`w-full p-3 rounded-xl border text-left flex items-center justify-between transition-all ${
+                            className={`active:scale-[0.97] w-full p-3 rounded-xl border text-left flex items-center justify-between transition-all ${
                               isSelected
-                                ? 'bg-sky-950/70 border-sky-500 ring-1 ring-sky-500 text-white'
-                                : 'bg-slate-950/50 border-slate-800 hover:border-slate-700 text-slate-300'
+                                ? 'bg-white/[0.05] border-white/30 ring-1 ring-white/20 text-white'
+                                : 'bg-neutral-950/50 border-neutral-800 hover:border-neutral-700 text-neutral-300'
                             }`}
                           >
                             <div>
                               <div className="font-bold text-sm text-white flex items-center gap-2">
                                 <span>{h.name}</span>
-                                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">
+                                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">
                                   {h.interconnect}
                                 </span>
                               </div>
-                              <p className="text-[11px] text-slate-400 mt-0.5">{h.recommendedFor}</p>
+                              <p className="text-[11px] text-neutral-400 mt-0.5">{h.recommendedFor}</p>
                             </div>
-                            <div className="text-right font-mono text-xs text-sky-400 font-bold shrink-0 ml-3">
+                            <div className="text-right font-mono text-xs text-white font-bold shrink-0 ml-3">
                               {h.hourlyRentalRateUSD > 0 ? `$${h.hourlyRentalRateUSD}/hr` : 'On-Prem CapEx'}
                             </div>
                           </button>
@@ -441,7 +441,7 @@ export default function EnterpriseGpuCostCalculator() {
 
                   {/* Hyperscaler Comparison API */}
                   <div className="pt-2">
-                    <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-mono text-neutral-400 uppercase tracking-wider mb-2">
                       Hyperscaler Cloud API Benchmark
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -452,17 +452,17 @@ export default function EnterpriseGpuCostCalculator() {
                           <button
                             key={key}
                             onClick={() => setHyperscalerComparison(key)}
-                            className={`p-2.5 rounded-lg border text-left transition-all ${
+                            className={`active:scale-[0.97] p-2.5 rounded-lg border text-left transition-all ${
                               isSelected
-                                ? 'bg-sky-950 border-sky-500 text-white ring-1 ring-sky-500'
-                                : 'bg-slate-950/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                                ? 'bg-white/[0.05] border-white/30 text-white ring-1 ring-white/20'
+                                : 'bg-neutral-950/60 border-neutral-800 hover:border-neutral-700 text-neutral-300'
                             }`}
                           >
                             <div className="font-bold text-xs text-white flex justify-between items-center">
                               <span>{p.name}</span>
-                              <span className="font-mono text-sky-400 font-bold">${p.blendedPerMillionUSD}/M</span>
+                              <span className="font-mono text-white font-bold">${p.blendedPerMillionUSD}/M</span>
                             </div>
-                            <div className="text-[10px] text-slate-400 mt-1 flex justify-between">
+                            <div className="text-[10px] text-neutral-400 mt-1 flex justify-between">
                               <span>{p.provider}</span>
                               <span>P95 ~{p.p95LatencyMs}ms</span>
                             </div>
@@ -480,60 +480,60 @@ export default function EnterpriseGpuCostCalculator() {
             <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
 
               {/* Main FinOps Economics Card */}
-              <div className="bg-gradient-to-b from-sky-950/80 via-slate-900 to-slate-900 border-2 border-sky-500/80 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-sky-500 text-black font-extrabold text-[10px] uppercase font-mono px-3 py-1 rounded-bl-lg">
+              <div className="bg-neutral-950 border-2 border-white/30 rounded-xl p-6 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-white text-black font-extrabold text-[10px] uppercase font-mono px-3 py-1 rounded-bl-lg">
                   FinOps Breakeven Verified
                 </div>
 
                 <div className="flex items-center gap-2 mb-4">
-                  <DollarSign className="w-5 h-5 text-sky-400" />
-                  <span className="text-xs font-mono font-bold tracking-wider uppercase text-slate-300">
+                  <DollarSign className="w-5 h-5 text-neutral-200" />
+                  <span className="text-xs font-mono font-bold tracking-wider uppercase text-neutral-300">
                     Monthly Operational Comparison
                   </span>
                 </div>
 
                 {/* Big Savings Number */}
-                <div className="mb-6 pb-6 border-b border-slate-800">
-                  <div className="text-xs font-mono text-slate-400 mb-1">Estimated Net Monthly Savings</div>
+                <div className="mb-6 pb-6 border-b border-neutral-800">
+                  <div className="text-xs font-mono text-neutral-400 mb-1">Estimated Net Monthly Savings</div>
                   <div className="text-4xl font-extrabold text-white tracking-tight flex items-baseline gap-2">
-                    <span className="text-emerald-400">{formatFinOpsCurrency(results.netMonthlySavingsUSD, currency)}</span>
-                    <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-emerald-950 border border-emerald-700 text-emerald-400">
+                    <span className="text-neutral-200">{formatFinOpsCurrency(results.netMonthlySavingsUSD, currency)}</span>
+                    <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-white/[0.05] border border-white/15 text-white">
                       {results.savingsPercentage > 0 ? `+${results.savingsPercentage}% Cut` : 'At Scale'}
                     </span>
                   </div>
-                  <div className="text-xs font-mono text-slate-400 mt-2">
+                  <div className="text-xs font-mono text-neutral-400 mt-2">
                     3-Year Cumulative Savings:{' '}
-                    <span className="text-emerald-300 font-bold">{formatFinOpsCurrency(results.threeYearSavingsUSD, currency)}</span>
+                    <span className="text-white font-bold">{formatFinOpsCurrency(results.threeYearSavingsUSD, currency)}</span>
                   </div>
                 </div>
 
                 {/* Side-by-Side Cost Comparison */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
-                    <div className="text-[11px] font-mono text-slate-400 mb-1">Self-Hosted Cluster</div>
+                  <div className="p-3 rounded-xl bg-neutral-950/80 border border-neutral-800">
+                    <div className="text-[11px] font-mono text-neutral-400 mb-1">Self-Hosted Cluster</div>
                     <div className="text-lg font-bold text-white font-mono">
                       {formatFinOpsCurrency(results.monthlySelfHostedCostUSD, currency)}
                     </div>
-                    <div className="text-[10px] text-slate-400 mt-1">
+                    <div className="text-[10px] text-neutral-400 mt-1">
                       {results.recommendedGpuCount}x {activeHardware.name}
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-950/80 border border-rose-950/80">
-                    <div className="text-[11px] font-mono text-slate-400 mb-1">Hyperscaler Cloud API</div>
-                    <div className="text-lg font-bold text-rose-400 font-mono">
+                  <div className="p-3 rounded-xl bg-neutral-950/80 border border-red-950/80">
+                    <div className="text-[11px] font-mono text-neutral-400 mb-1">Hyperscaler Cloud API</div>
+                    <div className="text-lg font-bold text-red-400 font-mono">
                       {formatFinOpsCurrency(results.monthlyHyperscalerCostUSD, currency)}
                     </div>
-                    <div className="text-[10px] text-slate-400 mt-1">
+                    <div className="text-[10px] text-neutral-400 mt-1">
                       {activeHyperscaler.name}
                     </div>
                   </div>
                 </div>
 
                 {/* Breakeven Metric */}
-                <div className="p-3 rounded-xl bg-sky-950/40 border border-sky-800/80 mb-6 flex items-center justify-between text-xs font-mono">
-                  <span className="text-slate-300">Commercial Breakeven Threshold:</span>
-                  <span className="text-sky-300 font-bold">
+                <div className="p-3 rounded-xl bg-white/[0.05] border border-white/15 mb-6 flex items-center justify-between text-xs font-mono">
+                  <span className="text-neutral-300">Commercial Breakeven Threshold:</span>
+                  <span className="text-white font-bold">
                     {results.breakevenMonthlyTokenThresholdMillions}M tokens / month
                   </span>
                 </div>
@@ -542,14 +542,14 @@ export default function EnterpriseGpuCostCalculator() {
                 <div className="space-y-3">
                   <button
                     onClick={() => openWhatsApp()}
-                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                    className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
                   >
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span className="w-2 h-2 rounded-lg bg-neutral-400" />
                     <span>Chat on WhatsApp</span>
                   </button>
                 <ExpandableScreen>
                     <ExpandableScreenTrigger>
-                      <button className="w-full py-3.5 px-4 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center gap-2">
+                      <button className="active:scale-[0.97] w-full py-3.5 px-4 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-sm tracking-wide shadow-lg transition-all flex items-center justify-center gap-2">
                         <span>Deploy This Sovereign Cluster in Your VPC</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
@@ -561,58 +561,58 @@ export default function EnterpriseGpuCostCalculator() {
 
                   <button
                     onClick={() => openWhatsApp()}
-                    className="w-full py-2.5 px-4 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 text-slate-300 font-mono text-xs tracking-wide transition-all flex items-center justify-center gap-2"
+                    className="active:scale-[0.97] w-full py-2.5 px-4 rounded-xl bg-neutral-950 hover:bg-neutral-900 border border-neutral-800 text-neutral-300 font-mono text-xs tracking-wide transition-all flex items-center justify-center gap-2"
                   >
                     <span>Discuss Cluster Sizing via Private Channel</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                    <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
                   </button>
                 </div>
               </div>
 
               {/* Hardware Sizing & Roofline Specification Card */}
-              <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                <div className="flex items-center gap-2 pb-3 border-b border-slate-800 mb-4">
-                  <Gauge className="w-4 h-4 text-sky-400" />
+              <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+                <div className="flex items-center gap-2 pb-3 border-b border-neutral-800 mb-4">
+                  <Gauge className="w-4 h-4 text-neutral-200" />
                   <h3 className="text-sm font-bold text-white tracking-tight uppercase font-mono">
                     Cluster Architecture &amp; VRAM Physics
                   </h3>
                 </div>
 
                 <div className="space-y-3 text-xs font-mono">
-                  <div className="flex justify-between py-1.5 border-b border-slate-800/60">
-                    <span className="text-slate-400">Recommended GPU Topology:</span>
+                  <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                    <span className="text-neutral-400">Recommended GPU Topology:</span>
                     <span className="text-white font-bold">{results.recommendedGpuCount}x {activeHardware.name}</span>
                   </div>
 
-                  <div className="flex justify-between py-1.5 border-b border-slate-800/60">
-                    <span className="text-slate-400">Tensor Parallelism Degree:</span>
-                    <span className="text-sky-400 font-bold">TP = {results.tensorParallelismDegree} (NVLink Mesh)</span>
+                  <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                    <span className="text-neutral-400">Tensor Parallelism Degree:</span>
+                    <span className="text-white font-bold">TP = {results.tensorParallelismDegree} (NVLink Mesh)</span>
                   </div>
 
-                  <div className="flex justify-between py-1.5 border-b border-slate-800/60">
-                    <span className="text-slate-400">Model Weights VRAM:</span>
+                  <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                    <span className="text-neutral-400">Model Weights VRAM:</span>
                     <span className="text-white">{results.weightsVramGb} GB</span>
                   </div>
 
-                  <div className="flex justify-between py-1.5 border-b border-slate-800/60">
-                    <span className="text-slate-400">Dynamic KV Cache VRAM:</span>
+                  <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                    <span className="text-neutral-400">Dynamic KV Cache VRAM:</span>
                     <span className="text-white">{results.totalKvCacheVramGb} GB (PagedAttention)</span>
                   </div>
 
-                  <div className="flex justify-between py-1.5 border-b border-slate-800/60">
-                    <span className="text-slate-400">Cluster Memory Headroom:</span>
-                    <span className="text-emerald-400 font-bold">{results.memoryHeadroomPct}% Headroom</span>
+                  <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                    <span className="text-neutral-400">Cluster Memory Headroom:</span>
+                    <span className="text-white font-bold">{results.memoryHeadroomPct}% Headroom</span>
                   </div>
 
-                  <div className="flex justify-between py-1.5 border-b border-slate-800/60">
-                    <span className="text-slate-400">Continuous Batch Throughput:</span>
-                    <span className="text-sky-300 font-bold">{results.sustainedConcurrentThroughputTokensPerSec.toLocaleString()} tokens/sec</span>
+                  <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                    <span className="text-neutral-400">Continuous Batch Throughput:</span>
+                    <span className="text-white font-bold">{results.sustainedConcurrentThroughputTokensPerSec.toLocaleString()} tokens/sec</span>
                   </div>
 
                   <div className="flex justify-between py-1.5">
-                    <span className="text-slate-400">Data Sovereignty Status:</span>
-                    <span className="text-emerald-400 font-bold flex items-center gap-1">
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="text-neutral-400">Data Sovereignty Status:</span>
+                    <span className="text-white font-bold flex items-center gap-1">
+                      <ShieldCheck className="w-3.5 h-3.5 text-neutral-200" />
                       <span>{results.dpdpAct2023Readiness}</span>
                     </span>
                   </div>
@@ -624,10 +624,10 @@ export default function EnterpriseGpuCostCalculator() {
           </div>
 
           {/* Technical Deep Dive & FAQs */}
-          <section className="mt-16 pt-12 border-t border-slate-800 max-w-4xl mx-auto">
+          <section className="mt-16 pt-12 border-t border-neutral-800 max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-2">Technical Sizing Architecture &amp; FAQs</h2>
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-neutral-400">
                 Mathematical explanations of roofline model bandwidth ceilings, PagedAttention memory fragmentation, and data sovereignty economics.
               </p>
             </div>
@@ -636,19 +636,19 @@ export default function EnterpriseGpuCostCalculator() {
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="rounded-xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-colors"
+                  className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full p-4 text-left font-medium text-sm text-white flex justify-between items-center gap-4"
+                    className="active:scale-[0.97] w-full p-4 text-left font-medium text-sm text-white flex justify-between items-center gap-4"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === idx ? 'rotate-180 text-sky-400' : ''}`}
+                      className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`}
                     />
                   </button>
                   {openFaq === idx && (
-                    <div className="px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                    <div className="px-4 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                       {faq.a}
                     </div>
                   )}
@@ -660,33 +660,33 @@ export default function EnterpriseGpuCostCalculator() {
           {/* Embed Modal */}
           {isEmbedOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
-              <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl relative">
+              <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
                 <button
                   onClick={() => setIsEmbedOpen(false)}
-                  className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg"
+                  className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white p-1 rounded-lg"
                 >
                   <X className="w-5 h-5" />
                 </button>
                 <div className="flex items-center gap-2 mb-3">
-                  <Code className="w-5 h-5 text-sky-400" />
+                  <Code className="w-5 h-5 text-neutral-200" />
                   <h3 className="font-bold text-base text-white">Embed This GPU FinOps Calculator</h3>
                 </div>
-                <p className="text-xs text-slate-400 mb-4">
+                <p className="text-xs text-neutral-400 mb-4">
                   Copy and paste this clean iframe snippet into your engineering blog, internal FinOps portal, or documentation.
                 </p>
-                <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-[11px] text-slate-300 break-all mb-4">
+                <div className="bg-neutral-950 p-3 rounded-lg border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all mb-4">
                   {embedCode}
                 </div>
                 <div className="flex justify-end gap-3">
                   <button
                     onClick={() => setIsEmbedOpen(false)}
-                    className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-mono text-slate-300 transition-colors"
+                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs font-mono text-neutral-300 transition-colors"
                   >
                     Close
                   </button>
                   <button
                     onClick={copyEmbedSnippet}
-                    className="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-xs font-mono font-bold text-slate-950 transition-colors flex items-center gap-2"
+                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-xs font-mono font-bold text-black transition-colors flex items-center gap-2"
                   >
                     {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Snippet'}</span>

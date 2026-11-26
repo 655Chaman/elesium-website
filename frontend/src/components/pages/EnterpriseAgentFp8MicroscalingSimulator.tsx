@@ -71,7 +71,7 @@ export default function EnterpriseAgentFp8MicroscalingSimulator() {
     setCurrency('INR');
   };
 
-  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-fp8-microscaling-simulator" width="100%" height="520" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>\n<div style="font-size:12px;color:#64748b;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-fp8-microscaling-simulator" target="_blank" rel="noopener" style="color:#10b981;text-decoration:underline;">Elesium FP8 Microscaling Engine</a></div>`;
+  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-fp8-microscaling-simulator" width="100%" height="520" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>\n<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-fp8-microscaling-simulator" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium FP8 Microscaling Engine</a></div>`;
 
   const copyEmbed = async () => {
     try {
@@ -133,7 +133,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
   ];
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-slate-100 font-sans selection:bg-emerald-500 selection:text-black">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>FP8 & MXFP8 Microscaling Simulator | Enterprise Autonomous Agent Inference | Elesium</title>
         <meta
@@ -146,25 +146,25 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Navigation Breadcrumb */}
-        <div className="flex items-center gap-2 text-xs font-mono text-gray-400 mb-8">
-          <a href="/" className="hover:text-emerald-400 transition-colors">Home</a>
+        <div className="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-8">
+          <a href="/" className="hover:text-white transition-colors">Home</a>
           <span>/</span>
-          <a href="/tools/" className="hover:text-emerald-400 transition-colors">Tools</a>
+          <a href="/tools/" className="hover:text-white transition-colors">Tools</a>
           <span>/</span>
-          <span className="text-emerald-400 font-semibold">FP8 Microscaling Simulator</span>
+          <span className="text-white font-semibold">FP8 Microscaling Simulator</span>
         </div>
 
         {/* Title Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono mb-3">
               <Cpu className="w-3.5 h-3.5" />
               <span>Tool #66: Microscaling Architecture Simulator</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
               Enterprise Agent FP8 Microscaling & Block Dynamic Range Simulator
             </h1>
-            <p className="mt-2 text-sm sm:text-base text-gray-400 max-w-3xl leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base text-neutral-400 max-w-3xl leading-relaxed">
               Model dynamic 32-element block exponent shifting, OCP MXFP8/MXFP4 quantization, and WGMMA Tensor Core speedups. Eliminate low-precision outlier degradation while bounding perplexity loss below 0.08%.
             </p>
           </div>
@@ -172,21 +172,21 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
           <div className="flex items-center gap-3 shrink-0">
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="px-3 py-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-3 py-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center gap-2"
             >
               <Code className="w-3.5 h-3.5" />
               <span>Embed Tool</span>
             </button>
             <button
               onClick={resetDefaults}
-              className="px-3 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-3 py-2 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center gap-2"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset</span>
@@ -198,22 +198,22 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8">
           {/* Left Column: Interactive Hardware & Model Controls (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 rounded-2xl border border-white/10 bg-[#0d0d12] space-y-5">
+            <div className="p-6 rounded-xl border border-white/10 bg-[#0a0a0a] space-y-5">
               <div className="flex items-center justify-between pb-3 border-b border-white/10">
                 <div className="flex items-center gap-2 text-sm font-semibold text-white">
-                  <Sliders className="w-4 h-4 text-emerald-400" />
+                  <Sliders className="w-4 h-4 text-neutral-200" />
                   <span>Quantization & Hardware Parameters</span>
                 </div>
                 <div className="flex items-center bg-black/40 rounded-lg p-0.5 border border-white/10 text-[11px] font-mono">
                   <button
                     onClick={() => setCurrency('INR')}
-                    className={`px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-emerald-500/20 text-emerald-400' : 'text-gray-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-white/10 text-neutral-200' : 'text-neutral-400'}`}
                   >
                     INR
                   </button>
                   <button
                     onClick={() => setCurrency('USD')}
-                    className={`px-2 py-0.5 rounded ${currency === 'USD' ? 'bg-emerald-500/20 text-emerald-400' : 'text-gray-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'USD' ? 'bg-white/10 text-neutral-200' : 'text-neutral-400'}`}
                   >
                     USD
                   </button>
@@ -222,11 +222,11 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
 
               {/* Model Architecture */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono text-gray-400">Target Foundation Model</label>
+                <label className="text-xs font-mono text-neutral-400">Target Foundation Model</label>
                 <select
                   value={modelArchitecture}
                   onChange={(e) => setModelArchitecture(e.target.value as Fp8ModelArchitecture)}
-                  className="w-full px-3 py-2 rounded-xl bg-black/50 border border-white/10 text-xs text-white focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full px-3 py-2 rounded-xl bg-black/50 border border-white/10 text-xs text-white focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="sovereign_100b_agent">Sovereign 100B Autonomous Agent (Elesium Core)</option>
                   <option value="llama_3_1_70b">Meta Llama-3.1 70B (Dense Architecture)</option>
@@ -238,11 +238,11 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
 
               {/* Quantization Format */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono text-gray-400">Microscaling / Precision Format</label>
+                <label className="text-xs font-mono text-neutral-400">Microscaling / Precision Format</label>
                 <select
                   value={microscalingFormat}
                   onChange={(e) => setMicroscalingFormat(e.target.value as MicroscalingFormat)}
-                  className="w-full px-3 py-2 rounded-xl bg-black/50 border border-white/10 text-xs text-white focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full px-3 py-2 rounded-xl bg-black/50 border border-white/10 text-xs text-white focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="mxfp8_ocp">OCP MXFP8 (Shared E8M0 Block Exponent · Recommended)</option>
                   <option value="mxfp4_microscaling">OCP MXFP4 (Sub-1% Perplexity · 4-bit Weight Serving)</option>
@@ -254,8 +254,8 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
               {/* Microscaling Block Size */}
               <div className="space-y-1.5">
                 <div className="flex justify-between text-xs font-mono">
-                  <span className="text-gray-400">Micro-Block Size (Vector Partition)</span>
-                  <span className="text-emerald-400 font-semibold">k={blockSize} Elements</span>
+                  <span className="text-neutral-400">Micro-Block Size (Vector Partition)</span>
+                  <span className="text-white font-semibold">k={blockSize} Elements</span>
                 </div>
                 <div className="grid grid-cols-4 gap-2">
                   {[16, 32, 64, 128].map((val) => (
@@ -263,10 +263,10 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
                       key={val}
                       type="button"
                       onClick={() => setBlockSize(val as MicroscalingBlockSize)}
-                      className={`py-1.5 rounded-lg border text-xs font-mono transition-all ${
+                      className={`active:scale-[0.97] py-1.5 rounded-lg border text-xs font-mono transition-all ${
                         blockSize === val
-                          ? 'border-emerald-500 bg-emerald-500/20 text-emerald-400 font-bold'
-                          : 'border-white/10 bg-black/30 text-gray-400 hover:bg-white/5'
+                          ? 'border-white/30 bg-white/10 text-white font-bold'
+                          : 'border-white/10 bg-black/30 text-neutral-400 hover:bg-white/5'
                       }`}
                     >
                       k={val}
@@ -277,11 +277,11 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
 
               {/* Target Hardware Accelerator */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono text-gray-400">Target GPU Infrastructure</label>
+                <label className="text-xs font-mono text-neutral-400">Target GPU Infrastructure</label>
                 <select
                   value={hardwareCluster}
                   onChange={(e) => setHardwareCluster(e.target.value as HardwareCluster)}
-                  className="w-full px-3 py-2 rounded-xl bg-black/50 border border-white/10 text-xs text-white focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full px-3 py-2 rounded-xl bg-black/50 border border-white/10 text-xs text-white focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="nvidia_b200_blackwell">NVIDIA B200 Blackwell (Native Hardware Micro-Scaling Cores)</option>
                   <option value="nvidia_h100_sxm">NVIDIA H100 SXM5 80GB (Hopper FP8 Tensor Cores)</option>
@@ -293,7 +293,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
               {/* Context Length & Batch Size */}
               <div className="grid grid-cols-2 gap-3 pt-2 border-t border-white/10">
                 <div className="space-y-1">
-                  <label className="text-xs font-mono text-gray-400">Context Window</label>
+                  <label className="text-xs font-mono text-neutral-400">Context Window</label>
                   <select
                     value={sequenceLengthTokens}
                     onChange={(e) => setSequenceLengthTokens(Number(e.target.value))}
@@ -307,7 +307,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
                   </select>
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-mono text-gray-400">Batch Size</label>
+                  <label className="text-xs font-mono text-neutral-400">Batch Size</label>
                   <select
                     value={batchSize}
                     onChange={(e) => setBatchSize(Number(e.target.value))}
@@ -327,14 +327,14 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
           {/* Right Column: Telemetry & Analytical Outputs (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             {/* Status Banner */}
-            <div className={`p-5 rounded-2xl border flex items-center justify-between gap-4 ${
+            <div className={`p-5 rounded-xl border flex items-center justify-between gap-4 ${
               results.statusClassification === 'SUB_1_PERCENT_OPTIMAL'
-                ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-300'
+                ? 'border-white/30 bg-white/[0.04] text-neutral-200'
                 : results.statusClassification === 'OCP_MICROSCALED_BALANCED'
-                ? 'border-blue-500/40 bg-blue-500/10 text-blue-300'
+                ? 'border-white/30 bg-white/[0.04] text-neutral-200'
                 : results.statusClassification === 'OUTLIER_NOISE_ELEVATED'
                 ? 'border-amber-500/40 bg-amber-500/10 text-amber-300'
-                : 'border-rose-500/40 bg-rose-500/10 text-rose-300'
+                : 'border-red-500/40 bg-red-500/10 text-red-300'
             }`}>
               <div className="flex items-center gap-3">
                 <Activity className="w-5 h-5 shrink-0" />
@@ -342,7 +342,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
                   <div className="text-xs font-mono uppercase tracking-wider font-semibold">
                     {results.statusClassification.replace(/_/g, ' ')}
                   </div>
-                  <div className="text-xs text-gray-300">
+                  <div className="text-xs text-neutral-300">
                     {results.statusClassification === 'SUB_1_PERCENT_OPTIMAL' && 'Microscaling active. Sub-10 basis point perplexity degradation achieved.'}
                     {results.statusClassification === 'OCP_MICROSCALED_BALANCED' && 'OCP block scaling active. Production-certified enterprise reasoning.'}
                     {results.statusClassification === 'OUTLIER_NOISE_ELEVATED' && 'Activation outlier noise detected. Switch to MXFP8 or smaller block size.'}
@@ -353,95 +353,95 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
 
               <div className="text-right font-mono">
                 <div className="text-xl font-bold">{results.effectiveStepLatencyMs} ms</div>
-                <div className="text-[10px] text-gray-400">Step Latency</div>
+                <div className="text-[10px] text-neutral-400">Step Latency</div>
               </div>
             </div>
 
             {/* Core Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0d0d12]">
-                <div className="text-xs font-mono text-gray-400">GEMM Speedup</div>
-                <div className="text-2xl font-mono font-bold text-emerald-400 mt-1">{results.gemmSpeedupMultiplier}x</div>
-                <div className="text-[10px] font-mono text-gray-400 mt-1">vs BF16 Baseline</div>
+              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+                <div className="text-xs font-mono text-neutral-400">GEMM Speedup</div>
+                <div className="text-2xl font-mono font-bold text-white mt-1">{results.gemmSpeedupMultiplier}x</div>
+                <div className="text-[10px] font-mono text-neutral-400 mt-1">vs BF16 Baseline</div>
               </div>
 
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0d0d12]">
-                <div className="text-xs font-mono text-gray-400">VRAM Footprint</div>
+              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+                <div className="text-xs font-mono text-neutral-400">VRAM Footprint</div>
                 <div className="text-2xl font-mono font-bold text-white mt-1">{results.vramMemoryFootprintGb} GB</div>
-                <div className="text-[10px] font-mono text-emerald-400 mt-1">{results.memoryReductionPercent}% Reduction</div>
+                <div className="text-[10px] font-mono text-neutral-200 mt-1">{results.memoryReductionPercent}% Reduction</div>
               </div>
 
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0d0d12]">
-                <div className="text-xs font-mono text-gray-400">Perplexity Delta</div>
-                <div className={`text-2xl font-mono font-bold mt-1 ${results.perplexityDeltaPercent < 0.10 ? 'text-emerald-400' : results.perplexityDeltaPercent < 1.0 ? 'text-amber-400' : 'text-rose-400'}`}>
+              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+                <div className="text-xs font-mono text-neutral-400">Perplexity Delta</div>
+                <div className={`text-2xl font-mono font-bold mt-1 ${results.perplexityDeltaPercent < 0.10 ? 'text-white' : results.perplexityDeltaPercent < 1.0 ? 'text-amber-400' : 'text-red-400'}`}>
                   +{results.perplexityDeltaPercent}%
                 </div>
-                <div className="text-[10px] font-mono text-gray-400 mt-1">&lt;1.0% Safe Threshold</div>
+                <div className="text-[10px] font-mono text-neutral-400 mt-1">&lt;1.0% Safe Threshold</div>
               </div>
 
-              <div className="p-4 rounded-xl border border-white/10 bg-[#0d0d12]">
-                <div className="text-xs font-mono text-gray-400">Throughput</div>
+              <div className="p-4 rounded-xl border border-white/10 bg-[#0a0a0a]">
+                <div className="text-xs font-mono text-neutral-400">Throughput</div>
                 <div className="text-2xl font-mono font-bold text-white mt-1">{results.tokensPerSecondThroughput.toLocaleString()}</div>
-                <div className="text-[10px] font-mono text-emerald-400 mt-1">Tokens / Second</div>
+                <div className="text-[10px] font-mono text-neutral-200 mt-1">Tokens / Second</div>
               </div>
             </div>
 
             {/* Microscaling Vector Partition SVG Diagram */}
-            <div className="p-6 rounded-2xl border border-white/10 bg-[#0d0d12] space-y-4">
+            <div className="p-6 rounded-xl border border-white/10 bg-[#0a0a0a] space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-xs font-mono text-white">
-                  <Layers className="w-4 h-4 text-emerald-400" />
+                  <Layers className="w-4 h-4 text-neutral-200" />
                   <span>OCP Microscaled Block Dynamic Range Normalization</span>
                 </div>
-                <span className="text-[11px] font-mono text-emerald-400">
+                <span className="text-[11px] font-mono text-neutral-200">
                   Shared Exponent: E8M0 · Block Size k={blockSize}
                 </span>
               </div>
 
               <div className="p-4 rounded-xl bg-black/60 border border-white/5 font-mono text-xs space-y-3">
                 <div className="flex justify-between items-center text-[11px] pb-2 border-b border-white/5">
-                  <span className="text-gray-400">STAGE 1: VECTOR PARTITIONING</span>
-                  <span className="text-emerald-400">Tensors sliced into k={blockSize} element microscopic blocks</span>
+                  <span className="text-neutral-400">STAGE 1: VECTOR PARTITIONING</span>
+                  <span className="text-neutral-200">Tensors sliced into k={blockSize} element microscopic blocks</span>
                 </div>
                 <div className="flex justify-between items-center text-[11px] pb-2 border-b border-white/5">
-                  <span className="text-gray-400">STAGE 2: SHARED EXPONENT SHIFTING</span>
-                  <span className="text-blue-400">Dynamic 8-bit scale factor S_b = 2^(max_exp - bias)</span>
+                  <span className="text-neutral-400">STAGE 2: SHARED EXPONENT SHIFTING</span>
+                  <span className="text-neutral-200">Dynamic 8-bit scale factor S_b = 2^(max_exp - bias)</span>
                 </div>
                 <div className="flex justify-between items-center text-[11px] pb-2 border-b border-white/5">
-                  <span className="text-gray-400">STAGE 3: HARDWARE TENSOR CONTRACTION</span>
-                  <span className="text-purple-400">WGMMA fused instruction · Asynchronous Shared Memory Overlap</span>
+                  <span className="text-neutral-400">STAGE 3: HARDWARE TENSOR CONTRACTION</span>
+                  <span className="text-neutral-200">WGMMA fused instruction · Asynchronous Shared Memory Overlap</span>
                 </div>
                 <div className="flex justify-between items-center text-[11px]">
-                  <span className="text-gray-400">POWER & THERMAL DYNAMICS</span>
+                  <span className="text-neutral-400">POWER & THERMAL DYNAMICS</span>
                   <span className="text-amber-400">{results.powerConsumptionWatts}W TDP per GPU ({results.powerReductionPercent}% Power Slashed)</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3 text-xs font-mono pt-1">
                 <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5 flex justify-between">
-                  <span className="text-gray-400">Annual FinOps Savings:</span>
-                  <span className="text-emerald-400 font-semibold">{results.annualFinOpsSavings}</span>
+                  <span className="text-neutral-400">Annual FinOps Savings:</span>
+                  <span className="text-white font-semibold">{results.annualFinOpsSavings}</span>
                 </div>
                 <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5 flex justify-between">
-                  <span className="text-gray-400">DPDP Act 2023 Sovereignty:</span>
+                  <span className="text-neutral-400">DPDP Act 2023 Sovereignty:</span>
                   <span className="text-white font-semibold">100% On-Premise Air-Gapped</span>
                 </div>
               </div>
             </div>
 
             {/* Direct Conversion Actions */}
-            <div className="p-6 rounded-2xl border border-white/10 bg-gradient-to-r from-emerald-500/10 via-transparent to-transparent flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/[0.03] via-transparent to-transparent flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <h4 className="text-sm font-semibold text-white">Deploy Sovereign FP8 Serving for Your Cluster</h4>
-                <p className="text-xs text-gray-400 mt-1">Receive a validated Triton WGMMA kernel and quantization calibration profile.</p>
+                <p className="text-xs text-neutral-400 mt-1">Receive a validated Triton WGMMA kernel and quantization calibration profile.</p>
               </div>
 
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <button
                   onClick={copyMemo}
-                  className="px-4 py-2.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-gray-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-xs font-mono text-neutral-300 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
-                  {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                  {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
                   {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}
                 </button>
               </div>
@@ -451,25 +451,25 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
 
         {/* Embedded Form Section */}
         <div className="mt-16 pt-12 border-t border-white/10">
-          <div className="max-w-4xl mx-auto rounded-3xl border border-white/10 bg-[#0d0d12] overflow-hidden shadow-2xl">
+          <div className="max-w-4xl mx-auto rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden shadow-2xl">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -483,16 +483,16 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
         <div className="mt-16 max-w-4xl mx-auto space-y-4">
           <h3 className="text-xl font-bold text-white mb-6">Frequently Asked Technical Questions</h3>
           {faqs.map((faq, idx) => (
-            <div key={idx} className="rounded-xl border border-white/10 bg-[#0d0d12] overflow-hidden">
+            <div key={idx} className="rounded-xl border border-white/10 bg-[#0a0a0a] overflow-hidden">
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-gray-200 hover:text-white"
+                className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white"
               >
                 <span>{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
               </button>
               {openFaq === idx && (
-                <div className="px-5 pb-4 text-xs text-gray-400 leading-relaxed border-t border-white/5 pt-3">
+                <div className="px-5 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-white/5 pt-3">
                   {faq.a}
                 </div>
               )}
@@ -504,17 +504,17 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#0d0d12] border border-white/10 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-[#0a0a0a] border border-white/10 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-semibold text-white">Embed FP8 Microscaling Simulator</h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-neutral-400">
               Embed this interactive simulator on your technical blog or developer portal. Includes automated attribution to Elesium Sovereign AI Systems.
             </p>
             <div className="relative">
@@ -522,11 +522,11 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
                 readOnly
                 value={embedSnippet}
                 rows={5}
-                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-xs font-mono text-gray-300 focus:outline-none"
+                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none"
               />
               <button
                 onClick={copyEmbed}
-                className="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-mono flex items-center gap-1.5"
+                className="active:scale-[0.97] absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-white/10 text-neutral-200 border border-white/20 text-[11px] font-mono flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
                 {hasCopiedEmbed ? 'Copied' : 'Copy'}

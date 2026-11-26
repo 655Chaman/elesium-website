@@ -59,7 +59,7 @@ export default function EnterpriseKvCacheSimulator() {
     return calculateKvCacheSimulation(inputs);
   }, [inputs]);
 
-  const embedCodeSnippet = `<iframe src="https://elesium.online/embed/kv-cache-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;background:#020617;"></iframe><div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Systems</a></div>`;
+  const embedCodeSnippet = `<iframe src="https://elesium.online/embed/kv-cache-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;background:#000000;"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Systems</a></div>`;
 
   const copyEmbedCode = () => {
     navigator.clipboard.writeText(embedCodeSnippet);
@@ -101,7 +101,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   };
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 pt-24 pb-20 selection:bg-sky-500/30 selection:text-sky-200">
+    <div className="min-h-screen bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise LLM Context Window Cache & KV Eviction Simulator | Elesium</title>
         <meta
@@ -122,27 +122,27 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
       {/* Breadcrumb Navigation */}
       <div className="max-w-7xl mx-auto px-6 mb-8">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-slate-400">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-neutral-400">
           <Link to="/" className="hover:text-white transition-colors">Home</Link>
-          <span className="text-slate-600">/</span>
+          <span className="text-neutral-600">/</span>
           <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
-          <span className="text-slate-600">/</span>
-          <span className="text-sky-400 font-medium">KV Cache Simulator</span>
+          <span className="text-neutral-600">/</span>
+          <span className="text-neutral-200 font-medium">KV Cache Simulator</span>
         </nav>
       </div>
 
       {/* Hero Header */}
       <header className="max-w-7xl mx-auto px-6 mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-500/20 bg-sky-500/10 mb-4">
-          <Cpu className="w-3.5 h-3.5 text-sky-400" />
-          <span className="text-xs font-mono uppercase tracking-widest text-sky-300">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/15 bg-white/[0.04] mb-4">
+          <Cpu className="w-3.5 h-3.5 text-neutral-200" />
+          <span className="text-xs font-mono uppercase tracking-widest text-neutral-200">
             Inference Architecture • Memory Management Lab
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
           Enterprise LLM Context Window Cache &amp; KV Eviction Simulator
         </h1>
-        <p className="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed">
+        <p className="text-base sm:text-lg text-neutral-300 max-w-4xl leading-relaxed">
           Simulate VRAM allocation, PagedAttention block efficiency, and Time-To-First-Token (TTFT) latency across
           multi-turn enterprise agent workflows. Compare <strong className="text-white">Automatic Prefix Caching (RadixAttention)</strong>,
           <strong className="text-white"> Chunked Prefill</strong>, and <strong className="text-white">Sliding Window Eviction</strong> against naive re-computation.
@@ -152,16 +152,16 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <div className="flex flex-wrap items-center gap-3 mt-6">
           <button
             onClick={() => setIsEmbedOpen(true)}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-xs font-mono text-slate-300 transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-colors"
           >
-            <Code className="w-3.5 h-3.5 text-sky-400" />
+            <Code className="w-3.5 h-3.5 text-neutral-200" />
             Embed Interactive Simulator on Your Site
           </button>
           <button
             onClick={copyArchitecturalMemo}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-xs font-mono text-slate-300 transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-colors"
           >
-            {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
+            {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-400" />}
             {hasCopiedMemo ? 'Architecture Memo Copied!' : 'Copy Executive Briefing Memo'}
           </button>
         </div>
@@ -171,17 +171,17 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       <main className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Interactive Parameters */}
         <section className="lg:col-span-5 space-y-6">
-          <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm shadow-xl">
-            <h2 className="text-base font-semibold text-white flex items-center gap-2 mb-6 pb-4 border-b border-slate-800">
-              <Gauge className="w-4 h-4 text-sky-400" />
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 backdrop-blur-sm shadow-xl">
+            <h2 className="text-base font-semibold text-white flex items-center gap-2 mb-6 pb-4 border-b border-neutral-800">
+              <Gauge className="w-4 h-4 text-neutral-200" />
               Model Architecture &amp; Caching Topology
             </h2>
 
             {/* Selector: Model Architecture */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Target Model Architecture</span>
-                <span className="text-sky-300 font-semibold">{results.archSpec.layers} Layers</span>
+                <span className="text-neutral-400">Target Model Architecture</span>
+                <span className="text-white font-semibold">{results.archSpec.layers} Layers</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {(Object.keys(MODEL_ARCH_SPECS) as ModelArchKey[]).map((key) => {
@@ -190,14 +190,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     <button
                       key={key}
                       onClick={() => setModelArch(key)}
-                      className={`p-2.5 text-left rounded-xl border text-xs font-mono transition-all ${
+                      className={`active:scale-[0.97] p-2.5 text-left rounded-xl border text-xs font-mono transition-all ${
                         modelArch === key
-                          ? 'border-sky-500 bg-sky-500/20 text-white font-semibold'
-                          : 'border-slate-800 bg-slate-900/50 text-slate-400 hover:border-slate-700'
+                          ? 'border-white/30 bg-white/10 text-white font-semibold'
+                          : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
                       }`}
                     >
                       <div className="font-semibold text-white truncate">{spec.name}</div>
-                      <div className="text-[10px] text-slate-400 mt-0.5">
+                      <div className="text-[10px] text-neutral-400 mt-0.5">
                         {spec.isMLA ? 'MLA 576-dim Latent' : `${spec.kvHeads} KV Heads • ${spec.headDim} dim`}
                       </div>
                     </button>
@@ -209,8 +209,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Selector: Cache Strategy */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">KV Caching Strategy</span>
-                <span className="text-sky-300 font-semibold uppercase">{cacheStrategy.replace('_', ' ')}</span>
+                <span className="text-neutral-400">KV Caching Strategy</span>
+                <span className="text-white font-semibold uppercase">{cacheStrategy.replace('_', ' ')}</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
@@ -223,14 +223,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <button
                     key={item.key}
                     onClick={() => setCacheStrategy(item.key as CacheStrategyKey)}
-                    className={`p-2.5 text-left rounded-xl border text-xs font-mono transition-all ${
+                    className={`active:scale-[0.97] p-2.5 text-left rounded-xl border text-xs font-mono transition-all ${
                       cacheStrategy === item.key
-                        ? 'border-sky-500 bg-sky-500/20 text-white font-semibold'
-                        : 'border-slate-800 bg-slate-900/50 text-slate-400 hover:border-slate-700'
+                        ? 'border-white/30 bg-white/10 text-white font-semibold'
+                        : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
                     }`}
                   >
                     <div className="font-semibold text-white">{item.label}</div>
-                    <div className="text-[10px] text-slate-400">{item.note}</div>
+                    <div className="text-[10px] text-neutral-400">{item.note}</div>
                   </button>
                 ))}
               </div>
@@ -239,8 +239,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Selector: KV Quantization Precision */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">KV Cache Quantization</span>
-                <span className="text-sky-300 font-semibold uppercase">{cachePrecision}</span>
+                <span className="text-neutral-400">KV Cache Quantization</span>
+                <span className="text-white font-semibold uppercase">{cachePrecision}</span>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 {[
@@ -251,14 +251,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <button
                     key={p.key}
                     onClick={() => setCachePrecision(p.key as CachePrecisionKey)}
-                    className={`py-2 px-2 text-center rounded-lg border text-xs font-mono transition-all ${
+                    className={`active:scale-[0.97] py-2 px-2 text-center rounded-lg border text-xs font-mono transition-all ${
                       cachePrecision === p.key
-                        ? 'border-sky-500 bg-sky-500/20 text-white font-semibold'
-                        : 'border-slate-800 bg-slate-900/50 text-slate-400 hover:border-slate-700'
+                        ? 'border-white/30 bg-white/10 text-white font-semibold'
+                        : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
                     }`}
                   >
                     <div className="font-semibold text-white">{p.label}</div>
-                    <div className="text-[10px] text-slate-400">{p.desc}</div>
+                    <div className="text-[10px] text-neutral-400">{p.desc}</div>
                   </button>
                 ))}
               </div>
@@ -267,8 +267,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Slider 1: System Prompt Length */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">System Prompt &amp; SOP Tools Size</span>
-                <span className="text-sky-300 font-semibold">{systemPromptTokens.toLocaleString()} Tokens</span>
+                <span className="text-neutral-400">System Prompt &amp; SOP Tools Size</span>
+                <span className="text-white font-semibold">{systemPromptTokens.toLocaleString()} Tokens</span>
               </div>
               <input
                 type="range"
@@ -277,9 +277,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="1000"
                 value={systemPromptTokens}
                 onChange={(e) => setSystemPromptTokens(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>1K (Basic)</span>
                 <span>8K (Standard Agent SOP)</span>
                 <span>32K (Dense Schemas)</span>
@@ -289,8 +289,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Slider 2: Turn History Depth */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Active Multi-Turn History</span>
-                <span className="text-sky-300 font-semibold">{turnHistoryCount} Turns</span>
+                <span className="text-neutral-400">Active Multi-Turn History</span>
+                <span className="text-white font-semibold">{turnHistoryCount} Turns</span>
               </div>
               <input
                 type="range"
@@ -299,9 +299,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="1"
                 value={turnHistoryCount}
                 onChange={(e) => setTurnHistoryCount(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>2 Turns</span>
                 <span>10 Turns</span>
                 <span>30 Turns</span>
@@ -311,8 +311,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Slider 3: Tokens Per Turn */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Tokens Generated per Turn</span>
-                <span className="text-sky-300 font-semibold">{tokensPerTurn.toLocaleString()} Tokens</span>
+                <span className="text-neutral-400">Tokens Generated per Turn</span>
+                <span className="text-white font-semibold">{tokensPerTurn.toLocaleString()} Tokens</span>
               </div>
               <input
                 type="range"
@@ -321,15 +321,15 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="250"
                 value={tokensPerTurn}
                 onChange={(e) => setTokensPerTurn(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
             </div>
 
             {/* Slider 4: Concurrent Active Streams */}
             <div>
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Concurrent Agent Swarm Streams</span>
-                <span className="text-sky-300 font-semibold">{concurrentStreams} Streams</span>
+                <span className="text-neutral-400">Concurrent Agent Swarm Streams</span>
+                <span className="text-white font-semibold">{concurrentStreams} Streams</span>
               </div>
               <input
                 type="range"
@@ -338,9 +338,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="1"
                 value={concurrentStreams}
                 onChange={(e) => setConcurrentStreams(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>1 Single</span>
                 <span>16 Swarm</span>
                 <span>64 Peak Load</span>
@@ -353,51 +353,51 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <section className="lg:col-span-7 space-y-6">
           {/* Executive KPI Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-5 rounded-2xl border border-sky-500/30 bg-sky-950/20">
-              <div className="text-xs font-mono text-sky-400 uppercase tracking-wider mb-1">
+            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 TTFT Latency Cut
               </div>
               <div className="text-2xl font-bold text-white font-mono">
                 {results.ttftReductionPercentage}% Faster
               </div>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 Sub-{results.turnMetrics[0].ttftMs}ms vs re-computing {results.totalTokensPerStream.toLocaleString()} tokens
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl border border-emerald-500/30 bg-emerald-950/20">
-              <div className="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-1">
+            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 Total KV VRAM ({concurrentStreams} Streams)
               </div>
-              <div className="text-2xl font-bold text-emerald-400 font-mono">
+              <div className="text-2xl font-bold text-white font-mono">
                 {results.totalKvCacheVramGb} GB
               </div>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 {results.vramSaturationPercentage}% of 80GB H100 capacity
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl border border-indigo-500/30 bg-indigo-950/20">
-              <div className="text-xs font-mono text-indigo-400 uppercase tracking-wider mb-1">
+            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 Monthly Cloud OpEx Saved
               </div>
               <div className="text-2xl font-bold text-white font-mono">
                 ${results.monthlySavingsUsd.toLocaleString()}
               </div>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 Vs ${results.estimatedMonthlyCloudApiCost.toLocaleString()}/mo closed API billing
               </p>
             </div>
           </div>
 
           {/* Turn-by-Turn Latency Progression Table */}
-          <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/70 shadow-xl overflow-hidden">
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 shadow-xl overflow-hidden">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-base font-semibold text-white flex items-center gap-2">
-                <Zap className="w-4 h-4 text-sky-400" />
+                <Zap className="w-4 h-4 text-neutral-200" />
                 Turn-by-Turn Multi-Agent Context Scaling
               </h2>
-              <span className="text-xs font-mono text-sky-400">
+              <span className="text-xs font-mono text-neutral-200">
                 Avg TTFT: {results.averageTtftMs} ms • ITL: {results.averageItlMs} ms
               </span>
             </div>
@@ -405,7 +405,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs font-mono">
                 <thead>
-                  <tr className="border-b border-slate-800 text-slate-400">
+                  <tr className="border-b border-neutral-800 text-neutral-400">
                     <th className="py-2.5 px-3">Turn</th>
                     <th className="py-2.5 px-3">Active Context</th>
                     <th className="py-2.5 px-3">KV VRAM / Stream</th>
@@ -414,20 +414,20 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     <th className="py-2.5 px-3 text-right">Cache Hit</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-800/60">
+                <tbody className="divide-y divide-neutral-800/60">
                   {results.turnMetrics.slice(0, 10).map((metric) => (
-                    <tr key={metric.turnIndex} className="hover:bg-slate-800/30 transition-colors">
+                    <tr key={metric.turnIndex} className="hover:bg-neutral-800/30 transition-colors">
                       <td className="py-2.5 px-3 font-semibold text-white">Turn #{metric.turnIndex}</td>
-                      <td className="py-2.5 px-3 text-slate-300">{metric.totalContextTokens.toLocaleString()} tok</td>
-                      <td className="py-2.5 px-3 text-slate-300">{metric.kvVramMb} MB</td>
+                      <td className="py-2.5 px-3 text-neutral-300">{metric.totalContextTokens.toLocaleString()} tok</td>
+                      <td className="py-2.5 px-3 text-neutral-300">{metric.kvVramMb} MB</td>
                       <td className="py-2.5 px-3">
-                        <span className={`font-semibold ${metric.ttftMs < 50 ? 'text-emerald-400' : metric.ttftMs < 150 ? 'text-amber-400' : 'text-rose-400'}`}>
+                        <span className={`font-semibold ${metric.ttftMs < 50 ? 'text-white' : metric.ttftMs < 150 ? 'text-amber-400' : 'text-red-400'}`}>
                           {metric.ttftMs} ms
                         </span>
                       </td>
-                      <td className="py-2.5 px-3 text-slate-300">{metric.itlMs} ms</td>
+                      <td className="py-2.5 px-3 text-neutral-300">{metric.itlMs} ms</td>
                       <td className="py-2.5 px-3 text-right">
-                        <span className="px-2 py-0.5 rounded bg-sky-950 text-sky-300 border border-sky-800">
+                        <span className="px-2 py-0.5 rounded bg-white/[0.05] text-neutral-200 border border-white/15">
                           {Math.round(metric.cacheHitRatio * 100)}%
                         </span>
                       </td>
@@ -438,32 +438,32 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             </div>
 
             {results.turnMetrics.length > 10 && (
-              <p className="text-[11px] text-slate-500 mt-3 text-right font-mono">
+              <p className="text-[11px] text-neutral-500 mt-3 text-right font-mono">
                 Showing first 10 of {results.turnMetrics.length} turns in active loop.
               </p>
             )}
           </div>
 
           {/* Architecture Insights Card */}
-          <div className="p-6 rounded-2xl border border-sky-500/20 bg-gradient-to-br from-slate-900 to-sky-950/30">
+          <div className="p-6 rounded-xl border border-white/15 bg-neutral-950">
             <h3 className="text-sm font-semibold text-white flex items-center gap-2 mb-2">
-              <ShieldCheck className="w-4 h-4 text-sky-400" />
+              <ShieldCheck className="w-4 h-4 text-neutral-200" />
               Sovereign Inference Architecture Verdict
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-4">
               {results.architecturalGuidance} By deploying self-hosted sovereign clusters with PagedAttention and Automatic Prefix Caching, your multi-agent workflows bypass multi-tenant cloud token tax, guaranteeing deterministic latency and complete DPDP Act 2023 compliance.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <button
                     onClick={() => openWhatsApp()}
-                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                    className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
                   >
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span className="w-2 h-2 rounded-lg bg-neutral-400" />
                     <span>Chat on WhatsApp</span>
                   </button>
                 <ExpandableScreen>
                 <ExpandableScreenTrigger>
-                  <button className="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs transition-colors flex items-center gap-2">
+                  <button className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-colors flex items-center gap-2">
                     Schedule Sovereign Inference Audit
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
@@ -474,7 +474,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </ExpandableScreen>
               <button
                 onClick={() => openWhatsApp()}
-                className="px-4 py-2.5 rounded-lg border border-slate-700 bg-slate-900 hover:bg-slate-800 text-xs text-slate-200 transition-colors"
+                className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs text-neutral-200 transition-colors"
               >
                 Discuss KV Sizing on WhatsApp
               </button>
@@ -505,15 +505,15 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           ].map((item, index) => (
             <div
               key={index}
-              className="p-5 rounded-xl border border-slate-800 bg-slate-900/50 cursor-pointer"
+              className="p-5 rounded-xl border border-neutral-800 bg-neutral-900/50 cursor-pointer"
               onClick={() => setOpenFaq(openFaq === index ? null : index)}
             >
               <div className="flex justify-between items-center text-sm font-semibold text-white">
                 <span>{item.q}</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
               </div>
               {openFaq === index && (
-                <p className="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed pt-2 border-t border-slate-800">
+                <p className="mt-3 text-xs sm:text-sm text-neutral-400 leading-relaxed pt-2 border-t border-neutral-800">
                   {item.a}
                 </p>
               )}
@@ -525,35 +525,35 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative w-full max-w-2xl p-6 rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl">
+          <div className="relative w-full max-w-2xl p-6 rounded-xl border border-neutral-800 bg-neutral-900 shadow-2xl">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
             <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-              <Code className="w-4 h-4 text-sky-400" />
+              <Code className="w-4 h-4 text-neutral-200" />
               Embed This KV Cache Simulator on Your Site
             </h3>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this snippet into your engineering blog, documentation, or internal architecture wiki.
             </p>
             <textarea
               readOnly
               value={embedCodeSnippet}
-              className="w-full h-32 p-3 font-mono text-xs rounded-lg border border-slate-800 bg-slate-950 text-slate-300 resize-none focus:outline-none"
+              className="w-full h-32 p-3 font-mono text-xs rounded-lg border border-neutral-800 bg-neutral-950 text-neutral-300 resize-none focus:outline-none"
             />
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 text-xs font-mono text-slate-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 text-xs font-mono text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-semibold flex items-center gap-2"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold flex items-center gap-2"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied to Clipboard' : 'Copy Embed Code'}

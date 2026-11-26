@@ -60,7 +60,7 @@ export default function EmbedAgentOndcRetailSimulator() {
   }, [results.telemetryTrace]);
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>ONDC Retail Inventory &amp; Dynamic Pricing Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-ondc-retail-inventory-simulator" />
@@ -68,26 +68,26 @@ export default function EmbedAgentOndcRetailSimulator() {
 
       <div className="max-w-xl mx-auto space-y-4">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div className="flex items-center space-x-2">
-            <div className="p-2 rounded-lg bg-orange-500/10 border border-orange-500/20 text-orange-400">
+            <div className="p-2 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200">
               <ShoppingBag className="w-4 h-4" />
             </div>
             <div>
               <h1 className="text-sm font-bold tracking-tight text-white">ONDC Inventory &amp; Pricing Engine</h1>
-              <p className="text-[10px] text-slate-400">Beckn Protocol &amp; Hyperlocal Omnichannel Telemetry</p>
+              <p className="text-[10px] text-neutral-400">Beckn Protocol &amp; Hyperlocal Omnichannel Telemetry</p>
             </div>
           </div>
-          <span className="text-[10px] px-2 py-0.5 rounded-full font-mono font-medium border bg-orange-500/10 border-orange-500/30 text-orange-400">
+          <span className="text-[10px] px-2 py-0.5 rounded-lg font-mono font-medium border bg-white/[0.04] border-white/20 text-neutral-200">
             {results.statusClassification}
           </span>
         </div>
 
         {/* Sliders & Controls */}
-        <div className="grid grid-cols-2 gap-3 text-xs bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+        <div className="grid grid-cols-2 gap-3 text-xs bg-neutral-900/60 p-3 rounded-xl border border-neutral-800">
           <div>
-            <label className="text-[11px] text-slate-300 block mb-1">
-              Catalog SKUs: <span className="text-orange-400 font-mono">{catalogSkuCount.toLocaleString()}</span>
+            <label className="text-[11px] text-neutral-300 block mb-1">
+              Catalog SKUs: <span className="text-neutral-200 font-mono">{catalogSkuCount.toLocaleString()}</span>
             </label>
             <input
               type="range"
@@ -97,13 +97,13 @@ export default function EmbedAgentOndcRetailSimulator() {
               value={catalogSkuCount}
               onChange={(e) => setCatalogSkuCount(Number(e.target.value))}
               aria-label="Catalog SKUs"
-              className="w-full accent-orange-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+              className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
             />
           </div>
 
           <div>
-            <label className="text-[11px] text-slate-300 block mb-1">
-              Connected Buyer Apps: <span className="text-orange-400 font-mono">{ondcBuyerAppsConnected}</span>
+            <label className="text-[11px] text-neutral-300 block mb-1">
+              Connected Buyer Apps: <span className="text-neutral-200 font-mono">{ondcBuyerAppsConnected}</span>
             </label>
             <input
               type="range"
@@ -113,17 +113,17 @@ export default function EmbedAgentOndcRetailSimulator() {
               value={ondcBuyerAppsConnected}
               onChange={(e) => setOndcBuyerAppsConnected(Number(e.target.value))}
               aria-label="Connected Buyer Apps"
-              className="w-full accent-orange-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+              className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
             />
           </div>
 
           <div>
-            <label className="text-[11px] text-slate-300 block mb-1">Pricing Engine</label>
+            <label className="text-[11px] text-neutral-300 block mb-1">Pricing Engine</label>
             <select
               value={pricingStrategy}
               onChange={(e) => setPricingStrategy(e.target.value as any)}
               aria-label="Pricing Engine"
-              className="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-slate-300 text-[11px]"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded px-2 py-1 text-neutral-300 text-[11px]"
             >
               <option value="demand_elasticity">Hyperlocal Demand Elasticity</option>
               <option value="expiry_decay_salvage">Shelf Life Decay Salvage</option>
@@ -133,12 +133,12 @@ export default function EmbedAgentOndcRetailSimulator() {
           </div>
 
           <div>
-            <label className="text-[11px] text-slate-300 block mb-1">Sync Architecture</label>
+            <label className="text-[11px] text-neutral-300 block mb-1">Sync Architecture</label>
             <select
               value={stockReconciliationFrequency}
               onChange={(e) => setStockReconciliationFrequency(e.target.value as any)}
               aria-label="Sync Architecture"
-              className="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-slate-300 text-[11px]"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded px-2 py-1 text-neutral-300 text-[11px]"
             >
               <option value="sub_50ms_in_memory">In-Memory Redis PubSub (Sub-50ms)</option>
               <option value="five_second_event_bus">Kafka Micro-Batch (5 Sec)</option>
@@ -149,35 +149,35 @@ export default function EmbedAgentOndcRetailSimulator() {
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-3 gap-2">
-          <div className="bg-slate-900/80 border border-slate-800/80 p-2.5 rounded-xl">
-            <span className="text-[10px] text-slate-400 block">ONDC Sync Latency</span>
-            <span className="text-base font-mono font-bold text-orange-400">{results.syncLatencyMs} ms</span>
-            <span className="text-[9px] text-slate-500 block">Beckn on_search</span>
+          <div className="bg-neutral-900/80 border border-neutral-800/80 p-2.5 rounded-xl">
+            <span className="text-[10px] text-neutral-400 block">ONDC Sync Latency</span>
+            <span className="text-base font-mono font-bold text-white">{results.syncLatencyMs} ms</span>
+            <span className="text-[9px] text-neutral-500 block">Beckn on_search</span>
           </div>
 
-          <div className="bg-slate-900/80 border border-slate-800/80 p-2.5 rounded-xl">
-            <span className="text-[10px] text-slate-400 block">Stockout Drop</span>
-            <span className="text-base font-mono font-bold text-emerald-400">-{results.inventoryStockoutReductionPct}%</span>
-            <span className="text-[9px] text-slate-500 block">Zero phantom stock</span>
+          <div className="bg-neutral-900/80 border border-neutral-800/80 p-2.5 rounded-xl">
+            <span className="text-[10px] text-neutral-400 block">Stockout Drop</span>
+            <span className="text-base font-mono font-bold text-white">-{results.inventoryStockoutReductionPct}%</span>
+            <span className="text-[9px] text-neutral-500 block">Zero phantom stock</span>
           </div>
 
-          <div className="bg-slate-900/80 border border-slate-800/80 p-2.5 rounded-xl">
-            <span className="text-[10px] text-slate-400 block">Gross Margin Lift</span>
+          <div className="bg-neutral-900/80 border border-neutral-800/80 p-2.5 rounded-xl">
+            <span className="text-[10px] text-neutral-400 block">Gross Margin Lift</span>
             <span className="text-base font-mono font-bold text-amber-400">+{results.omnichannelGrossMarginUpliftPct}%</span>
-            <span className="text-[9px] text-slate-500 block">Algorithmic pricing</span>
+            <span className="text-[9px] text-neutral-500 block">Algorithmic pricing</span>
           </div>
         </div>
 
         {/* Live SVG Oscilloscope */}
-        <div className="bg-slate-950/80 border border-slate-800/60 p-3 rounded-xl space-y-2">
+        <div className="bg-neutral-950/80 border border-neutral-800/60 p-3 rounded-xl space-y-2">
           <div className="flex items-center justify-between text-[11px]">
-            <span className="text-slate-400 flex items-center gap-1.5">
-              <Cpu className="w-3.5 h-3.5 text-orange-400" />
+            <span className="text-neutral-400 flex items-center gap-1.5">
+              <Cpu className="w-3.5 h-3.5 text-neutral-200" />
               Beckn Protocol Telemetry Oscilloscope
             </span>
             <div className="flex items-center space-x-3 text-[10px] font-mono">
-              <span className="text-orange-400 flex items-center gap-1">
-                <span className="w-2 h-0.5 bg-orange-400 inline-block"></span> Latency (ms)
+              <span className="text-neutral-200 flex items-center gap-1">
+                <span className="w-2 h-0.5 bg-white/80 inline-block"></span> Latency (ms)
               </span>
               <span className="text-amber-400 flex items-center gap-1">
                 <span className="w-2 h-0.5 bg-amber-400 inline-block"></span> Margin (%)
@@ -185,34 +185,34 @@ export default function EmbedAgentOndcRetailSimulator() {
             </div>
           </div>
 
-          <div className="w-full h-[90px] bg-slate-900/40 rounded-lg p-1.5 overflow-hidden flex items-center justify-center">
+          <div className="w-full h-[90px] bg-neutral-900/40 rounded-lg p-1.5 overflow-hidden flex items-center justify-center">
             <svg viewBox="0 0 340 90" className="w-full h-full overflow-visible">
-              <line x1="0" y1="22" x2="340" y2="22" stroke="#334155" strokeWidth="0.5" strokeDasharray="2,2" />
-              <line x1="0" y1="45" x2="340" y2="45" stroke="#334155" strokeWidth="0.5" strokeDasharray="2,2" />
-              <line x1="0" y1="68" x2="340" y2="68" stroke="#334155" strokeWidth="0.5" strokeDasharray="2,2" />
+              <line x1="0" y1="22" x2="340" y2="22" stroke="#262626" strokeWidth="0.5" strokeDasharray="2,2" />
+              <line x1="0" y1="45" x2="340" y2="45" stroke="#262626" strokeWidth="0.5" strokeDasharray="2,2" />
+              <line x1="0" y1="68" x2="340" y2="68" stroke="#262626" strokeWidth="0.5" strokeDasharray="2,2" />
 
               {svgData.latPath && (
-                <path d={svgData.latPath} fill="none" stroke="#f97316" strokeWidth="1.5" strokeLinecap="round" />
+                <path d={svgData.latPath} fill="none" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" />
               )}
               {svgData.marginPath && (
-                <path d={svgData.marginPath} fill="none" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="3,2" strokeLinecap="round" />
+                <path d={svgData.marginPath} fill="none" stroke="#d4d4d4" strokeWidth="1.5" strokeDasharray="3,2" strokeLinecap="round" />
               )}
             </svg>
           </div>
         </div>
 
         {/* Working Capital Salvaged & Watermark Backlink */}
-        <div className="pt-2 border-t border-slate-800/60 flex items-center justify-between text-xs">
+        <div className="pt-2 border-t border-neutral-800/60 flex items-center justify-between text-xs">
           <div>
-            <span className="text-[10px] text-slate-400 block">Working Capital Optimization</span>
-            <span className="font-mono font-bold text-emerald-400">₹{(results.annualWorkingCapitalSavings / 100000).toFixed(1)} Lakhs / year</span>
+            <span className="text-[10px] text-neutral-400 block">Working Capital Optimization</span>
+            <span className="font-mono font-bold text-white">₹{(results.annualWorkingCapitalSavings / 100000).toFixed(1)} Lakhs / year</span>
           </div>
 
           <a
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-[11px] text-orange-400 hover:text-orange-300 transition-colors"
+            className="flex items-center gap-1 text-[11px] text-neutral-200 hover:text-white transition-colors"
           >
             <span>Powered by Elesium Retail AI</span>
             <ArrowUpRight className="w-3 h-3" />

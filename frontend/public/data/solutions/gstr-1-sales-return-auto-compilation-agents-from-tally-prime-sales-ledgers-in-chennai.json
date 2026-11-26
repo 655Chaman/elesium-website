@@ -17,7 +17,7 @@
   "firstSentence": "Automate GSTR-1 outward supply compilation from Tally Prime sales ledgers in Chennai, segregating B2B, B2CL, B2CS, and export tables with zero statutory schema mismatches.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai",
   "paragraphs": [
     "Manufacturing conglomerates, automotive suppliers, and consumer brands in Chennai face intense compliance stress when compiling monthly GSTR-1 return statements from thousands of sales invoices in Tally Prime. Inconsistent HSN summarization, mismatched customer GSTINs, and manual table segregation across B2B (Table 4A), large B2C (Table 5A), small B2C (Table 7), and exports (Table 6A) frequently trigger portal upload rejections and severe tax audit notices.",
@@ -113,7 +113,7 @@
     "subheadline": "Manufacturing conglomerates, automotive suppliers, and consumer brands in Chennai face intense compliance stress when compiling monthly GSTR-1 return statements from thousands of sales invoices in Tally Prime. Inconsistent HSN summarization, mismatched customer GSTINs, and manual table segregation across B2B (Table 4A), large B2C (Table 5A), small B2C (Table 7), and exports (Table 6A) frequently trigger portal upload rejections and severe tax audit notices.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Replaces manual Excel spreadsheet mapping with automated XML extraction."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Replaces manual Excel spreadsheet mapping with automated XML extraction."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai Performance Telemetry",
       "layout": "centered-card"
     }

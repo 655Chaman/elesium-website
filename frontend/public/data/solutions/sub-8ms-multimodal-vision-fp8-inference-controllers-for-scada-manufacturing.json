@@ -17,7 +17,7 @@
   "firstSentence": "Execute multimodal vision-language models in quantized FP8 precision for real-time SCADA factory defect inspection at sub-8ms latencies.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing",
   "paragraphs": [
     "Automated factory lines combining high-speed machine vision with SCADA sensor telemetry require multimodal AI models capable of understanding both image frames (e.g., weld seams, surface scratches) and numeric telemetry (e.g., current draw, pneumatic pressure, laser temperature). Running standard FP16 or BF16 vision models takes over 65ms per frame, far exceeding high-speed production takt times of under 10ms.",
@@ -113,7 +113,7 @@
     "subheadline": "Automated factory lines combining high-speed machine vision with SCADA sensor telemetry require multimodal AI models capable of understanding both image frames (e.g., weld seams, surface scratches) and numeric telemetry (e.g., current draw, pneumatic pressure, laser temperature). Running standard FP16 or BF16 vision models takes over 65ms per frame, far exceeding high-speed production takt times of under 10ms.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero compromise in defect detection precision across industrial components."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero compromise in defect detection precision across industrial components."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing Performance Telemetry",
       "layout": "centered-card"
     }

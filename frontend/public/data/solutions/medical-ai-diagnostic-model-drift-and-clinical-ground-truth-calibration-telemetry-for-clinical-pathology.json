@@ -17,7 +17,7 @@
   "firstSentence": "Detect clinical diagnostic model drift and calibrate AI pathology classifiers against ground-truth biopsy outcomes in real time, preventing diagnostic misclassification in clinical laboratories.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology",
   "paragraphs": [
     "Clinical pathology laboratories and diagnostic imaging centers deploying deep learning computer vision models for digital pathology, cytology, and automated blood smear analysis face severe diagnostic drift risks. Variations in histological tissue staining protocols (H&E stain batch differences), optical microscope camera sensor degradation, or shifting patient demographic baselines cause subtle performance degradation over time. Unmonitored model drift leads to false-negative cancer misclassifications and catastrophic patient misdiagnoses.",
@@ -113,7 +113,7 @@
     "subheadline": "Clinical pathology laboratories and diagnostic imaging centers deploying deep learning computer vision models for digital pathology, cytology, and automated blood smear analysis face severe diagnostic drift risks. Variations in histological tissue staining protocols (H&E stain batch differences), optical microscope camera sensor degradation, or shifting patient demographic baselines cause subtle performance degradation over time. Unmonitored model drift leads to false-negative cancer misclassifications and catastrophic patient misdiagnoses.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete documentation satisfying NABL ISO 15189 quality standards."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete documentation satisfying NABL ISO 15189 quality standards."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology Performance Telemetry",
       "layout": "centered-card"
     }

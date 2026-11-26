@@ -17,7 +17,7 @@
   "firstSentence": "Reconstruct faded, low-contrast thermal print transport receipts and lorry dockets with deep learning super-resolution OCR, eliminating manual invoice rejection and settlement delays.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts",
   "paragraphs": [
     "Logistics freight forwarders and warehouse receiving docks in India receive hundreds of thousands of thermal-printed weight bridge receipts, lorry receipts (LR), and toll receipts that degrade rapidly during transport. Exposure to heat, sunlight, and friction in truck cabins causes thermal paper text to fade, smudge, and lose contrast. Traditional OCR engines fail completely on degraded thermal scans, forcing accounts payable teams to manually decipher blurred numbers or reject valid freight bills.",
@@ -113,7 +113,7 @@
     "subheadline": "Logistics freight forwarders and warehouse receiving docks in India receive hundreds of thousands of thermal-printed weight bridge receipts, lorry receipts (LR), and toll receipts that degrade rapidly during transport. Exposure to heat, sunlight, and friction in truck cabins causes thermal paper text to fade, smudge, and lose contrast. Traditional OCR engines fail completely on degraded thermal scans, forcing accounts payable teams to manually decipher blurred numbers or reject valid freight bills.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete image enhancement and text extraction per document page."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete image enhancement and text extraction per document page."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts Performance Telemetry",
       "layout": "centered-card"
     }

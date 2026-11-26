@@ -9693,14 +9693,51 @@ def generate_ssg():
     hp_semantic = """
 <main id="main-content">
 <div id="prerendered-homepage" style="max-width:1240px;margin:0 auto;padding:2rem 1.5rem 5rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
-  <header style="text-align:center;margin-bottom:3.5rem;">
+  <!-- Elesium Dual-Division Gateway Portal -->
+  <header style="text-align:center;margin-bottom:3.5rem;padding-bottom:3rem;border-bottom:1px solid #e5e7eb;">
+    <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(17,24,39,0.2);background:#f9fafb;margin-bottom:1.25rem;">
+      <span style="display:inline-block;width:0.5rem;height:0.5rem;border-radius:9999px;background:#111827;"></span>
+      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#111827;">Elesium Gateway &bull; elesium.online</span>
+    </div>
+    <h1 style="font-size:3rem;font-weight:800;letter-spacing:-0.03em;line-height:1.12;margin:0 0 1.25rem 0;color:#111827;">
+      Elesium - Elesium Connector Model &amp; AI &amp; Automation Elesium
+    </h1>
+    <p style="font-size:1.15rem;line-height:1.65;color:#4b5563;max-width:820px;margin:0 auto 2rem auto;">
+      Select an Elesium division: direct compliance-verified B2B partner matchmaking or sovereign enterprise multi-agent AI engineering.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;max-width:920px;margin:0 auto 2rem auto;text-align:left;">
+      <a href="/connector/" style="display:block;padding:1.75rem;border-radius:1rem;border:1px solid #111827;background:#0a0a0c;color:#ffffff;text-decoration:none;">
+        <div style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.14em;color:#9ca3af;margin-bottom:0.5rem;">Division 01 &bull; Direct B2B Pipeline</div>
+        <div style="font-size:1.5rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem;">Elesium Connector Model &rarr;</div>
+        <p style="font-size:0.95rem;line-height:1.55;color:#d1d5db;margin:0;">Connecting you with your buyers through context, multi-signal qualification, and compliance-verified introductions.</p>
+      </a>
+      <a href="/ai/" style="display:block;padding:1.75rem;border-radius:1rem;border:1px solid #059669;background:#f0fdf4;color:#111827;text-decoration:none;">
+        <div style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.14em;color:#059669;margin-bottom:0.5rem;">Division 02 &bull; Sovereign AI Systems</div>
+        <div style="font-size:1.5rem;font-weight:700;color:#111827;margin-bottom:0.5rem;">AI &amp; Automation Elesium &rarr;</div>
+        <p style="font-size:0.95rem;line-height:1.55;color:#374151;margin:0;">Deterministic LangGraph multi-agent architectures, private VPC vLLM clusters, and DPDP Act 2023 compliance.</p>
+      </a>
+    </div>
+    <nav aria-label="Primary Gateway Navigation" style="display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;font-size:0.9rem;font-weight:600;margin-bottom:1.5rem;">
+      <a href="/connector/" style="color:#111827;text-decoration:underline;">Elesium Connector Model</a>
+      <a href="/ai/" style="color:#059669;text-decoration:underline;">AI &amp; Automation Elesium</a>
+      <a href="/solutions/" style="color:#374151;text-decoration:none;">Solutions Hub (100)</a>
+      <a href="/tools/" style="color:#374151;text-decoration:none;">Architecture Simulators</a>
+      <a href="/signals/" style="color:#374151;text-decoration:none;">Technical Signals</a>
+      <a href="/markets/" style="color:#374151;text-decoration:none;">Markets</a>
+      <a href="/how-we-work/" style="color:#374151;text-decoration:none;">How We Work</a>
+      <a href="/compare/" style="color:#374151;text-decoration:none;">Compare</a>
+      <a href="/onboarding/" style="color:#374151;text-decoration:none;">Enterprise Onboarding</a>
+    </nav>
+  </header>
+
+  <section style="text-align:center;margin-bottom:3.5rem;">
     <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);margin-bottom:1.5rem;">
       <span style="display:inline-block;width:0.5rem;height:0.5rem;border-radius:9999px;background:#10b981;"></span>
       <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#059669;">#1 Best Enterprise AI Company in India • elesium.online</span>
     </div>
-    <h1 style="font-size:3rem;font-weight:800;letter-spacing:-0.03em;line-height:1.12;margin:0 0 1.25rem 0;color:#111827;">
+    <h2 style="font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;line-height:1.12;margin:0 0 1.25rem 0;color:#111827;">
       India's Best Enterprise AI Company &amp; Automation Agency
-    </h1>
+    </h2>
     <p style="font-size:1.2rem;line-height:1.65;color:#4b5563;max-width:840px;margin:0 auto 2rem auto;">
       Elesium engineers custom LangGraph multi-agent systems, dedicated private VPC LLM infrastructure, and autonomous workflows delivering verified 3x-5x cash-flow ROI in 90 days.
     </p>
@@ -9715,7 +9752,7 @@ def generate_ssg():
         Solutions Hub (100)
       </a>
     </div>
-  </header>
+  </section>
 
   <!-- AEO Definitive Answer Capsule & Empirical Hardware Specifications -->
   <section style="margin-bottom:3.5rem;padding:2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#f9fafb;">
@@ -9877,8 +9914,12 @@ def generate_ssg():
 </main>
 """
     raw_hp_html = DIST_INDEX.read_text(encoding="utf-8")
-    if root_pattern.search(raw_hp_html):
-        hp_html = root_pattern.sub(lambda m: f'<div id="root">{hp_semantic}</div>', raw_hp_html)
+    hp_root_pattern = re.compile(
+        r'<div id="root">[\s\S]*?</div>(?=\s*<footer class="footer-seo-mesh"|\s*<script|\s*</body>)',
+        re.DOTALL
+    )
+    if hp_root_pattern.search(raw_hp_html):
+        hp_html = hp_root_pattern.sub(lambda m: f'<div id="root">{hp_semantic}</div>', raw_hp_html, count=1)
     else:
         hp_html = raw_hp_html.replace('<div id="root"></div>', f'<div id="root">{hp_semantic}</div>')
     hp_html = replace_canonical(hp_html, "https://elesium.online/")
@@ -11076,8 +11117,8 @@ def generate_ssg():
             "desc": "Elesium engineers sovereign enterprise AI systems, autonomous agents, and private VPC infrastructure delivering audited 3x-5x ROI in 90 days."
         },
         "connector": {
-            "title": "Elesium Connect - High-Velocity B2B Pipeline & Strategic Matchmaking",
-            "desc": "Elesium Connect actively engineers high-trust B2B pipelines connecting verified enterprise buyers with pre-vetted technical providers, capital, and suppliers. 72-hour matching SLA."
+            "title": "Elesium Connector Model | Direct B2B Pipeline & Partner Matching",
+            "desc": "Find the right partners faster with context, qualification, and trust. Elesium Connector Model connects verified enterprise buyers and suppliers directly."
         },
         "ai-automation": {
             "title": "Best AI & Automation Company in Bangalore",
@@ -11893,7 +11934,544 @@ def generate_ssg():
         html_out = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{desc}" />', html_out)
         html_out = re.sub(r'<meta name="twitter:url" content="[^"]*"\s*/?>', f'<meta name="twitter:url" content="{canonical_url}" />', html_out)
 
-        if route == "ai-automation-agency-india":
+        if route == "connector":
+            connector_semantic = """
+<div id="prerendered-connector" style="max-width:1160px;margin:0 auto;padding:2.5rem 1.5rem 5rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#f8fafc;background:#000000;">
+  <nav aria-label="Breadcrumb" style="font-size:0.85rem;font-family:monospace;color:#9ca3af;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+    <div>
+      <a href="/" style="color:#ffffff;text-decoration:none;">Portal</a> / <span style="color:#d1d5db;font-weight:700;">Elesium Connector Model</span>
+    </div>
+    <div style="display:flex;gap:1.25rem;">
+      <a href="#model" style="color:#d1d5db;text-decoration:none;">Model</a>
+      <a href="#platform" style="color:#d1d5db;text-decoration:none;">Architecture</a>
+      <a href="#engage" style="color:#d1d5db;text-decoration:none;">Engage</a>
+      <a href="/ai/" style="color:#ffffff;text-decoration:underline;">AI &amp; Automation &rarr;</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <header style="text-align:center;margin-bottom:4rem;padding:2rem 0;">
+      <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.25em;color:#9ca3af;margin:0 0 1rem 0;">
+        Elesium Connector Model
+      </p>
+      <h1 style="font-size:3rem;font-weight:700;letter-spacing:-0.03em;line-height:1.1;margin:0 0 1.25rem 0;color:#ffffff;">
+        Connecting you with your buyers
+      </h1>
+      <div class="answer-capsule" style="max-width:780px;margin:0 auto 2rem auto;padding:1.25rem 1.5rem;border:1px solid rgba(255,255,255,0.14);border-radius:0.75rem;background:#0a0a0c;">
+        <p style="font-size:1.1rem;line-height:1.65;color:#d1d5db;margin:0;">
+          Find the right partners faster with context, qualification, and trust. Elesium Connector Model connects verified enterprise buyers and suppliers directly without passive network noise.
+        </p>
+      </div>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="#model" style="display:inline-block;padding:0.8rem 1.75rem;background:#ffffff;color:#000000;font-weight:600;border-radius:0.375rem;text-decoration:none;font-size:0.9rem;">Explore</a>
+        <a href="https://wa.me/918317329312" style="display:inline-block;padding:0.8rem 1.75rem;border:1px solid rgba(255,255,255,0.25);color:#ffffff;font-weight:600;border-radius:0.375rem;text-decoration:none;font-size:0.9rem;">Initiate Brief</a>
+      </div>
+    </header>
+
+    <section id="model" style="margin-bottom:4rem;padding:2.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+      <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.75rem 0;">Pipeline Flow</p>
+      <h2 style="font-size:2rem;font-weight:600;color:#ffffff;margin:0 0 1rem 0;">Supply ➔ Elesium ➔ Demand</h2>
+      <p style="font-size:1.05rem;line-height:1.7;color:#d1d5db;margin:0 0 1.5rem 0;">
+        We don't rely on passive networks; instead, we actively engineer your pipeline to connect you directly with ready-to-move decision-makers.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+        <div style="padding:1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:0.5rem;">
+          <h3 style="font-size:1rem;font-weight:600;color:#ffffff;margin:0 0 0.4rem 0;">Supply</h3>
+          <p style="font-size:0.9rem;color:#9ca3af;margin:0;line-height:1.5;">Pre-vetted enterprise solution providers, technical specialists, and verified delivery teams.</p>
+        </div>
+        <div style="padding:1.25rem;border:1px solid rgba(255,255,255,0.25);border-radius:0.5rem;background:#0f0f14;">
+          <h3 style="font-size:1rem;font-weight:600;color:#ffffff;margin:0 0 0.4rem 0;">Elesium</h3>
+          <p style="font-size:0.9rem;color:#d1d5db;margin:0;line-height:1.5;">Active mandate distillation, compliance verification, and double-opt-in commercial alignment.</p>
+        </div>
+        <div style="padding:1.25rem;border:1px solid rgba(255,255,255,0.1);border-radius:0.5rem;">
+          <h3 style="font-size:1rem;font-weight:600;color:#ffffff;margin:0 0 0.4rem 0;">Demand</h3>
+          <p style="font-size:0.9rem;color:#9ca3af;margin:0;line-height:1.5;">Enterprise buyers, CTOs, and procurement principals with active mandates and verified timelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform" style="margin-bottom:4rem;">
+      <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.75rem 0;">Platform Architecture</p>
+      <h2 style="font-size:2rem;font-weight:600;color:#ffffff;margin:0 0 1.5rem 0;">Five Pillars of Qualified B2B Matchmaking</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
+        <article style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+          <div style="font-family:monospace;font-size:0.75rem;color:#9ca3af;margin-bottom:0.5rem;">01 / 05</div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#ffffff;margin:0 0 0.5rem 0;">Proprietary Target Intelligence</h3>
+          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">We map your ideal buyer market with enriched data before contact is made.</p>
+        </article>
+        <article style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+          <div style="font-family:monospace;font-size:0.75rem;color:#9ca3af;margin-bottom:0.5rem;">02 / 05</div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#ffffff;margin:0 0 0.5rem 0;">Compliance-Verified Introductions</h3>
+          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">Introductions are pre-screened against your certification requirements. No unqualified contacts.</p>
+        </article>
+        <article style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+          <div style="font-family:monospace;font-size:0.75rem;color:#9ca3af;margin-bottom:0.5rem;">03 / 05</div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#ffffff;margin:0 0 0.5rem 0;">Global Decision-Maker Database</h3>
+          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">Access a continuously refreshed database of verified global decision-makers.</p>
+        </article>
+        <article style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+          <div style="font-family:monospace;font-size:0.75rem;color:#9ca3af;margin-bottom:0.5rem;">04 / 05</div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#ffffff;margin:0 0 0.5rem 0;">Engineered Trust Infrastructure</h3>
+          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">We build verifiable credibility into every introduction with transparent qualification history.</p>
+        </article>
+        <article style="padding:1.5rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+          <div style="font-family:monospace;font-size:0.75rem;color:#9ca3af;margin-bottom:0.5rem;">05 / 05</div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#ffffff;margin:0 0 0.5rem 0;">Multi-Signal Qualification Engine</h3>
+          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">Our outbound engine surfaces buying intent to ensure you speak with principals ready to move.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="engage" style="margin-bottom:4rem;">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.5rem 0;">Direct Engagement</p>
+        <h2 style="font-size:2rem;font-weight:600;color:#ffffff;margin:0;">Two sides of a qualified introduction</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;">
+        <div style="padding:2rem;border:1px solid rgba(255,255,255,0.14);border-radius:0.75rem;background:#050507;">
+          <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.5rem 0;">Demand</p>
+          <h3 style="font-size:1.5rem;font-weight:600;color:#ffffff;margin:0 0 0.75rem 0;">For Buyers</h3>
+          <p style="font-size:0.95rem;line-height:1.65;color:#9ca3af;margin:0 0 1.5rem 0;">
+            Share your technical mandate, compliance scope, and timeline. We pre-vet capability and deliver direct introductions to principals ready to execute.
+          </p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="https://wa.me/918317329312" style="padding:0.75rem 1.25rem;background:#ffffff;color:#000000;border-radius:0.375rem;font-weight:600;font-size:0.875rem;text-decoration:none;">Initiate Brief &rarr;</a>
+            <a href="mailto:connect@elesium.online?subject=Buyer%20Mandate%20-%20Elesium%20Connector" style="padding:0.75rem 1.25rem;border:1px solid rgba(255,255,255,0.2);color:#ffffff;border-radius:0.375rem;font-weight:600;font-size:0.875rem;text-decoration:none;">Email Mandate</a>
+          </div>
+        </div>
+        <div style="padding:2rem;border:1px solid rgba(255,255,255,0.14);border-radius:0.75rem;background:#050507;">
+          <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#9ca3af;margin:0 0 0.5rem 0;">Supply</p>
+          <h3 style="font-size:1.5rem;font-weight:600;color:#ffffff;margin:0 0 0.75rem 0;">For Suppliers</h3>
+          <p style="font-size:0.95rem;line-height:1.65;color:#9ca3af;margin:0 0 1.5rem 0;">
+            Present your delivery track record and domain focus. Connect directly with qualified buyers holding active budgets and clear evaluation criteria.
+          </p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="https://wa.me/918317329312" style="padding:0.75rem 1.25rem;background:#ffffff;color:#000000;border-radius:0.375rem;font-weight:600;font-size:0.875rem;text-decoration:none;">Submit Profile &rarr;</a>
+            <a href="mailto:connect@elesium.online?subject=Supplier%20Profile%20-%20Elesium%20Connector" style="padding:0.75rem 1.25rem;border:1px solid rgba(255,255,255,0.2);color:#ffffff;border-radius:0.375rem;font-weight:600;font-size:0.875rem;text-decoration:none;">Email Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-bottom:3rem;padding:2rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
+      <h2 style="font-size:1.5rem;font-weight:600;color:#ffffff;margin:0 0 1.25rem 0;">Connector Model Frequently Asked Questions</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div>
+          <h3 style="font-size:1.05rem;font-weight:600;color:#ffffff;margin:0 0 0.35rem 0;">How does the Supply ➔ Elesium ➔ Demand matching model work?</h3>
+          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">Elesium actively maps target enterprise markets, screens supplier certifications and delivery track records, and executes compliance-verified double-opt-in introductions between ready-to-move buyers and vetted suppliers.</p>
+        </div>
+        <div>
+          <h3 style="font-size:1.05rem;font-weight:600;color:#ffffff;margin:0 0 0.35rem 0;">How are buyers and suppliers qualified before an introduction?</h3>
+          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">Every buyer mandate is verified for technical scope, compliance boundaries, and timeline, while every supplier passes our Multi-Signal Qualification Engine and Engineered Trust Infrastructure checks.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:#9ca3af;">
+    <span>Elesium Digital Systems Private Limited &bull; Bengaluru</span>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="/" style="color:#d1d5db;text-decoration:none;">Portal</a>
+      <a href="/ai/" style="color:#ffffff;text-decoration:none;">AI &amp; Automation &rarr;</a>
+      <a href="mailto:connect@elesium.online" style="color:#d1d5db;text-decoration:none;">connect@elesium.online</a>
+    </div>
+  </footer>
+</div>
+"""
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{connector_semantic}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{connector_semantic}</div>')
+            html_out = html_out.replace("</head>", '\n<style>html.elesium-clean-route #prerendered-connector { display: none !important; }</style>\n</head>')
+
+            connector_schema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebPage",
+                        "@id": f"{canonical_url}#webpage",
+                        "url": canonical_url,
+                        "name": full_title,
+                        "description": desc,
+                        "isPartOf": {"@id": "https://elesium.online/#website"},
+                        "about": {"@id": "https://elesium.online/#organization"},
+                        "speakable": {
+                            "@type": "SpeakableSpecification",
+                            "cssSelector": [".answer-capsule", "h1", "h2"]
+                        }
+                    },
+                    {
+                        "@type": "Service",
+                        "@id": f"{canonical_url}#service",
+                        "name": "Elesium Connector Model",
+                        "serviceType": "B2B Pipeline Engineering & Strategic Matchmaking",
+                        "url": canonical_url,
+                        "provider": {"@id": "https://elesium.online/#organization"},
+                        "description": desc
+                    },
+                    {
+                        "@type": "FAQPage",
+                        "@id": f"{canonical_url}#faq",
+                        "isPartOf": {"@id": f"{canonical_url}#webpage"},
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "How does the Supply -> Elesium -> Demand matching model work?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Elesium actively maps target enterprise markets, screens supplier certifications and delivery track records, and executes compliance-verified double-opt-in introductions between ready-to-move buyers and vetted suppliers."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How are buyers and suppliers qualified before an introduction?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Every buyer mandate is verified for technical scope, compliance boundaries, and timeline, while every supplier passes our Multi-Signal Qualification Engine and Engineered Trust Infrastructure checks."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": f"{canonical_url}#breadcrumb",
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": 1, "name": "Portal", "item": "https://elesium.online/"},
+                            {"@type": "ListItem", "position": 2, "name": "Elesium Connector Model", "item": canonical_url}
+                        ]
+                    }
+                ]
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(connector_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "ai":
+            ai_category_links = "".join(
+                f'<a href="/solutions/category/{sid}/" style="display:inline-block;padding:0.4rem 0.85rem;background:#ffffff;border:1px solid #d1d5db;border-radius:0.375rem;color:#111827;font-size:0.85rem;font-weight:600;text-decoration:none;">{html.escape(sdata["name"])}</a>\n'
+                for sid, sdata in SILO_DEFINITIONS.items()
+            )
+            ai_city_links = "".join(
+                f'<a href="/enterprise-ai-{c}/" style="display:inline-block;padding:0.4rem 0.85rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.375rem;color:#374151;font-size:0.85rem;font-weight:600;text-decoration:none;">Enterprise AI {c.replace("-", " ").title()}</a>\n'
+                for c in ["bangalore", "mumbai", "delhi-ncr", "pune", "hyderabad", "chennai", "ahmedabad", "kolkata"]
+            )
+            ai_semantic = f"""
+<main id="main-content">
+<div id="prerendered-ai" style="max-width:1240px;margin:0 auto;padding:2rem 1.5rem 5rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#111827;">
+  <nav aria-label="Breadcrumb" style="font-size:0.85rem;font-family:monospace;color:#6b7280;margin-bottom:2rem;">
+    <a href="/" style="color:#2563eb;text-decoration:none;">Home</a> / <span style="color:#059669;font-weight:700;">AI &amp; Automation Elesium</span>
+  </nav>
+
+  <header style="text-align:center;margin-bottom:3.5rem;">
+    <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(5,150,105,0.3);background:rgba(5,150,105,0.06);margin-bottom:1.5rem;">
+      <span style="display:inline-block;width:0.5rem;height:0.5rem;border-radius:9999px;background:#10b981;"></span>
+      <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">Enterprise Multi-Agent &amp; DPDP-Compliant AI Engineering &bull; Bengaluru</span>
+    </div>
+    <h1 style="font-size:3rem;font-weight:800;letter-spacing:-0.03em;line-height:1.12;margin:0 0 1.25rem 0;color:#111827;">
+      Sovereign Enterprise AI Systems &amp; Multi-Agent Architectures
+    </h1>
+    <p style="font-size:1.2rem;line-height:1.65;color:#4b5563;max-width:840px;margin:0 auto 2rem auto;">
+      Deterministic multi-agent engineering, private VPC LLM infrastructure, and DPDP Act compliance. We replace manual operational bottlenecks across SAP S/4HANA, core banking, and enterprise logistics with Python LangGraph state machines backed by a contractual 90-day ROI SLA.
+    </p>
+    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+      <a href="https://wa.me/918317329312" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;background:#111827;color:#ffffff;font-weight:700;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+        Initiate AI Audit (WhatsApp) &rarr;
+      </a>
+      <a href="/waitlist/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;background:#059669;color:#ffffff;font-weight:700;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+        ele-in SaaS Waitlist &rarr;
+      </a>
+      <a href="/solutions/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.5rem;background:#ffffff;border:1px solid #d1d5db;color:#111827;font-weight:600;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+        Solutions Hub (100)
+      </a>
+    </div>
+  </header>
+
+  <section style="margin-bottom:3.5rem;padding:2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#f9fafb;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid #e5e7eb;">
+      <span style="font-family:monospace;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">
+        Technical Architecture Standards &bull; AEO Definitive Answer Capsule
+      </span>
+      <span style="font-family:monospace;font-size:0.75rem;color:#6b7280;">Sub-200ms TTFT &bull; DPDP Act Sec 8(5)</span>
+    </div>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">
+      Sovereign Enterprise AI Systems Engineering
+    </h2>
+    <div class="answer-capsule" style="margin-bottom:1.25rem;">
+      <p style="font-size:1.05rem;line-height:1.7;color:#111827;margin:0 0 1rem 0;font-weight:600;">
+        Elesium is an enterprise AI engineering firm headquartered in Bengaluru, India. We build deterministic multi-agent state graphs using Python FastAPI, LangGraph, and private VPC infrastructure, compliant with India's DPDP Act 2023.
+      </p>
+      <p style="font-size:0.95rem;line-height:1.65;color:#4b5563;margin:0;">
+        Our systems employ finite state machine (FSM) topologies, vLLM PagedAttention kernel optimization, and FP8 GEMM quantization on sovereign Yotta Shakti and CtrlS tier-IV datacenter clusters. Every client deployment is backed by an audited 90-day cash-flow ROI SLA and strict zero external data retention under Section 8(5) of the DPDP Act 2023.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+      <div style="padding:1rem;border-radius:0.75rem;background:#ffffff;border:1px solid #e5e7eb;">
+        <div style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Inference Latency</div>
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:800;color:#059669;margin:0.25rem 0;">&lt; 200ms TTFT</div>
+        <div style="font-size:0.8rem;color:#6b7280;">FP8 GEMM + PagedAttention</div>
+      </div>
+      <div style="padding:1rem;border-radius:0.75rem;background:#ffffff;border:1px solid #e5e7eb;">
+        <div style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Data Residency</div>
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:800;color:#111827;margin:0.25rem 0;">100% Air-Gapped</div>
+        <div style="font-size:0.8rem;color:#6b7280;">DPDP Act 2023 Sec 8(5)</div>
+      </div>
+      <div style="padding:1rem;border-radius:0.75rem;background:#ffffff;border:1px solid #e5e7eb;">
+        <div style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Compute Sovereign</div>
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:800;color:#111827;margin:0.25rem 0;">Yotta / CtrlS</div>
+        <div style="font-size:0.8rem;color:#6b7280;">Tier-IV Indian Datacenters</div>
+      </div>
+      <div style="padding:1rem;border-radius:0.75rem;background:#ffffff;border:1px solid #e5e7eb;">
+        <div style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Contractual SLA</div>
+        <div style="font-family:monospace;font-size:1.35rem;font-weight:800;color:#059669;margin:0.25rem 0;">90-Day ROI</div>
+        <div style="font-size:0.8rem;color:#6b7280;">Audited 3x-5x Cash Flow</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:3.5rem;">
+    <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">Enterprise AI Architecture Portals &amp; Knowledge Hubs</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;">
+        <h3 style="font-size:1.15rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/ai-automation-agency-india/" style="color:#059669;text-decoration:none;">India Enterprise AI Agency Pillar</a></h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0;">Comprehensive pricing, SAP S/4HANA integration specifications, and national SLA guarantees across India.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;">
+        <h3 style="font-size:1.15rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/solutions/" style="color:#059669;text-decoration:none;">Enterprise Solutions Hub (100)</a></h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0;">Production multi-agent workflows for BFSI, logistics, manufacturing, healthcare, pharma, and core ERP reconciliation.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;">
+        <h3 style="font-size:1.15rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/tools/" style="color:#059669;text-decoration:none;">75+ AI Architecture Simulators</a></h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0;">Interactive ROI calculators, GPU VRAM sizers, PagedAttention cache estimators, and DPDP Act 2023 statutory audit simulators.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;">
+        <h3 style="font-size:1.15rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/signals/" style="color:#059669;text-decoration:none;">Technical Signals &amp; Whitepapers</a></h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0;">Peer-reviewed architectural blueprints on KV-cache memory compression, vLLM serving, and deterministic state machines.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;">
+        <h3 style="font-size:1.15rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/how-we-work/" style="color:#059669;text-decoration:none;">How We Work (4-Stage Protocol)</a></h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0;">14-day sovereign pilot sprint, LangGraph FSM topology, vLLM inference scaling, and 90-day ROI reconciliation.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;">
+        <h3 style="font-size:1.15rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/compare/" style="color:#059669;text-decoration:none;">Architecture Battlecards &amp; Benchmarks</a></h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0;">Empirical comparisons: LangGraph vs CrewAI, Private vLLM vs Azure OpenAI, and FSM vs unconstrained ReAct loops.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:3.5rem;">
+    <h2 style="font-size:1.75rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">Sovereign Production AI Engineering Capabilities</h2>
+    <p style="font-size:1rem;line-height:1.7;color:#374151;margin:0 0 1.5rem 0;">
+      Enterprise AI systems fail in production when built on unconstrained probabilistic chat loops, shared third-party inference endpoints, or brittle low-code scripts. Elesium designs deterministic software systems engineered around verifiable state transitions, strict schema validation, and sovereign private VPC execution across Indian and global tier-IV infrastructure.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.25rem;">
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Deterministic LangGraph State Machines</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Every multi-agent workflow executes as a bounded directed finite state machine with Pydantic v2 schema enforcement, circuit breakers against retry loops, and SHA-256 Merkle audit logs for statutory traceability.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Private VPC vLLM &amp; PagedAttention Clusters</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Air-gapped serving of DeepSeek-V3, Llama 3.3, and Qwen-2.5 inside client-owned AWS ap-south-1, Azure Central India, Yotta Shakti, or CtrlS clusters with FP8 microscaling kernels and under 4% KV-cache fragmentation.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Bi-Directional SAP, Oracle &amp; Tally ERP Sync</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Idempotent RFC/BAPI bridges, Tally Prime XML-over-HTTP port 9000 voucher pipelines, and read-replica SQL interfaces that reconcile GST Rule 36(4) ledgers, e-Way bills, and purchase orders without altering legacy core schemas.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">Statutory DPDP Act 2023 &amp; RBI Compliance</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Ephemeral volatile VRAM scrubbing upon session fulfillment in compliance with Section 8(5) of the DPDP Act 2023, paired with RBI Cyber Security Framework controls, HIPAA isolation, and SOC-2 Type II audit readiness.</p>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;padding:1.5rem;border:1px solid #e5e7eb;border-radius:1rem;background:#ffffff;">
+      <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.75rem 0;">Production Delivery Protocol &amp; Audited Telemetry Standards</h3>
+      <p style="color:#4b5563;font-size:0.95rem;line-height:1.65;margin:0 0 0.75rem 0;">
+        Every deployment follows a four-stage engineering protocol: 14-day isolated staging sprint inside your private VPC, bounded LangGraph state topology design with strict JSON grammar decoding, dedicated vLLM PagedAttention throughput tuning on NVIDIA H100 or A100 clusters, and cryptographic compliance verification with 90-day cash-flow ROI reconciliation.
+      </p>
+      <p style="color:#4b5563;font-size:0.95rem;line-height:1.65;margin:0;">
+        Instead of charging recurring per-seat SaaS markups or exposing sensitive corporate ledgers to public model APIs, Elesium delivers client-owned source code, reproducible Terraform infrastructure modules, OpenTelemetry distributed tracing spans, and real-time circuit breakers that isolate edge anomalies before they propagate into core banking, healthcare, or manufacturing systems.
+      </p>
+    </div>
+  </section>
+
+  <section style="margin-bottom:3.5rem;padding:2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#f9fafb;">
+    <h2 style="font-size:1.5rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">13 Sovereign Industry Verticals &amp; Regional Engineering Hubs</h2>
+    <p style="font-size:0.95rem;color:#4b5563;margin:0 0 1rem 0;">Explore specialized multi-agent architectures across regulated industries, Indian metropolitan hubs, and global sovereign enclaves (<a href="/us/" style="color:#059669;font-weight:600;">United States</a>, <a href="/uk/" style="color:#059669;font-weight:600;">United Kingdom</a>, <a href="/ae/" style="color:#059669;font-weight:600;">UAE</a>).</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;">
+      {ai_category_links}
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+      {ai_city_links}
+    </div>
+  </section>
+
+  <section style="margin-bottom:3.5rem;padding:2.5rem 2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#ffffff;">
+    <div style="text-align:center;max-width:700px;margin:0 auto 2.5rem auto;">
+      <span style="font-family:monospace;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">Transparent Commercial Framework</span>
+      <h2 style="font-size:2rem;font-weight:800;color:#111827;margin:0.5rem 0;">Institutional AI Engineering Investment Tiers</h2>
+      <p style="color:#4b5563;font-size:1rem;">Transparent pricing with zero vendor lock-in and contractual ROI guarantees.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+      <div style="padding:1.75rem;border-radius:1rem;border:1px solid #e5e7eb;background:#f9fafb;">
+        <span style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Tier 01</span>
+        <h3 style="font-size:1.35rem;font-weight:700;margin:0.25rem 0 0.5rem 0;color:#111827;">Pilot Architecture Sprint</h3>
+        <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹1,50,000 - ₹3,50,000</div>
+        <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:1rem;">14-Day Production Validation</div>
+        <p style="font-size:0.9rem;color:#4b5563;line-height:1.55;">Single-process deterministic LangGraph agent, Python FastAPI endpoint on private cloud staging, sub-200ms latency baseline benchmark, and formal 1-page feasibility &amp; ROI memorandum.</p>
+      </div>
+      <div style="padding:1.75rem;border-radius:1rem;border:2px solid #059669;background:#ffffff;">
+        <span style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;text-transform:uppercase;">Tier 02 &bull; Most Requested Deployment</span>
+        <h3 style="font-size:1.35rem;font-weight:700;margin:0.25rem 0 0.5rem 0;color:#111827;">Enterprise Multi-Agent Suite</h3>
+        <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹6,00,000 - ₹15,00,000</div>
+        <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:1rem;">30-45 Day Full Implementation</div>
+        <p style="font-size:0.9rem;color:#4b5563;line-height:1.55;">Collaborative 3-agent triad with state persistence, direct SAP S/4HANA, Oracle, or Finacle integration, zero-data-retention air-gapped VPC architecture, and contractual 90-day 3x-5x cash-flow ROI guarantee.</p>
+      </div>
+      <div style="padding:1.75rem;border-radius:1rem;border:1px solid #e5e7eb;background:#f9fafb;">
+        <span style="font-family:monospace;font-size:0.75rem;color:#6b7280;text-transform:uppercase;">Tier 03</span>
+        <h3 style="font-size:1.35rem;font-weight:700;margin:0.25rem 0 0.5rem 0;color:#111827;">Autonomous AI Engineering Pod</h3>
+        <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹4,50,000 / month</div>
+        <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:1rem;">Continuous Dedicated Velocity</div>
+        <p style="font-size:0.9rem;color:#4b5563;line-height:1.55;">Dedicated pod of 3 AI engineers + 1 principal architect, continuous model fine-tuning &amp; vLLM optimization, 1-hour critical production incident SLA, and dedicated WhatsApp &amp; Slack engineering bridge.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom:3.5rem;padding:2.5rem 2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#ffffff;">
+    <div style="text-align:center;max-width:700px;margin:0 auto 2rem auto;">
+      <span style="font-family:monospace;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">Direct Architecture Answers</span>
+      <h2 style="font-size:2rem;font-weight:800;color:#111827;margin:0.5rem 0;">Frequently Asked Architecture &amp; Procurement Questions</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.25rem;max-width:850px;margin:0 auto;">
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium architect sovereign enterprise AI systems?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium engineers deterministic multi-agent systems deployed directly inside client-controlled private VPCs (AWS, GCP, Azure, or on-premise Yotta Shakti and CtrlS tier-IV datacenter clusters in India). We build verifiable Python LangGraph state machines with strict Pydantic schemas, sub-200ms time-to-first-token (TTFT) execution, and compliance with India's Digital Personal Data Protection (DPDP) Act 2023 Section 8(5), backed by a contractual 90-day cash-flow ROI SLA.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium guarantee sub-200ms latency for enterprise agent workflows?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">We deploy custom vLLM inference runtimes utilizing PagedAttention virtual memory paging and FP8 GEMM (General Matrix Multiply) microscaling kernels on dedicated NVIDIA H100/A100 clusters. By decoupling prefill from decode phases and maintaining warm prefix caching for enterprise system prompts, we achieve sub-200ms TTFT across SAP S/4HANA RFC queries, core banking ledger reconciliation, and supply chain dispatch pipelines.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium ensure compliance with India's DPDP Act 2023?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Under Section 8(5) of the DPDP Act 2023, Data Fiduciaries must erase personal data upon purpose fulfillment. Elesium enforces zero external data retention, hosting LLM inference entirely within client-owned sovereign private VPCs located in Mumbai, Bengaluru, or Delhi NCR. Zero client prompt bytes or telemetry are ever transmitted to third-party consumer LLM providers.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What is Elesium's 90-day contractual ROI SLA?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What are the institutional investment tiers for deploying Elesium AI systems?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA).</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="text-align:center;padding:2.5rem 2rem;border-radius:1.5rem;background:#111827;color:#ffffff;">
+    <div style="font-family:monospace;font-size:0.75rem;color:#10b981;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Direct Principal Systems Architect Pairing</div>
+    <h2 style="font-size:1.75rem;font-weight:800;margin:0 0 1rem 0;">Connect Directly with Our Lead Architect via WhatsApp</h2>
+    <p style="color:#9ca3af;font-size:0.95rem;max-width:600px;margin:0 auto 1.5rem auto;">
+      Skip vendor sales decks. Speak directly with Chaman Shah to evaluate your SAP/Oracle ledgers, latency requirements, and DPDP Act compliance boundaries in 30 minutes.
+    </p>
+    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+      <a href="https://wa.me/918317329312" style="display:inline-block;padding:0.85rem 2rem;background:#10b981;color:#000000;font-weight:800;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+        Initiate WhatsApp Audit (+91 83173 29312) &rarr;
+      </a>
+      <a href="/commercial-directory.html" style="display:inline-block;padding:0.85rem 1.75rem;border:1px solid #4b5563;color:#ffffff;font-weight:600;border-radius:9999px;text-decoration:none;font-size:0.95rem;">
+        Top 100 Commercial Directory &rarr;
+      </a>
+    </div>
+  </footer>
+</div>
+</main>
+"""
+            root_pattern = re.compile(r'<div id="root">.*?</div>', re.DOTALL)
+            if root_pattern.search(html_out):
+                html_out = root_pattern.sub(lambda m: f'<div id="root">{ai_semantic}</div>', html_out)
+            else:
+                html_out = html_out.replace('<div id="root"></div>', f'<div id="root">{ai_semantic}</div>')
+
+            ai_schema = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebPage",
+                        "@id": f"{canonical_url}#webpage",
+                        "url": canonical_url,
+                        "name": full_title,
+                        "description": desc,
+                        "isPartOf": {"@id": "https://elesium.online/#website"},
+                        "about": {"@id": "https://elesium.online/#organization"},
+                        "speakable": {
+                            "@type": "SpeakableSpecification",
+                            "cssSelector": [".answer-capsule", "h1", "h2"]
+                        }
+                    },
+                    {
+                        "@type": ["ProfessionalService", "Service"],
+                        "@id": f"{canonical_url}#service",
+                        "url": canonical_url,
+                        "name": "AI & Automation Elesium | Sovereign Enterprise AI Engineering",
+                        "serviceType": "Enterprise AI & Multi-Agent Systems Engineering",
+                        "provider": {"@id": "https://elesium.online/#organization"},
+                        "description": desc
+                    },
+                    {
+                        "@type": "FAQPage",
+                        "@id": f"{canonical_url}#faq",
+                        "isPartOf": {"@id": f"{canonical_url}#webpage"},
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "How does Elesium architect sovereign enterprise AI systems?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Elesium engineers deterministic multi-agent systems deployed directly inside client-controlled private VPCs (AWS, GCP, Azure, or on-premise Yotta Shakti and CtrlS tier-IV datacenter clusters in India). We build verifiable Python LangGraph state machines with strict Pydantic schemas, sub-200ms time-to-first-token (TTFT) execution, and compliance with India's Digital Personal Data Protection (DPDP) Act 2023 Section 8(5), backed by a contractual 90-day cash-flow ROI SLA."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How does Elesium guarantee sub-200ms latency for enterprise agent workflows?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "We deploy custom vLLM inference runtimes utilizing PagedAttention virtual memory paging and FP8 GEMM (General Matrix Multiply) microscaling kernels on dedicated NVIDIA H100/A100 clusters. By decoupling prefill from decode phases and maintaining warm prefix caching for enterprise system prompts, we achieve sub-200ms TTFT across SAP S/4HANA RFC queries, core banking ledger reconciliation, and supply chain dispatch pipelines."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "How does Elesium ensure compliance with India's DPDP Act 2023?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Under Section 8(5) of the DPDP Act 2023, Data Fiduciaries must erase personal data upon purpose fulfillment. Elesium enforces zero external data retention, hosting LLM inference entirely within client-owned sovereign private VPCs located in Mumbai, Bengaluru, or Delhi NCR. Zero client prompt bytes or telemetry are ever transmitted to third-party consumer LLM providers."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What is Elesium's 90-day contractual ROI SLA?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "What are the institutional investment tiers for deploying Elesium AI systems?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA)."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": f"{canonical_url}#breadcrumb",
+                        "itemListElement": [
+                            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online/"},
+                            {"@type": "ListItem", "position": 2, "name": "AI & Automation Elesium", "item": canonical_url}
+                        ]
+                    }
+                ]
+            }
+            html_out = html_out.replace("</head>", f'\n<script type="application/ld+json">{json.dumps(ai_schema, ensure_ascii=False)}</script>\n</head>')
+
+        elif route == "ai-automation-agency-india":
             pricing_answer_capsule = (
                 "The average cost of enterprise AI automation in India ranges from ₹1,50,000 for deterministic "
                 "pilot architectures to ₹15,00,000+ for comprehensive multi-agent enterprise systems, backed by a hard "

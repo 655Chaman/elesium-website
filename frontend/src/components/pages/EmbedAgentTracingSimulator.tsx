@@ -40,7 +40,7 @@ export default function EmbedAgentTracingSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-slate-950 text-slate-100 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise Multi-Agent Tracing &amp; OpenTelemetry Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -48,9 +48,9 @@ export default function EmbedAgentTracingSimulator() {
       </Helmet>
 
       {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3 mb-4">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-neutral-800 pb-3 mb-4">
         <div>
-          <span className="text-[10px] font-mono uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-200 bg-white/[0.04] px-2 py-0.5 rounded border border-white/15">
             Interactive OpenTelemetry Widget
           </span>
           <h2 className="text-base sm:text-lg font-bold text-white mt-1">
@@ -58,8 +58,8 @@ export default function EmbedAgentTracingSimulator() {
           </h2>
         </div>
         <div className="text-right">
-          <div className="text-[10px] font-mono text-slate-400">Monthly Savings</div>
-          <div className="text-base font-extrabold text-cyan-400 font-mono">
+          <div className="text-[10px] font-mono text-neutral-400">Monthly Savings</div>
+          <div className="text-base font-extrabold text-neutral-200 font-mono">
             ${results.monthlyCostSavingsUSD.toLocaleString()} / mo
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function EmbedAgentTracingSimulator() {
       {/* Quick Controls */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 text-xs">
         <div>
-          <label className="block text-slate-400 text-[10px] font-semibold mb-1">
+          <label className="block text-neutral-400 text-[10px] font-semibold mb-1">
             Workflows: {monthlyWorkflows.toLocaleString()} / mo
           </label>
           <input
@@ -78,12 +78,12 @@ export default function EmbedAgentTracingSimulator() {
             step="50000"
             value={monthlyWorkflows}
             onChange={(e) => setMonthlyWorkflows(Number(e.target.value))}
-            className="w-full accent-cyan-500 bg-slate-800 h-1.5 rounded cursor-pointer"
+            className="w-full accent-white bg-neutral-800 h-1.5 rounded cursor-pointer"
           />
         </div>
 
         <div>
-          <label className="block text-slate-400 text-[10px] font-semibold mb-1">
+          <label className="block text-neutral-400 text-[10px] font-semibold mb-1">
             Spans / Workflow: {avgSpansPerWorkflow} spans
           </label>
           <input
@@ -93,18 +93,18 @@ export default function EmbedAgentTracingSimulator() {
             step="4"
             value={avgSpansPerWorkflow}
             onChange={(e) => setAvgSpansPerWorkflow(Number(e.target.value))}
-            className="w-full accent-cyan-500 bg-slate-800 h-1.5 rounded cursor-pointer"
+            className="w-full accent-white bg-neutral-800 h-1.5 rounded cursor-pointer"
           />
         </div>
 
         <div>
-          <label className="block text-slate-400 text-[10px] font-semibold mb-1">
+          <label className="block text-neutral-400 text-[10px] font-semibold mb-1">
             Sampling Strategy
           </label>
           <select
             value={samplingStrategy}
             onChange={(e) => setSamplingStrategy(e.target.value as SamplingStrategy)}
-            className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1.5 text-xs text-slate-200 font-mono"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-2 py-1.5 text-xs text-neutral-200 font-mono"
           >
             <option value="tail_based_smart">Tail-Based Smart (80% cut)</option>
             <option value="full_head_100">100% Head-Based Sampling</option>
@@ -114,27 +114,27 @@ export default function EmbedAgentTracingSimulator() {
 
       {/* Comparison Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 text-xs font-mono">
-        <div className="p-3 rounded-xl bg-cyan-950/20 border border-cyan-500/30">
-          <div className="flex items-center justify-between text-cyan-400 text-[10px] font-bold uppercase mb-1">
+        <div className="p-3 rounded-xl bg-white/[0.05] border border-white/20">
+          <div className="flex items-center justify-between text-white text-[10px] font-bold uppercase mb-1">
             <span>Elesium Async OTel</span>
-            <Zap className="w-3.5 h-3.5 text-cyan-400" />
+            <Zap className="w-3.5 h-3.5 text-neutral-200" />
           </div>
           <div className="text-lg font-bold text-white">+{results.asyncBatchOtel.p99LatencyOverheadMs}ms</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">
+          <div className="text-[10px] text-neutral-400 mt-0.5">
             MTTR: {results.asyncBatchOtel.meanTimeToResolutionMinutes}m | {results.asyncBatchOtel.monthlyTelemetryDataGB} GB
           </div>
-          <div className="text-[11px] font-bold text-cyan-300 mt-2">
+          <div className="text-[11px] font-bold text-white mt-2">
             ${results.asyncBatchOtel.monthlyObservabilityCostUSD.toLocaleString()} / mo
           </div>
         </div>
 
-        <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+        <div className="p-3 rounded-xl bg-neutral-900/60 border border-neutral-800">
           <div className="flex items-center justify-between text-amber-400 text-[10px] font-bold uppercase mb-1">
             <span>Sync Blocking APM</span>
             <Activity className="w-3.5 h-3.5 text-amber-400" />
           </div>
-          <div className="text-lg font-bold text-slate-200">+{results.syncBlockingTracing.p99LatencyOverheadMs}ms</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">
+          <div className="text-lg font-bold text-neutral-200">+{results.syncBlockingTracing.p99LatencyOverheadMs}ms</div>
+          <div className="text-[10px] text-neutral-400 mt-0.5">
             MTTR: {results.syncBlockingTracing.meanTimeToResolutionMinutes}m | {results.syncBlockingTracing.monthlyTelemetryDataGB} GB
           </div>
           <div className="text-[11px] font-bold text-amber-300 mt-2">
@@ -142,25 +142,25 @@ export default function EmbedAgentTracingSimulator() {
           </div>
         </div>
 
-        <div className="p-3 rounded-xl bg-rose-950/20 border border-rose-500/30">
-          <div className="flex items-center justify-between text-rose-400 text-[10px] font-bold uppercase mb-1">
+        <div className="p-3 rounded-xl bg-red-950/20 border border-red-500/30">
+          <div className="flex items-center justify-between text-red-400 text-[10px] font-bold uppercase mb-1">
             <span>Unmonitored Mesh</span>
-            <Clock className="w-3.5 h-3.5 text-rose-400" />
+            <Clock className="w-3.5 h-3.5 text-red-400" />
           </div>
-          <div className="text-lg font-bold text-rose-300">0.0ms</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">
+          <div className="text-lg font-bold text-red-300">0.0ms</div>
+          <div className="text-[10px] text-neutral-400 mt-0.5">
             MTTR: {results.unmonitoredMesh.meanTimeToResolutionMinutes}m (4.2h blind)
           </div>
-          <div className="text-[11px] font-bold text-slate-400 mt-2">
+          <div className="text-[11px] font-bold text-neutral-400 mt-2">
             $0 / mo (High Downtime)
           </div>
         </div>
       </div>
 
       {/* Footer & Watermark Link */}
-      <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+      <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-neutral-800 text-[11px] text-neutral-400">
         <div className="flex items-center space-x-1.5">
-          <Layers className="w-3.5 h-3.5 text-cyan-400" />
+          <Layers className="w-3.5 h-3.5 text-neutral-200" />
           <span>
             Reduces incident MTTR by {results.mttrReductionPct}% with non-blocking RingBuffer batching.
           </span>
@@ -169,7 +169,7 @@ export default function EmbedAgentTracingSimulator() {
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+          className="inline-flex items-center space-x-1 text-neutral-200 hover:text-white font-medium transition-colors"
         >
           <span>Elesium Sovereign AI Systems</span>
           <ExternalLink className="w-3 h-3" />

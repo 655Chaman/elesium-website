@@ -308,16 +308,16 @@ export function calculateVoiceAgentLatency(inputs: VoiceAgentInputs): VoiceAgent
 
   // Conversational Grade Assessment
   let conversationalGrade: VoiceAgentOutputs['conversationalGrade'] = 'NATURAL_ENTERPRISE';
-  let gradeColor = 'text-emerald-400';
+  let gradeColor = 'text-neutral-200';
   let gradeBadge = 'Enterprise Call Center Grade (<700ms)';
 
   if (totalTurnTakingLatencyMs < 450) {
     conversationalGrade = 'ULTRA_FLUID';
-    gradeColor = 'text-sky-400';
+    gradeColor = 'text-white';
     gradeBadge = 'Ultra-Fluid Human Parity (<450ms)';
   } else if (totalTurnTakingLatencyMs <= 750) {
     conversationalGrade = 'NATURAL_ENTERPRISE';
-    gradeColor = 'text-emerald-400';
+    gradeColor = 'text-neutral-200';
     gradeBadge = 'Enterprise Production Grade (450-750ms)';
   } else if (totalTurnTakingLatencyMs <= 1100) {
     conversationalGrade = 'NOTICEABLE_LAG';
@@ -325,7 +325,7 @@ export function calculateVoiceAgentLatency(inputs: VoiceAgentInputs): VoiceAgent
     gradeBadge = 'Noticeable Hesitation (750-1,100ms)';
   } else {
     conversationalGrade = 'COLLISION_ZONE';
-    gradeColor = 'text-rose-400';
+    gradeColor = 'text-red-400';
     gradeBadge = 'Unusable Conversational Collision (>1,100ms)';
   }
 

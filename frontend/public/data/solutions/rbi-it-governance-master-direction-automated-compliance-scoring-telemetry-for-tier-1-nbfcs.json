@@ -17,7 +17,7 @@
   "firstSentence": "Automate continuous IT governance posture scoring for Tier-1 Non-Banking Financial Companies, converting 120+ RBI Master Direction mandates into real-time telemetry dashboards.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs",
   "paragraphs": [
     "Tier-1 Non-Banking Financial Companies (NBFCs) in India face intense regulatory scrutiny under the RBI Master Direction on Information Technology Governance, Risk, Controls, and Business Continuity. Manual quarterly audit spreadsheets fail to reflect dynamic cloud configuration drift, unpatched perimeter vulnerabilities, and third-party vendor risks. When annual supervisory inspections occur, delayed compliance reporting results in severe supervisory flags and regulatory penalties.",
@@ -113,7 +113,7 @@
     "subheadline": "Tier-1 Non-Banking Financial Companies (NBFCs) in India face intense regulatory scrutiny under the RBI Master Direction on Information Technology Governance, Risk, Controls, and Business Continuity. Manual quarterly audit spreadsheets fail to reflect dynamic cloud configuration drift, unpatched perimeter vulnerabilities, and third-party vendor risks. When annual supervisory inspections occur, delayed compliance reporting results in severe supervisory flags and regulatory penalties.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete mapping of all 120+ statutory controls in RBI IT Governance 2023."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete mapping of all 120+ statutory controls in RBI IT Governance 2023."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs Performance Telemetry",
       "layout": "centered-card"
     }

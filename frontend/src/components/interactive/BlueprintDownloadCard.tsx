@@ -99,11 +99,11 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
     };
 
     return (
-        <div className="interactive-asset my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-gray-950 via-[#0a0f1d] to-[#04060c] border border-cyan-500/30 shadow-2xl text-white font-sans">
+        <div className="interactive-asset my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-gray-950 via-[#0a0f1d] to-[#04060c] border border-white/30 shadow-2xl text-white font-sans">
             {/* Header / ID Badge */}
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4 mb-5">
                 <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                    <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-white/10 text-neutral-200 border border-white/30">
                         {blueprint.id}
                     </span>
                     <span className="text-xs font-mono text-white/50">
@@ -112,7 +112,7 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <span className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-mono text-neutral-200 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/20">
                         <ShieldCheck className="h-3 w-3" />
                         {blueprint.compliance}
                     </span>
@@ -138,7 +138,7 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
 
             {/* SLA Callout */}
             <div className="flex items-center justify-between bg-white/[0.02] border border-white/5 rounded-xl p-3 mb-6 text-xs font-mono text-white/60">
-                <span>Production SLA: <strong className="text-emerald-400">{blueprint.sla}</strong></span>
+                <span>Production SLA: <strong className="text-neutral-200">{blueprint.sla}</strong></span>
                 <span className="text-[10px] text-white/40">Air-Gapped VPC Architecture</span>
             </div>
 
@@ -146,7 +146,7 @@ export const BlueprintDownloadCard: React.FC<BlueprintDownloadCardProps> = ({
             <div className="flex flex-col sm:flex-row items-center gap-3">
                 <button
                     onClick={handleDownload}
-                    className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-semibold text-xs tracking-wide transition-all shadow-lg shadow-cyan-500/20 active:scale-95"
+                    className="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-white hover:bg-neutral-200 text-black font-semibold text-xs tracking-wide transition-all shadow-lg shadow-white/20 active:scale-95"
                 >
                     {downloaded ? (
                         <>

@@ -17,7 +17,7 @@
   "firstSentence": "Automate 3-way invoice, purchase order (PO), and goods receipt note (GRN) reconciliation in enterprise SAP S/4HANA, resolving line-item price and quantity variances in sub-2 seconds.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP",
   "paragraphs": [
     "Enterprise manufacturing and retail organizations running SAP S/4HANA spend tens of thousands of accounts payable labor hours manually reconciling supplier tax invoices against internal Purchase Orders (PO) and Goods Receipt Notes (GRN). Minor variances in line-item unit pricing, freight charges, weight tolerances, or partial deliveries cause SAP three-way matching exceptions, blocking invoice clearing and stalling vendor payments. Unresolved matching exceptions create massive month-end accrual reconciliations and strain vendor relationships.",
@@ -113,7 +113,7 @@
     "subheadline": "Enterprise manufacturing and retail organizations running SAP S/4HANA spend tens of thousands of accounts payable labor hours manually reconciling supplier tax invoices against internal Purchase Orders (PO) and Goods Receipt Notes (GRN). Minor variances in line-item unit pricing, freight charges, weight tolerances, or partial deliveries cause SAP three-way matching exceptions, blocking invoice clearing and stalling vendor payments. Unresolved matching exceptions create massive month-end accrual reconciliations and strain vendor relationships.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Cuts operational back-office labor overhead across enterprise shared services."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Cuts operational back-office labor overhead across enterprise shared services."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP Performance Telemetry",
       "layout": "centered-card"
     }

@@ -116,27 +116,26 @@ export default function Resources() {
                     >
                         {/* Intro Section */}
                         <div className="mb-10 max-w-3xl">
-                            <div className="inline-flex items-center gap-2 mb-4">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
+                            <div className="mb-4">
+                                <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400">
                                     Engineering Playbooks &amp; Benchmarks
                                 </span>
                             </div>
-                            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-950 dark:text-white leading-[1.1]">
+                            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-black dark:text-white leading-[1.1]">
                                 Resources &amp; Guides
                             </h1>
-                            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
+                            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
                                 Download our production tools, scripts, and workflows. Complete with detailed technical documentation and execution playbooks.
                             </p>
                         </div>
 
-                        {/* AEO Answer Capsule */}
-                        <div className="answer-capsule mt-2 mb-12 p-6 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 max-w-4xl shadow-sm">
-                            <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
-                                <Cpu className="w-4 h-4" />
-                                Definitive Answer Capsule • Technical Playbooks &amp; Benchmarks
+                        {/* Technical Overview */}
+                        <div className="answer-capsule mt-2 mb-12 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-4xl">
+                            <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
+                                <Cpu className="w-4 h-4 text-black dark:text-white" />
+                                Technical Playbooks &amp; Benchmarks
                             </div>
-                            <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+                            <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
                                 {aeoAnswerCapsule}
                             </p>
                         </div>
@@ -146,15 +145,15 @@ export default function Resources() {
                             
                             {/* Series Section */}
                             <section>
-                                <div className="mb-6 flex items-end justify-between border-b border-gray-200 dark:border-white/10 pb-4">
+                                <div className="mb-6 flex items-end justify-between border-b border-neutral-200 dark:border-white/10 pb-4">
                                     <div>
-                                        <h2 className="text-xl sm:text-2xl font-bold text-gray-950 dark:text-white tracking-tight">Technical Series</h2>
-                                        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">Comprehensive documentation and multi-part enterprise resources.</p>
+                                        <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white tracking-tight">Technical Series</h2>
+                                        <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Comprehensive documentation and multi-part enterprise resources.</p>
                                     </div>
                                 </div>
                                 
                                 {/* Table Header */}
-                                <div className="hidden md:grid grid-cols-12 gap-6 pb-3 text-xs font-semibold tracking-wider text-gray-400 dark:text-gray-500 uppercase px-4">
+                                <div className="hidden md:grid grid-cols-12 gap-6 pb-3 text-xs font-semibold tracking-wider text-neutral-500 uppercase px-4">
                                     <div className="col-span-6">Resource</div>
                                     <div className="col-span-2">Category</div>
                                     <div className="col-span-2">Details</div>
@@ -169,30 +168,30 @@ export default function Resources() {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.3 }}
-                                            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 p-5 md:items-center bg-gray-50/80 dark:bg-white/[0.02] hover:bg-white dark:hover:bg-white/[0.04] transition-colors rounded-2xl border border-gray-200 dark:border-white/10 group shadow-sm"
+                                            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 p-5 md:items-center bg-neutral-50 dark:bg-neutral-950 hover:bg-white dark:hover:bg-black transition-colors rounded-xl border border-neutral-200 dark:border-white/10 group"
                                         >
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-6 flex flex-col gap-1.5">
                                                 <Link to={resource.markdownFile ? `/resources/${resource.slug}/` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
-                                                    <h3 className={`text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
+                                                    <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white leading-tight">
                                                         {resource.title}
                                                     </h3>
                                                 </Link>
-                                                <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed md:line-clamp-2">
+                                                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed md:line-clamp-2">
                                                     {resource.description}
                                                 </p>
                                             </div>
 
                                             {/* Category */}
                                             <div className="col-span-1 md:col-span-2 flex items-center">
-                                                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-mono font-medium tracking-wide bg-gray-100 text-gray-700 dark:bg-white/10 dark:text-gray-300">
+                                                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-mono font-medium tracking-wide bg-white border border-neutral-200 text-neutral-700 dark:bg-black dark:border-white/10 dark:text-neutral-300">
                                                     <FileText className="w-3 h-3 mr-1.5" />
                                                     {resource.category}
                                                 </span>
                                             </div>
 
                                             {/* Date / Read Time */}
-                                            <div className="col-span-1 md:col-span-2 flex flex-col text-xs text-gray-500 dark:text-gray-400 font-mono">
+                                            <div className="col-span-1 md:col-span-2 flex flex-col text-xs text-neutral-600 dark:text-neutral-400 font-mono">
                                                 <span>{resource.date}</span>
                                                 <span className="opacity-70 mt-0.5">{resource.readTime}</span>
                                             </div>
@@ -202,7 +201,7 @@ export default function Resources() {
                                                 {resource.markdownFile && (
                                                     <Link
                                                         to={`/resources/${resource.slug}/`}
-                                                        className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white text-xs font-semibold rounded-full transition-all"
+                                                        className="inline-flex items-center justify-center px-4 py-2 border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white text-xs font-semibold rounded-lg active:scale-[0.97] transition-all"
                                                     >
                                                         Read Guide
                                                     </Link>
@@ -211,7 +210,7 @@ export default function Resources() {
                                                     href={resource.googleDriveLink}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="inline-flex items-center justify-center px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-xs font-semibold rounded-full transition-all shadow-sm"
+                                                    className="inline-flex items-center justify-center px-4 py-2 bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black text-xs font-semibold rounded-lg active:scale-[0.97] transition-all"
                                                     title="Download Resource"
                                                 >
                                                     <Download className="h-3.5 w-3.5 mr-1" />
@@ -225,15 +224,15 @@ export default function Resources() {
 
                             {/* Segregated Section */}
                             <section>
-                                <div className="mb-6 flex items-end justify-between border-b border-gray-200 dark:border-white/10 pb-4">
+                                <div className="mb-6 flex items-end justify-between border-b border-neutral-200 dark:border-white/10 pb-4">
                                     <div>
-                                        <h2 className="text-xl sm:text-2xl font-bold text-gray-950 dark:text-white tracking-tight">Segregated Workflows</h2>
-                                        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">Individual tools, trackers, and implementation blueprints.</p>
+                                        <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white tracking-tight">Segregated Workflows</h2>
+                                        <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">Individual tools, trackers, and implementation blueprints.</p>
                                     </div>
                                 </div>
                                 
                                 {/* Table Header */}
-                                <div className="hidden md:grid grid-cols-12 gap-6 pb-3 text-xs font-semibold tracking-wider text-gray-400 dark:text-gray-500 uppercase px-4">
+                                <div className="hidden md:grid grid-cols-12 gap-6 pb-3 text-xs font-semibold tracking-wider text-neutral-500 uppercase px-4">
                                     <div className="col-span-6">Resource</div>
                                     <div className="col-span-2">Category</div>
                                     <div className="col-span-2">Details</div>
@@ -248,30 +247,30 @@ export default function Resources() {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.3 }}
-                                            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 p-5 md:items-center bg-gray-50/80 dark:bg-white/[0.02] hover:bg-white dark:hover:bg-white/[0.04] transition-colors rounded-2xl border border-gray-200 dark:border-white/10 group shadow-sm"
+                                            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 p-5 md:items-center bg-neutral-50 dark:bg-neutral-950 hover:bg-white dark:hover:bg-black transition-colors rounded-xl border border-neutral-200 dark:border-white/10 group"
                                         >
                                             {/* Name & Description */}
                                             <div className="col-span-1 md:col-span-6 flex flex-col gap-1.5">
                                                 <Link to={resource.markdownFile ? `/resources/${resource.slug}/` : '#'} className={resource.markdownFile ? 'cursor-pointer' : 'cursor-default'}>
-                                                    <h3 className={`text-base sm:text-lg font-semibold text-gray-900 dark:text-white leading-tight ${resource.markdownFile ? 'group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors' : ''}`}>
+                                                    <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white leading-tight">
                                                         {resource.title}
                                                     </h3>
                                                 </Link>
-                                                <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed md:line-clamp-2">
+                                                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed md:line-clamp-2">
                                                     {resource.description}
                                                 </p>
                                             </div>
 
                                             {/* Category */}
                                             <div className="col-span-1 md:col-span-2 flex items-center">
-                                                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-mono font-medium tracking-wide bg-gray-100 text-gray-700 dark:bg-white/10 dark:text-gray-300">
+                                                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-mono font-medium tracking-wide bg-white border border-neutral-200 text-neutral-700 dark:bg-black dark:border-white/10 dark:text-neutral-300">
                                                     <FileText className="w-3 h-3 mr-1.5" />
                                                     {resource.category}
                                                 </span>
                                             </div>
 
                                             {/* Date / Read Time */}
-                                            <div className="col-span-1 md:col-span-2 flex flex-col text-xs text-gray-500 dark:text-gray-400 font-mono">
+                                            <div className="col-span-1 md:col-span-2 flex flex-col text-xs text-neutral-600 dark:text-neutral-400 font-mono">
                                                 <span>{resource.date}</span>
                                                 <span className="opacity-70 mt-0.5">{resource.readTime}</span>
                                             </div>
@@ -281,7 +280,7 @@ export default function Resources() {
                                                 {resource.markdownFile && (
                                                     <Link
                                                         to={`/resources/${resource.slug}/`}
-                                                        className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white text-xs font-semibold rounded-full transition-all"
+                                                        className="inline-flex items-center justify-center px-4 py-2 border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white text-xs font-semibold rounded-lg active:scale-[0.97] transition-all"
                                                     >
                                                         Read Guide
                                                     </Link>
@@ -290,7 +289,7 @@ export default function Resources() {
                                                     href={resource.googleDriveLink}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="inline-flex items-center justify-center px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-xs font-semibold rounded-full transition-all shadow-sm"
+                                                    className="inline-flex items-center justify-center px-4 py-2 bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black text-xs font-semibold rounded-lg active:scale-[0.97] transition-all"
                                                     title="Download Resource"
                                                 >
                                                     <Download className="h-3.5 w-3.5 mr-1" />
@@ -303,21 +302,20 @@ export default function Resources() {
                             </section>
 
                             {/* Direct WhatsApp Intake Card */}
-                            <div className="mt-8 p-8 sm:p-12 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
-                                <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                                    <span>Direct Principal Systems Pairing</span>
-                                </div>
+                            <div className="mt-8 p-8 sm:p-12 rounded-xl bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
+                                <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block">
+                                    Direct Principal Systems Pairing
+                                </span>
                                 <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white max-w-xl mx-auto">
                                     Need a Bespoke Architecture Blueprint for Your Team?
                                 </h3>
-                                <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                                <p className="text-xs sm:text-sm text-neutral-300 max-w-xl mx-auto leading-relaxed">
                                     Connect directly with our Principal AI Systems Architect to review private VPC deployment feasibility.
                                 </p>
                                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                     <button
                                         onClick={openWhatsApp}
-                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all group"
                                     >
                                         <MessageSquare className="w-4 h-4 fill-current" />
                                         <span>Chat on WhatsApp with Lead Architect</span>
@@ -325,7 +323,7 @@ export default function Resources() {
                                     </button>
                                     <Link
                                         to="/waitlist/"
-                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all"
                                     >
                                         <span>ele-in SaaS Waitlist &rarr;</span>
                                     </Link>

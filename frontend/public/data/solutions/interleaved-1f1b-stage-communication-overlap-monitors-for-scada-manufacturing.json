@@ -17,7 +17,7 @@
   "firstSentence": "Monitor and optimize interleaved 1F1B pipeline communication overlap for continuous SCADA machine telemetry neural models.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing",
   "paragraphs": [
     "Manufacturing enterprises monitoring continuous SCADA telemetry across high-speed packaging, stamping, and extrusion lines utilize massive deep sequence models to predict mechanical failures. Training and serving these multi-layer models requires pipeline parallelism. Standard 1F1B (one-forward-one-backward) pipeline schedules experience significant communication bubbles, where GPU stages sit idle waiting for preceding layer activations.",
@@ -113,7 +113,7 @@
     "subheadline": "Manufacturing enterprises monitoring continuous SCADA telemetry across high-speed packaging, stamping, and extrusion lines utilize massive deep sequence models to predict mechanical failures. Training and serving these multi-layer models requires pipeline parallelism. Standard 1F1B (one-forward-one-backward) pipeline schedules experience significant communication bubbles, where GPU stages sit idle waiting for preceding layer activations.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero dropped SCADA data packets during maximum line production speeds."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero dropped SCADA data packets during maximum line production speeds."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing Performance Telemetry",
       "layout": "centered-card"
     }

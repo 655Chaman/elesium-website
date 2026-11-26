@@ -17,7 +17,7 @@
   "firstSentence": "Stream real-time freight billing telemetry into Tally ERP 9 over port 9000 TCP sockets, eliminating database locks and supporting 10,000+ daily freight consignment dockets.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing",
   "paragraphs": [
     "Large logistics freight forwarding networks in India managing fleets across hundreds of transport branches struggle with Tally ERP 9 socket stability when thousands of branch offices post freight bills simultaneously. Standard TDL (Tally Definition Language) scripts communicating over port 9000 suffer from single-threaded request blocking, unhandled socket timeouts, and memory leaks that crash the Tally server during evening billing surges. Disrupted socket links delay customer dispatch notices and corrupt open voucher tables.",
@@ -113,7 +113,7 @@
     "subheadline": "Large logistics freight forwarding networks in India managing fleets across hundreds of transport branches struggle with Tally ERP 9 socket stability when thousands of branch offices post freight bills simultaneously. Standard TDL (Tally Definition Language) scripts communicating over port 9000 suffer from single-threaded request blocking, unhandled socket timeouts, and memory leaks that crash the Tally server during evening billing surges. Disrupted socket links delay customer dispatch notices and corrupt open voucher tables.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Eliminates server crashes caused by unmanaged multi-branch concurrent connections."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Eliminates server crashes caused by unmanaged multi-branch concurrent connections."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing Performance Telemetry",
       "layout": "centered-card"
     }

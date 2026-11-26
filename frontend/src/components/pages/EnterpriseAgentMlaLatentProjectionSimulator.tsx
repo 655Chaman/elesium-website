@@ -59,7 +59,7 @@ export default function EnterpriseAgentMlaLatentProjectionSimulator() {
 
   const results = useMemo(() => calculateMlaLatentProjection(inputs), [inputs]);
 
-  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-mla-latent-projection-simulator" width="100%" height="480" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe><div style="font-size:11px;color:#64748b;text-align:right;margin-top:4px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-mla-latent-projection-simulator" target="_blank" rel="noopener" style="color:#14b8a6;text-decoration:underline;">Elesium MLA Latent Projection Simulator</a></div>`;
+  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-mla-latent-projection-simulator" width="100%" height="480" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:11px;color:#a3a3a3;text-align:right;margin-top:4px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-mla-latent-projection-simulator" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium MLA Latent Projection Simulator</a></div>`;
 
   const copyEmbed = () => {
     navigator.clipboard.writeText(embedSnippet);
@@ -118,7 +118,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
   ];
 
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-100 font-sans selection:bg-teal-500/30 selection:text-teal-300">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent Multi-Head Latent Attention (MLA) Low-Rank Projection Simulator | Elesium</title>
         <meta
@@ -129,30 +129,30 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
       </Helmet>
 
       {/* Hero Header */}
-      <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800/80 bg-gradient-to-b from-teal-950/20 via-transparent to-transparent">
+      <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-neutral-800/80 bg-gradient-to-b from-white/[0.03] via-transparent to-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-mono">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono">
               <Cpu className="w-3.5 h-3.5" />
               TOOL #72 · MULTI-HEAD LATENT ATTENTION (MLA) ENGINE
             </div>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-xs font-medium text-slate-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-colors"
               >
                 <Code className="w-3.5 h-3.5" /> Embed Widget
               </button>
               <button
                 onClick={resetDefaults}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-xs font-medium text-slate-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-colors"
               >
                 <RotateCcw className="w-3.5 h-3.5" /> Reset
               </button>
@@ -162,7 +162,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white mb-3">
             Enterprise Autonomous Agent Multi-Head Latent Attention (MLA) Low-Rank Projection Simulator
           </h1>
-          <p className="text-sm sm:text-base text-slate-400 max-w-3xl leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-400 max-w-3xl leading-relaxed">
             Model low-rank joint key-value down-projections and decoupled Rotary Position Embedding (RoPE) vectors across DeepSeek-V3, DeepSeek-R1, and sovereign multi-agent swarms. Slashes inference KV-cache High Bandwidth Memory consumption by 90% to sustain 512+ concurrent long-context sessions per node.
           </p>
         </div>
@@ -174,21 +174,21 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
           
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm space-y-5">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-800">
-                <span className="text-sm font-semibold text-slate-200 flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-teal-400" /> Attention &amp; Latent Controls
+            <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800 backdrop-blur-sm space-y-5">
+              <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
+                <span className="text-sm font-semibold text-neutral-200 flex items-center gap-2">
+                  <Sliders className="w-4 h-4 text-neutral-200" /> Attention &amp; Latent Controls
                 </span>
-                <div className="flex items-center gap-1 bg-slate-800/80 p-0.5 rounded-lg border border-slate-700/60 text-[11px] font-mono">
+                <div className="flex items-center gap-1 bg-neutral-800/80 p-0.5 rounded-lg border border-neutral-700/60 text-[11px] font-mono">
                   <button
                     onClick={() => setCurrency('INR')}
-                    className={`px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-teal-600 text-white font-bold' : 'text-slate-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400'}`}
                   >
                     INR (₹)
                   </button>
                   <button
                     onClick={() => setCurrency('USD')}
-                    className={`px-2 py-0.5 rounded ${currency === 'USD' ? 'bg-teal-600 text-white font-bold' : 'text-slate-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400'}`}
                   >
                     USD ($)
                   </button>
@@ -197,14 +197,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
 
               {/* Target Foundation Model */}
               <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                <label className="block text-xs font-medium text-neutral-300 mb-1.5">
                   Target Foundation Model Architecture
                 </label>
                 <select
                   value={modelArchitecture}
                   onChange={(e) => setModelArchitecture(e.target.value as MlaModelArchitecture)}
                   aria-label="Target Foundation Model Architecture"
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-3 py-2 text-xs text-slate-200"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs text-neutral-200"
                 >
                   <option value="deepseek_v3_671b">DeepSeek-V3 671B (MLA Native 512-Dim Latent)</option>
                   <option value="deepseek_r1_reasoning">DeepSeek-R1 (Reasoning Swarms + MLA Compression)</option>
@@ -215,14 +215,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
 
               {/* Attention Mechanism */}
               <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                <label className="block text-xs font-medium text-neutral-300 mb-1.5">
                   Attention Architecture Mechanism
                 </label>
                 <select
                   value={attentionMechanism}
                   onChange={(e) => setAttentionMechanism(e.target.value as AttentionMechanismType)}
                   aria-label="Attention Architecture Mechanism"
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-3 py-2 text-xs text-slate-200"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs text-neutral-200"
                 >
                   <option value="mla_low_rank_latent">Multi-Head Latent Attention (MLA Low-Rank - Recommended)</option>
                   <option value="gqa_grouped_query">Grouped-Query Attention (GQA 8-Group Baseline)</option>
@@ -232,14 +232,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
 
               {/* Precision Mode */}
               <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                <label className="block text-xs font-medium text-neutral-300 mb-1.5">
                   KV Cache Precision Quantization
                 </label>
                 <select
                   value={precisionMode}
                   onChange={(e) => setPrecisionMode(e.target.value as MlaPrecisionMode)}
                   aria-label="KV Cache Precision Quantization"
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-3 py-2 text-xs text-slate-200"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-xl px-3 py-2 text-xs text-neutral-200"
                 >
                   <option value="fp8">FP8 Latent KV (1 Byte/Element - High Throughput)</option>
                   <option value="fp16">FP16 Uncompressed Latent (2 Bytes/Element)</option>
@@ -251,8 +251,8 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
               <div className="space-y-4 pt-2">
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-slate-400">Context Length:</span>
-                    <span className="font-mono text-teal-400">{contextLength.toLocaleString()} tokens</span>
+                    <span className="text-neutral-400">Context Length:</span>
+                    <span className="font-mono text-neutral-200">{contextLength.toLocaleString()} tokens</span>
                   </div>
                   <input
                     type="range"
@@ -262,14 +262,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
                     value={contextLength}
                     onChange={(e) => setContextLength(Number(e.target.value))}
                     aria-label="Context Length"
-                    className="w-full accent-teal-500 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
 
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-slate-400">Latent Vector Dimension (d_c):</span>
-                    <span className="font-mono text-teal-400">{latentVectorDimension} dims</span>
+                    <span className="text-neutral-400">Latent Vector Dimension (d_c):</span>
+                    <span className="font-mono text-neutral-200">{latentVectorDimension} dims</span>
                   </div>
                   <input
                     type="range"
@@ -279,14 +279,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
                     value={latentVectorDimension}
                     onChange={(e) => setLatentVectorDimension(Number(e.target.value))}
                     aria-label="Latent Vector Dimension"
-                    className="w-full accent-teal-500 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
 
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-slate-400">Decoupled RoPE Key Dimension:</span>
-                    <span className="font-mono text-teal-400">{decoupledRopeDimension} dims</span>
+                    <span className="text-neutral-400">Decoupled RoPE Key Dimension:</span>
+                    <span className="font-mono text-neutral-200">{decoupledRopeDimension} dims</span>
                   </div>
                   <input
                     type="range"
@@ -296,7 +296,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
                     value={decoupledRopeDimension}
                     onChange={(e) => setDecoupledRopeDimension(Number(e.target.value))}
                     aria-label="Decoupled RoPE Key Dimension"
-                    className="w-full accent-teal-500 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
               </div>
@@ -308,46 +308,46 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
           <div className="lg:col-span-7 space-y-6">
             {/* Primary Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-                <div className="text-[11px] text-slate-400 font-medium">MLA Cache Footprint</div>
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                <div className="text-[11px] text-neutral-400 font-medium">MLA Cache Footprint</div>
                 <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
-                  {results.mlaCompressedKvGb} <span className="text-xs text-slate-400 font-normal">GB</span>
+                  {results.mlaCompressedKvGb} <span className="text-xs text-neutral-400 font-normal">GB</span>
                 </div>
-                <div className="text-[10px] text-teal-400/80 mt-1">Per Single Stream</div>
+                <div className="text-[10px] text-neutral-200 mt-1">Per Single Stream</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-                <div className="text-[11px] text-slate-400 font-medium">Compression Factor</div>
-                <div className="text-xl sm:text-2xl font-bold font-mono text-teal-400 mt-1">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                <div className="text-[11px] text-neutral-400 font-medium">Compression Factor</div>
+                <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.vramCompressionFactor}x
                 </div>
-                <div className="text-[10px] text-teal-400/80 mt-1">vs MHA Baseline</div>
+                <div className="text-[10px] text-neutral-200 mt-1">vs MHA Baseline</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-                <div className="text-[11px] text-slate-400 font-medium">Stream Concurrency</div>
-                <div className="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mt-1">
-                  {results.maxConcurrentStreamsPerNode} <span className="text-xs text-slate-400 font-normal">streams</span>
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                <div className="text-[11px] text-neutral-400 font-medium">Stream Concurrency</div>
+                <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
+                  {results.maxConcurrentStreamsPerNode} <span className="text-xs text-neutral-400 font-normal">streams</span>
                 </div>
-                <div className="text-[10px] text-emerald-400/80 mt-1">Per 8-GPU Node</div>
+                <div className="text-[10px] text-neutral-200 mt-1">Per 8-GPU Node</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
-                <div className="text-[11px] text-slate-400 font-medium">Hardware TCO Savings</div>
-                <div className="text-xl sm:text-2xl font-bold font-mono text-cyan-400 mt-1">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                <div className="text-[11px] text-neutral-400 font-medium">Hardware TCO Savings</div>
+                <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1">
                   {results.formattedHardwareSavings}
                 </div>
-                <div className="text-[10px] text-cyan-400/80 mt-1">Cluster CapEx Delta</div>
+                <div className="text-[10px] text-neutral-200 mt-1">Cluster CapEx Delta</div>
               </div>
             </div>
 
             {/* Architecture Telemetry Diagram */}
-            <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800 space-y-4">
               <div className="flex items-center justify-between">
-                <h3 className="text-xs font-semibold text-slate-200 flex items-center gap-2">
-                  <Activity className="w-4 h-4 text-teal-400" /> VRAM Allocation Comparison: MHA vs GQA vs MLA
+                <h3 className="text-xs font-semibold text-neutral-200 flex items-center gap-2">
+                  <Activity className="w-4 h-4 text-neutral-200" /> VRAM Allocation Comparison: MHA vs GQA vs MLA
                 </h3>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.04] text-neutral-200 border border-white/15">
                   {results.statusClassification}
                 </span>
               </div>
@@ -355,21 +355,21 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
               {/* Comparative Memory Bars */}
               <div className="space-y-3 font-mono text-xs">
                 <div>
-                  <div className="flex justify-between text-[11px] text-slate-400 mb-1">
+                  <div className="flex justify-between text-[11px] text-neutral-400 mb-1">
                     <span>MHA Baseline (Multi-Head Full Cache):</span>
-                    <span className="text-rose-400">{results.uncompressedMhaKvGb} GB</span>
+                    <span className="text-red-400">{results.uncompressedMhaKvGb} GB</span>
                   </div>
-                  <div className="h-3 w-full bg-slate-950 rounded-full overflow-hidden border border-slate-800">
-                    <div className="bg-rose-500/80 h-full w-full" />
+                  <div className="h-3 w-full bg-neutral-950 rounded-lg overflow-hidden border border-neutral-800">
+                    <div className="bg-red-500/80 h-full w-full" />
                   </div>
                 </div>
 
                 <div>
-                  <div className="flex justify-between text-[11px] text-slate-400 mb-1">
+                  <div className="flex justify-between text-[11px] text-neutral-400 mb-1">
                     <span>GQA Baseline (8-Head Grouped-Query):</span>
                     <span className="text-amber-400">{results.gqaEquivalentKvGb} GB</span>
                   </div>
-                  <div className="h-3 w-full bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+                  <div className="h-3 w-full bg-neutral-950 rounded-lg overflow-hidden border border-neutral-800">
                     <div
                       style={{ width: `${Math.min(100, (results.gqaEquivalentKvGb / Math.max(0.1, results.uncompressedMhaKvGb)) * 100)}%` }}
                       className="bg-amber-500/80 h-full"
@@ -378,34 +378,34 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
                 </div>
 
                 <div>
-                  <div className="flex justify-between text-[11px] text-slate-400 mb-1">
+                  <div className="flex justify-between text-[11px] text-neutral-400 mb-1">
                     <span>MLA Compressed (512-Dim Latent + 64-Dim RoPE):</span>
-                    <span className="text-teal-400 font-bold">{results.mlaCompressedKvGb} GB (90%+ Reduction)</span>
+                    <span className="text-white font-bold">{results.mlaCompressedKvGb} GB (90%+ Reduction)</span>
                   </div>
-                  <div className="h-3 w-full bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+                  <div className="h-3 w-full bg-neutral-950 rounded-lg overflow-hidden border border-neutral-800">
                     <div
                       style={{ width: `${Math.min(100, Math.max(4, (results.mlaCompressedKvGb / Math.max(0.1, results.uncompressedMhaKvGb)) * 100))}%` }}
-                      className="bg-teal-400 h-full"
+                      className="bg-white/80 h-full"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Architectural Synthesis Card */}
-              <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs space-y-2 text-slate-300 leading-relaxed">
-                <div className="font-semibold text-slate-100">Decoupled RoPE &amp; Matrix Absorption Verified</div>
+              <div className="p-4 rounded-xl bg-neutral-950/80 border border-neutral-800 text-xs space-y-2 text-neutral-300 leading-relaxed">
+                <div className="font-semibold text-neutral-100">Decoupled RoPE &amp; Matrix Absorption Verified</div>
                 <p>
                   Down-projecting into a 512-dim latent space and isolating a 64-dim decoupled RoPE vector enables absorbing the key up-projection matrix into the query heads. The resulting cache reclaims{' '}
-                  <strong className="text-teal-400 font-mono">{results.vramReclaimedGb} GB</strong> of VRAM per stream, elevating stream concurrency to{' '}
-                  <strong className="text-emerald-400 font-mono">{results.maxConcurrentStreamsPerNode} streams</strong> per 8-GPU node.
+                  <strong className="text-neutral-200 font-mono">{results.vramReclaimedGb} GB</strong> of VRAM per stream, elevating stream concurrency to{' '}
+                  <strong className="text-neutral-200 font-mono">{results.maxConcurrentStreamsPerNode} streams</strong> per 8-GPU node.
                 </p>
-                <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
+                <div className="pt-2 border-t border-neutral-800/80 flex items-center justify-between text-[11px] text-neutral-400">
                   <span>DPDP Act 2023 Ephemeral Shredding: Compliant</span>
                   <button
                     onClick={copyMemo}
-                    className="text-teal-400 hover:text-teal-300 inline-flex items-center gap-1 font-medium"
+                    className="active:scale-[0.97] text-neutral-200 hover:text-white inline-flex items-center gap-1 font-medium"
                   >
-                    {hasCopiedMemo ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+                    {hasCopiedMemo ? <Check className="w-3 h-3 text-neutral-200" /> : <Copy className="w-3 h-3" />}
                     {hasCopiedMemo ? 'Memo Copied!' : 'Copy Technical Memo'}
                   </button>
                 </div>
@@ -413,22 +413,22 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
             </div>
 
             {/* FAQs Accordion */}
-            <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
-              <h3 className="text-xs font-semibold text-slate-200">Architectural FAQs</h3>
+            <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800 space-y-3">
+              <h3 className="text-xs font-semibold text-neutral-200">Architectural FAQs</h3>
               <div className="space-y-2">
                 {faqs.map((faq, idx) => (
-                  <div key={idx} className="border border-slate-800 rounded-xl overflow-hidden">
+                  <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
                     <button
                       onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                      className="w-full text-left p-3 text-xs font-medium text-slate-200 flex justify-between items-center bg-slate-950/40 hover:bg-slate-950/80 transition-colors"
+                      className="active:scale-[0.97] w-full text-left p-3 text-xs font-medium text-neutral-200 flex justify-between items-center bg-neutral-950/40 hover:bg-neutral-950/80 transition-colors"
                     >
                       <span>{faq.q}</span>
                       <ChevronDown
-                        className={`w-3.5 h-3.5 text-slate-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}
+                        className={`w-3.5 h-3.5 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}
                       />
                     </button>
                     {openFaq === idx && (
-                      <div className="p-3 text-xs text-slate-400 bg-slate-950/90 border-t border-slate-800 leading-relaxed">
+                      <div className="p-3 text-xs text-neutral-400 bg-neutral-950/90 border-t border-neutral-800 leading-relaxed">
                         {faq.a}
                       </div>
                     )}
@@ -441,34 +441,34 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
         </div>
 
         {/* Enterprise Mandate Section */}
-        <section className="mt-12 pt-8 border-t border-slate-800">
+        <section className="mt-12 pt-8 border-t border-neutral-800">
           <div className="max-w-2xl mx-auto text-center mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
               Deploy Sovereign Multi-Head Latent Attention Clusters
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-neutral-400">
               Schedule an architecture audit with our Principal Distributed Systems team to deploy DeepSeek-V3 and DeepSeek-R1 inference engines with MLA acceleration on private VPC infrastructure.
             </p>
           </div>
           <div className="max-w-xl mx-auto">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -482,28 +482,28 @@ Audit Link: https://elesium.online/tools/enterprise-agent-mla-latent-projection-
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                <Code className="w-4 h-4 text-teal-400" /> Embed Simulator Widget
+                <Code className="w-4 h-4 text-neutral-200" /> Embed Simulator Widget
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-neutral-400">
               Embed this responsive interactive calculator directly on your website or technical documentation.
             </p>
             <div className="relative">
-              <pre className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] font-mono text-teal-300 overflow-x-auto whitespace-pre-wrap">
+              <pre className="bg-neutral-950 p-3 rounded-xl border border-neutral-800 text-[11px] font-mono text-neutral-200 overflow-x-auto whitespace-pre-wrap">
                 {embedSnippet}
               </pre>
               <button
                 onClick={copyEmbed}
-                className="absolute top-2 right-2 px-2.5 py-1 rounded bg-teal-600 hover:bg-teal-500 text-white text-xs font-medium inline-flex items-center gap-1"
+                className="active:scale-[0.97] absolute top-2 right-2 px-2.5 py-1 rounded bg-white hover:bg-neutral-200 text-black text-xs font-medium inline-flex items-center gap-1"
               >
                 {hasCopiedEmbed ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
                 {hasCopiedEmbed ? 'Copied' : 'Copy'}

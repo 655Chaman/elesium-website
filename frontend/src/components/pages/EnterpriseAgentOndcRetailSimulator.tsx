@@ -60,9 +60,9 @@ export default function EnterpriseAgentOndcRetailSimulator() {
     return simulateOndcRetailTelemetry(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-ondc-retail-inventory-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#f97316;text-decoration:underline;">Elesium Sovereign Retail AI</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-ondc-retail-inventory-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign Retail AI</a>
 </div>`;
 
   const copyEmbedCode = () => {
@@ -148,7 +148,7 @@ ARCHITECTURAL SAFEGUARDS:
   ];
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-orange-500/30">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20">
       <Helmet>
         <title>ONDC Retail Inventory &amp; Dynamic Pricing Simulator | Elesium</title>
         <meta
@@ -170,23 +170,23 @@ ARCHITECTURAL SAFEGUARDS:
       />
 
       {/* Hero Header */}
-      <div className="relative border-b border-slate-800/80 bg-gradient-to-b from-slate-900/60 via-slate-950 to-[#020617] pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-950/20 via-transparent to-transparent pointer-events-none"></div>
+      <div className="relative border-b border-neutral-800/80 bg-gradient-to-b from-neutral-900/60 via-black to-black pt-24 pb-12 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/[0.03] via-transparent to-transparent pointer-events-none"></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Simulator #39 • Retail &amp; E-Commerce AI</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white max-w-4xl">
             ONDC Retail Inventory &amp; <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-yellow-400">
+            <span className="text-neutral-400 ">
               Vernacular Dynamic Pricing Simulator
             </span>
           </h1>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-neutral-300 max-w-3xl leading-relaxed">
             Simulate Beckn protocol inventory allocation, omnichannel phantom stock elimination,
             and sub-second SAP S/4HANA synchronization across Indian retail distribution hubs and quick-commerce dark stores.
           </p>
@@ -194,37 +194,37 @@ ARCHITECTURAL SAFEGUARDS:
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-xs font-semibold text-slate-200 transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-semibold text-neutral-200 transition-all shadow-sm"
             >
-              <Code className="w-4 h-4 text-orange-400" />
+              <Code className="w-4 h-4 text-neutral-200" />
               <span>Embed This Simulator</span>
             </button>
 
             <button
               onClick={copyExecutiveMemo}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-xs font-semibold text-orange-300 transition-all"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/[0.04] hover:bg-neutral-200/20 border border-white/20 text-xs font-semibold text-white transition-all"
             >
-              {hasCopiedMemo ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-orange-400" />}
+              {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4 text-neutral-200" />}
               <span>{hasCopiedMemo ? 'Audit Memo Copied!' : 'Copy Executive Audit Memo'}</span>
             </button>
 
-            <div className="ml-auto flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-lg p-1 text-xs">
+            <div className="ml-auto flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded-lg p-1 text-xs">
               <button
                 onClick={() => setCurrency('INR')}
-                className={`px-2.5 py-1 rounded-md transition-colors ${currency === 'INR' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-slate-400'}`}
+                className={`active:scale-[0.97] px-2.5 py-1 rounded-md transition-colors ${currency === 'INR' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
               >
                 INR (₹)
               </button>
               <button
                 onClick={() => setCurrency('USD')}
-                className={`px-2.5 py-1 rounded-md transition-colors ${currency === 'USD' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-slate-400'}`}
+                className={`active:scale-[0.97] px-2.5 py-1 rounded-md transition-colors ${currency === 'USD' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
               >
                 USD ($)
               </button>
@@ -238,13 +238,13 @@ ARCHITECTURAL SAFEGUARDS:
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Interactive Controls */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm space-y-5">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm space-y-5">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <span className="text-sm font-bold text-white flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-orange-400" />
+                  <Sliders className="w-4 h-4 text-neutral-200" />
                   Ecosystem Parameters
                 </span>
-                <span className="text-xs font-mono text-orange-400 bg-orange-500/10 px-2 py-0.5 rounded border border-orange-500/20">
+                <span className="text-xs font-mono text-neutral-200 bg-white/[0.04] px-2 py-0.5 rounded border border-white/15">
                   Beckn v1.2.0 Spec
                 </span>
               </div>
@@ -252,8 +252,8 @@ ARCHITECTURAL SAFEGUARDS:
               {/* Slider 1: SKU Count */}
               <div>
                 <div className="flex justify-between items-center text-xs mb-2">
-                  <span className="text-slate-300 font-medium">Active Catalog SKUs</span>
-                  <span className="font-mono font-bold text-orange-400">{catalogSkuCount.toLocaleString()} SKUs</span>
+                  <span className="text-neutral-300 font-medium">Active Catalog SKUs</span>
+                  <span className="font-mono font-bold text-white">{catalogSkuCount.toLocaleString()} SKUs</span>
                 </div>
                 <input
                   type="range"
@@ -263,9 +263,9 @@ ARCHITECTURAL SAFEGUARDS:
                   value={catalogSkuCount}
                   onChange={(e) => setCatalogSkuCount(Number(e.target.value))}
                   aria-label="Active Catalog SKUs"
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                 />
-                <div className="flex justify-between text-[10px] text-slate-500 mt-1">
+                <div className="flex justify-between text-[10px] text-neutral-500 mt-1">
                   <span>1,000 (Boutique)</span>
                   <span>100,000 (Hypermarket)</span>
                 </div>
@@ -274,8 +274,8 @@ ARCHITECTURAL SAFEGUARDS:
               {/* Slider 2: Connected Buyer Apps */}
               <div>
                 <div className="flex justify-between items-center text-xs mb-2">
-                  <span className="text-slate-300 font-medium">Connected ONDC Buyer Gateways</span>
-                  <span className="font-mono font-bold text-orange-400">{ondcBuyerAppsConnected} apps</span>
+                  <span className="text-neutral-300 font-medium">Connected ONDC Buyer Gateways</span>
+                  <span className="font-mono font-bold text-white">{ondcBuyerAppsConnected} apps</span>
                 </div>
                 <input
                   type="range"
@@ -285,9 +285,9 @@ ARCHITECTURAL SAFEGUARDS:
                   value={ondcBuyerAppsConnected}
                   onChange={(e) => setOndcBuyerAppsConnected(Number(e.target.value))}
                   aria-label="Connected ONDC Buyer Gateways"
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                 />
-                <div className="flex justify-between text-[10px] text-slate-500 mt-1">
+                <div className="flex justify-between text-[10px] text-neutral-500 mt-1">
                   <span>1 Gateway</span>
                   <span>20 Gateways (Full Mesh)</span>
                 </div>
@@ -295,14 +295,14 @@ ARCHITECTURAL SAFEGUARDS:
 
               {/* Selector 3: Pricing Strategy */}
               <div>
-                <label className="text-xs font-medium text-slate-300 block mb-1.5">
+                <label className="text-xs font-medium text-neutral-300 block mb-1.5">
                   Algorithmic Dynamic Pricing Strategy
                 </label>
                 <select
                   value={pricingStrategy}
                   onChange={(e) => setPricingStrategy(e.target.value as any)}
                   aria-label="Algorithmic Dynamic Pricing Strategy"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-orange-500"
+                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
                 >
                   <option value="demand_elasticity">Hyperlocal Demand Elasticity (+16.8% Margin)</option>
                   <option value="expiry_decay_salvage">Shelf Life Decay Salvage (+14.2% Margin)</option>
@@ -313,14 +313,14 @@ ARCHITECTURAL SAFEGUARDS:
 
               {/* Selector 4: Reconciliation Frequency */}
               <div>
-                <label className="text-xs font-medium text-slate-300 block mb-1.5">
+                <label className="text-xs font-medium text-neutral-300 block mb-1.5">
                   Stock Reconciliation &amp; Mutex Engine
                 </label>
                 <select
                   value={stockReconciliationFrequency}
                   onChange={(e) => setStockReconciliationFrequency(e.target.value as any)}
                   aria-label="Stock Reconciliation &amp; Mutex Engine"
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-orange-500"
+                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
                 >
                   <option value="sub_50ms_in_memory">In-Memory Redis Distributed Mutex (Sub-50ms)</option>
                   <option value="five_second_event_bus">Kafka Micro-Batch Change Data Capture (5s)</option>
@@ -331,7 +331,7 @@ ARCHITECTURAL SAFEGUARDS:
               {/* Slider 5: Vernacular Voice Accuracy */}
               <div>
                 <div className="flex justify-between items-center text-xs mb-2">
-                  <span className="text-slate-300 font-medium">Vernacular NLU Search Accuracy</span>
+                  <span className="text-neutral-300 font-medium">Vernacular NLU Search Accuracy</span>
                   <span className="font-mono font-bold text-amber-400">{vernacularNluAccuracyPct}%</span>
                 </div>
                 <input
@@ -342,18 +342,18 @@ ARCHITECTURAL SAFEGUARDS:
                   value={vernacularNluAccuracyPct}
                   onChange={(e) => setVernacularNluAccuracyPct(Number(e.target.value))}
                   aria-label="Vernacular NLU Search Accuracy"
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                 />
               </div>
             </div>
 
             {/* Quick Architecture Callout */}
-            <div className="bg-gradient-to-br from-orange-950/30 to-slate-900 border border-orange-800/30 rounded-2xl p-5 space-y-3">
-              <div className="flex items-center gap-2 text-orange-400 font-semibold text-xs">
+            <div className="bg-neutral-950 border border-white/15 rounded-xl p-5 space-y-3">
+              <div className="flex items-center gap-2 text-white font-semibold text-xs">
                 <ShieldCheck className="w-4 h-4" />
                 <span>GST Rule 36(4) Invariant Protection</span>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-neutral-300 leading-relaxed">
                 Automatically reconciles physical inventory movements with GST e-Way bills and electronic invoices,
                 eliminating input tax credit (ITC) mismatches during statutory tax audits.
               </p>
@@ -364,59 +364,59 @@ ARCHITECTURAL SAFEGUARDS:
           <div className="lg:col-span-7 space-y-6">
             {/* KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
-                <span className="text-[11px] text-slate-400 block mb-1">ONDC Sync Latency</span>
-                <span className="text-2xl font-mono font-bold text-orange-400">{results.syncLatencyMs} ms</span>
-                <span className="text-[10px] text-slate-500 block mt-1">Beckn on_search API</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] text-neutral-400 block mb-1">ONDC Sync Latency</span>
+                <span className="text-2xl font-mono font-bold text-white">{results.syncLatencyMs} ms</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Beckn on_search API</span>
               </div>
 
-              <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
-                <span className="text-[11px] text-slate-400 block mb-1">Stockout Reduction</span>
-                <span className="text-2xl font-mono font-bold text-emerald-400">-{results.inventoryStockoutReductionPct}%</span>
-                <span className="text-[10px] text-slate-500 block mt-1">Zero phantom inventory</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] text-neutral-400 block mb-1">Stockout Reduction</span>
+                <span className="text-2xl font-mono font-bold text-white">-{results.inventoryStockoutReductionPct}%</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Zero phantom inventory</span>
               </div>
 
-              <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 col-span-2 sm:col-span-1">
-                <span className="text-[11px] text-slate-400 block mb-1">Gross Margin Uplift</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 col-span-2 sm:col-span-1">
+                <span className="text-[11px] text-neutral-400 block mb-1">Gross Margin Uplift</span>
                 <span className="text-2xl font-mono font-bold text-amber-400">+{results.omnichannelGrossMarginUpliftPct}%</span>
-                <span className="text-[10px] text-slate-500 block mt-1">Algorithmic elasticity</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Algorithmic elasticity</span>
               </div>
 
-              <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
-                <span className="text-[11px] text-slate-400 block mb-1">Order Throughput</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] text-neutral-400 block mb-1">Order Throughput</span>
                 <span className="text-2xl font-mono font-bold text-white">{results.ondcOrderThroughputRps.toLocaleString()}</span>
-                <span className="text-[10px] text-slate-500 block mt-1">Peak RPS per dark node</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Peak RPS per dark node</span>
               </div>
 
-              <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
-                <span className="text-[11px] text-slate-400 block mb-1">SLA Confidence</span>
-                <span className="text-2xl font-mono font-bold text-teal-400">{results.reconciliationSlaConfidencePct}%</span>
-                <span className="text-[10px] text-slate-500 block mt-1">SAP ERP reconciliation</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] text-neutral-400 block mb-1">SLA Confidence</span>
+                <span className="text-2xl font-mono font-bold text-white">{results.reconciliationSlaConfidencePct}%</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">SAP ERP reconciliation</span>
               </div>
 
-              <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 col-span-2 sm:col-span-1">
-                <span className="text-[11px] text-slate-400 block mb-1">Working Capital Salvaged</span>
-                <span className="text-2xl font-mono font-bold text-emerald-400">
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 col-span-2 sm:col-span-1">
+                <span className="text-[11px] text-neutral-400 block mb-1">Working Capital Salvaged</span>
+                <span className="text-2xl font-mono font-bold text-white">
                   {currency === 'INR' ? `₹${(results.annualWorkingCapitalSavings / 100000).toFixed(1)}L` : `$${(results.annualWorkingCapitalSavings / 1000).toFixed(0)}k`}
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">Per retail hub annually</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Per retail hub annually</span>
               </div>
             </div>
 
             {/* Interactive Telemetry Oscilloscope */}
-            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 space-y-4">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-5 space-y-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                    <Cpu className="w-4 h-4 text-orange-400" />
+                    <Cpu className="w-4 h-4 text-neutral-200" />
                     Beckn Protocol Telemetry &amp; Sync Oscilloscope
                   </h3>
-                  <p className="text-xs text-slate-400 mt-0.5">Real-time simulation of catalog lookups and mutex locks</p>
+                  <p className="text-xs text-neutral-400 mt-0.5">Real-time simulation of catalog lookups and mutex locks</p>
                 </div>
 
                 <div className="flex items-center gap-3 text-xs font-mono">
-                  <span className="flex items-center gap-1.5 text-orange-400">
-                    <span className="w-2.5 h-0.5 bg-orange-400 inline-block"></span> Latency (ms)
+                  <span className="flex items-center gap-1.5 text-neutral-200">
+                    <span className="w-2.5 h-0.5 bg-white/80 inline-block"></span> Latency (ms)
                   </span>
                   <span className="flex items-center gap-1.5 text-amber-400">
                     <span className="w-2.5 h-0.5 bg-amber-400 inline-block"></span> Margin (%)
@@ -424,47 +424,47 @@ ARCHITECTURAL SAFEGUARDS:
                 </div>
               </div>
 
-              <div className="w-full h-[140px] bg-slate-950/80 rounded-xl p-3 border border-slate-800 flex items-center justify-center">
+              <div className="w-full h-[140px] bg-neutral-950/80 rounded-xl p-3 border border-neutral-800 flex items-center justify-center">
                 <svg viewBox="0 0 500 140" className="w-full h-full overflow-visible">
-                  <line x1="0" y1="35" x2="500" y2="35" stroke="#1e293b" strokeWidth="1" strokeDasharray="4,4" />
-                  <line x1="0" y1="70" x2="500" y2="70" stroke="#1e293b" strokeWidth="1" strokeDasharray="4,4" />
-                  <line x1="0" y1="105" x2="500" y2="105" stroke="#1e293b" strokeWidth="1" strokeDasharray="4,4" />
+                  <line x1="0" y1="35" x2="500" y2="35" stroke="#262626" strokeWidth="1" strokeDasharray="4,4" />
+                  <line x1="0" y1="70" x2="500" y2="70" stroke="#262626" strokeWidth="1" strokeDasharray="4,4" />
+                  <line x1="0" y1="105" x2="500" y2="105" stroke="#262626" strokeWidth="1" strokeDasharray="4,4" />
 
                   {svgData.latPath && (
-                    <path d={svgData.latPath} fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" />
+                    <path d={svgData.latPath} fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
                   )}
                   {svgData.marginPath && (
-                    <path d={svgData.marginPath} fill="none" stroke="#f59e0b" strokeWidth="2" strokeDasharray="4,3" strokeLinecap="round" />
+                    <path d={svgData.marginPath} fill="none" stroke="#d4d4d4" strokeWidth="2" strokeDasharray="4,3" strokeLinecap="round" />
                   )}
                 </svg>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-slate-800/80 text-[11px] text-slate-400">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-neutral-800/80 text-[11px] text-neutral-400">
                 <div>
-                  <span className="text-slate-500 block text-[10px]">State Classification</span>
-                  <span className="font-mono text-orange-400 font-semibold">{results.statusClassification}</span>
+                  <span className="text-neutral-500 block text-[10px]">State Classification</span>
+                  <span className="font-mono text-white font-semibold">{results.statusClassification}</span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block text-[10px]">Active Protocol</span>
-                  <span className="font-mono text-slate-200">ONDC Beckn v1.2.0</span>
+                  <span className="text-neutral-500 block text-[10px]">Active Protocol</span>
+                  <span className="font-mono text-neutral-200">ONDC Beckn v1.2.0</span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block text-[10px]">Double-Sell Rate</span>
-                  <span className="font-mono text-emerald-400 font-semibold">&lt; 0.02% (Protected)</span>
+                  <span className="text-neutral-500 block text-[10px]">Double-Sell Rate</span>
+                  <span className="font-mono text-white font-semibold">&lt; 0.02% (Protected)</span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block text-[10px]">ERP Connector</span>
-                  <span className="font-mono text-slate-200">SAP S/4HANA CDC</span>
+                  <span className="text-neutral-500 block text-[10px]">ERP Connector</span>
+                  <span className="font-mono text-neutral-200">SAP S/4HANA CDC</span>
                 </div>
               </div>
             </div>
 
             {/* CTA Audit Module */}
-            <div className="bg-gradient-to-r from-orange-950/40 via-slate-900 to-slate-950 border border-orange-500/30 rounded-2xl p-6 space-y-4">
+            <div className="bg-neutral-950 border border-white/20 rounded-xl p-6 space-y-4">
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-base font-bold text-white">Deploy Sovereign ONDC Retail AI Across Your Stores</h3>
-                  <p className="text-xs text-slate-300 mt-1 max-w-xl leading-relaxed">
+                  <p className="text-xs text-neutral-300 mt-1 max-w-xl leading-relaxed">
                     Schedule an enterprise architecture audit to integrate deterministic Beckn inventory sync,
                     vernacular voice dynamic pricing, and sub-second SAP ERP synchronization across your retail network.
                   </p>
@@ -473,15 +473,15 @@ ARCHITECTURAL SAFEGUARDS:
 
               <div className="pt-2">
                 <ExpandableScreen>
-                  <ExpandableScreenTrigger className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold text-xs tracking-wide transition-all shadow-lg shadow-orange-500/20">
+                  <ExpandableScreenTrigger className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-xs tracking-wide transition-all shadow-lg">
                     <span>Schedule Sovereign Retail Architecture Audit</span>
                     <ArrowRight className="w-4 h-4" />
                   </ExpandableScreenTrigger>
                   <ExpandableScreenContent>
                     <div className="max-w-2xl mx-auto p-6 space-y-6">
-                      <div className="border-b border-slate-800 pb-4">
+                      <div className="border-b border-neutral-800 pb-4">
                         <h2 className="text-xl font-bold text-white">Schedule Sovereign Retail AI Audit</h2>
-                        <p className="text-xs text-slate-400 mt-1">
+                        <p className="text-xs text-neutral-400 mt-1">
                           Private VPC deployment, ONDC Beckn v1.2.0 integration, and SAP ERP telemetry synchronization.
                         </p>
                       </div>
@@ -495,46 +495,46 @@ ARCHITECTURAL SAFEGUARDS:
         </div>
 
         {/* Technical Deep Dive Sections */}
-        <div className="mt-16 pt-12 border-t border-slate-800/80 space-y-12">
+        <div className="mt-16 pt-12 border-t border-neutral-800/80 space-y-12">
           <div>
             <h2 className="text-2xl font-bold text-white tracking-tight">
               Architectural Deep Dive: Solving the Omnichannel Phantom Inventory Paradox
             </h2>
-            <p className="text-slate-400 text-sm mt-2 max-w-3xl leading-relaxed">
+            <p className="text-neutral-400 text-sm mt-2 max-w-3xl leading-relaxed">
               Why periodic batch cron sync fails under high-velocity quick commerce and how sovereign deterministic agents
               enforce sub-50ms inventory atomicity across India's retail distribution networks.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 space-y-3">
-              <div className="p-2.5 rounded-xl bg-orange-500/10 text-orange-400 w-fit">
+            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-xl p-5 space-y-3">
+              <div className="p-2.5 rounded-xl bg-white/[0.04] text-neutral-200 w-fit">
                 <Lock className="w-5 h-5" />
               </div>
               <h3 className="text-sm font-bold text-white">In-Memory Redis Distributed Mutex</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 When an ONDC buyer app or quick-commerce platform selects an item, stock is atomically reserved
                 using distributed Redis mutexes, completely eliminating phantom stock and flash-sale double selling.
               </p>
             </div>
 
-            <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-xl p-5 space-y-3">
               <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 w-fit">
                 <Zap className="w-5 h-5" />
               </div>
               <h3 className="text-sm font-bold text-white">Sub-100ms Vernacular Voice NLU</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 Quantized on-premise language models parse colloquial Hinglish, Tanglish, and regional voice queries,
                 extracting quantity and delivery constraints into structured checkout carts in under 90 milliseconds.
               </p>
             </div>
 
-            <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 space-y-3">
-              <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 w-fit">
+            <div className="bg-neutral-900/40 border border-neutral-800/80 rounded-xl p-5 space-y-3">
+              <div className="p-2.5 rounded-xl bg-white/[0.04] text-neutral-200 w-fit">
                 <Database className="w-5 h-5" />
               </div>
               <h3 className="text-sm font-bold text-white">Decoupled SAP ERP Event Streaming</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 Apache Kafka change data capture streams goods receipts (MIGO) from SAP S/4HANA in sub-25ms while
                 shielding core enterprise transaction databases from volatile consumer read spikes.
               </p>
@@ -542,20 +542,20 @@ ARCHITECTURAL SAFEGUARDS:
           </div>
 
           {/* FAQ Accordion */}
-          <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-6 space-y-4">
             <h3 className="text-lg font-bold text-white mb-2">Frequently Asked Architectural Questions</h3>
             <div className="space-y-3">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="border border-slate-800/80 rounded-xl overflow-hidden bg-slate-950/60">
+                <div key={idx} className="border border-neutral-800/80 rounded-xl overflow-hidden bg-neutral-950/60">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-slate-200 hover:text-orange-400 transition-colors"
+                    className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition-colors"
                   >
                     <span>{faq.q}</span>
-                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === idx ? 'rotate-180 text-orange-400' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
                   </button>
                   {openFaq === idx && (
-                    <div className="p-4 pt-0 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60">
+                    <div className="p-4 pt-0 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60">
                       {faq.a}
                     </div>
                   )}
@@ -569,21 +569,21 @@ ARCHITECTURAL SAFEGUARDS:
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <div className="flex items-center gap-2 text-white font-bold text-sm">
-                <Code className="w-4 h-4 text-orange-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Simulator on Your Website</span>
               </div>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-lg"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <p className="text-xs text-slate-300">
+            <p className="text-xs text-neutral-300">
               Copy and paste this HTML snippet into your technical documentation, portal, or internal knowledge base.
             </p>
 
@@ -591,19 +591,19 @@ ARCHITECTURAL SAFEGUARDS:
               readOnly
               value={embedCode}
               rows={4}
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 font-mono text-xs text-orange-300 focus:outline-none"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-xs text-neutral-200 focus:outline-none"
             />
 
             <div className="flex justify-end gap-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-semibold text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-400 text-slate-950 font-bold text-xs"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}</span>

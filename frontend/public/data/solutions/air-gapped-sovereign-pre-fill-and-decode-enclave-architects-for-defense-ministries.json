@@ -17,7 +17,7 @@
   "firstSentence": "Architect disaggregated prefill and decode enclaves for sovereign defense intelligence processing with sub-8ms inter-enclave RDMA communications.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries",
   "paragraphs": [
     "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
@@ -113,7 +113,7 @@
     "subheadline": "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete electromagnetic and physical containment for defense facilities."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete electromagnetic and physical containment for defense facilities."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries Performance Telemetry",
       "layout": "centered-card"
     }

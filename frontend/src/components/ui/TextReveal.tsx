@@ -60,7 +60,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
     return (
         <motion.span
             style={{ opacity }}
-            className="inline-block mx-1 lg:mx-1.5 text-black dark:text-white transition-opacity duration-150"
+            className="inline-block mx-1 lg:mx-1.5 text-black dark:text-white"
         >
             {children}
         </motion.span>

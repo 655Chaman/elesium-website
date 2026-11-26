@@ -17,7 +17,7 @@
   "firstSentence": "Accelerate deep multi-stage automotive quality inspection reasoning models with speculative tree lookahead search at sub-10ms inference latencies.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits",
   "paragraphs": [
     "Automotive manufacturing plants conduct comprehensive end-of-line quality audits involving complex multi-modal diagnostic reasoning. Deep reasoning neural models evaluating engine acoustic profiles, gap-and-flush laser profiles, and paint thickness measurements suffer from high autoregressive generation latencies, requiring up to 250 milliseconds per token. This inference lag throttles high-speed assembly line conveyor speeds.",
@@ -113,7 +113,7 @@
     "subheadline": "Automotive manufacturing plants conduct comprehensive end-of-line quality audits involving complex multi-modal diagnostic reasoning. Deep reasoning neural models evaluating engine acoustic profiles, gap-and-flush laser profiles, and paint thickness measurements suffer from high autoregressive generation latencies, requiring up to 250 milliseconds per token. This inference lag throttles high-speed assembly line conveyor speeds.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete multi-modal defect diagnosis and root-cause narration."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete multi-modal defect diagnosis and root-cause narration."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits Performance Telemetry",
       "layout": "centered-card"
     }

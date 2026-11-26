@@ -17,7 +17,7 @@
   "firstSentence": "Automate SAP S/4HANA work order confirmations from shopfloor PLC pulse counts with real-time scrap reconciliation and zero manual operator data entry.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India",
   "paragraphs": [
     "Indian manufacturing operations in automotive, machining, and heavy engineering struggle with delayed shopfloor reporting. Operators manually enter finished piece counts into SAP terminals at the end of twelve-hour shifts, resulting in inaccurate inventory balances, delayed raw material replenishment, and frequent discrepancies between actual machine output and ERP ledger records.",
@@ -113,7 +113,7 @@
     "subheadline": "Indian manufacturing operations in automotive, machining, and heavy engineering struggle with delayed shopfloor reporting. Operators manually enter finished piece counts into SAP terminals at the end of twelve-hour shifts, resulting in inaccurate inventory balances, delayed raw material replenishment, and frequent discrepancies between actual machine output and ERP ledger records.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Direct productivity reclamation for machine operators and shift supervisors."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Direct productivity reclamation for machine operators and shift supervisors."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India Performance Telemetry",
       "layout": "centered-card"
     }

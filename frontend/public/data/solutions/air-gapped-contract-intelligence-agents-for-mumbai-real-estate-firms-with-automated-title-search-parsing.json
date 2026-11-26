@@ -17,7 +17,7 @@
   "firstSentence": "Deploy sovereign on-premise document intelligence agents for Mumbai property developers, automating 30-year title search parsing and encumbrance verification with 99.8% precision under MahaRERA and Indian Stamp Act mandates.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing",
   "paragraphs": [
     "Commercial real estate developers in Mumbai face massive legal exposure and settlement bottlenecks when verifying 30-year historical title deeds, 7/12 extract property cards, and encumbrance certificates. Historical deeds registered at sub-registrar offices across Maharashtra feature degraded scanned Marathi typography, archaic legal nomenclature, and complex devolution chains. Cloud-based OCR services introduce catastrophic confidentiality leaks and fail to resolve conflicting conveyance schedules across multi-generational land parcels.",
@@ -113,7 +113,7 @@
     "subheadline": "Commercial real estate developers in Mumbai face massive legal exposure and settlement bottlenecks when verifying 30-year historical title deeds, 7/12 extract property cards, and encumbrance certificates. Historical deeds registered at sub-registrar offices across Maharashtra feature degraded scanned Marathi typography, archaic legal nomenclature, and complex devolution chains. Cloud-based OCR services introduce catastrophic confidentiality leaks and fail to resolve conflicting conveyance schedules across multi-generational land parcels.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero cloud outbound network traffic, air-gapped local workstation cluster."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero cloud outbound network traffic, air-gapped local workstation cluster."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing Performance Telemetry",
       "layout": "centered-card"
     }

@@ -17,7 +17,7 @@
   "firstSentence": "Stream real-time biomedical sensor telemetry from MRI, CT, and ventilator fleets, predicting critical equipment failure 14 days in advance to guarantee 99.8% hospital uptime SLAs.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering",
   "paragraphs": [
     "Tertiary hospital chains and critical care centers suffer severe clinical disruptions and patient safety risks when diagnostic MRI scanners, CT machines, and ICU ventilators experience unexpected mechanical breakdowns. Traditional scheduled maintenance routines fail to detect internal vacuum leaks, helium boil-off surges, or capacitor degradation between annual service visits. Sudden equipment downtime in emergency departments forces patient diversions and breaches statutory NABH accreditation uptime standards.",
@@ -113,7 +113,7 @@
     "subheadline": "Tertiary hospital chains and critical care centers suffer severe clinical disruptions and patient safety risks when diagnostic MRI scanners, CT machines, and ICU ventilators experience unexpected mechanical breakdowns. Traditional scheduled maintenance routines fail to detect internal vacuum leaks, helium boil-off surges, or capacitor degradation between annual service visits. Sudden equipment downtime in emergency departments forces patient diversions and breaches statutory NABH accreditation uptime standards.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Eliminates unscheduled diagnostic equipment breakdowns in emergency wards."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Eliminates unscheduled diagnostic equipment breakdowns in emergency wards."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering Performance Telemetry",
       "layout": "centered-card"
     }

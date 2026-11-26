@@ -17,7 +17,7 @@
   "firstSentence": "Partition prefill and decode inference workloads across distributed tactical drone swarms and mobile command vehicles with sub-10ms coordination.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms",
   "paragraphs": [
     "Joint All-Domain Command and Control (JADC2) operations deploy distributed autonomous drone swarms that coordinate reconnaissance, radar electronic countermeasures, and target handoffs. Individual drone nodes have limited battery power and thermal envelopes, while mobile command vehicles have larger compute reserves. Monolithic on-drone inference leads to rapid battery exhaustion and overheating during combat maneuvers.",
@@ -113,7 +113,7 @@
     "subheadline": "Joint All-Domain Command and Control (JADC2) operations deploy distributed autonomous drone swarms that coordinate reconnaissance, radar electronic countermeasures, and target handoffs. Individual drone nodes have limited battery power and thermal envelopes, while mobile command vehicles have larger compute reserves. Monolithic on-drone inference leads to rapid battery exhaustion and overheating during combat maneuvers.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Immediate autonomous failover to local onboard inference with zero flight interruption."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Immediate autonomous failover to local onboard inference with zero flight interruption."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms Performance Telemetry",
       "layout": "centered-card"
     }

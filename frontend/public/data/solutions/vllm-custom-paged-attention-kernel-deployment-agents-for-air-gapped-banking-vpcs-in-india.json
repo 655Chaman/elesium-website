@@ -17,7 +17,7 @@
   "firstSentence": "Deploy custom C++/CUDA PagedAttention kernels on air-gapped private VPC clusters, reducing KV cache fragmentation to 3.8% and bounding p99 inference latency to 138ms under high-volume core banking workloads.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India",
   "paragraphs": [
     "Indian scheduled commercial banks deploying transformer models within air-gapped virtual private clouds face severe memory fragmentation when serving concurrent transaction streams. Standard PyTorch allocations leave up to 42% of high-bandwidth memory unmapped due to dynamic sequence lengths in multi-turn customer sessions. During high-concurrency settlement windows, this memory waste triggers sudden out-of-memory kernel faults and forces non-deterministic garbage collection stalls exceeding 1,200ms.",
@@ -113,7 +113,7 @@
     "subheadline": "Indian scheduled commercial banks deploying transformer models within air-gapped virtual private clouds face severe memory fragmentation when serving concurrent transaction streams. Standard PyTorch allocations leave up to 42% of high-bandwidth memory unmapped due to dynamic sequence lengths in multi-turn customer sessions. During high-concurrency settlement windows, this memory waste triggers sudden out-of-memory kernel faults and forces non-deterministic garbage collection stalls exceeding 1,200ms.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Sustained execution throughput with zero packet drops over internal VPC peering."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Sustained execution throughput with zero packet drops over internal VPC peering."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India Performance Telemetry",
       "layout": "centered-card"
     }

@@ -17,7 +17,7 @@
   "firstSentence": "Extract bilingual regional language transport dockets in Tamil, Telugu, Hindi, and Gujarati, automatically posting validated purchase vouchers into Tally Prime.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry",
   "paragraphs": [
     "Logistics clearing agents and freight transport operators in India process millions of regional vernacular transport bills, lorry receipts (LR), and fuel receipts issued in regional languages including Tamil, Telugu, Hindi, and Gujarati. Standard cloud OCR engines fail on complex Indic compound characters, degraded dot-matrix printouts, and multi-lingual layout mixing. Accounts teams spend weeks manually keying data, introducing severe data entry errors and delaying GST input tax credit reconciliation.",
@@ -113,7 +113,7 @@
     "subheadline": "Logistics clearing agents and freight transport operators in India process millions of regional vernacular transport bills, lorry receipts (LR), and fuel receipts issued in regional languages including Tamil, Telugu, Hindi, and Gujarati. Standard cloud OCR engines fail on complex Indic compound characters, degraded dot-matrix printouts, and multi-lingual layout mixing. Accounts teams spend weeks manually keying data, introducing severe data entry errors and delaying GST input tax credit reconciliation.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Replaces manual vernacular data entry with automated multi-script parsing."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Replaces manual vernacular data entry with automated multi-script parsing."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry Performance Telemetry",
       "layout": "centered-card"
     }

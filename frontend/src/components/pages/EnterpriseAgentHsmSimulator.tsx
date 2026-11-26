@@ -65,9 +65,9 @@ export default function EnterpriseAgentHsmSimulator() {
     return simulateAgentHsm(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-hsm-pkcs11-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-hsm-pkcs11-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedCode = () => {
@@ -140,7 +140,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
   }, [results.telemetryTrace]);
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-cyan-500 selection:text-black">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Agent Hardware Security Module (HSM) PKCS#11 Simulator | Elesium</title>
         <meta
@@ -153,31 +153,31 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
         {/* Header Breadcrumbs and Badges */}
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-slate-400">
-            <a href="/" className="hover:text-cyan-400 transition">Elesium</a>
+          <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-neutral-400">
+            <a href="/" className="hover:text-white transition">Elesium</a>
             <span>/</span>
-            <a href="/solutions/" className="hover:text-cyan-400 transition">Tools</a>
+            <a href="/solutions/" className="hover:text-white transition">Tools</a>
             <span>/</span>
-            <span className="text-cyan-400">Tool #35: Enterprise Agent HSM PKCS#11 Simulator</span>
+            <span className="text-neutral-200">Tool #35: Enterprise Agent HSM PKCS#11 Simulator</span>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-800 pb-6">
             <div>
               <div className="flex items-center space-x-2">
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-cyan-950 text-cyan-400 border border-cyan-800">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-lg text-xs font-mono font-medium bg-white/[0.05] text-neutral-200 border border-white/15">
                   <ShieldCheck className="w-3 h-3 mr-1" /> FIPS 140-3 Level 4 &amp; PKCS#11 v3.1 Cryptoki
                 </span>
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-950 text-emerald-400 border border-emerald-800">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-lg text-xs font-mono font-medium bg-white/[0.05] text-neutral-200 border border-white/15">
                   Tool #35
                 </span>
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-purple-950 text-purple-400 border border-purple-800">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-lg text-xs font-mono font-medium bg-white/[0.05] text-neutral-200 border border-white/15">
                   Post-Quantum ML-KEM-768
                 </span>
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mt-2 tracking-tight">
                 Enterprise Autonomous Agent Hardware Security Module (HSM) Simulator
               </h1>
-              <p className="text-sm sm:text-base text-slate-400 max-w-3xl mt-1">
+              <p className="text-sm sm:text-base text-neutral-400 max-w-3xl mt-1">
                 Simulate hardware-isolated PKCS#11 air-gapped cryptographic key derivation, tokenization throughput,
                 active zeroization tamper mesh dynamics, DPA/CPA side-channel attenuation, and statutory DPDP Act / RBI compliance.
               </p>
@@ -187,38 +187,38 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-neutral-900 border border-neutral-700 text-neutral-200 hover:bg-neutral-800 hover:text-white transition"
               >
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Simulator</span>
               </button>
 
               <button
                 onClick={copyExecutiveMemo}
-                className="inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-full text-xs font-medium bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-lg text-xs font-medium bg-neutral-900 border border-neutral-700 text-neutral-200 hover:bg-neutral-800 hover:text-white transition"
               >
                 {hasCopiedMemo ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-400" />
-                    <span className="text-emerald-400">Memo Copied!</span>
+                    <Check className="w-4 h-4 text-neutral-200" />
+                    <span className="text-neutral-200">Memo Copied!</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-cyan-400" />
+                    <Copy className="w-4 h-4 text-neutral-200" />
                     <span>Copy Executive Memo</span>
                   </>
                 )}
               </button>
 
               <ExpandableScreen>
-                <ExpandableScreenTrigger className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 text-black hover:from-cyan-400 hover:to-blue-500 transition shadow-lg shadow-cyan-950/50 cursor-pointer">
+                <ExpandableScreenTrigger className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-200 text-black transition shadow-lg cursor-pointer">
                   <span>Schedule HSM Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </ExpandableScreenTrigger>
@@ -235,18 +235,18 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
         {/* Status Alert Banner */}
         <div className={`p-4 rounded-xl border flex items-center justify-between gap-4 ${
           results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
-            ? 'bg-emerald-950/30 border-emerald-800/50 text-emerald-300'
+            ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : results.statusClassification === 'FIPS_HARDENED_COMPLIANT'
-            ? 'bg-cyan-950/30 border-cyan-800/50 text-cyan-300'
-            : 'bg-rose-950/30 border-rose-800/50 text-rose-300'
+            ? 'bg-white/[0.05] border-white/15 text-neutral-200'
+            : 'bg-red-950/30 border-red-800/50 text-red-300'
         }`}>
           <div className="flex items-center space-x-3">
             {results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT' ? (
-              <ShieldCheck className="w-6 h-6 shrink-0 text-emerald-400" />
+              <ShieldCheck className="w-6 h-6 shrink-0 text-neutral-200" />
             ) : results.statusClassification === 'FIPS_HARDENED_COMPLIANT' ? (
-              <Sparkles className="w-6 h-6 shrink-0 text-cyan-400" />
+              <Sparkles className="w-6 h-6 shrink-0 text-neutral-200" />
             ) : (
-              <AlertTriangle className="w-6 h-6 shrink-0 text-rose-400" />
+              <AlertTriangle className="w-6 h-6 shrink-0 text-red-400" />
             )}
             <div>
               <p className="font-semibold text-sm">
@@ -269,55 +269,55 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
         {/* Main Interactive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-              <Sliders className="w-5 h-5 text-cyan-400" />
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
+              <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-base font-semibold text-white">HSM &amp; Cryptoki Security Parameters</h2>
             </div>
 
             {/* HSM Security Level Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">HSM Certification &amp; Physical Security Tier:</label>
+              <label className="text-xs text-neutral-300 font-medium block">HSM Certification &amp; Physical Security Tier:</label>
               <select
                 value={hsmSecurityLevel}
                 onChange={e => setHsmSecurityLevel(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="fips_140_3_level_4">FIPS 140-3 Level 4 (Active Environmental Protection &amp; Zeroization Envelope)</option>
                 <option value="common_criteria_eal6_plus">Common Criteria EAL6+ (Formally Verified High-Assurance Sovereign Vault)</option>
                 <option value="fips_140_2_level_3">FIPS 140-2 Level 3 (Tamper-Evident Enclosure with Identity Authentication)</option>
                 <option value="tpm_2_0_enclave">TPM 2.0 / Host CPU Enclave (AMD SEV / ARM TrustZone - Peripheral Bus Exposed)</option>
               </select>
-              <p className="text-[10px] text-slate-500">
+              <p className="text-[10px] text-neutral-500">
                 FIPS 140-3 Level 4 mandates physical zeroization of master secret keys upon enclosure voltage, temperature, or drill penetration.
               </p>
             </div>
 
             {/* Cryptographic Algorithm Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">Cryptographic Algorithm &amp; Key Primitive:</label>
+              <label className="text-xs text-neutral-300 font-medium block">Cryptographic Algorithm &amp; Key Primitive:</label>
               <select
                 value={cryptographicAlgorithm}
                 onChange={e => setCryptographicAlgorithm(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="ml_kem_768_post_quantum">NIST FIPS 203 ML-KEM-768 (Lattice Post-Quantum Key Encapsulation)</option>
                 <option value="aes_256_gcm">AES-256-GCM (Hardware Coprocessor Symmetric Cipher with Authenticated Tag)</option>
                 <option value="ecdsa_secp256k1">ECDSA secp256k1 (Elliptic Curve Autonomous Agent Signature &amp; State Proofs)</option>
                 <option value="rsa_4096_pss">RSA-4096-PSS (Modular Exponentiation - High Computation Overhead)</option>
               </select>
-              <p className="text-[10px] text-slate-500">
+              <p className="text-[10px] text-neutral-500">
                 ML-KEM-768 provides 128-bit quantum security level against Shor's algorithm harvesting agent state communications.
               </p>
             </div>
 
             {/* Key Derivation Function Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">Key Derivation Function (KDF):</label>
+              <label className="text-xs text-neutral-300 font-medium block">Key Derivation Function (KDF):</label>
               <select
                 value={keyDerivationFunction}
                 onChange={e => setKeyDerivationFunction(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="hkdf_sha512">RFC 5869 HKDF-SHA512 (Extract-and-Expand Streaming Agent Tokenization)</option>
                 <option value="argon2id_hardened">Argon2id Hardened (Memory-Hardened ASIC &amp; GPU Side-Channel Immune)</option>
@@ -328,8 +328,8 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             {/* Hardware Bus Latency Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Hardware Bus / Cryptoki Latency (PCIe/SPI/USB):</span>
-                <span className="font-mono text-cyan-400 font-bold">{hardwareBusLatencyMicroseconds} µs</span>
+                <span className="text-neutral-300 font-medium">Hardware Bus / Cryptoki Latency (PCIe/SPI/USB):</span>
+                <span className="font-mono text-white font-bold">{hardwareBusLatencyMicroseconds} µs</span>
               </div>
               <input
                 type="range"
@@ -338,9 +338,9 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                 step="5"
                 value={hardwareBusLatencyMicroseconds}
                 onChange={e => setHardwareBusLatencyMicroseconds(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>15 µs (Direct PCIe Gen5)</span>
                 <span>45 µs (Isolated PCIe Gen4)</span>
                 <span>250 µs (External USB/LAN)</span>
@@ -350,8 +350,8 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             {/* Daily Key Derivation Volume Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Daily Agent Tokenization Volume:</span>
-                <span className="font-mono text-emerald-400 font-bold">{dailyKeyDerivationVolumeThousands.toLocaleString()}k ops/day</span>
+                <span className="text-neutral-300 font-medium">Daily Agent Tokenization Volume:</span>
+                <span className="font-mono text-white font-bold">{dailyKeyDerivationVolumeThousands.toLocaleString()}k ops/day</span>
               </div>
               <input
                 type="range"
@@ -360,9 +360,9 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                 step="10"
                 value={dailyKeyDerivationVolumeThousands}
                 onChange={e => setDailyKeyDerivationVolumeThousands(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>10k ops/day (SME)</span>
                 <span>750k</span>
                 <span>5,000k ops/day (Tier-1 Bank)</span>
@@ -370,16 +370,16 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             </div>
 
             {/* Currency Toggle */}
-            <div className="space-y-2 pt-2 border-t border-slate-800">
-              <label className="text-xs text-slate-300 font-medium block">Reporting Currency:</label>
+            <div className="space-y-2 pt-2 border-t border-neutral-800">
+              <label className="text-xs text-neutral-300 font-medium block">Reporting Currency:</label>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
                   onClick={() => setCurrency('INR')}
-                  className={`py-2 text-xs font-mono font-bold rounded-lg transition border ${
+                  className={`active:scale-[0.97] py-2 text-xs font-mono font-bold rounded-lg transition border ${
                     currency === 'INR'
-                      ? 'bg-cyan-500 text-black border-cyan-400'
-                      : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-white'
+                      ? 'bg-white text-black border-white/30'
+                      : 'bg-neutral-950 text-neutral-400 border-neutral-800 hover:text-white'
                   }`}
                 >
                   INR (₹) India
@@ -387,10 +387,10 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                 <button
                   type="button"
                   onClick={() => setCurrency('USD')}
-                  className={`py-2 text-xs font-mono font-bold rounded-lg transition border ${
+                  className={`active:scale-[0.97] py-2 text-xs font-mono font-bold rounded-lg transition border ${
                     currency === 'USD'
-                      ? 'bg-cyan-500 text-black border-cyan-400'
-                      : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-white'
+                      ? 'bg-white text-black border-white/30'
+                      : 'bg-neutral-950 text-neutral-400 border-neutral-800 hover:text-white'
                   }`}
                 >
                   USD ($) Global
@@ -404,25 +404,25 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             {/* Top 4 Metric KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Card 1: Key Derivation Latency */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Key Derivation Latency</span>
-                  <Key className="w-4 h-4 text-cyan-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Key Derivation Latency</span>
+                  <Key className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-3xl font-extrabold font-mono text-cyan-400">{results.keyDerivationLatencyMicroseconds}</span>
-                  <span className="text-sm font-mono text-cyan-300">µs / key</span>
+                  <span className="text-3xl font-extrabold font-mono text-neutral-200">{results.keyDerivationLatencyMicroseconds}</span>
+                  <span className="text-sm font-mono text-neutral-200">µs / key</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Hardware Bus Latency:</span>
-                    <span className="font-mono text-slate-300">{hardwareBusLatencyMicroseconds} µs</span>
+                    <span className="font-mono text-neutral-300">{hardwareBusLatencyMicroseconds} µs</span>
                   </div>
                   <div className="flex justify-between">
                     <span>PKCS#11 Cryptoki Framing:</span>
-                    <span className="font-mono text-slate-300">12 µs</span>
+                    <span className="font-mono text-neutral-300">12 µs</span>
                   </div>
-                  <div className="flex justify-between font-bold text-cyan-300">
+                  <div className="flex justify-between font-bold text-white">
                     <span>Algorithm Primitive:</span>
                     <span>{cryptographicAlgorithm === 'ml_kem_768_post_quantum' ? 'ML-KEM-768' : cryptographicAlgorithm.replace(/_/g, ' ').toUpperCase()}</span>
                   </div>
@@ -430,27 +430,27 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
               </div>
 
               {/* Card 2: Tokenization Throughput */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Tokenization Throughput</span>
-                  <Cpu className="w-4 h-4 text-emerald-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Tokenization Throughput</span>
+                  <Cpu className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-3xl font-extrabold font-mono text-emerald-400">{results.tokenizationThroughputOpsPerSec.toLocaleString()}</span>
-                  <span className="text-sm font-mono text-emerald-300">Ops / sec</span>
+                  <span className="text-3xl font-extrabold font-mono text-neutral-200">{results.tokenizationThroughputOpsPerSec.toLocaleString()}</span>
+                  <span className="text-sm font-mono text-neutral-200">Ops / sec</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Parallel Coprocessors:</span>
-                    <span className="font-mono text-slate-300">28 Pipelined Channels</span>
+                    <span className="font-mono text-neutral-300">28 Pipelined Channels</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Daily Volume Capacity:</span>
-                    <span className="font-mono text-emerald-400 font-bold">{(results.tokenizationThroughputOpsPerSec * 86.4).toFixed(0)}k ops/day</span>
+                    <span className="font-mono text-white font-bold">{(results.tokenizationThroughputOpsPerSec * 86.4).toFixed(0)}k ops/day</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Saturation Headroom:</span>
-                    <span className="font-mono text-cyan-300 font-bold">
+                    <span className="font-mono text-white font-bold">
                       {Math.max(1.0, (results.tokenizationThroughputOpsPerSec * 86.4) / dailyKeyDerivationVolumeThousands).toFixed(1)}x
                     </span>
                   </div>
@@ -458,86 +458,86 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
               </div>
 
               {/* Card 3: Tamper & Side-Channel Resistance */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Physical &amp; Side-Channel Resistance</span>
-                  <Shield className="w-4 h-4 text-purple-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Physical &amp; Side-Channel Resistance</span>
+                  <Shield className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-3xl font-extrabold font-mono text-purple-400">{results.sideChannelAttackResistanceDb}</span>
-                  <span className="text-sm font-mono text-purple-300">dB DPA Attenuation</span>
+                  <span className="text-3xl font-extrabold font-mono text-neutral-200">{results.sideChannelAttackResistanceDb}</span>
+                  <span className="text-sm font-mono text-neutral-200">dB DPA Attenuation</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Tamper Mesh Zeroization:</span>
-                    <span className="font-mono text-purple-300 font-bold">{results.physicalTamperDetectionResistanceYears} Years</span>
+                    <span className="font-mono text-white font-bold">{results.physicalTamperDetectionResistanceYears} Years</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Electromagnetic Leakage:</span>
-                    <span className="font-mono text-slate-300">{results.sideChannelAttackResistanceDb > 90 ? 'Sub-Noise Floor (<1nV)' : 'Vulnerable (>100nV)'}</span>
+                    <span className="font-mono text-neutral-300">{results.sideChannelAttackResistanceDb > 90 ? 'Sub-Noise Floor (<1nV)' : 'Vulnerable (>100nV)'}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Enclosure Grade:</span>
-                    <span className="font-mono text-cyan-300 font-semibold">{hsmSecurityLevel === 'fips_140_3_level_4' ? 'FIPS 140-3 L4 Active' : 'Certified Enclosure'}</span>
+                    <span className="font-mono text-white font-semibold">{hsmSecurityLevel === 'fips_140_3_level_4' ? 'FIPS 140-3 L4 Active' : 'Certified Enclosure'}</span>
                   </div>
                 </div>
               </div>
 
               {/* Card 4: Breach Exposure Mitigation */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Annual Breach Exposure Mitigated</span>
-                  <Activity className="w-4 h-4 text-cyan-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Annual Breach Exposure Mitigated</span>
+                  <Activity className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-1">
-                  <span className="text-2xl font-extrabold font-mono text-cyan-300">
+                  <span className="text-2xl font-extrabold font-mono text-neutral-200">
                     {currency === 'INR' ? '₹' : '$'}{results.annualBreachExposureMitigation.toLocaleString()}
                   </span>
-                  <span className="text-xs text-slate-400">/ yr</span>
+                  <span className="text-xs text-neutral-400">/ yr</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Statutory Compliance Score:</span>
-                    <span className="font-mono text-emerald-400 font-semibold">{results.complianceScorePercent}%</span>
+                    <span className="font-mono text-white font-semibold">{results.complianceScorePercent}%</span>
                   </div>
                   <div className="flex justify-between">
                     <span>DPDP Act 2023 Sec 8:</span>
-                    <span className="font-mono text-slate-300">Fiduciary Tokenized</span>
+                    <span className="font-mono text-neutral-300">Fiduciary Tokenized</span>
                   </div>
                   <div className="flex justify-between">
                     <span>RBI Cyber Security Stance:</span>
-                    <span className="font-mono text-cyan-300 font-bold">Hardware Air-Gapped</span>
+                    <span className="font-mono text-white font-bold">Hardware Air-Gapped</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Real-Time Hardware Oscilloscope & Tamper Telemetry Chart */}
-            <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
-                  <Activity className="w-4 h-4 text-cyan-400" />
+                  <Activity className="w-4 h-4 text-neutral-200" />
                   <h3 className="text-sm font-semibold text-white">PKCS#11 Cryptoki Bus &amp; Active Tamper Mesh Telemetry</h3>
                 </div>
                 <div className="flex items-center space-x-4 text-xs font-mono">
-                  <span className="text-cyan-400 flex items-center gap-1">
-                    <span className="w-2.5 h-0.5 bg-cyan-400 inline-block"></span> Bus Latency (µs)
+                  <span className="text-neutral-200 flex items-center gap-1">
+                    <span className="w-2.5 h-0.5 bg-white/80 inline-block"></span> Bus Latency (µs)
                   </span>
-                  <span className="text-rose-400 flex items-center gap-1">
-                    <span className="w-2.5 h-0.5 bg-rose-400 inline-block"></span> Tamper Mesh Voltage (mV)
+                  <span className="text-red-400 flex items-center gap-1">
+                    <span className="w-2.5 h-0.5 bg-red-400 inline-block"></span> Tamper Mesh Voltage (mV)
                   </span>
                 </div>
               </div>
 
               {/* Oscilloscope SVG */}
-              <div className="relative w-full aspect-[3/1] bg-slate-950 rounded-xl border border-slate-800/80 overflow-hidden flex flex-col justify-between p-3">
+              <div className="relative w-full aspect-[3/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
                 <svg viewBox="0 0 560 160" className="w-full h-full">
                   {/* Grid lines */}
                   {[25, 60, 95, 130].map(y => (
-                    <line key={`grid-${y}`} x1="0" y1={y} x2="560" y2={y} stroke="#1e293b" strokeWidth="1" strokeDasharray="4 4" />
+                    <line key={`grid-${y}`} x1="0" y1={y} x2="560" y2={y} stroke="#262626" strokeWidth="1" strokeDasharray="4 4" />
                   ))}
                   {[80, 160, 240, 320, 400, 480].map(x => (
-                    <line key={`grid-x-${x}`} x1={x} y1="0" x2={x} y2="160" stroke="#1e293b" strokeWidth="1" strokeDasharray="4 4" />
+                    <line key={`grid-x-${x}`} x1={x} y1="0" x2={x} y2="160" stroke="#262626" strokeWidth="1" strokeDasharray="4 4" />
                   ))}
 
                   {/* Tamper Mesh Baseline Voltage Line (3300 mV) */}
@@ -546,7 +546,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                     y1="80"
                     x2="560"
                     y2="80"
-                    stroke="#f43f5e"
+                    stroke="#a3a3a3"
                     strokeWidth="1"
                     strokeDasharray="6 3"
                     opacity="0.4"
@@ -556,7 +556,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                   <path
                     d={svgData.busPath}
                     fill="none"
-                    stroke="#06b6d4"
+                    stroke="#ffffff"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -566,7 +566,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                   <path
                     d={svgData.tamperPath}
                     fill="none"
-                    stroke="#f43f5e"
+                    stroke="#a3a3a3"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -583,7 +583,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                         cx={x}
                         cy={y}
                         r="3"
-                        fill="#06b6d4"
+                        fill="#ffffff"
                         stroke="#ffffff"
                         strokeWidth="1"
                       />
@@ -591,56 +591,56 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                   })}
                 </svg>
 
-                <div className="flex justify-between items-center text-[10px] font-mono text-slate-500 pt-1">
+                <div className="flex justify-between items-center text-[10px] font-mono text-neutral-500 pt-1">
                   <span>Cryptoki Step 0 (Host Handshake)</span>
-                  <span className="text-emerald-400 font-bold">TRNG Entropy: 256.0 bits | Enclosure Potting Mesh Active</span>
+                  <span className="text-white font-bold">TRNG Entropy: 256.0 bits | Enclosure Potting Mesh Active</span>
                   <span>Step 15 (Key Zeroize / Cache Flush)</span>
                 </div>
               </div>
             </div>
 
             {/* Cryptographic Security Architecture & Compliance Breakdown */}
-            <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-              <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-                <Layers className="w-4 h-4 text-cyan-400" />
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+              <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
+                <Layers className="w-4 h-4 text-neutral-200" />
                 <h3 className="text-sm font-semibold text-white">Regulatory Framework &amp; Air-Gapped Key Governance</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <div className="flex items-center space-x-1.5 text-cyan-400 font-semibold">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <div className="flex items-center space-x-1.5 text-white font-semibold">
                     <FileCheck className="w-3.5 h-3.5" />
                     <span>DPDP Act 2023 Sec 8</span>
                   </div>
-                  <p className="text-slate-400 text-[11px]">
+                  <p className="text-neutral-400 text-[11px]">
                     Requires Data Fiduciaries to maintain technical safeguards preventing unauthorized access to personal identity datasets. Hardware tokenization decouples real identities from LLM prompts.
                   </p>
-                  <div className="pt-1 font-mono text-emerald-400 font-bold">
+                  <div className="pt-1 font-mono text-white font-bold">
                     Score: {results.complianceScorePercent}% Compliant
                   </div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <div className="flex items-center space-x-1.5 text-purple-400 font-semibold">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <div className="flex items-center space-x-1.5 text-white font-semibold">
                     <Server className="w-3.5 h-3.5" />
                     <span>RBI Cyber Security</span>
                   </div>
-                  <p className="text-slate-400 text-[11px]">
+                  <p className="text-neutral-400 text-[11px]">
                     Mandates dedicated cryptographic hardware modules with non-exportable private root keys for all automated payment, core banking, and financial underwriting agents.
                   </p>
-                  <div className="pt-1 font-mono text-purple-400 font-bold">
+                  <div className="pt-1 font-mono text-white font-bold">
                     Status: {hsmSecurityLevel === 'tpm_2_0_enclave' ? 'Advisory Warning' : 'Mandate Satisfied'}
                   </div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <div className="flex items-center space-x-1.5 text-emerald-400 font-semibold">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <div className="flex items-center space-x-1.5 text-white font-semibold">
                     <Lock className="w-3.5 h-3.5" />
                     <span>PCI-DSS v4.0 Req 3.5</span>
                   </div>
-                  <p className="text-slate-400 text-[11px]">
+                  <p className="text-neutral-400 text-[11px]">
                     Dual-control split-knowledge key derivation ensures no single autonomous model or infrastructure operator can extract raw primary account numbers or agent signing credentials.
                   </p>
-                  <div className="pt-1 font-mono text-cyan-400 font-bold">
+                  <div className="pt-1 font-mono text-white font-bold">
                     Air-Gap: {results.sideChannelAttackResistanceDb >= 90 ? 'Full Zero-Leakage' : 'Peripheral Monitored'}
                   </div>
                 </div>
@@ -650,13 +650,13 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
         </div>
 
         {/* Technical Architecture Deep Dive: Air-Gapped HSM vs Cloud KMS vs Software Enclaves */}
-        <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-6">
-          <div className="border-b border-slate-800 pb-3">
+        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-6">
+          <div className="border-b border-neutral-800 pb-3">
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
-              <Shield className="w-5 h-5 text-cyan-400" />
+              <Shield className="w-5 h-5 text-neutral-200" />
               Autonomous Agent Root-of-Trust Comparison Matrix
             </h3>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-neutral-400 mt-1">
               Comparing dedicated physical air-gapped PKCS#11 HSMs against multi-tenant Cloud KMS and CPU enclave virtualization.
             </p>
           </div>
@@ -664,43 +664,43 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
           <div className="overflow-x-auto">
             <table className="w-full text-xs text-left">
               <thead>
-                <tr className="border-b border-slate-800 text-slate-400 font-mono">
+                <tr className="border-b border-neutral-800 text-neutral-400 font-mono">
                   <th className="py-2.5 px-3">Security Metric</th>
-                  <th className="py-2.5 px-3 text-cyan-400">Elesium Air-Gapped Sovereign HSM</th>
-                  <th className="py-2.5 px-3 text-slate-300">Public Cloud KMS (AWS/GCP/Azure)</th>
-                  <th className="py-2.5 px-3 text-slate-400">Host CPU Enclave (SGX/SEV)</th>
+                  <th className="py-2.5 px-3 text-neutral-200">Elesium Air-Gapped Sovereign HSM</th>
+                  <th className="py-2.5 px-3 text-neutral-300">Public Cloud KMS (AWS/GCP/Azure)</th>
+                  <th className="py-2.5 px-3 text-neutral-400">Host CPU Enclave (SGX/SEV)</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800/60 text-slate-300 font-mono">
+              <tbody className="divide-y divide-neutral-800/60 text-neutral-300 font-mono">
                 <tr>
                   <td className="py-2.5 px-3 font-sans font-semibold text-white">Physical Tamper Zeroization</td>
-                  <td className="py-2.5 px-3 text-emerald-400 font-bold">FIPS 140-3 L4 Active Mesh (&lt;50ns Zeroize)</td>
-                  <td className="py-2.5 px-3 text-slate-400">Shared Multi-Tenant DC (Vendor Managed)</td>
-                  <td className="py-2.5 px-3 text-rose-400">None (Vulnerable to Interposers &amp; Probes)</td>
+                  <td className="py-2.5 px-3 text-white font-bold">FIPS 140-3 L4 Active Mesh (&lt;50ns Zeroize)</td>
+                  <td className="py-2.5 px-3 text-neutral-400">Shared Multi-Tenant DC (Vendor Managed)</td>
+                  <td className="py-2.5 px-3 text-red-400">None (Vulnerable to Interposers &amp; Probes)</td>
                 </tr>
                 <tr>
                   <td className="py-2.5 px-3 font-sans font-semibold text-white">Post-Quantum Cryptography</td>
-                  <td className="py-2.5 px-3 text-cyan-400 font-bold">Native NIST ML-KEM-768 &amp; ML-DSA</td>
-                  <td className="py-2.5 px-3 text-slate-400">Hybrid RSA/ECC Legacy Default</td>
-                  <td className="py-2.5 px-3 text-slate-400">Software Emulated Only (High Latency)</td>
+                  <td className="py-2.5 px-3 text-white font-bold">Native NIST ML-KEM-768 &amp; ML-DSA</td>
+                  <td className="py-2.5 px-3 text-neutral-400">Hybrid RSA/ECC Legacy Default</td>
+                  <td className="py-2.5 px-3 text-neutral-400">Software Emulated Only (High Latency)</td>
                 </tr>
                 <tr>
                   <td className="py-2.5 px-3 font-sans font-semibold text-white">Side-Channel Attack Resistance</td>
-                  <td className="py-2.5 px-3 text-emerald-400 font-bold">&gt;110 dB (Masked DPA/CPA Immune)</td>
-                  <td className="py-2.5 px-3 text-slate-400">80 - 90 dB (Shared Hypervisor Noise)</td>
-                  <td className="py-2.5 px-3 text-rose-400">&lt;60 dB (Cache-Timing &amp; Branch Leakage)</td>
+                  <td className="py-2.5 px-3 text-white font-bold">&gt;110 dB (Masked DPA/CPA Immune)</td>
+                  <td className="py-2.5 px-3 text-neutral-400">80 - 90 dB (Shared Hypervisor Noise)</td>
+                  <td className="py-2.5 px-3 text-red-400">&lt;60 dB (Cache-Timing &amp; Branch Leakage)</td>
                 </tr>
                 <tr>
                   <td className="py-2.5 px-3 font-sans font-semibold text-white">DPDP Act 2023 Sovereignty</td>
-                  <td className="py-2.5 px-3 text-cyan-400 font-bold">100% On-Premise Air-Gapped Indian Soil</td>
+                  <td className="py-2.5 px-3 text-white font-bold">100% On-Premise Air-Gapped Indian Soil</td>
                   <td className="py-2.5 px-3 text-amber-400">US CLOUD Act Extraterritorial Subpoena Risk</td>
-                  <td className="py-2.5 px-3 text-slate-400">Local OS Root Compromise Risk</td>
+                  <td className="py-2.5 px-3 text-neutral-400">Local OS Root Compromise Risk</td>
                 </tr>
                 <tr>
                   <td className="py-2.5 px-3 font-sans font-semibold text-white">End-to-End Derivation Latency</td>
-                  <td className="py-2.5 px-3 text-cyan-400 font-bold">&lt;80 µs (Direct PCIe Cryptoki)</td>
-                  <td className="py-2.5 px-3 text-slate-400">12 - 45 ms (WAN / HTTPS API Latency)</td>
-                  <td className="py-2.5 px-3 text-emerald-400 font-bold">10 - 25 µs (Direct L3 Memory)</td>
+                  <td className="py-2.5 px-3 text-white font-bold">&lt;80 µs (Direct PCIe Cryptoki)</td>
+                  <td className="py-2.5 px-3 text-neutral-400">12 - 45 ms (WAN / HTTPS API Latency)</td>
+                  <td className="py-2.5 px-3 text-white font-bold">10 - 25 µs (Direct L3 Memory)</td>
                 </tr>
               </tbody>
             </table>
@@ -708,10 +708,10 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
         </div>
 
         {/* FAQ Accordion */}
-        <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-          <div className="border-b border-slate-800 pb-3">
+        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+          <div className="border-b border-neutral-800 pb-3">
             <h3 className="text-lg font-bold text-white">Frequently Asked Architectural Questions</h3>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-neutral-400 mt-0.5">
               Deep-dive guidance on autonomous agent key derivation, PKCS#11 standard, and FIPS 140-3 compliance.
             </p>
           </div>
@@ -741,22 +741,22 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
             ].map((faq, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-slate-800 bg-slate-950/40 overflow-hidden"
+                className="rounded-xl border border-neutral-800 bg-neutral-950/40 overflow-hidden"
               >
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full py-3.5 px-4 text-left flex justify-between items-center text-xs sm:text-sm font-semibold text-slate-200 hover:text-white hover:bg-slate-800/40 transition"
+                  className="active:scale-[0.97] w-full py-3.5 px-4 text-left flex justify-between items-center text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white hover:bg-neutral-800/40 transition"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
-                    className={`w-4 h-4 text-slate-400 transition-transform shrink-0 ml-2 ${
-                      openFaq === idx ? 'rotate-180 text-cyan-400' : ''
+                    className={`w-4 h-4 text-neutral-400 transition-transform shrink-0 ml-2 ${
+                      openFaq === idx ? 'rotate-180 text-neutral-200' : ''
                     }`}
                   />
                 </button>
                 {openFaq === idx && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-slate-400 border-t border-slate-800/60 leading-relaxed font-sans">
+                  <div className="px-4 pb-4 pt-1 text-xs text-neutral-400 border-t border-neutral-800/60 leading-relaxed font-sans">
                     {faq.a}
                   </div>
                 )}
@@ -768,21 +768,21 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
         {/* Embed Modal */}
         {isEmbedOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-            <div className="relative w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="relative w-full max-w-lg bg-neutral-900 border border-neutral-800 rounded-xl p-6 shadow-2xl space-y-4">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
-                  <Code className="w-5 h-5 text-cyan-400" />
+                  <Code className="w-5 h-5 text-neutral-200" />
                   <h3 className="text-base font-bold text-white">Embed Agent HSM Simulator</h3>
                 </div>
                 <button
                   onClick={() => setIsEmbedOpen(false)}
-                  className="text-slate-400 hover:text-white transition"
+                  className="active:scale-[0.97] text-neutral-400 hover:text-white transition"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-neutral-300">
                 Paste this iframe snippet into your engineering documentation, internal compliance wiki, or customer-facing trust portal:
               </p>
 
@@ -791,20 +791,20 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                   readOnly
                   value={embedCode}
                   rows={4}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs font-mono text-cyan-300 focus:outline-none resize-none"
+                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none resize-none"
                 />
               </div>
 
               <div className="flex items-center justify-end space-x-3 pt-2">
                 <button
                   onClick={() => setIsEmbedOpen(false)}
-                  className="px-4 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white transition"
+                  className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-medium text-neutral-400 hover:text-white transition"
                 >
                   Close
                 </button>
                 <button
                   onClick={copyEmbedCode}
-                  className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition"
+                  className="active:scale-[0.97] inline-flex items-center space-x-1.5 px-4 py-2 rounded-lg text-xs font-semibold bg-white text-black hover:bg-neutral-200 transition"
                 >
                   {hasCopiedEmbed ? (
                     <>

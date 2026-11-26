@@ -37,24 +37,24 @@ export default function EmbedAgentMlaLatentProjectionSimulator() {
   const results = useMemo(() => calculateMlaLatentProjection(inputs), [inputs]);
 
   return (
-    <div className="bg-[#07090e] text-slate-100 p-5 rounded-xl border border-slate-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Multi-Head Latent Attention Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-mla-latent-projection-simulator" />
       </Helmet>
 
       {/* Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-4">
+      <div className="flex items-center justify-between pb-3 border-b border-neutral-800/80 mb-4">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-teal-950/80 border border-teal-800/60 text-teal-400">
+          <div className="p-1.5 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200">
             <Cpu className="w-4 h-4" />
           </div>
           <div>
-            <h2 className="text-sm font-semibold text-slate-100">Multi-Head Latent Attention Simulator</h2>
-            <p className="text-[11px] text-slate-400">Low-Rank KV Projections · Decoupled RoPE · 90% VRAM Cut</p>
+            <h2 className="text-sm font-semibold text-neutral-100">Multi-Head Latent Attention Simulator</h2>
+            <p className="text-[11px] text-neutral-400">Low-Rank KV Projections · Decoupled RoPE · 90% VRAM Cut</p>
           </div>
         </div>
-        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">
+        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.04] text-neutral-200 border border-white/15">
           Tool #72
         </span>
       </div>
@@ -62,12 +62,12 @@ export default function EmbedAgentMlaLatentProjectionSimulator() {
       {/* Controls */}
       <div className="space-y-3 mb-4 text-xs">
         <div>
-          <label className="block text-slate-400 mb-1">Target Foundation Model</label>
+          <label className="block text-neutral-400 mb-1">Target Foundation Model</label>
           <select
             value={modelArchitecture}
             onChange={(e) => setModelArchitecture(e.target.value as MlaModelArchitecture)}
             aria-label="Target Foundation Model"
-            className="w-full bg-slate-900 border border-slate-700/80 rounded px-2.5 py-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded px-2.5 py-1.5 text-neutral-200"
           >
             <option value="deepseek_v3_671b">DeepSeek-V3 671B (MLA Native 512-Dim Latent)</option>
             <option value="deepseek_r1_reasoning">DeepSeek-R1 (Reasoning Swarms + MLA)</option>
@@ -77,12 +77,12 @@ export default function EmbedAgentMlaLatentProjectionSimulator() {
         </div>
 
         <div>
-          <label className="block text-slate-400 mb-1">Attention Mechanism</label>
+          <label className="block text-neutral-400 mb-1">Attention Mechanism</label>
           <select
             value={attentionMechanism}
             onChange={(e) => setAttentionMechanism(e.target.value as AttentionMechanismType)}
             aria-label="Attention Mechanism"
-            className="w-full bg-slate-900 border border-slate-700/80 rounded px-2.5 py-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded px-2.5 py-1.5 text-neutral-200"
           >
             <option value="mla_low_rank_latent">Multi-Head Latent Attention (MLA Low-Rank)</option>
             <option value="gqa_grouped_query">Grouped-Query Attention (GQA 8-Group Baseline)</option>
@@ -91,12 +91,12 @@ export default function EmbedAgentMlaLatentProjectionSimulator() {
         </div>
 
         <div>
-          <label className="block text-slate-400 mb-1">Quantization Precision</label>
+          <label className="block text-neutral-400 mb-1">Quantization Precision</label>
           <select
             value={precisionMode}
             onChange={(e) => setPrecisionMode(e.target.value as MlaPrecisionMode)}
             aria-label="Quantization Precision"
-            className="w-full bg-slate-900 border border-slate-700/80 rounded px-2.5 py-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded px-2.5 py-1.5 text-neutral-200"
           >
             <option value="fp8">FP8 Latent KV (1 Byte/Element - Optimal)</option>
             <option value="fp16">FP16 Uncompressed Latent (2 Bytes/Element)</option>
@@ -107,42 +107,42 @@ export default function EmbedAgentMlaLatentProjectionSimulator() {
 
       {/* Metrics Grid */}
       <div className="grid grid-cols-2 gap-2 mb-4 text-xs font-mono">
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">Active KV Footprint</div>
-          <div className="text-sm font-bold text-slate-200">
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">Active KV Footprint</div>
+          <div className="text-sm font-bold text-neutral-200">
             {attentionMechanism === 'mla_low_rank_latent'
               ? `${results.mlaCompressedKvGb} GB`
               : attentionMechanism === 'gqa_grouped_query'
               ? `${results.gqaEquivalentKvGb} GB`
               : `${results.uncompressedMhaKvGb} GB`}
           </div>
-          <div className="text-[10px] text-slate-500">Per 128k Stream</div>
+          <div className="text-[10px] text-neutral-500">Per 128k Stream</div>
         </div>
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">VRAM Compression</div>
-          <div className="text-sm font-bold text-teal-400">{results.vramCompressionFactor}x</div>
-          <div className="text-[10px] text-slate-500">{results.vramReclaimedGb} GB Saved</div>
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">VRAM Compression</div>
+          <div className="text-sm font-bold text-white">{results.vramCompressionFactor}x</div>
+          <div className="text-[10px] text-neutral-500">{results.vramReclaimedGb} GB Saved</div>
         </div>
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">Stream Concurrency</div>
-          <div className="text-sm font-bold text-emerald-400">{results.maxConcurrentStreamsPerNode} streams</div>
-          <div className="text-[10px] text-slate-500">Per 8-GPU Node</div>
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">Stream Concurrency</div>
+          <div className="text-sm font-bold text-white">{results.maxConcurrentStreamsPerNode} streams</div>
+          <div className="text-[10px] text-neutral-500">Per 8-GPU Node</div>
         </div>
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">Hardware TCO Savings</div>
-          <div className="text-sm font-bold text-cyan-400">{results.formattedHardwareSavings}</div>
-          <div className="text-[10px] text-slate-500">Cluster CapEx Delta</div>
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">Hardware TCO Savings</div>
+          <div className="text-sm font-bold text-white">{results.formattedHardwareSavings}</div>
+          <div className="text-[10px] text-neutral-500">Cluster CapEx Delta</div>
         </div>
       </div>
 
       {/* Footer / CTA */}
-      <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
-        <span className="text-slate-500">Powered by Elesium Sovereign Systems</span>
+      <div className="pt-3 border-t border-neutral-800/80 flex items-center justify-between text-[11px]">
+        <span className="text-neutral-500">Powered by Elesium Sovereign Systems</span>
         <a
           href="https://elesium.online/tools/enterprise-agent-mla-latent-projection-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-teal-400 hover:text-teal-300 font-medium"
+          className="inline-flex items-center gap-1 text-neutral-200 hover:text-white font-medium"
         >
           Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>

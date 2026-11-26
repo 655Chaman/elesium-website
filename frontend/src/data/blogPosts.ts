@@ -12134,7 +12134,7 @@ export const blogPosts: BlogPost[] = [
   "author": {
     "name": "Chaman Shah",
     "role": "Principal AI Systems Architect",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&q=80"
+    "avatar": "https://elesium.online/og-image.png"
   },
   "sections": [
     {
@@ -12252,7 +12252,7 @@ export const blogPosts: BlogPost[] = [
   "author": {
     "name": "Chaman Shah",
     "role": "Principal AI Systems Architect",
-    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&q=80"
+    "avatar": "https://elesium.online/og-image.png"
   },
   "sections": [
     {

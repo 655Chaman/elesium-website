@@ -58,9 +58,9 @@ export default function EnterpriseAgentPostQuantumSimulator() {
     return simulatePostQuantum(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-post-quantum-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-post-quantum-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedCode = () => {
@@ -102,7 +102,7 @@ ${results.nistSecurityLevel >= 3
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Post-Quantum Cryptography & ML-KEM/Dilithium State Attestation Simulator | Elesium</title>
         <meta
@@ -115,24 +115,24 @@ ${results.nistSecurityLevel >= 3
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Header Breadcrumbs & Title */}
         <div className="space-y-4">
-          <div className="flex items-center space-x-2 text-sm text-cyan-400 font-mono">
+          <div className="flex items-center space-x-2 text-sm text-neutral-200 font-mono">
             <a href="/solutions/" className="hover:underline">Solutions</a>
             <span>/</span>
             <a href="/resources/" className="hover:underline">Tools</a>
             <span>/</span>
-            <span className="text-slate-400">Post-Quantum Cryptography Simulator</span>
+            <span className="text-neutral-400">Post-Quantum Cryptography Simulator</span>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-slate-800 pb-8">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-neutral-800 pb-8">
             <div className="space-y-2 max-w-3xl">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
                 <Binary className="w-3.5 h-3.5 mr-1" />
                 Tool #31 · Post-Quantum Lattice Cryptography &amp; NIST FIPS 203/204
               </div>
               <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                 Enterprise Agent Post-Quantum Cryptography &amp; ML-KEM/Dilithium Simulator
               </h1>
-              <p className="text-slate-400 text-base leading-relaxed">
+              <p className="text-neutral-400 text-base leading-relaxed">
                 Benchmark autonomous agent state checkpoint encryption against cryptanalytically relevant quantum computers (CRQC).
                 Simulate NIST FIPS 203 (ML-KEM / Kyber-768) and FIPS 204 (ML-DSA / Dilithium) lattice-based Module-LWE attestation to eliminate Harvest Now, Decrypt Later (HNDL) threats.
               </p>
@@ -141,27 +141,27 @@ ${results.nistSecurityLevel >= 3
             <div className="flex items-center space-x-3 shrink-0">
               <button
                 onClick={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
-                className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono font-medium transition"
+                className="active:scale-[0.97] px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition"
               >
-                Currency: <span className="text-cyan-400 font-bold">{currency}</span>
+                Currency: <span className="text-white font-bold">{currency}</span>
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition"
               >
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Tool</span>
               </button>
               <button
                 onClick={copyExecutiveMemo}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-medium shadow-lg shadow-cyan-950/50 transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}</span>
@@ -173,10 +173,10 @@ ${results.nistSecurityLevel >= 3
         {/* Status Alert Banner */}
         <div className={`p-4 rounded-xl border flex items-center justify-between gap-4 ${
           results.statusClassification === 'POST_QUANTUM_RESILIENT'
-            ? 'bg-emerald-950/30 border-emerald-800/50 text-emerald-300'
+            ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : results.statusClassification === 'TRANSITIONAL_HYBRID'
-            ? 'bg-cyan-950/30 border-cyan-800/50 text-cyan-300'
-            : 'bg-rose-950/30 border-rose-800/50 text-rose-300'
+            ? 'bg-white/[0.05] border-white/15 text-neutral-200'
+            : 'bg-red-950/30 border-red-800/50 text-red-300'
         }`}>
           <div className="flex items-center space-x-3">
             {results.nistSecurityLevel >= 3 ? (
@@ -203,19 +203,19 @@ ${results.nistSecurityLevel >= 3
         {/* Main Interactive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-              <Sliders className="w-5 h-5 text-cyan-400" />
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
+              <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-base font-semibold text-white">Cryptographic Lattice Parameters</h2>
             </div>
 
             {/* Key Encapsulation Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">Key Encapsulation Mechanism (KEM):</label>
+              <label className="text-xs text-neutral-300 font-medium block">Key Encapsulation Mechanism (KEM):</label>
               <select
                 value={cryptographicSuite}
                 onChange={e => setCryptographicSuite(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="legacy_rsa_ecc">Legacy RSA-2048 / ECDH (Level 0 - Shor Vulnerable)</option>
                 <option value="hybrid_x25519_kyber768">Hybrid X25519 + ML-KEM-768 (Transitional Defense)</option>
@@ -226,11 +226,11 @@ ${results.nistSecurityLevel >= 3
 
             {/* Digital Signature Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">Digital Signature Algorithm (DSA):</label>
+              <label className="text-xs text-neutral-300 font-medium block">Digital Signature Algorithm (DSA):</label>
               <select
                 value={digitalSignatureScheme}
                 onChange={e => setDigitalSignatureScheme(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="ecdsa_p256">Legacy ECDSA P-256 (Level 0 - Broken by Shor)</option>
                 <option value="ed25519">Legacy Ed25519 (Level 0 - Broken by Shor)</option>
@@ -243,8 +243,8 @@ ${results.nistSecurityLevel >= 3
             {/* Daily Agent State Snapshots Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Daily State Checkpoints:</span>
-                <span className="font-mono text-cyan-400 font-bold">{dailyStateSnapshots.toLocaleString()} snapshots</span>
+                <span className="text-neutral-300 font-medium">Daily State Checkpoints:</span>
+                <span className="font-mono text-white font-bold">{dailyStateSnapshots.toLocaleString()} snapshots</span>
               </div>
               <input
                 type="range"
@@ -253,9 +253,9 @@ ${results.nistSecurityLevel >= 3
                 step="500"
                 value={dailyStateSnapshots}
                 onChange={e => setDailyStateSnapshots(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>500 (Batch)</span>
                 <span>10,000 (Standard)</span>
                 <span>50,000 (High-Frequency)</span>
@@ -265,8 +265,8 @@ ${results.nistSecurityLevel >= 3
             {/* Retrospective Legal Horizon Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Legal Retrospective Secrecy Horizon:</span>
-                <span className="font-mono text-cyan-400 font-bold">{retrospectiveSecrecyHorizonYears} Years</span>
+                <span className="text-neutral-300 font-medium">Legal Retrospective Secrecy Horizon:</span>
+                <span className="font-mono text-white font-bold">{retrospectiveSecrecyHorizonYears} Years</span>
               </div>
               <input
                 type="range"
@@ -275,9 +275,9 @@ ${results.nistSecurityLevel >= 3
                 step="1"
                 value={retrospectiveSecrecyHorizonYears}
                 onChange={e => setRetrospectiveSecrecyHorizonYears(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>3 Years (Commercial)</span>
                 <span>10 Years (DPDP / BFSI)</span>
                 <span>20 Years (Defense / Health)</span>
@@ -287,8 +287,8 @@ ${results.nistSecurityLevel >= 3
             {/* Projected Quantum Arrival Year Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Projected CRQC Quantum Computer Arrival:</span>
-                <span className="font-mono text-rose-400 font-bold">Year {quantumAdversaryArrivalYear} (in {quantumAdversaryArrivalYear - 2026} yrs)</span>
+                <span className="text-neutral-300 font-medium">Projected CRQC Quantum Computer Arrival:</span>
+                <span className="font-mono text-red-400 font-bold">Year {quantumAdversaryArrivalYear} (in {quantumAdversaryArrivalYear - 2026} yrs)</span>
               </div>
               <input
                 type="range"
@@ -297,9 +297,9 @@ ${results.nistSecurityLevel >= 3
                 step="1"
                 value={quantumAdversaryArrivalYear}
                 onChange={e => setQuantumAdversaryArrivalYear(Number(e.target.value))}
-                className="w-full accent-rose-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>2028 (Aggressive)</span>
                 <span>2031 (Consensus)</span>
                 <span>2036 (Conservative)</span>
@@ -307,22 +307,22 @@ ${results.nistSecurityLevel >= 3
             </div>
 
             {/* Footprint Summary Card */}
-            <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2 text-xs">
-              <div className="flex items-center space-x-2 text-cyan-400 font-semibold mb-1">
+            <div className="p-4 rounded-xl bg-neutral-950 border border-neutral-800 space-y-2 text-xs">
+              <div className="flex items-center space-x-2 text-white font-semibold mb-1">
                 <KeyRound className="w-4 h-4" />
                 <span>Cryptographic Key &amp; Envelope Footprint</span>
               </div>
-              <div className="flex justify-between text-slate-400">
+              <div className="flex justify-between text-neutral-400">
                 <span>Combined Public Key:</span>
                 <span className="font-mono text-white font-bold">{results.publicKeySizeBytes.toLocaleString()} Bytes</span>
               </div>
-              <div className="flex justify-between text-slate-400">
+              <div className="flex justify-between text-neutral-400">
                 <span>Checkpoint Envelope / Sig:</span>
                 <span className="font-mono text-white font-bold">{results.ciphertextOrSignatureSizeBytes.toLocaleString()} Bytes</span>
               </div>
-              <div className="flex justify-between text-slate-400">
+              <div className="flex justify-between text-neutral-400">
                 <span>Daily State Overhead:</span>
-                <span className="font-mono text-cyan-300 font-bold">{results.stateCheckpointBandwidthOverheadKb} KB</span>
+                <span className="font-mono text-white font-bold">{results.stateCheckpointBandwidthOverheadKb} KB</span>
               </div>
             </div>
           </div>
@@ -330,31 +330,31 @@ ${results.nistSecurityLevel >= 3
           {/* Visualization & Metrics Column (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             {/* Live Interactive SVG Lattice Polynomial Ring Noise Plot */}
-            <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
-                  <Activity className="w-5 h-5 text-cyan-400" />
+                  <Activity className="w-5 h-5 text-neutral-200" />
                   <h3 className="text-base font-semibold text-white">Lattice Ring Polynomial Modular Noise &amp; Error Bounds</h3>
                 </div>
                 <div className="flex items-center space-x-4 text-xs font-mono">
-                  <span className="flex items-center space-x-1.5 text-emerald-400">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
+                  <span className="flex items-center space-x-1.5 text-neutral-200">
+                    <span className="w-2.5 h-2.5 rounded-full bg-neutral-400 inline-block" />
                     <span>Correctable Lattice Error</span>
                   </span>
-                  <span className="flex items-center space-x-1.5 text-rose-400">
-                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block" />
+                  <span className="flex items-center space-x-1.5 text-red-400">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
                     <span>Quantum Inversion Spike</span>
                   </span>
                 </div>
               </div>
 
               {/* Interactive SVG Canvas */}
-              <div className="relative w-full aspect-[16/9] bg-slate-950 rounded-xl border border-slate-800/80 overflow-hidden flex items-center justify-center p-4">
+              <div className="relative w-full aspect-[16/9] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex items-center justify-center p-4">
                 <svg viewBox="0 -30 320 60" className="w-full h-full">
                   {/* Grid & Centered Axis */}
-                  <line x1="0" y1="0" x2="320" y2="0" stroke="#1e293b" strokeWidth="1" />
-                  <line x1="0" y1="-15" x2="320" y2="-15" stroke="#334155" strokeWidth="0.8" strokeDasharray="3,3" />
-                  <line x1="0" y1="15" x2="320" y2="15" stroke="#334155" strokeWidth="0.8" strokeDasharray="3,3" />
+                  <line x1="0" y1="0" x2="320" y2="0" stroke="#262626" strokeWidth="1" />
+                  <line x1="0" y1="-15" x2="320" y2="-15" stroke="#262626" strokeWidth="0.8" strokeDasharray="3,3" />
+                  <line x1="0" y1="15" x2="320" y2="15" stroke="#262626" strokeWidth="0.8" strokeDasharray="3,3" />
 
                   {/* Noise Ceiling Bounds */}
                   <rect x="0" y="-15" width="320" height="30" fill="rgba(6, 182, 212, 0.04)" />
@@ -371,14 +371,14 @@ ${results.nistSecurityLevel >= 3
                           y={y}
                           width="6"
                           height={Math.max(1, height)}
-                          fill={pt.isCorrectable ? '#10b981' : '#f43f5e'}
+                          fill={pt.isCorrectable ? '#ffffff' : '#a3a3a3'}
                           rx="1.5"
                         />
                         <circle
                           cx={x}
                           cy={pt.errorValue >= 0 ? y : y + height}
                           r="1.8"
-                          fill={pt.isCorrectable ? '#34d399' : '#fb7185'}
+                          fill={pt.isCorrectable ? '#a3a3a3' : '#a3a3a3'}
                         />
                       </g>
                     );
@@ -386,89 +386,89 @@ ${results.nistSecurityLevel >= 3
                 </svg>
 
                 {/* Overlaid Summary Badge */}
-                <div className="absolute bottom-3 left-3 bg-slate-900/90 border border-slate-800 rounded-lg px-3 py-1.5 text-[11px] font-mono text-slate-300">
-                  Ring Modulus: <span className="text-cyan-400 font-bold">q = 3329</span> · Lattice Dimension: <span className="text-cyan-400 font-bold">k = 3</span>
+                <div className="absolute bottom-3 left-3 bg-neutral-900/90 border border-neutral-800 rounded-lg px-3 py-1.5 text-[11px] font-mono text-neutral-300">
+                  Ring Modulus: <span className="text-white font-bold">q = 3329</span> · Lattice Dimension: <span className="text-white font-bold">k = 3</span>
                 </div>
               </div>
             </div>
 
             {/* Key Output Metrics Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">NIST Security Level</span>
-                <span className="text-2xl font-extrabold font-mono text-cyan-400">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">NIST Security Level</span>
+                <span className="text-2xl font-extrabold font-mono text-neutral-200">
                   Level {results.nistSecurityLevel}
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">FIPS 203 / 204 Standard</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">FIPS 203 / 204 Standard</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">HNDL Exposure Risk</span>
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">HNDL Exposure Risk</span>
                 <span className={`text-2xl font-extrabold font-mono ${
                   results.quantumBreachVulnerabilityRiskPercent < 1
-                    ? 'text-emerald-400'
-                    : 'text-rose-400'
+                    ? 'text-neutral-200'
+                    : 'text-red-400'
                 }`}>
                   {results.quantumBreachVulnerabilityRiskPercent}%
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">Harvest Now Decrypt Later</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Harvest Now Decrypt Later</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Exposure Overlap</span>
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">Exposure Overlap</span>
                 <span className={`text-2xl font-extrabold font-mono ${
                   results.hndlExposureWindowYears === 0
-                    ? 'text-emerald-400'
+                    ? 'text-neutral-200'
                     : 'text-amber-400'
                 }`}>
                   {results.hndlExposureWindowYears} Yrs
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">Horizon vs Quantum Arrival</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Horizon vs Quantum Arrival</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">NTT Attestation Latency</span>
-                <span className="text-2xl font-extrabold font-mono text-slate-200">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">NTT Attestation Latency</span>
+                <span className="text-2xl font-extrabold font-mono text-neutral-200">
                   {results.nttPolynomialLatencyMs} ms
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">Sub-millisecond polynomial</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Sub-millisecond polynomial</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Quantum Hardness</span>
-                <span className="text-2xl font-extrabold font-mono text-cyan-400">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">Quantum Hardness</span>
+                <span className="text-2xl font-extrabold font-mono text-neutral-200">
                   {results.quantumSecurityMarginBits} Bits
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">SVP / CVP lattice hardness</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">SVP / CVP lattice hardness</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Annual Loss Prevented</span>
-                <span className="text-2xl font-extrabold font-mono text-emerald-400">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">Annual Loss Prevented</span>
+                <span className="text-2xl font-extrabold font-mono text-neutral-200">
                   {currency === 'INR' ? '₹' : '$'}{(results.annualStatutoryLiabilityPrevented / (currency === 'INR' ? 10000000 : 1000000)).toFixed(1)}
                   {currency === 'INR' ? ' Cr' : 'M'}
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">DPDP statutory liability</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">DPDP statutory liability</span>
               </div>
             </div>
 
             {/* Turnkey Deployment Card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-950/40 via-slate-900 to-slate-950 border border-cyan-800/40 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="p-6 rounded-xl bg-neutral-950 border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="space-y-1 text-center sm:text-left">
                 <h4 className="text-lg font-bold text-white">Deploy Sovereign Post-Quantum Enclaves</h4>
-                <p className="text-xs text-slate-400 max-w-md">
+                <p className="text-xs text-neutral-400 max-w-md">
                   Deploy hardened multi-agent state machines with NIST FIPS 203 ML-KEM-768 and FIPS 204 ML-DSA inside your private AWS/Azure/GCP VPC enclaves.
                 </p>
               </div>
               <ExpandableScreen>
-                <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold shadow-lg shadow-cyan-950/60 transition flex items-center space-x-2 shrink-0">
+                <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-lg transition flex items-center space-x-2 shrink-0">
                   <span>Schedule Architecture Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </ExpandableScreenTrigger>
                 <ExpandableScreenContent>
                   <div className="max-w-2xl mx-auto p-6 space-y-6">
                     <h3 className="text-2xl font-bold text-white">Schedule Private VPC Post-Quantum Audit</h3>
-                    <p className="text-sm text-slate-400">
+                    <p className="text-sm text-neutral-400">
                       Engage Elesium's Principal AI Systems Architects to audit your enterprise agent state persistence, TLS pipelines, and database checkpoints for post-quantum lattice readiness.
                     </p>
                     <MandateApplicationForm />
@@ -480,47 +480,47 @@ ${results.nistSecurityLevel >= 3
         </div>
 
         {/* Technical Architecture & Algorithm Reference */}
-        <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 backdrop-blur-sm space-y-6">
-          <div className="border-b border-slate-800 pb-4">
+        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-8 backdrop-blur-sm space-y-6">
+          <div className="border-b border-neutral-800 pb-4">
             <h3 className="text-xl font-bold text-white flex items-center space-x-2">
-              <Binary className="w-5 h-5 text-cyan-400" />
+              <Binary className="w-5 h-5 text-neutral-200" />
               <span>Mathematical Foundations: Module-LWE Lattice Cryptography</span>
             </h3>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-neutral-400 mt-1">
               Rigorous polynomial ring mathematics governing NIST FIPS 203 (ML-KEM) and FIPS 204 (ML-DSA).
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed text-slate-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed text-neutral-300">
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-cyan-300">1. Module Learning With Errors (M-LWE) Hardness</h4>
+              <h4 className="text-sm font-semibold text-white">1. Module Learning With Errors (M-LWE) Hardness</h4>
               <p>
                 Classical asymmetric algorithms (RSA and ECC) rely on the integer factorization and discrete logarithm problems, both solvable in polynomial time via Shor's algorithm on a quantum computer.
                 ML-KEM and ML-DSA base their security on finding short vectors in high-dimensional geometric lattices:
               </p>
-              <div className="p-3 rounded-lg bg-slate-950 font-mono text-[11px] text-cyan-300 border border-slate-800">
+              <div className="p-3 rounded-lg bg-neutral-950 font-mono text-[11px] text-neutral-200 border border-neutral-800">
                 {"A * s + e = t (mod q) in R_q^k"}
               </div>
-              <p className="text-slate-400">
+              <p className="text-neutral-400">
                 Where A is a uniformly random polynomial matrix, s is the secret key vector, e is a small error noise vector sampled from a centered binomial distribution, and q = 3329. Recovering s from (A, t) requires solving the Shortest Vector Problem (SVP), which is conjectured to be exponentially hard for both classical and quantum computers.
               </p>
             </div>
 
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-cyan-300">2. Harvest Now, Decrypt Later (HNDL) Threat Vector</h4>
+              <h4 className="text-sm font-semibold text-white">2. Harvest Now, Decrypt Later (HNDL) Threat Vector</h4>
               <p>
                 Adversaries are currently intercepting and archiving encrypted enterprise AI agent communication, API tokens, and confidential financial database checkpoints.
               </p>
-              <ul className="space-y-1.5 list-disc list-inside text-slate-400">
-                <li><strong className="text-slate-200">The Overlap Risk:</strong> If sensitive agent audit logs must legally remain confidential for 10 years, and quantum computers break RSA/ECC within 5 years, data archived today will be exposed within its statutory lifetime.</li>
-                <li><strong className="text-slate-200">DPDP Act Section 8(4):</strong> Mandates reasonable security safeguards to prevent personal data compromise. Relying on deprecated classical cryptography creates existential breach liability up to ₹250 Crores.</li>
+              <ul className="space-y-1.5 list-disc list-inside text-neutral-400">
+                <li><strong className="text-neutral-200">The Overlap Risk:</strong> If sensitive agent audit logs must legally remain confidential for 10 years, and quantum computers break RSA/ECC within 5 years, data archived today will be exposed within its statutory lifetime.</li>
+                <li><strong className="text-neutral-200">DPDP Act Section 8(4):</strong> Mandates reasonable security safeguards to prevent personal data compromise. Relying on deprecated classical cryptography creates existential breach liability up to ₹250 Crores.</li>
               </ul>
             </div>
           </div>
         </div>
 
         {/* Technical FAQ Accordion */}
-        <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 backdrop-blur-sm space-y-4">
+        <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-8 backdrop-blur-sm space-y-4">
           <h3 className="text-lg font-bold text-white mb-2">Frequently Asked Technical Questions</h3>
           <div className="space-y-3">
             {[
@@ -537,16 +537,16 @@ ${results.nistSecurityLevel >= 3
                 a: "Because of 'Harvest Now, Decrypt Later' (HNDL). Adversarial actors capture encrypted ciphertext today to decrypt once quantum hardware matures. If your enterprise data has an operational or legal lifespan of 5+ years, it is already at risk unless protected by post-quantum lattice primitives."
               }
             ].map((item, idx) => (
-              <div key={idx} className="border border-slate-800 rounded-xl overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-slate-200 hover:text-white transition"
+                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left text-xs sm:text-sm font-semibold text-neutral-200 hover:text-white transition"
                 >
                   <span>{item.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-slate-400 transform transition-transform ${openFaq === idx ? 'rotate-180 text-cyan-400' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-neutral-400 transform transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
                 </button>
                 {openFaq === idx && (
-                  <div className="px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                  <div className="px-4 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                     {item.a}
                   </div>
                 )}
@@ -559,31 +559,31 @@ ${results.nistSecurityLevel >= 3
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+            <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-base font-bold text-white flex items-center space-x-2">
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Post-Quantum Cryptography Simulator</span>
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-lg"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-neutral-400">
               Embed this interactive simulator on your technical blog or developer documentation with an automatic watermark backlink to Elesium.
             </p>
             <div className="relative">
               <textarea
                 readOnly
                 value={embedCode}
-                className="w-full h-32 bg-slate-950 border border-slate-800 rounded-xl p-3 text-[11px] font-mono text-cyan-300 focus:outline-none resize-none"
+                className="w-full h-32 bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-[11px] font-mono text-neutral-200 focus:outline-none resize-none"
               />
               <button
                 onClick={copyEmbedCode}
-                className="absolute top-2 right-2 px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-[11px] font-semibold flex items-center space-x-1 transition shadow"
+                className="active:scale-[0.97] absolute top-2 right-2 px-3 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-[11px] font-semibold flex items-center space-x-1 transition shadow"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Copied!' : 'Copy Code'}</span>

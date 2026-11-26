@@ -63,7 +63,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         industry: "Enterprise Engineering & BFSI",
         category: "System Architecture",
         videoType: "masterclass",
-        heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        heroImage: "https://elesium.online/og-image.png",
         executiveSummary: "A comprehensive architectural teardown of how Indian enterprises are moving away from fragile prompt wrappers and monolithic RPA bots toward deterministic, multi-agent state machines deployed inside private, zero-retention cloud VPCs. This session covers state reconciliation, DPDP Act 2023 compliance, and achieving balance sheet cash-flow ROI in 90 days.",
         roiMetrics: [
             { label: "Turnaround Cut", value: "65%", detail: "From 48h to 18 mins", color: "#00D7FF" },
@@ -135,7 +135,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         industry: "Enterprise Software & SaaS",
         category: "Framework Comparison",
         videoType: "masterclass",
-        heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        heroImage: "https://elesium.online/og-image.png",
         executiveSummary: "A technical comparison between low-code workflow automation tools (n8n, Zapier) and programmatic agentic orchestration frameworks (LangGraph, AutoGen). We analyze error recovery, state persistence, schema verification, and where each framework belongs in a mission-critical enterprise stack.",
         roiMetrics: [
             { label: "Error Recovery", value: "99.9%", detail: "Zero-loss state persistence", color: "#00D7FF" },
@@ -203,7 +203,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         industry: "BFSI & Non-Banking Financial Corporations",
         category: "Case Study & Engineering Breakdown",
         videoType: "masterclass",
-        heroImage: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+        heroImage: "https://elesium.online/og-image.png",
         executiveSummary: "A technical breakdown of Elesium's production loan underwriting pipeline deployed for an Indian NBFC. Learn how custom Vision-Language extraction models and multi-agent reconciliation cross-verify GST returns, bank statements, and ITR filings to auto-generate Credit Appraisal Memos (CAMs) with audited accuracy.",
         roiMetrics: [
             { label: "Cycle Time", value: "18 Mins", detail: "Down from 48 hours", color: "#00D7FF" },
@@ -273,7 +273,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         industry: "Enterprise AI & Systems Architecture",
         category: "Pricing & Architectural Economics",
         videoType: "short",
-        heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+        heroImage: "https://elesium.online/og-image.png",
         executiveSummary: "An architectural breakdown of AI automation cost in India for enterprises, comparing pilot sprints, multi-agent suites, and dedicated engineering pods with a hard 90-day cash-flow ROI guarantee.",
         roiMetrics: [
             { label: "Audited ROI", value: "3.5x", detail: "Guaranteed in 90 days", color: "#00D7FF" },
@@ -339,7 +339,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "AI automation agency for logistics",
         "keyBenefit": "Autonomous Fleet Dispatch & ERP Synchronization",
-        "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Logistics Directors & Fleet VP",
         "executiveSummary": "A 30-second technical architecture breakdown of AI automation agency for logistics for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -489,7 +489,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "autonomous dispatch software for freight carriers",
         "keyBenefit": "Real-Time Telematics & Dynamic Route Planning",
-        "heroImage": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Fleet Operations Executives",
         "executiveSummary": "A 30-second technical architecture breakdown of autonomous dispatch software for freight carriers for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -639,7 +639,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "deterministic warehouse automation for 3PL providers",
         "keyBenefit": "WMS State Machines & Inventory Accuracy",
-        "heroImage": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "3PL Managing Directors & Warehouse COOs",
         "executiveSummary": "A 30-second technical architecture breakdown of deterministic warehouse automation for 3PL providers for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -789,7 +789,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "fleet route optimization agents for supply chain directors",
         "keyBenefit": "Multi-Depot Routing & Fuel Cost Elimination",
-        "heroImage": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Supply Chain Directors & Fleet Controllers",
         "executiveSummary": "A 30-second technical architecture breakdown of fleet route optimization agents for supply chain directors for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -939,7 +939,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "sub-200ms ledger reconciliation agents for fintechs",
         "keyBenefit": "Cryptographic Settlement & Zero Ledger Drift",
-        "heroImage": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Fintech CTOs & Treasury Controllers",
         "executiveSummary": "A 30-second technical architecture breakdown of sub-200ms ledger reconciliation agents for fintechs for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -1089,7 +1089,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "AML compliance automation software for private banks",
         "keyBenefit": "Sanctions Screening & Real-Time SAR Generation",
-        "heroImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Head of Financial Crime Compliance",
         "executiveSummary": "A 30-second technical architecture breakdown of AML compliance automation software for private banks for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -1239,7 +1239,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "deterministic loan underwriting agents for BFSI",
         "keyBenefit": "Sub-Second Credit Scoring & RBI Compliance",
-        "heroImage": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Risk Officers & Credit Heads",
         "executiveSummary": "A 30-second technical architecture breakdown of deterministic loan underwriting agents for BFSI for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -1389,7 +1389,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "predictive maintenance multi-agent systems for manufacturing plants",
         "keyBenefit": "Vibration Telemetry Analysis & Zero Unplanned Downtime",
-        "heroImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Plant Operations Directors & Chief Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of predictive maintenance multi-agent systems for manufacturing plants for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -1539,7 +1539,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "computer vision defect inspection agents for automotive suppliers",
         "keyBenefit": "Sub-Millimeter Surface Defect Classification",
-        "heroImage": "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Automotive Quality Assurance Directors",
         "executiveSummary": "A 30-second technical architecture breakdown of computer vision defect inspection agents for automotive suppliers for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -1689,7 +1689,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "prior authorization automation software for healthcare CTOs",
         "keyBenefit": "Clinical Guidelines Verification & Sub-Hour Claims Decisioning",
-        "heroImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Healthcare CTOs & Revenue Cycle VPs",
         "executiveSummary": "A 30-second technical architecture breakdown of prior authorization automation software for healthcare CTOs for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -1839,7 +1839,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "enterprise AI ROI calculator",
         "keyBenefit": "Model Labor Savings & Capital Payback",
-        "heroImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Enterprise CFOs, CIOs & Digital Transformation VPs",
         "executiveSummary": "A 30-second technical architecture breakdown of enterprise AI ROI calculator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -1989,7 +1989,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "industrial iot opc ua agentic automation",
         "keyBenefit": "Edge Industrial IoT Protocol Translation & Sub-10ms OPC-UA Ingestion",
-        "heroImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Plant Operations Directors & Chief Automation Officers",
         "executiveSummary": "A 30-second technical architecture breakdown of industrial iot opc ua agentic automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -2139,7 +2139,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "tally erp llm agent automation",
         "keyBenefit": "Autonomous TallyPrime XML Ingestion & GST Rule 36(4) Reconciliation",
-        "heroImage": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Financial Officers & Tax Controllers",
         "executiveSummary": "A 30-second technical architecture breakdown of tally erp llm agent automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -2289,7 +2289,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "model context protocol multi server routing",
         "keyBenefit": "Dynamic Tool Routing, Speculative Execution & Context Pruning",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "VP of Enterprise AI & Principal Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of model context protocol multi server routing for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -2439,7 +2439,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "chunked prefill radix attention kv cache",
         "keyBenefit": "Sub-15ms TTFT via Radix Tree Prefix Cache Sharing & Chunked Prefill",
-        "heroImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "AI Infrastructure Leads & LLMOps Directors",
         "executiveSummary": "A 30-second technical architecture breakdown of chunked prefill radix attention kv cache for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -2589,7 +2589,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "vector database sharding hnsw indexing",
         "keyBenefit": "Sub-20ms P99 Vector Search across 100M+ Sovereign Embeddings",
-        "heroImage": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Data Officers & Enterprise Search Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of vector database sharding hnsw indexing for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -2739,7 +2739,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "aiops incident auto remediation chaos simulator",
         "keyBenefit": "Autonomous Chaos Fault Injection & Sub-60s Incident Auto-Remediation",
-        "heroImage": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "VP of Infrastructure & Chief Site Reliability Officers",
         "executiveSummary": "A 30-second technical architecture breakdown of aiops incident auto remediation chaos simulator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -2889,7 +2889,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "nemo guardrails prompt injection firewall",
         "keyBenefit": "Multi-Layered Colang Guardrails & Real-Time Jailbreak Interception",
-        "heroImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Information Security Officers (CISOs) & Risk Officers",
         "executiveSummary": "A 30-second technical architecture breakdown of nemo guardrails prompt injection firewall for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -3039,7 +3039,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "ondc retail inventory multi ecosystem automation",
         "keyBenefit": "Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization",
-        "heroImage": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Omnichannel Officers & E-Commerce VPs",
         "executiveSummary": "A 30-second technical architecture breakdown of ondc retail inventory multi ecosystem automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -3189,7 +3189,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "21 cfr part 11 electronic batch record automation",
         "keyBenefit": "Cryptographic SHA-256 Audit Trails & US FDA GAMP 5 Compliance",
-        "heroImage": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "VP of Quality Assurance & Regulatory Compliance Directors",
         "executiveSummary": "A 30-second technical architecture breakdown of 21 cfr part 11 electronic batch record automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -3339,7 +3339,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "abdm fhir health information exchange privacy",
         "keyBenefit": "Ayushman Bharat Digital Mission (ABDM) M1/M2/M3 Consent & FHIR Privacy",
-        "heroImage": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Medical Information Officers & Hospital CTOs",
         "executiveSummary": "A 30-second technical architecture breakdown of abdm fhir health information exchange privacy for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -3489,7 +3489,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "hsm pkcs11 air gapped key derivation",
         "keyBenefit": "FIPS 140-3 Level 4 Hardware Security Module Key Derivation",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Cryptography Officers & Head of Core Banking Security",
         "executiveSummary": "A 30-second technical architecture breakdown of hsm pkcs11 air gapped key derivation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -3639,7 +3639,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "neuromorphic snn event driven compute simulator",
         "keyBenefit": "40x Energy Reduction via Spiking Neural Network Spike-Timing Plasticity",
-        "heroImage": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Science Officers & Edge AI Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of neuromorphic snn event driven compute simulator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -3789,7 +3789,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "smart contract formal verification agent",
         "keyBenefit": "Automated SMT Theorem Proving & ZK Invariant Verification",
-        "heroImage": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "DeFi Protocol Architects & Chief Risk Officers",
         "executiveSummary": "A 30-second technical architecture breakdown of smart contract formal verification agent for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -3939,7 +3939,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "gpu vram pagedattention allocator",
         "keyBenefit": "Slashing KV-Cache VRAM Fragmentation & 74% TTFT Latency Cut",
-        "heroImage": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Platform Directors",
         "executiveSummary": "A 30-second technical architecture breakdown of gpu vram pagedattention allocator for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -4089,7 +4089,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "speculative decoding draft model verification kernels",
         "keyBenefit": "Medusa Multi-Head Tree Attention & Sub-15ms Token Latency Acceleration",
-        "heroImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Runtime Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of speculative decoding draft model verification kernels for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -4239,7 +4239,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "post training quantization awq fp8 calibration",
         "keyBenefit": "AWQ 4-Bit Salient Channel Protection & Hopper FP8 Tensor Core Acceleration",
-        "heroImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Runtime Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of post training quantization awq fp8 calibration for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -4389,7 +4389,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "flashdecoding sequence parallelization enterprise llms",
         "keyBenefit": "Split-KV Parallel Attention & Sub-10ms Long-Context Generation",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Runtime Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of flashdecoding sequence parallelization enterprise llms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -4539,7 +4539,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "kv cache prefix caching enterprise llms",
         "keyBenefit": "Radix Attention Prompt Reuse & 85% Prefill Latency Cut",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of kv cache prefix caching enterprise llms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -4689,7 +4689,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "chunked cross attention document sharding enterprise rag",
         "keyBenefit": "Distributed Document Sharding & Sub-Second Query Reasoning",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of chunked cross attention document sharding enterprise rag for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -4839,7 +4839,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "sliding window attention ring kv eviction streaming llm",
         "keyBenefit": "Constant-VRAM Bounds & Sub-5ms Continuous Streaming Generation",
-        "heroImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Streaming Infrastructure Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of sliding window attention ring kv eviction streaming llm for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -4989,7 +4989,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "multi lora dynamic adapter switching zero copy weight swapping",
         "keyBenefit": "Zero-Copy Weight Swapping & Sub-10ms Task Multiplexing",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Multi-Tenant Serving Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of multi lora dynamic adapter switching zero copy weight swapping for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -5139,7 +5139,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "mixture of depths dynamic compute allocation token early exit",
         "keyBenefit": "Conditional Capacity Allocation & Sub-50% FLOP Reduction",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Serving Infrastructure Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of mixture of depths dynamic compute allocation token early exit for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -5289,7 +5289,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "kv cache memory compaction dynamic virtual memory reallocation",
         "keyBenefit": "Paged Block Compaction & Zero-Copy Defragmentation",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Serving Infrastructure Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of kv cache memory compaction dynamic virtual memory reallocation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -5439,7 +5439,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "speculative decoding tree based draft verification branch pruning",
         "keyBenefit": "Dynamic Draft Tree Slicing & Sub-8ms Verification Latency",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Serving Infrastructure Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of speculative decoding tree based draft verification branch pruning for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -5589,7 +5589,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "prefill decode disaggregation chunked prompt execution ttft",
         "keyBenefit": "Zero-Interference K-V Transport & Sub-15ms TTFT",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of prefill decode disaggregation chunked prompt execution ttft for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -5739,7 +5739,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "pipeline parallelism 1f1b schedule bubble elimination",
         "keyBenefit": "Zero-Interference Cross-Node Micro-Batching & <10ms Latency",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of pipeline parallelism 1f1b schedule bubble elimination for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -5889,7 +5889,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "tensor parallelism megatron column row all-reduce overlap",
         "keyBenefit": "Sub-5ms Intra-Node Latency & 2.9x Throughput Multiplier",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of tensor parallelism megatron column row all-reduce overlap for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -6039,7 +6039,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "sequence parallelism ring self attention distributed qkv",
         "keyBenefit": "1M+ Context Token Inference & Sub-10ms Step Latency",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of sequence parallelism ring self attention distributed qkv for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -6189,7 +6189,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "expert parallelism moe dynamic dispatch all to all overlap",
         "keyBenefit": "Sub-8ms Sparse MoE Inference & Top-k Routing Optimization",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of expert parallelism moe dynamic dispatch all to all overlap for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -6339,7 +6339,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "context parallelism ring kv communication overlap 2m tokens",
         "keyBenefit": "Sub-12ms 2M-Token Steps & Ring Attention KV Overlap",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of context parallelism ring kv communication overlap 2m tokens for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -6489,7 +6489,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "3d parallelism tensor pipeline zero3 interleaved execution 100b swarms",
         "keyBenefit": "Sub-8ms 100B+ Steps & Zero-Bubble Interleaved 3D Mesh",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & HPC Platform Directors",
         "executiveSummary": "A 30-second technical architecture breakdown of 3d parallelism tensor pipeline zero3 interleaved execution 100b swarms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -6639,7 +6639,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "fp8 microscaling dynamic block exponent shifting sub 1 percent perplexity",
         "keyBenefit": "2.14x GEMM Speedup & Sub-10 BPS Perplexity via OCP MXFP8",
-        "heroImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & HPC Platform Directors",
         "executiveSummary": "A 30-second technical architecture breakdown of fp8 microscaling dynamic block exponent shifting sub 1 percent perplexity for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -6789,7 +6789,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "asynchronous gpu checkpointing memory offload daemons for slurm clusters",
         "keyBenefit": "Sub-50ms Masked Saves & Zero-Downtime Slurm Failover",
-        "heroImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "HPC Platform Directors & Slurm Infrastructure Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of asynchronous gpu checkpointing memory offload daemons for slurm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -6939,7 +6939,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters",
         "keyBenefit": "Sub-4ms TTFT & 5.4x Decode Concurrency Scaling",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Inference Infrastructure Architects & Enterprise LLM Platform Directors",
         "executiveSummary": "A 30-second technical architecture breakdown of disaggregated pre-fill and decode pod orchestrators for enterprise vllm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -7089,7 +7089,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "dynamic tree-based speculative decoding orchestrators for enterprise llm clusters",
         "keyBenefit": "3.8x Throughput Acceleration & Sub-8ms Token Latency",
-        "heroImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Inference Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of dynamic tree-based speculative decoding orchestrators for enterprise llm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -7239,7 +7239,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "dynamic kv-cache eviction and attention sink compression daemons for 2m context llms",
         "keyBenefit": "4x Memory Compression & Sub-1% Perplexity Degradation",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Inference Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of dynamic kv-cache eviction and attention sink compression daemons for 2m context llms for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -7389,7 +7389,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "hierarchical hbm-to-nvme kv-cache tiered storage paging daemons for enterprise llm clusters",
         "keyBenefit": "Sub-10ms Page Faults & 10M+ Context Window Scaling",
-        "heroImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Storage Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of hierarchical hbm-to-nvme kv-cache tiered storage paging daemons for enterprise llm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -7539,7 +7539,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "multi-head latent attention mla low-rank kv-cache compression daemons for deepseek clusters",
         "keyBenefit": "90% VRAM Footprint Reduction & 512+ Stream Concurrency",
-        "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Infrastructure Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of multi-head latent attention mla low-rank kv-cache compression daemons for deepseek clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -7689,7 +7689,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "multi-token prediction mtp speculative drafting daemons for deepseek clusters",
         "keyBenefit": "2.8x Decode Throughput & 82%+ Acceptance Ratio",
-        "heroImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & LLM Infrastructure Engineers",
         "executiveSummary": "A 30-second technical architecture breakdown of multi-token prediction mtp speculative drafting daemons for deepseek clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -7839,7 +7839,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "dualpipe bidirectional pipeline parallelism orchestrators for deepseek clusters",
         "keyBenefit": "Zero-Bubble Execution & 63%+ Model Flops Utilization",
-        "heroImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & Distributed Systems Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of dualpipe bidirectional pipeline parallelism orchestrators for deepseek clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
@@ -7989,7 +7989,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "videoType": "short",
         "keyword": "grand unified deepseek serving fabric orchestrators for enterprise llm clusters",
         "keyBenefit": "MLA Latent Compression, DualPipe Overlap & 3.2x Throughput",
-        "heroImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+        "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Technology Officers & AI Infrastructure Architects",
         "executiveSummary": "A 30-second technical architecture breakdown of grand unified deepseek serving fabric orchestrators for enterprise llm clusters for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [

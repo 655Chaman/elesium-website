@@ -12,6 +12,13 @@ import React, {
 import { createPortal } from "react-dom"
 import { cn } from "../../lib/utils"
 
+const MODAL_SPRING = {
+    type: "spring" as const,
+    stiffness: 380,
+    damping: 32,
+    mass: 0.8,
+}
+
 interface ExpandableScreenContextType {
     isExpanded: boolean
     expand: () => void
@@ -132,8 +139,9 @@ export function ExpandableScreenTrigger({
             <motion.div
                 layoutId={layoutId}
                 onClick={expand}
+                whileTap={{ scale: 0.97 }}
                 style={{ borderRadius: triggerRadius }}
-                transition={{ duration: 0.3 }}
+                transition={MODAL_SPRING}
             >
                 {children}
             </motion.div>
@@ -154,9 +162,8 @@ export function ExpandableScreenContent({
     showCloseButton = true,
     closeButtonClassName = "",
 }: ExpandableScreenContentProps) {
-    const { isExpanded, collapse, layoutId, animationDuration } =
-        useExpandableScreen()
-        
+    const { isExpanded, collapse, layoutId } = useExpandableScreen()
+
     const [mounted, setMounted] = useState(false)
     useEffect(() => setMounted(true), [])
 
@@ -168,20 +175,18 @@ export function ExpandableScreenContent({
                 <motion.div
                     layoutId={layoutId}
                     className={cn(
-                        "fixed inset-0 z-[100] flex h-screen w-screen flex-col overflow-y-auto bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 shadow-2xl",
+                        "fixed inset-0 z-[100] flex h-screen w-screen flex-col overflow-y-auto bg-white dark:bg-black text-black dark:text-white shadow-2xl",
                         className
                     )}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                        duration: animationDuration,
-                        ease: [0.32, 0.72, 0, 1],
-                    }}
-                    style={{ borderRadius: 0 }} // Full screen typically implies 0 radius
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.97 }}
+                    transition={MODAL_SPRING}
+                    style={{ borderRadius: 0 }}
                 >
                     {showCloseButton && (
                         <button
+                            type="button"
                             onClick={(e) => {
                                 e.stopPropagation()
                                 collapse()

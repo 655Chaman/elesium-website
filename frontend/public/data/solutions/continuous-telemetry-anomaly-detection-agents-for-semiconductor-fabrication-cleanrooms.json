@@ -17,7 +17,7 @@
   "firstSentence": "Detect micro-environmental wafer fabrication anomalies with multivariate deep learning telemetry analyzing ultra-pure gas, vibration, and cleanroom vacuum streams.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms",
   "paragraphs": [
     "Advanced semiconductor fabrication cleanrooms (Class 1 / ISO Class 3) operate under near-impossible environmental tolerances. Nanometer-scale photolithography and plasma etching processes are vulnerable to microscopic fluctuations: parts-per-billion chemical contamination, milli-Hertz floor vibrations from nearby construction, or millibar fluctuations in vacuum and ultra-pure argon lines can ruin millions of dollars in silicon wafer lots.",
@@ -113,7 +113,7 @@
     "subheadline": "Advanced semiconductor fabrication cleanrooms (Class 1 / ISO Class 3) operate under near-impossible environmental tolerances. Nanometer-scale photolithography and plasma etching processes are vulnerable to microscopic fluctuations: parts-per-billion chemical contamination, milli-Hertz floor vibrations from nearby construction, or millibar fluctuations in vacuum and ultra-pure argon lines can ruin millions of dollars in silicon wafer lots.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Direct scrap prevention via early micro-environmental excursion containment."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Direct scrap prevention via early micro-environmental excursion containment."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms Performance Telemetry",
       "layout": "centered-card"
     }

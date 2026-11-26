@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
     Truck,
     ShieldCheck,
@@ -20,8 +21,7 @@ import {
     ChevronRight,
     FileCheck2,
     Cpu,
-    Scale,
-    Sparkles
+    Scale
 } from 'lucide-react'
 import { solutionCategories } from '../../data/solutionsHubData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -618,7 +618,7 @@ export default function SolutionCategoryHub() {
     }
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500 selection:text-slate-950 pt-24 pb-20">
+        <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black pt-24 pb-20">
             <Helmet>
                 <title>{displayTitle}</title>
                 <meta name="description" content={displayDesc} />
@@ -635,23 +635,23 @@ export default function SolutionCategoryHub() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Breadcrumb Navigation */}
                 <nav aria-label="Breadcrumb" className="mb-8">
-                    <ol className="flex items-center space-x-2 text-xs font-mono text-slate-400">
+                    <ol className="flex items-center space-x-2 text-xs font-mono text-neutral-400">
                         <li>
-                            <Link to="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+                            <Link to="/" className="hover:text-white transition-colors">Home</Link>
                         </li>
-                        <li><ChevronRight className="w-3 h-3 text-slate-600" /></li>
+                        <li><ChevronRight className="w-3 h-3 text-neutral-600" /></li>
                         <li>
-                            <Link to="/solutions/" className="hover:text-emerald-400 transition-colors">Solutions</Link>
+                            <Link to="/solutions/" className="hover:text-white transition-colors">Solutions</Link>
                         </li>
-                        <li><ChevronRight className="w-3 h-3 text-slate-600" /></li>
-                        <li className="text-emerald-400 font-semibold">{displayName}</li>
+                        <li><ChevronRight className="w-3 h-3 text-neutral-600" /></li>
+                        <li className="text-white font-semibold">{displayName}</li>
                     </ol>
                 </nav>
 
                 {/* Hero Header */}
                 <header className="mb-14">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-mono mb-4">
-                        <IconComponent className="w-3.5 h-3.5" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/10 bg-neutral-950 text-neutral-300 text-xs font-mono mb-4">
+                        <IconComponent className="w-3.5 h-3.5 text-white" />
                         <span>Thematic Silo Architecture • {displayName}</span>
                     </div>
                     <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
@@ -660,12 +660,11 @@ export default function SolutionCategoryHub() {
 
                     {/* AEO Answer Capsule */}
                     {silo?.answerCapsule && (
-                        <div className="bg-emerald-950/40 border-l-4 border-emerald-500 p-5 rounded-r-xl border border-emerald-500/20 mb-8 max-w-4xl">
-                            <div className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold mb-1 flex items-center gap-1.5">
-                                <Sparkles className="w-3.5 h-3.5" />
+                        <div className="bg-neutral-950 border-l-4 border-l-white p-5 rounded-r-xl border border-white/10 mb-8 max-w-4xl">
+                            <div className="text-[11px] font-mono uppercase tracking-wider text-white font-bold mb-1 flex items-center gap-1.5">
                                 <span>Architectural Answer Capsule • Executive Summary</span>
                             </div>
-                            <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+                            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
                                 {silo.answerCapsule}
                             </p>
                         </div>
@@ -675,14 +674,14 @@ export default function SolutionCategoryHub() {
                     <div className="flex flex-wrap items-center gap-4">
                         <button
                             onClick={() => openWhatsApp()}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-bold text-sm transition-all"
                         >
                             <span>Schedule Technical Architecture Audit</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
                             to="/solutions/"
-                            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-700 hover:border-slate-500 text-slate-300 text-sm font-semibold transition-all"
+                            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/15 hover:border-white/40 active:scale-[0.97] text-neutral-300 hover:text-white text-sm font-semibold transition-all"
                         >
                             <span>View All 13 Industry Silos</span>
                         </Link>
@@ -694,10 +693,10 @@ export default function SolutionCategoryHub() {
                     <section className="mb-14">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {silo.coreMetrics.map((m, idx) => (
-                                <div key={idx} className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 text-center">
-                                    <div className="text-xs font-mono uppercase text-emerald-400 font-semibold mb-1">{m.label}</div>
+                                <div key={idx} className="bg-neutral-950 border border-white/10 rounded-xl p-5 text-center">
+                                    <div className="text-xs font-mono uppercase text-neutral-400 font-semibold mb-1">{m.label}</div>
                                     <div className="text-2xl sm:text-3xl font-black text-white">{m.value}</div>
-                                    <div className="text-xs text-slate-400 mt-1">{m.desc}</div>
+                                    <div className="text-xs text-neutral-400 mt-1">{m.desc}</div>
                                 </div>
                             ))}
                         </div>
@@ -706,28 +705,28 @@ export default function SolutionCategoryHub() {
 
                 {/* Statutory Regulatory Framework Card */}
                 {silo?.regulatoryAuthority && (
-                    <section className="mb-14 bg-gradient-to-r from-slate-900/90 to-slate-900/50 border border-slate-800 rounded-2xl p-6 sm:p-8">
+                    <section className="mb-14 bg-neutral-950 border border-white/10 rounded-xl p-6 sm:p-8">
                         <div className="flex items-center gap-3 mb-4">
-                            <Scale className="w-6 h-6 text-emerald-400" />
+                            <Scale className="w-6 h-6 text-white" />
                             <h2 className="text-xl sm:text-2xl font-bold text-white">Statutory &amp; Regulatory Compliance Matrix</h2>
                         </div>
-                        <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
-                            <strong className="text-emerald-400">Governing Authorities:</strong> {silo.regulatoryAuthority}
+                        <p className="text-neutral-300 text-sm sm:text-base leading-relaxed mb-4">
+                            <strong className="text-white">Governing Authorities:</strong> {silo.regulatoryAuthority}
                         </p>
-                        <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                        <p className="text-neutral-400 text-sm leading-relaxed mb-6">
                             {silo.complianceFramework}
                         </p>
                         <div className="grid sm:grid-cols-3 gap-3 text-xs font-mono">
-                            <div className="bg-slate-950/60 border border-slate-800 p-3 rounded-lg text-slate-300">
-                                <span className="text-emerald-400 font-bold block mb-0.5">DPDP Act 2023 Sec 8(5)</span>
+                            <div className="bg-black border border-white/10 p-3 rounded-lg text-neutral-300">
+                                <span className="text-white font-bold block mb-0.5">DPDP Act 2023 Sec 8(5)</span>
                                 Automatic statutory data erasure upon workflow execution completion.
                             </div>
-                            <div className="bg-slate-950/60 border border-slate-800 p-3 rounded-lg text-slate-300">
-                                <span className="text-emerald-400 font-bold block mb-0.5">Sovereign Data Residency</span>
+                            <div className="bg-black border border-white/10 p-3 rounded-lg text-neutral-300">
+                                <span className="text-white font-bold block mb-0.5">Sovereign Data Residency</span>
                                 Tier-IV Indian datacenters (CtrlS, Yotta Shakti) with zero foreign telemetry.
                             </div>
-                            <div className="bg-slate-950/60 border border-slate-800 p-3 rounded-lg text-slate-300">
-                                <span className="text-emerald-400 font-bold block mb-0.5">Cryptographic Hashing</span>
+                            <div className="bg-black border border-white/10 p-3 rounded-lg text-neutral-300">
+                                <span className="text-white font-bold block mb-0.5">Cryptographic Hashing</span>
                                 SHA-256 state ledger verification for statutory explainability audits.
                             </div>
                         </div>
@@ -738,12 +737,12 @@ export default function SolutionCategoryHub() {
                 {silo?.architectureDeepDive && (
                     <section className="mb-14">
                         <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                            <Cpu className="w-5 h-5 text-emerald-400" />
+                            <Cpu className="w-5 h-5 text-white" />
                             <span>Deterministic Multi-Agent Architecture</span>
                         </h2>
-                        <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                        <div className="space-y-4 text-neutral-300 text-sm sm:text-base leading-relaxed">
                             {silo.architectureDeepDive.map((para, idx) => (
-                                <p key={idx} className="bg-slate-900/40 border border-slate-800/80 rounded-xl p-5">
+                                <p key={idx} className="bg-neutral-950 border border-white/10 rounded-xl p-5">
                                     {para}
                                 </p>
                             ))}
@@ -759,12 +758,12 @@ export default function SolutionCategoryHub() {
                         </h2>
                         <div className="grid sm:grid-cols-2 gap-4">
                             {silo.capabilities.map((cap, idx) => (
-                                <div key={idx} className="bg-slate-900/50 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/40 transition-colors">
+                                <div key={idx} className="bg-neutral-950 border border-white/10 rounded-xl p-5 hover:border-white/30 transition-colors">
                                     <div className="flex items-center gap-2 font-bold text-white text-base mb-2">
-                                        <FileCheck2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                                        <FileCheck2 className="w-4 h-4 text-white flex-shrink-0" />
                                         <span>{cap.title}</span>
                                     </div>
-                                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                                    <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
                                         {cap.desc}
                                     </p>
                                 </div>
@@ -780,7 +779,7 @@ export default function SolutionCategoryHub() {
                             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
                                 {displayName} Production Architectures
                             </h2>
-                            <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                            <p className="text-xs sm:text-sm text-neutral-400 mt-1">
                                 Showing {solutionsList.length} verified production-ready sovereign AI solutions in this thematic cluster.
                             </p>
                         </div>
@@ -792,20 +791,20 @@ export default function SolutionCategoryHub() {
                                 <Link
                                     key={sol.slug}
                                     to={`/solutions/${sol.slug}/`}
-                                    className="group bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 rounded-xl p-5 flex flex-col justify-between transition-all duration-200"
+                                    className="group bg-neutral-950 hover:bg-neutral-900 border border-white/10 hover:border-white/30 rounded-xl p-5 flex flex-col justify-between transition-all duration-200"
                                 >
                                     <div>
-                                        <div className="text-[10px] font-mono uppercase text-emerald-400 tracking-wider mb-2 font-semibold">
+                                        <div className="text-[10px] font-mono uppercase text-neutral-400 tracking-wider mb-2 font-semibold">
                                             {sol.hubCategory || displayName}
                                         </div>
-                                        <h3 className="text-base font-bold text-white group-hover:text-emerald-400 transition-colors leading-snug mb-3 line-clamp-2">
+                                        <h3 className="text-base font-bold text-white group-hover:underline transition-colors leading-snug mb-3 line-clamp-2">
                                             {sol.h1}
                                         </h3>
-                                        <p className="text-xs text-slate-400 leading-relaxed line-clamp-3 mb-4">
+                                        <p className="text-xs text-neutral-400 leading-relaxed line-clamp-3 mb-4">
                                             {sol.metaDescription}
                                         </p>
                                     </div>
-                                    <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-slate-500 group-hover:text-emerald-400">
+                                    <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white">
                                         <span>Explore Architecture</span>
                                         <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -813,23 +812,23 @@ export default function SolutionCategoryHub() {
                             ))}
                         </div>
                     ) : (
-                        <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 text-center">
+                        <div className="bg-neutral-950 border border-white/10 rounded-xl p-8 text-center">
                             <h3 className="text-lg font-bold text-white mb-2">
                                 Custom Sovereign {displayName} Architectures Available
                             </h3>
-                            <p className="text-sm text-slate-400 max-w-2xl mx-auto mb-6 leading-relaxed">
+                            <p className="text-sm text-neutral-400 max-w-2xl mx-auto mb-6 leading-relaxed">
                                 Production workflows in this sector are provisioned via dedicated private VPC sprints tailored to your ERP, SCADA, or regulatory enclave topology. Explore our cross-industry flagship catalog or schedule an architecture audit directly.
                             </p>
                             <div className="flex flex-wrap items-center justify-center gap-3">
                                 <Link
                                     to="/solutions/"
-                                    className="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-mono font-semibold transition-colors"
+                                    className="px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-mono font-semibold active:scale-[0.97] transition-all"
                                 >
                                     Browse Flagship Solutions &rarr;
                                 </Link>
                                 <Link
                                     to="/commercial-directory.html"
-                                    className="px-5 py-2.5 rounded-lg border border-emerald-500/40 hover:bg-emerald-500/10 text-emerald-400 text-xs font-mono font-semibold transition-colors"
+                                    className="px-5 py-2.5 rounded-lg border border-white/20 hover:bg-white/10 text-white text-xs font-mono font-semibold active:scale-[0.97] transition-all"
                                 >
                                     Top 100 Commercial Directory &rarr;
                                 </Link>
@@ -845,42 +844,55 @@ export default function SolutionCategoryHub() {
                             Frequently Asked Questions
                         </h2>
                         <div className="space-y-3">
-                            {silo.faqs.map((faq, idx) => (
-                                <div
-                                    key={idx}
-                                    className="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition-colors"
-                                >
-                                    <button
-                                        onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                        className="w-full text-left p-5 flex items-center justify-between gap-4 font-semibold text-slate-200 hover:text-white"
+                            {silo.faqs.map((faq, idx) => {
+                                const isOpen = openFaq === idx
+                                return (
+                                    <div
+                                        key={idx}
+                                        className="bg-neutral-950 border border-white/10 rounded-xl overflow-hidden transition-colors"
                                     >
-                                        <span className="text-sm sm:text-base">{faq.q}</span>
-                                        <ChevronDown className={`w-4 h-4 text-emerald-400 transform transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
-                                    </button>
-                                    {openFaq === idx && (
-                                        <div className="px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
-                                            {faq.a}
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
+                                        <button
+                                            onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                            className="w-full text-left p-5 flex items-center justify-between gap-4 font-semibold text-neutral-200 hover:text-white"
+                                        >
+                                            <span className="text-sm sm:text-base">{faq.q}</span>
+                                            <ChevronDown className={`w-4 h-4 text-white transform transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                        <AnimatePresence initial={false}>
+                                            {isOpen && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0 }}
+                                                    animate={{ height: 'auto', opacity: 1 }}
+                                                    exit={{ height: 0, opacity: 0 }}
+                                                    transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                    className="accordion-panel overflow-hidden"
+                                                >
+                                                    <div className="px-5 pb-5 text-xs sm:text-sm text-neutral-400 leading-relaxed border-t border-white/10 pt-3">
+                                                        {faq.a}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </section>
                 )}
 
                 {/* Free Architecture Audit CTA */}
-                <section className="bg-gradient-to-r from-emerald-950/60 via-slate-900 to-slate-900 border border-emerald-500/30 rounded-2xl p-8 text-center sm:text-left sm:flex items-center justify-between gap-8">
+                <section className="bg-neutral-950 border border-white/10 rounded-xl p-8 text-center sm:text-left sm:flex items-center justify-between gap-8">
                     <div className="max-w-2xl mb-6 sm:mb-0">
                         <h2 className="text-2xl font-extrabold text-white mb-2">
                             Deploy a Scoped {displayName} Pilot in 14 Days
                         </h2>
-                        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
                             Book a 30-minute sovereign architecture review with Principal AI Systems Architect Chaman Shah. We assess your legacy ERP/TMS interfaces, data residency requirements, and model your contractual 90-day cash-flow ROI.
                         </p>
                     </div>
                     <button
                         onClick={() => openWhatsApp()}
-                        className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20"
+                        className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-bold text-sm transition-all"
                     >
                         <span>Schedule Free Technical Audit</span>
                         <ArrowRight className="w-4 h-4" />

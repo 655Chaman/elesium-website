@@ -32,14 +32,14 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     fromRef,
     toRef,
     curvature = 0,
-    reverse = false, // Include the reverse prop
+    reverse = false,
     duration = Math.random() * 3 + 4,
     delay = 0,
-    pathColor = "gray",
+    pathColor = "rgba(255, 255, 255, 0.14)",
     pathWidth = 2,
-    pathOpacity = 0.2,
-    gradientStartColor = "#ffaa40",
-    gradientStopColor = "#9c40ff",
+    pathOpacity = 1,
+    gradientStartColor = "#ffffff",
+    gradientStopColor = "#737373",
     startXOffset = 0,
     startYOffset = 0,
     endXOffset = 0,
@@ -120,12 +120,10 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
             }
         }
 
-        // Initialize ResizeObserver
         const resizeObserver = new ResizeObserver(() => {
             updatePath()
         })
 
-        // Observe the container element
         if (containerRef.current) {
             resizeObserver.observe(containerRef.current)
         }
@@ -136,24 +134,20 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
             resizeObserver.observe(toRef.current)
         }
 
-        // Force update on window resize (fixes Flexbox/Grid shifts)
         window.addEventListener("resize", updatePath)
 
-        // Force update after mount to catch hydration shifts
         const timeoutId = setTimeout(updatePath, 100)
-
-        // Poll for layout changes (fixes issues where elements move but don't resize)
         const intervalId = setInterval(updatePath, 100)
-        setTimeout(() => clearInterval(intervalId), 3000)
+        const clearPollTimeoutId = setTimeout(() => clearInterval(intervalId), 3000)
 
-        // Initial update
         updatePath()
 
-        // Clean up the observer on component unmount
         return () => {
             resizeObserver.disconnect()
             window.removeEventListener("resize", updatePath)
             clearTimeout(timeoutId)
+            clearTimeout(clearPollTimeoutId)
+            clearInterval(intervalId)
         }
     }, [
         containerRef,
@@ -164,6 +158,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         startYOffset,
         endXOffset,
         endYOffset,
+        vertical,
     ])
 
     return (

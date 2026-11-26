@@ -55,12 +55,9 @@ const AgentTerminal = () => {
     }, []);
 
     return (
-        <div className="bg-[#0A0A0A] border border-gray-200 dark:border-white/10 rounded-2xl p-6 font-mono text-sm shadow-xl overflow-hidden h-[300px] flex flex-col justify-end">
+        <div className="bg-black border border-neutral-200 dark:border-white/10 rounded-xl p-6 font-mono text-sm overflow-hidden h-[300px] flex flex-col justify-end relative">
             <div className="flex items-center gap-2 mb-4 absolute top-4 left-4">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/30 border border-red-500/60"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/30 border border-yellow-500/60"></div>
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/30 border border-green-500/60"></div>
-                <span className="ml-2 text-white/40 text-xs">elesium_agent.sh</span>
+                <span className="text-neutral-400 text-xs">elesium_agent.sh</span>
             </div>
             <div className="space-y-2 mt-8">
                 {lines.map((line, i) => (
@@ -68,7 +65,7 @@ const AgentTerminal = () => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         key={`terminal-line-${i}-${line.substring(0,5)}`}
-                        className={`${line.startsWith('[SUCCESS]') ? 'text-emerald-400' : line.startsWith('[OK]') ? 'text-emerald-400' : 'text-gray-300'}`}
+                        className={`${line.startsWith('[SUCCESS]') || line.startsWith('[OK]') ? 'text-white font-semibold' : 'text-neutral-400'}`}
                     >
                         {line}
                     </motion.div>
@@ -89,59 +86,59 @@ export default function AIAutomation() {
     const aeoAnswerCapsule = "Elesium is an enterprise AI automation agency and systems engineering firm deploying sovereign multi-agent architectures directly inside client-controlled private VPCs across India. We replace fragile low-code automations with deterministic LangGraph state machines, Pydantic type safety, and vLLM PagedAttention inference runtimes. Our production workflows guarantee sub-200ms latency, zero third-party telemetry, full DPDP Act 2023 compliance, and an audited 90-day cash-flow ROI SLA.";
 
     return (
-        <main id="main-content" className="pt-24 pb-20 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 relative z-10 overflow-hidden">
+        <main id="main-content" className="pt-24 pb-20 min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 relative z-10 overflow-hidden">
             <WhatsAppModal />
             <Helmet>
-                <title>Best AI &amp; Automation Company in Bangalore | Elesium</title>
-                <meta name="description" content="Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows." />
+                <title>Enterprise AI &amp; Automation Systems in Bengaluru | Elesium</title>
+                <meta name="description" content="Enterprise AI and automation systems engineering in Bengaluru, India. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
                 <link rel="canonical" href="https://elesium.online/ai-automation/" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Best AI &amp; Automation Company in Bangalore | Elesium" />
-                <meta property="og:description" content="Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows." />
+                <meta property="og:title" content="Enterprise AI &amp; Automation Systems in Bengaluru | Elesium" />
+                <meta property="og:description" content="Enterprise AI and automation systems engineering in Bengaluru, India. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta property="og:url" content="https://elesium.online/ai-automation/" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@elesium_ai" />
-                <meta name="twitter:title" content="Best AI &amp; Automation Company in Bangalore | Elesium" />
-                <meta name="twitter:description" content="Leading enterprise AI and automation company in Bangalore, India. We engineer autonomous agents, private LLMs, and deterministic workflows." />
+                <meta name="twitter:title" content="Enterprise AI &amp; Automation Systems in Bengaluru | Elesium" />
+                <meta name="twitter:description" content="Enterprise AI and automation systems engineering in Bengaluru, India. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
             </Helmet>
 
             <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
                 {/* Breadcrumb Navigation */}
-                <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 mb-8" aria-label="Breadcrumb">
+                <nav className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-8" aria-label="Breadcrumb">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
-                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                    <span className="text-gray-900 dark:text-gray-200">AI Automation</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+                    <span className="text-black dark:text-white">AI Automation</span>
                 </nav>
                 
                 {/* Hero Section */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    initial={{ opacity: 0, scale: 0.97, y: 16 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="text-center max-w-4xl mx-auto mb-16"
                 >
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-700 dark:text-gray-300 text-xs font-semibold uppercase tracking-wider mb-6">
-                        <Terminal className="w-3.5 h-3.5 text-emerald-500" />
-                        <span>Deterministic Systems • Private VPC</span>
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                        <Terminal className="w-3.5 h-3.5 text-black dark:text-white" />
+                        <span>Deterministic Systems &middot; Private VPC</span>
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black dark:text-white mb-6">
                         Shift from Manual to Autonomous
                     </h1>
                     
-                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
+                    <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-8">
                         We build custom AI infrastructure and deterministic agents that automate complex enterprise workflows, scale your operations, and eliminate human error.
                     </p>
 
-                    {/* AEO Answer Capsule */}
-                    <div className="answer-capsule text-left mb-10 p-6 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 max-w-3xl mx-auto shadow-sm">
-                        <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
-                            <Cpu className="w-4 h-4" />
-                            Definitive Answer Capsule • Sovereign Enterprise AI Automation
+                    {/* Technical Overview */}
+                    <div className="answer-capsule text-left mb-10 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-3xl mx-auto">
+                        <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
+                            <Cpu className="w-4 h-4 text-black dark:text-white" />
+                            Sovereign Enterprise AI Automation
                         </div>
-                        <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+                        <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
                             {aeoAnswerCapsule}
                         </p>
                     </div>
@@ -150,14 +147,14 @@ export default function AIAutomation() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                         >
-                            <MessageSquare className="w-4 h-4 text-emerald-500" />
+                            <MessageSquare className="w-4 h-4" />
                             <span>Initiate AI Audit (WhatsApp)</span>
                         </button>
                         <Link 
                             to="/waitlist/" 
-                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>
@@ -167,21 +164,21 @@ export default function AIAutomation() {
 
                 {/* Architecture & Interactive Demo */}
                 <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="mb-16"
                 >
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-6 sm:p-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 sm:p-10">
                         <div>
-                            <span className="text-xs uppercase font-semibold tracking-wider text-emerald-600 dark:text-emerald-400 mb-2 block">
+                            <span className="text-xs uppercase font-semibold tracking-wider text-neutral-600 dark:text-neutral-400 mb-2 block">
                                 Beyond Generic Wrappers
                             </span>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-4">
                                 Production-Grade Engineering
                             </h2>
-                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed">
                                 Off-the-shelf tools break under real enterprise loads. We build bespoke, deterministic AI agents that integrate deeply into your proprietary data, capable of complex reasoning and autonomous execution.
                             </p>
                             <ul className="space-y-3">
@@ -191,8 +188,8 @@ export default function AIAutomation() {
                                     "Real-time data ingestion and processing",
                                     "Automated error handling with sovereign privacy"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
-                                        <div className="w-5 h-5 rounded-full bg-gray-200/70 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                                    <li key={i} className="flex items-center gap-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
+                                        <div className="w-5 h-5 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 flex items-center justify-center flex-shrink-0">
                                             <Code2 className="w-3 h-3 text-black dark:text-white" />
                                         </div>
                                         <span>{item}</span>
@@ -209,65 +206,65 @@ export default function AIAutomation() {
                 {/* Capabilities Bento Grid */}
                 <div className="mb-16">
                     <div className="text-center mb-10 max-w-2xl mx-auto">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">Core Capabilities</h2>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">Targeted AI solutions engineered for measurable business outcomes.</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-3">Core Capabilities</h2>
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400">Targeted AI solutions engineered for measurable business outcomes.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Large Tile */}
-                        <div className="md:col-span-2 bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-7 relative overflow-hidden group">
+                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                                <Network className="w-28 h-28 text-gray-900 dark:text-white" />
+                                <Network className="w-28 h-28 text-black dark:text-white" />
                             </div>
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center mb-4 shadow-sm border border-gray-200 dark:border-white/10">
-                                    <Terminal className="w-5 h-5 text-gray-900 dark:text-white" />
+                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                    <Terminal className="w-5 h-5 text-black dark:text-white" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Autonomous Multi-Agent Systems</h3>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
+                                <h3 className="text-xl font-bold text-black dark:text-white mb-2">Autonomous Multi-Agent Systems</h3>
+                                <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed">
                                     Deploy intelligent agents that handle end-to-end processes. From tier-1 customer support to automated HR onboarding, our agents reason, act, and report autonomously.
                                 </p>
                             </div>
                         </div>
 
                         {/* Standard Tile */}
-                        <div className="bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-7 relative overflow-hidden group">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center mb-4 shadow-sm border border-gray-200 dark:border-white/10">
-                                    <Zap className="w-5 h-5 text-gray-900 dark:text-white" />
+                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                    <Zap className="w-5 h-5 text-black dark:text-white" />
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Signal-Based Outbound</h3>
-                                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <h3 className="text-lg font-bold text-black dark:text-white mb-2">Signal-Based Outbound</h3>
+                                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     Analyze market intent signals to trigger hyper-personalized sales outreach at the exact right moment.
                                 </p>
                             </div>
                         </div>
 
                         {/* Standard Tile */}
-                        <div className="bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-7 relative overflow-hidden group">
+                        <div className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center mb-4 shadow-sm border border-gray-200 dark:border-white/10">
-                                    <Cpu className="w-5 h-5 text-gray-900 dark:text-white" />
+                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                    <Cpu className="w-5 h-5 text-black dark:text-white" />
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Data ETL Pipelines</h3>
-                                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <h3 className="text-lg font-bold text-black dark:text-white mb-2">Data ETL Pipelines</h3>
+                                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     Automatically extract, clean, and structure unstructured enterprise data into high-velocity queryable intelligence.
                                 </p>
                             </div>
                         </div>
 
                         {/* Large Tile */}
-                        <div className="md:col-span-2 bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-7 relative overflow-hidden group">
+                        <div className="md:col-span-2 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-7 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                                <Shield className="w-28 h-28 text-gray-900 dark:text-white" />
+                                <Shield className="w-28 h-28 text-black dark:text-white" />
                             </div>
                             <div className="relative z-10 flex flex-col justify-end">
-                                <div className="w-10 h-10 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center mb-4 shadow-sm border border-gray-200 dark:border-white/10">
-                                    <Lock className="w-5 h-5 text-gray-900 dark:text-white" />
+                                <div className="w-10 h-10 rounded-lg bg-white dark:bg-black flex items-center justify-center mb-4 border border-neutral-200 dark:border-white/10">
+                                    <Lock className="w-5 h-5 text-black dark:text-white" />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Private VPC &amp; Sovereign Security</h3>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
-                                    For regulated industries. We deploy open-source models within your private VPC. Your data never trains public models, ensuring 100% compliance with India's DPDP Act 2023.
+                                <h3 className="text-xl font-bold text-black dark:text-white mb-2">Private VPC &amp; Sovereign Security</h3>
+                                <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed">
+                                    For regulated industries. We deploy open-source models within your private VPC. Your data never trains public models, ensuring 100% compliance with India&apos;s DPDP Act 2023.
                                 </p>
                             </div>
                         </div>
@@ -277,8 +274,8 @@ export default function AIAutomation() {
                 {/* FAQ Section */}
                 <div className="mb-16 max-w-3xl mx-auto">
                     <div className="text-center mb-10">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">Frequently Asked Questions</h2>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">Everything you need to know about our engineering approach.</p>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">Frequently Asked Questions</h2>
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400">Everything you need to know about our engineering approach.</p>
                     </div>
                     <div className="space-y-4">
                         {[
@@ -292,47 +289,46 @@ export default function AIAutomation() {
                             },
                             {
                                 q: "What industries in India benefit most from AI automation?",
-                                a: "Any industry choked by unstructured data and manual data entry. We see the most aggressive ROI in Indian BFSI (autonomous underwriting), Manufacturing (inventory signal processing), and Enterprise SaaS."
+                                a: "Any industry choked by unstructured data and manual data entry. We see significant ROI in Indian BFSI (autonomous underwriting), Manufacturing (inventory signal processing), and Enterprise SaaS."
                             },
                             {
                                 q: "How is Elesium different from other AI agencies in India?",
-                                a: "We don't build generic ChatGPT wrappers. We are an engineering firm that builds custom Python/LangGraph architectures deeply integrated into your legacy on-prem systems, mandating verified ROI before writing code."
+                                a: "We are an engineering firm that builds custom Python/LangGraph architectures deeply integrated into your legacy on-prem systems, mandating verified ROI before writing code."
                             }
                         ].map((faq, i) => (
-                            <div key={i} className="bg-gray-50/50 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-2xl p-6">
-                                <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">{faq.q}</h3>
-                                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{faq.a}</p>
+                            <div key={i} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6">
+                                <h3 className="text-base font-semibold text-black dark:text-white mb-2">{faq.q}</h3>
+                                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{faq.a}</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Bottom CTA Card */}
-                <div className="rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02] p-8 sm:p-12 text-center">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-xs font-mono text-gray-700 dark:text-gray-300 mb-6">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                <div className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-6">
                         <span>Sovereign Private VPC Deployment Protocol</span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-black dark:text-white mb-4">
                         Ready to unlock autonomous enterprise scale?
                     </h2>
 
-                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed">
+                    <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto mb-8 leading-relaxed">
                         Stop wasting human capital on repetitive tasks. Schedule a direct engineering intake on WhatsApp to evaluate deterministic agentic architectures for your enterprise.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                         >
-                            <MessageSquare className="w-4 h-4 text-emerald-500" />
+                            <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
                         </button>
                         <Link 
                             to="/waitlist/" 
-                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>

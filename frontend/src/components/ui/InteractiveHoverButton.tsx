@@ -7,24 +7,45 @@ interface InteractiveHoverButtonProps extends HTMLMotionProps<"button"> {
     children: React.ReactNode
 }
 
+const NATURAL_SPRING = {
+    type: "spring" as const,
+    stiffness: 380,
+    damping: 32,
+    mass: 0.8,
+}
+
 export function InteractiveHoverButton({
     children,
     className,
+    onMouseEnter,
+    onMouseLeave,
+    onMouseMove,
     ...props
 }: InteractiveHoverButtonProps) {
     const ref = useRef<HTMLButtonElement>(null)
     const [position, setPosition] = useState({ x: 0, y: 0 })
+    const [isHovered, setIsHovered] = useState(false)
 
     const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
-        const { clientX, clientY } = e
-        const { height, width, left, top } = ref.current!.getBoundingClientRect()
-        const middleX = clientX - (left + width / 2)
-        const middleY = clientY - (top + height / 2)
-        setPosition({ x: middleX * 0.15, y: middleY * 0.15 })
+        if (ref.current) {
+            const { clientX, clientY } = e
+            const { height, width, left, top } = ref.current.getBoundingClientRect()
+            const middleX = clientX - (left + width / 2)
+            const middleY = clientY - (top + height / 2)
+            setPosition({ x: middleX * 0.15, y: middleY * 0.15 })
+        }
+        onMouseMove?.(e)
     }
 
-    const reset = () => {
+    const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setIsHovered(true)
+        onMouseEnter?.(e)
+    }
+
+    const handleMouseLeave = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setIsHovered(false)
         setPosition({ x: 0, y: 0 })
+        onMouseLeave?.(e)
     }
 
     const { x, y } = position
@@ -33,24 +54,43 @@ export function InteractiveHoverButton({
         <motion.button
             ref={ref}
             animate={{ x, y }}
-            transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+            whileTap={{ scale: 0.97 }}
+            transition={NATURAL_SPRING}
             onMouseMove={handleMouseMove}
-            onMouseLeave={reset}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             className={cn(
-                "group relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold transition-colors duration-300",
-                "bg-black text-white border-black hover:bg-white hover:text-black", // Light Mode: Black -> White
-                "dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white", // Dark Mode: White -> Black
+                "group relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold transition-colors duration-200",
+                "bg-black text-white border-black hover:bg-white hover:text-black",
+                "dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white",
                 className
             )}
             {...props}
         >
-            <span className="inline-flex items-center justify-center gap-2 transition-transform duration-300 group-hover:translate-x-12 group-hover:opacity-0">
+            <motion.span
+                aria-hidden={isHovered}
+                animate={{
+                    x: isHovered ? 48 : 0,
+                    opacity: isHovered ? 0 : 1,
+                }}
+                transition={NATURAL_SPRING}
+                className="inline-flex items-center justify-center gap-2"
+            >
                 {children}
-            </span>
-            <div className="absolute top-0 left-0 z-10 flex h-full w-full -translate-x-12 items-center justify-center gap-2 opacity-0 transition-transform duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+            </motion.span>
+            <motion.div
+                aria-hidden={!isHovered}
+                initial={false}
+                animate={{
+                    x: isHovered ? 0 : -48,
+                    opacity: isHovered ? 1 : 0,
+                }}
+                transition={NATURAL_SPRING}
+                className="pointer-events-none absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center gap-2"
+            >
                 <span>{children}</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
-            </div>
+            </motion.div>
         </motion.button>
     )
 }

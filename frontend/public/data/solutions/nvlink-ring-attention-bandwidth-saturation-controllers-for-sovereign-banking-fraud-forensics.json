@@ -17,7 +17,7 @@
   "firstSentence": "Scale multi-hop financial fraud forensics across million-token transaction graphs, saturating 900 GB/s NVLink interconnects with zero memory overflow using ring attention controllers.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics",
   "paragraphs": [
     "Financial intelligence units at Indian commercial banks investigating complex multi-layered money laundering syndicates struggle with GPU memory limits when analyzing long-context transaction graphs. Traditional self-attention mechanisms exhibit quadratic memory scaling ($O(N^2)$), running out of VRAM when graph sequences exceed 32,000 tokens. As a result, forensic analysts are forced to truncate historical transaction data, missing critical shell company layering transactions spread across multi-month intervals.",
@@ -113,7 +113,7 @@
     "subheadline": "Financial intelligence units at Indian commercial banks investigating complex multi-layered money laundering syndicates struggle with GPU memory limits when analyzing long-context transaction graphs. Traditional self-attention mechanisms exhibit quadratic memory scaling ($O(N^2)$), running out of VRAM when graph sequences exceed 32,000 tokens. As a result, forensic analysts are forced to truncate historical transaction data, missing critical shell company layering transactions spread across multi-month intervals.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete million-token graph attention traversal time."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete million-token graph attention traversal time."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics Performance Telemetry",
       "layout": "centered-card"
     }

@@ -17,7 +17,7 @@
   "firstSentence": "Automate instant e-way bill generation from Tally Prime sales orders, generating signed NIC barcodes and Part A/Part B transport documents in under 180ms at warehouse dispatch docks.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers",
   "paragraphs": [
     "Fast-paced warehouse dispatch desks handling hundreds of outbound freight consignments daily face severe loading dock gridlock when dispatchers must manually copy sales data from Tally Prime into the government e-way bill portal. Manual data entry errors in vehicle registration numbers, transshipment hubs, or invoice values cause portal rejections, leaving loaded trucks idling at factory gates and inflating driver waiting costs.",
@@ -113,7 +113,7 @@
     "subheadline": "Fast-paced warehouse dispatch desks handling hundreds of outbound freight consignments daily face severe loading dock gridlock when dispatchers must manually copy sales data from Tally Prime into the government e-way bill portal. Manual data entry errors in vehicle registration numbers, transshipment hubs, or invoice values cause portal rejections, leaving loaded trucks idling at factory gates and inflating driver waiting costs.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Pre-validation schema filters eliminating statutory formatting rejections."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Pre-validation schema filters eliminating statutory formatting rejections."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers Performance Telemetry",
       "layout": "centered-card"
     }

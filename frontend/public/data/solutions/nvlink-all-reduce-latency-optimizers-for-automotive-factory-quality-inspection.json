@@ -17,7 +17,7 @@
   "firstSentence": "Minimize multi-GPU All-Reduce latency over NVLink fabrics for real-time 3D vehicle paint and body gap inspection systems.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection",
   "paragraphs": [
     "High-speed automotive assembly lines utilize multi-camera optical inspection tunnels equipped with up to 32 high-resolution cameras to verify vehicle paint finish, surface waviness, and panel gap-and-flush tolerances in under 15 seconds. Processing these multi-angle vision tensors requires distributed data-parallel and pipeline-parallel multi-GPU clusters. However, frequent All-Reduce tensor synchronization across GPUs creates communication bottlenecks that delay final quality sign-off.",
@@ -113,7 +113,7 @@
     "subheadline": "High-speed automotive assembly lines utilize multi-camera optical inspection tunnels equipped with up to 32 high-resolution cameras to verify vehicle paint finish, surface waviness, and panel gap-and-flush tolerances in under 15 seconds. Processing these multi-angle vision tensors requires distributed data-parallel and pipeline-parallel multi-GPU clusters. However, frequent All-Reduce tensor synchronization across GPUs creates communication bottlenecks that delay final quality sign-off.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero assembly line slowdown across 60 jobs-per-hour production lines."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero assembly line slowdown across 60 jobs-per-hour production lines."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection Performance Telemetry",
       "layout": "centered-card"
     }

@@ -17,7 +17,7 @@
   "firstSentence": "Deploy air-gapped local vLLM inference pipelines for logistics invoice processing, communicating directly with Tally Prime over internal port 9000 XML sockets with zero cloud egress.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration",
   "paragraphs": [
     "Freight forwarding and 3PL logistics hubs in India receive thousands of multi-format transport dockets and vendor freight bills daily. Extracting line items, lorry receipt (LR) numbers, and GST breakdowns using public cloud vision APIs exposes confidential supplier rate contracts and breaches corporate data privacy covenants. Network disconnections in warehouse facilities stall accounts payable workflows, delaying vehicle release and inflating truck detention charges.",
@@ -113,7 +113,7 @@
     "subheadline": "Freight forwarding and 3PL logistics hubs in India receive thousands of multi-format transport dockets and vendor freight bills daily. Extracting line items, lorry receipt (LR) numbers, and GST breakdowns using public cloud vision APIs exposes confidential supplier rate contracts and breaches corporate data privacy covenants. Network disconnections in warehouse facilities stall accounts payable workflows, delaying vehicle release and inflating truck detention charges.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero external internet routing, private local warehouse LAN deployment."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero external internet routing, private local warehouse LAN deployment."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration Performance Telemetry",
       "layout": "centered-card"
     }

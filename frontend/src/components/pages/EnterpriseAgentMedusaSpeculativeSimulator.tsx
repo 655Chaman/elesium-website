@@ -59,7 +59,7 @@ export default function EnterpriseAgentMedusaSpeculativeSimulator() {
 
   const outputs = useMemo(() => calculateMedusaSpeculative(inputs), [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-medusa-speculative-tree-simulator" width="100%" height="750" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe><div style="font-size:12px;color:#64748b;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-medusa-speculative-tree-simulator" target="_blank" rel="noopener" style="color:#f59e0b;text-decoration:underline;">Elesium Medusa Speculative Tree Simulator</a></div>`;
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-medusa-speculative-tree-simulator" width="100%" height="750" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-medusa-speculative-tree-simulator" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Medusa Speculative Tree Simulator</a></div>`;
 
   const copyEmbed = () => {
     navigator.clipboard.writeText(embedCode);
@@ -120,18 +120,18 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
         <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-medusa-speculative-tree-simulator" />
       </Helmet>
 
-      <div className="min-h-screen bg-[#05070a] text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-950/80 border border-amber-800/60 text-amber-400 text-xs font-mono mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 border border-white/20 text-white text-xs font-mono mb-4">
               <Zap className="w-3.5 h-3.5" />
               <span>Tool #49 • Medusa Multi-Head Tree-Attention Simulator</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
               Medusa Speculative Tree-Attention &amp; Verification Simulator
             </h1>
-            <p className="text-base text-slate-400 max-w-3xl mx-auto">
+            <p className="text-base text-neutral-400 max-w-3xl mx-auto">
               Simulate candidate token tree generation, parallel verification kernels, rejection sampling acceptance rates, and sub-15ms per-token latencies across enterprise H100 and A100 clusters.
             </p>
           </div>
@@ -139,22 +139,22 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           {/* Main Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             {/* Left Controls Column */}
-            <div className="lg:col-span-5 bg-slate-900/80 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+            <div className="lg:col-span-5 bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <div className="flex items-center gap-2 text-sm font-semibold text-white">
-                  <Sliders className="w-4 h-4 text-amber-400" />
+                  <Sliders className="w-4 h-4 text-white" />
                   <span>Speculative Tree Parameters</span>
                 </div>
-                <div className="flex items-center bg-slate-800/80 rounded-lg p-1 border border-slate-700/60">
+                <div className="flex items-center bg-neutral-800/80 rounded-lg p-1 border border-neutral-700/60">
                   <button
                     onClick={() => setCurrency('INR')}
-                    className={`px-2.5 py-1 text-xs font-mono rounded ${currency === 'INR' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
+                    className={`active:scale-[0.97] px-2.5 py-1 text-xs font-mono rounded ${currency === 'INR' ? 'bg-white/10 text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                   >
                     INR (₹)
                   </button>
                   <button
                     onClick={() => setCurrency('USD')}
-                    className={`px-2.5 py-1 text-xs font-mono rounded ${currency === 'USD' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
+                    className={`active:scale-[0.97] px-2.5 py-1 text-xs font-mono rounded ${currency === 'USD' ? 'bg-white/10 text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                   >
                     USD ($)
                   </button>
@@ -164,11 +164,11 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
               {/* Slider 1: Tree Width Candidates */}
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
-                  <label className="text-xs font-medium text-slate-300 flex items-center gap-1.5">
-                    <GitBranch className="w-3.5 h-3.5 text-slate-400" />
+                  <label className="text-xs font-medium text-neutral-300 flex items-center gap-1.5">
+                    <GitBranch className="w-3.5 h-3.5 text-neutral-400" />
                     <span>Candidate Tree Width (Parallel Branches)</span>
                   </label>
-                  <span className="text-xs font-mono text-amber-400 font-bold">
+                  <span className="text-xs font-mono text-white font-bold">
                     {treeWidthCandidates} branches
                   </span>
                 </div>
@@ -179,18 +179,18 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   step="2"
                   value={treeWidthCandidates}
                   onChange={(e) => setTreeWidthCandidates(Number(e.target.value))}
-                  className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
+                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                 />
               </div>
 
               {/* Slider 2: Verification Depth */}
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
-                  <label className="text-xs font-medium text-slate-300 flex items-center gap-1.5">
-                    <Layers className="w-3.5 h-3.5 text-slate-400" />
+                  <label className="text-xs font-medium text-neutral-300 flex items-center gap-1.5">
+                    <Layers className="w-3.5 h-3.5 text-neutral-400" />
                     <span>Verification Depth (Tokens Ahead)</span>
                   </label>
-                  <span className="text-xs font-mono text-amber-400 font-bold">
+                  <span className="text-xs font-mono text-white font-bold">
                     {verificationDepthTokens} tokens
                   </span>
                 </div>
@@ -201,13 +201,13 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                   step="1"
                   value={verificationDepthTokens}
                   onChange={(e) => setVerificationDepthTokens(Number(e.target.value))}
-                  className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
+                  className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                 />
               </div>
 
               {/* Selector 1: Speculative Engine */}
               <div className="mb-6">
-                <label className="block text-xs font-medium text-slate-300 mb-2">
+                <label className="block text-xs font-medium text-neutral-300 mb-2">
                   Speculative Architecture Engine
                 </label>
                 <div className="grid grid-cols-2 gap-2">
@@ -220,14 +220,14 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                     <button
                       key={eng.id}
                       onClick={() => setSpeculativeEngine(eng.id as SpeculativeEngine)}
-                      className={`text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
                         speculativeEngine === eng.id
-                          ? 'bg-amber-950/50 border-amber-500/80 text-white shadow-sm shadow-amber-500/10'
-                          : 'bg-slate-800/40 border-slate-700/60 text-slate-400 hover:border-slate-600'
+                          ? 'bg-white/10 border-white/20 text-white shadow-sm'
+                          : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
                       }`}
                     >
-                      <div className="font-semibold text-slate-200">{eng.label}</div>
-                      <div className="text-[10px] text-slate-400 mt-0.5">{eng.sub}</div>
+                      <div className="font-semibold text-neutral-200">{eng.label}</div>
+                      <div className="text-[10px] text-neutral-400 mt-0.5">{eng.sub}</div>
                     </button>
                   ))}
                 </div>
@@ -235,7 +235,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
 
               {/* Selector 2: Target Model */}
               <div className="mb-6">
-                <label className="block text-xs font-medium text-slate-300 mb-2">
+                <label className="block text-xs font-medium text-neutral-300 mb-2">
                   Target Sovereign LLM Verifier
                 </label>
                 <div className="grid grid-cols-2 gap-2">
@@ -248,14 +248,14 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                     <button
                       key={m.id}
                       onClick={() => setTargetModel(m.id as TargetModel)}
-                      className={`text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
                         targetModel === m.id
-                          ? 'bg-amber-950/50 border-amber-500/80 text-white'
-                          : 'bg-slate-800/40 border-slate-700/60 text-slate-400 hover:border-slate-600'
+                          ? 'bg-white/10 border-white/20 text-white'
+                          : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
                       }`}
                     >
-                      <div className="font-semibold text-slate-200">{m.label}</div>
-                      <div className="text-[10px] text-slate-400 mt-0.5">{m.sub}</div>
+                      <div className="font-semibold text-neutral-200">{m.label}</div>
+                      <div className="text-[10px] text-neutral-400 mt-0.5">{m.sub}</div>
                     </button>
                   ))}
                 </div>
@@ -263,7 +263,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
 
               {/* Selector 3: Hardware Cluster */}
               <div>
-                <label className="block text-xs font-medium text-slate-300 mb-2">
+                <label className="block text-xs font-medium text-neutral-300 mb-2">
                   GPU Verification Cluster
                 </label>
                 <div className="grid grid-cols-2 gap-2">
@@ -276,14 +276,14 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
                     <button
                       key={hw.id}
                       onClick={() => setHardwareCluster(hw.id as HardwareCluster)}
-                      className={`text-left p-2.5 rounded-xl border text-xs transition ${
+                      className={`active:scale-[0.97] text-left p-2.5 rounded-xl border text-xs transition ${
                         hardwareCluster === hw.id
-                          ? 'bg-amber-950/50 border-amber-500/80 text-white'
-                          : 'bg-slate-800/40 border-slate-700/60 text-slate-400 hover:border-slate-600'
+                          ? 'bg-white/10 border-white/20 text-white'
+                          : 'bg-neutral-800/40 border-neutral-700/60 text-neutral-400 hover:border-neutral-600'
                       }`}
                     >
-                      <div className="font-semibold text-slate-200">{hw.label}</div>
-                      <div className="text-[10px] text-slate-400 mt-0.5">{hw.sub}</div>
+                      <div className="font-semibold text-neutral-200">{hw.label}</div>
+                      <div className="text-[10px] text-neutral-400 mt-0.5">{hw.sub}</div>
                     </button>
                   ))}
                 </div>
@@ -294,84 +294,84 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
             <div className="lg:col-span-7 space-y-6">
               {/* Primary Metric Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5">
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                  <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Effective Token Latency</span>
-                    <Zap className="w-4 h-4 text-amber-400" />
+                    <Zap className="w-4 h-4 text-white" />
                   </div>
-                  <div className="text-3xl font-extrabold font-mono text-amber-400">
+                  <div className="text-3xl font-extrabold font-mono text-white">
                     {outputs.effectivePerTokenLatencyMs} ms
                   </div>
-                  <div className="text-xs text-slate-400 mt-1">
-                    Throughput: <span className="text-slate-200 font-mono">{outputs.tokensPerSecondTotal} tok/s</span>
+                  <div className="text-xs text-neutral-400 mt-1">
+                    Throughput: <span className="text-neutral-200 font-mono">{outputs.tokensPerSecondTotal} tok/s</span>
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5">
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                  <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Speedup Acceleration</span>
-                    <Gauge className="w-4 h-4 text-emerald-400" />
+                    <Gauge className="w-4 h-4 text-neutral-200" />
                   </div>
-                  <div className="text-3xl font-extrabold font-mono text-emerald-400">
+                  <div className="text-3xl font-extrabold font-mono text-neutral-200">
                     {outputs.speedupMultiplier}x
                   </div>
-                  <div className="text-xs text-slate-400 mt-1">
+                  <div className="text-xs text-neutral-400 mt-1">
                     vs Vanilla Autoregressive Baseline
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5">
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                  <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Tree Acceptance Rate</span>
-                    <GitBranch className="w-4 h-4 text-cyan-400" />
+                    <GitBranch className="w-4 h-4 text-neutral-200" />
                   </div>
-                  <div className="text-3xl font-extrabold font-mono text-cyan-400">
+                  <div className="text-3xl font-extrabold font-mono text-neutral-200">
                     {outputs.treeAcceptanceRatePct}%
                   </div>
-                  <div className="text-xs text-slate-400 mt-1">
+                  <div className="text-xs text-neutral-400 mt-1">
                     Rejection sampling verification fidelity
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5">
-                  <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5">
+                  <div className="flex items-center justify-between text-xs text-neutral-400 mb-1">
                     <span>Annual Compute Savings</span>
-                    <Coins className="w-4 h-4 text-purple-400" />
+                    <Coins className="w-4 h-4 text-neutral-200" />
                   </div>
-                  <div className="text-3xl font-extrabold font-mono text-purple-400">
+                  <div className="text-3xl font-extrabold font-mono text-neutral-200">
                     {outputs.annualClusterSavings}
                   </div>
-                  <div className="text-xs text-slate-400 mt-1">
+                  <div className="text-xs text-neutral-400 mt-1">
                     3x higher throughput per GPU node
                   </div>
                 </div>
               </div>
 
               {/* Tree Verification Trace Breakdown */}
-              <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+              <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-5">
                 <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-                  <GitBranch className="w-4 h-4 text-amber-400" />
+                  <GitBranch className="w-4 h-4 text-white" />
                   <span>Speculative Tree Verification Trace by Depth</span>
                 </h3>
                 <div className="space-y-2.5">
                   {outputs.treeTrace.map((tr) => (
                     <div
                       key={tr.depth}
-                      className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-xs"
+                      className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/80 flex items-center justify-between text-xs"
                     >
                       <div>
-                        <div className="font-semibold text-slate-200 flex items-center gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
+                        <div className="font-semibold text-neutral-200 flex items-center gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                           <span>Depth {tr.depth} (Token t+{tr.depth})</span>
                         </div>
-                        <div className="text-[10px] text-slate-400 mt-0.5">
+                        <div className="text-[10px] text-neutral-400 mt-0.5">
                           Proposed: {tr.tokensProposed} branches • Accepted: {tr.tokensAccepted} tokens ({tr.acceptancePct}%)
                         </div>
                       </div>
                       <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold ${
-                        tr.status === 'VERIFIED' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
-                        tr.status === 'BRANCH_PRUNED' ? 'bg-amber-950 text-amber-400 border border-amber-800' :
-                        'bg-rose-950 text-rose-400 border border-rose-800'
+                        tr.status === 'VERIFIED' ? 'bg-white/[0.05] text-neutral-200 border border-white/15' :
+                        tr.status === 'BRANCH_PRUNED' ? 'bg-white/10 text-white border border-white/20' :
+                        'bg-red-950 text-red-400 border border-red-800'
                       }`}>
                         {tr.status}
                       </span>
@@ -384,23 +384,23 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
               <div className="flex flex-wrap gap-3">
                 <button
                   onClick={copyExecutiveMemo}
-                  className="px-4 py-2.5 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition shadow-lg shadow-amber-500/20"
+                  className="active:scale-[0.97] px-4 py-2.5 rounded-lg bg-white/10 hover:bg-neutral-200 text-black font-bold text-xs flex items-center gap-2 transition shadow-lg"
                 >
                   {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{hasCopiedMemo ? 'Copied Telemetry Memo!' : 'Copy Executive Audit Memo'}</span>
                 </button>
                 <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                   onClick={() => setIsEmbedOpen(true)}
-                  className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 border border-slate-700 transition"
+                  className="active:scale-[0.97] px-4 py-2.5 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold flex items-center gap-2 border border-neutral-700 transition"
                 >
-                  <Code className="w-4 h-4 text-amber-400" />
+                  <Code className="w-4 h-4 text-white" />
                   <span>Embed Calculator on Your Site</span>
                 </button>
               </div>
@@ -410,23 +410,23 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           {/* Consultation Lead Magnet */}
           <div className="mb-14">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -436,7 +436,7 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           </div>
 
           {/* Technical FAQ */}
-          <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8 mb-12">
+          <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 sm:p-8 mb-12">
             <h2 className="text-xl font-bold text-white mb-6">
               Frequently Asked Technical Questions: Medusa Tree-Attention &amp; Speculative Decoding
             </h2>
@@ -444,17 +444,17 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="border border-slate-800/80 rounded-xl overflow-hidden bg-slate-950/40"
+                  className="border border-neutral-800/80 rounded-xl overflow-hidden bg-neutral-950/40"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full text-left p-4 text-sm font-semibold text-slate-200 flex justify-between items-center hover:text-amber-400 transition"
+                    className="active:scale-[0.97] w-full text-left p-4 text-sm font-semibold text-neutral-200 flex justify-between items-center hover:text-white transition"
                   >
                     <span>{faq.q}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${openFaq === idx ? 'rotate-180 text-amber-400' : 'text-slate-500'}`} />
+                    <ChevronDown className={`w-4 h-4 transition-transform ${openFaq === idx ? 'rotate-180 text-white' : 'text-neutral-500'}`} />
                   </button>
                   {openFaq === idx && (
-                    <div className="p-4 pt-0 text-xs text-slate-400 leading-relaxed border-t border-slate-800/50">
+                    <div className="p-4 pt-0 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/50">
                       {faq.a}
                     </div>
                   )}
@@ -466,35 +466,35 @@ Generated via Elesium Autonomous Agent Systems (https://elesium.online)`;
           {/* Embed Modal */}
           {isEmbedOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-              <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+              <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
                 <button
                   onClick={() => setIsEmbedOpen(false)}
-                  className="absolute top-4 right-4 text-slate-400 hover:text-white"
+                  className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
                 >
                   <X className="w-5 h-5" />
                 </button>
                 <h3 className="text-base font-bold text-white mb-2">
                   Embed This Simulator On Your Website
                 </h3>
-                <p className="text-xs text-slate-400 mb-4">
+                <p className="text-xs text-neutral-400 mb-4">
                   Copy and paste the snippet below into your CMS, blog, or internal portal. Includes live telemetry calculations and watermark backlink.
                 </p>
                 <textarea
                   readOnly
                   rows={5}
                   value={embedCode}
-                  className="w-full p-3 rounded-lg bg-slate-950 border border-slate-800 text-[11px] font-mono text-amber-400 mb-4 focus:outline-none"
+                  className="w-full p-3 rounded-lg bg-neutral-950 border border-neutral-800 text-[11px] font-mono text-white mb-4 focus:outline-none"
                 />
                 <div className="flex justify-end gap-2">
                   <button
                     onClick={() => setIsEmbedOpen(false)}
-                    className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 transition"
+                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold text-neutral-300 transition"
                   >
                     Close
                   </button>
                   <button
                     onClick={copyEmbed}
-                    className="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold flex items-center gap-1.5 transition"
+                    className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white/10 hover:bg-neutral-200 text-black text-xs font-bold flex items-center gap-1.5 transition"
                   >
                     {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Iframe Code'}</span>

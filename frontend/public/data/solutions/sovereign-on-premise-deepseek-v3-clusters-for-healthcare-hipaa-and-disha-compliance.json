@@ -17,7 +17,7 @@
   "firstSentence": "Deploy on-premise DeepSeek V3 clusters in healthcare facilities, guaranteeing zero data leakage under HIPAA Safe Harbor and the Digital Information Security in Healthcare Act (DISHA).",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance",
   "paragraphs": [
     "Large tertiary hospitals and medical research institutes in India face severe compliance liability when exploring clinical generative AI for doctor-patient encounter transcription and clinical note generation. Sending patient medical histories, diagnostic imaging notes, and prescription orders to third-party commercial cloud APIs violates statutory medical confidentiality under DISHA 2023 and HIPAA Safe Harbor standards. Cloud network outages in critical care units halt real-time clinical summarization, endangering patient outcomes.",
@@ -113,7 +113,7 @@
     "subheadline": "Large tertiary hospitals and medical research institutes in India face severe compliance liability when exploring clinical generative AI for doctor-patient encounter transcription and clinical note generation. Sending patient medical histories, diagnostic imaging notes, and prescription orders to third-party commercial cloud APIs violates statutory medical confidentiality under DISHA 2023 and HIPAA Safe Harbor standards. Cloud network outages in critical care units halt real-time clinical summarization, endangering patient outcomes.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Reduces manual EHR data entry from 2.5 hours daily to under 30 minutes."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Reduces manual EHR data entry from 2.5 hours daily to under 30 minutes."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance Performance Telemetry",
       "layout": "centered-card"
     }

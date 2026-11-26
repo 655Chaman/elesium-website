@@ -17,7 +17,7 @@
   "firstSentence": "Inspect automotive painted car bodies for orange peel, dust nibs, and paint runs with high-speed deflected-light vision agents.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants",
   "paragraphs": [
     "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
@@ -113,7 +113,7 @@
     "subheadline": "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Validated across solid, metallic, and pearl coat automotive finishes."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Validated across solid, metallic, and pearl coat automotive finishes."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants Performance Telemetry",
       "layout": "centered-card"
     }

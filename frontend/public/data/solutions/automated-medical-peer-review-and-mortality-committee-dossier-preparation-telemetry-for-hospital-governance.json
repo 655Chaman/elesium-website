@@ -17,7 +17,7 @@
   "firstSentence": "Automate medical peer review and mortality committee dossier compilation, reconstructing clinical deterioration timelines with root-cause analytics under NABH governance mandates.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance",
   "paragraphs": [
     "Hospital clinical governance committees and medical quality directors spend hundreds of hours manually preparing medical peer review files, morbidity audits, and mortality committee review dossiers. Reconstructing clinical timelines across multi-volume patient charts, ICU nursing flows, pharmacy dispensing logs, and code blue resuscitation sheets is grueling and prone to human oversight. Delays in completing statutory peer reviews jeopardize hospital NABH accreditation and expose healthcare institutions to medical malpractice liability.",
@@ -113,7 +113,7 @@
     "subheadline": "Hospital clinical governance committees and medical quality directors spend hundreds of hours manually preparing medical peer review files, morbidity audits, and mortality committee review dossiers. Reconstructing clinical timelines across multi-volume patient charts, ICU nursing flows, pharmacy dispensing logs, and code blue resuscitation sheets is grueling and prone to human oversight. Delays in completing statutory peer reviews jeopardize hospital NABH accreditation and expose healthcare institutions to medical malpractice liability.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete documentation satisfying mandatory clinical audit accreditation standards."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete documentation satisfying mandatory clinical audit accreditation standards."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance Performance Telemetry",
       "layout": "centered-card"
     }

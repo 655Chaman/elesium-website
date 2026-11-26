@@ -78,7 +78,7 @@ export default function EnterpriseVoiceAgentLatencySimulator() {
     return calculateVoiceAgentLatency(inputs);
   }, [inputs]);
 
-  const embedCodeSnippet = `<iframe src="https://elesium.online/embed/voice-agent-latency-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;background:#020617;"></iframe><div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Systems</a></div>`;
+  const embedCodeSnippet = `<iframe src="https://elesium.online/embed/voice-agent-latency-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #262626;background:#000000;"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Systems</a></div>`;
 
   const copyEmbedCode = () => {
     navigator.clipboard.writeText(embedCodeSnippet);
@@ -122,24 +122,24 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   const getStageColor = (stageId: string) => {
     switch (stageId) {
       case 'ingress_transport':
-        return 'bg-blue-500';
+        return 'bg-white';
       case 'vad_hangover':
-        return 'bg-amber-500';
+        return 'bg-neutral-300';
       case 'asr_transcription':
-        return 'bg-emerald-500';
+        return 'bg-neutral-400';
       case 'llm_ttft':
-        return 'bg-purple-500';
+        return 'bg-neutral-500';
       case 'tts_synthesis':
-        return 'bg-rose-500';
+        return 'bg-neutral-600';
       case 'egress_buffer':
-        return 'bg-sky-500';
+        return 'bg-neutral-700';
       default:
-        return 'bg-slate-500';
+        return 'bg-neutral-500';
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 pt-24 pb-20 selection:bg-purple-500/30 selection:text-purple-200">
+    <div className="min-h-screen bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Real-Time Voice Agent VAD & Turn-Taking Latency Simulator | Elesium</title>
         <meta
@@ -201,32 +201,32 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Navigation Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-8">
-          <Link to="/" className="hover:text-slate-200 transition-colors">Home</Link>
+        <nav className="flex items-center space-x-2 text-xs font-mono text-neutral-400 mb-8">
+          <Link to="/" className="hover:text-neutral-200 transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/solutions/" className="hover:text-slate-200 transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-neutral-200 transition-colors">Solutions</Link>
           <span>/</span>
-          <span className="text-purple-400">Voice Agent Latency Simulator</span>
+          <span className="text-neutral-200">Voice Agent Latency Simulator</span>
         </nav>
 
         {/* Hero Section */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-mono uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono uppercase tracking-wider mb-4">
             <Mic className="w-3.5 h-3.5" />
             Conversational Telephony & Audio Telemetry Lab
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
-            Enterprise Real-Time Voice Agent <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-sky-300 to-emerald-400">VAD & Turn-Taking Latency Simulator</span>
+            Enterprise Real-Time Voice Agent <span className="text-neutral-400 ">VAD & Turn-Taking Latency Simulator</span>
           </h1>
-          <p className="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-300 max-w-4xl leading-relaxed">
             Human conversations break down when turn-taking latency exceeds 700ms. Deconstruct the entire audio pipeline from Opus packetization and Silero VAD silence hangover to streaming speech-to-text, LLM time-to-first-token (TTFT), and neural voice synthesis.
           </p>
         </div>
 
         {/* Quick Presets Bar */}
         <div className="mb-8">
-          <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-            <Sliders className="w-4 h-4 text-purple-400" />
+          <div className="text-xs font-mono text-neutral-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+            <Sliders className="w-4 h-4 text-neutral-200" />
             Standard Architecture Configurations
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -283,10 +283,10 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               <button
                 key={idx}
                 onClick={preset.action}
-                className="p-4 rounded-full text-left border border-slate-800 bg-slate-900/60 hover:border-purple-500/50 hover:bg-purple-950/20 transition-all"
+                className="active:scale-[0.97] p-4 rounded-lg text-left border border-neutral-800 bg-neutral-900/60 hover:border-white/30 hover:bg-white/10 transition-all"
               >
                 <div className="text-xs font-semibold text-white mb-1">{preset.title}</div>
-                <div className="text-[11px] text-slate-400 leading-normal">{preset.desc}</div>
+                <div className="text-[11px] text-neutral-400 leading-normal">{preset.desc}</div>
               </button>
             ))}
           </div>
@@ -296,22 +296,22 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm">
-              <h3 className="text-sm font-mono uppercase tracking-wider text-slate-300 mb-6 flex items-center justify-between">
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+              <h3 className="text-sm font-mono uppercase tracking-wider text-neutral-300 mb-6 flex items-center justify-between">
                 <span>Audio Pipeline Stages</span>
-                <Radio className="w-4 h-4 text-purple-400" />
+                <Radio className="w-4 h-4 text-neutral-200" />
               </h3>
 
               {/* STT Engine */}
               <div className="mb-5">
-                <span className="text-xs font-mono text-slate-300 block mb-1.5 flex items-center justify-between">
+                <span className="text-xs font-mono text-neutral-300 block mb-1.5 flex items-center justify-between">
                   <span>1. Speech-to-Text (ASR) Engine</span>
-                  <span className="text-emerald-400 font-bold">{STT_CATALOG[sttEngine].inferenceLatencyMs}ms Latency</span>
+                  <span className="text-white font-bold">{STT_CATALOG[sttEngine].inferenceLatencyMs}ms Latency</span>
                 </span>
                 <select
                   value={sttEngine}
                   onChange={e => setSttEngine(e.target.value as SttEngineKey)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono text-slate-200"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200"
                 >
                   {Object.values(STT_CATALOG).map(spec => (
                     <option key={spec.id} value={spec.id}>
@@ -323,14 +323,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
               {/* LLM Model */}
               <div className="mb-5">
-                <span className="text-xs font-mono text-slate-300 block mb-1.5 flex items-center justify-between">
+                <span className="text-xs font-mono text-neutral-300 block mb-1.5 flex items-center justify-between">
                   <span>2. Core LLM Reasoning Model</span>
-                  <span className="text-purple-400 font-bold">{enablePrefixCaching ? LLM_CATALOG[llmModel].prefixCachedTtftMs : LLM_CATALOG[llmModel].baseTtftMs}ms TTFT</span>
+                  <span className="text-white font-bold">{enablePrefixCaching ? LLM_CATALOG[llmModel].prefixCachedTtftMs : LLM_CATALOG[llmModel].baseTtftMs}ms TTFT</span>
                 </span>
                 <select
                   value={llmModel}
                   onChange={e => setLlmModel(e.target.value as LlmModelKey)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono text-slate-200"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200"
                 >
                   {Object.values(LLM_CATALOG).map(spec => (
                     <option key={spec.id} value={spec.id}>
@@ -341,15 +341,15 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </div>
 
               {/* Prefix Caching Toggle */}
-              <div className="mb-5 p-3 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center justify-between">
+              <div className="mb-5 p-3 rounded-xl bg-neutral-950/60 border border-neutral-800 flex items-center justify-between">
                 <div>
-                  <div className="text-xs font-mono font-semibold text-slate-200">LLM Prompt Prefix Caching</div>
-                  <div className="text-[11px] text-slate-400">Radix tree cache for system prompt &amp; historical turns</div>
+                  <div className="text-xs font-mono font-semibold text-neutral-200">LLM Prompt Prefix Caching</div>
+                  <div className="text-[11px] text-neutral-400">Radix tree cache for system prompt &amp; historical turns</div>
                 </div>
                 <button
                   onClick={() => setEnablePrefixCaching(!enablePrefixCaching)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    enablePrefixCaching ? 'bg-purple-500' : 'bg-slate-700'
+                  className={`active:scale-[0.97] relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    enablePrefixCaching ? 'bg-white/80' : 'bg-neutral-700'
                   }`}
                 >
                   <span
@@ -362,14 +362,14 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
               {/* TTS Engine */}
               <div className="mb-5">
-                <span className="text-xs font-mono text-slate-300 block mb-1.5 flex items-center justify-between">
+                <span className="text-xs font-mono text-neutral-300 block mb-1.5 flex items-center justify-between">
                   <span>3. Neural Text-to-Speech (TTS)</span>
-                  <span className="text-rose-400 font-bold">{TTS_CATALOG[ttsEngine].timeToFirstAudioMs}ms TTFA</span>
+                  <span className="text-red-400 font-bold">{TTS_CATALOG[ttsEngine].timeToFirstAudioMs}ms TTFA</span>
                 </span>
                 <select
                   value={ttsEngine}
                   onChange={e => setTtsEngine(e.target.value as TtsEngineKey)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono text-slate-200"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200"
                 >
                   {Object.values(TTS_CATALOG).map(spec => (
                     <option key={spec.id} value={spec.id}>
@@ -381,11 +381,11 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
               {/* Network Tier */}
               <div className="mb-5">
-                <span className="text-xs font-mono text-slate-300 block mb-1.5">4. Network &amp; Telephony Ingress Transport</span>
+                <span className="text-xs font-mono text-neutral-300 block mb-1.5">4. Network &amp; Telephony Ingress Transport</span>
                 <select
                   value={networkTier}
                   onChange={e => setNetworkTier(e.target.value as NetworkTierKey)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono text-slate-200"
+                  className="w-full bg-neutral-950 border border-neutral-700 rounded-xl px-3 py-2 text-xs font-mono text-neutral-200"
                 >
                   {Object.values(NETWORK_CATALOG).map(spec => (
                     <option key={spec.id} value={spec.id}>
@@ -398,7 +398,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               {/* VAD Silence Hangover Slider */}
               <div className="mb-5">
                 <div className="flex justify-between items-center text-xs font-mono mb-2">
-                  <span className="text-slate-300">VAD Silence Hangover Threshold</span>
+                  <span className="text-neutral-300">VAD Silence Hangover Threshold</span>
                   <span className="text-amber-400 font-bold">{vadSilenceHangoverMs} ms</span>
                 </div>
                 <input
@@ -408,9 +408,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   step="25"
                   value={vadSilenceHangoverMs}
                   onChange={e => setVadSilenceHangoverMs(parseInt(e.target.value))}
-                  className="w-full accent-amber-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg"
+                  className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded-lg"
                 />
-                <div className="flex justify-between text-[10px] text-slate-500 mt-1 font-mono">
+                <div className="flex justify-between text-[10px] text-neutral-500 mt-1 font-mono">
                   <span>150ms (Aggressive)</span>
                   <span>350ms (Natural)</span>
                   <span>700ms (High Safety)</span>
@@ -418,15 +418,15 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </div>
 
               {/* Semantic Turn Taking Toggle */}
-              <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 flex items-center justify-between">
+              <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800 flex items-center justify-between">
                 <div>
-                  <div className="text-xs font-mono font-semibold text-slate-200">Semantic End-of-Thought Classifier</div>
-                  <div className="text-[11px] text-slate-400">Reduces required silence wait by 58% via predictive punctuation</div>
+                  <div className="text-xs font-mono font-semibold text-neutral-200">Semantic End-of-Thought Classifier</div>
+                  <div className="text-[11px] text-neutral-400">Reduces required silence wait by 58% via predictive punctuation</div>
                 </div>
                 <button
                   onClick={() => setEnableSemanticTurnTaking(!enableSemanticTurnTaking)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    enableSemanticTurnTaking ? 'bg-emerald-500' : 'bg-slate-700'
+                  className={`active:scale-[0.97] relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    enableSemanticTurnTaking ? 'bg-white/80' : 'bg-neutral-700'
                   }`}
                 >
                   <span
@@ -439,16 +439,16 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             </div>
 
             {/* Volume & Telephony Sizing Card */}
-            <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
-                <DollarSign className="w-4 h-4 text-emerald-400" />
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-4 flex items-center gap-2">
+                <DollarSign className="w-4 h-4 text-neutral-200" />
                 Telephony Capacity &amp; FinOps Sizing
               </h3>
 
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-slate-400">Concurrent Call Channels:</span>
+                    <span className="text-neutral-400">Concurrent Call Channels:</span>
                     <span className="text-white font-bold">{concurrentCallStreams} Channels</span>
                   </div>
                   <input
@@ -458,13 +458,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     step="5"
                     value={concurrentCallStreams}
                     onChange={e => setConcurrentCallStreams(parseInt(e.target.value))}
-                    className="w-full accent-purple-500 cursor-pointer h-1.5 bg-slate-800 rounded"
+                    className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded"
                   />
                 </div>
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-slate-400">Monthly Call Volume:</span>
+                    <span className="text-neutral-400">Monthly Call Volume:</span>
                     <span className="text-white font-bold">{monthlyCallVolume.toLocaleString()} Calls</span>
                   </div>
                   <input
@@ -474,13 +474,13 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     step="1000"
                     value={monthlyCallVolume}
                     onChange={e => setMonthlyCallVolume(parseInt(e.target.value))}
-                    className="w-full accent-purple-500 cursor-pointer h-1.5 bg-slate-800 rounded"
+                    className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded"
                   />
                 </div>
 
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1">
-                    <span className="text-slate-400">Average Call Duration:</span>
+                    <span className="text-neutral-400">Average Call Duration:</span>
                     <span className="text-white font-bold">{averageCallMinutes} Minutes</span>
                   </div>
                   <input
@@ -490,7 +490,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     step="1"
                     value={averageCallMinutes}
                     onChange={e => setAverageCallMinutes(parseInt(e.target.value))}
-                    className="w-full accent-purple-500 cursor-pointer h-1.5 bg-slate-800 rounded"
+                    className="w-full accent-white cursor-pointer h-1.5 bg-neutral-800 rounded"
                   />
                 </div>
               </div>
@@ -500,32 +500,32 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           {/* Right Column: Latency Waterfall & Analytics */}
           <div className="lg:col-span-7 space-y-6">
             {/* Main Scorecard Banner */}
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm relative overflow-hidden">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm relative overflow-hidden">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                 <div>
-                  <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
+                  <div className="text-xs font-mono text-neutral-400 uppercase tracking-wider mb-1">
                     Cumulative Turn-Taking Latency
                   </div>
                   <div className="flex items-baseline gap-3">
                     <span className={`text-5xl font-extrabold tracking-tight ${results.gradeColor}`}>
                       {results.totalTurnTakingLatencyMs}
                     </span>
-                    <span className="text-slate-400 font-mono text-lg">milliseconds</span>
+                    <span className="text-neutral-400 font-mono text-lg">milliseconds</span>
                   </div>
                 </div>
                 <div className="text-left sm:text-right">
-                  <span className={`inline-flex px-3 py-1 rounded-full text-xs font-mono font-semibold border ${
+                  <span className={`inline-flex px-3 py-1 rounded-lg text-xs font-mono font-semibold border ${
                     results.conversationalGrade === 'ULTRA_FLUID'
-                      ? 'bg-sky-500/20 text-sky-300 border-sky-500/40'
+                      ? 'bg-white/10 text-neutral-200 border-white/30'
                       : results.conversationalGrade === 'NATURAL_ENTERPRISE'
-                      ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+                      ? 'bg-white/10 text-neutral-200 border-white/30'
                       : results.conversationalGrade === 'NOTICEABLE_LAG'
                       ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
-                      : 'bg-rose-500/20 text-rose-300 border-rose-500/40'
+                      : 'bg-red-500/20 text-red-300 border-red-500/40'
                   }`}>
                     {results.gradeBadge}
                   </span>
-                  <div className="text-[11px] font-mono text-slate-400 mt-1">
+                  <div className="text-[11px] font-mono text-neutral-400 mt-1">
                     Interruption Cutoff Risk: {results.interruptionFalsePositiveRatePct}%
                   </div>
                 </div>
@@ -533,7 +533,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
               {/* Horizontal Waterfall Bar */}
               <div className="mb-4">
-                <div className="h-6 w-full rounded-xl overflow-hidden flex bg-slate-950 p-0.5 border border-slate-800">
+                <div className="h-6 w-full rounded-xl overflow-hidden flex bg-neutral-950 p-0.5 border border-neutral-800">
                   {results.stages.map(stage => (
                     <div
                       key={stage.stageId}
@@ -545,7 +545,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     </div>
                   ))}
                 </div>
-                <div className="flex justify-between text-[10px] font-mono text-slate-500 mt-1">
+                <div className="flex justify-between text-[10px] font-mono text-neutral-500 mt-1">
                   <span>User Stops Speaking</span>
                   <span>Human Turnaround Benchmark (250ms)</span>
                   <span>Agent Audio Plays</span>
@@ -559,27 +559,27 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     key={stage.stageId}
                     className={`p-3 rounded-xl border flex items-center justify-between gap-4 ${
                       stage.isBottleneck
-                        ? 'bg-rose-950/20 border-rose-500/40'
-                        : 'bg-slate-950/60 border-slate-800'
+                        ? 'bg-red-950/20 border-red-500/40'
+                        : 'bg-neutral-950/60 border-neutral-800'
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <span className={`w-2.5 h-2.5 rounded-full ${getStageColor(stage.stageId)}`} />
                       <div>
-                        <div className="font-semibold text-slate-200 flex items-center gap-2">
+                        <div className="font-semibold text-neutral-200 flex items-center gap-2">
                           <span>{stage.label}</span>
                           {stage.isBottleneck && (
-                            <span className="px-1.5 py-0.2 rounded text-[9px] bg-rose-500/20 text-rose-400 border border-rose-500/30 uppercase">
+                            <span className="px-1.5 py-0.2 rounded text-[9px] bg-red-500/20 text-red-400 border border-red-500/30 uppercase">
                               Bottleneck
                             </span>
                           )}
                         </div>
-                        <div className="text-[11px] text-slate-400 font-sans">{stage.description}</div>
+                        <div className="text-[11px] text-neutral-400 font-sans">{stage.description}</div>
                       </div>
                     </div>
                     <div className="text-right shrink-0">
                       <div className="font-bold text-white text-sm">{stage.latencyMs} ms</div>
-                      <div className="text-[10px] text-slate-500">{stage.percentageOfTotal}% of total</div>
+                      <div className="text-[10px] text-neutral-500">{stage.percentageOfTotal}% of total</div>
                     </div>
                   </div>
                 ))}
@@ -587,87 +587,87 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             </div>
 
             {/* Financial Opex Comparison Card */}
-            <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
-                <Server className="w-4 h-4 text-emerald-400" />
+            <div className="bg-neutral-900/80 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-4 flex items-center gap-2">
+                <Server className="w-4 h-4 text-neutral-200" />
                 Monthly Voice Infrastructure Cost Analysis
               </h3>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Cost Per Call</div>
+                <div className="p-3 rounded-xl bg-neutral-950 border border-neutral-800">
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Cost Per Call</div>
                   <div className="text-lg font-bold text-white mt-1">
                     ${results.estimatedCostPerCallUSD.toFixed(3)}
                   </div>
-                  <div className="text-[10px] text-slate-500 font-mono">Cloud Multivendor</div>
+                  <div className="text-[10px] text-neutral-500 font-mono">Cloud Multivendor</div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Monthly Cloud Opex</div>
-                  <div className="text-lg font-bold text-rose-400 mt-1">
+                <div className="p-3 rounded-xl bg-neutral-950 border border-neutral-800">
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Monthly Cloud Opex</div>
+                  <div className="text-lg font-bold text-red-400 mt-1">
                     ${results.monthlyTotalOpexUSD.toLocaleString()}
                   </div>
-                  <div className="text-[10px] text-slate-500 font-mono">{monthlyCallVolume.toLocaleString()} Calls</div>
+                  <div className="text-[10px] text-neutral-500 font-mono">{monthlyCallVolume.toLocaleString()} Calls</div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Sovereign Cluster</div>
-                  <div className="text-lg font-bold text-emerald-400 mt-1">
+                <div className="p-3 rounded-xl bg-neutral-950 border border-neutral-800">
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Sovereign Cluster</div>
+                  <div className="text-lg font-bold text-white mt-1">
                     ${results.sovereignOnPremMonthlyOpexUSD.toLocaleString()}
                   </div>
-                  <div className="text-[10px] text-emerald-500/80 font-mono">Dedicated Hardware</div>
+                  <div className="text-[10px] text-neutral-200 font-mono">Dedicated Hardware</div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Net Monthly Savings</div>
-                  <div className="text-lg font-bold text-sky-400 mt-1">
+                <div className="p-3 rounded-xl bg-neutral-950 border border-neutral-800">
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Net Monthly Savings</div>
+                  <div className="text-lg font-bold text-white mt-1">
                     ${results.monthlySavingsUSD.toLocaleString()}
                   </div>
-                  <div className="text-[10px] text-sky-400 font-mono">-{results.savingsPercentage}% Cut</div>
+                  <div className="text-[10px] text-neutral-200 font-mono">-{results.savingsPercentage}% Cut</div>
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 leading-relaxed font-mono">
-                <span className="text-purple-400 font-bold">Engineering Assessment:</span> {results.architecturalVerdict}
+              <div className="p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-xs text-neutral-300 leading-relaxed font-mono">
+                <span className="text-white font-bold">Engineering Assessment:</span> {results.architecturalVerdict}
               </div>
             </div>
           </div>
         </div>
 
         {/* Action Row & Embed Drawer */}
-        <div className="flex flex-wrap items-center justify-between gap-4 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-purple-950/30 to-slate-900 border border-slate-800 mb-16">
+        <div className="flex flex-wrap items-center justify-between gap-4 p-6 rounded-xl bg-neutral-950 border border-neutral-800 mb-16">
           <div>
             <h4 className="text-lg font-bold text-white mb-1">
               Embed This Voice Latency Simulator
             </h4>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-neutral-400">
               Integrate this interactive voice turnaround telemetry sandbox into your engineering documentation or developer blog.
             </p>
           </div>
           <div className="flex items-center gap-3">
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
+              className="active:scale-[0.97] px-4 py-2.5 rounded-xl border border-neutral-700 bg-neutral-800/80 hover:bg-neutral-700 text-xs font-mono font-medium text-neutral-200 transition-colors flex items-center gap-2"
             >
-              <Code className="w-3.5 h-3.5 text-purple-400" />
+              <Code className="w-3.5 h-3.5 text-neutral-200" />
               Embed Sandbox
             </button>
             <button
               onClick={copyArchitecturalMemo}
-              className="px-4 py-2.5 rounded-full border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-mono font-medium text-slate-200 transition-colors flex items-center gap-2"
+              className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-neutral-700 bg-neutral-800/80 hover:bg-neutral-700 text-xs font-mono font-medium text-neutral-200 transition-colors flex items-center gap-2"
             >
-              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
+              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-400" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Dossier'}
             </button>
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 hover:from-purple-600 hover:to-sky-600 text-xs font-mono font-bold text-white transition-all shadow-md shadow-purple-950 flex items-center gap-2">
+              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-200 text-xs font-mono font-bold text-white transition-all shadow-md flex items-center gap-2">
                 <span>Schedule Voice Architecture Audit</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </ExpandableScreenTrigger>
@@ -703,16 +703,16 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               a: 'Hyperscalers charge per-minute and per-token rates (e.g., $0.006/min for Whisper + $0.03/min for TTS + token pricing for GPT-4o), costing $0.15 to $0.40 per 5-minute call. A dedicated enterprise sovereign GPU cluster (such as dual H100 SXM5 instances) carries a fixed amortized monthly hardware cost. At high call volumes (25,000+ calls/mo), self-hosted inference handles hundreds of concurrent channels for under $0.04 per call, reducing operating expenditures by over 70%.'
             }
           ].map((item, idx) => (
-            <div key={idx} className="rounded-xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+            <div key={idx} className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden">
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-slate-200 hover:text-white transition-colors"
+                className="active:scale-[0.97] w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-neutral-200 hover:text-white transition-colors"
               >
                 <span>{item.q}</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180 text-purple-400' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-neutral-400 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
               </button>
               {openFaq === idx && (
-                <div className="px-5 pb-5 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-4">
+                <div className="px-5 pb-5 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-4">
                   {item.a}
                 </div>
               )}
@@ -724,27 +724,27 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 relative shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-2xl w-full p-6 relative shadow-2xl">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
             <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-              <Code className="w-5 h-5 text-purple-400" />
+              <Code className="w-5 h-5 text-neutral-200" />
               Embed Voice Agent Latency Simulator
             </h3>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this HTML snippet into your technical documentation, blog, or dashboard:
             </p>
-            <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-purple-300 break-all select-all mb-4">
+            <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 font-mono text-xs text-neutral-200 break-all select-all mb-4">
               {embedCodeSnippet}
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={copyEmbedCode}
-                className="px-4 py-2 rounded-full bg-purple-500 hover:bg-purple-600 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white/80 hover:bg-neutral-200 text-xs font-mono font-bold text-white flex items-center gap-2 transition-colors"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Code'}

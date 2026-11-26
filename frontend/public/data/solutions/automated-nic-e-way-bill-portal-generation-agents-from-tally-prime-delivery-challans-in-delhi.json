@@ -17,7 +17,7 @@
   "firstSentence": "Generate National Informatics Centre (NIC) e-way bills directly from Tally Prime delivery challans in Delhi NCR, managing multi-vehicle transshipment and Part B vehicle updates in real time.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi",
   "paragraphs": [
     "Industrial manufacturing hubs and wholesale distribution centers in Delhi NCR and Gurgaon face critical truck dispatch delays when moving goods on delivery challans for job work, exhibition, or multi-depot branch transfers. Manual generation of e-way bills on the National Informatics Centre (NIC) portal requires manual calculation of PIN code distances and vehicle number entry. Roadside transport enforcement officers seize consignments and impose heavy 200% tax penalties if challans lack valid e-way bills.",
@@ -113,7 +113,7 @@
     "subheadline": "Industrial manufacturing hubs and wholesale distribution centers in Delhi NCR and Gurgaon face critical truck dispatch delays when moving goods on delivery challans for job work, exhibition, or multi-depot branch transfers. Manual generation of e-way bills on the National Informatics Centre (NIC) portal requires manual calculation of PIN code distances and vehicle number entry. Roadside transport enforcement officers seize consignments and impose heavy 200% tax penalties if challans lack valid e-way bills.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "High-throughput support for Delhi NCR mega-distribution centers."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "High-throughput support for Delhi NCR mega-distribution centers."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi Performance Telemetry",
       "layout": "centered-card"
     }

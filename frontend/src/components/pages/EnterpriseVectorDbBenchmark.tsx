@@ -52,7 +52,7 @@ export default function EnterpriseVectorDbBenchmark() {
     return calculateVectorBenchmark(inputs);
   }, [inputs]);
 
-  const embedCodeSnippet = `<iframe src="https://elesium.online/embed/vector-db-benchmark" width="100%" height="680" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;background:#020617;"></iframe><div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;">Elesium Sovereign AI Systems</a></div>`;
+  const embedCodeSnippet = `<iframe src="https://elesium.online/embed/vector-db-benchmark" width="100%" height="680" frameborder="0" style="border-radius:12px;border:1px solid #262626;background:#000000;"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Systems</a></div>`;
 
   const copyEmbedCode = () => {
     navigator.clipboard.writeText(embedCodeSnippet);
@@ -100,7 +100,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   };
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 pt-24 pb-20 selection:bg-sky-500/30 selection:text-sky-200">
+    <div className="min-h-screen bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Vector DB & RAG Latency Benchmark Simulator | Elesium</title>
         <meta
@@ -121,27 +121,27 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
 
       {/* Breadcrumb Navigation */}
       <div className="max-w-7xl mx-auto px-6 mb-8">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-slate-400">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-neutral-400">
           <Link to="/" className="hover:text-white transition-colors">Home</Link>
-          <span className="text-slate-600">/</span>
+          <span className="text-neutral-600">/</span>
           <Link to="/compare/" className="hover:text-white transition-colors">Compare</Link>
-          <span className="text-slate-600">/</span>
-          <span className="text-sky-400 font-medium">Vector DB Benchmark</span>
+          <span className="text-neutral-600">/</span>
+          <span className="text-neutral-200 font-medium">Vector DB Benchmark</span>
         </nav>
       </div>
 
       {/* Hero Header */}
       <header className="max-w-7xl mx-auto px-6 mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-500/20 bg-sky-500/10 mb-4">
-          <Database className="w-3.5 h-3.5 text-sky-400" />
-          <span className="text-xs font-mono uppercase tracking-widest text-sky-300">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/15 bg-white/[0.04] mb-4">
+          <Database className="w-3.5 h-3.5 text-neutral-200" />
+          <span className="text-xs font-mono uppercase tracking-widest text-neutral-200">
             Micro-SaaS Engineering • RAG Infrastructure Lab
           </span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
           Enterprise Vector DB &amp; RAG Latency Benchmark Simulator
         </h1>
-        <p className="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed">
+        <p className="text-base sm:text-lg text-neutral-300 max-w-4xl leading-relaxed">
           Simulate indexing memory footprints, p99 query latency under concurrent agent load, and 3-year TCO comparing
           <strong className="text-white"> PostgreSQL pgvector (HNSW)</strong> against dedicated vector platforms (<strong className="text-white">Pinecone, Qdrant, Milvus</strong>).
           Engineered for Chief Architects and Engineering VPs eliminating multi-tenant cloud token leakage and WAN transit latency.
@@ -151,16 +151,16 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <div className="flex flex-wrap items-center gap-3 mt-6">
           <button
             onClick={() => setIsEmbedOpen(true)}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-xs font-mono text-slate-300 transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-colors"
           >
-            <Code className="w-3.5 h-3.5 text-sky-400" />
+            <Code className="w-3.5 h-3.5 text-neutral-200" />
             Embed Interactive Benchmark on Your Site
           </button>
           <button
             onClick={copyArchitecturalMemo}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-xs font-mono text-slate-300 transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/60 hover:bg-neutral-800 text-xs font-mono text-neutral-300 transition-colors"
           >
-            {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
+            {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-400" />}
             {hasCopiedMemo ? 'Benchmark Memo Copied!' : 'Copy Architecture Executive Memo'}
           </button>
         </div>
@@ -170,17 +170,17 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       <main className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Interactive Hardware & Index Controls */}
         <section className="lg:col-span-5 space-y-6">
-          <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm shadow-xl">
-            <h2 className="text-base font-semibold text-white flex items-center gap-2 mb-6 pb-4 border-b border-slate-800">
-              <Gauge className="w-4 h-4 text-sky-400" />
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 backdrop-blur-sm shadow-xl">
+            <h2 className="text-base font-semibold text-white flex items-center gap-2 mb-6 pb-4 border-b border-neutral-800">
+              <Gauge className="w-4 h-4 text-neutral-200" />
               Dataset Scale &amp; Vector Topology
             </h2>
 
             {/* Slider 1: Total Vector Count */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Total Vectors in Index</span>
-                <span className="text-sky-300 font-semibold">{(vectorCount / 1000000).toFixed(1)}M ({vectorCount.toLocaleString()})</span>
+                <span className="text-neutral-400">Total Vectors in Index</span>
+                <span className="text-white font-semibold">{(vectorCount / 1000000).toFixed(1)}M ({vectorCount.toLocaleString()})</span>
               </div>
               <input
                 type="range"
@@ -189,9 +189,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="100000"
                 value={vectorCount}
                 onChange={(e) => setVectorCount(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>100K (Pilot)</span>
                 <span>2M (Enterprise)</span>
                 <span>10M (Hyperscale)</span>
@@ -201,8 +201,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Slider 2: Vector Embedding Dimensions */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Embedding Dimensions</span>
-                <span className="text-sky-300 font-semibold">{dimensions} dims</span>
+                <span className="text-neutral-400">Embedding Dimensions</span>
+                <span className="text-white font-semibold">{dimensions} dims</span>
               </div>
               <div className="grid grid-cols-4 gap-2">
                 {[
@@ -214,10 +214,10 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <button
                     key={item.dim}
                     onClick={() => setDimensions(item.dim)}
-                    className={`py-2 px-1 text-center rounded-lg border text-xs font-mono transition-all ${
+                    className={`active:scale-[0.97] py-2 px-1 text-center rounded-lg border text-xs font-mono transition-all ${
                       dimensions === item.dim
-                        ? 'border-sky-500 bg-sky-500/20 text-white font-semibold'
-                        : 'border-slate-800 bg-slate-900/50 text-slate-400 hover:border-slate-700'
+                        ? 'border-white/30 bg-white/10 text-white font-semibold'
+                        : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
                     }`}
                   >
                     {item.label}
@@ -229,8 +229,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Slider 3: Concurrent Multi-Agent Query Workers */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Concurrent Agent Retrieval Workers</span>
-                <span className="text-sky-300 font-semibold">{concurrentWorkers} Workers</span>
+                <span className="text-neutral-400">Concurrent Agent Retrieval Workers</span>
+                <span className="text-white font-semibold">{concurrentWorkers} Workers</span>
               </div>
               <input
                 type="range"
@@ -239,9 +239,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="1"
                 value={concurrentWorkers}
                 onChange={(e) => setConcurrentWorkers(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>1 (Single Loop)</span>
                 <span>16 (Parallel Swarm)</span>
                 <span>64 (Production Spike)</span>
@@ -251,8 +251,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Selector: Quantization Precision */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Quantization &amp; Compression</span>
-                <span className="text-sky-300 font-semibold">{quantizationType.toUpperCase()}</span>
+                <span className="text-neutral-400">Quantization &amp; Compression</span>
+                <span className="text-white font-semibold">{quantizationType.toUpperCase()}</span>
               </div>
               <div className="grid grid-cols-4 gap-2">
                 {[
@@ -264,17 +264,17 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   <button
                     key={item.type}
                     onClick={() => setQuantizationType(item.type as any)}
-                    className={`py-2 px-1 text-center rounded-lg border text-xs font-mono transition-all ${
+                    className={`active:scale-[0.97] py-2 px-1 text-center rounded-lg border text-xs font-mono transition-all ${
                       quantizationType === item.type
-                        ? 'border-sky-500 bg-sky-500/20 text-white font-semibold'
-                        : 'border-slate-800 bg-slate-900/50 text-slate-400 hover:border-slate-700'
+                        ? 'border-white/30 bg-white/10 text-white font-semibold'
+                        : 'border-neutral-800 bg-neutral-900/50 text-neutral-400 hover:border-neutral-700'
                     }`}
                   >
                     {item.label}
                   </button>
                 ))}
               </div>
-              <p className="text-[11px] text-slate-500 mt-2 font-mono">
+              <p className="text-[11px] text-neutral-500 mt-2 font-mono">
                 SQ8 reduces vector RAM by 75% with under 0.8% recall degradation.
               </p>
             </div>
@@ -282,8 +282,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Slider 4: Target Recall@10 */}
             <div className="mb-6">
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Target Recall Accuracy (Recall@10)</span>
-                <span className="text-sky-300 font-semibold">{(targetRecall * 100).toFixed(1)}%</span>
+                <span className="text-neutral-400">Target Recall Accuracy (Recall@10)</span>
+                <span className="text-white font-semibold">{(targetRecall * 100).toFixed(1)}%</span>
               </div>
               <input
                 type="range"
@@ -292,9 +292,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="0.005"
                 value={targetRecall}
                 onChange={(e) => setTargetRecall(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>90.0% (Fast)</span>
                 <span>96.0% (Standard)</span>
                 <span>99.5% (High Recall)</span>
@@ -304,8 +304,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             {/* Slider 5: Monthly Query Volume */}
             <div>
               <div className="flex justify-between text-xs font-mono mb-2">
-                <span className="text-slate-400">Monthly Query Volume</span>
-                <span className="text-sky-300 font-semibold">{(monthlyQueryVolume / 1000000).toFixed(1)}M Queries</span>
+                <span className="text-neutral-400">Monthly Query Volume</span>
+                <span className="text-white font-semibold">{(monthlyQueryVolume / 1000000).toFixed(1)}M Queries</span>
               </div>
               <input
                 type="range"
@@ -314,9 +314,9 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 step="500000"
                 value={monthlyQueryVolume}
                 onChange={(e) => setMonthlyQueryVolume(Number(e.target.value))}
-                className="w-full accent-sky-500 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                className="w-full accent-white bg-neutral-800 h-2 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono mt-1">
                 <span>500K</span>
                 <span>5M</span>
                 <span>30M</span>
@@ -325,28 +325,28 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
 
           {/* Theoretical Memory Formula Card */}
-          <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/40">
             <h3 className="text-sm font-semibold text-white flex items-center gap-2 mb-3">
-              <Layers className="w-4 h-4 text-sky-400" />
+              <Layers className="w-4 h-4 text-neutral-200" />
               HNSW Memory Sizing Formulation
             </h3>
-            <p className="text-xs text-slate-400 leading-relaxed font-mono mb-3">
+            <p className="text-xs text-neutral-400 leading-relaxed font-mono mb-3">
               Total Memory = (Vectors × Dims × PrecisionBytes) + (Vectors × M × 2 × PointerBytes)
             </p>
-            <div className="space-y-1.5 text-xs text-slate-300">
-              <div className="flex justify-between border-b border-slate-800/80 pb-1">
-                <span className="text-slate-400">Raw Vectors:</span>
+            <div className="space-y-1.5 text-xs text-neutral-300">
+              <div className="flex justify-between border-b border-neutral-800/80 pb-1">
+                <span className="text-neutral-400">Raw Vectors:</span>
                 <span className="font-mono text-white">{results.rawVectorSizeGb} GB</span>
               </div>
-              <div className="flex justify-between border-b border-slate-800/80 pb-1">
-                <span className="text-slate-400">Quantization Savings:</span>
-                <span className="font-mono text-emerald-400">
+              <div className="flex justify-between border-b border-neutral-800/80 pb-1">
+                <span className="text-neutral-400">Quantization Savings:</span>
+                <span className="font-mono text-neutral-200">
                   {quantizationType === 'fp32' ? '0%' : quantizationType === 'fp16' ? '50%' : quantizationType === 'sq8' ? '75%' : '87.5%'}
                 </span>
               </div>
               <div className="flex justify-between pt-1">
-                <span className="text-slate-400">HNSW Graph Links (M=16):</span>
-                <span className="font-mono text-sky-400">~256 bytes / vector</span>
+                <span className="text-neutral-400">HNSW Graph Links (M=16):</span>
+                <span className="font-mono text-neutral-200">~256 bytes / vector</span>
               </div>
             </div>
           </div>
@@ -356,51 +356,51 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
         <section className="lg:col-span-7 space-y-6">
           {/* Executive Summary Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-5 rounded-2xl border border-sky-500/30 bg-sky-950/20">
-              <div className="text-xs font-mono text-sky-400 uppercase tracking-wider mb-1">
+            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 Self-Hosted Advantage
               </div>
               <div className="text-2xl font-bold text-white font-mono">
                 {results.latencyAdvantagePercentage}% Faster
               </div>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 Sub-5ms p99 vs 25ms+ WAN TLS SaaS transit
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl border border-emerald-500/30 bg-emerald-950/20">
-              <div className="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-1">
+            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 Annual TCO Savings
               </div>
-              <div className="text-2xl font-bold text-emerald-400 font-mono">
+              <div className="text-2xl font-bold text-white font-mono">
                 ${results.annualSavingsUsd.toLocaleString()}
               </div>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 ${(results.annualSavingsUsd * 3).toLocaleString()} saved over 36-month horizon
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl border border-indigo-500/30 bg-indigo-950/20">
-              <div className="text-xs font-mono text-indigo-400 uppercase tracking-wider mb-1">
+            <div className="p-5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                 Data Sovereignty
               </div>
               <div className="text-2xl font-bold text-white font-mono">
                 100% Private VPC
               </div>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 Air-gapped DPDP Act &amp; SOC-2 Safe Harbor
               </p>
             </div>
           </div>
 
           {/* Engine Benchmark Matrix */}
-          <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/70 shadow-xl overflow-hidden">
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 shadow-xl overflow-hidden">
             <h2 className="text-base font-semibold text-white flex items-center justify-between mb-4">
               <span className="flex items-center gap-2">
-                <Server className="w-4 h-4 text-sky-400" />
+                <Server className="w-4 h-4 text-neutral-200" />
                 Benchmark Comparison: Self-Hosted vs SaaS Vector Engines
               </span>
-              <span className="text-xs font-mono text-slate-400">M=16 • ef_search=64</span>
+              <span className="text-xs font-mono text-neutral-400">M=16 • ef_search=64</span>
             </h2>
 
             <div className="space-y-4">
@@ -409,61 +409,61 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                   key={engine.name}
                   className={`p-4 rounded-xl border transition-all ${
                     idx === 0
-                      ? 'border-sky-500/50 bg-sky-950/20 shadow-md'
-                      : 'border-slate-800 bg-slate-900/40 hover:border-slate-700'
+                      ? 'border-white/30 bg-white/[0.05] shadow-md'
+                      : 'border-neutral-800 bg-neutral-900/40 hover:border-neutral-700'
                   }`}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                     <div className="flex items-center gap-2">
                       <span className={`w-2 h-2 rounded-full ${
                         engine.engineType === 'self_hosted_sql'
-                          ? 'bg-sky-400'
+                          ? 'bg-white/80'
                           : engine.engineType === 'self_hosted_rust'
-                          ? 'bg-indigo-400'
+                          ? 'bg-white/80'
                           : engine.engineType === 'managed_saas'
-                          ? 'bg-rose-400'
-                          : 'bg-emerald-400'
+                          ? 'bg-red-400'
+                          : 'bg-white/80'
                       }`} />
                       <h3 className="text-sm font-semibold text-white">{engine.name}</h3>
                       {idx === 0 && (
-                        <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                        <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-white/10 text-neutral-200 border border-white/20">
                           Recommended
                         </span>
                       )}
                     </div>
                     <div className="flex items-center gap-4 text-xs font-mono">
-                      <span className="text-slate-400">
+                      <span className="text-neutral-400">
                         Monthly: <strong className="text-white">${engine.monthlyCostUsd.toLocaleString()}</strong>
                       </span>
-                      <span className="text-slate-400">
-                        3-Yr TCO: <strong className="text-emerald-400">${engine.threeYearTcoUsd.toLocaleString()}</strong>
+                      <span className="text-neutral-400">
+                        3-Yr TCO: <strong className="text-neutral-200">${engine.threeYearTcoUsd.toLocaleString()}</strong>
                       </span>
                     </div>
                   </div>
 
                   {/* Metrics Bar */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 py-2 px-3 rounded-lg bg-slate-950/60 border border-slate-800/80">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 py-2 px-3 rounded-lg bg-neutral-950/60 border border-neutral-800/80">
                     <div>
-                      <div className="text-slate-500 text-[10px]">p99 Latency</div>
-                      <div className={`font-semibold ${engine.p99LatencyMs < 10 ? 'text-emerald-400' : engine.p99LatencyMs < 20 ? 'text-amber-400' : 'text-rose-400'}`}>
+                      <div className="text-neutral-500 text-[10px]">p99 Latency</div>
+                      <div className={`font-semibold ${engine.p99LatencyMs < 10 ? 'text-white' : engine.p99LatencyMs < 20 ? 'text-amber-400' : 'text-red-400'}`}>
                         {engine.p99LatencyMs} ms
                       </div>
                     </div>
                     <div>
-                      <div className="text-slate-500 text-[10px]">RAM Required</div>
-                      <div className="text-slate-200 font-semibold">{engine.ramFootprintGb} GB</div>
+                      <div className="text-neutral-500 text-[10px]">RAM Required</div>
+                      <div className="text-neutral-200 font-semibold">{engine.ramFootprintGb} GB</div>
                     </div>
                     <div>
-                      <div className="text-slate-500 text-[10px]">Max QPS</div>
-                      <div className="text-sky-400 font-semibold">{engine.maxQps.toLocaleString()}</div>
+                      <div className="text-neutral-500 text-[10px]">Max QPS</div>
+                      <div className="text-white font-semibold">{engine.maxQps.toLocaleString()}</div>
                     </div>
                     <div>
-                      <div className="text-slate-500 text-[10px]">Recall@10</div>
-                      <div className="text-slate-200 font-semibold">{engine.recallScore}%</div>
+                      <div className="text-neutral-500 text-[10px]">Recall@10</div>
+                      <div className="text-neutral-200 font-semibold">{engine.recallScore}%</div>
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-neutral-400 leading-relaxed">
                     {engine.notes}
                   </p>
                 </div>
@@ -472,25 +472,25 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           </div>
 
           {/* Strategic Guidance Box */}
-          <div className="p-6 rounded-2xl border border-sky-500/20 bg-gradient-to-br from-slate-900 to-sky-950/30">
+          <div className="p-6 rounded-xl border border-white/15 bg-neutral-950">
             <h3 className="text-sm font-semibold text-white flex items-center gap-2 mb-2">
-              <ShieldCheck className="w-4 h-4 text-sky-400" />
+              <ShieldCheck className="w-4 h-4 text-neutral-200" />
               Sovereign Architecture Verdict
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-4">
               {results.recommendedArchitecture} By keeping vector embeddings in the same PostgreSQL cluster as your transactional business entities, you achieve zero network transit latency and eliminate the risk of unsynchronized state or third-party API rate limits.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <button
                     onClick={() => openWhatsApp()}
-                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
+                    className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-sm whitespace-nowrap"
                   >
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span className="w-2 h-2 rounded-full bg-neutral-400" />
                     <span>Chat on WhatsApp</span>
                   </button>
                 <ExpandableScreen>
                 <ExpandableScreenTrigger>
-                  <button className="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs transition-colors flex items-center gap-2">
+                  <button className="active:scale-[0.97] px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs transition-colors flex items-center gap-2">
                     Schedule Sovereign RAG Architecture Audit
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
@@ -501,7 +501,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               </ExpandableScreen>
               <button
                 onClick={() => openWhatsApp()}
-                className="px-4 py-2.5 rounded-lg border border-slate-700 bg-slate-900 hover:bg-slate-800 text-xs text-slate-200 transition-colors"
+                className="active:scale-[0.97] px-4 py-2.5 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs text-neutral-200 transition-colors"
               >
                 Discuss Vector Sizing on WhatsApp
               </button>
@@ -532,15 +532,15 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
           ].map((item, index) => (
             <div
               key={index}
-              className="p-5 rounded-xl border border-slate-800 bg-slate-900/50 cursor-pointer"
+              className="p-5 rounded-xl border border-neutral-800 bg-neutral-900/50 cursor-pointer"
               onClick={() => setOpenFaq(openFaq === index ? null : index)}
             >
               <div className="flex justify-between items-center text-sm font-semibold text-white">
                 <span>{item.q}</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
               </div>
               {openFaq === index && (
-                <p className="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed pt-2 border-t border-slate-800">
+                <p className="mt-3 text-xs sm:text-sm text-neutral-400 leading-relaxed pt-2 border-t border-neutral-800">
                   {item.a}
                 </p>
               )}
@@ -552,35 +552,35 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative w-full max-w-2xl p-6 rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl">
+          <div className="relative w-full max-w-2xl p-6 rounded-xl border border-neutral-800 bg-neutral-900 shadow-2xl">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
             <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-              <Code className="w-4 h-4 text-sky-400" />
+              <Code className="w-4 h-4 text-neutral-200" />
               Embed This Benchmark Simulator on Your Site
             </h3>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this snippet into your engineering blog, documentation, or internal architecture wiki.
             </p>
             <textarea
               readOnly
               value={embedCodeSnippet}
-              className="w-full h-32 p-3 font-mono text-xs rounded-lg border border-slate-800 bg-slate-950 text-slate-300 resize-none focus:outline-none"
+              className="w-full h-32 p-3 font-mono text-xs rounded-lg border border-neutral-800 bg-neutral-950 text-neutral-300 resize-none focus:outline-none"
             />
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 text-xs font-mono text-slate-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 text-xs font-mono text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-semibold flex items-center gap-2"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold flex items-center gap-2"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied to Clipboard' : 'Copy Embed Code'}

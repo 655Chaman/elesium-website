@@ -17,7 +17,7 @@
   "firstSentence": "Deploy air-gapped clinical language models within private VPCs for multi-hospital trusts, providing real-time telemetry and strict data localization compliant with Indian health data mandates.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts",
   "paragraphs": [
     "Multi-hospital healthcare trusts managing hospital networks across multiple Indian cities struggle to deploy unified clinical intelligence copilots without exposing patient health records to public cloud security risks. Inter-hospital data sharing for rare disease consultations and oncology tumor boards is hindered by strict data protection laws and hospital trust fiduciaries. Centralized public cloud LLMs risk massive data breaches and fail during wide-area network fiber cuts.",
@@ -113,7 +113,7 @@
     "subheadline": "Multi-hospital healthcare trusts managing hospital networks across multiple Indian cities struggle to deploy unified clinical intelligence copilots without exposing patient health records to public cloud security risks. Inter-hospital data sharing for rare disease consultations and oncology tumor boards is hindered by strict data protection laws and hospital trust fiduciaries. Centralized public cloud LLMs risk massive data breaches and fail during wide-area network fiber cuts.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero cross-branch data leakage certified by cryptographic access tokens."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero cross-branch data leakage certified by cryptographic access tokens."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts Performance Telemetry",
       "layout": "centered-card"
     }

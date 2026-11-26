@@ -17,7 +17,7 @@
   "firstSentence": "Deploy cryptographic Merkle tree audit trails and write-once-read-many (WORM) telemetry engines for scheduled commercial banks, guaranteeing tamper-evident transaction forensics compliant with RBI Cyber Security Framework Section 4.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks",
   "paragraphs": [
     "Scheduled commercial banks handling hundreds of millions of daily core banking and UPI transactions are vulnerable to malicious internal log tampering, accidental record overwrites, and post-incident forensic repudiation. Standard relational database logs and centralized SIEM solutions lack mathematical proof of immutability, making it impossible to definitively prove to regulatory examiners that administrative users or privileged accounts did not alter transactional records post facto.",
@@ -113,7 +113,7 @@
     "subheadline": "Scheduled commercial banks handling hundreds of millions of daily core banking and UPI transactions are vulnerable to malicious internal log tampering, accidental record overwrites, and post-incident forensic repudiation. Standard relational database logs and centralized SIEM solutions lack mathematical proof of immutability, making it impossible to definitively prove to regulatory examiners that administrative users or privileged accounts did not alter transactional records post facto.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Instant client-side verification of transaction presence and authenticity."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Instant client-side verification of transaction presence and authenticity."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks Performance Telemetry",
       "layout": "centered-card"
     }

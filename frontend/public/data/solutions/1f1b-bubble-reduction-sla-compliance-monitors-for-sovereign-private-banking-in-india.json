@@ -17,7 +17,7 @@
   "firstSentence": "Maximize GPU cluster efficiency for sovereign banking AI deployments, reducing pipeline bubble idle time to 4.2% using interleaved 1F1B scheduling on dedicated NVIDIA H100 clusters.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India",
   "paragraphs": [
     "Indian private banks training and serving massive proprietary language models across multi-GPU clusters suffer severe compute waste due to pipeline parallelism synchronization overhead. Traditional pipeline parallel schedules create extensive idle periods ('bubbles') where downstream GPUs wait for forward activations and backward gradients to propagate across nodes. In high-cost air-gapped datacenter environments, this bubble waste inflates GPU infrastructure expenses by up to 35% and introduces unpredictable tail latency spikes.",
@@ -113,7 +113,7 @@
     "subheadline": "Indian private banks training and serving massive proprietary language models across multi-GPU clusters suffer severe compute waste due to pipeline parallelism synchronization overhead. Traditional pipeline parallel schedules create extensive idle periods ('bubbles') where downstream GPUs wait for forward activations and backward gradients to propagate across nodes. In high-cost air-gapped datacenter environments, this bubble waste inflates GPU infrastructure expenses by up to 35% and introduces unpredictable tail latency spikes.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Higher sustained queries per second on identical private datacenter hardware."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Higher sustained queries per second on identical private datacenter hardware."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India Performance Telemetry",
       "layout": "centered-card"
     }

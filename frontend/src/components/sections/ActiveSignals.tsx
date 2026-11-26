@@ -62,30 +62,26 @@ export default function ActiveSignals() {
 
                 {/* Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="flex items-center justify-between mb-10 md:mb-14"
                 >
                     <div className="flex items-center gap-3">
-                        <span className="relative flex h-2 w-2">
-                            <span className=" absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-                        </span>
-                        <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
-                            Active Market Signals • Real-Time Pipeline
+                        <span className="text-[11px] font-semibold font-mono tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400">
+                            Active Market Signals &middot; Real-Time Pipeline
                         </span>
                     </div>
-                    <span className="hidden md:block text-[11px] font-mono text-gray-400 dark:text-gray-500 uppercase tracking-wider">
+                    <span className="hidden md:block text-[11px] font-mono text-neutral-500 uppercase tracking-wider">
                         Outbound Intelligence Feed
                     </span>
                 </motion.div>
 
                 {/* Main Display Grid */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.7, delay: 0.15 }}
+                    initial={{ opacity: 0, scale: 0.98, y: 16 }}
+                    animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26, delay: 0.1 }}
                     className="grid grid-cols-1 md:grid-cols-12 gap-8"
                 >
                     {/* Left side: Interactive List */}
@@ -94,20 +90,20 @@ export default function ActiveSignals() {
                             <button
                                 key={signal.id}
                                 onClick={() => setActiveIndex(i)}
-                                className={`text-left p-4 rounded-2xl transition-all duration-200 border ${
+                                className={`text-left p-4 rounded-xl transition-all duration-200 border active:scale-[0.98] ${
                                     i === activeIndex 
-                                    ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white shadow-md' 
-                                    : 'bg-gray-50/80 dark:bg-white/[0.02] border-gray-200/80 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/20 text-gray-800 dark:text-gray-200'
+                                    ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white' 
+                                    : 'bg-neutral-50 dark:bg-neutral-950 border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/25 text-black dark:text-white'
                                 }`}
                             >
                                 <div className="flex items-center justify-between mb-1.5">
                                     <span className={`text-[10px] font-mono font-semibold tracking-wider uppercase ${
-                                        i === activeIndex ? 'text-emerald-400 dark:text-emerald-600' : 'text-gray-500 dark:text-gray-400'
+                                        i === activeIndex ? 'text-neutral-300 dark:text-neutral-600' : 'text-neutral-600 dark:text-neutral-400'
                                     }`}>
                                         {signal.sector}
                                     </span>
                                     <span className={`text-[10px] font-mono ${
-                                        i === activeIndex ? 'text-gray-300 dark:text-gray-700' : 'text-gray-400 dark:text-gray-500'
+                                        i === activeIndex ? 'text-neutral-300 dark:text-neutral-600' : 'text-neutral-500'
                                     }`}>
                                         {signal.timeframe}
                                     </span>
@@ -120,16 +116,16 @@ export default function ActiveSignals() {
                     </div>
 
                     {/* Right side: Active Signal Detail */}
-                    <div className="md:col-span-8 border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden bg-gray-50/80 dark:bg-[#0A0A0A] flex flex-col justify-between">
+                    <div className="md:col-span-8 border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                         {/* Terminal bar */}
-                        <div className="flex items-center justify-between px-6 py-3.5 border-b border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/[0.02]">
+                        <div className="flex items-center justify-between px-6 py-3.5 border-b border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
                             <div className="flex items-center gap-2">
-                                <Terminal className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                                <span className="text-xs font-mono text-gray-500 dark:text-gray-400 tracking-wider">
+                                <Terminal className="w-3.5 h-3.5 text-black dark:text-white" />
+                                <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 tracking-wider">
                                     elesium-signals | active_engagement.log
                                 </span>
                             </div>
-                            <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
+                            <span className="text-[10px] font-mono text-black dark:text-white uppercase tracking-widest font-semibold">
                                 {signals[activeIndex].status}
                             </span>
                         </div>
@@ -139,28 +135,28 @@ export default function ActiveSignals() {
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeIndex}
-                                    initial={{ opacity: 0, y: 10 }}
+                                    initial={{ opacity: 0, y: 8 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    transition={{ duration: 0.2 }}
+                                    exit={{ opacity: 0, y: -8 }}
+                                    transition={{ type: 'spring', stiffness: 320, damping: 28 }}
                                     className="space-y-6"
                                 >
                                     <div className="flex items-center gap-3">
-                                        <span className="text-xs font-mono font-semibold tracking-wider text-emerald-600 dark:text-emerald-400 uppercase">
+                                        <span className="text-xs font-mono font-semibold tracking-wider text-black dark:text-white uppercase">
                                             {signals[activeIndex].sector}
                                         </span>
-                                        <span className="text-gray-300 dark:text-gray-700">•</span>
-                                        <span className="text-xs font-mono text-gray-500 dark:text-gray-400">
+                                        <span className="text-neutral-400 dark:text-neutral-600">&middot;</span>
+                                        <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400">
                                             Timeframe: {signals[activeIndex].timeframe}
                                         </span>
                                     </div>
 
-                                    <p className="text-xl md:text-2xl font-medium leading-relaxed text-gray-900 dark:text-white max-w-2xl">
+                                    <p className="text-xl md:text-2xl font-medium leading-relaxed text-black dark:text-white max-w-2xl">
                                         {signals[activeIndex].description}
                                     </p>
 
                                     <div className="pt-2">
-                                        <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight font-mono">
+                                        <div className="text-3xl md:text-4xl font-bold text-black dark:text-white tracking-tight font-mono">
                                             {signals[activeIndex].metric}
                                         </div>
                                     </div>
@@ -169,13 +165,13 @@ export default function ActiveSignals() {
                         </div>
 
                         {/* WhatsApp CTA Action Bar */}
-                        <div className="p-6 border-t border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/[0.02] flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <div className="text-xs text-gray-500 dark:text-gray-400">
+                        <div className="p-6 border-t border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div className="text-xs text-neutral-600 dark:text-neutral-400">
                                 Deploy targeted outbound pipeline for your specific sector.
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all shadow-sm"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-5 py-2.5 rounded-lg text-xs sm:text-sm active:scale-[0.97] transition-all"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Deploy via WhatsApp Desk</span>

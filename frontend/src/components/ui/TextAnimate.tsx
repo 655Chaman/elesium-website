@@ -257,46 +257,42 @@ const defaultItemAnimationVariants: Record<
     scaleUp: {
         container: defaultContainerVariants,
         item: {
-            hidden: { scale: 0.5, opacity: 0 },
+            hidden: { scale: 0.97, opacity: 0 },
             show: {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                    duration: 0.3,
-                    scale: {
-                        type: "spring",
-                        damping: 15,
-                        stiffness: 300,
-                    },
+                    type: "spring",
+                    stiffness: 380,
+                    damping: 32,
+                    mass: 0.8,
                 },
             },
             exit: {
-                scale: 0.5,
+                scale: 0.97,
                 opacity: 0,
-                transition: { duration: 0.3 },
+                transition: { duration: 0.2 },
             },
         },
     },
     scaleDown: {
         container: defaultContainerVariants,
         item: {
-            hidden: { scale: 1.5, opacity: 0 },
+            hidden: { scale: 1.05, opacity: 0 },
             show: {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                    duration: 0.3,
-                    scale: {
-                        type: "spring",
-                        damping: 15,
-                        stiffness: 300,
-                    },
+                    type: "spring",
+                    stiffness: 380,
+                    damping: 32,
+                    mass: 0.8,
                 },
             },
             exit: {
-                scale: 1.5,
+                scale: 1.05,
                 opacity: 0,
-                transition: { duration: 0.3 },
+                transition: { duration: 0.2 },
             },
         },
     },

@@ -33,28 +33,28 @@ export default function EmbedAgentMultiLoraSimulator() {
   const results = useMemo(() => calculateMultiLora(inputs), [inputs]);
 
   return (
-    <div className="bg-[#07090e] text-slate-100 p-5 rounded-xl border border-slate-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Multi-LoRA Dynamic Adapter Routing Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-multi-lora-routing-simulator" />
       </Helmet>
 
       {/* Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-4">
+      <div className="flex items-center justify-between pb-3 border-b border-neutral-800/80 mb-4">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-sky-950/80 border border-sky-800/60 text-sky-400">
+          <div className="p-1.5 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200">
             <Layers className="w-4 h-4" />
           </div>
           <div>
             <h2 className="text-sm font-bold text-white leading-tight">
               Multi-LoRA Adapter Routing Simulator
             </h2>
-            <p className="text-[11px] text-slate-400">
+            <p className="text-[11px] text-neutral-400">
               Zero-Copy Weight Swapping · Paged Memory Slicing
             </p>
           </div>
         </div>
-        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-950/60 border border-sky-800/40 text-sky-400">
+        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.05] border border-white/15 text-neutral-200">
           MULTI-TENANT LORA
         </span>
       </div>
@@ -62,11 +62,11 @@ export default function EmbedAgentMultiLoraSimulator() {
       {/* Controls */}
       <div className="grid grid-cols-2 gap-2.5 mb-4 text-xs font-mono">
         <div>
-          <label className="text-slate-400 block mb-1">FOUNDATION MODEL</label>
+          <label className="text-neutral-400 block mb-1">FOUNDATION MODEL</label>
           <select
             value={baseModelFamily}
             onChange={(e) => setBaseModelFamily(e.target.value as BaseModelFamily)}
-            className="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded p-1.5 text-neutral-200"
           >
             <option value="llama_3_70b">Llama-3 70B</option>
             <option value="deepseek_r1_671b">DeepSeek-R1 671B</option>
@@ -76,11 +76,11 @@ export default function EmbedAgentMultiLoraSimulator() {
         </div>
 
         <div>
-          <label className="text-slate-400 block mb-1">ACTIVE ADAPTERS</label>
+          <label className="text-neutral-400 block mb-1">ACTIVE ADAPTERS</label>
           <select
             value={numActiveAdapters}
             onChange={(e) => setNumActiveAdapters(Number(e.target.value))}
-            className="w-full bg-slate-900 border border-slate-800 rounded p-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-800 rounded p-1.5 text-neutral-200"
           >
             <option value={16}>16 LoRA Tasks</option>
             <option value={32}>32 LoRA Tasks</option>
@@ -94,9 +94,9 @@ export default function EmbedAgentMultiLoraSimulator() {
       {/* Sliders */}
       <div className="space-y-3 mb-4 text-xs font-mono">
         <div>
-          <div className="flex justify-between text-slate-400 mb-1">
+          <div className="flex justify-between text-neutral-400 mb-1">
             <span>BATCHED QUERIES:</span>
-            <span className="text-sky-400 font-bold">{concurrentBatchedRequests} requests</span>
+            <span className="text-white font-bold">{concurrentBatchedRequests} requests</span>
           </div>
           <input
             type="range"
@@ -105,21 +105,21 @@ export default function EmbedAgentMultiLoraSimulator() {
             step="16"
             value={concurrentBatchedRequests}
             onChange={(e) => setConcurrentBatchedRequests(Number(e.target.value))}
-            className="w-full h-1 bg-slate-800 rounded appearance-none cursor-pointer accent-sky-400"
+            className="w-full h-1 bg-neutral-800 rounded appearance-none cursor-pointer accent-white"
           />
         </div>
 
         <div>
-          <span className="text-slate-400 block mb-1">ADAPTER RANK (r)</span>
+          <span className="text-neutral-400 block mb-1">ADAPTER RANK (r)</span>
           <div className="grid grid-cols-4 gap-1">
             {([8, 16, 32, 64] as const).map((r) => (
               <button
                 key={r}
                 onClick={() => setAdapterRank(r)}
-                className={`py-1 rounded text-[11px] font-mono border ${
+                className={`active:scale-[0.97] py-1 rounded text-[11px] font-mono border ${
                   adapterRank === r
-                    ? 'border-sky-500 bg-sky-500/20 text-sky-300 font-bold'
-                    : 'border-slate-800 bg-slate-900 text-slate-400'
+                    ? 'border-white/30 bg-white/10 text-white font-bold'
+                    : 'border-neutral-800 bg-neutral-900 text-neutral-400'
                 }`}
               >
                 r = {r}
@@ -130,40 +130,40 @@ export default function EmbedAgentMultiLoraSimulator() {
       </div>
 
       {/* Output Metric Badges */}
-      <div className="grid grid-cols-3 gap-2 bg-slate-950/70 p-3 rounded-lg border border-slate-800/80 mb-4 font-mono text-center">
+      <div className="grid grid-cols-3 gap-2 bg-neutral-950/70 p-3 rounded-lg border border-neutral-800/80 mb-4 font-mono text-center">
         <div>
-          <div className="text-[10px] text-slate-400">VRAM SAVED</div>
-          <div className="text-base font-bold text-sky-400">
+          <div className="text-[10px] text-neutral-400">VRAM SAVED</div>
+          <div className="text-base font-bold text-white">
             -{results.vramSavingsPercent}%
           </div>
-          <div className="text-[9px] text-slate-500">{results.sharedSystemTotalVramGb} GB vs {results.dedicatedModelsVramGb} GB</div>
+          <div className="text-[9px] text-neutral-500">{results.sharedSystemTotalVramGb} GB vs {results.dedicatedModelsVramGb} GB</div>
         </div>
         <div>
-          <div className="text-[10px] text-slate-400">SWITCH LATENCY</div>
-          <div className="text-base font-bold text-teal-400">
+          <div className="text-[10px] text-neutral-400">SWITCH LATENCY</div>
+          <div className="text-base font-bold text-white">
             {results.switchingLatencyMs} ms
           </div>
-          <div className="text-[9px] text-slate-500">vs {results.baselinePcieSwitchingMs}ms PCIe</div>
+          <div className="text-[9px] text-neutral-500">vs {results.baselinePcieSwitchingMs}ms PCIe</div>
         </div>
         <div>
-          <div className="text-[10px] text-slate-400">THROUGHPUT</div>
-          <div className="text-base font-bold text-indigo-400">
+          <div className="text-[10px] text-neutral-400">THROUGHPUT</div>
+          <div className="text-base font-bold text-white">
             {results.batchThroughputTokensPerSec.toLocaleString()}
           </div>
-          <div className="text-[9px] text-slate-500">tok/s batched SGMV</div>
+          <div className="text-[9px] text-neutral-500">tok/s batched SGMV</div>
         </div>
       </div>
 
       {/* Footer Branding & Link */}
-      <div className="pt-2 border-t border-slate-800/60 flex items-center justify-between text-[11px]">
-        <span className="text-slate-400">
-          SLA: <span className="text-emerald-400 font-bold">{results.slaStatus.replace(/_/g, ' ')}</span>
+      <div className="pt-2 border-t border-neutral-800/60 flex items-center justify-between text-[11px]">
+        <span className="text-neutral-400">
+          SLA: <span className="text-white font-bold">{results.slaStatus.replace(/_/g, ' ')}</span>
         </span>
         <a
           href="https://elesium.online/solutions"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sky-400 hover:text-sky-300 inline-flex items-center gap-1 font-medium transition"
+          className="text-neutral-200 hover:text-white inline-flex items-center gap-1 font-medium transition"
         >
           Elesium Sovereign Solutions
           <ArrowUpRight className="w-3 h-3" />

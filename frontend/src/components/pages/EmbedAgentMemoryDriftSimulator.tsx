@@ -36,7 +36,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
   }, [inputs]);
 
   return (
-    <div className="bg-slate-950 text-slate-100 p-4 sm:p-6 rounded-2xl border border-slate-800 shadow-2xl font-sans max-w-4xl mx-auto">
+    <div className="bg-neutral-950 text-neutral-100 p-4 sm:p-6 rounded-xl border border-neutral-800 shadow-2xl font-sans max-w-4xl mx-auto">
       <Helmet>
         <title>Enterprise Agent Memory Drift &amp; Context Compression Simulator Embed | Elesium</title>
         <meta name="robots" content="noindex, follow" />
@@ -44,9 +44,9 @@ export default function EmbedAgentMemoryDriftSimulator() {
       </Helmet>
 
       {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3 mb-4">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-neutral-800 pb-3 mb-4">
         <div>
-          <span className="text-[10px] font-mono uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-200 bg-white/[0.04] px-2 py-0.5 rounded border border-white/15">
             Interactive Memory &amp; Context Sandbox
           </span>
           <h2 className="text-base sm:text-lg font-bold text-white mt-1">
@@ -58,7 +58,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
             href="https://elesium.online/tools/enterprise-agent-memory-drift-compression-simulator"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-cyan-400 hover:text-cyan-300 transition-colors font-mono"
+            className="inline-flex items-center gap-1 text-xs text-neutral-200 hover:text-white transition-colors font-mono"
           >
             <span>Full Simulator</span>
             <ExternalLink className="w-3 h-3" />
@@ -70,8 +70,8 @@ export default function EmbedAgentMemoryDriftSimulator() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
         <div>
           <div className="flex justify-between text-xs font-mono mb-1">
-            <span className="text-slate-300">Monthly Sessions</span>
-            <span className="text-cyan-400 font-bold">{(monthlyMultiTurnSessions / 1000).toFixed(0)}k calls</span>
+            <span className="text-neutral-300">Monthly Sessions</span>
+            <span className="text-white font-bold">{(monthlyMultiTurnSessions / 1000).toFixed(0)}k calls</span>
           </div>
           <input
             type="range"
@@ -80,14 +80,14 @@ export default function EmbedAgentMemoryDriftSimulator() {
             step={10000}
             value={monthlyMultiTurnSessions}
             onChange={(e) => setMonthlyMultiTurnSessions(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
           />
         </div>
 
         <div>
           <div className="flex justify-between text-xs font-mono mb-1">
-            <span className="text-slate-300">Turns/Session</span>
-            <span className="text-cyan-400 font-bold">{avgTurnsPerSession} turns</span>
+            <span className="text-neutral-300">Turns/Session</span>
+            <span className="text-white font-bold">{avgTurnsPerSession} turns</span>
           </div>
           <input
             type="range"
@@ -96,14 +96,14 @@ export default function EmbedAgentMemoryDriftSimulator() {
             step={5}
             value={avgTurnsPerSession}
             onChange={(e) => setAvgTurnsPerSession(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
           />
         </div>
 
         <div>
           <div className="flex justify-between text-xs font-mono mb-1">
-            <span className="text-slate-300">Tokens/Turn</span>
-            <span className="text-cyan-400 font-bold">{tokensPerTurnBaseline} tokens</span>
+            <span className="text-neutral-300">Tokens/Turn</span>
+            <span className="text-white font-bold">{tokensPerTurnBaseline} tokens</span>
           </div>
           <input
             type="range"
@@ -112,57 +112,57 @@ export default function EmbedAgentMemoryDriftSimulator() {
             step={50}
             value={tokensPerTurnBaseline}
             onChange={(e) => setTokensPerTurnBaseline(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+            className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
           />
         </div>
       </div>
 
       {/* Live Result Metrics */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl">
-          <span className="text-[10px] font-mono uppercase text-slate-400 block mb-0.5">Annual Savings</span>
-          <span className="text-base sm:text-lg font-bold text-emerald-400 font-mono">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+          <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Annual Savings</span>
+          <span className="text-base sm:text-lg font-bold text-white font-mono">
             ${(results.annualCostSavingsUSD / 1000).toFixed(1)}k
           </span>
-          <span className="text-[9px] text-slate-400 block mt-0.5">Tokens &amp; Triage Reruns</span>
+          <span className="text-[9px] text-neutral-400 block mt-0.5">Tokens &amp; Triage Reruns</span>
         </div>
 
-        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl">
-          <span className="text-[10px] font-mono uppercase text-slate-400 block mb-0.5">Compression</span>
-          <span className="text-base sm:text-lg font-bold text-cyan-400 font-mono">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+          <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Compression</span>
+          <span className="text-base sm:text-lg font-bold text-white font-mono">
             {results.tokenCompressionPct}%
           </span>
-          <span className="text-[9px] text-slate-400 block mt-0.5">Context Token Reduction</span>
+          <span className="text-[9px] text-neutral-400 block mt-0.5">Context Token Reduction</span>
         </div>
 
-        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl">
-          <span className="text-[10px] font-mono uppercase text-slate-400 block mb-0.5">Drift Suppression</span>
-          <span className="text-base sm:text-lg font-bold text-purple-400 font-mono">
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+          <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Drift Suppression</span>
+          <span className="text-base sm:text-lg font-bold text-white font-mono">
             {results.driftSuppressionPct}%
           </span>
-          <span className="text-[9px] text-slate-400 block mt-0.5">&lt;0.05% Error in 50+ Turns</span>
+          <span className="text-[9px] text-neutral-400 block mt-0.5">&lt;0.05% Error in 50+ Turns</span>
         </div>
 
-        <div className="bg-slate-900 border border-slate-800 p-3 rounded-xl">
-          <span className="text-[10px] font-mono uppercase text-slate-400 block mb-0.5">Recall Latency</span>
+        <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-xl">
+          <span className="text-[10px] font-mono uppercase text-neutral-400 block mb-0.5">Recall Latency</span>
           <span className="text-base sm:text-lg font-bold text-amber-400 font-mono">
             {results.sovereignHierarchical.retrievalLatencyOverheadMs} ms
           </span>
-          <span className="text-[9px] text-slate-400 block mt-0.5">Sub-85ms Semantic Index</span>
+          <span className="text-[9px] text-neutral-400 block mt-0.5">Sub-85ms Semantic Index</span>
         </div>
       </div>
 
       {/* Architecture Snapshot Comparison */}
       <div className="space-y-2 mb-4 text-xs font-mono">
-        <div className="flex items-center justify-between p-2 rounded bg-slate-900/60 border border-slate-800 text-slate-300">
+        <div className="flex items-center justify-between p-2 rounded bg-neutral-900/60 border border-neutral-800 text-neutral-300">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <Sparkles className="w-3.5 h-3.5 text-neutral-200" />
             <span>Elesium Sovereign Hierarchical Memory</span>
           </div>
-          <span className="text-emerald-400 font-semibold">{results.sovereignHierarchical.contextCompressionRatioPct}% Cut | {results.sovereignHierarchical.retrievalLatencyOverheadMs}ms Recall | 99.96% Retention</span>
+          <span className="text-white font-semibold">{results.sovereignHierarchical.contextCompressionRatioPct}% Cut | {results.sovereignHierarchical.retrievalLatencyOverheadMs}ms Recall | 99.96% Retention</span>
         </div>
 
-        <div className="flex items-center justify-between p-2 rounded bg-slate-900/60 border border-slate-800 text-slate-400">
+        <div className="flex items-center justify-between p-2 rounded bg-neutral-900/60 border border-neutral-800 text-neutral-400">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-amber-400"></span>
             <span>Sliding Window Recency Truncation</span>
@@ -170,19 +170,19 @@ export default function EmbedAgentMemoryDriftSimulator() {
           <span className="text-amber-400">{results.slidingWindow.memoryDriftOrAmnesiaPct}% Amnesia Failure | ${(results.slidingWindow.annualizedTotalCostUSD / 1000).toFixed(0)}k/yr Triage</span>
         </div>
 
-        <div className="flex items-center justify-between p-2 rounded bg-slate-900/60 border border-slate-800 text-slate-400">
+        <div className="flex items-center justify-between p-2 rounded bg-neutral-900/60 border border-neutral-800 text-neutral-400">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-rose-500"></span>
+            <span className="w-2 h-2 rounded-full bg-red-500"></span>
             <span>Uncompressed Raw Context (FIFO)</span>
           </div>
-          <span className="text-rose-400">{results.uncompressedRaw.memoryDriftOrAmnesiaPct}% Attention Drift | +{results.uncompressedRaw.retrievalLatencyOverheadMs}ms TTFT | ${(results.uncompressedRaw.annualizedTotalCostUSD / 1000).toFixed(0)}k/yr</span>
+          <span className="text-red-400">{results.uncompressedRaw.memoryDriftOrAmnesiaPct}% Attention Drift | +{results.uncompressedRaw.retrievalLatencyOverheadMs}ms TTFT | ${(results.uncompressedRaw.annualizedTotalCostUSD / 1000).toFixed(0)}k/yr</span>
         </div>
       </div>
 
       {/* Watermark & Attribution Footer */}
-      <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+      <div className="pt-3 border-t border-neutral-800 flex items-center justify-between text-[11px] text-neutral-400">
         <div className="flex items-center gap-1.5">
-          <Brain className="w-3.5 h-3.5 text-cyan-400" />
+          <Brain className="w-3.5 h-3.5 text-neutral-200" />
           <span>Sub-85ms Semantic Recall &amp; 92.4% Context Compression</span>
         </div>
         <div>
@@ -191,7 +191,7 @@ export default function EmbedAgentMemoryDriftSimulator() {
             href="https://elesium.online/solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyan-400 hover:underline font-medium"
+            className="text-neutral-200 hover:underline font-medium"
           >
             Elesium Sovereign AI Architecture
           </a>

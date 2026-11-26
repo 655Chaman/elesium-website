@@ -17,7 +17,7 @@
   "firstSentence": "Architect zero-memory-leak streaming AI telemetry agents for mission-critical aerospace avionics conforming to DO-178C Level A standards.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics",
   "paragraphs": [
     "Modern military aircraft and aerospace avionics platforms incorporate streaming autonomous agents to assist pilots with flight trajectory optimization, radar threat classification, and emergency subsystem diagnostics. Software operating in airborne flight management systems must never crash or suffer memory leaks: even a microscopic leak of a few bytes per second can cause flight computer memory exhaustion during long-duration maritime patrol or refueling missions.",
@@ -113,7 +113,7 @@
     "subheadline": "Modern military aircraft and aerospace avionics platforms incorporate streaming autonomous agents to assist pilots with flight trajectory optimization, radar threat classification, and emergency subsystem diagnostics. Software operating in airborne flight management systems must never crash or suffer memory leaks: even a microscopic leak of a few bytes per second can cause flight computer memory exhaustion during long-duration maritime patrol or refueling missions.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Highest criticality flight software safety design compliance."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Defense Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Highest criticality flight software safety design compliance."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics Performance Telemetry",
       "layout": "centered-card"
     }

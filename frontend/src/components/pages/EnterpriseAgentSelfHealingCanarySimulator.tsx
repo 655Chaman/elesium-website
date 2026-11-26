@@ -56,9 +56,9 @@ export default function EnterpriseAgentSelfHealingCanarySimulator() {
     return simulateAgentSelfHealing(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-self-healing-canary-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-self-healing-canary-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedToClipboard = () => {
@@ -113,7 +113,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-cyan-500 selection:text-black">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Autonomous Agent Self-Healing Pipeline & Regression Canary Simulator | Elesium</title>
         <meta
@@ -125,16 +125,16 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
 
       <div className="max-w-6xl mx-auto space-y-10">
         {/* Header Breadcrumb & Tag */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-neutral-800 pb-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-400 mb-1">
-              <Activity className="w-3.5 h-3.5 text-cyan-400 " />
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-200 mb-1">
+              <Activity className="w-3.5 h-3.5 text-neutral-200 " />
               <span>Reliability &amp; Self-Healing Systems Lab</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
               Enterprise Autonomous Agent Self-Healing Pipeline &amp; Regression Canary Simulator
             </h1>
-            <p className="mt-2 text-sm sm:text-base text-slate-400 max-w-3xl leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base text-neutral-400 max-w-3xl leading-relaxed">
               Model and benchmark enterprise autonomous agent failure resilience. Quantify the Mean Time to Detect (MTTD), Mean Time to Recover (MTTR), and token burn arbitrage between unmonitored rollouts, naive retry loops, and sovereign statistical shadow canaries with sub-320ms automated rollback.
             </p>
           </div>
@@ -142,23 +142,23 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
           <div className="flex items-center gap-2 shrink-0">
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900 text-xs font-medium text-neutral-300 hover:text-white hover:bg-neutral-800 transition"
             >
               <Code className="w-3.5 h-3.5" />
               <span>Embed Widget</span>
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-cyan-500/30 bg-cyan-950/40 text-xs font-medium text-cyan-300 hover:bg-cyan-900/50 transition"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/20 bg-white/[0.05] text-xs font-medium text-neutral-200 hover:bg-white/10 transition"
             >
-              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
             </button>
           </div>
@@ -166,46 +166,46 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
 
         {/* Top Summary Banner */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div className="p-4 rounded-xl border border-cyan-500/30 bg-gradient-to-b from-cyan-950/30 to-slate-900/40">
-            <div className="text-xs font-mono text-cyan-400 uppercase tracking-wider">MTTR Acceleration</div>
+          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+            <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">MTTR Acceleration</div>
             <div className="text-2xl sm:text-3xl font-black text-white mt-1">
               {results.mttrAccelerationFactor}x Faster
             </div>
-            <div className="text-[11px] text-slate-400 mt-0.5">320ms automated recovery vs 2 hrs</div>
+            <div className="text-[11px] text-neutral-400 mt-0.5">320ms automated recovery vs 2 hrs</div>
           </div>
 
-          <div className="p-4 rounded-xl border border-emerald-500/30 bg-gradient-to-b from-emerald-950/30 to-slate-900/40">
-            <div className="text-xs font-mono text-emerald-400 uppercase tracking-wider">Cascade Risk Suppression</div>
-            <div className="text-2xl sm:text-3xl font-black text-emerald-300 mt-1">
+          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+            <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Cascade Risk Suppression</div>
+            <div className="text-2xl sm:text-3xl font-black text-neutral-200 mt-1">
               -{results.cascadeRiskSuppressionPct}%
             </div>
-            <div className="text-[11px] text-slate-400 mt-0.5">0.02% failure propagation rate</div>
+            <div className="text-[11px] text-neutral-400 mt-0.5">0.02% failure propagation rate</div>
           </div>
 
-          <div className="p-4 rounded-xl border border-purple-500/30 bg-gradient-to-b from-purple-950/30 to-slate-900/40">
-            <div className="text-xs font-mono text-purple-400 uppercase tracking-wider">Pipeline Recovery Rate</div>
-            <div className="text-2xl sm:text-3xl font-black text-purple-300 mt-1">
+          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+            <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Pipeline Recovery Rate</div>
+            <div className="text-2xl sm:text-3xl font-black text-neutral-200 mt-1">
               {results.uninterruptedSlaFidelityPct}%
             </div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Autonomous AST healing &amp; canary check</div>
+            <div className="text-[11px] text-neutral-400 mt-0.5">Autonomous AST healing &amp; canary check</div>
           </div>
 
-          <div className="p-4 rounded-xl border border-blue-500/30 bg-gradient-to-b from-blue-950/30 to-slate-900/40">
-            <div className="text-xs font-mono text-blue-400 uppercase tracking-wider">Annual Cost Protected</div>
+          <div className="p-4 rounded-xl border border-white/20 bg-neutral-950">
+            <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Annual Cost Protected</div>
             <div className="text-2xl sm:text-3xl font-black text-white mt-1">
               ${(results.annualCostSavingsUSD / 1000).toFixed(0)}k/yr
             </div>
-            <div className="text-[11px] text-slate-400 mt-0.5">{results.costReductionPct}% downtime reduction</div>
+            <div className="text-[11px] text-neutral-400 mt-0.5">{results.costReductionPct}% downtime reduction</div>
           </div>
         </div>
 
         {/* Interactive Controls & Architecture Comparison */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Sliders Form (5 cols) */}
-          <div className="lg:col-span-5 p-6 rounded-2xl border border-slate-800 bg-slate-900/70 space-y-6">
-            <div className="flex items-center gap-2 border-b border-slate-800 pb-3">
-              <Sliders className="w-4 h-4 text-cyan-400" />
-              <h2 className="text-sm font-semibold tracking-wider uppercase text-slate-200">
+          <div className="lg:col-span-5 p-6 rounded-xl border border-neutral-800 bg-neutral-900/70 space-y-6">
+            <div className="flex items-center gap-2 border-b border-neutral-800 pb-3">
+              <Sliders className="w-4 h-4 text-neutral-200" />
+              <h2 className="text-sm font-semibold tracking-wider uppercase text-neutral-200">
                 Workload &amp; Fault Parameters
               </h2>
             </div>
@@ -213,8 +213,8 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             {/* Slider 1 */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300">Monthly Invocations</span>
-                <span className="font-mono text-cyan-400 font-semibold">{monthlyProductionInvocations.toLocaleString()}</span>
+                <span className="text-neutral-300">Monthly Invocations</span>
+                <span className="font-mono text-white font-semibold">{monthlyProductionInvocations.toLocaleString()}</span>
               </div>
               <input
                 type="range"
@@ -223,9 +223,9 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={25000}
                 value={monthlyProductionInvocations}
                 onChange={(e) => setMonthlyProductionInvocations(Number(e.target.value))}
-                className="w-full accent-cyan-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>25k calls</span>
                 <span>500k calls</span>
                 <span>1M calls</span>
@@ -235,8 +235,8 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             {/* Slider 2 */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300">Agent Sequential Chain Depth</span>
-                <span className="font-mono text-cyan-400 font-semibold">{avgAgentChainDepth} sub-agent steps</span>
+                <span className="text-neutral-300">Agent Sequential Chain Depth</span>
+                <span className="font-mono text-white font-semibold">{avgAgentChainDepth} sub-agent steps</span>
               </div>
               <input
                 type="range"
@@ -245,9 +245,9 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={1}
                 value={avgAgentChainDepth}
                 onChange={(e) => setAvgAgentChainDepth(Number(e.target.value))}
-                className="w-full accent-cyan-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>3 steps</span>
                 <span>10 steps</span>
                 <span>20 steps</span>
@@ -257,8 +257,8 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             {/* Slider 3 */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300">Monthly Schema / API Drift Events</span>
-                <span className="font-mono text-cyan-400 font-semibold">{upstreamSchemaDriftEventsPerMonth} incidents</span>
+                <span className="text-neutral-300">Monthly Schema / API Drift Events</span>
+                <span className="font-mono text-white font-semibold">{upstreamSchemaDriftEventsPerMonth} incidents</span>
               </div>
               <input
                 type="range"
@@ -267,9 +267,9 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={1}
                 value={upstreamSchemaDriftEventsPerMonth}
                 onChange={(e) => setUpstreamSchemaDriftEventsPerMonth(Number(e.target.value))}
-                className="w-full accent-cyan-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>2 events</span>
                 <span>15 events</span>
                 <span>30 events</span>
@@ -279,8 +279,8 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             {/* Slider 4 */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300">Cost per Incident Downtime</span>
-                <span className="font-mono text-cyan-400 font-semibold">${costPerIncidentDowntimeUSD.toLocaleString()}</span>
+                <span className="text-neutral-300">Cost per Incident Downtime</span>
+                <span className="font-mono text-white font-semibold">${costPerIncidentDowntimeUSD.toLocaleString()}</span>
               </div>
               <input
                 type="range"
@@ -289,9 +289,9 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
                 step={2500}
                 value={costPerIncidentDowntimeUSD}
                 onChange={(e) => setCostPerIncidentDowntimeUSD(Number(e.target.value))}
-                className="w-full accent-cyan-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>$5k</span>
                 <span>$35k</span>
                 <span>$75k</span>
@@ -299,12 +299,12 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             </div>
 
             {/* Architectural Callout Card */}
-            <div className="p-4 rounded-xl border border-cyan-500/20 bg-cyan-950/20 text-xs space-y-2">
-              <div className="flex items-center gap-1.5 font-semibold text-cyan-300">
-                <Sparkles className="w-4 h-4 text-cyan-400" />
+            <div className="p-4 rounded-xl border border-white/15 bg-white/[0.05] text-xs space-y-2">
+              <div className="flex items-center gap-1.5 font-semibold text-white">
+                <Sparkles className="w-4 h-4 text-neutral-200" />
                 <span>Deterministic Canary Protection</span>
               </div>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Elesium’s canary engine runs 5% shadow traffic with automated Kolmogorov-Smirnov distribution checks, isolating 99.98% of schema breaks before production write paths.
               </p>
             </div>
@@ -313,112 +313,112 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
           {/* Comparative Cards (7 cols) */}
           <div className="lg:col-span-7 space-y-4">
             {/* Elesium Tier (Top Card) */}
-            <div className="p-6 rounded-2xl border-2 border-cyan-500/50 bg-gradient-to-br from-slate-900 to-cyan-950/20 shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-cyan-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-lg font-mono uppercase tracking-wider">
+            <div className="p-6 rounded-xl border-2 border-white/30 bg-neutral-950 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-white text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg font-mono uppercase tracking-wider">
                 Production Benchmark
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
-                  <RefreshCw className="w-5 h-5 text-cyan-400" />
+                <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/20 text-neutral-200">
+                  <RefreshCw className="w-5 h-5 text-neutral-200" />
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-white">Elesium Sovereign Self-Healing &amp; Canary Pipeline</h3>
-                  <p className="text-xs text-slate-400">Ephemeral AST shadow verification &amp; sub-320ms atomic rollback</p>
+                  <p className="text-xs text-neutral-400">Ephemeral AST shadow verification &amp; sub-320ms atomic rollback</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 my-4 py-3 border-y border-slate-800/80">
+              <div className="grid grid-cols-3 gap-3 my-4 py-3 border-y border-neutral-800/80">
                 <div>
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Detection (MTTD)</div>
-                  <div className="text-base font-bold text-cyan-300 mt-0.5">9 Seconds</div>
-                  <div className="text-[10px] text-slate-500">0.15 mins automated</div>
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Detection (MTTD)</div>
+                  <div className="text-base font-bold text-white mt-0.5">9 Seconds</div>
+                  <div className="text-[10px] text-neutral-500">0.15 mins automated</div>
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Recovery (MTTR)</div>
-                  <div className="text-base font-bold text-emerald-400 mt-0.5">320 Milliseconds</div>
-                  <div className="text-[10px] text-slate-500">Atomic snapshot rollback</div>
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Recovery (MTTR)</div>
+                  <div className="text-base font-bold text-white mt-0.5">320 Milliseconds</div>
+                  <div className="text-[10px] text-neutral-500">Atomic snapshot rollback</div>
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Recovery Success</div>
-                  <div className="text-base font-bold text-purple-300 mt-0.5">{results.sovereignCanary.pipelineRecoverySuccessPct}%</div>
-                  <div className="text-[10px] text-slate-500">0.02% cascade risk</div>
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Recovery Success</div>
+                  <div className="text-base font-bold text-white mt-0.5">{results.sovereignCanary.pipelineRecoverySuccessPct}%</div>
+                  <div className="text-[10px] text-neutral-500">0.02% cascade risk</div>
                 </div>
               </div>
 
               <div className="flex items-center justify-between text-xs pt-1">
-                <span className="text-slate-400">Annual Financial Exposure:</span>
-                <span className="font-mono font-bold text-emerald-400 text-sm">
+                <span className="text-neutral-400">Annual Financial Exposure:</span>
+                <span className="font-mono font-bold text-white text-sm">
                   ${results.sovereignCanary.annualizedTotalRiskCostUSD.toLocaleString()} / year
                 </span>
               </div>
             </div>
 
             {/* Naive Retry Loop Tier */}
-            <div className="p-5 rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-slate-700 transition">
+            <div className="p-5 rounded-xl border border-neutral-800 bg-neutral-900/50 hover:border-neutral-700 transition">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
                   <GitBranch className="w-4 h-4 text-amber-400" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-200">Naive Rule-Based Exception Retry Loops</h3>
-                  <p className="text-xs text-slate-400">Fixed retries trigger death loops and API rate-limit exhaustion</p>
+                  <h3 className="text-sm font-semibold text-neutral-200">Naive Rule-Based Exception Retry Loops</h3>
+                  <p className="text-xs text-neutral-400">Fixed retries trigger death loops and API rate-limit exhaustion</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 my-3 py-2 border-y border-slate-800/60 text-xs">
+              <div className="grid grid-cols-3 gap-3 my-3 py-2 border-y border-neutral-800/60 text-xs">
                 <div>
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">MTTD</div>
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">MTTD</div>
                   <div className="font-semibold text-amber-300">120 Minutes</div>
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">MTTR</div>
-                  <div className="font-semibold text-slate-300">1,800 Seconds</div>
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">MTTR</div>
+                  <div className="font-semibold text-neutral-300">1,800 Seconds</div>
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Cascade Risk</div>
+                  <div className="text-[10px] font-mono text-neutral-400 uppercase">Cascade Risk</div>
                   <div className="font-semibold text-amber-400">{results.naiveRetryLoop.outageCascadeProbabilityPct}%</div>
                 </div>
               </div>
 
               <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400">Annual Exposure:</span>
-                <span className="font-mono text-slate-300 font-semibold">
+                <span className="text-neutral-400">Annual Exposure:</span>
+                <span className="font-mono text-neutral-300 font-semibold">
                   ${results.naiveRetryLoop.annualizedTotalRiskCostUSD.toLocaleString()} / year
                 </span>
               </div>
             </div>
 
             {/* Unmonitored Monolith Tier */}
-            <div className="p-5 rounded-2xl border border-rose-950/40 bg-rose-950/10 hover:border-rose-900/50 transition">
+            <div className="p-5 rounded-xl border border-red-950/40 bg-red-950/10 hover:border-white/30 transition">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400">
-                  <ShieldAlert className="w-4 h-4 text-rose-400" />
+                <div className="p-2 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400">
+                  <ShieldAlert className="w-4 h-4 text-red-400" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-rose-200">Unmonitored Monolithic Agent Rollout</h3>
-                  <p className="text-xs text-rose-300/70">Silent behavioral drift; 24h+ MTTD and catastrophic queue corruption</p>
+                  <h3 className="text-sm font-semibold text-red-200">Unmonitored Monolithic Agent Rollout</h3>
+                  <p className="text-xs text-red-300/70">Silent behavioral drift; 24h+ MTTD and catastrophic queue corruption</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 my-3 py-2 border-y border-rose-900/20 text-xs">
+              <div className="grid grid-cols-3 gap-3 my-3 py-2 border-y border-red-900/20 text-xs">
                 <div>
-                  <div className="text-[10px] font-mono text-rose-300/60 uppercase">MTTD</div>
-                  <div className="font-semibold text-rose-300">1,440 Mins (24h)</div>
+                  <div className="text-[10px] font-mono text-red-300/60 uppercase">MTTD</div>
+                  <div className="font-semibold text-red-300">1,440 Mins (24h)</div>
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono text-rose-300/60 uppercase">MTTR</div>
-                  <div className="font-semibold text-rose-300">7,200 Seconds</div>
+                  <div className="text-[10px] font-mono text-red-300/60 uppercase">MTTR</div>
+                  <div className="font-semibold text-red-300">7,200 Seconds</div>
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono text-rose-300/60 uppercase">Cascade Risk</div>
-                  <div className="font-semibold text-rose-400">{results.unmonitoredMonolith.outageCascadeProbabilityPct}%</div>
+                  <div className="text-[10px] font-mono text-red-300/60 uppercase">Cascade Risk</div>
+                  <div className="font-semibold text-red-400">{results.unmonitoredMonolith.outageCascadeProbabilityPct}%</div>
                 </div>
               </div>
 
               <div className="flex items-center justify-between text-xs">
-                <span className="text-rose-300/70">Annual Exposure:</span>
-                <span className="font-mono text-rose-300 font-semibold">
+                <span className="text-red-300/70">Annual Exposure:</span>
+                <span className="font-mono text-red-300 font-semibold">
                   ${results.unmonitoredMonolith.annualizedTotalRiskCostUSD.toLocaleString()} / year
                 </span>
               </div>
@@ -427,31 +427,31 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
         </div>
 
         {/* Technical Architecture Deep Dive */}
-        <div className="p-8 rounded-2xl border border-slate-800 bg-slate-900/60 space-y-6">
-          <div className="flex items-center gap-2 border-b border-slate-800 pb-4">
-            <Activity className="w-5 h-5 text-cyan-400" />
+        <div className="p-8 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-6">
+          <div className="flex items-center gap-2 border-b border-neutral-800 pb-4">
+            <Activity className="w-5 h-5 text-neutral-200" />
             <h2 className="text-lg font-bold text-white tracking-wide">
               Elesium Autonomous Agent Self-Healing Pipeline: Architectural Topology
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs leading-relaxed text-slate-300">
-            <div className="space-y-2 p-4 rounded-xl border border-slate-800 bg-slate-950/60">
-              <div className="text-cyan-400 font-mono font-semibold uppercase">1. Ephemeral Shadow Canary</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs leading-relaxed text-neutral-300">
+            <div className="space-y-2 p-4 rounded-xl border border-neutral-800 bg-neutral-950/60">
+              <div className="text-white font-mono font-semibold uppercase">1. Ephemeral Shadow Canary</div>
               <p>
                 Live production traffic splits 5% into an isolated shadow sandbox. The shadow agent executes candidate schema changes against sanitized state snapshots, confirming tool invocation validity prior to production routing.
               </p>
             </div>
 
-            <div className="space-y-2 p-4 rounded-xl border border-slate-800 bg-slate-950/60">
-              <div className="text-emerald-400 font-mono font-semibold uppercase">2. Kolmogorov-Smirnov Drift Gate</div>
+            <div className="space-y-2 p-4 rounded-xl border border-neutral-800 bg-neutral-950/60">
+              <div className="text-white font-mono font-semibold uppercase">2. Kolmogorov-Smirnov Drift Gate</div>
               <p>
                 Continuous statistical distribution testing on output token entropy, response latency, and tool selection distributions detects behavioral anomalies in sub-9 seconds, eliminating silent semantic hallucinations.
               </p>
             </div>
 
-            <div className="space-y-2 p-4 rounded-xl border border-slate-800 bg-slate-950/60">
-              <div className="text-purple-400 font-mono font-semibold uppercase">3. Sub-320ms AST Rollback</div>
+            <div className="space-y-2 p-4 rounded-xl border border-neutral-800 bg-neutral-950/60">
+              <div className="text-white font-mono font-semibold uppercase">3. Sub-320ms AST Rollback</div>
               <p>
                 If execution diverges from baseline, the self-healing controller executes an atomic rollback to the golden LangGraph checkpoint within 320ms, dispatching an automated synthetic test case to your engineering alerts.
               </p>
@@ -466,15 +466,15 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-xl border border-slate-800 bg-slate-900/40 cursor-pointer transition hover:border-slate-700"
+                className="p-4 rounded-xl border border-neutral-800 bg-neutral-900/40 cursor-pointer transition hover:border-neutral-700"
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
               >
-                <div className="flex items-center justify-between text-sm font-semibold text-slate-200">
+                <div className="flex items-center justify-between text-sm font-semibold text-neutral-200">
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === idx ? 'rotate-180 text-cyan-400' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
                 </div>
                 {openFaq === idx && (
-                  <p className="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                  <p className="mt-3 text-xs sm:text-sm text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                     {faq.a}
                   </p>
                 )}
@@ -484,17 +484,17 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
         </div>
 
         {/* Bottom CTA Card */}
-        <div className="p-8 sm:p-10 rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-slate-900 via-cyan-950/40 to-slate-900 text-center space-y-4">
+        <div className="p-8 sm:p-10 rounded-xl border border-white/20 bg-neutral-950 text-center space-y-4">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Protect Your Multi-Agent Production Workflows Against Outages
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">
             Eliminate silent failures, death loop token burn, and multi-hour fire drills. Schedule an architectural evaluation with Elesium to deploy sovereign self-healing canary pipelines inside your private VPC.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm tracking-wide transition shadow-lg shadow-cyan-500/20 inline-flex items-center gap-2 cursor-pointer">
+              <ExpandableScreenTrigger className="px-6 py-3 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-sm tracking-wide transition shadow-lg inline-flex items-center gap-2 cursor-pointer">
                 <span>Schedule Architectural Audit</span>
                 <ArrowRight className="w-4 h-4" />
               </ExpandableScreenTrigger>
@@ -507,7 +507,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
 
             <Link
               to="/solutions/"
-              className="px-6 py-3 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-300 font-medium text-sm transition"
+              className="px-6 py-3 rounded-xl border border-neutral-700 hover:bg-neutral-800 text-neutral-300 font-medium text-sm transition"
             >
               Explore Sovereign Solutions
             </Link>
@@ -518,26 +518,26 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed This Simulator</span>
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-neutral-400 leading-relaxed">
               Copy and paste this lightweight, responsive snippet into your documentation, blog post, or engineering portal to provide interactive self-healing canary simulations.
             </p>
 
             <div className="relative">
-              <pre className="p-3 rounded-lg bg-slate-950 border border-slate-800 text-[11px] font-mono text-cyan-300 overflow-x-auto whitespace-pre-wrap">
+              <pre className="p-3 rounded-lg bg-neutral-950 border border-neutral-800 text-[11px] font-mono text-neutral-200 overflow-x-auto whitespace-pre-wrap">
                 {embedCode}
               </pre>
             </div>
@@ -545,13 +545,13 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
             <div className="flex justify-end gap-2 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300 hover:bg-slate-800 transition"
+                className="active:scale-[0.97] px-3 py-1.5 rounded-lg border border-neutral-700 text-xs text-neutral-300 hover:bg-neutral-800 transition"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedToClipboard}
-                className="px-4 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs inline-flex items-center gap-1.5 transition"
+                className="active:scale-[0.97] px-4 py-1.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-xs inline-flex items-center gap-1.5 transition"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Copied!' : 'Copy Snippet'}</span>

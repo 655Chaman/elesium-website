@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, Calendar, Clock, Download, MessageSquare, ArrowRight, ChevronRight, FileText, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, Download, MessageSquare, ArrowRight, ChevronRight, FileText, ShieldCheck } from 'lucide-react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ReactMarkdown from 'react-markdown'
@@ -110,16 +110,16 @@ export default function ResourceDetail() {
                         transition={{ duration: 0.4 }}
                     >
                         {/* Meta Category & Timestamps */}
-                        <div className="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-gray-500 dark:text-gray-400">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-900 dark:text-white font-medium uppercase tracking-wider text-[11px]">
-                                <FileText className="w-3 h-3 text-emerald-500" />
+                        <div className="flex flex-wrap items-center gap-3 mb-6 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-medium uppercase tracking-wider text-[11px]">
+                                <FileText className="w-3 h-3 text-black dark:text-white" />
                                 {resource.category}
                             </span>
                             <span className="inline-flex items-center gap-1">
                                 <Calendar className="h-3.5 w-3.5" />
                                 {resource.date}
                             </span>
-                            <span>•</span>
+                            <span>&middot;</span>
                             <span className="inline-flex items-center gap-1">
                                 <Clock className="h-3.5 w-3.5" />
                                 {resource.readTime}
@@ -127,20 +127,20 @@ export default function ResourceDetail() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-950 dark:text-white leading-[1.15] mb-5">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black dark:text-white leading-[1.15] mb-5">
                             {resource.title}
                         </h1>
 
                         {/* Lead Summary */}
-                        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal mb-8">
+                        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal mb-8">
                             {resource.description}
                         </p>
 
-                        {/* Action Bar (Direct WhatsApp Desk + Download Drive Resource + ele-in SaaS) */}
-                        <div className="flex flex-wrap items-center gap-3 pb-10 mb-10 border-b border-gray-100 dark:border-white/10">
+                        {/* Action Bar */}
+                        <div className="flex flex-wrap items-center gap-3 pb-10 mb-10 border-b border-neutral-200 dark:border-white/10">
                             <button
                                 onClick={openWhatsApp}
-                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-sm transition-all shadow-sm group"
+                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-sm active:scale-[0.97] transition-all group"
                             >
                                 <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
@@ -151,7 +151,7 @@ export default function ResourceDetail() {
                                 href={resource.googleDriveLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-sm transition-all shadow-sm"
+                                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-sm active:scale-[0.97] transition-all"
                             >
                                 <Download className="h-4 w-4" />
                                 <span>Download PDF Document</span>
@@ -159,9 +159,8 @@ export default function ResourceDetail() {
 
                             <Link
                                 to="/waitlist/"
-                                className="inline-flex items-center gap-1.5 px-5 py-3.5 rounded-full border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 text-gray-600 dark:text-gray-400 font-medium text-xs sm:text-sm transition-all"
+                                className="inline-flex items-center gap-1.5 px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-neutral-50 dark:hover:bg-white/5 text-neutral-600 dark:text-neutral-400 font-medium text-xs sm:text-sm active:scale-[0.97] transition-all"
                             >
-                                <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
                                 <span>ele-in SaaS Waitlist &rarr;</span>
                             </Link>
                         </div>
@@ -268,10 +267,9 @@ export default function ResourceDetail() {
                         <BlueprintDownloadCard onTelemetry={trackInteraction} />
 
                         {/* Live Telemetry Status Bar */}
-                        <div className="my-10 p-4 rounded-2xl bg-gray-50 dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
+                        <div className="my-10 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-neutral-600 dark:text-neutral-400">
                             <div className="flex items-center gap-3">
                                 <span className="flex items-center gap-1.5">
-                                    <span className={`h-2 w-2 rounded-full ${isGoodClick ? 'bg-emerald-400' : 'bg-cyan-400'}`} />
                                     Active Dwell: <strong className="text-black dark:text-white">{Math.floor(activeDwellSeconds / 60)}m {activeDwellSeconds % 60}s</strong>
                                 </span>
                                 <span className="hidden sm:inline">|</span>
@@ -279,27 +277,27 @@ export default function ResourceDetail() {
                                 <span className="hidden sm:inline">|</span>
                                 <span className="hidden sm:inline">Interactions: <strong className="text-black dark:text-white">{interactionCount}</strong></span>
                             </div>
-                            <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold">
-                                {isLastLongestClickEligible ? 'Navboost High-Retention Verified (180s+)' : isGoodClick ? 'Navboost GoodClick Active (120s+)' : 'Logging Session Telemetry'}
+                            <span className="text-[11px] px-2.5 py-0.5 rounded-md bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-semibold">
+                                {isLastLongestClickEligible ? 'High-Retention Verified (180s+)' : isGoodClick ? 'GoodClick Active (120s+)' : 'Logging Session Telemetry'}
                             </span>
                         </div>
 
                         {/* Direct WhatsApp Engineering Intake Card */}
-                        <div className="my-12 p-8 sm:p-10 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
-                            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
+                        <div className="my-12 p-8 sm:p-10 rounded-xl bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
+                            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-400">
                                 <ShieldCheck className="w-3.5 h-3.5" />
                                 <span>Direct Engineering Intake SLA</span>
                             </div>
                             <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
                                 Implement This Architecture in Production
                             </h3>
-                            <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                            <p className="text-xs sm:text-sm text-neutral-300 max-w-xl mx-auto leading-relaxed">
                                 Connect directly with our Principal AI Systems Architect in Shivamogga to model hardware sizing, latency envelopes, and private VPC deployment parameters.
                             </p>
                             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <button
                                     onClick={openWhatsApp}
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-8 py-4 rounded-full text-sm transition-all shadow-md group"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-8 py-4 rounded-lg text-sm active:scale-[0.97] transition-all group"
                                 >
                                     <MessageSquare className="w-4 h-4 fill-current" />
                                     <span>Chat on WhatsApp with Lead Architect</span>
@@ -307,7 +305,7 @@ export default function ResourceDetail() {
                                 </button>
                                 <Link
                                     to="/waitlist/"
-                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-full text-sm transition-all"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-4 rounded-lg text-sm active:scale-[0.97] transition-all"
                                 >
                                     <span>ele-in SaaS Waitlist &rarr;</span>
                                 </Link>

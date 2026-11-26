@@ -101,17 +101,17 @@ export default function InternationalGeoBanner() {
             aria-label="Regional Portal Selector"
             className="fixed bottom-5 right-5 left-5 sm:left-auto sm:max-w-md z-50 animate-in fade-in slide-in-from-bottom-5 duration-300"
         >
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/95 dark:bg-[#121214]/95 backdrop-blur-md border border-emerald-500/30 shadow-2xl text-gray-900 dark:text-gray-100 flex flex-col gap-3">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-2xl text-black dark:text-white flex flex-col gap-3">
                 <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-neutral-100 dark:bg-white/10 flex items-center justify-center text-black dark:text-white shrink-0">
                             <Globe2 className="w-4 h-4" />
                         </div>
                         <div>
-                            <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold block">
-                                Regional Geolocation &bull; {recommendation.currencyTag}
+                            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 font-semibold block">
+                                Regional Portal &bull; {recommendation.currencyTag}
                             </span>
-                            <h4 className="text-sm font-bold text-gray-900 dark:text-white leading-tight">
+                            <h4 className="text-sm font-bold text-black dark:text-white leading-tight">
                                 {recommendation.headline}
                             </h4>
                         </div>
@@ -119,13 +119,13 @@ export default function InternationalGeoBanner() {
                     <button
                         onClick={handleDismiss}
                         aria-label="Dismiss recommendation"
-                        className="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 p-1 transition-colors"
+                        className="text-neutral-500 hover:text-black dark:hover:text-white p-1 transition-colors active:scale-[0.97]"
                     >
                         <X className="w-4 h-4" />
                     </button>
                 </div>
 
-                <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-xs text-neutral-500 leading-relaxed">
                     {recommendation.subtitle}
                 </p>
 
@@ -133,14 +133,14 @@ export default function InternationalGeoBanner() {
                     <Link
                         to={recommendation.path}
                         onClick={() => setIsVisible(false)}
-                        className="flex-1 py-2 px-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-xs transition-all hover:opacity-90 flex items-center justify-center gap-1.5 shadow-sm"
+                        className="flex-1 py-2 px-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-xs transition active:scale-[0.97] hover:opacity-90 flex items-center justify-center gap-1.5"
                     >
                         <span>Switch to {recommendation.regionName} Portal</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                     <button
                         onClick={handleDismiss}
-                        className="py-2 px-3 rounded-xl border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white text-xs font-medium transition-colors"
+                        className="py-2 px-3 rounded-xl border border-neutral-200 dark:border-white/10 text-neutral-500 hover:text-black dark:hover:text-white text-xs font-medium transition active:scale-[0.97]"
                     >
                         Stay on Global
                     </button>

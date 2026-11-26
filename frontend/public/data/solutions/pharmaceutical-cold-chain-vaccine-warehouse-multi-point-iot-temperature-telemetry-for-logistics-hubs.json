@@ -17,7 +17,7 @@
   "firstSentence": "Monitor multi-point pharmaceutical cold storage temperatures between 2°C and 8°C in real time, generating automated excursion alerts and tamper-evident CDSCO/WHO GxP compliance trails.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs",
   "paragraphs": [
     "Pharmaceutical distribution hubs and vaccine cold storage warehouses in India face catastrophic financial losses and regulatory disqualification if sensitive biologics and vaccines experience thermal excursions outside strict 2°C to 8°C boundaries. Temperature variations caused by compressor failures, frequent cold room door openings during loading, or localized thermal gradients remain undetected by single-point wall sensors. Failure to prove continuous temperature integrity leads to batch destruction and CDSCO inspection bans.",
@@ -113,7 +113,7 @@
     "subheadline": "Pharmaceutical distribution hubs and vaccine cold storage warehouses in India face catastrophic financial losses and regulatory disqualification if sensitive biologics and vaccines experience thermal excursions outside strict 2°C to 8°C boundaries. Temperature variations caused by compressor failures, frequent cold room door openings during loading, or localized thermal gradients remain undetected by single-point wall sensors. Failure to prove continuous temperature integrity leads to batch destruction and CDSCO inspection bans.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero vaccine or biological inventory batch destruction across monitored facilities."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero vaccine or biological inventory batch destruction across monitored facilities."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs Performance Telemetry",
       "layout": "centered-card"
     }

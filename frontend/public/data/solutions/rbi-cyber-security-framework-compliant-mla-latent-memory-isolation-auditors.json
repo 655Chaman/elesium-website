@@ -17,7 +17,7 @@
   "firstSentence": "Audit multi-head latent attention (MLA) memory boundaries in multi-tenant banking clusters, guaranteeing zero cross-tenant latent vector leakage and RBI Annex II memory isolation.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors",
   "paragraphs": [
     "Multi-tenant transformer clusters serving competing financial institutions risk catastrophic data leakage when Multi-Head Latent Attention (MLA) compressed KV representations share physical GPU memory. Standard container isolation layers do not inspect low-rank latent projections in high-bandwidth memory, allowing hypervisor-level side-channel attacks to reconstruct proprietary transaction embeddings. Traditional penetration testing tools fail to detect intra-kernel memory remanence between concurrent inference batches.",
@@ -113,7 +113,7 @@
     "subheadline": "Multi-tenant transformer clusters serving competing financial institutions risk catastrophic data leakage when Multi-Head Latent Attention (MLA) compressed KV representations share physical GPU memory. Standard container isolation layers do not inspect low-rank latent projections in high-bandwidth memory, allowing hypervisor-level side-channel attacks to reconstruct proprietary transaction embeddings. Traditional penetration testing tools fail to detect intra-kernel memory remanence between concurrent inference batches.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Formal verification of physical memory space separation across tenant boundaries."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Formal verification of physical memory space separation across tenant boundaries."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors Performance Telemetry",
       "layout": "centered-card"
     }

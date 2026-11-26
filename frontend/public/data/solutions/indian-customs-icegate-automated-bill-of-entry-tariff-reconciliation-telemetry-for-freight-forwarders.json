@@ -17,7 +17,7 @@
   "firstSentence": "Automate Indian Customs ICEGATE 2.0 Bill of Entry tariff reconciliation, validating 8-digit HSN classifications, anti-dumping duties, and IGST computations with 99.9% compliance.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders",
   "paragraphs": [
     "Customs brokers and international freight forwarders in India face severe port demurrage costs and regulatory penalties if Bill of Entry (BE-33) declarations contain tariff classification errors. The Indian Customs Electronic Data Interchange Gateway (ICEGATE 2.0) enforces complex multi-tier customs tariff schedules comprising basic customs duty (BCD), integrated GST (IGST), agriculture infrastructure development cess (AIDC), and anti-dumping duties. Manual tariff reconciliation across thousands of imported line items creates critical shipping delays.",
@@ -113,7 +113,7 @@
     "subheadline": "Customs brokers and international freight forwarders in India face severe port demurrage costs and regulatory penalties if Bill of Entry (BE-33) declarations contain tariff classification errors. The Indian Customs Electronic Data Interchange Gateway (ICEGATE 2.0) enforces complex multi-tier customs tariff schedules comprising basic customs duty (BCD), integrated GST (IGST), agriculture infrastructure development cess (AIDC), and anti-dumping duties. Manual tariff reconciliation across thousands of imported line items creates critical shipping delays.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Pre-submission validation eliminating customs penalty notices and cargo holds."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Pre-submission validation eliminating customs penalty notices and cargo holds."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders Performance Telemetry",
       "layout": "centered-card"
     }

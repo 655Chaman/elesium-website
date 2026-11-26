@@ -39,30 +39,30 @@ export default function EmbedAgentPrefillDecodeSimulator() {
   const results = useMemo(() => calculatePrefillDecodePerformance(inputs), [inputs]);
 
   return (
-    <div className="bg-[#07090e] text-slate-100 p-5 rounded-xl border border-slate-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Prefill-Decode Disaggregation Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-prefill-decode-disaggregation-simulator" />
       </Helmet>
 
       {/* Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-4">
+      <div className="flex items-center justify-between pb-3 border-b border-neutral-800/80 mb-4">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-emerald-950/80 border border-emerald-800/60 text-emerald-400">
+          <div className="p-1.5 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200">
             <Cpu className="w-4 h-4" />
           </div>
           <div>
             <h2 className="text-sm font-bold text-white leading-tight">
               Prefill-Decode Disaggregation Simulator
             </h2>
-            <p className="text-[11px] text-slate-400">
+            <p className="text-[11px] text-neutral-400">
               Chunked Prompt Prefill · Zero-Copy RDMA KV Transport · Sub-15ms TTFT
             </p>
           </div>
         </div>
         <span className={`text-[10px] font-bold px-2 py-0.5 rounded border ${
           results.slaStatus === 'SUB_15MS_LEADER'
-            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
+            ? 'bg-white/10 text-neutral-200 border-white/30'
             : 'bg-amber-500/20 text-amber-400 border-amber-500/40'
         }`}>
           {results.slaStatus.replace(/_/g, ' ')}
@@ -73,11 +73,11 @@ export default function EmbedAgentPrefillDecodeSimulator() {
       <div className="space-y-3 mb-4">
         <div className="grid grid-cols-2 gap-2 text-xs">
           <div>
-            <label className="text-[11px] text-slate-400 block mb-1">Model Architecture</label>
+            <label className="text-[11px] text-neutral-400 block mb-1">Model Architecture</label>
             <select
               value={modelFamily}
               onChange={(e) => setModelFamily(e.target.value as ModelFamily)}
-              className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white"
+              className="w-full bg-neutral-900 border border-neutral-700 rounded p-1.5 text-xs text-white"
             >
               <option value="llama_3_70b">Llama-3-70B</option>
               <option value="deepseek_v2_236b">DeepSeek-V2 MoE</option>
@@ -86,11 +86,11 @@ export default function EmbedAgentPrefillDecodeSimulator() {
             </select>
           </div>
           <div>
-            <label className="text-[11px] text-slate-400 block mb-1">KV Transport</label>
+            <label className="text-[11px] text-neutral-400 block mb-1">KV Transport</label>
             <select
               value={kvTransport}
               onChange={(e) => setKvTransport(e.target.value as KvTransportProtocol)}
-              className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-white"
+              className="w-full bg-neutral-900 border border-neutral-700 rounded p-1.5 text-xs text-white"
             >
               <option value="roce_v2_rdma">RoCE v2 RDMA</option>
               <option value="infiniband_direct">InfiniBand Direct</option>
@@ -102,9 +102,9 @@ export default function EmbedAgentPrefillDecodeSimulator() {
 
         <div className="grid grid-cols-3 gap-2">
           <div>
-            <div className="flex justify-between text-[11px] text-slate-400 mb-1">
+            <div className="flex justify-between text-[11px] text-neutral-400 mb-1">
               <span>Prefill GPUs</span>
-              <span className="text-emerald-400 font-mono">{prefillWorkers}</span>
+              <span className="text-neutral-200 font-mono">{prefillWorkers}</span>
             </div>
             <input
               type="range"
@@ -112,13 +112,13 @@ export default function EmbedAgentPrefillDecodeSimulator() {
               max={16}
               value={prefillWorkers}
               onChange={(e) => setPrefillWorkers(Number(e.target.value))}
-              className="w-full accent-emerald-500 bg-slate-800"
+              className="w-full accent-white bg-neutral-800"
             />
           </div>
           <div>
-            <div className="flex justify-between text-[11px] text-slate-400 mb-1">
+            <div className="flex justify-between text-[11px] text-neutral-400 mb-1">
               <span>Decode GPUs</span>
-              <span className="text-blue-400 font-mono">{decodeWorkers}</span>
+              <span className="text-neutral-200 font-mono">{decodeWorkers}</span>
             </div>
             <input
               type="range"
@@ -126,18 +126,18 @@ export default function EmbedAgentPrefillDecodeSimulator() {
               max={32}
               value={decodeWorkers}
               onChange={(e) => setDecodeWorkers(Number(e.target.value))}
-              className="w-full accent-blue-500 bg-slate-800"
+              className="w-full accent-white bg-neutral-800"
             />
           </div>
           <div>
-            <div className="flex justify-between text-[11px] text-slate-400 mb-1">
+            <div className="flex justify-between text-[11px] text-neutral-400 mb-1">
               <span>Chunk Size</span>
               <span className="text-white font-mono">{chunkSizeTokens}</span>
             </div>
             <select
               value={chunkSizeTokens}
               onChange={(e) => setChunkSizeTokens(Number(e.target.value))}
-              className="w-full bg-slate-900 border border-slate-700 rounded p-1 text-[11px] text-white"
+              className="w-full bg-neutral-900 border border-neutral-700 rounded p-1 text-[11px] text-white"
             >
               <option value={128}>128</option>
               <option value={256}>256</option>
@@ -149,32 +149,32 @@ export default function EmbedAgentPrefillDecodeSimulator() {
       </div>
 
       {/* Real-Time KPIs */}
-      <div className="grid grid-cols-3 gap-2 p-3 bg-slate-900/90 rounded-lg border border-slate-800 mb-4">
+      <div className="grid grid-cols-3 gap-2 p-3 bg-neutral-900/90 rounded-lg border border-neutral-800 mb-4">
         <div className="text-center">
-          <div className="text-[10px] text-slate-400">P99 TTFT</div>
-          <div className="text-lg font-black text-emerald-400 font-mono">{results.ttftLatencyMs}ms</div>
-          <div className="text-[9px] text-slate-500">vs {results.unifiedBaselineTtftMs}ms Unified</div>
+          <div className="text-[10px] text-neutral-400">P99 TTFT</div>
+          <div className="text-lg font-black text-neutral-200 font-mono">{results.ttftLatencyMs}ms</div>
+          <div className="text-[9px] text-neutral-500">vs {results.unifiedBaselineTtftMs}ms Unified</div>
         </div>
         <div className="text-center">
-          <div className="text-[10px] text-slate-400">Speedup</div>
-          <div className="text-lg font-black text-blue-400 font-mono">{results.latencyReductionFactor}x</div>
-          <div className="text-[9px] text-slate-500">Initial Token</div>
+          <div className="text-[10px] text-neutral-400">Speedup</div>
+          <div className="text-lg font-black text-neutral-200 font-mono">{results.latencyReductionFactor}x</div>
+          <div className="text-[9px] text-neutral-500">Initial Token</div>
         </div>
         <div className="text-center">
-          <div className="text-[10px] text-slate-400">Inter-Token</div>
-          <div className="text-lg font-black text-purple-400 font-mono">{results.interTokenLatencyMs}ms</div>
-          <div className="text-[9px] text-slate-500">Zero Stalls</div>
+          <div className="text-[10px] text-neutral-400">Inter-Token</div>
+          <div className="text-lg font-black text-neutral-200 font-mono">{results.interTokenLatencyMs}ms</div>
+          <div className="text-[9px] text-neutral-500">Zero Stalls</div>
         </div>
       </div>
 
       {/* Watermark & Attribution Footer */}
-      <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800/80">
+      <div className="flex items-center justify-between text-[11px] text-neutral-400 pt-2 border-t border-neutral-800/80">
         <span>Powered by Elesium Sovereign AI Engineering</span>
         <a
           href="https://elesium.online/tools/enterprise-agent-prefill-decode-disaggregation-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-0.5"
+          className="text-white hover:text-white font-semibold inline-flex items-center gap-0.5"
         >
           Open Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>

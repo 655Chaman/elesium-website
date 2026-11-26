@@ -62,7 +62,7 @@ export default function EnterpriseAgentTallyErpSimulator() {
     return calculateTallyErp(inputs);
   }, [inputs]);
 
-  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-tally-erp-xml-simulator" width="100%" height="600" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe><div style="font-size:11px;color:#64748b;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#10b981;text-decoration:underline;">Elesium Enterprise AI Solutions</a></div>`;
+  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-tally-erp-xml-simulator" width="100%" height="600" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:11px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Enterprise AI Solutions</a></div>`;
 
   const handleCopyEmbed = () => {
     navigator.clipboard.writeText(embedSnippet);
@@ -126,7 +126,7 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
   ];
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-300">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent Tally ERP / Prime XML Gateway &amp; Ledger Reconciliation Simulator | Elesium</title>
         <meta name="description" content="Simulate automated Tally ERP 9 / Tally Prime voucher ingestion, TDL XML-over-HTTP port 9000 latency, straight-through processing rates, and GST Rule 36(4) ITC reconciliation." />
@@ -134,27 +134,27 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
       </Helmet>
 
       {/* Hero Header */}
-      <div className="relative border-b border-slate-800/80 bg-gradient-to-b from-slate-900/60 via-slate-950 to-[#020617] pt-12 pb-14 px-4 sm:px-6 lg:px-8">
+      <div className="relative border-b border-neutral-800/80 bg-gradient-to-b from-neutral-900/60 via-black to-black pt-12 pb-14 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-slate-400 mb-6 font-mono">
-            <a href="/" className="hover:text-emerald-400 transition-colors">Home</a>
+          <nav className="flex items-center gap-2 text-xs text-neutral-400 mb-6 font-mono">
+            <a href="/" className="hover:text-white transition-colors">Home</a>
             <span>/</span>
-            <a href="/solutions/" className="hover:text-emerald-400 transition-colors">Tools</a>
+            <a href="/solutions/" className="hover:text-white transition-colors">Tools</a>
             <span>/</span>
-            <span className="text-emerald-400">Tally ERP LLM Gateway Simulator</span>
+            <span className="text-neutral-200">Tally ERP LLM Gateway Simulator</span>
           </nav>
 
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="space-y-3 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono uppercase tracking-wider">
                 <FileText className="w-3.5 h-3.5" />
                 <span>FinOps Agent Architecture #46</span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
                 Enterprise Autonomous Agent Tally ERP / Prime XML Gateway &amp; Ledger Simulator
               </h1>
-              <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+              <p className="text-base sm:text-lg text-neutral-400 leading-relaxed">
                 Simulate TDL XML-over-HTTP port 9000 voucher ingestion, layout-aware invoice OCR, straight-through processing (STP) rates, and statutory GST Rule 36(4) Input Tax Credit reconciliation.
               </p>
             </div>
@@ -162,23 +162,23 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             <div className="flex flex-wrap lg:flex-col gap-3">
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 hover:border-emerald-500/50 text-slate-200 hover:text-white transition-all text-sm font-medium shadow-sm"
+                className="active:scale-[0.97] flex items-center gap-2 px-4 py-2.5 rounded-lg bg-neutral-900 border border-neutral-700 hover:border-white/30 text-neutral-200 hover:text-white transition-all text-sm font-medium shadow-sm"
               >
-                <Code className="w-4 h-4 text-emerald-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Simulator</span>
               </button>
               <button
                 onClick={handleCopyMemo}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/30 hover:bg-emerald-600/30 text-emerald-300 transition-all text-sm font-medium"
+                className="active:scale-[0.97] flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 hover:bg-neutral-200/30 text-neutral-200 transition-all text-sm font-medium"
               >
-                {hasCopiedMemo ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-emerald-400" />}
+                {hasCopiedMemo ? <Check className="w-4 h-4 text-neutral-200" /> : <Copy className="w-4 h-4 text-neutral-200" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Memo'}</span>
               </button>
             </div>
@@ -192,22 +192,22 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
           
           {/* Controls Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6 backdrop-blur-sm">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+            <div className="bg-neutral-900/70 border border-neutral-800 rounded-xl p-6 shadow-xl space-y-6 backdrop-blur-sm">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
                 <div className="flex items-center gap-2 text-white font-semibold">
-                  <Sliders className="w-5 h-5 text-emerald-400" />
+                  <Sliders className="w-5 h-5 text-neutral-200" />
                   <span>Pipeline Simulation Controls</span>
                 </div>
-                <div className="flex items-center bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs">
+                <div className="flex items-center bg-neutral-950 p-1 rounded-lg border border-neutral-800 text-xs">
                   <button
                     onClick={() => setCurrency('INR')}
-                    className={`px-2.5 py-1 rounded font-mono ${currency === 'INR' ? 'bg-emerald-500/20 text-emerald-300 font-bold' : 'text-slate-400'}`}
+                    className={`active:scale-[0.97] px-2.5 py-1 rounded font-mono ${currency === 'INR' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
                   >
                     INR (₹)
                   </button>
                   <button
                     onClick={() => setCurrency('USD')}
-                    className={`px-2.5 py-1 rounded font-mono ${currency === 'USD' ? 'bg-emerald-500/20 text-emerald-300 font-bold' : 'text-slate-400'}`}
+                    className={`active:scale-[0.97] px-2.5 py-1 rounded font-mono ${currency === 'USD' ? 'bg-white/10 text-white font-bold' : 'text-neutral-400'}`}
                   >
                     USD ($)
                   </button>
@@ -217,8 +217,8 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
               {/* Slider 1: Monthly Vouchers */}
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-300 font-medium">Monthly Invoices / Vouchers</span>
-                  <span className="font-mono text-emerald-400 font-bold">{monthlyVoucherVolume.toLocaleString()} vouchers</span>
+                  <span className="text-neutral-300 font-medium">Monthly Invoices / Vouchers</span>
+                  <span className="font-mono text-white font-bold">{monthlyVoucherVolume.toLocaleString()} vouchers</span>
                 </div>
                 <input
                   type="range"
@@ -227,9 +227,9 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                   step="500"
                   value={monthlyVoucherVolume}
                   onChange={(e) => setMonthlyVoucherVolume(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500 font-mono">
+                <div className="flex justify-between text-[11px] text-neutral-500 font-mono">
                   <span>500 (Mid-Market)</span>
                   <span>25,000 (Conglomerate)</span>
                 </div>
@@ -238,8 +238,8 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
               {/* Slider 2: Confidence Threshold */}
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-300 font-medium">Human-in-the-Loop Confidence Gate</span>
-                  <span className="font-mono text-indigo-400 font-bold">{(humanInTheLoopThreshold * 100).toFixed(0)}% min</span>
+                  <span className="text-neutral-300 font-medium">Human-in-the-Loop Confidence Gate</span>
+                  <span className="font-mono text-white font-bold">{(humanInTheLoopThreshold * 100).toFixed(0)}% min</span>
                 </div>
                 <input
                   type="range"
@@ -248,9 +248,9 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                   step="0.01"
                   value={humanInTheLoopThreshold}
                   onChange={(e) => setHumanInTheLoopThreshold(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                  className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500 font-mono">
+                <div className="flex justify-between text-[11px] text-neutral-500 font-mono">
                   <span>80% (Higher STP)</span>
                   <span>99% (Strict Audit)</span>
                 </div>
@@ -258,11 +258,11 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
 
               {/* Select 1: Tally Integration Mode */}
               <div className="space-y-2">
-                <label className="text-sm text-slate-300 font-medium">Tally Interface Mechanism</label>
+                <label className="text-sm text-neutral-300 font-medium">Tally Interface Mechanism</label>
                 <select
                   value={tallyIntegrationMode}
                   onChange={(e) => setTallyIntegrationMode(e.target.value as TallyIntegrationMode)}
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-lg p-2.5 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="xml_http_tdl">TDL XML-over-HTTP (Port 9000 Gateway)</option>
                   <option value="odbc_sql_bridge">ODBC SQL Protocol Bridge (Read-Only)</option>
@@ -273,11 +273,11 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
 
               {/* Select 2: LLM Architecture */}
               <div className="space-y-2">
-                <label className="text-sm text-slate-300 font-medium">Multi-Agent Engine Topology</label>
+                <label className="text-sm text-neutral-300 font-medium">Multi-Agent Engine Topology</label>
                 <select
                   value={llmAgentArchitecture}
                   onChange={(e) => setLlmAgentArchitecture(e.target.value as LlmAgentArchitecture)}
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-lg p-2.5 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="deterministic_langgraph">Deterministic LangGraph (Bounded FSM)</option>
                   <option value="local_vllm_airgapped">Local vLLM (Air-Gapped Private VPC)</option>
@@ -288,11 +288,11 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
 
               {/* Select 3: Reconciliation Complexity */}
               <div className="space-y-2">
-                <label className="text-sm text-slate-300 font-medium">Statutory &amp; Voucher Complexity</label>
+                <label className="text-sm text-neutral-300 font-medium">Statutory &amp; Voucher Complexity</label>
                 <select
                   value={reconciliationComplexity}
                   onChange={(e) => setReconciliationComplexity(e.target.value as ReconciliationComplexity)}
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-lg p-2.5 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg p-2.5 text-sm text-neutral-200 focus:outline-none focus:border-white/40 font-mono"
                 >
                   <option value="gst_rule_36_4_itc">GST Rule 36(4) + GSTR-2B ITC Matching</option>
                   <option value="standard_invoicing">Standard AP Purchase Voucher Ingestion</option>
@@ -308,53 +308,53 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             
             {/* KPI Cards Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-xl shadow-lg">
-                <div className="text-xs font-mono uppercase text-slate-400">Total Latency</div>
-                <div className="text-2xl font-bold text-emerald-400 mt-1 font-mono">{results.voucherIngestionLatencyMs}ms</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">end-to-end voucher post</div>
+              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-xl shadow-lg">
+                <div className="text-xs font-mono uppercase text-neutral-400">Total Latency</div>
+                <div className="text-2xl font-bold text-white mt-1 font-mono">{results.voucherIngestionLatencyMs}ms</div>
+                <div className="text-[11px] text-neutral-500 mt-0.5">end-to-end voucher post</div>
               </div>
 
-              <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-xl shadow-lg">
-                <div className="text-xs font-mono uppercase text-slate-400">STP Success Rate</div>
-                <div className="text-2xl font-bold text-indigo-400 mt-1 font-mono">{results.autoPostingSuccessRatePct}%</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">straight-through processing</div>
+              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-xl shadow-lg">
+                <div className="text-xs font-mono uppercase text-neutral-400">STP Success Rate</div>
+                <div className="text-2xl font-bold text-white mt-1 font-mono">{results.autoPostingSuccessRatePct}%</div>
+                <div className="text-[11px] text-neutral-500 mt-0.5">straight-through processing</div>
               </div>
 
-              <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-xl shadow-lg col-span-2 sm:col-span-1">
-                <div className="text-xs font-mono uppercase text-slate-400">Human Hours Saved</div>
+              <div className="bg-neutral-900/80 border border-neutral-800 p-4 rounded-xl shadow-lg col-span-2 sm:col-span-1">
+                <div className="text-xs font-mono uppercase text-neutral-400">Human Hours Saved</div>
                 <div className="text-2xl font-bold text-amber-400 mt-1 font-mono">{results.monthlyHumanHoursSaved} hrs</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">monthly staff capacity</div>
+                <div className="text-[11px] text-neutral-500 mt-0.5">monthly staff capacity</div>
               </div>
             </div>
 
             {/* Financial Impact Banner */}
-            <div className="bg-gradient-to-r from-emerald-950/40 via-slate-900 to-indigo-950/40 border border-emerald-500/20 rounded-2xl p-6 shadow-xl">
-              <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs uppercase tracking-wider mb-4">
+            <div className="bg-neutral-950 border border-white/15 rounded-xl p-6 shadow-xl">
+              <div className="flex items-center gap-2 text-neutral-200 font-mono text-xs uppercase tracking-wider mb-4">
                 <Coins className="w-4 h-4" />
                 <span>Executive Financial Return &amp; Tax Compliance Ledger</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <div className="text-xs text-slate-400">Annual AP Staff OPEX Saved</div>
+                  <div className="text-xs text-neutral-400">Annual AP Staff OPEX Saved</div>
                   <div className="text-3xl font-extrabold text-white font-mono mt-1">{results.annualFinanceOpexSavings}</div>
-                  <p className="text-xs text-slate-400 mt-1">Direct elimination of manual voucher transcription and reconciliation overtime.</p>
+                  <p className="text-xs text-neutral-400 mt-1">Direct elimination of manual voucher transcription and reconciliation overtime.</p>
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400">GST Rule 36(4) Penalty Exposure Mitigated</div>
-                  <div className="text-3xl font-extrabold text-indigo-300 font-mono mt-1">{results.gstMismatchAvoidanceValue}</div>
-                  <p className="text-xs text-slate-400 mt-1">Avoidance of 18% statutory interest on un-reconciled GSTR-2B Input Tax Credit claims.</p>
+                  <div className="text-xs text-neutral-400">GST Rule 36(4) Penalty Exposure Mitigated</div>
+                  <div className="text-3xl font-extrabold text-neutral-200 font-mono mt-1">{results.gstMismatchAvoidanceValue}</div>
+                  <p className="text-xs text-neutral-400 mt-1">Avoidance of 18% statutory interest on un-reconciled GSTR-2B Input Tax Credit claims.</p>
                 </div>
               </div>
             </div>
 
             {/* Pipeline Stage Breakdown */}
-            <div className="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="bg-neutral-900/70 border border-neutral-800 rounded-xl p-6 shadow-xl space-y-4">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Layers className="w-4 h-4 text-emerald-400" />
+                  <Layers className="w-4 h-4 text-neutral-200" />
                   <span>Agent Execution Pipeline Latency Breakdown</span>
                 </div>
-                <span className="text-xs font-mono text-emerald-400">
+                <span className="text-xs font-mono text-neutral-200">
                   {results.statusClassification.replace(/_/g, ' ')}
                 </span>
               </div>
@@ -363,12 +363,12 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
                 {results.voucherProcessingTrace.map((stage) => (
                   <div key={stage.stage} className="space-y-1">
                     <div className="flex justify-between text-xs">
-                      <span className="text-slate-300 font-medium">{stage.label}</span>
-                      <span className="font-mono text-emerald-400">{stage.latencyMs}ms</span>
+                      <span className="text-neutral-300 font-medium">{stage.label}</span>
+                      <span className="font-mono text-neutral-200">{stage.latencyMs}ms</span>
                     </div>
-                    <div className="w-full bg-slate-950 rounded-full h-1.5 overflow-hidden">
+                    <div className="w-full bg-neutral-950 rounded-lg h-1.5 overflow-hidden">
                       <div
-                        className="bg-emerald-500 h-1.5 rounded-full transition-all duration-300"
+                        className="bg-white/80 h-1.5 rounded-lg transition-all duration-300"
                         style={{ width: `${Math.min(100, (stage.latencyMs / results.voucherIngestionLatencyMs) * 350)}%` }}
                       ></div>
                     </div>
@@ -378,21 +378,21 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             </div>
 
             {/* Architectural Trust Points */}
-            <div className="grid grid-cols-2 gap-3 text-xs text-slate-400 font-mono">
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-950/60 border border-slate-800">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+            <div className="grid grid-cols-2 gap-3 text-xs text-neutral-400 font-mono">
+              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+                <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>Zero Cloud Data Leakage (DPDP Act 2023)</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-950/60 border border-slate-800">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+                <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>SHA-256 Audit Trail (Sec 63 BSA)</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-950/60 border border-slate-800">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+                <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>Double-Entry Balance Enforced</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-950/60 border border-slate-800">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <div className="flex items-center gap-2 p-2.5 rounded-lg bg-neutral-950/60 border border-neutral-800">
+                <CheckCircle2 className="w-4 h-4 text-neutral-200 flex-shrink-0" />
                 <span>Sub-50ms TDL Port 9000 Ingestion</span>
               </div>
             </div>
@@ -401,43 +401,43 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
         </div>
 
         {/* Deep Dive Engineering Section */}
-        <div className="mt-16 pt-12 border-t border-slate-800/80 space-y-12">
+        <div className="mt-16 pt-12 border-t border-neutral-800/80 space-y-12">
           <div className="max-w-3xl space-y-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
               Under the Hood: Deterministic XML/ODBC Tally ERP Agent Architecture
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+            <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">
               Standard LLM implementations fail in enterprise accounting because finance systems permit zero numeric tolerance. Elesium couples vision OCR models with deterministic Pydantic schemas and strict mathematical state transitions before any XML payload touches Tally Prime.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/50 border border-slate-800/80 p-6 rounded-xl space-y-3">
-              <div className="p-2 w-fit rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-xl space-y-3">
+              <div className="p-2 w-fit rounded-lg bg-white/[0.04] text-neutral-200 border border-white/15">
                 <Server className="w-5 h-5" />
               </div>
               <h3 className="text-base font-semibold text-white">TDL XML-over-HTTP (Port 9000)</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 Connects directly to Tally Prime's embedded HTTP server. Generates strict &lt;ENVELOPE&gt; XML payloads with &lt;TALLYMESSAGE&gt; voucher schemas, achieving sub-40ms execution per transaction.
               </p>
             </div>
 
-            <div className="bg-slate-900/50 border border-slate-800/80 p-6 rounded-xl space-y-3">
-              <div className="p-2 w-fit rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-xl space-y-3">
+              <div className="p-2 w-fit rounded-lg bg-white/[0.04] text-neutral-200 border border-white/15">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <h3 className="text-base font-semibold text-white">GST Rule 36(4) Auto-Reconciliation</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 Matches line-item HSN codes, invoice dates, and GSTINs against live GSTR-2B national tax feeds. Halts posting and routes to escrow whenever supplier filing discrepancies are detected.
               </p>
             </div>
 
-            <div className="bg-slate-900/50 border border-slate-800/80 p-6 rounded-xl space-y-3">
+            <div className="bg-neutral-900/50 border border-neutral-800/80 p-6 rounded-xl space-y-3">
               <div className="p-2 w-fit rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
                 <FileText className="w-5 h-5" />
               </div>
               <h3 className="text-base font-semibold text-white">Vector Chart of Accounts Sync</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 Maintains a localized pgvector embedding index of your Tally Sundry Creditors ledger master, resolving messy supplier invoice headers with 99.8% semantic accuracy.
               </p>
             </div>
@@ -450,17 +450,17 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
               {faqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition-colors"
+                  className="bg-neutral-900/60 border border-neutral-800 rounded-xl overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full flex items-center justify-between p-4 text-left font-medium text-slate-200 hover:text-white"
+                    className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left font-medium text-neutral-200 hover:text-white"
                   >
                     <span>{faq.q}</span>
-                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === idx ? 'rotate-180 text-emerald-400' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
                   </button>
                   {openFaq === idx && (
-                    <div className="px-4 pb-4 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                    <div className="px-4 pb-4 text-xs sm:text-sm text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                       {faq.a}
                     </div>
                   )}
@@ -472,37 +472,37 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
           {/* Mandate Application Form Section */}
           <div className="pt-8">
             <div className="max-w-3xl mx-auto text-center space-y-3 mb-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/[0.04] text-neutral-200 text-xs font-mono uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Production Implementation</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
                 Deploy Sovereign Tally ERP Multi-Agent Systems
               </h2>
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-neutral-400">
                 Lock in your straight-through voucher processing pipeline. Reserve an engineering audit for your finance and accounting infrastructure.
               </p>
             </div>
 
             <div className="max-w-xl mx-auto">
               {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -517,26 +517,26 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
       {/* Embed Code Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="bg-neutral-900 border border-neutral-700 rounded-xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <div className="flex items-center gap-2">
-                <Code className="w-5 h-5 text-emerald-400" />
+                <Code className="w-5 h-5 text-neutral-200" />
                 <h3 className="font-bold text-white text-base">Embed Tally ERP Simulator</h3>
               </div>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white p-1 rounded-lg hover:bg-neutral-800"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-neutral-400">
               Copy and paste this responsive snippet into your blog, internal documentation, or financial client portal:
             </p>
 
             <div className="relative">
-              <pre className="bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs text-emerald-300 font-mono overflow-x-auto whitespace-pre-wrap max-h-48">
+              <pre className="bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs text-neutral-200 font-mono overflow-x-auto whitespace-pre-wrap max-h-48">
                 {embedSnippet}
               </pre>
             </div>
@@ -544,13 +544,13 @@ Compliance Tier: ${reconciliationComplexity.toUpperCase()}
             <div className="flex justify-end gap-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-xs font-medium"
               >
                 Close
               </button>
               <button
                 onClick={handleCopyEmbed}
-                className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium shadow"
+                className="active:scale-[0.97] flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Snippet'}</span>

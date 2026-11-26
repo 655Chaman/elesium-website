@@ -17,7 +17,7 @@
   "firstSentence": "Automate ICD-10-CM and CPT diagnostic coding from physician clinical documentation, eliminating insurance claim rejections and coding discrepancies in sub-45ms.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers",
   "paragraphs": [
     "Hospital revenue cycle departments and medical billing controllers in private healthcare networks lose billions of rupees annually to insurance claim rejections, down-coding, and delayed TPA pre-authorization clearances. Medical coders manually reading multi-page operative notes, discharge summaries, and pathology reports struggle to assign precise 7-character ICD-10-CM diagnostic codes and CPT procedure codes. Inconsistent coding or unbundled procedure codes trigger claim denials from health insurance TPAs and statutory scrutiny under PM-JAY guidelines.",
@@ -113,7 +113,7 @@
     "subheadline": "Hospital revenue cycle departments and medical billing controllers in private healthcare networks lose billions of rupees annually to insurance claim rejections, down-coding, and delayed TPA pre-authorization clearances. Medical coders manually reading multi-page operative notes, discharge summaries, and pathology reports struggle to assign precise 7-character ICD-10-CM diagnostic codes and CPT procedure codes. Inconsistent coding or unbundled procedure codes trigger claim denials from health insurance TPAs and statutory scrutiny under PM-JAY guidelines.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Reduces billing turnaround from 10 business days to under 1 hour."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Reduces billing turnaround from 10 business days to under 1 hour."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers Performance Telemetry",
       "layout": "centered-card"
     }

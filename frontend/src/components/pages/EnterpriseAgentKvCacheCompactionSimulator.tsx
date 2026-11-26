@@ -60,7 +60,7 @@ export default function EnterpriseAgentKvCacheCompactionSimulator() {
 
   const results = useMemo(() => calculateKvCacheCompaction(inputs), [inputs]);
 
-  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-kvcache-memory-compaction-simulator" width="100%" height="600" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe><div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;">Elesium Enterprise AI Solutions</a></div>`;
+  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-kvcache-memory-compaction-simulator" width="100%" height="600" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Enterprise AI Solutions</a></div>`;
 
   const handleCopyEmbed = () => {
     navigator.clipboard.writeText(embedSnippet);
@@ -121,7 +121,7 @@ SLA Status: ${results.slaStatus}
   ];
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-slate-100 font-sans selection:bg-sky-500/30 selection:text-sky-200">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent KV Cache Memory Compaction Simulator | Elesium</title>
         <meta
@@ -132,11 +132,11 @@ SLA Status: ${results.slaStatus}
       </Helmet>
 
       {/* Hero Header */}
-      <div className="relative pt-24 pb-12 border-b border-slate-800/80 bg-gradient-to-b from-sky-950/20 via-transparent to-transparent overflow-hidden">
+      <div className="relative pt-24 pb-12 border-b border-neutral-800/80 bg-gradient-to-b from-white/[0.03] via-transparent to-transparent overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0ea5e90a_1px,transparent_1px),linear-gradient(to_bottom,#0ea5e90a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-sky-950/80 border border-sky-800/60 text-sky-400 mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-4">
             <HardDrive className="w-3.5 h-3.5" />
             TOOL #57: MEMORY DEFRAGMENTATION &amp; FINOPS
           </div>
@@ -144,7 +144,7 @@ SLA Status: ${results.slaStatus}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
             Enterprise KV-Cache Memory Compaction Simulator
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-400 max-w-3xl leading-relaxed">
             Simulate paged block compaction, zero-copy virtual memory re-allocation, and HBM defragmentation.
             Eliminate GPU out-of-memory (OOM) evictions and expand multi-tenant serving concurrency by up to 3.4x across enterprise AI clusters.
           </p>
@@ -152,28 +152,28 @@ SLA Status: ${results.slaStatus}
           <div className="flex flex-wrap items-center gap-3 mt-6">
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white transition-all shadow-sm"
             >
-              <Code className="w-3.5 h-3.5 text-sky-400" />
+              <Code className="w-3.5 h-3.5 text-neutral-200" />
               Embed This Tool
             </button>
             <button
               onClick={handleCopyMemo}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all shadow-sm"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white transition-all shadow-sm"
             >
-              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-sky-400" />}
+              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Export Executive Memo'}
             </button>
             <button
               onClick={resetDefaults}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-slate-200 transition-all shadow-sm ml-auto"
+              className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-400 hover:text-neutral-200 transition-all shadow-sm ml-auto"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               Reset Parameters
@@ -188,24 +188,24 @@ SLA Status: ${results.slaStatus}
           
           {/* Controls Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-6 shadow-xl">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-6 shadow-xl">
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <div className="flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-sky-400" />
-                  <h2 className="text-sm font-bold uppercase tracking-wider text-slate-200 font-mono">
+                  <Sliders className="w-4 h-4 text-neutral-200" />
+                  <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-200 font-mono">
                     Serving Parameters
                   </h2>
                 </div>
-                <div className="flex items-center gap-1 bg-slate-900 p-0.5 rounded-lg border border-slate-800">
+                <div className="flex items-center gap-1 bg-neutral-900 p-0.5 rounded-lg border border-neutral-800">
                   <button
                     onClick={() => setCurrency('INR')}
-                    className={`px-2 py-0.5 text-xs font-mono rounded ${currency === 'INR' ? 'bg-sky-500 text-white font-bold' : 'text-slate-400 hover:text-white'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 text-xs font-mono rounded ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                   >
                     INR
                   </button>
                   <button
                     onClick={() => setCurrency('USD')}
-                    className={`px-2 py-0.5 text-xs font-mono rounded ${currency === 'USD' ? 'bg-sky-500 text-white font-bold' : 'text-slate-400 hover:text-white'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 text-xs font-mono rounded ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
                   >
                     USD
                   </button>
@@ -215,13 +215,13 @@ SLA Status: ${results.slaStatus}
               {/* Model & Cluster Selection */}
               <div className="space-y-4 mb-6">
                 <div>
-                  <label className="block text-xs font-mono text-slate-300 mb-1.5">
+                  <label className="block text-xs font-mono text-neutral-300 mb-1.5">
                     Foundation Serving Model
                   </label>
                   <select
                     value={foundationModel}
                     onChange={(e) => setFoundationModel(e.target.value as FoundationModel)}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500 font-mono"
+                    className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40 font-mono"
                   >
                     <option value="llama_3_70b">Meta Llama-3-70B (80 Layers, 8k Context)</option>
                     <option value="deepseek_v2_236b">DeepSeek-V2-236B (MLA Paged Routing)</option>
@@ -231,13 +231,13 @@ SLA Status: ${results.slaStatus}
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-slate-300 mb-1.5">
+                  <label className="block text-xs font-mono text-neutral-300 mb-1.5">
                     GPU Node Architecture
                   </label>
                   <select
                     value={gpuClusterType}
                     onChange={(e) => setGpuClusterType(e.target.value as GpuClusterType)}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500 font-mono"
+                    className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-white/40 font-mono"
                   >
                     <option value="nvidia_h100_sxm5_80gb">NVIDIA H100 SXM5 80GB (3.35 TB/s HBM3)</option>
                     <option value="nvidia_b200_nvl_192gb">NVIDIA B200 NVL 192GB (8.0 TB/s HBM3e)</option>
@@ -251,8 +251,8 @@ SLA Status: ${results.slaStatus}
               <div className="space-y-5">
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-slate-300 font-medium">Cluster GPU Count</span>
-                    <span className="text-sky-400 font-mono font-bold">{numGpus} GPUs</span>
+                    <span className="text-neutral-300 font-medium">Cluster GPU Count</span>
+                    <span className="text-white font-mono font-bold">{numGpus} GPUs</span>
                   </div>
                   <input
                     type="range"
@@ -261,9 +261,9 @@ SLA Status: ${results.slaStatus}
                     step="1"
                     value={numGpus}
                     onChange={(e) => setNumGpus(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
+                    className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                   />
-                  <div className="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                  <div className="flex justify-between text-[10px] text-neutral-400 mt-1 font-mono">
                     <span>1 GPU</span>
                     <span>8 (Standard Node)</span>
                     <span>32 GPUs</span>
@@ -272,8 +272,8 @@ SLA Status: ${results.slaStatus}
 
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-slate-300 font-medium">Concurrent Active Streams</span>
-                    <span className="text-emerald-400 font-mono font-bold">{activeConcurrencyStreams} Streams</span>
+                    <span className="text-neutral-300 font-medium">Concurrent Active Streams</span>
+                    <span className="text-white font-mono font-bold">{activeConcurrencyStreams} Streams</span>
                   </div>
                   <input
                     type="range"
@@ -282,9 +282,9 @@ SLA Status: ${results.slaStatus}
                     step="16"
                     value={activeConcurrencyStreams}
                     onChange={(e) => setActiveConcurrencyStreams(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                    className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                   />
-                  <div className="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                  <div className="flex justify-between text-[10px] text-neutral-400 mt-1 font-mono">
                     <span>32 Streams</span>
                     <span>128</span>
                     <span>512 Streams</span>
@@ -293,8 +293,8 @@ SLA Status: ${results.slaStatus}
 
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-slate-300 font-medium">Compaction Trigger Threshold</span>
-                    <span className="text-purple-400 font-mono font-bold">{compactionThresholdPercent}% Fragmentation</span>
+                    <span className="text-neutral-300 font-medium">Compaction Trigger Threshold</span>
+                    <span className="text-white font-mono font-bold">{compactionThresholdPercent}% Fragmentation</span>
                   </div>
                   <input
                     type="range"
@@ -303,9 +303,9 @@ SLA Status: ${results.slaStatus}
                     step="5"
                     value={compactionThresholdPercent}
                     onChange={(e) => setCompactionThresholdPercent(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-purple-500"
+                    className="w-full h-1.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
                   />
-                  <div className="flex justify-between text-[10px] text-slate-400 mt-1 font-mono">
+                  <div className="flex justify-between text-[10px] text-neutral-400 mt-1 font-mono">
                     <span>10% (Aggressive)</span>
                     <span>25% (Balanced)</span>
                     <span>45% (Relaxed)</span>
@@ -314,7 +314,7 @@ SLA Status: ${results.slaStatus}
 
                 <div>
                   <div className="flex justify-between items-center text-xs mb-1.5">
-                    <span className="text-slate-300 font-medium">Paged Block Token Size</span>
+                    <span className="text-neutral-300 font-medium">Paged Block Token Size</span>
                     <span className="text-amber-400 font-mono font-bold">{pageSizeTokens} Tokens / Block</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
@@ -322,7 +322,7 @@ SLA Status: ${results.slaStatus}
                       <button
                         key={size}
                         onClick={() => setPageSizeTokens(size)}
-                        className={`py-1.5 text-xs font-mono rounded-lg border transition-all ${pageSizeTokens === size ? 'bg-sky-500/20 border-sky-500 text-sky-300 font-bold' : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'}`}
+                        className={`active:scale-[0.97] py-1.5 text-xs font-mono rounded-lg border transition-all ${pageSizeTokens === size ? 'bg-white/10 border-white/30 text-white font-bold' : 'bg-neutral-900 border-neutral-800 text-neutral-400 hover:text-white'}`}
                       >
                         {size} Tok
                       </button>
@@ -339,73 +339,73 @@ SLA Status: ${results.slaStatus}
             
             {/* KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-4 shadow-lg text-center">
-                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-1">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   Concurrency Multiplier
                 </div>
-                <div className="text-3xl font-extrabold font-mono text-emerald-400">
+                <div className="text-3xl font-extrabold font-mono text-neutral-200">
                   {results.concurrencyMultiplier}x
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">
+                <div className="text-[11px] text-neutral-400 mt-1">
                   {results.maxConcurrentStreams} max streams
                 </div>
               </div>
 
-              <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-4 shadow-lg text-center">
-                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-1">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   Compacted Frag
                 </div>
-                <div className="text-3xl font-extrabold font-mono text-sky-400">
+                <div className="text-3xl font-extrabold font-mono text-neutral-200">
                   {results.compactedFragmentationPercent}%
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">
+                <div className="text-[11px] text-neutral-400 mt-1">
                   from {results.rawFragmentationPercent}% raw
                 </div>
               </div>
 
-              <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-4 shadow-lg text-center">
-                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-1">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   Recovered HBM
                 </div>
-                <div className="text-3xl font-extrabold font-mono text-purple-400">
+                <div className="text-3xl font-extrabold font-mono text-neutral-200">
                   {results.recoveredHbmGigabytes} GB
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">
+                <div className="text-[11px] text-neutral-400 mt-1">
                   of {results.totalClusterHbmGb} GB HBM
                 </div>
               </div>
 
-              <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-4 shadow-lg text-center">
-                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-1">
+              <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-4 shadow-lg text-center">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1">
                   FinOps Savings
                 </div>
                 <div className="text-3xl font-extrabold font-mono text-amber-400">
                   {results.annualFinOpsSavings}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">
+                <div className="text-[11px] text-neutral-400 mt-1">
                   OOM: {results.oomCrashProbabilityPercent}%
                 </div>
               </div>
             </div>
 
             {/* Visual Memory Map Allocation HUD */}
-            <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-6 shadow-xl">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-5">
+            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-6 shadow-xl">
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-5">
                 <div className="flex items-center gap-2">
-                  <Gauge className="w-4 h-4 text-sky-400" />
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-slate-200 font-mono">
+                  <Gauge className="w-4 h-4 text-neutral-200" />
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-200 font-mono">
                     HBM Physical Page Table Allocation Matrix
                   </h3>
                 </div>
                 <div className="flex items-center gap-4 text-xs font-mono">
                   <span className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-sm bg-sky-500 inline-block" /> Active KV
+                    <span className="w-2.5 h-2.5 rounded-sm bg-white/80 inline-block" /> Active KV
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-sm bg-emerald-500 inline-block" /> Compacted
+                    <span className="w-2.5 h-2.5 rounded-sm bg-white/80 inline-block" /> Compacted
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-sm bg-rose-500/50 inline-block" /> Fragmented
+                    <span className="w-2.5 h-2.5 rounded-sm bg-red-500/50 inline-block" /> Fragmented
                   </span>
                 </div>
               </div>
@@ -417,10 +417,10 @@ SLA Status: ${results.slaStatus}
                     key={block.id}
                     className={`h-16 rounded-lg border flex flex-col items-center justify-center p-1 text-center transition-all ${
                       block.type === 'ACTIVE_KV'
-                        ? 'bg-sky-950/60 border-sky-800 text-sky-300'
+                        ? 'bg-white/[0.05] border-white/15 text-neutral-200'
                         : block.type === 'RECOVERED_PAGE'
-                        ? 'bg-emerald-950/60 border-emerald-800 text-emerald-300'
-                        : 'bg-rose-950/40 border-rose-900/60 text-rose-400'
+                        ? 'bg-white/[0.05] border-white/15 text-neutral-200'
+                        : 'bg-red-950/40 border-red-900/60 text-red-400'
                     }`}
                   >
                     <span className="text-[10px] font-mono font-bold">
@@ -434,51 +434,51 @@ SLA Status: ${results.slaStatus}
               </div>
 
               {/* Architecture Explanation Box */}
-              <div className="bg-slate-950/60 rounded-xl p-4 border border-slate-800/80 text-xs text-slate-300 leading-relaxed space-y-2 font-mono">
-                <div className="text-sky-400 font-bold flex items-center gap-2">
+              <div className="bg-neutral-950/60 rounded-xl p-4 border border-neutral-800/80 text-xs text-neutral-300 leading-relaxed space-y-2 font-mono">
+                <div className="text-white font-bold flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5" />
                   cuMemMap Zero-Copy Defragmentation Kernel Status
                 </div>
                 <p>
-                  Zero-copy CUDA Virtual Memory Management remaps physical 2MB GPU pages into contiguous virtual address spaces without issuing device-to-device PCIe copies. Serving concurrency expands from <strong className="text-white">{inputs.activeConcurrencyStreams}</strong> to <strong className="text-emerald-400">{results.maxConcurrentStreams} streams</strong> while dropping out-of-memory crash probability to <strong className="text-white">{results.oomCrashProbabilityPercent}%</strong>.
+                  Zero-copy CUDA Virtual Memory Management remaps physical 2MB GPU pages into contiguous virtual address spaces without issuing device-to-device PCIe copies. Serving concurrency expands from <strong className="text-white">{inputs.activeConcurrencyStreams}</strong> to <strong className="text-neutral-200">{results.maxConcurrentStreams} streams</strong> while dropping out-of-memory crash probability to <strong className="text-white">{results.oomCrashProbabilityPercent}%</strong>.
                 </p>
               </div>
             </div>
 
             {/* Architecture Comparison Table */}
-            <div className="bg-[#0b0f19] border border-slate-800/80 rounded-2xl p-6 shadow-xl">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-slate-200 font-mono mb-4 pb-2 border-b border-slate-800">
+            <div className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl p-6 shadow-xl">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-200 font-mono mb-4 pb-2 border-b border-neutral-800">
                 Comparative Architecture Matrix: Raw vs. Compacted
               </h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs font-mono">
                   <thead>
-                    <tr className="text-slate-400 border-b border-slate-800">
+                    <tr className="text-neutral-400 border-b border-neutral-800">
                       <th className="pb-2">Serving Dimension</th>
                       <th className="pb-2">Raw Uncompacted</th>
-                      <th className="pb-2 text-sky-400">Elesium Zero-Copy Compaction</th>
+                      <th className="pb-2 text-neutral-200">Elesium Zero-Copy Compaction</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-800/60 text-slate-300">
+                  <tbody className="divide-y divide-neutral-800/60 text-neutral-300">
                     <tr>
                       <td className="py-2.5 font-medium text-white">External HBM Fragmentation</td>
-                      <td className="py-2.5 text-rose-400">{results.rawFragmentationPercent}% (Severe holes)</td>
-                      <td className="py-2.5 text-emerald-400 font-bold">{results.compactedFragmentationPercent}% (Contiguous virtual map)</td>
+                      <td className="py-2.5 text-red-400">{results.rawFragmentationPercent}% (Severe holes)</td>
+                      <td className="py-2.5 text-white font-bold">{results.compactedFragmentationPercent}% (Contiguous virtual map)</td>
                     </tr>
                     <tr>
                       <td className="py-2.5 font-medium text-white">Serving Concurrency</td>
                       <td className="py-2.5">{inputs.activeConcurrencyStreams} streams</td>
-                      <td className="py-2.5 text-emerald-400 font-bold">{results.maxConcurrentStreams} streams ({results.concurrencyMultiplier}x expansion)</td>
+                      <td className="py-2.5 text-white font-bold">{results.maxConcurrentStreams} streams ({results.concurrencyMultiplier}x expansion)</td>
                     </tr>
                     <tr>
                       <td className="py-2.5 font-medium text-white">Defragmentation Latency Overhead</td>
-                      <td className="py-2.5 text-rose-400">120ms - 450ms (cudaMemcpy stalls)</td>
-                      <td className="py-2.5 text-emerald-400 font-bold">&lt;0.8ms (Zero-copy cuMemMap)</td>
+                      <td className="py-2.5 text-red-400">120ms - 450ms (cudaMemcpy stalls)</td>
+                      <td className="py-2.5 text-white font-bold">&lt;0.8ms (Zero-copy cuMemMap)</td>
                     </tr>
                     <tr>
                       <td className="py-2.5 font-medium text-white">OOM Crash Eviction Risk</td>
-                      <td className="py-2.5 text-rose-400">High under sudden burst loads</td>
-                      <td className="py-2.5 text-emerald-400 font-bold">{results.oomCrashProbabilityPercent}% (Zero-OOM SLA)</td>
+                      <td className="py-2.5 text-red-400">High under sudden burst loads</td>
+                      <td className="py-2.5 text-white font-bold">{results.oomCrashProbabilityPercent}% (Zero-OOM SLA)</td>
                     </tr>
                     <tr>
                       <td className="py-2.5 font-medium text-white">Annual FinOps Savings</td>
@@ -499,7 +499,7 @@ SLA Status: ${results.slaStatus}
             <h2 className="text-2xl font-bold text-white mb-2">
               Frequently Asked Questions: KV-Cache Dynamic Compaction
             </h2>
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-neutral-400">
               Technical guidance on GPU virtual memory management, cuMemMap zero-copy defragmentation, and enterprise serving SLAs.
             </p>
           </div>
@@ -508,19 +508,19 @@ SLA Status: ${results.slaStatus}
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-[#0b0f19] border border-slate-800/80 rounded-xl overflow-hidden transition-all"
+                className="bg-[#0a0a0a] border border-neutral-800/80 rounded-xl overflow-hidden transition-all"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-5 py-4 text-left flex items-center justify-between text-sm font-medium text-white hover:text-sky-300 transition-colors"
+                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-medium text-white hover:text-white transition-colors"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
-                    className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${openFaq === idx ? 'transform rotate-180 text-sky-400' : ''}`}
+                    className={`w-4 h-4 text-neutral-400 transition-transform duration-200 ${openFaq === idx ? 'transform rotate-180 text-neutral-200' : ''}`}
                   />
                 </button>
                 {openFaq === idx && (
-                  <div className="px-5 pb-5 text-xs text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+                  <div className="px-5 pb-5 text-xs text-neutral-300 leading-relaxed border-t border-neutral-800/60 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -530,38 +530,38 @@ SLA Status: ${results.slaStatus}
         </div>
 
         {/* CRO Conversion Block: Architecture Mandate Form */}
-        <div className="mt-20 max-w-4xl mx-auto bg-gradient-to-b from-[#0b0f19] to-[#07090e] border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="mt-20 max-w-4xl mx-auto bg-gradient-to-b from-neutral-900/60 to-[#0a0a0a] border border-neutral-800 rounded-xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.04] rounded-lg blur-3xl pointer-events-none" />
           <div className="relative z-10 text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-emerald-950/80 border border-emerald-800/60 text-emerald-400 mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-white/[0.05] border border-white/15 text-neutral-200 mb-3">
               <CheckCircle2 className="w-3.5 h-3.5" />
               SOVEREIGN GPU INFRASTRUCTURE AUDIT
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
               Eliminate GPU OOM Crashes &amp; Lock 3.4x Concurrency
             </h2>
-            <p className="text-sm text-slate-400 max-w-2xl mx-auto">
+            <p className="text-sm text-neutral-400 max-w-2xl mx-auto">
               Schedule a comprehensive architecture review with our Principal AI Systems Architects. We audit your vLLM, TensorRT-LLM, and SGLang clusters to deploy zero-copy compaction inside your private VPC.
             </p>
           </div>
           {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -575,35 +575,35 @@ SLA Status: ${results.slaStatus}
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-[#0b0f19] border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+          <div className="bg-[#0a0a0a] border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
             <div className="flex items-center gap-2 mb-3">
-              <Code className="w-5 h-5 text-sky-400" />
+              <Code className="w-5 h-5 text-neutral-200" />
               <h3 className="text-base font-bold text-white font-mono">
                 Embed KV-Cache Compaction Simulator
               </h3>
             </div>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this clean HTML snippet into your technical documentation, internal Wiki, or partner engineering blog:
             </p>
-            <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-[11px] text-slate-300 break-all select-all mb-4 max-h-36 overflow-y-auto">
+            <div className="bg-neutral-950 p-3 rounded-xl border border-neutral-800 font-mono text-[11px] text-neutral-300 break-all select-all mb-4 max-h-36 overflow-y-auto">
               {embedSnippet}
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white border border-slate-800"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg text-xs font-mono bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800"
               >
                 Close
               </button>
               <button
                 onClick={handleCopyEmbed}
-                className="px-4 py-2 rounded-lg text-xs font-mono bg-sky-500 hover:bg-sky-400 text-white font-bold transition-colors inline-flex items-center gap-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg text-xs font-mono bg-white hover:bg-neutral-200 text-black font-bold transition-colors inline-flex items-center gap-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedEmbed ? 'Copied to Clipboard!' : 'Copy Embed Code'}

@@ -164,16 +164,16 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
     };
 
     return (
-        <div className="interactive-asset my-8 p-5 md:p-6 rounded-2xl bg-gradient-to-r from-gray-950 via-[#0B0F19] to-gray-950 border border-indigo-500/30 shadow-2xl text-white font-sans">
+        <div className="interactive-asset my-8 p-5 md:p-6 rounded-2xl bg-gradient-to-r from-gray-950 via-[#0B0F19] to-gray-950 border border-white/30 shadow-2xl text-white font-sans">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4 mb-4">
                 <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400">
+                    <div className="h-10 w-10 rounded-xl bg-neutral-800/20 border border-white/40 flex items-center justify-center text-neutral-200">
                         <Headphones className="h-5 w-5" />
                     </div>
                     <div>
                         <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-mono uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20 flex items-center gap-1">
+                            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-200 bg-white/10 px-2 py-0.5 rounded border border-white/20 flex items-center gap-1">
                                 <Radio className="h-2.5 w-2.5 " />
                                 Executive Audio Briefing
                             </span>
@@ -199,7 +199,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                                 }}
                                 className={`px-2 py-0.5 rounded transition-colors ${
                                     playbackRate === rate
-                                        ? 'bg-indigo-600 text-white font-bold'
+                                        ? 'bg-neutral-800 text-white font-bold'
                                         : 'text-white/60 hover:text-white'
                                 }`}
                             >
@@ -214,7 +214,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
             <div className="mb-4">
                 <div className="flex justify-between text-[11px] font-mono text-white/50 mb-1.5">
                     <span>{formatTime(currentSeconds)}</span>
-                    <span className="flex items-center gap-1 text-indigo-400">
+                    <span className="flex items-center gap-1 text-neutral-200">
                         {isPlaying ? 'Streaming Audio Briefing' : 'Paused'}
                     </span>
                     <span>{formatTime(durationSeconds)}</span>
@@ -232,7 +232,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                 >
                     <div 
                         style={{ width: `${(currentSeconds / durationSeconds) * 100}%` }}
-                        className="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full transition-all duration-200"
+                        className="h-full bg-gradient-to-r from-white to-neutral-200 rounded-full transition-all duration-200"
                     />
                 </div>
             </div>
@@ -243,7 +243,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                 <div className="flex items-center gap-3">
                     <button
                         onClick={togglePlay}
-                        className="h-11 w-11 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white flex items-center justify-center shadow-lg shadow-indigo-600/30 transition-transform active:scale-95"
+                        className="h-11 w-11 rounded-full bg-neutral-800 hover:bg-white text-white flex items-center justify-center shadow-lg shadow-neutral-800/30 transition-transform active:scale-95"
                     >
                         {isPlaying ? (
                             <Pause className="h-5 w-5 fill-current" />
@@ -264,7 +264,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                                     duration: 0.8,
                                     delay: i * 0.08
                                 }}
-                                className="w-1 bg-indigo-400/80 rounded-full"
+                                className="w-1 bg-neutral-200/80 rounded-full"
                             />
                         ))}
                     </div>
@@ -278,7 +278,7 @@ export const ExecutiveAudioBriefing: React.FC<ExecutiveAudioBriefingProps> = ({
                             onClick={() => handleSeekChapter(chap, idx)}
                             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono transition-colors border ${
                                 activeChapterIndex === idx
-                                    ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
+                                    ? 'bg-white/20 text-neutral-200 border-white/40'
                                     : 'bg-white/5 text-white/60 hover:text-white border-white/5'
                             }`}
                         >

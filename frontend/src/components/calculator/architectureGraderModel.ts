@@ -315,8 +315,8 @@ export function calculateArchitectureGrades(inputs: GraderInputs): GraderResults
   let tier = {
     title: 'Enterprise Sovereign / Production Hardened',
     description: 'Your architecture enforces deterministic state isolation, private inference boundaries, and zero data leakage. Ready for high-volume enterprise transactions.',
-    badgeColor: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
-    borderClass: 'border-emerald-500/50'
+    badgeColor: 'bg-white/10 text-neutral-800 dark:text-neutral-200 border-white/20',
+    borderClass: 'border-white/50'
   };
 
   if (fragilityScore > 70) {
@@ -337,8 +337,8 @@ export function calculateArchitectureGrades(inputs: GraderInputs): GraderResults
     tier = {
       title: 'Moderate Resilience / Edge-Case Vulnerable',
       description: 'Decent foundational topology, but prone to P99 tail latency spikes or regulatory non-compliance during audits. Minor architectural adjustments will lock sovereign stability.',
-      badgeColor: 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20',
-      borderClass: 'border-blue-500/50'
+      badgeColor: 'bg-white/10 text-neutral-800 dark:text-neutral-200 border-white/20',
+      borderClass: 'border-white/50'
     };
   }
 

@@ -64,9 +64,9 @@ export default function EnterpriseAgentSnnSimulator() {
     return simulateSnn(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-snn-neuromorphic-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-snn-neuromorphic-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedCode = () => {
@@ -144,7 +144,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
   }, [results.membraneTrace]);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Spiking Neural Network (SNN) LIF Neuromorphic Simulator | Elesium</title>
         <meta
@@ -157,24 +157,24 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Header Breadcrumbs & Title */}
         <div className="space-y-4">
-          <div className="flex items-center space-x-2 text-sm text-cyan-400 font-mono">
+          <div className="flex items-center space-x-2 text-sm text-neutral-200 font-mono">
             <a href="/solutions/" className="hover:underline">Solutions</a>
             <span>/</span>
             <a href="/resources/" className="hover:underline">Tools</a>
             <span>/</span>
-            <span className="text-slate-400">SNN Neuromorphic Simulator</span>
+            <span className="text-neutral-400">SNN Neuromorphic Simulator</span>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-slate-800 pb-8">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-neutral-800 pb-8">
             <div className="space-y-2 max-w-3xl">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
-                <Brain className="w-3.5 h-3.5 mr-1 text-cyan-400" />
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
+                <Brain className="w-3.5 h-3.5 mr-1 text-neutral-200" />
                 Tool #34 · Event-Driven Neuromorphic Computing &amp; SNN Dynamics
               </div>
               <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                 Enterprise Agent Spiking Neural Network (SNN) LIF Neuromorphic Simulator
               </h1>
-              <p className="text-slate-400 text-base leading-relaxed">
+              <p className="text-neutral-400 text-base leading-relaxed">
                 Benchmark event-driven Spiking Neural Networks (SNN) utilizing Leaky Integrate-and-Fire (LIF) and Adaptive-LIF (ALIF) membrane dynamics.
                 Simulate temporal spike encoding, Address-Event Representation (AER), synaptic sparsity, and femtojoule-per-synaptic-op energy scaling against dense GPU baselines.
               </p>
@@ -183,27 +183,27 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
             <div className="flex items-center space-x-3 shrink-0">
               <button
                 onClick={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
-                className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono font-medium transition"
+                className="active:scale-[0.97] px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition"
               >
-                Currency: <span className="text-cyan-400 font-bold">{currency}</span>
+                Currency: <span className="text-white font-bold">{currency}</span>
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition"
               >
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Tool</span>
               </button>
               <button
                 onClick={copyExecutiveMemo}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-medium shadow-lg shadow-cyan-950/50 transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}</span>
@@ -215,10 +215,10 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
         {/* Status Alert Banner */}
         <div className={`p-4 rounded-xl border flex items-center justify-between gap-4 ${
           results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
-            ? 'bg-emerald-950/30 border-emerald-800/50 text-emerald-300'
+            ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : results.statusClassification === 'BURSTING_LIMIT_CYCLE'
             ? 'bg-amber-950/30 border-amber-800/50 text-amber-300'
-            : 'bg-cyan-950/30 border-cyan-800/50 text-cyan-300'
+            : 'bg-white/[0.05] border-white/15 text-neutral-200'
         }`}>
           <div className="flex items-center space-x-3">
             <Sparkles className="w-6 h-6 shrink-0" />
@@ -243,19 +243,19 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
         {/* Main Interactive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-              <Sliders className="w-5 h-5 text-cyan-400" />
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
+              <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-base font-semibold text-white">SNN Neuronal &amp; Synaptic Parameters</h2>
             </div>
 
             {/* Neuron Model Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">Biophysical Neuron Model:</label>
+              <label className="text-xs text-neutral-300 font-medium block">Biophysical Neuron Model:</label>
               <select
                 value={neuronModel}
                 onChange={e => setNeuronModel(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="lif_standard">Standard Leaky Integrate-and-Fire (LIF)</option>
                 <option value="alif_adaptive_threshold">Adaptive-Threshold LIF (ALIF - Biological Spike-Rate Adaptation)</option>
@@ -266,11 +266,11 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
 
             {/* Temporal Encoding Scheme Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">Temporal Encoding &amp; Protocol Scheme:</label>
+              <label className="text-xs text-neutral-300 font-medium block">Temporal Encoding &amp; Protocol Scheme:</label>
               <select
                 value={temporalEncodingScheme}
                 onChange={e => setTemporalEncodingScheme(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="direct_event_aer">Direct Address-Event Representation (AER Asynchronous)</option>
                 <option value="time_to_first_spike">Time-to-First-Spike (TTFS Low-Latency)</option>
@@ -282,8 +282,8 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
             {/* Membrane Time Constant Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Membrane Time Constant (τ_m = R_m · C_m):</span>
-                <span className="font-mono text-cyan-400 font-bold">{membraneTimeConstantMs} ms</span>
+                <span className="text-neutral-300 font-medium">Membrane Time Constant (τ_m = R_m · C_m):</span>
+                <span className="font-mono text-white font-bold">{membraneTimeConstantMs} ms</span>
               </div>
               <input
                 type="range"
@@ -292,9 +292,9 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 step="1.0"
                 value={membraneTimeConstantMs}
                 onChange={e => setMembraneTimeConstantMs(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>2 ms (Ultra-fast leak)</span>
                 <span>20 ms (Cortical Pyramidal)</span>
                 <span>50 ms (Long integration)</span>
@@ -304,8 +304,8 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
             {/* Synaptic Firing Threshold Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Synaptic Firing Threshold (ΔV_th):</span>
-                <span className="font-mono text-cyan-400 font-bold">{synapticThresholdMv} mV</span>
+                <span className="text-neutral-300 font-medium">Synaptic Firing Threshold (ΔV_th):</span>
+                <span className="font-mono text-white font-bold">{synapticThresholdMv} mV</span>
               </div>
               <input
                 type="range"
@@ -314,9 +314,9 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 step="1.0"
                 value={synapticThresholdMv}
                 onChange={e => setSynapticThresholdMv(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>10 mV (High sensitivity)</span>
                 <span>25 mV (Balanced)</span>
                 <span>50 mV (Sparse barrier)</span>
@@ -326,8 +326,8 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
             {/* Input Event Rate Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Input Event Ingestion Rate:</span>
-                <span className="font-mono text-cyan-400 font-bold">{inputEventRateKhz} kHz</span>
+                <span className="text-neutral-300 font-medium">Input Event Ingestion Rate:</span>
+                <span className="font-mono text-white font-bold">{inputEventRateKhz} kHz</span>
               </div>
               <input
                 type="range"
@@ -336,9 +336,9 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 step="0.5"
                 value={inputEventRateKhz}
                 onChange={e => setInputEventRateKhz(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>0.5 kHz (Edge Telemetry)</span>
                 <span>25 kHz</span>
                 <span>100 kHz (DVS Neuromorphic Vision)</span>
@@ -348,8 +348,8 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
             {/* Daily Event Workload Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Daily Event Workload:</span>
-                <span className="font-mono text-cyan-400 font-bold">{dailyEventWorkloadMillions}M events/day</span>
+                <span className="text-neutral-300 font-medium">Daily Event Workload:</span>
+                <span className="font-mono text-white font-bold">{dailyEventWorkloadMillions}M events/day</span>
               </div>
               <input
                 type="range"
@@ -358,9 +358,9 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 step="50"
                 value={dailyEventWorkloadMillions}
                 onChange={e => setDailyEventWorkloadMillions(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>10M (Industrial Sensor)</span>
                 <span>1,000M</span>
                 <span>5,000M (Enterprise Cluster)</span>
@@ -373,25 +373,25 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
             {/* Top 4 Metric KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Card 1: Event Sparsity */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Event Compute Sparsity</span>
-                  <Zap className="w-4 h-4 text-cyan-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Event Compute Sparsity</span>
+                  <Zap className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-3xl font-extrabold font-mono text-cyan-400">{results.eventSparsityPercent}</span>
-                  <span className="text-sm font-mono text-cyan-300">%</span>
+                  <span className="text-3xl font-extrabold font-mono text-neutral-200">{results.eventSparsityPercent}</span>
+                  <span className="text-sm font-mono text-neutral-200">%</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Mean Firing Rate:</span>
-                    <span className="font-mono text-slate-300">{results.meanFiringRateHz} Hz</span>
+                    <span className="font-mono text-neutral-300">{results.meanFiringRateHz} Hz</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Dense GPU Inefficiency:</span>
-                    <span className="font-mono text-rose-400">0% Sparsity (100% dense)</span>
+                    <span className="font-mono text-red-400">0% Sparsity (100% dense)</span>
                   </div>
-                  <div className="flex justify-between font-bold text-cyan-300">
+                  <div className="flex justify-between font-bold text-white">
                     <span>Quiet Cycle Savings:</span>
                     <span>{results.eventSparsityPercent}% Compute Idle</span>
                   </div>
@@ -399,112 +399,112 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
               </div>
 
               {/* Card 2: Energy per Synaptic Op */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Energy / Synaptic Event</span>
-                  <Cpu className="w-4 h-4 text-emerald-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Energy / Synaptic Event</span>
+                  <Cpu className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-3xl font-extrabold font-mono text-emerald-400">{results.energyPerSpikePicojoules}</span>
-                  <span className="text-sm font-mono text-emerald-300">pJ / SOP</span>
+                  <span className="text-3xl font-extrabold font-mono text-neutral-200">{results.energyPerSpikePicojoules}</span>
+                  <span className="text-sm font-mono text-neutral-200">pJ / SOP</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Synchronous GPU Baseline:</span>
-                    <span className="font-mono text-slate-300">{results.gpuSynchronousBaselineEnergyPj} pJ</span>
+                    <span className="font-mono text-neutral-300">{results.gpuSynchronousBaselineEnergyPj} pJ</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Neuromorphic Gain:</span>
-                    <span className="font-mono text-emerald-400 font-bold">{results.neuromorphicPowerReductionFactor}x Less Energy</span>
+                    <span className="font-mono text-white font-bold">{results.neuromorphicPowerReductionFactor}x Less Energy</span>
                   </div>
                   <div className="flex justify-between">
                     <span>System Event Throughput:</span>
-                    <span className="font-mono text-cyan-300 font-bold">{results.systemThroughputMegaEventsPerSec} MEPS</span>
+                    <span className="font-mono text-white font-bold">{results.systemThroughputMegaEventsPerSec} MEPS</span>
                   </div>
                 </div>
               </div>
 
               {/* Card 3: Decision Latency */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Temporal Decision Latency</span>
+                  <span className="text-xs text-neutral-400 font-medium">Temporal Decision Latency</span>
                   <Timer className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="flex items-baseline space-x-2">
                   <span className="text-3xl font-extrabold font-mono text-amber-400">{results.temporalLatencyMs}</span>
-                  <span className="text-sm font-mono text-slate-400">ms</span>
+                  <span className="text-sm font-mono text-neutral-400">ms</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Time-to-First-Spike:</span>
                     <span className="font-mono text-amber-300">{results.temporalLatencyMs} ms</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Neuron Model:</span>
-                    <span className="font-mono text-slate-300">{neuronModel === 'alif_adaptive_threshold' ? 'ALIF (Adaptive)' : 'LIF'}</span>
+                    <span className="font-mono text-neutral-300">{neuronModel === 'alif_adaptive_threshold' ? 'ALIF (Adaptive)' : 'LIF'}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Event Protocol:</span>
-                    <span className="font-mono text-cyan-300 font-semibold">{temporalEncodingScheme === 'direct_event_aer' ? 'AER Asynchronous' : 'Timed Coding'}</span>
+                    <span className="font-mono text-white font-semibold">{temporalEncodingScheme === 'direct_event_aer' ? 'AER Asynchronous' : 'Timed Coding'}</span>
                   </div>
                 </div>
               </div>
 
               {/* Card 4: Financial OPEX Saved */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Annual Power OPEX Saved</span>
-                  <Activity className="w-4 h-4 text-cyan-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Annual Power OPEX Saved</span>
+                  <Activity className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-1">
-                  <span className="text-2xl font-extrabold font-mono text-cyan-300">
+                  <span className="text-2xl font-extrabold font-mono text-neutral-200">
                     {currency === 'INR' ? '₹' : '$'}{results.annualPowerCostSavings.toLocaleString()}
                   </span>
-                  <span className="text-xs text-slate-400">/ yr</span>
+                  <span className="text-xs text-neutral-400">/ yr</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Workload Analyzed:</span>
-                    <span className="font-mono text-emerald-400 font-semibold">{dailyEventWorkloadMillions}M events/day</span>
+                    <span className="font-mono text-white font-semibold">{dailyEventWorkloadMillions}M events/day</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Datacenter PUE:</span>
-                    <span className="font-mono text-slate-300">1.35x (Cooling &amp; Power)</span>
+                    <span className="font-mono text-neutral-300">1.35x (Cooling &amp; Power)</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Efficiency Multiplier:</span>
-                    <span className="font-mono text-cyan-300 font-bold">{results.neuromorphicPowerReductionFactor}x vs GPU</span>
+                    <span className="font-mono text-white font-bold">{results.neuromorphicPowerReductionFactor}x vs GPU</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Real-Time Membrane Potential Oscilloscope Chart */}
-            <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
-                  <Activity className="w-4 h-4 text-cyan-400" />
+                  <Activity className="w-4 h-4 text-neutral-200" />
                   <h3 className="text-sm font-semibold text-white">LIF Membrane Potential Dynamics V(t) &amp; Spike Train</h3>
                 </div>
                 <div className="flex items-center space-x-4 text-xs font-mono">
-                  <span className="text-cyan-400 flex items-center gap-1">
-                    <span className="w-2.5 h-0.5 bg-cyan-400 inline-block"></span> V(t) Membrane
+                  <span className="text-neutral-200 flex items-center gap-1">
+                    <span className="w-2.5 h-0.5 bg-white/80 inline-block"></span> V(t) Membrane
                   </span>
-                  <span className="text-rose-400 flex items-center gap-1">
-                    <span className="w-2.5 h-0.5 bg-rose-400 inline-block"></span> V_th Spike Event
+                  <span className="text-red-400 flex items-center gap-1">
+                    <span className="w-2.5 h-0.5 bg-red-400 inline-block"></span> V_th Spike Event
                   </span>
                 </div>
               </div>
 
               {/* Oscilloscope SVG */}
-              <div className="relative w-full aspect-[3/1] bg-slate-950 rounded-xl border border-slate-800/80 overflow-hidden flex flex-col justify-between p-3">
+              <div className="relative w-full aspect-[3/1] bg-neutral-950 rounded-xl border border-neutral-800/80 overflow-hidden flex flex-col justify-between p-3">
                 <svg viewBox="0 0 600 180" className="w-full h-full">
                   {/* Grid lines */}
                   {[30, 75, 120, 160].map(y => (
-                    <line key={`grid-${y}`} x1="0" y1={y} x2="600" y2={y} stroke="#1e293b" strokeWidth="1" strokeDasharray="4 4" />
+                    <line key={`grid-${y}`} x1="0" y1={y} x2="600" y2={y} stroke="#262626" strokeWidth="1" strokeDasharray="4 4" />
                   ))}
                   {[100, 200, 300, 400, 500].map(x => (
-                    <line key={`grid-x-${x}`} x1={x} y1="0" x2={x} y2="180" stroke="#1e293b" strokeWidth="1" strokeDasharray="4 4" />
+                    <line key={`grid-x-${x}`} x1={x} y1="0" x2={x} y2="180" stroke="#262626" strokeWidth="1" strokeDasharray="4 4" />
                   ))}
 
                   {/* Threshold Line */}
@@ -513,7 +513,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                     y1={180 - ((-70 + synapticThresholdMv - (-80)) / 105) * 180}
                     x2="600"
                     y2={180 - ((-70 + synapticThresholdMv - (-80)) / 105) * 180}
-                    stroke="#f43f5e"
+                    stroke="#a3a3a3"
                     strokeWidth="1.5"
                     strokeDasharray="6 3"
                   />
@@ -522,7 +522,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                   <path
                     d={pathString}
                     fill="none"
-                    stroke="#06b6d4"
+                    stroke="#ffffff"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -535,43 +535,43 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                       cx={sp.x}
                       cy={sp.y}
                       r="4"
-                      fill="#f43f5e"
+                      fill="#a3a3a3"
                       stroke="#ffffff"
                       strokeWidth="1.5"
                     />
                   ))}
                 </svg>
 
-                <div className="flex justify-between items-center text-[10px] font-mono text-slate-500 pt-1">
+                <div className="flex justify-between items-center text-[10px] font-mono text-neutral-500 pt-1">
                   <span>0 ms (Resting V = -70 mV)</span>
-                  <span className="text-rose-400 font-bold">Action Potential Peak: +20 mV | Reset: -75 mV</span>
+                  <span className="text-red-400 font-bold">Action Potential Peak: +20 mV | Reset: -75 mV</span>
                   <span>50 ms Time Horizon</span>
                 </div>
               </div>
             </div>
 
             {/* Neuromorphic Address-Event Architecture Blueprint */}
-            <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-              <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-                <Layers className="w-4 h-4 text-cyan-400" />
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+              <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
+                <Layers className="w-4 h-4 text-neutral-200" />
                 <h3 className="text-sm font-semibold text-white">Event-Driven Asynchronous Neuromorphic SNN Architecture</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <p className="font-semibold text-cyan-300">1. Address-Event Representation (AER)</p>
-                  <p className="text-slate-400 text-[11px]">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <p className="font-semibold text-white">1. Address-Event Representation (AER)</p>
+                  <p className="text-neutral-400 text-[11px]">
                     Sensory inputs and intermediate activations emit asynchronous spike packets containing neuron address coordinates only upon state transitions, eliminating clock cycles.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <p className="font-semibold text-cyan-300">2. Leaky Membrane Integration</p>
-                  <p className="text-slate-400 text-[11px]">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <p className="font-semibold text-white">2. Leaky Membrane Integration</p>
+                  <p className="text-neutral-400 text-[11px]">
                     Synaptic weights are added directly to the postsynaptic membrane potential ($V = V + W_i$). Leak decays exponentially with time constant τ_m = {membraneTimeConstantMs} ms.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <p className="font-semibold text-cyan-300">3. Synaptic Sparsity &amp; Refractory Reset</p>
-                  <p className="text-slate-400 text-[11px]">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <p className="font-semibold text-white">3. Synaptic Sparsity &amp; Refractory Reset</p>
+                  <p className="text-neutral-400 text-[11px]">
                     With {results.eventSparsityPercent}% event sparsity, silicon remains unpowered between spikes, slashing dynamic power consumption to {results.energyPerSpikePicojoules} pJ/SOP.
                   </p>
                 </div>
@@ -581,55 +581,55 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
         </div>
 
         {/* Technical Deep Dive Section */}
-        <div className="space-y-6 border-t border-slate-800 pt-10">
+        <div className="space-y-6 border-t border-neutral-800 pt-10">
           <div className="space-y-2">
             <h2 className="text-2xl font-bold tracking-tight text-white">
               Spiking Neural Networks vs Synchronous Dense Transformer Architectures
             </h2>
-            <p className="text-slate-400 text-sm max-w-4xl leading-relaxed">
+            <p className="text-neutral-400 text-sm max-w-4xl leading-relaxed">
               Standard deep learning architectures execute millions of Multiply-Accumulate (MAC) floating-point calculations synchronously across every clock cycle, regardless of whether activations are zero.
               Neuromorphic computing replaces dense synchronous matrix multiplication with sparse, event-driven Synaptic Operations (SOP), consuming energy only when physical spikes traverse the network.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 space-y-3">
               <h3 className="font-semibold text-white flex items-center gap-2">
-                <Cpu className="w-4 h-4 text-cyan-400" />
+                <Cpu className="w-4 h-4 text-neutral-200" />
                 Dense Digital GPU Inefficiencies
               </h3>
-              <ul className="space-y-2 text-slate-400 text-xs leading-relaxed">
+              <ul className="space-y-2 text-neutral-400 text-xs leading-relaxed">
                 <li className="flex items-start gap-2">
-                  <span className="text-rose-400 font-bold">•</span>
+                  <span className="text-red-400 font-bold">•</span>
                   <span><strong>Synchronous Clock Waste:</strong> Standard GPUs cycle millions of logic gates every gigahertz cycle even when input telemetry is static.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-rose-400 font-bold">•</span>
+                  <span className="text-red-400 font-bold">•</span>
                   <span><strong>Memory Movement Dominance:</strong> Fetching 16-bit float weights from high-bandwidth memory (HBM) consumes over 200x more energy than the arithmetic operation itself.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-rose-400 font-bold">•</span>
+                  <span className="text-red-400 font-bold">•</span>
                   <span><strong>Batching Latency Penalty:</strong> GPUs must accumulate batches of queries to amortize memory fetching costs, increasing real-time decision latency.</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 space-y-3">
               <h3 className="font-semibold text-white flex items-center gap-2">
-                <Zap className="w-4 h-4 text-emerald-400" />
+                <Zap className="w-4 h-4 text-neutral-200" />
                 Neuromorphic Event-Driven SNN Advantages
               </h3>
-              <ul className="space-y-2 text-slate-400 text-xs leading-relaxed">
+              <ul className="space-y-2 text-neutral-400 text-xs leading-relaxed">
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400 font-bold">•</span>
+                  <span className="text-white font-bold">•</span>
                   <span><strong>Asynchronous Sparsity:</strong> Zero computation occurs during silent intervals ({results.eventSparsityPercent}% power gate suppression).</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400 font-bold">•</span>
+                  <span className="text-white font-bold">•</span>
                   <span><strong>Accumulation-Only Arithmetic:</strong> Synaptic events require simple additions ($V \leftarrow V + W$) rather than costly floating-point multiplications ($A \times B$).</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-400 font-bold">•</span>
+                  <span className="text-white font-bold">•</span>
                   <span><strong>Sub-Millisecond Edge Telemetry:</strong> Temporal Address-Event Representation delivers immediate decisions in {results.temporalLatencyMs} ms without batching.</span>
                 </li>
               </ul>
@@ -638,7 +638,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4 border-t border-slate-800 pt-10">
+        <div className="space-y-4 border-t border-neutral-800 pt-10">
           <h2 className="text-xl font-bold text-white">Frequently Asked Questions</h2>
           <div className="space-y-3">
             {[
@@ -659,16 +659,16 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 a: 'Elesium deploys hybrid neuromorphic pipelines where event-based pre-processing and temporal anomaly detection run on neuromorphic hardware (Intel Loihi 2, SynSense Speck, or FPGA emulations) while large-scale symbolic reasoning and policy validation execute in sovereign private enclaves.'
               }
             ].map((faq, idx) => (
-              <div key={idx} className="border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-xl bg-neutral-900/30 overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-5 py-4 text-left flex justify-between items-center text-sm font-semibold text-slate-200 hover:text-cyan-400 transition"
+                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex justify-between items-center text-sm font-semibold text-neutral-200 hover:text-white transition"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 transform transition-transform ${openFaq === idx ? 'rotate-180 text-cyan-400' : 'text-slate-500'}`} />
+                  <ChevronDown className={`w-4 h-4 transform transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : 'text-neutral-500'}`} />
                 </button>
                 {openFaq === idx && (
-                  <div className="px-5 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                  <div className="px-5 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -678,18 +678,18 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
         </div>
 
         {/* Enterprise Call to Action */}
-        <div className="bg-gradient-to-r from-cyan-950/40 via-slate-900 to-slate-950 border border-cyan-800/40 rounded-2xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-neutral-950 border border-white/15 rounded-xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <h3 className="text-xl sm:text-2xl font-bold text-white">
               Deploy Event-Driven Sovereign AI Agents with Sub-Millisecond Latency
             </h3>
-            <p className="text-slate-400 text-sm">
+            <p className="text-neutral-400 text-sm">
               Replace energy-intensive synchronous GPU inference with custom event-driven neuromorphic architectures tailored to your enterprise telemetry workloads.
             </p>
           </div>
           <ExpandableScreen>
             <ExpandableScreenTrigger>
-              <button className="px-6 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm shadow-lg shadow-cyan-950/50 flex items-center space-x-2 transition shrink-0">
+              <button className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-sm shadow-lg flex items-center space-x-2 transition shrink-0">
                 <span>Deploy Sovereign Architecture</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -706,20 +706,20 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
             <div className="flex justify-between items-center">
               <h3 className="text-base font-bold text-white flex items-center gap-2">
-                <Code className="w-5 h-5 text-cyan-400" />
+                <Code className="w-5 h-5 text-neutral-200" />
                 Embed SNN Neuromorphic Simulator
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white transition"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white transition"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-neutral-400">
               Copy this lightweight HTML snippet to embed the live Spiking Neural Network Leaky Integrate-and-Fire Simulator directly into your website or enterprise portal:
             </p>
             <div className="relative">
@@ -727,19 +727,19 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 readOnly
                 rows={4}
                 value={embedCode}
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs font-mono text-cyan-300 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-200 focus:outline-none"
               />
             </div>
             <div className="flex justify-end space-x-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-medium hover:bg-slate-700 transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 text-neutral-300 text-xs font-medium hover:bg-neutral-700 transition"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-medium transition flex items-center space-x-1.5"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium transition flex items-center space-x-1.5"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied!' : 'Copy Code'}</span>

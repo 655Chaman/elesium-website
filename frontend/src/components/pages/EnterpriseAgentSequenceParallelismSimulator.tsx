@@ -68,7 +68,7 @@ export default function EnterpriseAgentSequenceParallelismSimulator() {
     setCurrency('INR');
   };
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-sequence-parallelism-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #e5e7eb;"></iframe><div style="font-size:12px;color:#6b7280;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-sequence-parallelism-simulator" target="_blank" rel="noopener" style="color:#2563eb;text-decoration:underline;">Elesium Sequence Parallelism Simulator</a></div>`;
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-sequence-parallelism-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-sequence-parallelism-simulator" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sequence Parallelism Simulator</a></div>`;
 
   const copyEmbedCode = () => {
     navigator.clipboard.writeText(embedCode);
@@ -114,7 +114,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Agent Sequence Parallelism Simulator | Elesium</title>
         <meta
@@ -127,32 +127,32 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold bg-white/[0.04] text-white border border-white/15">
             <Sparkles className="w-3.5 h-3.5" />
             Tool #62 • 1M+ Context Token Sequence Parallelism Architecture
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Enterprise Autonomous Agent <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400">Sequence Parallelism</span> & Ring Attention Simulator
+            Enterprise Autonomous Agent <span className="text-neutral-400 ">Sequence Parallelism</span> & Ring Attention Simulator
           </h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed">
             Model Ring Self-Attention, chunked QKV sequence sharding, non-blocking peer-to-peer KV-shift overlapping, and 1M+ context token inference on sovereign multi-GPU clusters.
           </p>
         </div>
 
         {/* Action Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+        <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
           <div className="flex items-center gap-3">
-            <span className="text-xs text-slate-400">Currency Mode:</span>
-            <div className="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700">
+            <span className="text-xs text-neutral-400">Currency Mode:</span>
+            <div className="inline-flex rounded-lg bg-neutral-800 p-0.5 border border-neutral-700">
               <button
                 onClick={() => setCurrency('INR')}
-                className={`px-2.5 py-1 text-xs font-medium rounded-md transition ${currency === 'INR' ? 'bg-cyan-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
+                className={`active:scale-[0.97] px-2.5 py-1 text-xs font-medium rounded-md transition ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
               >
                 INR (₹)
               </button>
               <button
                 onClick={() => setCurrency('USD')}
-                className={`px-2.5 py-1 text-xs font-medium rounded-md transition ${currency === 'USD' ? 'bg-cyan-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
+                className={`active:scale-[0.97] px-2.5 py-1 text-xs font-medium rounded-md transition ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'}`}
               >
                 USD ($)
               </button>
@@ -161,30 +161,30 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
           <div className="flex items-center gap-2">
             <button
               onClick={handleReset}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-800 rounded-lg border border-slate-700/60 transition"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-neutral-400 hover:text-white bg-neutral-800/80 hover:bg-neutral-800 rounded-lg border border-neutral-700/60 transition"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               Reset Defaults
             </button>
             <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
               onClick={() => setIsEmbedOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-cyan-400 hover:text-cyan-300 bg-cyan-950/40 hover:bg-cyan-950/60 rounded-lg border border-cyan-800/50 transition"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-neutral-200 hover:text-white bg-white/[0.05] hover:bg-white/10 rounded-lg border border-white/15 transition"
             >
               <Code className="w-3.5 h-3.5" />
               Embed Widget
             </button>
             <button
               onClick={copyExecutiveMemo}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-950 font-bold bg-cyan-400 hover:bg-cyan-300 rounded-lg transition"
+              className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-black font-bold bg-white hover:bg-neutral-200 rounded-lg transition"
             >
-              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-slate-950" /> : <Copy className="w-3.5 h-3.5" />}
+              {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-black" /> : <Copy className="w-3.5 h-3.5" />}
               {hasCopiedMemo ? 'Memo Copied!' : 'Copy Executive Brief'}
             </button>
           </div>
@@ -193,19 +193,19 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Panel */}
-          <div className="lg:col-span-5 space-y-6 bg-slate-900/60 p-6 rounded-2xl border border-slate-800/80">
-            <div className="flex items-center gap-2 pb-4 border-b border-slate-800 text-sm font-semibold text-white">
-              <Sliders className="w-4 h-4 text-cyan-400" />
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 p-6 rounded-xl border border-neutral-800/80">
+            <div className="flex items-center gap-2 pb-4 border-b border-neutral-800 text-sm font-semibold text-white">
+              <Sliders className="w-4 h-4 text-neutral-200" />
               Sequence Partitioning Parameters
             </div>
 
             {/* Model Architecture */}
             <div className="space-y-2">
-              <label className="text-xs font-medium text-slate-300">Model Architecture</label>
+              <label className="text-xs font-medium text-neutral-300">Model Architecture</label>
               <select
                 value={modelArchitecture}
                 onChange={(e) => setModelArchitecture(e.target.value as ModelArchitecture)}
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:border-cyan-500 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-2.5 text-xs text-white focus:border-white/40 focus:outline-none"
               >
                 <option value="llama_3_1_70b">Llama-3.1-70B (8192 Hidden Dim · 64 Heads)</option>
                 <option value="deepseek_v2_236b">DeepSeek-V2-236B MoE (5120 Hidden Dim)</option>
@@ -216,17 +216,17 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
 
             {/* Sequence Parallel Degree */}
             <div className="space-y-2">
-              <label className="text-xs font-medium text-slate-300">Sequence Parallel (SP) Degree</label>
+              <label className="text-xs font-medium text-neutral-300">Sequence Parallel (SP) Degree</label>
               <div className="grid grid-cols-5 gap-2">
                 {[2, 4, 8, 16, 32].map((degree) => (
                   <button
                     key={degree}
                     type="button"
                     onClick={() => setSpDegree(degree as SpDegree)}
-                    className={`py-2 text-xs font-bold rounded-lg border transition ${
+                    className={`active:scale-[0.97] py-2 text-xs font-bold rounded-lg border transition ${
                       spDegree === degree
-                        ? 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50'
-                        : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-white'
+                        ? 'bg-white/10 text-neutral-200 border-white/30'
+                        : 'bg-neutral-950 text-neutral-400 border-neutral-800 hover:text-white'
                     }`}
                   >
                     SP-{degree}
@@ -238,8 +238,8 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
             {/* Total Context Tokens Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="font-medium text-slate-300">Total Sequence Context Window</span>
-                <span className="font-mono text-cyan-400 font-bold">{totalContextTokens.toLocaleString()} tokens</span>
+                <span className="font-medium text-neutral-300">Total Sequence Context Window</span>
+                <span className="font-mono text-white font-bold">{totalContextTokens.toLocaleString()} tokens</span>
               </div>
               <input
                 type="range"
@@ -248,9 +248,9 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 step={16384}
                 value={totalContextTokens}
                 onChange={(e) => setTotalContextTokens(Number(e.target.value))}
-                className="w-full accent-cyan-400 bg-slate-800 rounded-lg"
+                className="w-full accent-white bg-neutral-800 rounded-lg"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>16k</span>
                 <span>128k</span>
                 <span>262k</span>
@@ -261,11 +261,11 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
 
             {/* Interconnect Fabric */}
             <div className="space-y-2">
-              <label className="text-xs font-medium text-slate-300">Interconnect Fabric</label>
+              <label className="text-xs font-medium text-neutral-300">Interconnect Fabric</label>
               <select
                 value={interconnect}
                 onChange={(e) => setInterconnect(e.target.value as InterconnectType)}
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:border-cyan-500 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-2.5 text-xs text-white focus:border-white/40 focus:outline-none"
               >
                 <option value="nvlink_4_900gb">NVLink 4.0 Mesh (900 GB/s Bidirectional)</option>
                 <option value="nvlink_3_600gb">NVLink 3.0 Mesh (600 GB/s Bidirectional)</option>
@@ -276,11 +276,11 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
 
             {/* Ring Shift Mode */}
             <div className="space-y-2">
-              <label className="text-xs font-medium text-slate-300">Ring Attention Overlap Strategy</label>
+              <label className="text-xs font-medium text-neutral-300">Ring Attention Overlap Strategy</label>
               <select
                 value={ringMode}
                 onChange={(e) => setRingMode(e.target.value as RingMode)}
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:border-cyan-500 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-2.5 text-xs text-white focus:border-white/40 focus:outline-none"
               >
                 <option value="async_p2p_overlap">Asynchronous Non-Blocking P2P Overlap (Optimal)</option>
                 <option value="double_buffered_ring">Double-Buffered Ring Attention (Conservative)</option>
@@ -293,46 +293,46 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
           <div className="lg:col-span-7 space-y-6">
             {/* Top Metrics Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Per-GPU Context</span>
-                <span className="text-xl font-extrabold text-cyan-400 font-mono">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">Per-GPU Context</span>
+                <span className="text-xl font-extrabold text-neutral-200 font-mono">
                   {results.perGpuContextTokens.toLocaleString()}
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">tokens / device</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">tokens / device</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Step Latency</span>
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">Step Latency</span>
                 <span className="text-xl font-extrabold text-white font-mono">
                   {results.effectiveStepLatencyMs}ms
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">P99 forward step</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">P99 forward step</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Overlap Efficiency</span>
-                <span className="text-xl font-extrabold text-teal-400 font-mono">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">Overlap Efficiency</span>
+                <span className="text-xl font-extrabold text-neutral-200 font-mono">
                   {results.commOverlapEfficiencyPercent}%
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">GEMM-overlap</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">GEMM-overlap</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                <span className="text-[11px] text-slate-400 block mb-1">Peak KV VRAM</span>
-                <span className="text-xl font-extrabold text-indigo-400 font-mono">
+              <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                <span className="text-[11px] text-neutral-400 block mb-1">Peak KV VRAM</span>
+                <span className="text-xl font-extrabold text-neutral-200 font-mono">
                   {results.peakKvVramGb} GB
                 </span>
-                <span className="text-[10px] text-slate-500 block mt-1">per GPU device</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">per GPU device</span>
               </div>
             </div>
 
             {/* SLA Status Banner */}
             <div className={`p-4 rounded-xl border flex items-center justify-between ${
               results.slaStatus === 'SUB_10MS_1M_OPTIMAL'
-                ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+                ? 'bg-white/[0.04] text-neutral-200 border-white/20'
                 : results.slaStatus === 'ACCEPTABLE_PARTIAL_OVERLAP'
                 ? 'bg-amber-500/10 text-amber-400 border-amber-500/30'
-                : 'bg-rose-500/10 text-rose-400 border-rose-500/30'
+                : 'bg-red-500/10 text-red-400 border-red-500/30'
             }`}>
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
@@ -340,7 +340,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                   <span className="text-xs font-bold block tracking-wider uppercase">
                     {results.slaStatus.replace(/_/g, ' ')}
                   </span>
-                  <span className="text-[11px] text-slate-400 block">
+                  <span className="text-[11px] text-neutral-400 block">
                     {results.slaStatus === 'SUB_10MS_1M_OPTIMAL'
                       ? 'Sub-10ms per-step latency verified with 96%+ network overlap and zero OOM risk.'
                       : results.slaStatus === 'ACCEPTABLE_PARTIAL_OVERLAP'
@@ -349,55 +349,55 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                   </span>
                 </div>
               </div>
-              <span className="text-xs font-bold font-mono px-2.5 py-1 rounded bg-slate-950/80 border border-slate-800 text-cyan-300">
+              <span className="text-xs font-bold font-mono px-2.5 py-1 rounded bg-neutral-950/80 border border-neutral-800 text-white">
                 {results.ringShiftSteps} Ring Shifts
               </span>
             </div>
 
             {/* Visual Ring Self-Attention Topology */}
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 space-y-4">
+            <div className="p-6 rounded-xl bg-neutral-900/60 border border-neutral-800/80 space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-xs font-semibold text-white">
-                  <Network className="w-4 h-4 text-cyan-400" />
+                  <Network className="w-4 h-4 text-neutral-200" />
                   Ring Self-Attention Peer-to-Peer Communication Topology
                 </div>
-                <span className="text-[11px] font-mono text-cyan-400">
+                <span className="text-[11px] font-mono text-neutral-200">
                   {spDegree} Active GPU Ranks
                 </span>
               </div>
 
               {/* Topology Graphic */}
-              <div className="p-4 bg-slate-950 rounded-xl border border-slate-800/80 space-y-3">
+              <div className="p-4 bg-neutral-950 rounded-xl border border-neutral-800/80 space-y-3">
                 <div className="flex items-center justify-around flex-wrap gap-2 text-xs">
                   {Array.from({ length: Math.min(8, spDegree) }).map((_, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <div className="px-3 py-2 rounded-lg bg-slate-900 border border-cyan-500/40 text-center font-mono">
-                        <div className="text-[10px] text-cyan-400 font-bold">GPU {idx}</div>
-                        <div className="text-[9px] text-slate-400">Q_{idx} · KV_{idx}</div>
+                      <div className="px-3 py-2 rounded-lg bg-neutral-900 border border-white/30 text-center font-mono">
+                        <div className="text-[10px] text-white font-bold">GPU {idx}</div>
+                        <div className="text-[9px] text-neutral-400">Q_{idx} · KV_{idx}</div>
                       </div>
                       {idx < Math.min(8, spDegree) - 1 && (
-                        <ArrowRight className="w-3.5 h-3.5 text-cyan-500 " />
+                        <ArrowRight className="w-3.5 h-3.5 text-neutral-200 " />
                       )}
                     </div>
                   ))}
                   {spDegree > 8 && (
-                    <div className="text-slate-500 text-xs font-mono">... +{spDegree - 8} more</div>
+                    <div className="text-neutral-500 text-xs font-mono">... +{spDegree - 8} more</div>
                   )}
                 </div>
-                <div className="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-900">
-                  Ring P2P KV Shift: <span className="text-cyan-300 font-mono">{results.perStepKvCommMs}ms</span> comm overlapped with <span className="text-teal-300 font-mono">{results.perStepGemmComputeMs}ms</span> local attention GEMM.
+                <div className="text-center text-[11px] text-neutral-400 pt-2 border-t border-neutral-900">
+                  Ring P2P KV Shift: <span className="text-neutral-200 font-mono">{results.perStepKvCommMs}ms</span> comm overlapped with <span className="text-neutral-200 font-mono">{results.perStepGemmComputeMs}ms</span> local attention GEMM.
                 </div>
               </div>
 
               {/* FinOps Recovered Value Card */}
-              <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-cyan-950/40 via-slate-900 to-indigo-950/40 border border-cyan-800/40">
+              <div className="flex items-center justify-between p-4 rounded-xl bg-neutral-950 border border-white/15">
                 <div>
-                  <span className="text-xs text-slate-400 block">Recovered Annual Cluster FinOps Capital</span>
-                  <span className="text-2xl font-black text-cyan-400 font-mono">{results.annualFinOpsSavings}</span>
+                  <span className="text-xs text-neutral-400 block">Recovered Annual Cluster FinOps Capital</span>
+                  <span className="text-2xl font-black text-neutral-200 font-mono">{results.annualFinOpsSavings}</span>
                 </div>
                 <div className="text-right">
-                  <span className="text-[11px] text-slate-400 block">Sovereign Compliance</span>
-                  <span className="text-xs font-bold text-emerald-400">Indian DPDP Act 2023 · Private VPC</span>
+                  <span className="text-[11px] text-neutral-400 block">Sovereign Compliance</span>
+                  <span className="text-xs font-bold text-white">Indian DPDP Act 2023 · Private VPC</span>
                 </div>
               </div>
             </div>
@@ -409,17 +409,17 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
           <h2 className="text-xl font-bold text-white">Frequently Asked Architectural Questions</h2>
           <div className="space-y-2">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="rounded-xl bg-slate-900/60 border border-slate-800/80 overflow-hidden">
+              <div key={idx} className="rounded-xl bg-neutral-900/60 border border-neutral-800/80 overflow-hidden">
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-white hover:text-cyan-400 transition"
+                  className="active:scale-[0.97] w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-white hover:text-white transition"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === idx ? 'rotate-180 text-cyan-400' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
                 </button>
                 {openFaq === idx && (
-                  <div className="px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                  <div className="px-4 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -429,33 +429,33 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
         </div>
 
         {/* Audit Form Section */}
-        <div className="pt-8 border-t border-slate-800">
+        <div className="pt-8 border-t border-neutral-800">
           <div className="max-w-2xl mx-auto text-center space-y-4 mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
               Schedule a Sequence Parallelism Architecture Audit
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-neutral-400">
               Deploy Ring Self-Attention and sequence parallelism on your enterprise GPU clusters with sovereign air-gapped guarantees.
             </p>
           </div>
           {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -467,21 +467,21 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
 
       {/* Embed Modal */}
       {isEmbedOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-          <div className="w-full max-w-xl bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-2xl">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-950/80 backdrop-blur-sm">
+          <div className="w-full max-w-xl bg-neutral-900 border border-neutral-800 rounded-xl p-6 space-y-4 shadow-2xl">
+            <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
               <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 Embed Sequence Parallelism Simulator
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-neutral-400 leading-relaxed">
               Copy and paste this HTML snippet into your technical documentation, internal wiki, or blog:
             </p>
             <div className="relative">
@@ -489,11 +489,11 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 readOnly
                 rows={4}
                 value={embedCode}
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs font-mono text-cyan-300 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-200 focus:outline-none"
               />
               <button
                 onClick={copyEmbedCode}
-                className="absolute top-2 right-2 px-2.5 py-1 text-xs font-bold rounded bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition"
+                className="active:scale-[0.97] absolute top-2 right-2 px-2.5 py-1 text-xs font-bold rounded bg-white text-black hover:bg-neutral-200 transition"
               >
                 {hasCopiedEmbed ? 'Copied!' : 'Copy'}
               </button>

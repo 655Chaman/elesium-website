@@ -17,7 +17,7 @@
   "firstSentence": "Automate zero-rated invoice verification for Special Economic Zone (SEZ) supplies in Tally Prime, validating Form I endorsement certificates and SEZ Online portal integration in Hyderabad.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad",
   "paragraphs": [
     "Information Technology hardware vendors, facility management firms, and service contractors supplying units inside Special Economic Zones (SEZs) in Hyderabad (such as HITEC City and Gachibowli) face complex tax withholding risks. Under GST rules, supplies to SEZ developers and units qualify as zero-rated supplies without tax only if supported by authorized operations endorsements from SEZ customs officers. Billing errors or missing endorsement certificates lead to frozen GST refunds and tax demand notices.",
@@ -113,7 +113,7 @@
     "subheadline": "Information Technology hardware vendors, facility management firms, and service contractors supplying units inside Special Economic Zones (SEZs) in Hyderabad (such as HITEC City and Gachibowli) face complex tax withholding risks. Under GST rules, supplies to SEZ developers and units qualify as zero-rated supplies without tax only if supported by authorized operations endorsements from SEZ customs officers. Billing errors or missing endorsement certificates lead to frozen GST refunds and tax demand notices.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Replaces manual document verification with automated SEZ portal handshakes."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Replaces manual document verification with automated SEZ portal handshakes."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad Performance Telemetry",
       "layout": "centered-card"
     }

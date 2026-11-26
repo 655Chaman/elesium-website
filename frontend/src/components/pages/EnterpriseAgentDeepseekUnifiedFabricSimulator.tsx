@@ -54,7 +54,7 @@ export default function EnterpriseAgentDeepseekUnifiedFabricSimulator() {
 
   const results = useMemo(() => calculateDeepseekUnifiedFabric(inputs), [inputs]);
 
-  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-deepseek-v3-serving-fabric-simulator" width="100%" height="480" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe><div style="font-size:11px;color:#64748b;text-align:right;margin-top:4px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator" target="_blank" rel="noopener" style="color:#10b981;text-decoration:underline;">Elesium DeepSeek-V3 Unified Fabric Simulator</a></div>`;
+  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-deepseek-v3-serving-fabric-simulator" width="100%" height="480" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:11px;color:#a3a3a3;text-align:right;margin-top:4px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-deepseek-v3-serving-fabric-simulator" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium DeepSeek-V3 Unified Fabric Simulator</a></div>`;
 
   const copyEmbed = () => {
     navigator.clipboard.writeText(embedSnippet);
@@ -110,7 +110,7 @@ PERFORMANCE AUDIT METRICS:
   ];
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-slate-100 font-sans selection:bg-emerald-500 selection:text-black">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>DeepSeek-V3 Grand Unified Serving Fabric Simulator | Elesium</title>
         <meta
@@ -121,31 +121,31 @@ PERFORMANCE AUDIT METRICS:
       </Helmet>
 
       {/* Hero Header */}
-      <div className="border-b border-slate-800/80 bg-gradient-to-b from-emerald-950/20 via-slate-950/50 to-transparent pt-12 pb-10 px-4 sm:px-6 lg:px-8">
+      <div className="border-b border-neutral-800/80 bg-neutral-950 pt-12 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/20 text-neutral-200 text-xs font-mono">
               <Cpu className="w-3.5 h-3.5" />
               <span>Tool #75 · Megawatt Foundation Model Serving</span>
             </div>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900/80 text-xs text-slate-300 hover:text-white hover:border-slate-600 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900/80 text-xs text-neutral-300 hover:text-white hover:border-neutral-600 transition"
               >
                 <Code className="w-3.5 h-3.5" />
                 <span>Embed Simulator</span>
               </button>
               <button
                 onClick={resetDefaults}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-750 bg-slate-900/80 text-xs text-slate-400 hover:text-slate-200 transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-750 bg-neutral-900/80 text-xs text-neutral-400 hover:text-neutral-200 transition"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 <span>Reset</span>
@@ -156,7 +156,7 @@ PERFORMANCE AUDIT METRICS:
           <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3">
             Enterprise DeepSeek-V3 Grand Unified Serving Fabric Simulator
           </h1>
-          <p className="text-sm sm:text-base text-slate-400 max-w-4xl leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-400 max-w-4xl leading-relaxed">
             Co-design Multi-Head Latent Attention (MLA), Multi-Token Prediction (MTP), DualPipe bidirectional zero-bubble overlap, and auxiliary-loss-free routing across Hopper and Blackwell clusters.
           </p>
         </div>
@@ -168,22 +168,22 @@ PERFORMANCE AUDIT METRICS:
           
           {/* Controls Column */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm">
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6 backdrop-blur-sm">
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
                 <h2 className="text-base font-semibold text-white flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-emerald-400" />
+                  <Sliders className="w-4 h-4 text-neutral-200" />
                   Cluster & Serving Parameters
                 </h2>
-                <div className="flex rounded-lg border border-slate-700 p-0.5 bg-slate-950 text-xs font-mono">
+                <div className="flex rounded-lg border border-neutral-700 p-0.5 bg-neutral-950 text-xs font-mono">
                   <button
                     onClick={() => setCurrency('INR')}
-                    className={`px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-emerald-600 text-white font-bold' : 'text-slate-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'INR' ? 'bg-white text-black font-bold' : 'text-neutral-400'}`}
                   >
                     INR (₹)
                   </button>
                   <button
                     onClick={() => setCurrency('USD')}
-                    className={`px-2 py-0.5 rounded ${currency === 'USD' ? 'bg-emerald-600 text-white font-bold' : 'text-slate-400'}`}
+                    className={`active:scale-[0.97] px-2 py-0.5 rounded ${currency === 'USD' ? 'bg-white text-black font-bold' : 'text-neutral-400'}`}
                   >
                     USD ($)
                   </button>
@@ -193,12 +193,12 @@ PERFORMANCE AUDIT METRICS:
               <div className="space-y-5 text-sm">
                 {/* Serving Architecture */}
                 <div>
-                  <label className="block text-slate-300 font-medium mb-1.5">Serving Fabric Architecture</label>
+                  <label className="block text-neutral-300 font-medium mb-1.5">Serving Fabric Architecture</label>
                   <select
                     value={servingArchitecture}
                     onChange={(e) => setServingArchitecture(e.target.value as DeepseekUnifiedFabricInputs['servingArchitecture'])}
                     aria-label="Serving Fabric Architecture"
-                    className="w-full bg-slate-950 border border-slate-750 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-emerald-500 font-mono text-xs"
+                    className="w-full bg-neutral-950 border border-neutral-750 rounded-xl px-3 py-2 text-neutral-200 focus:outline-none focus:border-white/40 font-mono text-xs"
                   >
                     <option value="grand_unified_fabric">Grand Unified Fabric (MLA + MTP + DualPipe Co-Design)</option>
                     <option value="disaggregated_pipeline">Disaggregated Prefill/Decode (Decoupled Stages)</option>
@@ -208,9 +208,9 @@ PERFORMANCE AUDIT METRICS:
 
                 {/* Cluster GPU Count */}
                 <div>
-                  <div className="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                  <div className="flex justify-between text-xs text-neutral-400 mb-1.5 font-mono">
                     <span>Cluster Hardware Scale</span>
-                    <span className="text-emerald-400 font-semibold">{clusterGpuCount} GPUs ({clusterGpuCount / 8} Nodes)</span>
+                    <span className="text-white font-semibold">{clusterGpuCount} GPUs ({clusterGpuCount / 8} Nodes)</span>
                   </div>
                   <input
                     type="range"
@@ -220,15 +220,15 @@ PERFORMANCE AUDIT METRICS:
                     value={clusterGpuCount}
                     onChange={(e) => setClusterGpuCount(Number(e.target.value))}
                     aria-label="Cluster Hardware Scale"
-                    className="w-full accent-emerald-500 bg-slate-800 h-2 rounded cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-2 rounded cursor-pointer"
                   />
                 </div>
 
                 {/* Speculative MTP Depth */}
                 <div>
-                  <div className="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                  <div className="flex justify-between text-xs text-neutral-400 mb-1.5 font-mono">
                     <span>MTP Speculative Depth</span>
-                    <span className="text-emerald-400 font-semibold">k={speculativeMtpDepth} tokens forward</span>
+                    <span className="text-white font-semibold">k={speculativeMtpDepth} tokens forward</span>
                   </div>
                   <input
                     type="range"
@@ -238,15 +238,15 @@ PERFORMANCE AUDIT METRICS:
                     value={speculativeMtpDepth}
                     onChange={(e) => setSpeculativeMtpDepth(Number(e.target.value))}
                     aria-label="MTP Speculative Depth"
-                    className="w-full accent-emerald-500 bg-slate-800 h-2 rounded cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-2 rounded cursor-pointer"
                   />
                 </div>
 
                 {/* Input Context Length */}
                 <div>
-                  <div className="flex justify-between text-xs text-slate-400 mb-1.5 font-mono">
+                  <div className="flex justify-between text-xs text-neutral-400 mb-1.5 font-mono">
                     <span>Context Window Depth</span>
-                    <span className="text-emerald-400 font-semibold">{(inputContextLength / 1024).toFixed(0)}k Tokens</span>
+                    <span className="text-white font-semibold">{(inputContextLength / 1024).toFixed(0)}k Tokens</span>
                   </div>
                   <input
                     type="range"
@@ -256,18 +256,18 @@ PERFORMANCE AUDIT METRICS:
                     value={inputContextLength}
                     onChange={(e) => setInputContextLength(Number(e.target.value))}
                     aria-label="Context Window Depth"
-                    className="w-full accent-emerald-500 bg-slate-800 h-2 rounded cursor-pointer"
+                    className="w-full accent-white bg-neutral-800 h-2 rounded cursor-pointer"
                   />
                 </div>
 
                 {/* Network Interconnect */}
                 <div>
-                  <label className="block text-slate-300 font-medium mb-1.5">Inter-Node Network Fabric</label>
+                  <label className="block text-neutral-300 font-medium mb-1.5">Inter-Node Network Fabric</label>
                   <select
                     value={networkInterconnect}
                     onChange={(e) => setNetworkInterconnect(e.target.value as DeepseekUnifiedFabricInputs['networkInterconnect'])}
                     aria-label="Inter-Node Network Fabric"
-                    className="w-full bg-slate-950 border border-slate-750 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-emerald-500 font-mono text-xs"
+                    className="w-full bg-neutral-950 border border-neutral-750 rounded-xl px-3 py-2 text-neutral-200 focus:outline-none focus:border-white/40 font-mono text-xs"
                   >
                     <option value="quantum2_infiniband_3200g">3.2 Tbps Quantum-2 InfiniBand (Sub-1.2µs)</option>
                     <option value="roce_v2_800g">800 Gbps RoCE v2 Low-Latency Fabric</option>
@@ -278,10 +278,10 @@ PERFORMANCE AUDIT METRICS:
             </div>
 
             {/* Quick Actions Card */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800 rounded-xl p-5 space-y-3">
               <button
                 onClick={copyMemo}
-                className="w-full py-2.5 px-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center justify-center gap-2 transition"
+                className="active:scale-[0.97] w-full py-2.5 px-4 rounded-lg bg-white hover:bg-neutral-200 text-black font-medium text-xs flex items-center justify-center gap-2 transition"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Technical Memo Copied!' : 'Copy Executive Architecture Memo'}</span>
@@ -294,116 +294,116 @@ PERFORMANCE AUDIT METRICS:
             
             {/* Primary KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">KV-Cache Footprint</span>
-                <span className="text-xl font-bold font-mono text-emerald-400">-{results.kvCacheReductionPercent}%</span>
-                <span className="text-[10px] text-slate-500 block mt-1">MLA Joint Latent Vector</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] font-mono text-neutral-400 block mb-1">KV-Cache Footprint</span>
+                <span className="text-xl font-bold font-mono text-white">-{results.kvCacheReductionPercent}%</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">MLA Joint Latent Vector</span>
               </div>
-              <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">Decoding Throughput</span>
-                <span className="text-xl font-bold font-mono text-teal-400">{results.effectiveDecodedSpeedupFactor}x</span>
-                <span className="text-[10px] text-slate-500 block mt-1">{results.decodingThroughputTokensPerSec} tok/s / node</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] font-mono text-neutral-400 block mb-1">Decoding Throughput</span>
+                <span className="text-xl font-bold font-mono text-white">{results.effectiveDecodedSpeedupFactor}x</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">{results.decodingThroughputTokensPerSec} tok/s / node</span>
               </div>
-              <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">Model Flops (MFU)</span>
-                <span className="text-xl font-bold font-mono text-sky-400">{results.modelFlopsUtilizationPercent}%</span>
-                <span className="text-[10px] text-slate-500 block mt-1">DualPipe Overlap</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] font-mono text-neutral-400 block mb-1">Model Flops (MFU)</span>
+                <span className="text-xl font-bold font-mono text-white">{results.modelFlopsUtilizationPercent}%</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">DualPipe Overlap</span>
               </div>
-              <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-                <span className="text-[11px] font-mono text-slate-400 block mb-1">Time to First Token</span>
+              <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4">
+                <span className="text-[11px] font-mono text-neutral-400 block mb-1">Time to First Token</span>
                 <span className="text-xl font-bold font-mono text-amber-400">{results.timeToFirstTokenMs}ms</span>
-                <span className="text-[10px] text-slate-500 block mt-1">Sub-12ms Prefill SLA</span>
+                <span className="text-[10px] text-neutral-500 block mt-1">Sub-12ms Prefill SLA</span>
               </div>
             </div>
 
             {/* Interactive SVG Diagram */}
-            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6">
+              <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                  <Activity className="w-4 h-4 text-emerald-400" />
+                  <Activity className="w-4 h-4 text-neutral-200" />
                   Grand Unified Serving Co-Design Architecture
                 </h3>
-                <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                <span className="text-xs font-mono text-neutral-200 bg-white/[0.04] px-2 py-0.5 rounded border border-white/15">
                   {results.statusClassification}
                 </span>
               </div>
 
-              <div className="bg-slate-950 p-4 rounded-xl border border-slate-850 overflow-x-auto">
+              <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-850 overflow-x-auto">
                 <svg viewBox="0 0 680 200" className="w-full h-auto min-w-[580px] font-mono text-xs">
                   {/* Layer 1: Multi-Head Latent Attention (MLA) */}
-                  <rect x="20" y="20" width="180" height="70" rx="8" fill="#064e3b" stroke="#10b981" strokeWidth="1.5" />
-                  <text x="35" y="45" fill="#a7f3d0" fontWeight="bold">1. MLA Joint Latent</text>
-                  <text x="35" y="65" fill="#6ee7b7" fontSize="10">512-dim d_c Compression</text>
-                  <text x="35" y="80" fill="#34d399" fontSize="9">KV Cache: -93.3% VRAM</text>
+                  <rect x="20" y="20" width="180" height="70" rx="8" fill="#0a0a0a" stroke="#ffffff" strokeWidth="1.5" />
+                  <text x="35" y="45" fill="#a3a3a3" fontWeight="bold">1. MLA Joint Latent</text>
+                  <text x="35" y="65" fill="#a3a3a3" fontSize="10">512-dim d_c Compression</text>
+                  <text x="35" y="80" fill="#a3a3a3" fontSize="9">KV Cache: -93.3% VRAM</text>
 
                   {/* Arrow 1 to 2 */}
-                  <path d="M 200 55 L 240 55" stroke="#10b981" strokeWidth="2" strokeDasharray="3,3" />
+                  <path d="M 200 55 L 240 55" stroke="#ffffff" strokeWidth="2" strokeDasharray="3,3" />
 
                   {/* Layer 2: DualPipe Bidirectional Pipeline */}
-                  <rect x="240" y="20" width="200" height="70" rx="8" fill="#0c4a6e" stroke="#0284c7" strokeWidth="1.5" />
-                  <text x="255" y="45" fill="#bae6fd" fontWeight="bold">2. DualPipe Overlap</text>
-                  <text x="255" y="65" fill="#7dd3fc" fontSize="10">Bidirectional Chunked Flow</text>
-                  <text x="255" y="80" fill="#38bdf8" fontSize="9">Bubble Ratio: {results.pipelineBubblePercent}% (&lt;2%)</text>
+                  <rect x="240" y="20" width="200" height="70" rx="8" fill="#0a0a0a" stroke="#ffffff" strokeWidth="1.5" />
+                  <text x="255" y="45" fill="#a3a3a3" fontWeight="bold">2. DualPipe Overlap</text>
+                  <text x="255" y="65" fill="#a3a3a3" fontSize="10">Bidirectional Chunked Flow</text>
+                  <text x="255" y="80" fill="#ffffff" fontSize="9">Bubble Ratio: {results.pipelineBubblePercent}% (&lt;2%)</text>
 
                   {/* Arrow 2 to 3 */}
-                  <path d="M 440 55 L 480 55" stroke="#0284c7" strokeWidth="2" strokeDasharray="3,3" />
+                  <path d="M 440 55 L 480 55" stroke="#ffffff" strokeWidth="2" strokeDasharray="3,3" />
 
                   {/* Layer 3: Multi-Token Prediction (MTP) */}
-                  <rect x="480" y="20" width="180" height="70" rx="8" fill="#134e4a" stroke="#14b8a6" strokeWidth="1.5" />
-                  <text x="495" y="45" fill="#99f6e4" fontWeight="bold">3. MTP Speculative</text>
-                  <text x="495" y="65" fill="#5eead4" fontSize="10">Depth: k={speculativeMtpDepth} tokens</text>
-                  <text x="495" y="80" fill="#2dd4bf" fontSize="9">Acceptance: {results.speculativeAcceptanceRatePercent}%</text>
+                  <rect x="480" y="20" width="180" height="70" rx="8" fill="#0a0a0a" stroke="#ffffff" strokeWidth="1.5" />
+                  <text x="495" y="45" fill="#a3a3a3" fontWeight="bold">3. MTP Speculative</text>
+                  <text x="495" y="65" fill="#a3a3a3" fontSize="10">Depth: k={speculativeMtpDepth} tokens</text>
+                  <text x="495" y="80" fill="#a3a3a3" fontSize="9">Acceptance: {results.speculativeAcceptanceRatePercent}%</text>
 
                   {/* Foundation Bus: Auxiliary-Loss-Free Routing */}
-                  <rect x="20" y="115" width="640" height="60" rx="8" fill="#1e1b4b" stroke="#6366f1" strokeWidth="1.5" />
-                  <text x="35" y="140" fill="#c7d2fe" fontWeight="bold">Foundation MoE Layer: 256 Routed Experts (Auxiliary-Loss-Free Dynamic Routing)</text>
-                  <text x="35" y="160" fill="#a5b4fc" fontSize="10">Dynamic Bias Terms b_i · 100% Non-Blocking All-to-All InfiniBand Comm · {results.modelFlopsUtilizationPercent}% Sustained MFU</text>
+                  <rect x="20" y="115" width="640" height="60" rx="8" fill="#0a0a0a" stroke="#ffffff" strokeWidth="1.5" />
+                  <text x="35" y="140" fill="#a3a3a3" fontWeight="bold">Foundation MoE Layer: 256 Routed Experts (Auxiliary-Loss-Free Dynamic Routing)</text>
+                  <text x="35" y="160" fill="#a3a3a3" fontSize="10">Dynamic Bias Terms b_i · 100% Non-Blocking All-to-All InfiniBand Comm · {results.modelFlopsUtilizationPercent}% Sustained MFU</text>
                 </svg>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 text-xs font-mono">
-                <div className="p-2.5 bg-slate-950 rounded border border-slate-800">
-                  <span className="text-slate-500 block">MLA Latent Ratio</span>
-                  <span className="text-emerald-400 font-semibold">{results.subsystemTelemetry.mlaCompressionRatio}</span>
+                <div className="p-2.5 bg-neutral-950 rounded border border-neutral-800">
+                  <span className="text-neutral-500 block">MLA Latent Ratio</span>
+                  <span className="text-white font-semibold">{results.subsystemTelemetry.mlaCompressionRatio}</span>
                 </div>
-                <div className="p-2.5 bg-slate-950 rounded border border-slate-800">
-                  <span className="text-slate-500 block">DualPipe Bubble</span>
-                  <span className="text-sky-400 font-semibold">{results.subsystemTelemetry.dualpipeBubbleRatio}</span>
+                <div className="p-2.5 bg-neutral-950 rounded border border-neutral-800">
+                  <span className="text-neutral-500 block">DualPipe Bubble</span>
+                  <span className="text-white font-semibold">{results.subsystemTelemetry.dualpipeBubbleRatio}</span>
                 </div>
-                <div className="p-2.5 bg-slate-950 rounded border border-slate-800">
-                  <span className="text-slate-500 block">MTP Step Speed</span>
-                  <span className="text-teal-400 font-semibold">{results.subsystemTelemetry.mtpAcceptanceLength}</span>
+                <div className="p-2.5 bg-neutral-950 rounded border border-neutral-800">
+                  <span className="text-neutral-500 block">MTP Step Speed</span>
+                  <span className="text-white font-semibold">{results.subsystemTelemetry.mtpAcceptanceLength}</span>
                 </div>
-                <div className="p-2.5 bg-slate-950 rounded border border-slate-800">
-                  <span className="text-slate-500 block">Comm Hiding</span>
-                  <span className="text-indigo-400 font-semibold">{results.subsystemTelemetry.networkOverlapRatio}</span>
+                <div className="p-2.5 bg-neutral-950 rounded border border-neutral-800">
+                  <span className="text-neutral-500 block">Comm Hiding</span>
+                  <span className="text-white font-semibold">{results.subsystemTelemetry.networkOverlapRatio}</span>
                 </div>
               </div>
             </div>
 
             {/* FinOps & Compliance Card */}
-            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
+            <div className="bg-neutral-900/60 border border-neutral-800 rounded-xl p-6">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2 mb-4">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <ShieldCheck className="w-4 h-4 text-neutral-200" />
                 Cluster FinOps & Sovereign Compliance Attestation
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="p-3 bg-slate-950 rounded-xl border border-slate-850">
-                  <span className="text-xs text-slate-400 block mb-1">Projected Annual Savings</span>
-                  <span className="text-lg font-bold font-mono text-emerald-400">
+                <div className="p-3 bg-neutral-950 rounded-xl border border-neutral-850">
+                  <span className="text-xs text-neutral-400 block mb-1">Projected Annual Savings</span>
+                  <span className="text-lg font-bold font-mono text-white">
                     {currency === 'INR' ? '₹' : '$'}{results.annualClusterOpexSavings.toLocaleString()}
                   </span>
-                  <span className="text-[10px] text-slate-500 block mt-1">MFU Amortization & Power</span>
+                  <span className="text-[10px] text-neutral-500 block mt-1">MFU Amortization & Power</span>
                 </div>
-                <div className="p-3 bg-slate-950 rounded-xl border border-slate-850">
-                  <span className="text-xs text-slate-400 block mb-1">Peak VRAM / GPU</span>
-                  <span className="text-lg font-bold font-mono text-slate-200">{results.peakVramPerGpuGb} GB</span>
-                  <span className="text-[10px] text-slate-500 block mt-1">Fits 80GB H100 with headroom</span>
+                <div className="p-3 bg-neutral-950 rounded-xl border border-neutral-850">
+                  <span className="text-xs text-neutral-400 block mb-1">Peak VRAM / GPU</span>
+                  <span className="text-lg font-bold font-mono text-neutral-200">{results.peakVramPerGpuGb} GB</span>
+                  <span className="text-[10px] text-neutral-500 block mt-1">Fits 80GB H100 with headroom</span>
                 </div>
-                <div className="p-3 bg-slate-950 rounded-xl border border-slate-850">
-                  <span className="text-xs text-slate-400 block mb-1">Sovereign Compliance</span>
-                  <span className="text-lg font-bold font-mono text-emerald-400">100% Certified</span>
-                  <span className="text-[10px] text-slate-500 block mt-1">DPDP Act & RBI Attested</span>
+                <div className="p-3 bg-neutral-950 rounded-xl border border-neutral-850">
+                  <span className="text-xs text-neutral-400 block mb-1">Sovereign Compliance</span>
+                  <span className="text-lg font-bold font-mono text-white">100% Certified</span>
+                  <span className="text-[10px] text-neutral-500 block mt-1">DPDP Act & RBI Attested</span>
                 </div>
               </div>
             </div>
@@ -412,20 +412,20 @@ PERFORMANCE AUDIT METRICS:
         </div>
 
         {/* FAQs */}
-        <div className="mt-12 bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+        <div className="mt-12 bg-neutral-900/40 border border-neutral-800 rounded-xl p-6">
           <h3 className="text-lg font-semibold text-white mb-4">Architecture & Deployment Engineering FAQs</h3>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <div key={i} className="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/60">
+              <div key={i} className="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950/60">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left px-4 py-3 flex items-center justify-between text-sm font-medium text-slate-200 hover:text-white"
+                  className="active:scale-[0.97] w-full text-left px-4 py-3 flex items-center justify-between text-sm font-medium text-neutral-200 hover:text-white"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === i && (
-                  <div className="px-4 pb-4 pt-1 text-xs text-slate-400 leading-relaxed border-t border-slate-850">
+                  <div className="px-4 pb-4 pt-1 text-xs text-neutral-400 leading-relaxed border-t border-neutral-850">
                     {faq.a}
                   </div>
                 )}
@@ -437,23 +437,23 @@ PERFORMANCE AUDIT METRICS:
         {/* Mandate Lead Generation Form */}
         <div className="mt-12">
           {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -466,35 +466,35 @@ PERFORMANCE AUDIT METRICS:
       {/* Embed Code Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#0b0f17] border border-slate-800 rounded-2xl max-w-lg w-full p-6 text-slate-100 shadow-2xl">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+          <div className="bg-[#0a0a0a] border border-neutral-800 rounded-xl max-w-lg w-full p-6 text-neutral-100 shadow-2xl">
+            <div className="flex items-center justify-between pb-3 border-b border-neutral-800 mb-4">
               <h4 className="text-base font-semibold flex items-center gap-2">
-                <Code className="w-4 h-4 text-emerald-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 Embed Grand Unified Fabric Simulator
               </h4>
-              <button onClick={() => setIsEmbedOpen(false)} className="text-slate-400 hover:text-white">
+              <button onClick={() => setIsEmbedOpen(false)} className="active:scale-[0.97] text-neutral-400 hover:text-white">
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-xs text-slate-400 mb-3">
+            <p className="text-xs text-neutral-400 mb-3">
               Embed this interactive simulator on your technical engineering blog or documentation. Includes clean watermark backlink.
             </p>
             <textarea
               readOnly
               value={embedSnippet}
               rows={4}
-              className="w-full p-3 bg-slate-950 border border-slate-800 rounded-xl font-mono text-xs text-slate-300 mb-4 focus:outline-none"
+              className="w-full p-3 bg-neutral-950 border border-neutral-800 rounded-xl font-mono text-xs text-neutral-300 mb-4 focus:outline-none"
             />
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-xl text-xs font-medium text-slate-400 hover:text-white"
+                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-medium text-neutral-400 hover:text-white"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbed}
-                className="px-4 py-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center gap-1.5 transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-medium text-xs flex items-center gap-1.5 transition"
               >
                 {hasCopiedEmbed ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{hasCopiedEmbed ? 'Snippet Copied!' : 'Copy Embed Code'}</span>

@@ -17,7 +17,7 @@
   "firstSentence": "Isolate medical devices and IoT infusion pumps behind zero-trust microsegmentation perimeters, blocking lateral ransomware propagation across hospital networks in sub-1.5ms.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering",
   "paragraphs": [
     "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
@@ -113,7 +113,7 @@
     "subheadline": "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Zero clinical downtime during automated security containment actions."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Zero clinical downtime during automated security containment actions."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering Performance Telemetry",
       "layout": "centered-card"
     }

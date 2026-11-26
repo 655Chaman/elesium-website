@@ -17,7 +17,7 @@
   "firstSentence": "Deploy ultra-low-latency machine vision defect classification telemetry inspecting SMT printed circuit board assemblies with sub-8ms optical inference.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly",
   "paragraphs": [
     "Surface mount technology (SMT) manufacturing lines in Electronic City Phase 1 assemble high-density printed circuit boards (PCBs) carrying microscopic components down to 01005 passives and fine-pitch BGAs. Conventional automated optical inspection (AOI) machines suffer from false call rates exceeding 15%, forcing operators to manually review thousands of benign solder joints, which bottlenecks high-speed pick-and-place lines and increases human escape risks.",
@@ -113,7 +113,7 @@
     "subheadline": "Surface mount technology (SMT) manufacturing lines in Electronic City Phase 1 assemble high-density printed circuit boards (PCBs) carrying microscopic components down to 01005 passives and fine-pitch BGAs. Conventional automated optical inspection (AOI) machines suffer from false call rates exceeding 15%, forcing operators to manually review thousands of benign solder joints, which bottlenecks high-speed pick-and-place lines and increases human escape risks.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Empirically verified across 10 million automated SMT solder joint evaluations."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Empirically verified across 10 million automated SMT solder joint evaluations."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly Performance Telemetry",
       "layout": "centered-card"
     }

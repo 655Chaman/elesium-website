@@ -56,9 +56,9 @@ export default function EnterpriseAgentZkAttestationSimulator() {
     return simulateAgentZkAttestation(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-zk-attestation-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-zk-attestation-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedToClipboard = () => {
@@ -118,7 +118,7 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Zero-Knowledge Proof State Attestation Simulator | Elesium</title>
         <meta
@@ -130,52 +130,52 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
 
       {/* Top Breadcrumb */}
       <div className="max-w-7xl mx-auto mb-8 flex items-center justify-between text-sm">
-        <div className="flex items-center gap-2 text-slate-400">
-          <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
+        <div className="flex items-center gap-2 text-neutral-400">
+          <Link to="/" className="hover:text-white transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/resources/" className="hover:text-cyan-400 transition-colors">Tools</Link>
+          <Link to="/resources/" className="hover:text-white transition-colors">Tools</Link>
           <span>/</span>
-          <span className="text-slate-200">Agent ZK State Attestation Simulator</span>
+          <span className="text-neutral-200">Agent ZK State Attestation Simulator</span>
         </div>
         <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
           onClick={() => setIsEmbedOpen(true)}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-xs font-medium text-slate-200 transition-all"
+          className="active:scale-[0.97] flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-800/80 hover:bg-neutral-700 text-xs font-medium text-neutral-200 transition-all"
         >
-          <Code className="w-3.5 h-3.5 text-cyan-400" />
+          <Code className="w-3.5 h-3.5 text-neutral-200" />
           Embed Simulator
         </button>
       </div>
 
       {/* Header Banner */}
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-semibold tracking-wide uppercase mb-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/[0.04] text-white text-xs font-semibold tracking-wide uppercase mb-3">
           <ShieldCheck className="w-3.5 h-3.5" />
           Cryptographic Verifiability &amp; Zero-Disclosure Lab
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
           Enterprise Agent Zero-Knowledge Proof State Attestation Simulator
         </h1>
-        <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-400 leading-relaxed">
+        <p className="max-w-3xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed">
           Model and simulate cryptographic audit trails for autonomous AI agents. Benchmark unencrypted logging against Merkle hash trees and sovereign Groth16/PlonK SNARK circuits for 256-byte constant proof sizes, sub-3.5ms verification, and 100% DPDP Act 2023 compliance.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Controls Column (5 cols) */}
-        <div className="lg:col-span-5 bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-          <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+        <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 shadow-xl backdrop-blur-sm">
+          <div className="flex items-center justify-between pb-4 border-b border-neutral-800 mb-6">
             <h2 className="text-lg font-bold text-white flex items-center gap-2">
-              <Sliders className="w-5 h-5 text-cyan-400" />
+              <Sliders className="w-5 h-5 text-neutral-200" />
               State Attestation Parameters
             </h2>
-            <span className="text-xs font-mono text-cyan-400 bg-cyan-950/60 px-2.5 py-1 rounded-full border border-cyan-800/50">
+            <span className="text-xs font-mono text-neutral-200 bg-white/[0.05] px-2.5 py-1 rounded-lg border border-white/15">
               R1CS Groth16
             </span>
           </div>
@@ -184,10 +184,10 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
             {/* Daily State Transitions */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+                <label className="text-xs font-semibold uppercase tracking-wider text-neutral-300">
                   Daily State Transitions
                 </label>
-                <span className="text-sm font-mono font-bold text-cyan-400">
+                <span className="text-sm font-mono font-bold text-white">
                   {dailyAgentStateTransitionsThousands}k transitions/day
                 </span>
               </div>
@@ -198,9 +198,9 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
                 step="10"
                 value={dailyAgentStateTransitionsThousands}
                 onChange={(e) => setDailyAgentStateTransitionsThousands(Number(e.target.value))}
-                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
               />
-              <div className="flex justify-between text-[11px] text-slate-500 mt-1">
+              <div className="flex justify-between text-[11px] text-neutral-500 mt-1">
                 <span>10k / day</span>
                 <span>250k / day</span>
                 <span>500k / day</span>
@@ -210,10 +210,10 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
             {/* Circuit Constraint Scale */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+                <label className="text-xs font-semibold uppercase tracking-wider text-neutral-300">
                   R1CS Circuit Constraints
                 </label>
-                <span className="text-sm font-mono font-bold text-cyan-400">
+                <span className="text-sm font-mono font-bold text-white">
                   {circuitConstraintScale.toLocaleString()} constraints
                 </span>
               </div>
@@ -224,9 +224,9 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
                 step="65536"
                 value={circuitConstraintScale}
                 onChange={(e) => setCircuitConstraintScale(Number(e.target.value))}
-                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
               />
-              <div className="flex justify-between text-[11px] text-slate-500 mt-1">
+              <div className="flex justify-between text-[11px] text-neutral-500 mt-1">
                 <span>65k (Light FSM)</span>
                 <span>262k (Standard Graph)</span>
                 <span>1M (Complex Triad)</span>
@@ -236,10 +236,10 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
             {/* Context Window Length */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+                <label className="text-xs font-semibold uppercase tracking-wider text-neutral-300">
                   Avg Context Tokens / Transition
                 </label>
-                <span className="text-sm font-mono font-bold text-cyan-400">
+                <span className="text-sm font-mono font-bold text-white">
                   {avgContextTokensPerTransition} tokens
                 </span>
               </div>
@@ -250,9 +250,9 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
                 step="256"
                 value={avgContextTokensPerTransition}
                 onChange={(e) => setAvgContextTokensPerTransition(Number(e.target.value))}
-                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
               />
-              <div className="flex justify-between text-[11px] text-slate-500 mt-1">
+              <div className="flex justify-between text-[11px] text-neutral-500 mt-1">
                 <span>512 tokens</span>
                 <span>2,048 tokens</span>
                 <span>8,192 tokens</span>
@@ -261,17 +261,17 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
 
             {/* Prover Acceleration Mode */}
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">
                 Prover Hardware Acceleration
               </label>
               <div className="grid grid-cols-2 gap-3">
                 <button
                   type="button"
                   onClick={() => setProvingHardwareAcceleration('cpu_multithread')}
-                  className={`py-2.5 px-3 rounded-xl border text-xs font-medium transition-all text-center ${
+                  className={`active:scale-[0.97] py-2.5 px-3 rounded-xl border text-xs font-medium transition-all text-center ${
                     provingHardwareAcceleration === 'cpu_multithread'
-                      ? 'border-cyan-500 bg-cyan-950/40 text-cyan-300'
-                      : 'border-slate-800 bg-slate-800/40 text-slate-400 hover:border-slate-700'
+                      ? 'border-white/30 bg-white/[0.05] text-neutral-200'
+                      : 'border-neutral-800 bg-neutral-800/40 text-neutral-400 hover:border-neutral-700'
                   }`}
                 >
                   CPU Multithread (x86_64)
@@ -279,10 +279,10 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
                 <button
                   type="button"
                   onClick={() => setProvingHardwareAcceleration('gpu_cuda_accelerated')}
-                  className={`py-2.5 px-3 rounded-xl border text-xs font-medium transition-all text-center ${
+                  className={`active:scale-[0.97] py-2.5 px-3 rounded-xl border text-xs font-medium transition-all text-center ${
                     provingHardwareAcceleration === 'gpu_cuda_accelerated'
-                      ? 'border-cyan-500 bg-cyan-950/40 text-cyan-300'
-                      : 'border-slate-800 bg-slate-800/40 text-slate-400 hover:border-slate-700'
+                      ? 'border-white/30 bg-white/[0.05] text-neutral-200'
+                      : 'border-neutral-800 bg-neutral-800/40 text-neutral-400 hover:border-neutral-700'
                   }`}
                 >
                   GPU CUDA (MSM/NTT Engine)
@@ -293,10 +293,10 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
             {/* Verifier Node Hourly Cost */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+                <label className="text-xs font-semibold uppercase tracking-wider text-neutral-300">
                   Verifier Cluster Compute Cost
                 </label>
-                <span className="text-sm font-mono font-bold text-cyan-400">
+                <span className="text-sm font-mono font-bold text-white">
                   ${verifierNodeComputeCostUSDPerHour.toFixed(2)} / node-hr
                 </span>
               </div>
@@ -307,9 +307,9 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
                 step="0.10"
                 value={verifierNodeComputeCostUSDPerHour}
                 onChange={(e) => setVerifierNodeComputeCostUSDPerHour(Number(e.target.value))}
-                className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-white"
               />
-              <div className="flex justify-between text-[11px] text-slate-500 mt-1">
+              <div className="flex justify-between text-[11px] text-neutral-500 mt-1">
                 <span>$0.50 (t4g.large)</span>
                 <span>$2.50 (c6i.4xlarge)</span>
                 <span>$5.00 (Dedicated HSM)</span>
@@ -317,19 +317,19 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-4 border-t border-slate-800 flex gap-3">
+            <div className="pt-4 border-t border-neutral-800 flex gap-3">
               <button
                 onClick={copyExecutiveMemo}
-                className="flex-1 py-3 px-4 rounded-full border border-slate-700 bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition-all flex items-center justify-center gap-2"
+                className="active:scale-[0.97] flex-1 py-3 px-4 rounded-lg border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 text-xs font-semibold text-white transition-all flex items-center justify-center gap-2"
               >
                 {hasCopiedMemo ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-neutral-200" />
                     Memo Copied!
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-slate-400" />
+                    <Copy className="w-4 h-4 text-neutral-400" />
                     Copy Cryptographic Memo
                   </>
                 )}
@@ -342,41 +342,41 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
         <div className="lg:col-span-7 space-y-6">
           {/* Key Metric Highlights Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-lg">
-              <div className="flex items-center gap-2 text-cyan-400 text-xs font-semibold uppercase mb-1">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5 shadow-lg">
+              <div className="flex items-center gap-2 text-white text-xs font-semibold uppercase mb-1">
                 <Lock className="w-4 h-4" />
                 PII Exposure Risk
               </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">
+              <div className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
                 {results.sovereignZkSnark.piiExposureRiskPct.toFixed(1)}%
               </div>
-              <div className="text-xs text-slate-400 mt-1">
+              <div className="text-xs text-neutral-400 mt-1">
                 0% context leak via ZK proofs
               </div>
             </div>
 
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-lg">
-              <div className="flex items-center gap-2 text-cyan-400 text-xs font-semibold uppercase mb-1">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5 shadow-lg">
+              <div className="flex items-center gap-2 text-white text-xs font-semibold uppercase mb-1">
                 <Cpu className="w-4 h-4" />
                 Verifier Latency
               </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">
+              <div className="text-2xl sm:text-3xl font-extrabold text-neutral-200 font-mono">
                 {results.sovereignZkSnark.verifierLatencyMs}ms
               </div>
-              <div className="text-xs text-slate-400 mt-1">
+              <div className="text-xs text-neutral-400 mt-1">
                 {results.verificationLatencyCutPct}% cut vs raw JSON
               </div>
             </div>
 
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-lg">
-              <div className="flex items-center gap-2 text-cyan-400 text-xs font-semibold uppercase mb-1">
+            <div className="bg-neutral-900/90 border border-neutral-800 rounded-xl p-5 shadow-lg">
+              <div className="flex items-center gap-2 text-white text-xs font-semibold uppercase mb-1">
                 <Layers className="w-4 h-4" />
                 Proof Footprint
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">
                 {results.sovereignZkSnark.proofPayloadSizeBytes} B
               </div>
-              <div className="text-xs text-slate-400 mt-1">
+              <div className="text-xs text-neutral-400 mt-1">
                 {results.payloadCompressionFactor}x constant compression
               </div>
             </div>
@@ -385,55 +385,55 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
           {/* Detailed Architectural Comparison Cards */}
           <div className="space-y-4">
             {/* 1. Legacy Full State Logging */}
-            <div className="bg-slate-900/60 border border-rose-900/40 rounded-2xl p-5 shadow-md">
+            <div className="bg-neutral-900/60 border border-red-900/40 rounded-xl p-5 shadow-md">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500" />
-                  <h3 className="text-sm font-bold text-slate-200">
+                  <div className="w-3 h-3 rounded-lg bg-red-500" />
+                  <h3 className="text-sm font-bold text-neutral-200">
                     {results.fullStateLog.name}
                   </h3>
                 </div>
-                <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-rose-950/60 text-rose-400 border border-rose-800/40">
+                <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-red-950/60 text-red-400 border border-red-800/40">
                   {results.fullStateLog.complianceStanding}
                 </span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 bg-neutral-950/60 p-3 rounded-xl border border-neutral-800/60">
                 <div>
-                  <span className="text-slate-500 block">Payload Size</span>
-                  <span className="font-semibold text-slate-300">
+                  <span className="text-neutral-500 block">Payload Size</span>
+                  <span className="font-semibold text-neutral-300">
                     {(results.fullStateLog.proofPayloadSizeBytes / 1024).toFixed(1)} KB
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block">Verifier Latency</span>
-                  <span className="font-semibold text-rose-400">
+                  <span className="text-neutral-500 block">Verifier Latency</span>
+                  <span className="font-semibold text-red-400">
                     {results.fullStateLog.verifierLatencyMs} ms
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block">PII Exposure</span>
-                  <span className="font-semibold text-rose-400">
+                  <span className="text-neutral-500 block">PII Exposure</span>
+                  <span className="font-semibold text-red-400">
                     {results.fullStateLog.piiExposureRiskPct}%
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block">Annual Spend</span>
-                  <span className="font-semibold text-slate-300">
+                  <span className="text-neutral-500 block">Annual Spend</span>
+                  <span className="font-semibold text-neutral-300">
                     ${results.fullStateLog.annualizedTotalCostUSD.toLocaleString()}
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 {results.fullStateLog.architecturalVerdict}
               </p>
             </div>
 
             {/* 2. Merkle Hash State Rollup */}
-            <div className="bg-slate-900/60 border border-amber-900/40 rounded-2xl p-5 shadow-md">
+            <div className="bg-neutral-900/60 border border-amber-900/40 rounded-xl p-5 shadow-md">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-amber-500" />
-                  <h3 className="text-sm font-bold text-slate-200">
+                  <div className="w-3 h-3 rounded-lg bg-amber-500" />
+                  <h3 className="text-sm font-bold text-neutral-200">
                     {results.merkleRollup.name}
                   </h3>
                 </div>
@@ -441,96 +441,96 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
                   {results.merkleRollup.complianceStanding}
                 </span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 bg-slate-950/60 p-3 rounded-xl border border-slate-800/60">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 bg-neutral-950/60 p-3 rounded-xl border border-neutral-800/60">
                 <div>
-                  <span className="text-slate-500 block">Payload Size</span>
-                  <span className="font-semibold text-slate-300">
+                  <span className="text-neutral-500 block">Payload Size</span>
+                  <span className="font-semibold text-neutral-300">
                     {(results.merkleRollup.proofPayloadSizeBytes / 1024).toFixed(1)} KB
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block">Verifier Latency</span>
+                  <span className="text-neutral-500 block">Verifier Latency</span>
                   <span className="font-semibold text-amber-400">
                     {results.merkleRollup.verifierLatencyMs} ms
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block">PII Exposure</span>
+                  <span className="text-neutral-500 block">PII Exposure</span>
                   <span className="font-semibold text-amber-400">
                     {results.merkleRollup.piiExposureRiskPct}%
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-500 block">Annual Spend</span>
-                  <span className="font-semibold text-slate-300">
+                  <span className="text-neutral-500 block">Annual Spend</span>
+                  <span className="font-semibold text-neutral-300">
                     ${results.merkleRollup.annualizedTotalCostUSD.toLocaleString()}
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 {results.merkleRollup.architecturalVerdict}
               </p>
             </div>
 
             {/* 3. Sovereign ZK-SNARK Attestation */}
-            <div className="bg-slate-900/90 border-2 border-cyan-500/60 rounded-2xl p-5 shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-gradient-to-l from-cyan-500 to-transparent w-32 h-1" />
+            <div className="bg-neutral-900/90 border-2 border-white/30 rounded-xl p-5 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-white hover:bg-neutral-200 text-black w-32 h-1" />
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-cyan-400 " />
+                  <div className="w-3 h-3 rounded-lg bg-white/80 " />
                   <h3 className="text-sm font-bold text-white flex items-center gap-1.5">
                     {results.sovereignZkSnark.name}
-                    <FileCheck className="w-4 h-4 text-cyan-400" />
+                    <FileCheck className="w-4 h-4 text-neutral-200" />
                   </h3>
                 </div>
-                <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-700/60">
+                <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-white/[0.05] text-white border border-white/15">
                   {results.sovereignZkSnark.complianceStanding}
                 </span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 bg-slate-950/80 p-3 rounded-xl border border-cyan-900/40">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono mb-3 bg-neutral-950/80 p-3 rounded-xl border border-white/15">
                 <div>
-                  <span className="text-slate-400 block">Proof Footprint</span>
+                  <span className="text-neutral-400 block">Proof Footprint</span>
                   <span className="font-bold text-amber-400 text-sm">
                     {results.sovereignZkSnark.proofPayloadSizeBytes} bytes
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-400 block">Verifier Latency</span>
-                  <span className="font-bold text-cyan-400 text-sm">
+                  <span className="text-neutral-400 block">Verifier Latency</span>
+                  <span className="font-bold text-white text-sm">
                     {results.sovereignZkSnark.verifierLatencyMs} ms
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-400 block">PII Exposure</span>
-                  <span className="font-bold text-emerald-400 text-sm">
+                  <span className="text-neutral-400 block">PII Exposure</span>
+                  <span className="font-bold text-white text-sm">
                     {results.sovereignZkSnark.piiExposureRiskPct}%
                   </span>
                 </div>
                 <div>
-                  <span className="text-slate-400 block">Annual Savings</span>
-                  <span className="font-bold text-emerald-400 text-sm">
+                  <span className="text-neutral-400 block">Annual Savings</span>
+                  <span className="font-bold text-white text-sm">
                     ${results.annualSavingsUSD.toLocaleString()}
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-neutral-300 leading-relaxed">
                 {results.sovereignZkSnark.architecturalVerdict}
               </p>
             </div>
           </div>
 
           {/* Audit CTA Box */}
-          <div className="bg-gradient-to-r from-cyan-950/40 via-slate-900 to-slate-900 border border-cyan-800/40 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-neutral-950 border border-white/15 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h3 className="text-base font-bold text-white">
                 Implement Zero-Disclosure ZK State Proofs in Production
               </h3>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 Elesium deploys private R1CS constraint compilers, Groth16 pairings on BN254, and hardware-accelerated prover pipelines.
               </p>
             </div>
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold transition-all shadow-lg shadow-cyan-500/20 whitespace-nowrap flex items-center gap-2 cursor-pointer">
+              <ExpandableScreenTrigger className="px-5 py-3 rounded-xl bg-white hover:bg-neutral-200 text-black text-xs font-bold transition-all shadow-lg whitespace-nowrap flex items-center gap-2 cursor-pointer">
                 <span>Schedule Cryptographic Audit</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </ExpandableScreenTrigger>
@@ -543,7 +543,7 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
       </div>
 
       {/* FAQ Accordion Section */}
-      <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-slate-800">
+      <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-neutral-800">
         <h2 className="text-2xl font-bold text-white text-center mb-8">
           Frequently Asked Questions: Autonomous Agent Cryptographic Attestation
         </h2>
@@ -551,21 +551,21 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="border border-slate-800 rounded-xl bg-slate-900/50 overflow-hidden"
+              className="border border-neutral-800 rounded-xl bg-neutral-900/50 overflow-hidden"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center text-sm font-semibold text-slate-200 hover:text-white"
+                className="active:scale-[0.97] w-full px-6 py-4 text-left flex justify-between items-center text-sm font-semibold text-neutral-200 hover:text-white"
               >
                 <span>{faq.q}</span>
                 <ChevronDown
-                  className={`w-4 h-4 text-slate-400 transition-transform ${
-                    openFaq === idx ? 'rotate-180 text-cyan-400' : ''
+                  className={`w-4 h-4 text-neutral-400 transition-transform ${
+                    openFaq === idx ? 'rotate-180 text-neutral-200' : ''
                   }`}
                 />
               </button>
               {openFaq === idx && (
-                <div className="px-6 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                <div className="px-6 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                   {faq.a}
                 </div>
               )}
@@ -576,45 +576,45 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
 
       {/* Embed Modal */}
       {isEmbedOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-950/80 backdrop-blur-sm">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
             <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-              <Code className="w-5 h-5 text-cyan-400" />
+              <Code className="w-5 h-5 text-neutral-200" />
               Embed This Simulator
             </h3>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-neutral-400 mb-4">
               Copy and paste this responsive iframe into your technical whitepaper, research portal, or documentation page:
             </p>
-            <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-4">
-              <code className="text-[11px] font-mono text-cyan-300 block break-all whitespace-pre-wrap">
+            <div className="bg-neutral-950 p-3 rounded-xl border border-neutral-800 mb-4">
+              <code className="text-[11px] font-mono text-neutral-200 block break-all whitespace-pre-wrap">
                 {embedCode}
               </code>
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-slate-200"
+                className="active:scale-[0.97] px-4 py-2 rounded-xl text-xs font-semibold text-neutral-400 hover:text-neutral-200"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedToClipboard}
-                className="px-4 py-2 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-all"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold flex items-center gap-1.5 transition-all"
               >
                 {hasCopiedEmbed ? (
                   <>
-                    <Check className="w-3.5 h-3.5 text-slate-950" />
+                    <Check className="w-3.5 h-3.5 text-black" />
                     Copied!
                   </>
                 ) : (
                   <>
-                    <Copy className="w-3.5 h-3.5 text-slate-950" />
+                    <Copy className="w-3.5 h-3.5 text-black" />
                     Copy Code
                   </>
                 )}

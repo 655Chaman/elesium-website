@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Shield, TrendingUp, Zap, Activity, Cpu, Share2, MessageSquare, ChevronRight, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
@@ -199,33 +199,32 @@ export default function Industries() {
                 </nav>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    initial={{ opacity: 0, scale: 0.97, y: 16 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="mb-10 max-w-3xl"
                 >
-                    <div className="inline-flex items-center gap-2 mb-4">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
+                    <div className="mb-4">
+                        <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400">
                             Enterprise Sector Architecture
                         </span>
                     </div>
 
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-950 dark:text-white leading-[1.1]">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-black dark:text-white leading-[1.1]">
                         AI Automation Solutions for Enterprise Markets
                     </h1>
-                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
+                    <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
                         We orchestrate high-ticket dealflow and secure contract placement across six critical master markets. Our advanced matching systems connect Tier-1 primes, investment firms, and enterprise operators with friction-free precision.
                     </p>
                 </motion.div>
 
-                {/* AEO Answer Capsule */}
-                <div className="answer-capsule mt-2 mb-12 p-6 rounded-2xl bg-gray-50/80 dark:bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 max-w-4xl shadow-sm">
-                    <div className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
-                        <Cpu className="w-4 h-4" />
-                        Definitive Answer Capsule • Sovereign Market Capacities
+                {/* Technical Overview */}
+                <div className="answer-capsule mt-2 mb-12 p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-4xl">
+                    <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
+                        <Cpu className="w-4 h-4 text-black dark:text-white" />
+                        Sovereign Market Capacities
                     </div>
-                    <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed font-medium">
+                    <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
                         {aeoAnswerCapsule}
                     </p>
                 </div>
@@ -237,27 +236,27 @@ export default function Industries() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.08 }}
-                            className="bg-gray-50/80 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 rounded-3xl p-6 md:p-8 flex flex-col justify-between group hover:border-black dark:hover:border-white/30 transition-all shadow-sm"
+                            transition={{ type: 'spring', stiffness: 260, damping: 26, delay: index * 0.06 }}
+                            className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 md:p-8 flex flex-col justify-between group hover:border-black dark:hover:border-white/30 transition-all"
                         >
                             <div>
                                 <div className="mb-6 flex items-center gap-3">
-                                    <div className="h-11 w-11 rounded-2xl bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-sm">
-                                        <industry.icon className="h-5 w-5 text-gray-900 dark:text-white" />
+                                    <div className="h-11 w-11 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                                        <industry.icon className="h-5 w-5 text-black dark:text-white" />
                                     </div>
-                                    <h2 className="text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white">{industry.title}</h2>
+                                    <h2 className="text-lg sm:text-xl font-bold tracking-tight text-black dark:text-white">{industry.title}</h2>
                                 </div>
 
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                                <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed">
                                     {industry.description}
                                 </p>
                             </div>
 
-                            <div className="pt-5 border-t border-gray-200/80 dark:border-white/5">
+                            <div className="pt-5 border-t border-neutral-200 dark:border-white/10">
                                 <ul className="space-y-2">
                                     {industry.details.map((item, i) => (
-                                        <li key={i} className="flex items-center gap-2 text-xs font-mono text-gray-600 dark:text-gray-400">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                                        <li key={i} className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400">
+                                            <span className="text-black dark:text-white">&mdash;</span>
                                             <span>{item}</span>
                                         </li>
                                     ))}
@@ -270,58 +269,64 @@ export default function Industries() {
                 {/* FAQ Section */}
                 <section className="mb-16">
                     <div className="mb-8">
-                        <div className="inline-flex items-center gap-2 mb-2">
-                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                            <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
-                                Architectural Inquiries
-                            </span>
-                        </div>
-                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-950 dark:text-white">
-                            Frequently Asked Questions • Sector Sovereignty
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold block mb-2">
+                            Architectural Inquiries
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black dark:text-white">
+                            Frequently Asked Questions &middot; Sector Sovereignty
                         </h2>
                     </div>
 
-                    <div className="divide-y divide-gray-200 dark:divide-white/10 border-t border-b border-gray-200 dark:border-white/10">
+                    <div className="divide-y divide-neutral-200 dark:divide-white/10 border-t border-b border-neutral-200 dark:border-white/10">
                         {industriesFaqs.map((faq, idx) => (
                             <div key={idx} className="py-5">
                                 <button
                                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                                     className="w-full flex items-center justify-between text-left gap-4 group"
                                 >
-                                    <span className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                                    <span className="text-base sm:text-lg font-semibold text-black dark:text-white transition-colors">
                                         {faq.q}
                                     </span>
-                                    <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform duration-200 shrink-0 ${openFaq === idx ? 'rotate-180 text-emerald-500' : ''}`} />
+                                    <ChevronDown className={`w-5 h-5 text-neutral-500 transition-transform duration-200 shrink-0 ${openFaq === idx ? 'rotate-180 text-black dark:text-white' : ''}`} />
                                 </button>
-                                {openFaq === idx && (
-                                    <div className="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed pr-8">
-                                        {faq.a}
-                                    </div>
-                                )}
+                                <AnimatePresence initial={false}>
+                                    {openFaq === idx && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            className="accordion-panel overflow-hidden"
+                                        >
+                                            <div className="mt-3 text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed pr-8">
+                                                {faq.a}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Bottom Call to Action Card */}
-                <div className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] text-center space-y-4">
-                    <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span>Cross-Sector Enterprise Routing Desk</span>
-                    </div>
+                <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white text-center space-y-4">
+                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block">
+                        Cross-Sector Enterprise Routing Desk
+                    </span>
 
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight max-w-xl mx-auto text-white">
                         Deploy High-Throughput AI Workflows for Your Sector
                     </h2>
 
-                    <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-300 max-w-xl mx-auto leading-relaxed">
                         Schedule a 30-minute direct engineering evaluation. We map your domain data pipelines, evaluate regulatory compliance boundaries, and deliver an actionable deployment roadmap.
                     </p>
 
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -329,7 +334,7 @@ export default function Industries() {
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>

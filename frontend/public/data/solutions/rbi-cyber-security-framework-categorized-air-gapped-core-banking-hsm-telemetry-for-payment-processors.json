@@ -17,7 +17,7 @@
   "firstSentence": "Integrate FIPS 140-2 Level 3 hardware security module telemetry with air-gapped payment processing enclaves, guaranteeing real-time auditability and zero memory remanence under RBI Cyber Security Framework Annex II.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors",
   "paragraphs": [
     "Payment processors and card network switches operating in India are subject to strict Reserve Bank of India controls governing cryptographic key lifecycle management and payment telemetry. Traditional software-based key storage mechanisms expose sensitive master session keys to memory scraper attacks and hypervisor side-channel leakage. Furthermore, periodic regulatory audits struggle to verify continuous compliance due to fragmented, asynchronous system logs across disparate payment gateway switches.",
@@ -113,7 +113,7 @@
     "subheadline": "Payment processors and card network switches operating in India are subject to strict Reserve Bank of India controls governing cryptographic key lifecycle management and payment telemetry. Traditional software-based key storage mechanisms expose sensitive master session keys to memory scraper attacks and hypervisor side-channel leakage. Furthermore, periodic regulatory audits struggle to verify continuous compliance due to fragmented, asynchronous system logs across disparate payment gateway switches.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Real-time state proof derivation for ISO 8583 payment authorization."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Real-time state proof derivation for ISO 8583 payment authorization."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors Performance Telemetry",
       "layout": "centered-card"
     }

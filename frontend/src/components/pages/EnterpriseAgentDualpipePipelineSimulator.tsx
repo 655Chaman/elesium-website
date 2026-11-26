@@ -55,7 +55,7 @@ export default function EnterpriseAgentDualpipePipelineSimulator() {
 
   const results = useMemo(() => calculateDualpipeSimulation(inputs), [inputs]);
 
-  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-dualpipe-pipeline-parallelism-simulator" width="100%" height="480" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe><div style="font-size:11px;color:#64748b;text-align:right;margin-top:4px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator" target="_blank" rel="noopener" style="color:#0284c7;text-decoration:underline;">Elesium DualPipe Pipeline Simulator</a></div>`;
+  const embedSnippet = `<iframe src="https://elesium.online/embed/agent-dualpipe-pipeline-parallelism-simulator" width="100%" height="480" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe><div style="font-size:11px;color:#a3a3a3;text-align:right;margin-top:4px;font-family:sans-serif;">Simulated via <a href="https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-parallelism-simulator" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium DualPipe Pipeline Simulator</a></div>`;
 
   const copyEmbed = () => {
     navigator.clipboard.writeText(embedSnippet);
@@ -113,7 +113,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
   ];
 
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-100 font-sans selection:bg-sky-500/30 selection:text-sky-300">
+    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent DualPipe Bidirectional Pipeline Parallelism Simulator | Elesium</title>
         <meta
@@ -124,30 +124,30 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
       </Helmet>
 
       {/* Hero Header */}
-      <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-slate-800/80 bg-gradient-to-b from-sky-950/20 via-transparent to-transparent">
+      <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 border-b border-neutral-800/80 bg-gradient-to-b from-white/[0.03] via-transparent to-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-mono">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/15 text-neutral-200 text-xs font-mono">
               <GitCommit className="w-3.5 h-3.5" />
               TOOL #74 · DUALPIPE PARALLELISM & ZERO-BUBBLE ENGINE
             </div>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-xs font-medium text-slate-300 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-800/80 hover:bg-neutral-700/80 border border-neutral-700 text-xs font-medium text-neutral-300 transition-colors"
               >
-                <Code className="w-3.5 h-3.5 text-sky-400" /> Embed Widget
+                <Code className="w-3.5 h-3.5 text-neutral-200" /> Embed Widget
               </button>
               <button
                 onClick={copyMemo}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-sky-600/90 hover:bg-sky-500 border border-sky-500 text-xs font-medium text-white transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/90 hover:bg-neutral-200 border border-white/30 text-xs font-medium text-white transition-colors"
               >
                 {hasCopiedMemo ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 {hasCopiedMemo ? 'Memo Copied' : 'Export Executive Memo'}
@@ -158,7 +158,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
           <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3">
             Enterprise Autonomous Agent DualPipe Bidirectional Pipeline Simulator
           </h1>
-          <p className="text-sm sm:text-base text-slate-400 max-w-3xl leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-400 max-w-3xl leading-relaxed">
             Model bidirectional chunked scheduling, fine-grained computation-communication overlapping, and zero-bubble execution. Quantify 63%+ Model Flops Utilization (MFU), sub-2% bubble ratios, and complete All-to-All network latency hiding across DeepSeek-V3 clusters.
           </p>
         </div>
@@ -168,14 +168,14 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column */}
-          <div className="lg:col-span-5 space-y-6 bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
-            <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-              <div className="flex items-center gap-2 text-slate-200 font-semibold text-sm">
-                <Sliders className="w-4 h-4 text-sky-400" /> Cluster Parallelism Parameters
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 p-6 rounded-xl border border-neutral-800">
+            <div className="flex items-center justify-between pb-4 border-b border-neutral-800">
+              <div className="flex items-center gap-2 text-neutral-200 font-semibold text-sm">
+                <Sliders className="w-4 h-4 text-neutral-200" /> Cluster Parallelism Parameters
               </div>
               <button
                 onClick={resetDefaults}
-                className="inline-flex items-center gap-1 text-xs text-slate-400 hover:text-slate-200 transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-neutral-200 transition-colors"
               >
                 <RotateCcw className="w-3 h-3" /> Reset
               </button>
@@ -183,12 +183,12 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
 
             {/* Pipeline Schedule */}
             <div className="space-y-2">
-              <label className="block text-xs font-medium text-slate-300">Pipeline Schedule Architecture</label>
+              <label className="block text-xs font-medium text-neutral-300">Pipeline Schedule Architecture</label>
               <select
                 value={pipelineSchedule}
                 onChange={(e) => setPipelineSchedule(e.target.value as DualpipeSimulationInputs['pipelineSchedule'])}
                 aria-label="Pipeline Schedule Architecture"
-                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-sky-500"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="dualpipe_bidirectional">DualPipe (DeepSeek-V3 Bidirectional Overlap)</option>
                 <option value="interleaved_1f1b">Interleaved 1F1B (Megatron-LM Multi-Chunk)</option>
@@ -199,8 +199,8 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
             {/* Pipeline Parallel Stages */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Pipeline Stages (P)</span>
-                <span className="font-mono text-sky-400 font-semibold">{pipelineParallelStages} stages</span>
+                <span className="text-neutral-300 font-medium">Pipeline Stages (P)</span>
+                <span className="font-mono text-white font-semibold">{pipelineParallelStages} stages</span>
               </div>
               <input
                 type="range"
@@ -209,16 +209,16 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
                 step="4"
                 value={pipelineParallelStages}
                 onChange={(e) => setPipelineParallelStages(parseInt(e.target.value))}
-                className="w-full accent-sky-500 cursor-pointer"
+                className="w-full accent-white cursor-pointer"
               />
-              <p className="text-[11px] text-slate-400">Number of partitioned layer groups across node boundaries.</p>
+              <p className="text-[11px] text-neutral-400">Number of partitioned layer groups across node boundaries.</p>
             </div>
 
             {/* Micro-Batch Count */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Micro-Batch Count (M)</span>
-                <span className="font-mono text-cyan-400 font-semibold">{microBatchCount} batches</span>
+                <span className="text-neutral-300 font-medium">Micro-Batch Count (M)</span>
+                <span className="font-mono text-white font-semibold">{microBatchCount} batches</span>
               </div>
               <input
                 type="range"
@@ -227,18 +227,18 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
                 step="8"
                 value={microBatchCount}
                 onChange={(e) => setMicroBatchCount(parseInt(e.target.value))}
-                className="w-full accent-cyan-500 cursor-pointer"
+                className="w-full accent-white cursor-pointer"
               />
             </div>
 
             {/* Inter-Node Network Fabric */}
             <div className="space-y-2">
-              <label className="block text-xs font-medium text-slate-300">Inter-Node Network Fabric</label>
+              <label className="block text-xs font-medium text-neutral-300">Inter-Node Network Fabric</label>
               <select
                 value={crossNodeNetworkFabric}
                 onChange={(e) => setCrossNodeNetworkFabric(e.target.value as DualpipeSimulationInputs['crossNodeNetworkFabric'])}
                 aria-label="Inter-Node Network Fabric"
-                className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-sky-500"
+                className="w-full bg-neutral-950 border border-neutral-700 rounded-lg px-3 py-2 text-xs text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="infiniband_800g_cx7">NVIDIA Quantum-2 InfiniBand 800Gb/s (ConnectX-7)</option>
                 <option value="nvlink_infiniband_400g">InfiniBand 400Gb/s + Dual NVLink Domain</option>
@@ -249,8 +249,8 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
             {/* Cluster Nodes */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Server Nodes (8 GPUs / Node)</span>
-                <span className="font-mono text-indigo-400 font-semibold">{hardwareClusterNodes} nodes ({hardwareClusterNodes * 8} GPUs)</span>
+                <span className="text-neutral-300 font-medium">Server Nodes (8 GPUs / Node)</span>
+                <span className="font-mono text-white font-semibold">{hardwareClusterNodes} nodes ({hardwareClusterNodes * 8} GPUs)</span>
               </div>
               <input
                 type="range"
@@ -259,26 +259,26 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
                 step="4"
                 value={hardwareClusterNodes}
                 onChange={(e) => setHardwareClusterNodes(parseInt(e.target.value))}
-                className="w-full accent-indigo-500 cursor-pointer"
+                className="w-full accent-white cursor-pointer"
               />
             </div>
 
             {/* Currency Toggle */}
             <div className="pt-2 flex items-center justify-between text-xs">
-              <span className="text-slate-400">FinOps Valuation Currency:</span>
-              <div className="inline-flex rounded-lg border border-slate-700 p-0.5 bg-slate-950">
+              <span className="text-neutral-400">FinOps Valuation Currency:</span>
+              <div className="inline-flex rounded-lg border border-neutral-700 p-0.5 bg-neutral-950">
                 <button
                   onClick={() => setCurrency('INR')}
-                  className={`px-2.5 py-1 rounded text-xs font-mono transition-colors ${
-                    currency === 'INR' ? 'bg-sky-600 text-white' : 'text-slate-400 hover:text-white'
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded text-xs font-mono transition-colors ${
+                    currency === 'INR' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
                   INR (₹)
                 </button>
                 <button
                   onClick={() => setCurrency('USD')}
-                  className={`px-2.5 py-1 rounded text-xs font-mono transition-colors ${
-                    currency === 'USD' ? 'bg-sky-600 text-white' : 'text-slate-400 hover:text-white'
+                  className={`active:scale-[0.97] px-2.5 py-1 rounded text-xs font-mono transition-colors ${
+                    currency === 'USD' ? 'bg-white text-black' : 'text-neutral-400 hover:text-white'
                   }`}
                 >
                   USD ($)
@@ -291,116 +291,116 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
           <div className="lg:col-span-7 space-y-6">
             {/* Primary KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                <div className="text-[11px] font-mono text-slate-400 uppercase">Bubble Ratio</div>
-                <div className="text-2xl font-bold font-mono text-sky-400 mt-1">
+              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase">Bubble Ratio</div>
+                <div className="text-2xl font-bold font-mono text-white mt-1">
                   {results.pipelineBubbleRatioPercent}%
                 </div>
-                <div className="text-[10px] text-slate-400 mt-1">Zero-Bubble Target</div>
+                <div className="text-[10px] text-neutral-400 mt-1">Zero-Bubble Target</div>
               </div>
 
-              <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                <div className="text-[11px] font-mono text-slate-400 uppercase">Cluster MFU</div>
-                <div className="text-2xl font-bold font-mono text-emerald-400 mt-1">
+              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase">Cluster MFU</div>
+                <div className="text-2xl font-bold font-mono text-white mt-1">
                   {results.modelFlopsUtilizationPercent}%
                 </div>
-                <div className="text-[10px] text-slate-400 mt-1">Record GPU Efficiency</div>
+                <div className="text-[10px] text-neutral-400 mt-1">Record GPU Efficiency</div>
               </div>
 
-              <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                <div className="text-[11px] font-mono text-slate-400 uppercase">Comm Overlap</div>
-                <div className="text-2xl font-bold font-mono text-indigo-400 mt-1">
+              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase">Comm Overlap</div>
+                <div className="text-2xl font-bold font-mono text-white mt-1">
                   {results.hiddenCommunicationOverlapRatio}%
                 </div>
-                <div className="text-[10px] text-slate-400 mt-1">All-to-All Hidden</div>
+                <div className="text-[10px] text-neutral-400 mt-1">All-to-All Hidden</div>
               </div>
 
-              <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
-                <div className="text-[11px] font-mono text-slate-400 uppercase">Speedup Factor</div>
+              <div className="bg-neutral-900/60 p-4 rounded-xl border border-neutral-800">
+                <div className="text-[11px] font-mono text-neutral-400 uppercase">Speedup Factor</div>
                 <div className="text-2xl font-bold font-mono text-amber-400 mt-1">
                   {results.clusterSpeedupFactor}x
                 </div>
-                <div className="text-[10px] text-slate-400 mt-1">vs 1F1B Baseline</div>
+                <div className="text-[10px] text-neutral-400 mt-1">vs 1F1B Baseline</div>
               </div>
             </div>
 
             {/* Stage Execution Breakdown */}
-            <div className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-4">
+            <div className="bg-neutral-900/60 p-6 rounded-xl border border-neutral-800 space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                  <Activity className="w-4 h-4 text-sky-400" /> Pipeline Stage Execution & Communication Hiding
+                  <Activity className="w-4 h-4 text-neutral-200" /> Pipeline Stage Execution & Communication Hiding
                 </h3>
-                <span className="text-xs font-mono text-slate-400">Micro-Batch Chunks</span>
+                <span className="text-xs font-mono text-neutral-400">Micro-Batch Chunks</span>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
                 {results.stageBreakdown.map((s) => (
-                  <div key={s.stageIndex} className="p-2.5 rounded bg-slate-950 border border-slate-800 space-y-1">
-                    <div className="text-slate-400 text-[10px]">Stage #{s.stageIndex}</div>
-                    <div className="text-sky-300 font-semibold">F: {s.forwardTimeMs}ms</div>
-                    <div className="text-emerald-300">B: {s.backwardTimeMs}ms</div>
-                    <div className="text-indigo-400 text-[10px]">Overlap: {s.commOverlapMs}ms</div>
+                  <div key={s.stageIndex} className="p-2.5 rounded bg-neutral-950 border border-neutral-800 space-y-1">
+                    <div className="text-neutral-400 text-[10px]">Stage #{s.stageIndex}</div>
+                    <div className="text-white font-semibold">F: {s.forwardTimeMs}ms</div>
+                    <div className="text-neutral-200">B: {s.backwardTimeMs}ms</div>
+                    <div className="text-neutral-200 text-[10px]">Overlap: {s.commOverlapMs}ms</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Architecture Visualizer SVG */}
-            <div className="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-4">
+            <div className="bg-neutral-900/60 p-6 rounded-xl border border-neutral-800 space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-sky-400" /> DualPipe Bidirectional Scheduling Timeline
+                  <Layers className="w-4 h-4 text-neutral-200" /> DualPipe Bidirectional Scheduling Timeline
                 </h3>
-                <span className="text-xs font-mono text-sky-400 border border-sky-500/20 px-2 py-0.5 rounded bg-sky-500/10">
+                <span className="text-xs font-mono text-neutral-200 border border-white/15 px-2 py-0.5 rounded bg-white/[0.04]">
                   Zero-Bubble Overlap
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800/80">
+              <div className="p-4 rounded-xl bg-neutral-950 border border-neutral-800/80">
                 <svg viewBox="0 0 600 180" className="w-full h-auto text-xs font-mono select-none">
                   {/* Timeline Row 1: Pipeline 0 (Forward direction) */}
-                  <text x="15" y="45" fill="#38bdf8" fontWeight="bold">Pipeline 0 (Forward)</text>
-                  <rect x="160" y="30" width="70" height="24" rx="4" fill="#0369a1" stroke="#38bdf8" strokeWidth="1" />
-                  <text x="195" y="46" fill="#f0f9ff" textAnchor="middle">F0 (Forward)</text>
+                  <text x="15" y="45" fill="#ffffff" fontWeight="bold">Pipeline 0 (Forward)</text>
+                  <rect x="160" y="30" width="70" height="24" rx="4" fill="#ffffff" stroke="#ffffff" strokeWidth="1" />
+                  <text x="195" y="46" fill="#a3a3a3" textAnchor="middle">F0 (Forward)</text>
 
-                  <rect x="235" y="30" width="85" height="24" rx="4" fill="#047857" stroke="#34d399" strokeWidth="1" />
-                  <text x="277" y="46" fill="#ecfdf5" textAnchor="middle">B0_input</text>
+                  <rect x="235" y="30" width="85" height="24" rx="4" fill="#ffffff" stroke="#a3a3a3" strokeWidth="1" />
+                  <text x="277" y="46" fill="#a3a3a3" textAnchor="middle">B0_input</text>
 
-                  <rect x="325" y="30" width="105" height="24" rx="4" fill="#1e1b4b" stroke="#818cf8" strokeWidth="1.5" />
-                  <text x="377" y="46" fill="#e0e7ff" textAnchor="middle">B0_weight (GEMM)</text>
+                  <rect x="325" y="30" width="105" height="24" rx="4" fill="#0a0a0a" stroke="#a3a3a3" strokeWidth="1.5" />
+                  <text x="377" y="46" fill="#a3a3a3" textAnchor="middle">B0_weight (GEMM)</text>
 
                   {/* Overlap Indicator on Row 1 */}
-                  <path d="M 330 60 L 425 60" stroke="#f59e0b" strokeWidth="2" strokeDasharray="3 2" />
-                  <text x="377" y="73" fill="#f59e0b" textAnchor="middle" fontSize="10">All-to-All Comm Overlap</text>
+                  <path d="M 330 60 L 425 60" stroke="#d4d4d4" strokeWidth="2" strokeDasharray="3 2" />
+                  <text x="377" y="73" fill="#d4d4d4" textAnchor="middle" fontSize="10">All-to-All Comm Overlap</text>
 
                   {/* Timeline Row 2: Pipeline 1 (Reverse direction) */}
-                  <text x="15" y="125" fill="#34d399" fontWeight="bold">Pipeline 1 (Reverse)</text>
-                  <rect x="160" y="110" width="105" height="24" rx="4" fill="#1e1b4b" stroke="#818cf8" strokeWidth="1.5" />
-                  <text x="212" y="126" fill="#e0e7ff" textAnchor="middle">B1_weight (GEMM)</text>
+                  <text x="15" y="125" fill="#a3a3a3" fontWeight="bold">Pipeline 1 (Reverse)</text>
+                  <rect x="160" y="110" width="105" height="24" rx="4" fill="#0a0a0a" stroke="#a3a3a3" strokeWidth="1.5" />
+                  <text x="212" y="126" fill="#a3a3a3" textAnchor="middle">B1_weight (GEMM)</text>
 
-                  <rect x="270" y="110" width="70" height="24" rx="4" fill="#0369a1" stroke="#38bdf8" strokeWidth="1" />
-                  <text x="305" y="126" fill="#f0f9ff" textAnchor="middle">F1 (Forward)</text>
+                  <rect x="270" y="110" width="70" height="24" rx="4" fill="#ffffff" stroke="#ffffff" strokeWidth="1" />
+                  <text x="305" y="126" fill="#a3a3a3" textAnchor="middle">F1 (Forward)</text>
 
-                  <rect x="345" y="110" width="85" height="24" rx="4" fill="#047857" stroke="#34d399" strokeWidth="1" />
-                  <text x="387" y="126" fill="#ecfdf5" textAnchor="middle">B1_input</text>
+                  <rect x="345" y="110" width="85" height="24" rx="4" fill="#ffffff" stroke="#a3a3a3" strokeWidth="1" />
+                  <text x="387" y="126" fill="#a3a3a3" textAnchor="middle">B1_input</text>
 
                   {/* Summary Legend */}
-                  <line x1="160" y1="155" x2="580" y2="155" stroke="#334155" strokeWidth="1" />
-                  <text x="370" y="170" fill="#94a3b8" textAnchor="middle" fontSize="10">Continuous GPU Tensor Core Saturation • Zero Pipeline Bubble Idling</text>
+                  <line x1="160" y1="155" x2="580" y2="155" stroke="#262626" strokeWidth="1" />
+                  <text x="370" y="170" fill="#737373" textAnchor="middle" fontSize="10">Continuous GPU Tensor Core Saturation • Zero Pipeline Bubble Idling</text>
                 </svg>
               </div>
             </div>
 
             {/* Financial FinOps Card */}
-            <div className="bg-gradient-to-r from-sky-950/40 via-indigo-950/30 to-slate-900/60 p-6 rounded-2xl border border-sky-900/40 space-y-3">
+            <div className="bg-neutral-950 p-6 rounded-xl border border-white/15 space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono uppercase text-sky-400">Annual FinOps Infrastructure Savings</span>
-                <span className="text-xs font-mono text-slate-400">Hardware Amortization Delta</span>
+                <span className="text-xs font-mono uppercase text-neutral-200">Annual FinOps Infrastructure Savings</span>
+                <span className="text-xs font-mono text-neutral-400">Hardware Amortization Delta</span>
               </div>
               <div className="text-3xl font-extrabold text-white font-mono">
                 {currency === 'INR' ? '₹' : '$'}{results.annualFinOpsCapExSavings.toLocaleString()}
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 By shrinking the pipeline bubble from 28.4% to {results.pipelineBubbleRatioPercent}% and reaching {results.modelFlopsUtilizationPercent}% MFU, your {hardwareClusterNodes * 8}-GPU cluster delivers a {results.clusterSpeedupFactor}x effective throughput acceleration without requiring extra accelerator nodes.
               </p>
             </div>
@@ -408,22 +408,22 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
         </div>
 
         {/* Technical FAQ Accordion */}
-        <section className="bg-slate-900/60 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6">
+        <section className="bg-neutral-900/60 p-6 sm:p-8 rounded-xl border border-neutral-800 space-y-6">
           <h2 className="text-lg font-bold text-white flex items-center gap-2">
-            <Cpu className="w-5 h-5 text-sky-400" /> Architectural FAQ & Technical Invariants
+            <Cpu className="w-5 h-5 text-neutral-200" /> Architectural FAQ & Technical Invariants
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-slate-800 rounded-xl overflow-hidden">
+              <div key={idx} className="border border-neutral-800 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full text-left p-4 bg-slate-950/60 hover:bg-slate-900/60 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-200 transition-colors"
+                  className="active:scale-[0.97] w-full text-left p-4 bg-neutral-950/60 hover:bg-neutral-900/60 flex items-center justify-between text-xs sm:text-sm font-semibold text-neutral-200 transition-colors"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-sky-400 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-neutral-200 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === idx && (
-                  <div className="p-4 bg-slate-950/30 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60">
+                  <div className="p-4 bg-neutral-950/30 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60">
                     {faq.a}
                   </div>
                 )}
@@ -433,34 +433,34 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
         </section>
 
         {/* Enterprise Consultation & Mandate Section */}
-        <section className="border-t border-slate-800 pt-10">
+        <section className="border-t border-neutral-800 pt-10">
           <div className="max-w-2xl mx-auto text-center space-y-3 mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-white">
               Deploy Sovereign DualPipe DeepSeek-V3 Infrastructure
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-neutral-400">
               Schedule an architecture audit with our Principal Distributed Systems team to deploy DeepSeek-V3 and DeepSeek-R1 inference and training clusters with DualPipe zero-bubble parallelism on private VPC infrastructure.
             </p>
           </div>
           <div className="max-w-xl mx-auto">
             {/* Luxury Monochrome WhatsApp Conversion Card */}
-        <div className="my-10 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/[0.02] text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <div className="my-10 p-6 sm:p-8 rounded-xl border border-white/10 bg-white/[0.02] text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/5 text-xs font-mono text-neutral-200">
+            <span className="w-1.5 h-1.5 rounded-lg bg-neutral-400" />
             <span>Direct Lead Architect Intake</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
             Ready to Lock These Simulation Benchmarks in Production?
           </h3>
-          <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Connect directly with our Principal Systems Architect on WhatsApp. We provide a tailored 1-page feasibility memorandum and deterministic VPC architecture blueprint.
           </p>
           <div className="pt-2 flex justify-center">
             <button
               onClick={() => openWhatsApp()}
-              className="px-6 py-3 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
+              className="active:scale-[0.97] px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition-all flex items-center gap-2"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-lg bg-neutral-400" />
               <span>Chat on WhatsApp with Lead Architect</span>
             </button>
           </div>
@@ -474,28 +474,28 @@ Audit Link: https://elesium.online/tools/enterprise-agent-dualpipe-pipeline-para
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                <Code className="w-4 h-4 text-sky-400" /> Embed Simulator Widget
+                <Code className="w-4 h-4 text-neutral-200" /> Embed Simulator Widget
               </h3>
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="text-slate-400 hover:text-white"
+                className="active:scale-[0.97] text-neutral-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-neutral-400">
               Embed this responsive interactive calculator directly on your website or technical documentation.
             </p>
             <div className="relative">
-              <pre className="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] font-mono text-sky-300 overflow-x-auto whitespace-pre-wrap">
+              <pre className="bg-neutral-950 p-3 rounded-xl border border-neutral-800 text-[11px] font-mono text-neutral-200 overflow-x-auto whitespace-pre-wrap">
                 {embedSnippet}
               </pre>
               <button
                 onClick={copyEmbed}
-                className="absolute top-2 right-2 px-2.5 py-1 rounded bg-sky-600 hover:bg-sky-500 text-white text-xs font-medium inline-flex items-center gap-1"
+                className="active:scale-[0.97] absolute top-2 right-2 px-2.5 py-1 rounded bg-white hover:bg-neutral-200 text-black text-xs font-medium inline-flex items-center gap-1"
               >
                 {hasCopiedEmbed ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
                 {hasCopiedEmbed ? 'Copied' : 'Copy'}

@@ -17,7 +17,7 @@
   "firstSentence": "Decrypt Ayushman Bharat Digital Mission (ABDM) Milestone 3 consent artifacts and FHIR health records in sub-45ms, validating patient cryptographic signatures with zero key exposure.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers",
   "paragraphs": [
     "Clinical diagnostic centers, pathology laboratory chains, and private hospitals participating in the Ayushman Bharat Digital Mission (ABDM) face complex cryptographic integration requirements when acting as Health Information Users (HIU). When a patient grants consent via their ABHA mobile app to share historical medical records, the diagnostic center must retrieve encrypted health information, validate the digital signature of the consent artifact, and decrypt multi-source FHIR bundles using Ephemeral Diffie-Hellman (ECDH) key exchanges. Cryptographic handshake timeouts delay patient consultations and violate National Health Authority (NHA) performance standards.",
@@ -113,7 +113,7 @@
     "subheadline": "Clinical diagnostic centers, pathology laboratory chains, and private hospitals participating in the Ayushman Bharat Digital Mission (ABDM) face complex cryptographic integration requirements when acting as Health Information Users (HIU). When a patient grants consent via their ABHA mobile app to share historical medical records, the diagnostic center must retrieve encrypted health information, validate the digital signature of the consent artifact, and decrypt multi-source FHIR bundles using Ephemeral Diffie-Hellman (ECDH) key exchanges. Cryptographic handshake timeouts delay patient consultations and violate National Health Authority (NHA) performance standards.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "High-concurrency support for nationwide diagnostic laboratory chains."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "High-concurrency support for nationwide diagnostic laboratory chains."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers Performance Telemetry",
       "layout": "centered-card"
     }

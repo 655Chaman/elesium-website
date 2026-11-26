@@ -19,9 +19,9 @@ export default function HeroSection() {
         >
             <div className="min-h-[400px] md:h-[777px] flex items-center w-full">
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-                    transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                    initial={{ opacity: 0, scale: 0.97, y: 16 }}
+                    animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.97, y: 16 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="text-center px-5 md:px-12 py-8 md:py-0 w-full"
                     style={{ maxWidth: '960px', margin: '0 auto' }}
                 >
@@ -44,13 +44,13 @@ export default function HeroSection() {
                         {/* Brand content */}
                         <motion.div
                             className="relative z-10 flex flex-col items-center"
-                            initial={{ opacity: 0, y: -10 }}
+                            initial={{ opacity: 0, y: -8 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.8, delay: 0.1 }}
+                            transition={{ type: 'spring', stiffness: 280, damping: 28, delay: 0.05 }}
                         >
                             {/* Text elesium.online & Rank Authority */}
-                            <span className="text-[11px] md:text-[12.5px] font-semibold font-heading tracking-[0.28em] uppercase text-emerald-600 dark:text-emerald-400">
-                                Enterprise Multi-Agent & DPDP-Compliant AI Engineering • Bengaluru
+                            <span className="text-[11px] md:text-[12.5px] font-semibold tracking-[0.28em] uppercase text-neutral-600 dark:text-neutral-400">
+                                Enterprise Multi-Agent &amp; DPDP-Compliant AI Engineering &middot; Bengaluru
                             </span>
                         </motion.div>
                     </div>
@@ -68,62 +68,62 @@ export default function HeroSection() {
                     </h1>
 
                     <motion.p
-                        className="body-text mb-10 mx-auto text-gray-600 dark:text-gray-300 text-base md:text-lg"
+                        className="body-text mb-10 mx-auto text-neutral-600 dark:text-neutral-400 text-base md:text-lg"
                         style={{ maxWidth: '780px' }}
-                        initial={{ opacity: 0 }}
-                        animate={isInView ? { opacity: 1 } : {}}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ type: 'spring', stiffness: 260, damping: 28, delay: 0.25 }}
                     >
-                        <span className="block font-semibold text-gray-900 dark:text-white mb-2 text-lg">
-                            Ranked #1 for sovereign multi-agent engineering, private VPC LLM infrastructure, and DPDP Act compliance.
+                        <span className="block font-semibold text-black dark:text-white mb-2 text-lg">
+                            Deterministic multi-agent engineering, private VPC LLM infrastructure, and DPDP Act compliance.
                         </span>
-                        We replace manual operational bottlenecks across SAP S/4HANA, core banking, and enterprise logistics with deterministic Python LangGraph state machines delivering verified 3x-5x cash-flow ROI within 90 days.
+                        We replace manual operational bottlenecks across SAP S/4HANA, core banking, and enterprise logistics with Python LangGraph state machines backed by a contractual 90-day ROI SLA.
                     </motion.p>
 
                     <motion.div
                         className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 0.8 }}
+                        initial={{ opacity: 0, scale: 0.97, y: 10 }}
+                        animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                        transition={{ type: 'spring', stiffness: 260, damping: 26, delay: 0.4 }}
                     >
-                        <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm" onClick={openWhatsApp}>
+                        <InteractiveHoverButton id="hero-mandate-cta" className="h-10 px-6 text-sm active:scale-[0.97]" onClick={openWhatsApp}>
                             Initiate AI Audit (WhatsApp)
                         </InteractiveHoverButton>
                         <Link 
                             to="/waitlist/" 
-                            className="h-10 px-5 text-xs sm:text-sm font-semibold rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 transition-all flex items-center gap-1.5 shadow-sm"
+                            className="h-10 px-5 text-xs sm:text-sm font-semibold rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 active:scale-[0.97] transition-all flex items-center gap-1.5"
                         >
                             ele-in SaaS Waitlist &rarr;
                         </Link>
                         <WhatsAppModal />
                     </motion.div>
 
-                    {/* Evidence Cards Row (Simon Cornelius Trust Stacking) */}
+                    {/* Evidence Cards Row */}
                     <motion.div 
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 1.0 }}
-                        className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto pt-6 border-t border-gray-200 dark:border-white/10"
+                        initial={{ opacity: 0, scale: 0.97, y: 12 }}
+                        animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                        transition={{ type: 'spring', stiffness: 260, damping: 26, delay: 0.5 }}
+                        className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto pt-6 border-t border-neutral-200 dark:border-white/10"
                     >
-                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
-                            <div className="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">Delivery SLA</div>
-                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">14 Days</div>
-                            <div className="text-[11px] text-gray-500 dark:text-gray-400">Production pilot</div>
+                        <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-bold">Delivery SLA</div>
+                            <div className="text-base font-extrabold text-black dark:text-white mt-0.5">14 Days</div>
+                            <div className="text-[11px] text-neutral-600 dark:text-neutral-400">Production pilot</div>
                         </div>
-                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
-                            <div className="text-[10px] font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold">ROI Guarantee</div>
-                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">90 Days</div>
-                            <div className="text-[11px] text-gray-500 dark:text-gray-400">Or fees rebated</div>
+                        <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-bold">ROI Guarantee</div>
+                            <div className="text-base font-extrabold text-black dark:text-white mt-0.5">90 Days</div>
+                            <div className="text-[11px] text-neutral-600 dark:text-neutral-400">Or fees rebated</div>
                         </div>
-                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
-                            <div className="text-[10px] font-mono uppercase tracking-wider text-purple-600 dark:text-purple-400 font-bold">Data Residency</div>
-                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">Private VPC</div>
-                            <div className="text-[11px] text-gray-500 dark:text-gray-400">Zero retention</div>
+                        <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-bold">Data Residency</div>
+                            <div className="text-base font-extrabold text-black dark:text-white mt-0.5">Private VPC</div>
+                            <div className="text-[11px] text-neutral-600 dark:text-neutral-400">Zero retention</div>
                         </div>
-                        <div className="p-3 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
-                            <div className="text-[10px] font-mono uppercase tracking-wider text-amber-600 dark:text-amber-400 font-bold">Compliance</div>
-                            <div className="text-base font-extrabold text-gray-900 dark:text-white mt-0.5">DPDP 2023</div>
-                            <div className="text-[11px] text-gray-500 dark:text-gray-400">India sovereign</div>
+                        <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-center">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-bold">Compliance</div>
+                            <div className="text-base font-extrabold text-black dark:text-white mt-0.5">DPDP 2023</div>
+                            <div className="text-[11px] text-neutral-600 dark:text-neutral-400">India sovereign</div>
                         </div>
                     </motion.div>
                 </motion.div>

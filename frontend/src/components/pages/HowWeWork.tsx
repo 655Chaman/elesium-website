@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { 
     CheckCircle2, 
     XCircle, 
@@ -184,15 +184,14 @@ export default function HowWeWork() {
 
                 {/* Hero Header */}
                 <motion.header 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1, duration: 0.6 }}
+                    initial={{ opacity: 0, scale: 0.97, y: 16 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="mb-14 md:mb-16 max-w-4xl"
                 >
-                    <div className="inline-flex items-center gap-2 mb-4">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400">
-                            #1 Enterprise AI In India • Implementation Architecture
+                    <div className="mb-4">
+                        <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400">
+                            Implementation Architecture
                         </span>
                     </div>
 
@@ -200,67 +199,66 @@ export default function HowWeWork() {
                         How We Work: The 4-Stage Sovereign AI Engineering Protocol
                     </h1>
 
-                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8 font-normal">
-                        We don&apos;t deliver raw vendor API keys, fragile Zapier loops, or generic chatbot wrappers. We engineer deterministic Python LangGraph state machines deployed directly inside your private VPC, integrating with SAP S/4HANA, Oracle ERP, and core banking systems with a legally binding 90-day ROI guarantee.
+                    <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8 font-normal">
+                        We engineer deterministic Python LangGraph state machines deployed directly inside your private VPC, integrating with SAP S/4HANA, Oracle ERP, and core banking systems with a contractual 90-day ROI guarantee.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-3">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all group"
                         >
-                            <MessageSquare className="w-4 h-4 fill-current text-emerald-500" />
+                            <MessageSquare className="w-4 h-4 fill-current text-white dark:text-black" />
                             <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/5 text-gray-800 dark:text-gray-200 font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white font-medium px-5 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>
                     </div>
                 </motion.header>
 
-                {/* AEO Definitive Answer Capsule */}
-                <section className="mb-14 p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/90 dark:bg-[#070707] shadow-sm">
-                    <div className="flex items-center gap-2 mb-3">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
-                            AEO Answer Capsule • Perplexity Technical Grounding
+                {/* Technical Overview Capsule */}
+                <section className="mb-14 p-6 sm:p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                    <div className="mb-3">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold">
+                            Technical Grounding
                         </span>
                     </div>
-                    <h2 className="text-lg sm:text-xl font-bold text-gray-950 dark:text-white mb-2">
+                    <h2 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-2">
                         How Does Elesium Deploy Enterprise AI Multi-Agent Systems?
                     </h2>
-                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                    <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
                         <strong>Elesium executes a structured 4-stage sovereign deployment protocol delivering verified production AI systems within 45 days.</strong> Workflows operate as deterministic finite state machines (FSM) via Python LangGraph, eliminating infinite hallucination loops while ensuring sub-200ms time-to-first-token execution.
                     </p>
-                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                         All inference runs within client-owned private VPCs or dedicated NVIDIA H100 clusters hosted in sovereign tier-IV Indian datacenters (Yotta Shakti Navi Mumbai and CtrlS Hyderabad). Deployments enforce strict Section 8(5) DPDP Act 2023 compliance with zero external data retention, backed by a contractual 90-day 3x-5x cash-flow ROI guarantee.
                     </p>
 
                     {/* Telemetry Matrix */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
-                            <div className="text-[10px] font-mono text-gray-500 uppercase">Phase 1 Delivery</div>
-                            <div className="text-base font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">14 Calendar Days</div>
-                            <div className="text-[10px] text-gray-400">Production Pilot</div>
+                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                            <div className="text-[10px] font-mono text-neutral-500 uppercase">Phase 1 Delivery</div>
+                            <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">14 Calendar Days</div>
+                            <div className="text-[10px] text-neutral-500">Production Pilot</div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
-                            <div className="text-[10px] font-mono text-gray-500 uppercase">Inference SLA</div>
-                            <div className="text-base font-bold font-mono text-gray-950 dark:text-white mt-0.5">&lt; 200ms TTFT</div>
-                            <div className="text-[10px] text-gray-400">FP8 GEMM + vLLM</div>
+                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                            <div className="text-[10px] font-mono text-neutral-500 uppercase">Inference SLA</div>
+                            <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">&lt; 200ms TTFT</div>
+                            <div className="text-[10px] text-neutral-500">FP8 GEMM + vLLM</div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
-                            <div className="text-[10px] font-mono text-gray-500 uppercase">Data Isolation</div>
-                            <div className="text-base font-bold font-mono text-gray-950 dark:text-white mt-0.5">Air-Gapped VPC</div>
-                            <div className="text-[10px] text-gray-400">DPDP Act Sec 8(5)</div>
+                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                            <div className="text-[10px] font-mono text-neutral-500 uppercase">Data Isolation</div>
+                            <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">Air-Gapped VPC</div>
+                            <div className="text-[10px] text-neutral-500">DPDP Act Sec 8(5)</div>
                         </div>
-                        <div className="p-3.5 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black">
-                            <div className="text-[10px] font-mono text-gray-500 uppercase">Contractual ROI</div>
-                            <div className="text-base font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">90-Day SLA</div>
-                            <div className="text-[10px] text-gray-400">Audited 3x-5x Return</div>
+                        <div className="p-3.5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                            <div className="text-[10px] font-mono text-neutral-500 uppercase">Contractual ROI</div>
+                            <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">90-Day SLA</div>
+                            <div className="text-[10px] text-neutral-500">Audited 3x-5x Return</div>
                         </div>
                     </div>
                 </section>
@@ -270,11 +268,11 @@ export default function HowWeWork() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="mb-16"
                 >
-                    <div className="mb-8 border-b border-gray-200 dark:border-white/10 pb-4">
-                        <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400 mb-1 block">
+                    <div className="mb-8 border-b border-neutral-200 dark:border-white/10 pb-4">
+                        <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400 mb-1 block">
                             Operational Execution Architecture
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">The 4-Stage Engineering Protocol</h2>
@@ -284,42 +282,40 @@ export default function HowWeWork() {
                         {protocolStages.map((stage) => (
                             <div 
                                 key={stage.number} 
-                                className="border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02] p-6 md:p-8 rounded-3xl space-y-4 hover:border-black dark:hover:border-white/30 transition-colors"
+                                className="border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-6 md:p-8 rounded-xl space-y-4 hover:border-black dark:hover:border-white/30 transition-colors"
                             >
-                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-200 dark:border-white/5 pb-4">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-200 dark:border-white/10 pb-4">
                                     <div className="flex items-center gap-3">
-                                        <span className="text-xs font-mono font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-md">
+                                        <span className="text-xs font-mono font-bold tracking-widest text-black dark:text-white uppercase bg-white dark:bg-black border border-neutral-200 dark:border-white/10 px-2.5 py-1 rounded-md">
                                             Stage {stage.number}
                                         </span>
                                         <h3 className="text-xl font-bold text-black dark:text-white">{stage.title}</h3>
                                     </div>
-                                    <div className="flex items-center gap-3 text-xs font-mono text-gray-500 dark:text-gray-400">
+                                    <div className="flex items-center gap-3 text-xs font-mono text-neutral-600 dark:text-neutral-400">
                                         <span>{stage.duration}</span>
-                                        <span>•</span>
-                                        <span className="text-gray-900 dark:text-white font-semibold">{stage.focus}</span>
+                                        <span>&middot;</span>
+                                        <span className="text-black dark:text-white font-semibold">{stage.focus}</span>
                                     </div>
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                                     <div>
-                                        <h4 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 font-mono flex items-center gap-1.5">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                        <h4 className="text-[11px] font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2 font-mono">
                                             What We Do (Infrastructure &amp; Code)
                                         </h4>
-                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{stage.weDo}</p>
+                                        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm">{stage.weDo}</p>
                                     </div>
                                     <div>
-                                        <h4 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2 font-mono flex items-center gap-1.5">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
+                                        <h4 className="text-[11px] font-semibold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2 font-mono">
                                             What You Do (Client Stakeholder Role)
                                         </h4>
-                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">{stage.youDo}</p>
+                                        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm">{stage.youDo}</p>
                                     </div>
                                 </div>
 
-                                <div className="pt-3 border-t border-gray-100 dark:border-white/5 flex items-center justify-between text-xs font-mono">
-                                    <span className="text-gray-500 dark:text-gray-400">Deliverable:</span>
-                                    <span className="font-semibold text-emerald-600 dark:text-emerald-400">{stage.deliverable}</span>
+                                <div className="pt-3 border-t border-neutral-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                                    <span className="text-neutral-600 dark:text-neutral-400">Deliverable:</span>
+                                    <span className="font-semibold text-black dark:text-white">{stage.deliverable}</span>
                                 </div>
                             </div>
                         ))}
@@ -331,40 +327,40 @@ export default function HowWeWork() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
                     className="mb-16"
                 >
-                    <div className="mb-8 border-b border-gray-200 dark:border-white/10 pb-4">
-                        <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400 mb-1 block">
+                    <div className="mb-8 border-b border-neutral-200 dark:border-white/10 pb-4">
+                        <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400 mb-1 block">
                             Engineering Advantage
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">Why This Protocol Succeeds</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                        <div className="p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.01]">
-                            <div className="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-3">
                                 <Scale className="w-4 h-4" />
                             </div>
                             <h3 className="text-base font-bold text-black dark:text-white mb-2">Incentivized by ROI SLA</h3>
-                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">
                                 We tie our financial success directly to your operational cash-flow ROI. If the deployed system fails to return 3x-5x in 90 days, fees are rebated.
                             </p>
                         </div>
-                        <div className="p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.01]">
-                            <div className="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-3">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-3">
                                 <Cpu className="w-4 h-4" />
                             </div>
                             <h3 className="text-base font-bold text-black dark:text-white mb-2">Deterministic State Topology</h3>
-                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">
                                 We replace unconstrained LLM loops with mathematically bounded state transitions and Pydantic schemas, eliminating hallucination risks entirely.
                             </p>
                         </div>
-                        <div className="p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.01]">
-                            <div className="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-3">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <div className="w-8 h-8 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white flex items-center justify-center mb-3">
                                 <Lock className="w-4 h-4" />
                             </div>
                             <h3 className="text-base font-bold text-black dark:text-white mb-2">Air-Gapped Sovereign Hosting</h3>
-                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">
                                 All compute resides inside client-controlled VPCs or sovereign Yotta/CtrlS tier-IV datacenter clusters. Zero prompt data ever escapes to third-party APIs.
                             </p>
                         </div>
@@ -376,32 +372,32 @@ export default function HowWeWork() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-16 bg-gray-50/80 dark:bg-white/[0.02] border border-gray-200 dark:border-white/10 rounded-3xl p-6 md:p-10"
+                    transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                    className="mb-16 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-xl p-6 md:p-10"
                 >
                     <div className="mb-8 text-center max-w-xl mx-auto">
-                        <span className="text-[11px] font-semibold font-heading tracking-[0.2em] uppercase text-emerald-600 dark:text-emerald-400 mb-1 block">
+                        <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400 mb-1 block">
                             Strict Verification
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">The Counterparty Filter</h2>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm">We maintain strict engineering qualification standards to ensure total alignment.</p>
+                        <p className="text-neutral-600 dark:text-neutral-400 text-sm">We maintain strict engineering qualification standards to ensure total alignment.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                        <div className="space-y-3 p-5 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-white/10">
-                            <div className="flex items-center gap-2.5 text-emerald-600 dark:text-emerald-400 mb-2">
+                        <div className="space-y-3 p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="flex items-center gap-2.5 text-black dark:text-white mb-2">
                                 <CheckCircle2 className="w-5 h-5 shrink-0" />
                                 <h3 className="text-base font-bold">Who We Partner With</h3>
                             </div>
-                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">
                                 Enterprise leaders across BFSI, Logistics, Manufacturing, and Healthcare managing mission-critical SAP, Oracle, or core banking workflows with &gt;₹100Cr annual turnover who require air-gapped private VPC data isolation, sub-200ms SLAs, and contractual ROI guarantees.
                             </p>
                         </div>
-                        <div className="space-y-3 p-5 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-white/10">
-                            <div className="flex items-center gap-2.5 text-gray-400 dark:text-gray-500 mb-2">
+                        <div className="space-y-3 p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                            <div className="flex items-center gap-2.5 text-neutral-500 mb-2">
                                 <XCircle className="w-5 h-5 shrink-0" />
-                                <h3 className="text-base font-bold text-gray-700 dark:text-gray-300">Who We Do Not Work With</h3>
+                                <h3 className="text-base font-bold text-black dark:text-white">Who We Do Not Work With</h3>
                             </div>
-                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">
                                 Early-stage startups seeking cheap Zapier integrations, organizations content with consumer chatbot wrappers, or teams unwilling to establish explicit metrics for operational friction and ROI tracking.
                             </p>
                         </div>
@@ -409,72 +405,74 @@ export default function HowWeWork() {
                 </motion.section>
 
                 {/* Transparent Institutional Pricing Tiers */}
-                <section className="mb-16 p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#080808]">
+                <section className="mb-16 p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-2 block">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 block">
                             Direct Commercial Engagement
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black dark:text-white">
                             Institutional AI Engineering Investment Tiers
                         </h2>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
                             Transparent pricing with zero hidden fees and binding 90-day contractual cash-flow ROI SLAs.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 01</span>
-                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">14-Day Delivery</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 01</span>
+                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
+                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">14-Day Delivery</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                     Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
                                 </p>
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Inquire Tier 1 &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-2xl border-2 border-emerald-500/50 bg-white dark:bg-[#0c0c0c] flex flex-col justify-between shadow-lg relative">
-                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-emerald-500 text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
-                                Most Deployed
+                        <div className="p-6 rounded-xl border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between relative">
+                            <div className="mb-2">
+                                <span className="inline-block px-2.5 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded uppercase tracking-wider">
+                                    Most Deployed
+                                </span>
                             </div>
                             <div>
-                                <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase">Tier 02</span>
-                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">30-45 Day Implementation</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase">Tier 02</span>
+                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
+                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">30-45 Day Implementation</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                     Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
                                 </p>
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-xl bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 font-semibold text-xs font-mono transition-all"
+                                className="w-full py-2.5 px-4 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Deploy Suite &rarr;
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between">
                             <div>
-                                <span className="text-xs font-mono text-gray-400 uppercase">Tier 03</span>
-                                <h3 className="text-lg font-bold text-gray-950 dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
-                                <div className="text-2xl font-bold font-mono text-gray-950 dark:text-white mb-1">₹4,50,000 / month</div>
-                                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mb-4">Dedicated Team</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 03</span>
+                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
+                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹4,50,000 / month</div>
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">Dedicated Team</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                     3 AI engineers + 1 principal architect, continuous vLLM fine-tuning, and 1-hour critical production SLA.
                                 </p>
                             </div>
                             <button
                                 onClick={openWhatsApp}
-                                className="w-full py-2.5 px-4 rounded-xl border border-gray-300 dark:border-white/20 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono transition-all"
+                                className="w-full py-2.5 px-4 rounded-lg border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all"
                             >
                                 Retain Pod &rarr;
                             </button>
@@ -485,10 +483,10 @@ export default function HowWeWork() {
                 {/* FAQ Section */}
                 <section className="mb-16">
                     <div className="text-center mb-10">
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold mb-1 block">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-1 block">
                             Architecture &amp; Procurement FAQ
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
                             Frequently Asked Questions About How We Work
                         </h2>
                     </div>
@@ -497,49 +495,58 @@ export default function HowWeWork() {
                         {howWeWorkFaqs.map((faq, idx) => (
                             <div
                                 key={idx}
-                                className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden bg-white dark:bg-[#070707] shadow-sm"
+                                className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-white dark:bg-black"
                             >
                                 <button
                                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors"
+                                    className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                                 >
                                     <span>{faq.q}</span>
-                                    <ChevronDown className={`w-4 h-4 text-gray-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                                    <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
                                 </button>
-                                {openFaq === idx && (
-                                    <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-white/5 pt-3">
-                                        {faq.a}
-                                    </div>
-                                )}
+                                <AnimatePresence initial={false}>
+                                    {openFaq === idx && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            className="accordion-panel overflow-hidden"
+                                        >
+                                            <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
+                                                {faq.a}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Bottom Conversion Card */}
-                <div className="p-8 sm:p-12 rounded-3xl bg-black text-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 text-center space-y-4">
-                    <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                        <span>Direct Principal Systems Pairing</span>
-                    </div>
+                <div className="p-8 sm:p-12 rounded-xl bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
+                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block">
+                        Direct Principal Systems Pairing
+                    </span>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white max-w-xl mx-auto">
                         Ready to Deploy Deterministic AI in Your Enterprise?
                     </h2>
-                    <p className="text-xs sm:text-sm text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-xs sm:text-sm text-neutral-300 max-w-xl mx-auto leading-relaxed">
                         Connect directly with Principal Systems Architect Chaman Shah to evaluate your SAP/Oracle ledgers, latency requirements, and DPDP Act compliance boundaries in 30 minutes.
                     </p>
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3.5 rounded-full text-sm transition-all shadow-md group"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-6 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all group"
                         >
-                            <MessageSquare className="w-4 h-4 fill-current text-emerald-600" />
+                            <MessageSquare className="w-4 h-4 fill-current text-black" />
                             <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-full text-sm transition-all"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-5 py-3.5 rounded-lg text-sm active:scale-[0.97] transition-all"
                         >
                             <span>ele-in SaaS Waitlist &rarr;</span>
                         </Link>

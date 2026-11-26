@@ -17,7 +17,7 @@
   "firstSentence": "Verify government cryptographic signatures embedded in B2B e-way bill QR codes in sub-15ms, validating consignment authenticity offline without internet access at highway checkpoints.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents",
   "paragraphs": [
     "Logistics clearing agents and freight transport operators managing high-speed border crossings and logistics hubs face severe cargo delays during roadside GST inspections. State transport enforcement squads demand instant verification of B2B e-way bill authenticity. If an agent cannot instantly prove that an accompanying invoice QR code carries a valid digital signature from the National Informatics Centre (NIC), shipments risk impoundment, driver harassment, and statutory penalty notices.",
@@ -113,7 +113,7 @@
     "subheadline": "Logistics clearing agents and freight transport operators managing high-speed border crossings and logistics hubs face severe cargo delays during roadside GST inspections. State transport enforcement squads demand instant verification of B2B e-way bill authenticity. If an agent cannot instantly prove that an accompanying invoice QR code carries a valid digital signature from the National Informatics Centre (NIC), shipments risk impoundment, driver harassment, and statutory penalty notices.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Mathematically catches any alteration to invoice value, GSTIN, or date."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Mathematically catches any alteration to invoice value, GSTIN, or date."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents Performance Telemetry",
       "layout": "centered-card"
     }

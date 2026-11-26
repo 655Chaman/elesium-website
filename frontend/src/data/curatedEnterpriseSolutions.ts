@@ -26,7 +26,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy custom C++/CUDA PagedAttention kernels on air-gapped private VPC clusters, reducing KV cache fragmentation to 3.8% and bounding p99 inference latency to 138ms under high-volume core banking workloads.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India",
     "paragraphs": [
       "Indian scheduled commercial banks deploying transformer models within air-gapped virtual private clouds face severe memory fragmentation when serving concurrent transaction streams. Standard PyTorch allocations leave up to 42% of high-bandwidth memory unmapped due to dynamic sequence lengths in multi-turn customer sessions. During high-concurrency settlement windows, this memory waste triggers sudden out-of-memory kernel faults and forces non-deterministic garbage collection stalls exceeding 1,200ms.",
@@ -122,7 +122,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Indian scheduled commercial banks deploying transformer models within air-gapped virtual private clouds face severe memory fragmentation when serving concurrent transaction streams. Standard PyTorch allocations leave up to 42% of high-bandwidth memory unmapped due to dynamic sequence lengths in multi-turn customer sessions. During high-concurrency settlement windows, this memory waste triggers sudden out-of-memory kernel faults and forces non-deterministic garbage collection stalls exceeding 1,200ms.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India"
     },
     "blocks": [
@@ -155,7 +155,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Sustained execution throughput with zero packet drops over internal VPC peering."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India",
         "layout": "left-copy"
       },
@@ -169,7 +169,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -195,7 +195,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Sustained execution throughput with zero packet drops over internal VPC peering."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "vLLM Custom PagedAttention Kernel Deployment Agents for Air-Gapped Banking VPCs in India Performance Telemetry",
         "layout": "centered-card"
       }
@@ -288,7 +288,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Integrate FIPS 140-2 Level 3 hardware security module telemetry with air-gapped payment processing enclaves, guaranteeing real-time auditability and zero memory remanence under RBI Cyber Security Framework Annex II.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors",
     "paragraphs": [
       "Payment processors and card network switches operating in India are subject to strict Reserve Bank of India controls governing cryptographic key lifecycle management and payment telemetry. Traditional software-based key storage mechanisms expose sensitive master session keys to memory scraper attacks and hypervisor side-channel leakage. Furthermore, periodic regulatory audits struggle to verify continuous compliance due to fragmented, asynchronous system logs across disparate payment gateway switches.",
@@ -384,7 +384,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Payment processors and card network switches operating in India are subject to strict Reserve Bank of India controls governing cryptographic key lifecycle management and payment telemetry. Traditional software-based key storage mechanisms expose sensitive master session keys to memory scraper attacks and hypervisor side-channel leakage. Furthermore, periodic regulatory audits struggle to verify continuous compliance due to fragmented, asynchronous system logs across disparate payment gateway switches.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors"
     },
     "blocks": [
@@ -417,7 +417,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time state proof derivation for ISO 8583 payment authorization."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors",
         "layout": "left-copy"
       },
@@ -431,7 +431,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -457,7 +457,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time state proof derivation for ISO 8583 payment authorization."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM Telemetry for Payment Processors Performance Telemetry",
         "layout": "centered-card"
       }
@@ -550,7 +550,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy sovereign on-premise document intelligence agents for Mumbai property developers, automating 30-year title search parsing and encumbrance verification with 99.8% precision under MahaRERA and Indian Stamp Act mandates.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing",
     "paragraphs": [
       "Commercial real estate developers in Mumbai face massive legal exposure and settlement bottlenecks when verifying 30-year historical title deeds, 7/12 extract property cards, and encumbrance certificates. Historical deeds registered at sub-registrar offices across Maharashtra feature degraded scanned Marathi typography, archaic legal nomenclature, and complex devolution chains. Cloud-based OCR services introduce catastrophic confidentiality leaks and fail to resolve conflicting conveyance schedules across multi-generational land parcels.",
@@ -646,7 +646,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Commercial real estate developers in Mumbai face massive legal exposure and settlement bottlenecks when verifying 30-year historical title deeds, 7/12 extract property cards, and encumbrance certificates. Historical deeds registered at sub-registrar offices across Maharashtra feature degraded scanned Marathi typography, archaic legal nomenclature, and complex devolution chains. Cloud-based OCR services introduce catastrophic confidentiality leaks and fail to resolve conflicting conveyance schedules across multi-generational land parcels.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing"
     },
     "blocks": [
@@ -679,7 +679,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero cloud outbound network traffic, air-gapped local workstation cluster."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing",
         "layout": "left-copy"
       },
@@ -693,7 +693,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -719,7 +719,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero cloud outbound network traffic, air-gapped local workstation cluster."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Contract Intelligence Agents for Mumbai Real Estate Firms with Automated Title Search Parsing Performance Telemetry",
         "layout": "centered-card"
       }
@@ -812,7 +812,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate core banking disaster recovery synchronization with zero data loss (RPO = 0) and sub-2-minute automated failover (RTO < 120s), meeting stringent Reserve Bank of India continuous availability guidelines.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI Cyber Security Framework Compliant State Disaster Recovery Engines for Banks",
     "paragraphs": [
       "Scheduled commercial banks face intense regulatory scrutiny and operational catastrophe if primary data centers experience sudden blackout, fiber cuts, or ransomware lockouts. Traditional disaster recovery configurations rely on asynchronous database mirroring that introduces multi-second data loss intervals and manual failover playbooks requiring 45 to 90 minutes of high-risk engineering intervention. During unexpected outages, this gap leads to lost financial transactions, reconciliation nightmares, and severe RBI punitive actions.",
@@ -908,7 +908,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Scheduled commercial banks face intense regulatory scrutiny and operational catastrophe if primary data centers experience sudden blackout, fiber cuts, or ransomware lockouts. Traditional disaster recovery configurations rely on asynchronous database mirroring that introduces multi-second data loss intervals and manual failover playbooks requiring 45 to 90 minutes of high-risk engineering intervention. During unexpected outages, this gap leads to lost financial transactions, reconciliation nightmares, and severe RBI punitive actions.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "RBI Cyber Security Framework Compliant State Disaster Recovery Engines for Banks"
     },
     "blocks": [
@@ -941,7 +941,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Distributed Raft quorum confirmation across Mumbai, Hyderabad, and Chennai."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Compliant State Disaster Recovery Engines for Banks",
         "layout": "left-copy"
       },
@@ -955,7 +955,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -981,7 +981,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Distributed Raft quorum confirmation across Mumbai, Hyderabad, and Chennai."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Compliant State Disaster Recovery Engines for Banks Performance Telemetry",
         "layout": "centered-card"
       }
@@ -1074,7 +1074,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy cryptographic Merkle tree audit trails and write-once-read-many (WORM) telemetry engines for scheduled commercial banks, guaranteeing tamper-evident transaction forensics compliant with RBI Cyber Security Framework Section 4.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks",
     "paragraphs": [
       "Scheduled commercial banks handling hundreds of millions of daily core banking and UPI transactions are vulnerable to malicious internal log tampering, accidental record overwrites, and post-incident forensic repudiation. Standard relational database logs and centralized SIEM solutions lack mathematical proof of immutability, making it impossible to definitively prove to regulatory examiners that administrative users or privileged accounts did not alter transactional records post facto.",
@@ -1170,7 +1170,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Scheduled commercial banks handling hundreds of millions of daily core banking and UPI transactions are vulnerable to malicious internal log tampering, accidental record overwrites, and post-incident forensic repudiation. Standard relational database logs and centralized SIEM solutions lack mathematical proof of immutability, making it impossible to definitively prove to regulatory examiners that administrative users or privileged accounts did not alter transactional records post facto.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks"
     },
     "blocks": [
@@ -1203,7 +1203,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instant client-side verification of transaction presence and authenticity."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks",
         "layout": "left-copy"
       },
@@ -1217,7 +1217,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -1243,7 +1243,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instant client-side verification of transaction presence and authenticity."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Immutable Merkle Audit Trail Telemetry for Scheduled Commercial Banks Performance Telemetry",
         "layout": "centered-card"
       }
@@ -1336,7 +1336,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Audit multi-head latent attention (MLA) memory boundaries in multi-tenant banking clusters, guaranteeing zero cross-tenant latent vector leakage and RBI Annex II memory isolation.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors",
     "paragraphs": [
       "Multi-tenant transformer clusters serving competing financial institutions risk catastrophic data leakage when Multi-Head Latent Attention (MLA) compressed KV representations share physical GPU memory. Standard container isolation layers do not inspect low-rank latent projections in high-bandwidth memory, allowing hypervisor-level side-channel attacks to reconstruct proprietary transaction embeddings. Traditional penetration testing tools fail to detect intra-kernel memory remanence between concurrent inference batches.",
@@ -1432,7 +1432,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Multi-tenant transformer clusters serving competing financial institutions risk catastrophic data leakage when Multi-Head Latent Attention (MLA) compressed KV representations share physical GPU memory. Standard container isolation layers do not inspect low-rank latent projections in high-bandwidth memory, allowing hypervisor-level side-channel attacks to reconstruct proprietary transaction embeddings. Traditional penetration testing tools fail to detect intra-kernel memory remanence between concurrent inference batches.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors"
     },
     "blocks": [
@@ -1465,7 +1465,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Formal verification of physical memory space separation across tenant boundaries."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors",
         "layout": "left-copy"
       },
@@ -1479,7 +1479,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -1505,7 +1505,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Formal verification of physical memory space separation across tenant boundaries."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI Cyber Security Framework Compliant MLA Latent Memory Isolation Auditors Performance Telemetry",
         "layout": "centered-card"
       }
@@ -1598,7 +1598,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate continuous IT governance posture scoring for Tier-1 Non-Banking Financial Companies, converting 120+ RBI Master Direction mandates into real-time telemetry dashboards.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs",
     "paragraphs": [
       "Tier-1 Non-Banking Financial Companies (NBFCs) in India face intense regulatory scrutiny under the RBI Master Direction on Information Technology Governance, Risk, Controls, and Business Continuity. Manual quarterly audit spreadsheets fail to reflect dynamic cloud configuration drift, unpatched perimeter vulnerabilities, and third-party vendor risks. When annual supervisory inspections occur, delayed compliance reporting results in severe supervisory flags and regulatory penalties.",
@@ -1694,7 +1694,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Tier-1 Non-Banking Financial Companies (NBFCs) in India face intense regulatory scrutiny under the RBI Master Direction on Information Technology Governance, Risk, Controls, and Business Continuity. Manual quarterly audit spreadsheets fail to reflect dynamic cloud configuration drift, unpatched perimeter vulnerabilities, and third-party vendor risks. When annual supervisory inspections occur, delayed compliance reporting results in severe supervisory flags and regulatory penalties.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs"
     },
     "blocks": [
@@ -1727,7 +1727,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete mapping of all 120+ statutory controls in RBI IT Governance 2023."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs",
         "layout": "left-copy"
       },
@@ -1741,7 +1741,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -1767,7 +1767,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete mapping of all 120+ statutory controls in RBI IT Governance 2023."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "RBI IT Governance Master Direction Automated Compliance Scoring Telemetry for Tier-1 NBFCs Performance Telemetry",
         "layout": "centered-card"
       }
@@ -1860,7 +1860,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy air-gapped semantic search and dense passage retrieval across decades of internal banking circulars, credit manuals, and board minutes on 100% sovereign Indian soil.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization",
     "paragraphs": [
       "Public sector banks headquartered in New Delhi manage massive archives of internal credit manuals, circular letters, staff handbooks, and board minutes spanning decades. Bank officers spend thousands of hours weekly manually searching through unindexed PDFs and scanned photocopies, leading to delayed loan appraisals and inconsistent policy enforcement. Cloud-hosted enterprise search tools violate statutory banking secrecy acts and RBI on-soil data residency regulations.",
@@ -1956,7 +1956,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Public sector banks headquartered in New Delhi manage massive archives of internal credit manuals, circular letters, staff handbooks, and board minutes spanning decades. Bank officers spend thousands of hours weekly manually searching through unindexed PDFs and scanned photocopies, leading to delayed loan appraisals and inconsistent policy enforcement. Cloud-hosted enterprise search tools violate statutory banking secrecy acts and RBI on-soil data residency regulations.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization"
     },
     "blocks": [
@@ -1989,7 +1989,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero external network egress, ap-south-1 and Delhi NCR sovereign hosts."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization",
         "layout": "left-copy"
       },
@@ -2003,7 +2003,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -2029,7 +2029,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero external network egress, ap-south-1 and Delhi NCR sovereign hosts."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Internal Enterprise Search Agents for Delhi Public Sector Banks with RBI Data Localization Performance Telemetry",
         "layout": "centered-card"
       }
@@ -2122,7 +2122,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy autonomous private VPC security bots for Chennai-based NBFCs, continuously auditing network flow logs and generating automated audit dossiers for RBI inspection teams.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Private VPC Compliance Monitoring Bots for Chennai NBFCs with Automated RBI Audit Reporting",
     "paragraphs": [
       "Non-Banking Financial Companies in Chennai managing fast-growing loan portfolios face severe compliance vulnerabilities as cloud infrastructures scale rapidly across multiple AWS and Azure accounts. Security groups with overly permissive ingress rules, unencrypted S3 data buckets, and unmonitored bastion host access expose customer loan records to regulatory audit sanctions. Manual periodic reviews fail to catch transient misconfigurations introduced during continuous deployment cycles.",
@@ -2218,7 +2218,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Non-Banking Financial Companies in Chennai managing fast-growing loan portfolios face severe compliance vulnerabilities as cloud infrastructures scale rapidly across multiple AWS and Azure accounts. Security groups with overly permissive ingress rules, unencrypted S3 data buckets, and unmonitored bastion host access expose customer loan records to regulatory audit sanctions. Manual periodic reviews fail to catch transient misconfigurations introduced during continuous deployment cycles.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Private VPC Compliance Monitoring Bots for Chennai NBFCs with Automated RBI Audit Reporting"
     },
     "blocks": [
@@ -2251,7 +2251,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Automates quarterly compliance dossier generation for supervisory audits."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Private VPC Compliance Monitoring Bots for Chennai NBFCs with Automated RBI Audit Reporting",
         "layout": "left-copy"
       },
@@ -2265,7 +2265,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -2291,7 +2291,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Automates quarterly compliance dossier generation for supervisory audits."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Private VPC Compliance Monitoring Bots for Chennai NBFCs with Automated RBI Audit Reporting Performance Telemetry",
         "layout": "centered-card"
       }
@@ -2384,7 +2384,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy sovereign voice-enabled credit appraisal chatbots for Pune microfinance institutions, supporting Marathi and Hindi vernacular dialogues with real-time CRIF High Mark credit scoring.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sovereign Financial Underwriting Chatbots for Pune Microfinance Institutions with Vernacular Voice Support",
     "paragraphs": [
       "Microfinance institutions operating Joint Liability Group (JLG) and individual lending models across rural Maharashtra struggle with low literacy rates and lengthy manual loan interview cycles. Field credit officers spend up to three hours per borrower manually recording oral financial declarations and cross-checking documentation. Misunderstandings in colloquial Marathi dialects frequently result in inaccurate household cash flow assessments and higher portfolio-at-risk rates.",
@@ -2480,7 +2480,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Microfinance institutions operating Joint Liability Group (JLG) and individual lending models across rural Maharashtra struggle with low literacy rates and lengthy manual loan interview cycles. Field credit officers spend up to three hours per borrower manually recording oral financial declarations and cross-checking documentation. Misunderstandings in colloquial Marathi dialects frequently result in inaccurate household cash flow assessments and higher portfolio-at-risk rates.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Sovereign Financial Underwriting Chatbots for Pune Microfinance Institutions with Vernacular Voice Support"
     },
     "blocks": [
@@ -2513,7 +2513,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time conversational voice synthesis over low-bandwidth rural mobile links."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Financial Underwriting Chatbots for Pune Microfinance Institutions with Vernacular Voice Support",
         "layout": "left-copy"
       },
@@ -2527,7 +2527,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -2553,7 +2553,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time conversational voice synthesis over low-bandwidth rural mobile links."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Financial Underwriting Chatbots for Pune Microfinance Institutions with Vernacular Voice Support Performance Telemetry",
         "layout": "centered-card"
       }
@@ -2646,7 +2646,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Optimize self-hosted n8n workflow execution for Mumbai digital lending platforms, processing loan eligibility webhooks with sub-50ms latency and zero dropped lead events.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "n8n Banking Loan Eligibility Webhook Processing Latency Telemetry for Private NBFCs in Mumbai",
     "paragraphs": [
       "Fast-growing digital lending platforms in Mumbai experience catastrophic lead loss and customer drop-offs when webhook processing engines choke during marketing campaigns and partner API surges. Self-hosted workflow automation tools like n8n suffer from database connection pool exhaustion, Redis queue lockups, and unhandled JSON serialization exceptions during peak traffic. Slow credit eligibility responses exceeding 3,000ms drive potential borrowers to competing fintech apps.",
@@ -2742,7 +2742,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Fast-growing digital lending platforms in Mumbai experience catastrophic lead loss and customer drop-offs when webhook processing engines choke during marketing campaigns and partner API surges. Self-hosted workflow automation tools like n8n suffer from database connection pool exhaustion, Redis queue lockups, and unhandled JSON serialization exceptions during peak traffic. Slow credit eligibility responses exceeding 3,000ms drive potential borrowers to competing fintech apps.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "n8n Banking Loan Eligibility Webhook Processing Latency Telemetry for Private NBFCs in Mumbai"
     },
     "blocks": [
@@ -2775,7 +2775,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero lead drops guaranteed via automated dead-letter queue isolation."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "n8n Banking Loan Eligibility Webhook Processing Latency Telemetry for Private NBFCs in Mumbai",
         "layout": "left-copy"
       },
@@ -2789,7 +2789,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -2815,7 +2815,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero lead drops guaranteed via automated dead-letter queue isolation."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "n8n Banking Loan Eligibility Webhook Processing Latency Telemetry for Private NBFCs in Mumbai Performance Telemetry",
         "layout": "centered-card"
       }
@@ -2908,7 +2908,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy deterministic DeepSeek reasoning models for fintech loan underwriting, generating mathematically bounded credit decisions with zero hallucination and 100% audit explainability.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Deterministic Automated Loan Underwriting Unified DeepSeek Agents for Fintech CTOs",
     "paragraphs": [
       "Fintech platforms attempting to automate business and personal loan underwriting with large language models face catastrophic credit risk when non-deterministic models hallucinate financial ratios or approve unqualified applicants. Probabilistic generation without strict state constraints violates credit policy rules, creates unexplainable portfolio write-downs, and exposes lenders to severe regulatory censure from the Reserve Bank of India.",
@@ -3004,7 +3004,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Fintech platforms attempting to automate business and personal loan underwriting with large language models face catastrophic credit risk when non-deterministic models hallucinate financial ratios or approve unqualified applicants. Probabilistic generation without strict state constraints violates credit policy rules, creates unexplainable portfolio write-downs, and exposes lenders to severe regulatory censure from the Reserve Bank of India.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Deterministic Automated Loan Underwriting Unified DeepSeek Agents for Fintech CTOs"
     },
     "blocks": [
@@ -3037,7 +3037,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Validated across 100,000 bank statements and GST tax returns."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Deterministic Automated Loan Underwriting Unified DeepSeek Agents for Fintech CTOs",
         "layout": "left-copy"
       },
@@ -3051,7 +3051,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -3077,7 +3077,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Validated across 100,000 bank statements and GST tax returns."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Deterministic Automated Loan Underwriting Unified DeepSeek Agents for Fintech CTOs Performance Telemetry",
         "layout": "centered-card"
       }
@@ -3170,7 +3170,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Enforce statutory DPDP Act 2023 compliance for fintech underwriting systems, generating verifiable ephemeral KV-cache erasure proofs and automated customer consent tracking.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "DPDP Act Statutory Audit Trail KV-Cache Generators for Fintech Underwriting",
     "paragraphs": [
       "Digital lending platforms in India face crippling financial penalties up to ₹250 crore under the Digital Personal Data Protection Act 2023 if customer financial data and Aadhaar/PAN records persist in model memory post-underwriting. Standard deep learning inference servers retain key-value (KV) attention caches indefinitely in volatile VRAM and swap space, creating latent data retention violations that fail statutory privacy audits upon customer consent revocation.",
@@ -3266,7 +3266,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Digital lending platforms in India face crippling financial penalties up to ₹250 crore under the Digital Personal Data Protection Act 2023 if customer financial data and Aadhaar/PAN records persist in model memory post-underwriting. Standard deep learning inference servers retain key-value (KV) attention caches indefinitely in volatile VRAM and swap space, creating latent data retention violations that fail statutory privacy audits upon customer consent revocation.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "DPDP Act Statutory Audit Trail KV-Cache Generators for Fintech Underwriting"
     },
     "blocks": [
@@ -3299,7 +3299,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Guaranteed compliance with DPDP Act 2023 Section 8(5) data deletion rules."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "DPDP Act Statutory Audit Trail KV-Cache Generators for Fintech Underwriting",
         "layout": "left-copy"
       },
@@ -3313,7 +3313,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -3339,7 +3339,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Guaranteed compliance with DPDP Act 2023 Section 8(5) data deletion rules."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "DPDP Act Statutory Audit Trail KV-Cache Generators for Fintech Underwriting Performance Telemetry",
         "layout": "centered-card"
       }
@@ -3432,7 +3432,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Defend digital lending platforms against synthetic identity fraud with real-time Aadhaar e-KYC XML verification, NSDL PAN cross-checking, and deepfake liveness telemetry.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms",
     "paragraphs": [
       "Digital lending apps and instant personal loan platforms in India face escalating losses from sophisticated fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
@@ -3528,7 +3528,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Digital lending apps and instant personal loan platforms in India face escalating losses from sophisticated fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms"
     },
     "blocks": [
@@ -3561,7 +3561,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instant automated verification vs 24-hour manual back-office review."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms",
         "layout": "left-copy"
       },
@@ -3575,7 +3575,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -3601,7 +3601,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instant automated verification vs 24-hour manual back-office review."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms Performance Telemetry",
         "layout": "centered-card"
       }
@@ -3694,7 +3694,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate UPI merchant chargeback arbitration and dispute resolution for Mumbai payment aggregators, resolving disputed claims in under 3 minutes with 99.4% NPCI guideline compliance.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "UPI Merchant Chargeback Dispute Arbitration Autonomous Agents for Mumbai Payment Aggregators",
     "paragraphs": [
       "Payment aggregators and merchant acquiring banks in Mumbai process millions of UPI transactions daily, resulting in thousands of chargebacks, customer dispute tickets, and unhandled settlement claims every week. Manual dispute resolution workflows require operations agents to cross-examine core banking switch logs, merchant order databases, and NPCI UDIR portal records. Slow arbitration cycles exceeding statutory NPCI turnaround times result in automatic financial debit penalties against merchants.",
@@ -3790,7 +3790,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Payment aggregators and merchant acquiring banks in Mumbai process millions of UPI transactions daily, resulting in thousands of chargebacks, customer dispute tickets, and unhandled settlement claims every week. Manual dispute resolution workflows require operations agents to cross-examine core banking switch logs, merchant order databases, and NPCI UDIR portal records. Slow arbitration cycles exceeding statutory NPCI turnaround times result in automatic financial debit penalties against merchants.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "UPI Merchant Chargeback Dispute Arbitration Autonomous Agents for Mumbai Payment Aggregators"
     },
     "blocks": [
@@ -3823,7 +3823,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Certified adherence to statutory UPI dispute management guidelines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "UPI Merchant Chargeback Dispute Arbitration Autonomous Agents for Mumbai Payment Aggregators",
         "layout": "left-copy"
       },
@@ -3837,7 +3837,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -3863,7 +3863,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Certified adherence to statutory UPI dispute management guidelines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "UPI Merchant Chargeback Dispute Arbitration Autonomous Agents for Mumbai Payment Aggregators Performance Telemetry",
         "layout": "centered-card"
       }
@@ -3956,7 +3956,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Bridge cross-border remittance corridors between UPI and the RBI Central Bank Digital Currency (CBDC) wholesale Digital Rupee, eliminating Nostro/Vostro delays with sub-5-minute atomic settlement.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Cross-Border Remittance Settlement Agents Bridging UPI and RBI CBDC Digital Rupee",
     "paragraphs": [
       "Cross-border trade payments and foreign inward remittances between India and global commercial corridors (such as Singapore, UAE, and the UK) suffer from multi-day settlement delays, heavy foreign exchange spreads, and costly correspondent banking fees. Traditional Nostro/Vostro account reconciliations introduce high counterparty credit risk and currency volatility during transit windows. Furthermore, manual reporting under the Foreign Exchange Management Act (FEMA) creates significant regulatory friction.",
@@ -4052,7 +4052,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Cross-border trade payments and foreign inward remittances between India and global commercial corridors (such as Singapore, UAE, and the UK) suffer from multi-day settlement delays, heavy foreign exchange spreads, and costly correspondent banking fees. Traditional Nostro/Vostro account reconciliations introduce high counterparty credit risk and currency volatility during transit windows. Furthermore, manual reporting under the Foreign Exchange Management Act (FEMA) creates significant regulatory friction.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Cross-Border Remittance Settlement Agents Bridging UPI and RBI CBDC Digital Rupee"
     },
     "blocks": [
@@ -4085,7 +4085,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Guaranteed zero settlement failure via two-phase commit cryptographic handshakes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Cross-Border Remittance Settlement Agents Bridging UPI and RBI CBDC Digital Rupee",
         "layout": "left-copy"
       },
@@ -4099,7 +4099,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -4125,7 +4125,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Guaranteed zero settlement failure via two-phase commit cryptographic handshakes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Cross-Border Remittance Settlement Agents Bridging UPI and RBI CBDC Digital Rupee Performance Telemetry",
         "layout": "centered-card"
       }
@@ -4218,7 +4218,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy 100B-parameter multimodal fraud detection agent swarms for payment gateways, analyzing transaction risk graphs in sub-8ms to block distributed carding attacks.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways",
     "paragraphs": [
       "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block sophisticated distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
@@ -4314,7 +4314,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block sophisticated distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways"
     },
     "blocks": [
@@ -4347,7 +4347,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Minimizes false declines on legitimate cardholder transactions."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways",
         "layout": "left-copy"
       },
@@ -4361,7 +4361,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -4387,7 +4387,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Minimizes false declines on legitimate cardholder transactions."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways Performance Telemetry",
         "layout": "centered-card"
       }
@@ -4480,7 +4480,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Maximize GPU cluster efficiency for sovereign banking AI deployments, reducing pipeline bubble idle time to 4.2% using interleaved 1F1B scheduling on dedicated NVIDIA H100 clusters.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India",
     "paragraphs": [
       "Indian private banks training and serving massive proprietary language models across multi-GPU clusters suffer severe compute waste due to pipeline parallelism synchronization overhead. Traditional pipeline parallel schedules create extensive idle periods ('bubbles') where downstream GPUs wait for forward activations and backward gradients to propagate across nodes. In high-cost air-gapped datacenter environments, this bubble waste inflates GPU infrastructure expenses by up to 35% and introduces unpredictable tail latency spikes.",
@@ -4576,7 +4576,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Indian private banks training and serving massive proprietary language models across multi-GPU clusters suffer severe compute waste due to pipeline parallelism synchronization overhead. Traditional pipeline parallel schedules create extensive idle periods ('bubbles') where downstream GPUs wait for forward activations and backward gradients to propagate across nodes. In high-cost air-gapped datacenter environments, this bubble waste inflates GPU infrastructure expenses by up to 35% and introduces unpredictable tail latency spikes.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India"
     },
     "blocks": [
@@ -4609,7 +4609,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Higher sustained queries per second on identical private datacenter hardware."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India",
         "layout": "left-copy"
       },
@@ -4623,7 +4623,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -4649,7 +4649,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Higher sustained queries per second on identical private datacenter hardware."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "1F1B Bubble Reduction SLA Compliance Monitors for Sovereign Private Banking in India Performance Telemetry",
         "layout": "centered-card"
       }
@@ -4742,7 +4742,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Scale multi-hop financial fraud forensics across million-token transaction graphs, saturating 900 GB/s NVLink interconnects with zero memory overflow using ring attention controllers.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics",
     "paragraphs": [
       "Financial intelligence units at Indian commercial banks investigating complex multi-layered money laundering syndicates struggle with GPU memory limits when analyzing long-context transaction graphs. Traditional self-attention mechanisms exhibit quadratic memory scaling ($O(N^2)$), running out of VRAM when graph sequences exceed 32,000 tokens. As a result, forensic analysts are forced to truncate historical transaction data, missing critical shell company layering transactions spread across multi-month intervals.",
@@ -4838,7 +4838,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Financial intelligence units at Indian commercial banks investigating complex multi-layered money laundering syndicates struggle with GPU memory limits when analyzing long-context transaction graphs. Traditional self-attention mechanisms exhibit quadratic memory scaling ($O(N^2)$), running out of VRAM when graph sequences exceed 32,000 tokens. As a result, forensic analysts are forced to truncate historical transaction data, missing critical shell company layering transactions spread across multi-month intervals.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics"
     },
     "blocks": [
@@ -4871,7 +4871,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete million-token graph attention traversal time."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics",
         "layout": "left-copy"
       },
@@ -4885,7 +4885,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -4911,7 +4911,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete million-token graph attention traversal time."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "NVLink Ring Attention Bandwidth Saturation Controllers for Sovereign Banking Fraud Forensics Performance Telemetry",
         "layout": "centered-card"
       }
@@ -5004,7 +5004,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate multi-currency foreign exchange fluctuation journal voucher calculation and posting in Tally Prime, eliminating manual spreadsheet adjustments under AS-11 accounting standards.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Tally Journal Voucher Automated Foreign Exchange Fluctuation Adjustment Agents in Mumbai",
     "paragraphs": [
       "Multinational corporate finance and treasury teams in Mumbai managing multi-currency import-export transactions face extensive manual reconciliation overhead at financial period close. Fluctuations in exchange rates between transaction booking, goods delivery, and final bank settlement require complex forex gain/loss calculations across thousands of ledger accounts. Manual data entry into Tally Prime via spreadsheets causes accounting discrepancies, delayed monthly closings, and statutory audit flags under Accounting Standard 11 (AS-11).",
@@ -5100,7 +5100,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Multinational corporate finance and treasury teams in Mumbai managing multi-currency import-export transactions face extensive manual reconciliation overhead at financial period close. Fluctuations in exchange rates between transaction booking, goods delivery, and final bank settlement require complex forex gain/loss calculations across thousands of ledger accounts. Manual data entry into Tally Prime via spreadsheets causes accounting discrepancies, delayed monthly closings, and statutory audit flags under Accounting Standard 11 (AS-11).",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Tally Journal Voucher Automated Foreign Exchange Fluctuation Adjustment Agents in Mumbai"
     },
     "blocks": [
@@ -5133,7 +5133,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Direct TCP socket posting per journal voucher into Tally Prime port 9000."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Tally Journal Voucher Automated Foreign Exchange Fluctuation Adjustment Agents in Mumbai",
         "layout": "left-copy"
       },
@@ -5147,7 +5147,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign BFSI Architecture Diagram",
         "layout": "right-copy"
       },
@@ -5173,7 +5173,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Direct TCP socket posting per journal voucher into Tally Prime port 9000."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Tally Journal Voucher Automated Foreign Exchange Fluctuation Adjustment Agents in Mumbai Performance Telemetry",
         "layout": "centered-card"
       }
@@ -5266,7 +5266,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy air-gapped local vLLM inference pipelines for logistics invoice processing, communicating directly with Tally Prime over internal port 9000 XML sockets with zero cloud egress.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration",
     "paragraphs": [
       "Freight forwarding and 3PL logistics hubs in India receive thousands of multi-format transport dockets and vendor freight bills daily. Extracting line items, lorry receipt (LR) numbers, and GST breakdowns using public cloud vision APIs exposes confidential supplier rate contracts and breaches corporate data privacy covenants. Network disconnections in warehouse facilities stall accounts payable workflows, delaying vehicle release and inflating truck detention charges.",
@@ -5362,7 +5362,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Freight forwarding and 3PL logistics hubs in India receive thousands of multi-format transport dockets and vendor freight bills daily. Extracting line items, lorry receipt (LR) numbers, and GST breakdowns using public cloud vision APIs exposes confidential supplier rate contracts and breaches corporate data privacy covenants. Network disconnections in warehouse facilities stall accounts payable workflows, delaying vehicle release and inflating truck detention charges.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration"
     },
     "blocks": [
@@ -5395,7 +5395,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero external internet routing, private local warehouse LAN deployment."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration",
         "layout": "left-copy"
       },
@@ -5409,7 +5409,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -5435,7 +5435,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero external internet routing, private local warehouse LAN deployment."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration Performance Telemetry",
         "layout": "centered-card"
       }
@@ -5528,7 +5528,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate Indian Customs ICEGATE 2.0 Bill of Entry tariff reconciliation, validating 8-digit HSN classifications, anti-dumping duties, and IGST computations with 99.9% compliance.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders",
     "paragraphs": [
       "Customs brokers and international freight forwarders in India face severe port demurrage costs and regulatory penalties if Bill of Entry (BE-33) declarations contain tariff classification errors. The Indian Customs Electronic Data Interchange Gateway (ICEGATE 2.0) enforces complex multi-tier customs tariff schedules comprising basic customs duty (BCD), integrated GST (IGST), agriculture infrastructure development cess (AIDC), and anti-dumping duties. Manual tariff reconciliation across thousands of imported line items creates critical shipping delays.",
@@ -5624,7 +5624,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Customs brokers and international freight forwarders in India face severe port demurrage costs and regulatory penalties if Bill of Entry (BE-33) declarations contain tariff classification errors. The Indian Customs Electronic Data Interchange Gateway (ICEGATE 2.0) enforces complex multi-tier customs tariff schedules comprising basic customs duty (BCD), integrated GST (IGST), agriculture infrastructure development cess (AIDC), and anti-dumping duties. Manual tariff reconciliation across thousands of imported line items creates critical shipping delays.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders"
     },
     "blocks": [
@@ -5657,7 +5657,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Pre-submission validation eliminating customs penalty notices and cargo holds."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders",
         "layout": "left-copy"
       },
@@ -5671,7 +5671,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -5697,7 +5697,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Pre-submission validation eliminating customs penalty notices and cargo holds."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Indian Customs ICEGATE Automated Bill of Entry Tariff Reconciliation Telemetry for Freight Forwarders Performance Telemetry",
         "layout": "centered-card"
       }
@@ -5790,7 +5790,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate high-speed Invoice Reference Number (IRN) generation and cryptographic B2B QR code embedding in Tally ERP, achieving sub-200ms turnaround under GST Rule 48(4).",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore",
     "paragraphs": [
       "High-volume wholesale distributors, IT hardware vendors, and manufacturing suppliers in Bangalore face massive billing logjams when generating government e-invoices during peak dispatch hours. Manual generation of e-invoices through web portals or sluggish batch utilities causes gateway timeouts, invalid hash errors, and truck dispatch delays. Failure to print signed QR codes on B2B invoices invalidates tax credits and violates mandatory GST Rule 48(4) mandates.",
@@ -5886,7 +5886,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "High-volume wholesale distributors, IT hardware vendors, and manufacturing suppliers in Bangalore face massive billing logjams when generating government e-invoices during peak dispatch hours. Manual generation of e-invoices through web portals or sluggish batch utilities causes gateway timeouts, invalid hash errors, and truck dispatch delays. Failure to print signed QR codes on B2B invoices invalidates tax credits and violates mandatory GST Rule 48(4) mandates.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore"
     },
     "blocks": [
@@ -5919,7 +5919,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Pre-validation schema filters eliminating statutory formatting rejections."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore",
         "layout": "left-copy"
       },
@@ -5933,7 +5933,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -5959,7 +5959,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Pre-validation schema filters eliminating statutory formatting rejections."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated IRN E-Invoice JSON Generation and QR Code Embedding Agents for Tally ERP in Bangalore Performance Telemetry",
         "layout": "centered-card"
       }
@@ -6052,7 +6052,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate zero-rated export invoice filing under Letter of Undertaking (LUT) with Tally Prime, ensuring seamless GST Form RFD-11 compliance and instant Shipping Bill reconciliation.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime",
     "paragraphs": [
       "Export-oriented units (EOUs) and software services exporters in India executing zero-rated supplies under Letter of Undertaking (LUT) face complex accounting and documentation burdens. Issuing export invoices without paying integrated tax requires strict adherence to statutory LUT validity periods, foreign currency realization tracking, and precise disclosure in GSTR-1 Table 6A. Errors in export invoice endorsement phrases or currency conversion dates lead to frozen export refunds and tax demand notices.",
@@ -6148,7 +6148,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Export-oriented units (EOUs) and software services exporters in India executing zero-rated supplies under Letter of Undertaking (LUT) face complex accounting and documentation burdens. Issuing export invoices without paying integrated tax requires strict adherence to statutory LUT validity periods, foreign currency realization tracking, and precise disclosure in GSTR-1 Table 6A. Errors in export invoice endorsement phrases or currency conversion dates lead to frozen export refunds and tax demand notices.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime"
     },
     "blocks": [
@@ -6181,7 +6181,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Continuous automated tracking of foreign inward remittance deadlines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime",
         "layout": "left-copy"
       },
@@ -6195,7 +6195,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -6221,7 +6221,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Continuous automated tracking of foreign inward remittance deadlines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated LUT (Letter of Undertaking) Export Invoice Filing Agents Integrated with Tally Prime Performance Telemetry",
         "layout": "centered-card"
       }
@@ -6314,7 +6314,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Equip enterprise billing departments with ultra-fast e-invoicing agents for Tally Prime, processing 5,000+ daily B2B invoices with automated IRP signing and zero dispatch delays.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments",
     "paragraphs": [
       "Large-scale distribution warehouses and FMCG billing departments running Tally Prime face massive bottlenecks when processing hundreds of dispatch invoices simultaneously during morning truck loading windows. Traditional manual e-invoicing utilities require staff to upload Excel spreadsheets to external portals, wait for batch files to process, and manually paste IRN numbers back into Tally. This manual friction delays delivery fleets, increases driver overtime costs, and creates billing errors.",
@@ -6410,7 +6410,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Large-scale distribution warehouses and FMCG billing departments running Tally Prime face massive bottlenecks when processing hundreds of dispatch invoices simultaneously during morning truck loading windows. Traditional manual e-invoicing utilities require staff to upload Excel spreadsheets to external portals, wait for batch files to process, and manually paste IRN numbers back into Tally. This manual friction delays delivery fleets, increases driver overtime costs, and creates billing errors.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments"
     },
     "blocks": [
@@ -6443,7 +6443,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Eliminates manual portal uploads, Excel spreadsheets, and copy-paste workflows."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments",
         "layout": "left-copy"
       },
@@ -6457,7 +6457,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -6483,7 +6483,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Eliminates manual portal uploads, Excel spreadsheets, and copy-paste workflows."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "E-Invoice IRN and QR Code Generation Agents for Tally Prime Billing Departments Performance Telemetry",
         "layout": "centered-card"
       }
@@ -6576,7 +6576,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Extract bilingual regional language transport dockets in Tamil, Telugu, Hindi, and Gujarati, automatically posting validated purchase vouchers into Tally Prime.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry",
     "paragraphs": [
       "Logistics clearing agents and freight transport operators in India process millions of regional vernacular transport bills, lorry receipts (LR), and fuel receipts issued in regional languages including Tamil, Telugu, Hindi, and Gujarati. Standard cloud OCR engines fail on complex Indic compound characters, degraded dot-matrix printouts, and multi-lingual layout mixing. Accounts teams spend weeks manually keying data, introducing severe data entry errors and delaying GST input tax credit reconciliation.",
@@ -6672,7 +6672,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Logistics clearing agents and freight transport operators in India process millions of regional vernacular transport bills, lorry receipts (LR), and fuel receipts issued in regional languages including Tamil, Telugu, Hindi, and Gujarati. Standard cloud OCR engines fail on complex Indic compound characters, degraded dot-matrix printouts, and multi-lingual layout mixing. Accounts teams spend weeks manually keying data, introducing severe data entry errors and delaying GST input tax credit reconciliation.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry"
     },
     "blocks": [
@@ -6705,7 +6705,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual vernacular data entry with automated multi-script parsing."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry",
         "layout": "left-copy"
       },
@@ -6719,7 +6719,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -6745,7 +6745,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual vernacular data entry with automated multi-script parsing."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Bilingual Vernacular Invoice OCR Agents for Tally Prime Automated Voucher Entry Performance Telemetry",
         "layout": "centered-card"
       }
@@ -6838,7 +6838,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate GSTR-1 outward supply compilation from Tally Prime sales ledgers in Chennai, segregating B2B, B2CL, B2CS, and export tables with zero statutory schema mismatches.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai",
     "paragraphs": [
       "Manufacturing conglomerates, automotive suppliers, and consumer brands in Chennai face intense compliance stress when compiling monthly GSTR-1 return statements from thousands of sales invoices in Tally Prime. Inconsistent HSN summarization, mismatched customer GSTINs, and manual table segregation across B2B (Table 4A), large B2C (Table 5A), small B2C (Table 7), and exports (Table 6A) frequently trigger portal upload rejections and severe tax audit notices.",
@@ -6934,7 +6934,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Manufacturing conglomerates, automotive suppliers, and consumer brands in Chennai face intense compliance stress when compiling monthly GSTR-1 return statements from thousands of sales invoices in Tally Prime. Inconsistent HSN summarization, mismatched customer GSTINs, and manual table segregation across B2B (Table 4A), large B2C (Table 5A), small B2C (Table 7), and exports (Table 6A) frequently trigger portal upload rejections and severe tax audit notices.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai"
     },
     "blocks": [
@@ -6967,7 +6967,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual Excel spreadsheet mapping with automated XML extraction."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai",
         "layout": "left-copy"
       },
@@ -6981,7 +6981,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -7007,7 +7007,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual Excel spreadsheet mapping with automated XML extraction."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "GSTR-1 Sales Return Auto-Compilation Agents from Tally Prime Sales Ledgers in Chennai Performance Telemetry",
         "layout": "centered-card"
       }
@@ -7100,7 +7100,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Generate National Informatics Centre (NIC) e-way bills directly from Tally Prime delivery challans in Delhi NCR, managing multi-vehicle transshipment and Part B vehicle updates in real time.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi",
     "paragraphs": [
       "Industrial manufacturing hubs and wholesale distribution centers in Delhi NCR and Gurgaon face critical truck dispatch delays when moving goods on delivery challans for job work, exhibition, or multi-depot branch transfers. Manual generation of e-way bills on the National Informatics Centre (NIC) portal requires manual calculation of PIN code distances and vehicle number entry. Roadside transport enforcement officers seize consignments and impose heavy 200% tax penalties if challans lack valid e-way bills.",
@@ -7196,7 +7196,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Industrial manufacturing hubs and wholesale distribution centers in Delhi NCR and Gurgaon face critical truck dispatch delays when moving goods on delivery challans for job work, exhibition, or multi-depot branch transfers. Manual generation of e-way bills on the National Informatics Centre (NIC) portal requires manual calculation of PIN code distances and vehicle number entry. Roadside transport enforcement officers seize consignments and impose heavy 200% tax penalties if challans lack valid e-way bills.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi"
     },
     "blocks": [
@@ -7229,7 +7229,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "High-throughput support for Delhi NCR mega-distribution centers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi",
         "layout": "left-copy"
       },
@@ -7243,7 +7243,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -7269,7 +7269,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "High-throughput support for Delhi NCR mega-distribution centers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated NIC E-Way Bill Portal Generation Agents from Tally Prime Delivery Challans in Delhi Performance Telemetry",
         "layout": "centered-card"
       }
@@ -7362,7 +7362,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Reconcile annual GSTR-9 returns with Tally Prime ledgers and GSTR-2B purchase registers, detecting input tax credit discrepancies across Table 8A with 100% audit accuracy.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal",
     "paragraphs": [
       "Corporate finance directors and statutory tax auditors in India face enormous complexity when preparing the mandatory annual GST return (Form GSTR-9) and reconciliation statement (Form GSTR-9C). Reconciling turnover and input tax credit (ITC) across 12 months of monthly GSTR-1 filings, GSTR-3B tax payments, GSTR-2B automated purchase registers, and internal Tally Prime books requires cross-examining hundreds of thousands of ledger entries. Inadvertent discrepancies in Table 8A trigger massive tax demand notices with 18% annual interest.",
@@ -7458,7 +7458,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Corporate finance directors and statutory tax auditors in India face enormous complexity when preparing the mandatory annual GST return (Form GSTR-9) and reconciliation statement (Form GSTR-9C). Reconciling turnover and input tax credit (ITC) across 12 months of monthly GSTR-1 filings, GSTR-3B tax payments, GSTR-2B automated purchase registers, and internal Tally Prime books requires cross-examining hundreds of thousands of ledger entries. Inadvertent discrepancies in Table 8A trigger massive tax demand notices with 18% annual interest.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal"
     },
     "blocks": [
@@ -7491,7 +7491,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instant export of certified audit documentation and Table 8A annexures."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal",
         "layout": "left-copy"
       },
@@ -7505,7 +7505,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -7531,7 +7531,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instant export of certified audit documentation and Table 8A annexures."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal Performance Telemetry",
         "layout": "centered-card"
       }
@@ -7624,7 +7624,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Stream real-time freight billing telemetry into Tally ERP 9 over port 9000 TCP sockets, eliminating database locks and supporting 10,000+ daily freight consignment dockets.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing",
     "paragraphs": [
       "Large logistics freight forwarding networks in India managing fleets across hundreds of transport branches struggle with Tally ERP 9 socket stability when thousands of branch offices post freight bills simultaneously. Standard TDL (Tally Definition Language) scripts communicating over port 9000 suffer from single-threaded request blocking, unhandled socket timeouts, and memory leaks that crash the Tally server during evening billing surges. Disrupted socket links delay customer dispatch notices and corrupt open voucher tables.",
@@ -7720,7 +7720,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Large logistics freight forwarding networks in India managing fleets across hundreds of transport branches struggle with Tally ERP 9 socket stability when thousands of branch offices post freight bills simultaneously. Standard TDL (Tally Definition Language) scripts communicating over port 9000 suffer from single-threaded request blocking, unhandled socket timeouts, and memory leaks that crash the Tally server during evening billing surges. Disrupted socket links delay customer dispatch notices and corrupt open voucher tables.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing"
     },
     "blocks": [
@@ -7753,7 +7753,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Eliminates server crashes caused by unmanaged multi-branch concurrent connections."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing",
         "layout": "left-copy"
       },
@@ -7767,7 +7767,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -7793,7 +7793,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Eliminates server crashes caused by unmanaged multi-branch concurrent connections."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Tally ERP 9 TDL Port 9000 Socket Communication Telemetry for Logistics Freight Billing Performance Telemetry",
         "layout": "centered-card"
       }
@@ -7886,7 +7886,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Track real-time GPS fleet telematics and automate interstate e-way bill validity extensions before statutory expiration, eliminating roadside cargo seizures and 200% tax penalties.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers",
     "paragraphs": [
       "National long-haul transport carriers operating interstate container fleets across India face catastrophic financial penalties when trucks encounter highway breakdowns, toll congestion, or border delays that cause e-way bills to expire while goods are in transit. Under GST Rule 138(10), an expired e-way bill treats goods as undocumented transport, authorizing state tax enforcement squads to seize vehicles and impose mandatory 200% tax penalties. Manual validity monitoring across thousands of active transit consignments is virtually impossible.",
@@ -7982,7 +7982,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "National long-haul transport carriers operating interstate container fleets across India face catastrophic financial penalties when trucks encounter highway breakdowns, toll congestion, or border delays that cause e-way bills to expire while goods are in transit. Under GST Rule 138(10), an expired e-way bill treats goods as undocumented transport, authorizing state tax enforcement squads to seize vehicles and impose mandatory 200% tax penalties. Manual validity monitoring across thousands of active transit consignments is virtually impossible.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers"
     },
     "blocks": [
@@ -8015,7 +8015,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time parallel telematics tracking across interstate freight corridors."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers",
         "layout": "left-copy"
       },
@@ -8029,7 +8029,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -8055,7 +8055,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time parallel telematics tracking across interstate freight corridors."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Interstate E-Way Bill Validity Auto-Renewal Telemetry for National Logistics Transport Carriers Performance Telemetry",
         "layout": "centered-card"
       }
@@ -8148,7 +8148,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate instant e-way bill generation from Tally Prime sales orders, generating signed NIC barcodes and Part A/Part B transport documents in under 180ms at warehouse dispatch docks.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers",
     "paragraphs": [
       "Fast-paced warehouse dispatch desks handling hundreds of outbound freight consignments daily face severe loading dock gridlock when dispatchers must manually copy sales data from Tally Prime into the government e-way bill portal. Manual data entry errors in vehicle registration numbers, transshipment hubs, or invoice values cause portal rejections, leaving loaded trucks idling at factory gates and inflating driver waiting costs.",
@@ -8244,7 +8244,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Fast-paced warehouse dispatch desks handling hundreds of outbound freight consignments daily face severe loading dock gridlock when dispatchers must manually copy sales data from Tally Prime into the government e-way bill portal. Manual data entry errors in vehicle registration numbers, transshipment hubs, or invoice values cause portal rejections, leaving loaded trucks idling at factory gates and inflating driver waiting costs.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers"
     },
     "blocks": [
@@ -8277,7 +8277,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Pre-validation schema filters eliminating statutory formatting rejections."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers",
         "layout": "left-copy"
       },
@@ -8291,7 +8291,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -8317,7 +8317,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Pre-validation schema filters eliminating statutory formatting rejections."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated E-Way Bill Generation Agents Integrated with Tally Prime for Logistics Dispatchers Performance Telemetry",
         "layout": "centered-card"
       }
@@ -8410,7 +8410,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Accelerate multi-page freight invoice extraction using FP8 Tensor Core quantization on local GPU servers, serving Tally ERP port 9000 XML sockets with sub-45ms inference latency.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India",
     "paragraphs": [
       "Enterprise logistics accounting hubs processing tens of thousands of complex multi-page transport invoices daily face massive compute infrastructure expenses when deploying standard 16-bit floating-point (FP16) vision-language models. FP16 models require expensive multi-GPU clusters, consume excessive power, and suffer from high memory latency that delays XML voucher posting into Tally ERP port 9000 during month-end closing windows.",
@@ -8506,7 +8506,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Enterprise logistics accounting hubs processing tens of thousands of complex multi-page transport invoices daily face massive compute infrastructure expenses when deploying standard 16-bit floating-point (FP16) vision-language models. FP16 models require expensive multi-GPU clusters, consume excessive power, and suffer from high memory latency that delays XML voucher posting into Tally ERP port 9000 during month-end closing windows.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India"
     },
     "blocks": [
@@ -8539,7 +8539,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero accuracy degradation compared to 16-bit floating-point baseline models."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India",
         "layout": "left-copy"
       },
@@ -8553,7 +8553,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -8579,7 +8579,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero accuracy degradation compared to 16-bit floating-point baseline models."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "FP8 Inference Acceleration Agents for Tally ERP Port 9000 XML Invoice Parsing in India Performance Telemetry",
         "layout": "centered-card"
       }
@@ -8672,7 +8672,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Reconstruct faded, low-contrast thermal print transport receipts and lorry dockets with deep learning super-resolution OCR, eliminating manual invoice rejection and settlement delays.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts",
     "paragraphs": [
       "Logistics freight forwarders and warehouse receiving docks in India receive hundreds of thousands of thermal-printed weight bridge receipts, lorry receipts (LR), and toll receipts that degrade rapidly during transport. Exposure to heat, sunlight, and friction in truck cabins causes thermal paper text to fade, smudge, and lose contrast. Traditional OCR engines fail completely on degraded thermal scans, forcing accounts payable teams to manually decipher blurred numbers or reject valid freight bills.",
@@ -8768,7 +8768,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Logistics freight forwarders and warehouse receiving docks in India receive hundreds of thousands of thermal-printed weight bridge receipts, lorry receipts (LR), and toll receipts that degrade rapidly during transport. Exposure to heat, sunlight, and friction in truck cabins causes thermal paper text to fade, smudge, and lose contrast. Traditional OCR engines fail completely on degraded thermal scans, forcing accounts payable teams to manually decipher blurred numbers or reject valid freight bills.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts"
     },
     "blocks": [
@@ -8801,7 +8801,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete image enhancement and text extraction per document page."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts",
         "layout": "left-copy"
       },
@@ -8815,7 +8815,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -8841,7 +8841,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete image enhancement and text extraction per document page."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Optical Character Recognition (OCR) Degradation Handling for Thermal Print Transport Bills and Warehouse Receipts Performance Telemetry",
         "layout": "centered-card"
       }
@@ -8934,7 +8934,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Verify government cryptographic signatures embedded in B2B e-way bill QR codes in sub-15ms, validating consignment authenticity offline without internet access at highway checkpoints.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents",
     "paragraphs": [
       "Logistics clearing agents and freight transport operators managing high-speed border crossings and logistics hubs face severe cargo delays during roadside GST inspections. State transport enforcement squads demand instant verification of B2B e-way bill authenticity. If an agent cannot instantly prove that an accompanying invoice QR code carries a valid digital signature from the National Informatics Centre (NIC), shipments risk impoundment, driver harassment, and statutory penalty notices.",
@@ -9030,7 +9030,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Logistics clearing agents and freight transport operators managing high-speed border crossings and logistics hubs face severe cargo delays during roadside GST inspections. State transport enforcement squads demand instant verification of B2B e-way bill authenticity. If an agent cannot instantly prove that an accompanying invoice QR code carries a valid digital signature from the National Informatics Centre (NIC), shipments risk impoundment, driver harassment, and statutory penalty notices.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents"
     },
     "blocks": [
@@ -9063,7 +9063,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematically catches any alteration to invoice value, GSTIN, or date."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents",
         "layout": "left-copy"
       },
@@ -9077,7 +9077,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -9103,7 +9103,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematically catches any alteration to invoice value, GSTIN, or date."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "B2B E-Way Bill QR Code Cryptographic Signature Verification Latency Telemetry for Logistics Clearing Agents Performance Telemetry",
         "layout": "centered-card"
       }
@@ -9196,7 +9196,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate 3-way invoice, purchase order (PO), and goods receipt note (GRN) reconciliation in enterprise SAP S/4HANA, resolving line-item price and quantity variances in sub-2 seconds.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP",
     "paragraphs": [
       "Enterprise manufacturing and retail organizations running SAP S/4HANA spend tens of thousands of accounts payable labor hours manually reconciling supplier tax invoices against internal Purchase Orders (PO) and Goods Receipt Notes (GRN). Minor variances in line-item unit pricing, freight charges, weight tolerances, or partial deliveries cause SAP three-way matching exceptions, blocking invoice clearing and stalling vendor payments. Unresolved matching exceptions create massive month-end accrual reconciliations and strain vendor relationships.",
@@ -9292,7 +9292,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Enterprise manufacturing and retail organizations running SAP S/4HANA spend tens of thousands of accounts payable labor hours manually reconciling supplier tax invoices against internal Purchase Orders (PO) and Goods Receipt Notes (GRN). Minor variances in line-item unit pricing, freight charges, weight tolerances, or partial deliveries cause SAP three-way matching exceptions, blocking invoice clearing and stalling vendor payments. Unresolved matching exceptions create massive month-end accrual reconciliations and strain vendor relationships.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP"
     },
     "blocks": [
@@ -9325,7 +9325,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Cuts operational back-office labor overhead across enterprise shared services."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP",
         "layout": "left-copy"
       },
@@ -9339,7 +9339,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -9365,7 +9365,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Cuts operational back-office labor overhead across enterprise shared services."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Three-Way Invoice-Purchase Order-Goods Receipt (PO-GRN) Matching Tolerance Telemetry for Enterprise SAP Performance Telemetry",
         "layout": "centered-card"
       }
@@ -9458,7 +9458,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Optimize urban micro-fulfillment pick-and-pack queues in sub-10-minute quick-commerce dark stores, bounding order picking latency to 120 seconds with algorithmic wave dispatching.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs",
     "paragraphs": [
       "Hyperlocal quick-commerce platforms and urban dark stores promising 10-minute grocery and essentials delivery face severe operational bottlenecks during evening demand surges. Picker congestion in narrow aisles, out-of-stock item substitutions, and misaligned delivery rider queues cause order preparation times to exceed 6 to 8 minutes, making sub-10-minute delivery physically impossible. Rider idle waiting times inflate delivery partner payouts and degrade customer retention.",
@@ -9554,7 +9554,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Hyperlocal quick-commerce platforms and urban dark stores promising 10-minute grocery and essentials delivery face severe operational bottlenecks during evening demand surges. Picker congestion in narrow aisles, out-of-stock item substitutions, and misaligned delivery rider queues cause order preparation times to exceed 6 to 8 minutes, making sub-10-minute delivery physically impossible. Rider idle waiting times inflate delivery partner payouts and degrade customer retention.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs"
     },
     "blocks": [
@@ -9587,7 +9587,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Optimized routing preventing picker gridlock in high-demand aisles."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs",
         "layout": "left-copy"
       },
@@ -9601,7 +9601,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -9627,7 +9627,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Optimized routing preventing picker gridlock in high-demand aisles."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Quick-Commerce Sub-10-Minute Dispatch Queue Telemetry for Urban Micro-Fulfillment Hubs Performance Telemetry",
         "layout": "centered-card"
       }
@@ -9720,7 +9720,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Monitor multi-point pharmaceutical cold storage temperatures between 2°C and 8°C in real time, generating automated excursion alerts and tamper-evident CDSCO/WHO GxP compliance trails.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs",
     "paragraphs": [
       "Pharmaceutical distribution hubs and vaccine cold storage warehouses in India face catastrophic financial losses and regulatory disqualification if sensitive biologics and vaccines experience thermal excursions outside strict 2°C to 8°C boundaries. Temperature variations caused by compressor failures, frequent cold room door openings during loading, or localized thermal gradients remain undetected by single-point wall sensors. Failure to prove continuous temperature integrity leads to batch destruction and CDSCO inspection bans.",
@@ -9816,7 +9816,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Pharmaceutical distribution hubs and vaccine cold storage warehouses in India face catastrophic financial losses and regulatory disqualification if sensitive biologics and vaccines experience thermal excursions outside strict 2°C to 8°C boundaries. Temperature variations caused by compressor failures, frequent cold room door openings during loading, or localized thermal gradients remain undetected by single-point wall sensors. Failure to prove continuous temperature integrity leads to batch destruction and CDSCO inspection bans.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs"
     },
     "blocks": [
@@ -9849,7 +9849,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero vaccine or biological inventory batch destruction across monitored facilities."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs",
         "layout": "left-copy"
       },
@@ -9863,7 +9863,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -9889,7 +9889,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero vaccine or biological inventory batch destruction across monitored facilities."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Pharmaceutical Cold Chain Vaccine Warehouse Multi-Point IoT Temperature Telemetry for Logistics Hubs Performance Telemetry",
         "layout": "centered-card"
       }
@@ -9982,7 +9982,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate zero-rated invoice verification for Special Economic Zone (SEZ) supplies in Tally Prime, validating Form I endorsement certificates and SEZ Online portal integration in Hyderabad.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad",
     "paragraphs": [
       "Information Technology hardware vendors, facility management firms, and service contractors supplying units inside Special Economic Zones (SEZs) in Hyderabad (such as HITEC City and Gachibowli) face complex tax withholding risks. Under GST rules, supplies to SEZ developers and units qualify as zero-rated supplies without tax only if supported by authorized operations endorsements from SEZ customs officers. Billing errors or missing endorsement certificates lead to frozen GST refunds and tax demand notices.",
@@ -10078,7 +10078,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Information Technology hardware vendors, facility management firms, and service contractors supplying units inside Special Economic Zones (SEZs) in Hyderabad (such as HITEC City and Gachibowli) face complex tax withholding risks. Under GST rules, supplies to SEZ developers and units qualify as zero-rated supplies without tax only if supported by authorized operations endorsements from SEZ customs officers. Billing errors or missing endorsement certificates lead to frozen GST refunds and tax demand notices.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad"
     },
     "blocks": [
@@ -10111,7 +10111,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual document verification with automated SEZ portal handshakes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad",
         "layout": "left-copy"
       },
@@ -10125,7 +10125,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -10151,7 +10151,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual document verification with automated SEZ portal handshakes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Cross-Border SEZ Supply Zero-Rated Invoice Verification Agents in Tally for IT Parks in Hyderabad Performance Telemetry",
         "layout": "centered-card"
       }
@@ -10244,7 +10244,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Reconcile corporate credit card expense statements with employee receipts and Tally Prime ledgers in Gurgaon, automating GST input tax credit (ITC) recovery with 99.8% precision.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon",
     "paragraphs": [
       "Corporate enterprises and multinational capability centers in Gurgaon process thousands of employee corporate credit card transactions monthly for travel, client entertainment, SaaS software subscriptions, and hotel bookings. Manually matching bank card statements against paper receipts, taxi bills, and hotel invoices takes weeks of accounts payable labor. Missing vendor tax invoices and uncaptured GSTINs cause companies to forfeit millions in eligible Goods and Services Tax (GST) input tax credits annually.",
@@ -10340,7 +10340,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Corporate enterprises and multinational capability centers in Gurgaon process thousands of employee corporate credit card transactions monthly for travel, client entertainment, SaaS software subscriptions, and hotel bookings. Manually matching bank card statements against paper receipts, taxi bills, and hotel invoices takes weeks of accounts payable labor. Missing vendor tax invoices and uncaptured GSTINs cause companies to forfeit millions in eligible Goods and Services Tax (GST) input tax credits annually.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon"
     },
     "blocks": [
@@ -10373,7 +10373,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Exact debit-credit equilibrium across departmental cost center ledgers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon",
         "layout": "left-copy"
       },
@@ -10387,7 +10387,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
         "layout": "right-copy"
       },
@@ -10413,7 +10413,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Exact debit-credit equilibrium across departmental cost center ledgers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated Corporate Credit Card Expense Report Reconciliation Agents with Tally Prime in Gurgaon Performance Telemetry",
         "layout": "centered-card"
       }
@@ -10506,7 +10506,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy on-premise DeepSeek V3 clusters in healthcare facilities, guaranteeing zero data leakage under HIPAA Safe Harbor and the Digital Information Security in Healthcare Act (DISHA).",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance",
     "paragraphs": [
       "Large tertiary hospitals and medical research institutes in India face severe compliance liability when exploring clinical generative AI for doctor-patient encounter transcription and clinical note generation. Sending patient medical histories, diagnostic imaging notes, and prescription orders to third-party commercial cloud APIs violates statutory medical confidentiality under DISHA 2023 and HIPAA Safe Harbor standards. Cloud network outages in critical care units halt real-time clinical summarization, endangering patient outcomes.",
@@ -10602,7 +10602,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Large tertiary hospitals and medical research institutes in India face severe compliance liability when exploring clinical generative AI for doctor-patient encounter transcription and clinical note generation. Sending patient medical histories, diagnostic imaging notes, and prescription orders to third-party commercial cloud APIs violates statutory medical confidentiality under DISHA 2023 and HIPAA Safe Harbor standards. Cloud network outages in critical care units halt real-time clinical summarization, endangering patient outcomes.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance"
     },
     "blocks": [
@@ -10635,7 +10635,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Reduces manual EHR data entry from 2.5 hours daily to under 30 minutes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance",
         "layout": "left-copy"
       },
@@ -10649,7 +10649,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -10675,7 +10675,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Reduces manual EHR data entry from 2.5 hours daily to under 30 minutes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign On-Premise DeepSeek V3 Clusters for Healthcare HIPAA and DISHA Compliance Performance Telemetry",
         "layout": "centered-card"
       }
@@ -10768,7 +10768,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy air-gapped clinical language models within private VPCs for multi-hospital trusts, providing real-time telemetry and strict data localization compliant with Indian health data mandates.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts",
     "paragraphs": [
       "Multi-hospital healthcare trusts managing hospital networks across multiple Indian cities struggle to deploy unified clinical intelligence copilots without exposing patient health records to public cloud security risks. Inter-hospital data sharing for rare disease consultations and oncology tumor boards is hindered by strict data protection laws and hospital trust fiduciaries. Centralized public cloud LLMs risk massive data breaches and fail during wide-area network fiber cuts.",
@@ -10864,7 +10864,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Multi-hospital healthcare trusts managing hospital networks across multiple Indian cities struggle to deploy unified clinical intelligence copilots without exposing patient health records to public cloud security risks. Inter-hospital data sharing for rare disease consultations and oncology tumor boards is hindered by strict data protection laws and hospital trust fiduciaries. Centralized public cloud LLMs risk massive data breaches and fail during wide-area network fiber cuts.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts"
     },
     "blocks": [
@@ -10897,7 +10897,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero cross-branch data leakage certified by cryptographic access tokens."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts",
         "layout": "left-copy"
       },
@@ -10911,7 +10911,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -10937,7 +10937,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero cross-branch data leakage certified by cryptographic access tokens."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Private VPC Air-Gapped Clinical LLM Deployment Telemetry for Hospital Trusts Performance Telemetry",
         "layout": "centered-card"
       }
@@ -11030,7 +11030,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Fine-tune open-weight Llama-3 models on proprietary drug discovery datasets within on-premise Hyderabad pharmaceutical laboratories, protecting multi-million-dollar chemical synthesis IP.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "On-Premise Llama-3 Fine-Tuning and Sovereign Inference Telemetry for Hyderabad Pharmaceutical R&D",
     "paragraphs": [
       "Pharmaceutical research and development enterprises in Hyderabad's Genome Valley face existential intellectual property risks when using commercial AI platforms for molecular synthesis planning and clinical trial design. Uploading proprietary chemical structures, biological assay results, and novel drug formulation patents to third-party cloud APIs risks catastrophic industrial espionage and invalidates patent novelty claims under international patent treaties.",
@@ -11126,7 +11126,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Pharmaceutical research and development enterprises in Hyderabad's Genome Valley face existential intellectual property risks when using commercial AI platforms for molecular synthesis planning and clinical trial design. Uploading proprietary chemical structures, biological assay results, and novel drug formulation patents to third-party cloud APIs risks catastrophic industrial espionage and invalidates patent novelty claims under international patent treaties.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "On-Premise Llama-3 Fine-Tuning and Sovereign Inference Telemetry for Hyderabad Pharmaceutical R&D"
     },
     "blocks": [
@@ -11159,7 +11159,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete physical and network isolation within company research laboratory."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "On-Premise Llama-3 Fine-Tuning and Sovereign Inference Telemetry for Hyderabad Pharmaceutical R&D",
         "layout": "left-copy"
       },
@@ -11173,7 +11173,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -11199,7 +11199,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete physical and network isolation within company research laboratory."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "On-Premise Llama-3 Fine-Tuning and Sovereign Inference Telemetry for Hyderabad Pharmaceutical R&D Performance Telemetry",
         "layout": "centered-card"
       }
@@ -11292,7 +11292,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Stream real-time biomedical sensor telemetry from MRI, CT, and ventilator fleets, predicting critical equipment failure 14 days in advance to guarantee 99.8% hospital uptime SLAs.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering",
     "paragraphs": [
       "Tertiary hospital chains and critical care centers suffer severe clinical disruptions and patient safety risks when diagnostic MRI scanners, CT machines, and ICU ventilators experience unexpected mechanical breakdowns. Traditional scheduled maintenance routines fail to detect internal vacuum leaks, helium boil-off surges, or capacitor degradation between annual service visits. Sudden equipment downtime in emergency departments forces patient diversions and breaches statutory NABH accreditation uptime standards.",
@@ -11388,7 +11388,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Tertiary hospital chains and critical care centers suffer severe clinical disruptions and patient safety risks when diagnostic MRI scanners, CT machines, and ICU ventilators experience unexpected mechanical breakdowns. Traditional scheduled maintenance routines fail to detect internal vacuum leaks, helium boil-off surges, or capacitor degradation between annual service visits. Sudden equipment downtime in emergency departments forces patient diversions and breaches statutory NABH accreditation uptime standards.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering"
     },
     "blocks": [
@@ -11421,7 +11421,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Eliminates unscheduled diagnostic equipment breakdowns in emergency wards."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering",
         "layout": "left-copy"
       },
@@ -11435,7 +11435,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -11461,7 +11461,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Eliminates unscheduled diagnostic equipment breakdowns in emergency wards."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Biomedical Equipment Preventive Maintenance and Uptime SLA Telemetry for Clinical Engineering Performance Telemetry",
         "layout": "centered-card"
       }
@@ -11554,7 +11554,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Partition long-sequence attention weights across multi-year patient Electronic Health Records (EHR), analyzing 250,000+ token longitudinal medical histories in sub-120ms without VRAM overflow.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots",
     "paragraphs": [
       "Hospital clinical informatics teams attempting to deploy AI clinical copilots face insurmountable GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
@@ -11650,7 +11650,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Hospital clinical informatics teams attempting to deploy AI clinical copilots face insurmountable GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots"
     },
     "blocks": [
@@ -11683,7 +11683,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Accelerates physician preparation time before complex outpatient consultations."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots",
         "layout": "left-copy"
       },
@@ -11697,7 +11697,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -11723,7 +11723,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Accelerates physician preparation time before complex outpatient consultations."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots Performance Telemetry",
         "layout": "centered-card"
       }
@@ -11816,7 +11816,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Accelerate emergency room patient triage using column-linear attention weight partitioning, delivering real-time patient acuity scoring in sub-25ms during high-volume trauma surges.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Column-Linear Attention Weight Partitioners for Hospital Clinical Triage Copilots",
     "paragraphs": [
       "Emergency departments and acute trauma resuscitation units in Indian tertiary hospitals face life-or-death decision bottlenecks during multi-casualty disasters and peak evening intake surges. Triage nurses and emergency physicians must rapidly assess vitals, Glasgow Coma Scale scores, trauma mechanisms, and underlying comorbidities for dozens of arriving patients simultaneously. Slow clinical algorithms exceeding 500ms create unacceptable delays in identifying deteriorating patients.",
@@ -11912,7 +11912,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Emergency departments and acute trauma resuscitation units in Indian tertiary hospitals face life-or-death decision bottlenecks during multi-casualty disasters and peak evening intake surges. Triage nurses and emergency physicians must rapidly assess vitals, Glasgow Coma Scale scores, trauma mechanisms, and underlying comorbidities for dozens of arriving patients simultaneously. Slow clinical algorithms exceeding 500ms create unacceptable delays in identifying deteriorating patients.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Column-Linear Attention Weight Partitioners for Hospital Clinical Triage Copilots"
     },
     "blocks": [
@@ -11945,7 +11945,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Identifies early clinical deterioration before emergency ward decompensation."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Column-Linear Attention Weight Partitioners for Hospital Clinical Triage Copilots",
         "layout": "left-copy"
       },
@@ -11959,7 +11959,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -11985,7 +11985,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Identifies early clinical deterioration before emergency ward decompensation."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Column-Linear Attention Weight Partitioners for Hospital Clinical Triage Copilots Performance Telemetry",
         "layout": "centered-card"
       }
@@ -12078,7 +12078,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate adverse drug reaction (ADR) detection and MedDRA coding across clinical trial records, classifying critical safety events in sub-45ms under CDSCO and FDA FAERS mandates.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads",
     "paragraphs": [
       "Pharmaceutical drug sponsors and clinical research organizations (CROs) in India process thousands of adverse event reports, post-marketing spontaneous complaints, and patient registries weekly. Pharmacovigilance safety teams spend weeks manually reading unstructured physician notes, determining drug causality, and mapping reported side effects to the Medical Dictionary for Regulatory Activities (MedDRA). Regulatory delays in reporting Serious Adverse Events (SAEs) within statutory 7-day or 15-day windows trigger clinical trial suspensions and massive regulatory fines.",
@@ -12174,7 +12174,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Pharmaceutical drug sponsors and clinical research organizations (CROs) in India process thousands of adverse event reports, post-marketing spontaneous complaints, and patient registries weekly. Pharmacovigilance safety teams spend weeks manually reading unstructured physician notes, determining drug causality, and mapping reported side effects to the Medical Dictionary for Regulatory Activities (MedDRA). Regulatory delays in reporting Serious Adverse Events (SAEs) within statutory 7-day or 15-day windows trigger clinical trial suspensions and massive regulatory fines.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads"
     },
     "blocks": [
@@ -12207,7 +12207,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete case triage to E2B XML compilation vs 14 days manual review."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads",
         "layout": "left-copy"
       },
@@ -12221,7 +12221,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -12247,7 +12247,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete case triage to E2B XML compilation vs 14 days manual review."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Pharmacovigilance Adverse Event Triage State Machines for Clinical Safety Leads Performance Telemetry",
         "layout": "centered-card"
       }
@@ -12340,7 +12340,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Disaggregate compute-heavy prefill and memory-heavy decode workloads across separate GPU nodes, bounding clinical audio transcription and consultation note generation to sub-35ms.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots",
     "paragraphs": [
       "Hospital clinical workstations deploying real-time ambient AI scribes suffer from severe performance trade-offs when multi-user consultation recordings stream concurrently. Processing lengthy initial consultation audio transcripts requires massive compute-bound prompt prefill, which starves subsequent token decode operations of GPU memory bandwidth. During busy outpatient clinic hours, doctors experience jarring 1,500ms pauses in conversational synthesis, disrupting the doctor-patient dialogue.",
@@ -12436,7 +12436,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Hospital clinical workstations deploying real-time ambient AI scribes suffer from severe performance trade-offs when multi-user consultation recordings stream concurrently. Processing lengthy initial consultation audio transcripts requires massive compute-bound prompt prefill, which starves subsequent token decode operations of GPU memory bandwidth. During busy outpatient clinic hours, doctors experience jarring 1,500ms pauses in conversational synthesis, disrupting the doctor-patient dialogue.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots"
     },
     "blocks": [
@@ -12469,7 +12469,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Higher throughput per GPU dollar compared to monolithic inference servers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots",
         "layout": "left-copy"
       },
@@ -12483,7 +12483,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -12509,7 +12509,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Higher throughput per GPU dollar compared to monolithic inference servers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Disaggregated Prefill-Decode Schedulers for Hospital Clinical Triage Copilots Performance Telemetry",
         "layout": "centered-card"
       }
@@ -12602,7 +12602,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Coordinate pipeline-parallel clinical triage copilots using 1F1B micro-batching, eliminating GPU memory stalls during mass-casualty emergency admissions.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots",
     "paragraphs": [
       "Emergency department trauma centers and disaster response networks in Indian hospitals experience sudden, massive influxes of concurrent patient admissions during train derailments, industrial factory explosions, or epidemic outbreaks. Pipeline-parallel deep learning models serving emergency triage struggle with unpredictable memory bubbles and activation spikes during burst concurrency. Uncoordinated batching causes catastrophic GPU out-of-memory crashes precisely when clinical decision support is most critical.",
@@ -12698,7 +12698,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Emergency department trauma centers and disaster response networks in Indian hospitals experience sudden, massive influxes of concurrent patient admissions during train derailments, industrial factory explosions, or epidemic outbreaks. Pipeline-parallel deep learning models serving emergency triage struggle with unpredictable memory bubbles and activation spikes during burst concurrency. Uncoordinated batching causes catastrophic GPU out-of-memory crashes precisely when clinical decision support is most critical.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots"
     },
     "blocks": [
@@ -12731,7 +12731,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Deterministic low-latency scoring during peak hospital admission bursts."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots",
         "layout": "left-copy"
       },
@@ -12745,7 +12745,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -12771,7 +12771,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Deterministic low-latency scoring during peak hospital admission bursts."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "1F1B Micro-Batching Coordinators for Hospital Clinical Triage Copilots Performance Telemetry",
         "layout": "centered-card"
       }
@@ -12864,7 +12864,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy 100B-parameter multimodal radiology reasoning agents across PACS networks, generating preliminary diagnostic reports for CT and MRI scans in sub-140ms with zero memory remanence.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "100B-Parameter Medical Imaging Multimodal Agent Deployment Architectures",
     "paragraphs": [
       "Diagnostic radiology departments and tertiary imaging centers in India face massive backlogs of diagnostic CT, MRI, and X-ray scans. Radiologists spend hours reviewing thousands of volumetric slices per patient, leading to diagnostic fatigue and delayed reporting for critical stroke, hemorrhage, or trauma cases. Standard multimodal vision-language models lack the parameter capacity to resolve sub-millimeter anatomical lesions and introduce catastrophic hallucinations when generating radiological findings.",
@@ -12960,7 +12960,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Diagnostic radiology departments and tertiary imaging centers in India face massive backlogs of diagnostic CT, MRI, and X-ray scans. Radiologists spend hours reviewing thousands of volumetric slices per patient, leading to diagnostic fatigue and delayed reporting for critical stroke, hemorrhage, or trauma cases. Standard multimodal vision-language models lack the parameter capacity to resolve sub-millimeter anatomical lesions and introduce catastrophic hallucinations when generating radiological findings.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "100B-Parameter Medical Imaging Multimodal Agent Deployment Architectures"
     },
     "blocks": [
@@ -12993,7 +12993,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Accelerates preliminary turnaround from 24 hours to under 2 minutes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "100B-Parameter Medical Imaging Multimodal Agent Deployment Architectures",
         "layout": "left-copy"
       },
@@ -13007,7 +13007,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -13033,7 +13033,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Accelerates preliminary turnaround from 24 hours to under 2 minutes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "100B-Parameter Medical Imaging Multimodal Agent Deployment Architectures Performance Telemetry",
         "layout": "centered-card"
       }
@@ -13126,7 +13126,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Sanitize Electronic Health Records for clinical trial registries with cryptographic k-anonymity and differential privacy, preventing linkage and re-identification attacks under DISHA mandates.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries",
     "paragraphs": [
       "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Sophisticated adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
@@ -13222,7 +13222,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Sophisticated adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries"
     },
     "blocks": [
@@ -13255,7 +13255,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Preserves epidemiological statistical integrity while removing patient identity."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries",
         "layout": "left-copy"
       },
@@ -13269,7 +13269,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -13295,7 +13295,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Preserves epidemiological statistical integrity while removing patient identity."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries Performance Telemetry",
         "layout": "centered-card"
       }
@@ -13388,7 +13388,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Isolate medical devices and IoT infusion pumps behind zero-trust microsegmentation perimeters, blocking lateral ransomware propagation across hospital networks in sub-1.5ms.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering",
     "paragraphs": [
       "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
@@ -13484,7 +13484,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Modern hospital networks connect thousands of unmanaged Internet of Medical Things (IoMT) devices, including smart infusion pumps, patient vitals monitors, dialysis machines, and anesthesia workstations. These devices run legacy embedded operating systems with unpatched vulnerabilities, hardcoded passwords, and zero native endpoint security. Cyber extortion syndicates exploit these medical devices as beachheads to propagate ransomware across hospital networks, threatening patient lives and shutting down critical surgeries.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering"
     },
     "blocks": [
@@ -13517,7 +13517,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero clinical downtime during automated security containment actions."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering",
         "layout": "left-copy"
       },
@@ -13531,7 +13531,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -13557,7 +13557,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero clinical downtime during automated security containment actions."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Zero-Trust Network Microsegmentation and Medical Device IoT Defense Telemetry for Biomedical Engineering Performance Telemetry",
         "layout": "centered-card"
       }
@@ -13650,7 +13650,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Accelerate hospital inpatient discharge turnaround from 6 hours to under 45 minutes, automating home medication reconciliation and discharge summary generation in private clinics.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Hospital Inpatient Discharge Turnaround Acceleration and Pharmacy Reconciliation Telemetry for Private Clinics",
     "paragraphs": [
       "Private hospitals and multi-specialty surgical clinics in India face severe patient dissatisfaction and bed utilization bottlenecks due to prolonged inpatient discharge cycles. Patients medically cleared for discharge routinely wait 4 to 8 hours in hospital rooms while resident doctors manually draft discharge summaries, pharmacists reconcile home medications, and billing desks calculate insurance copays. This administrative gridlock delays new emergency admissions and inflates hospital bed turnover costs.",
@@ -13746,7 +13746,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Private hospitals and multi-specialty surgical clinics in India face severe patient dissatisfaction and bed utilization bottlenecks due to prolonged inpatient discharge cycles. Patients medically cleared for discharge routinely wait 4 to 8 hours in hospital rooms while resident doctors manually draft discharge summaries, pharmacists reconcile home medications, and billing desks calculate insurance copays. This administrative gridlock delays new emergency admissions and inflates hospital bed turnover costs.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Hospital Inpatient Discharge Turnaround Acceleration and Pharmacy Reconciliation Telemetry for Private Clinics"
     },
     "blocks": [
@@ -13779,7 +13779,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Automated cross-checking eliminating duplicate prescriptions and drug interactions."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Inpatient Discharge Turnaround Acceleration and Pharmacy Reconciliation Telemetry for Private Clinics",
         "layout": "left-copy"
       },
@@ -13793,7 +13793,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -13819,7 +13819,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Automated cross-checking eliminating duplicate prescriptions and drug interactions."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Inpatient Discharge Turnaround Acceleration and Pharmacy Reconciliation Telemetry for Private Clinics Performance Telemetry",
         "layout": "centered-card"
       }
@@ -13912,7 +13912,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate medical peer review and mortality committee dossier compilation, reconstructing clinical deterioration timelines with root-cause analytics under NABH governance mandates.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance",
     "paragraphs": [
       "Hospital clinical governance committees and medical quality directors spend hundreds of hours manually preparing medical peer review files, morbidity audits, and mortality committee review dossiers. Reconstructing clinical timelines across multi-volume patient charts, ICU nursing flows, pharmacy dispensing logs, and code blue resuscitation sheets is grueling and prone to human oversight. Delays in completing statutory peer reviews jeopardize hospital NABH accreditation and expose healthcare institutions to medical malpractice liability.",
@@ -14008,7 +14008,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Hospital clinical governance committees and medical quality directors spend hundreds of hours manually preparing medical peer review files, morbidity audits, and mortality committee review dossiers. Reconstructing clinical timelines across multi-volume patient charts, ICU nursing flows, pharmacy dispensing logs, and code blue resuscitation sheets is grueling and prone to human oversight. Delays in completing statutory peer reviews jeopardize hospital NABH accreditation and expose healthcare institutions to medical malpractice liability.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance"
     },
     "blocks": [
@@ -14041,7 +14041,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete documentation satisfying mandatory clinical audit accreditation standards."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance",
         "layout": "left-copy"
       },
@@ -14055,7 +14055,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -14081,7 +14081,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete documentation satisfying mandatory clinical audit accreditation standards."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automated Medical Peer Review and Mortality Committee Dossier Preparation Telemetry for Hospital Governance Performance Telemetry",
         "layout": "centered-card"
       }
@@ -14174,7 +14174,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Calibrate Gaussian mechanism noise multipliers ($\\sigma$) for Electronic Health Record vector embeddings, bounding differential privacy loss ($\\epsilon, \\delta$) during federated clinical analytics.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Gaussian Mechanism Noise Multiplier Sigma Calibration Telemetry for Electronic Health Record (EHR) Embeddings",
     "paragraphs": [
       "Medical research institutes and pharmaceutical AI consortia sharing Electronic Health Record (EHR) vector embeddings for clinical model pre-training face severe privacy leakage risks. High-dimensional vector embeddings generated from patient medical histories can be inverted using generative reconstruction attacks, recovering sensitive patient diagnoses, HIV status, or rare genetic mutations. Ad-hoc noise injection either destroys clinical analytical utility or fails to mathematically guarantee privacy against membership inference attacks.",
@@ -14270,7 +14270,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Medical research institutes and pharmaceutical AI consortia sharing Electronic Health Record (EHR) vector embeddings for clinical model pre-training face severe privacy leakage risks. High-dimensional vector embeddings generated from patient medical histories can be inverted using generative reconstruction attacks, recovering sensitive patient diagnoses, HIV status, or rare genetic mutations. Ad-hoc noise injection either destroys clinical analytical utility or fails to mathematically guarantee privacy against membership inference attacks.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Gaussian Mechanism Noise Multiplier Sigma Calibration Telemetry for Electronic Health Record (EHR) Embeddings"
     },
     "blocks": [
@@ -14303,7 +14303,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time Renyi privacy loss computation per embedding batch release."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Gaussian Mechanism Noise Multiplier Sigma Calibration Telemetry for Electronic Health Record (EHR) Embeddings",
         "layout": "left-copy"
       },
@@ -14317,7 +14317,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -14343,7 +14343,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time Renyi privacy loss computation per embedding batch release."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Gaussian Mechanism Noise Multiplier Sigma Calibration Telemetry for Electronic Health Record (EHR) Embeddings Performance Telemetry",
         "layout": "centered-card"
       }
@@ -14436,7 +14436,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate Clinical Establishments Act registration renewals and statutory medical licensing compliance for private hospitals, tracking 150+ statutory operational parameters in real time.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries",
     "paragraphs": [
       "Private hospitals, nursing homes, and diagnostic day-care clinics in India face severe operational shutdown risks and heavy monetary fines if mandatory statutory registrations expire. Compliance mandates under the Clinical Establishments (Registration and Regulation) Act, biomedical waste management authorizations, pharmacy drug licenses, fire safety NOCs, and AERB radiological approvals require tracking hundreds of expiring certificates across multiple municipal and state health authorities. Inadvertent renewal lapses force hospital sealing and patient evacuations.",
@@ -14532,7 +14532,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Private hospitals, nursing homes, and diagnostic day-care clinics in India face severe operational shutdown risks and heavy monetary fines if mandatory statutory registrations expire. Compliance mandates under the Clinical Establishments (Registration and Regulation) Act, biomedical waste management authorizations, pharmacy drug licenses, fire safety NOCs, and AERB radiological approvals require tracking hundreds of expiring certificates across multiple municipal and state health authorities. Inadvertent renewal lapses force hospital sealing and patient evacuations.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries"
     },
     "blocks": [
@@ -14565,7 +14565,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual Excel calendar tracking with automated statutory state machines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries",
         "layout": "left-copy"
       },
@@ -14579,7 +14579,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -14605,7 +14605,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Replaces manual Excel calendar tracking with automated statutory state machines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries Performance Telemetry",
         "layout": "centered-card"
       }
@@ -14698,7 +14698,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Monitor hospital pharmacy biological refrigerators in real time between 2°C and 8°C, guaranteeing insulin and monoclonal antibody molecular stability with automated excursion mitigation.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists",
     "paragraphs": [
       "Hospital central pharmacies and ward medication storage refrigerators in India store millions of rupees worth of temperature-sensitive biologicals, insulin analogs, chemotherapy agents, and blood products. Undetected refrigerator compressor failures, frequent door openings by nursing staff, or power transfer glitches cause temperature spikes outside the mandatory 2°C to 8°C storage range. Exposure to room temperature causes protein denaturation and molecular degradation in insulin, leading to therapeutic failure in diabetic patients and massive inventory write-offs.",
@@ -14794,7 +14794,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Hospital central pharmacies and ward medication storage refrigerators in India store millions of rupees worth of temperature-sensitive biologicals, insulin analogs, chemotherapy agents, and blood products. Undetected refrigerator compressor failures, frequent door openings by nursing staff, or power transfer glitches cause temperature spikes outside the mandatory 2°C to 8°C storage range. Exposure to room temperature causes protein denaturation and molecular degradation in insulin, leading to therapeutic failure in diabetic patients and massive inventory write-offs.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists"
     },
     "blocks": [
@@ -14827,7 +14827,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Guaranteed zero insulin or biological medication loss across monitored refrigerators."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists",
         "layout": "left-copy"
       },
@@ -14841,7 +14841,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -14867,7 +14867,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Guaranteed zero insulin or biological medication loss across monitored refrigerators."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists Performance Telemetry",
         "layout": "centered-card"
       }
@@ -14960,7 +14960,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate ICD-10-CM and CPT diagnostic coding from physician clinical documentation, eliminating insurance claim rejections and coding discrepancies in sub-45ms.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers",
     "paragraphs": [
       "Hospital revenue cycle departments and medical billing controllers in private healthcare networks lose billions of rupees annually to insurance claim rejections, down-coding, and delayed TPA pre-authorization clearances. Medical coders manually reading multi-page operative notes, discharge summaries, and pathology reports struggle to assign precise 7-character ICD-10-CM diagnostic codes and CPT procedure codes. Inconsistent coding or unbundled procedure codes trigger claim denials from health insurance TPAs and statutory scrutiny under PM-JAY guidelines.",
@@ -15056,7 +15056,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Hospital revenue cycle departments and medical billing controllers in private healthcare networks lose billions of rupees annually to insurance claim rejections, down-coding, and delayed TPA pre-authorization clearances. Medical coders manually reading multi-page operative notes, discharge summaries, and pathology reports struggle to assign precise 7-character ICD-10-CM diagnostic codes and CPT procedure codes. Inconsistent coding or unbundled procedure codes trigger claim denials from health insurance TPAs and statutory scrutiny under PM-JAY guidelines.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers"
     },
     "blocks": [
@@ -15089,7 +15089,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Reduces billing turnaround from 10 business days to under 1 hour."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers",
         "layout": "left-copy"
       },
@@ -15103,7 +15103,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -15129,7 +15129,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Reduces billing turnaround from 10 business days to under 1 hour."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "ICD-10-CM Automated Diagnostic Coding and Clinical Discrepancy Telemetry for Medical Billing Controllers Performance Telemetry",
         "layout": "centered-card"
       }
@@ -15222,7 +15222,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Detect clinical diagnostic model drift and calibrate AI pathology classifiers against ground-truth biopsy outcomes in real time, preventing diagnostic misclassification in clinical laboratories.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology",
     "paragraphs": [
       "Clinical pathology laboratories and diagnostic imaging centers deploying deep learning computer vision models for digital pathology, cytology, and automated blood smear analysis face severe diagnostic drift risks. Variations in histological tissue staining protocols (H&E stain batch differences), optical microscope camera sensor degradation, or shifting patient demographic baselines cause subtle performance degradation over time. Unmonitored model drift leads to false-negative cancer misclassifications and catastrophic patient misdiagnoses.",
@@ -15318,7 +15318,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Clinical pathology laboratories and diagnostic imaging centers deploying deep learning computer vision models for digital pathology, cytology, and automated blood smear analysis face severe diagnostic drift risks. Variations in histological tissue staining protocols (H&E stain batch differences), optical microscope camera sensor degradation, or shifting patient demographic baselines cause subtle performance degradation over time. Unmonitored model drift leads to false-negative cancer misclassifications and catastrophic patient misdiagnoses.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology"
     },
     "blocks": [
@@ -15351,7 +15351,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete documentation satisfying NABL ISO 15189 quality standards."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology",
         "layout": "left-copy"
       },
@@ -15365,7 +15365,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -15391,7 +15391,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete documentation satisfying NABL ISO 15189 quality standards."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Medical AI Diagnostic Model Drift and Clinical Ground Truth Calibration Telemetry for Clinical Pathology Performance Telemetry",
         "layout": "centered-card"
       }
@@ -15484,7 +15484,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Decrypt Ayushman Bharat Digital Mission (ABDM) Milestone 3 consent artifacts and FHIR health records in sub-45ms, validating patient cryptographic signatures with zero key exposure.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers",
     "paragraphs": [
       "Clinical diagnostic centers, pathology laboratory chains, and private hospitals participating in the Ayushman Bharat Digital Mission (ABDM) face complex cryptographic integration requirements when acting as Health Information Users (HIU). When a patient grants consent via their ABHA mobile app to share historical medical records, the diagnostic center must retrieve encrypted health information, validate the digital signature of the consent artifact, and decrypt multi-source FHIR bundles using Ephemeral Diffie-Hellman (ECDH) key exchanges. Cryptographic handshake timeouts delay patient consultations and violate National Health Authority (NHA) performance standards.",
@@ -15580,7 +15580,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Clinical diagnostic centers, pathology laboratory chains, and private hospitals participating in the Ayushman Bharat Digital Mission (ABDM) face complex cryptographic integration requirements when acting as Health Information Users (HIU). When a patient grants consent via their ABHA mobile app to share historical medical records, the diagnostic center must retrieve encrypted health information, validate the digital signature of the consent artifact, and decrypt multi-source FHIR bundles using Ephemeral Diffie-Hellman (ECDH) key exchanges. Cryptographic handshake timeouts delay patient consultations and violate National Health Authority (NHA) performance standards.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers"
     },
     "blocks": [
@@ -15613,7 +15613,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "High-concurrency support for nationwide diagnostic laboratory chains."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers",
         "layout": "left-copy"
       },
@@ -15627,7 +15627,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
         "layout": "right-copy"
       },
@@ -15653,7 +15653,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "High-concurrency support for nationwide diagnostic laboratory chains."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "ABDM M3 Health Information User Consent Artifact Decryption Telemetry for Clinical Diagnostic Centers Performance Telemetry",
         "layout": "centered-card"
       }
@@ -15746,7 +15746,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy air-gapped edge IoT SCADA gateways synchronizing shopfloor programmable logic controllers with SAP S/4HANA ERP systems in sub-12 milliseconds.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises",
     "paragraphs": [
       "Electronics and precision manufacturing facilities across Electronic City, Bangalore, face severe data synchronization gaps between operational technology (OT) sensor rings and enterprise resource planning (ERP) systems. Legacy SCADA systems log millions of telemetry ticks from Siemens and Allen-Bradley PLCs, but manual batch synchronization into SAP S/4HANA causes hours of latency, causing blind inventory allocation, phantom stockouts, and uncoordinated production scheduling.",
@@ -15842,7 +15842,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Electronics and precision manufacturing facilities across Electronic City, Bangalore, face severe data synchronization gaps between operational technology (OT) sensor rings and enterprise resource planning (ERP) systems. Legacy SCADA systems log millions of telemetry ticks from Siemens and Allen-Bradley PLCs, but manual batch synchronization into SAP S/4HANA causes hours of latency, causing blind inventory allocation, phantom stockouts, and uncoordinated production scheduling.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises"
     },
     "blocks": [
@@ -15875,7 +15875,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Continuous operational telemetry with automated offline WAL recovery."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises",
         "layout": "left-copy"
       },
@@ -15889,7 +15889,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -15915,7 +15915,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Continuous operational telemetry with automated offline WAL recovery."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises Performance Telemetry",
         "layout": "centered-card"
       }
@@ -16008,7 +16008,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy ultra-low-latency machine vision defect classification telemetry inspecting SMT printed circuit board assemblies with sub-8ms optical inference.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly",
     "paragraphs": [
       "Surface mount technology (SMT) manufacturing lines in Electronic City Phase 1 assemble high-density printed circuit boards (PCBs) carrying microscopic components down to 01005 passives and fine-pitch BGAs. Conventional automated optical inspection (AOI) machines suffer from false call rates exceeding 15%, forcing operators to manually review thousands of benign solder joints, which bottlenecks high-speed pick-and-place lines and increases human escape risks.",
@@ -16104,7 +16104,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Surface mount technology (SMT) manufacturing lines in Electronic City Phase 1 assemble high-density printed circuit boards (PCBs) carrying microscopic components down to 01005 passives and fine-pitch BGAs. Conventional automated optical inspection (AOI) machines suffer from false call rates exceeding 15%, forcing operators to manually review thousands of benign solder joints, which bottlenecks high-speed pick-and-place lines and increases human escape risks.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly"
     },
     "blocks": [
@@ -16137,7 +16137,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Empirically verified across 10 million automated SMT solder joint evaluations."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly",
         "layout": "left-copy"
       },
@@ -16151,7 +16151,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -16177,7 +16177,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Empirically verified across 10 million automated SMT solder joint evaluations."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Electronic City Phase 1 Factory Line Machine Vision Defect Classification Telemetry for SMT Assembly Performance Telemetry",
         "layout": "centered-card"
       }
@@ -16270,7 +16270,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Orchestrate deterministic multi-agent state machines driving just-in-time automotive assembly line sequencing with sub-15ms broadcast coordination.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sovereign Multi-Agent Order State Machine Telemetry for Automotive Manufacturing Just-In-Time Lines",
     "paragraphs": [
       "Automotive assembly plants operating on strict Just-In-Time (JIT) and Just-In-Sequence (JIS) methodologies face catastrophic downtime costs exceeding tens of thousands of dollars per minute if sequencing errors occur. Delivering powertrain, suspension, and interior modules to the main line requires synchronizing hundreds of Tier-1 and Tier-2 component suppliers with minute-by-minute vehicle body shop progressions.",
@@ -16366,7 +16366,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Automotive assembly plants operating on strict Just-In-Time (JIT) and Just-In-Sequence (JIS) methodologies face catastrophic downtime costs exceeding tens of thousands of dollars per minute if sequencing errors occur. Delivering powertrain, suspension, and interior modules to the main line requires synchronizing hundreds of Tier-1 and Tier-2 component suppliers with minute-by-minute vehicle body shop progressions.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Sovereign Multi-Agent Order State Machine Telemetry for Automotive Manufacturing Just-In-Time Lines"
     },
     "blocks": [
@@ -16399,7 +16399,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero sequencing defects across verified multi-shift high-volume vehicle production."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Multi-Agent Order State Machine Telemetry for Automotive Manufacturing Just-In-Time Lines",
         "layout": "left-copy"
       },
@@ -16413,7 +16413,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -16439,7 +16439,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero sequencing defects across verified multi-shift high-volume vehicle production."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Multi-Agent Order State Machine Telemetry for Automotive Manufacturing Just-In-Time Lines Performance Telemetry",
         "layout": "centered-card"
       }
@@ -16532,7 +16532,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Automate SAP S/4HANA work order confirmations from shopfloor PLC pulse counts with real-time scrap reconciliation and zero manual operator data entry.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India",
     "paragraphs": [
       "Indian manufacturing operations in automotive, machining, and heavy engineering struggle with delayed shopfloor reporting. Operators manually enter finished piece counts into SAP terminals at the end of twelve-hour shifts, resulting in inaccurate inventory balances, delayed raw material replenishment, and frequent discrepancies between actual machine output and ERP ledger records.",
@@ -16628,7 +16628,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Indian manufacturing operations in automotive, machining, and heavy engineering struggle with delayed shopfloor reporting. Operators manually enter finished piece counts into SAP terminals at the end of twelve-hour shifts, resulting in inaccurate inventory balances, delayed raw material replenishment, and frequent discrepancies between actual machine output and ERP ledger records.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India"
     },
     "blocks": [
@@ -16661,7 +16661,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Direct productivity reclamation for machine operators and shift supervisors."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India",
         "layout": "left-copy"
       },
@@ -16675,7 +16675,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -16701,7 +16701,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Direct productivity reclamation for machine operators and shift supervisors."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "SAP S/4HANA Manufacturing Work Order Auto-Confirmation Agents Based on Shopfloor PLC Counts in India Performance Telemetry",
         "layout": "centered-card"
       }
@@ -16794,7 +16794,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Enforce strict Purdue Model Level 2 SCADA network isolation for sterile pharmaceutical cleanrooms with air-gapped unidirectional telemetry replication.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities",
     "paragraphs": [
       "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
@@ -16890,7 +16890,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities"
     },
     "blocks": [
@@ -16923,7 +16923,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Continuous SHA-256 hash validation across all historical environmental records."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities",
         "layout": "left-copy"
       },
@@ -16937,7 +16937,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -16963,7 +16963,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Continuous SHA-256 hash validation across all historical environmental records."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Purdue Model Level 2 SCADA Isolation Telemetry for Pharmaceutical Cleanroom Facilities Performance Telemetry",
         "layout": "centered-card"
       }
@@ -17056,7 +17056,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy continuous real-time airborne particle counter telemetry for Grade A aseptic filling lines conforming to EU GMP Annex 1 2022 standards.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites",
     "paragraphs": [
       "Under the revised EU GMP Annex 1 2022 regulations, manufacturers of sterile injectable pharmaceuticals must maintain continuous, non-viable airborne particle counting in Grade A aseptic filling zones. Intermittent spot-checking or batch-end data collection is no longer compliant. Detecting non-viable particles (0.5 µm and 5.0 µm) during vial filling requires instantaneous alerting to prevent sterile drug batch contamination.",
@@ -17152,7 +17152,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Under the revised EU GMP Annex 1 2022 regulations, manufacturers of sterile injectable pharmaceuticals must maintain continuous, non-viable airborne particle counting in Grade A aseptic filling zones. Intermittent spot-checking or batch-end data collection is no longer compliant. Detecting non-viable particles (0.5 µm and 5.0 µm) during vial filling requires instantaneous alerting to prevent sterile drug batch contamination.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites"
     },
     "blocks": [
@@ -17185,7 +17185,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "From threshold excursion detection to physical filling machine stop signal."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites",
         "layout": "left-copy"
       },
@@ -17199,7 +17199,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -17225,7 +17225,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "From threshold excursion detection to physical filling machine stop signal."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Pharmaceutical Sterile Injectable Cleanroom Particle Counter Telemetry for Aseptic Manufacturing Suites Performance Telemetry",
         "layout": "centered-card"
       }
@@ -17318,7 +17318,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Detect micro-environmental wafer fabrication anomalies with multivariate deep learning telemetry analyzing ultra-pure gas, vibration, and cleanroom vacuum streams.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms",
     "paragraphs": [
       "Advanced semiconductor fabrication cleanrooms (Class 1 / ISO Class 3) operate under near-impossible environmental tolerances. Nanometer-scale photolithography and plasma etching processes are vulnerable to microscopic fluctuations: parts-per-billion chemical contamination, milli-Hertz floor vibrations from nearby construction, or millibar fluctuations in vacuum and ultra-pure argon lines can ruin millions of dollars in silicon wafer lots.",
@@ -17414,7 +17414,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Advanced semiconductor fabrication cleanrooms (Class 1 / ISO Class 3) operate under near-impossible environmental tolerances. Nanometer-scale photolithography and plasma etching processes are vulnerable to microscopic fluctuations: parts-per-billion chemical contamination, milli-Hertz floor vibrations from nearby construction, or millibar fluctuations in vacuum and ultra-pure argon lines can ruin millions of dollars in silicon wafer lots.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms"
     },
     "blocks": [
@@ -17447,7 +17447,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Direct scrap prevention via early micro-environmental excursion containment."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms",
         "layout": "left-copy"
       },
@@ -17461,7 +17461,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -17487,7 +17487,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Direct scrap prevention via early micro-environmental excursion containment."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Continuous Telemetry Anomaly Detection Agents for Semiconductor Fabrication Cleanrooms Performance Telemetry",
         "layout": "centered-card"
       }
@@ -17580,7 +17580,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Secure defense factory floor machine telemetry with hardware-enforced mutual TLS 1.3 cryptographic gateways and zero unencrypted OT traffic.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Industrial IoT mTLS 1.3 Encrypted Gateway Agents for Defense Manufacturing Facilities",
     "paragraphs": [
       "Defense manufacturing facilities machining precision aerospace parts, missile components, and tactical radar assemblies operate under stringent military security mandates. Unencrypted industrial protocols such as Modbus, EtherNet/IP, and OPC-DA transmit machine speeds, tool wear coordinates, and CAD-derived CNC g-code in plain text across local factory subnets, making them vulnerable to corporate espionage and unauthorized tampering.",
@@ -17676,7 +17676,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Defense manufacturing facilities machining precision aerospace parts, missile components, and tactical radar assemblies operate under stringent military security mandates. Unencrypted industrial protocols such as Modbus, EtherNet/IP, and OPC-DA transmit machine speeds, tool wear coordinates, and CAD-derived CNC g-code in plain text across local factory subnets, making them vulnerable to corporate espionage and unauthorized tampering.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Industrial IoT mTLS 1.3 Encrypted Gateway Agents for Defense Manufacturing Facilities"
     },
     "blocks": [
@@ -17709,7 +17709,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Fully satisfies defense contractor cybersecurity requirements for OT networks."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Industrial IoT mTLS 1.3 Encrypted Gateway Agents for Defense Manufacturing Facilities",
         "layout": "left-copy"
       },
@@ -17723,7 +17723,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -17749,7 +17749,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Fully satisfies defense contractor cybersecurity requirements for OT networks."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Industrial IoT mTLS 1.3 Encrypted Gateway Agents for Defense Manufacturing Facilities Performance Telemetry",
         "layout": "centered-card"
       }
@@ -17842,7 +17842,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Enforce zero-defect raw material batch traceability with sub-18ms barcode verification and automated scrap rejection for automotive OEM audits.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Raw Material Batch Traceability Barcode Scan Validation Agents for Automotive Tier-1 Audits in Chennai",
     "paragraphs": [
       "Tier-1 automotive component manufacturers in the Oragadam and Sriperumbudur manufacturing corridors of Chennai supply critical engine, braking, and steering sub-assemblies to global OEMs. Using the wrong alloy batch, expired rubber compound, or incorrect fastener grade leads to catastrophic vehicle recalls, severe OEM warranty penalty debits, and loss of IATF 16949 certification.",
@@ -17938,7 +17938,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Tier-1 automotive component manufacturers in the Oragadam and Sriperumbudur manufacturing corridors of Chennai supply critical engine, braking, and steering sub-assemblies to global OEMs. Using the wrong alloy batch, expired rubber compound, or incorrect fastener grade leads to catastrophic vehicle recalls, severe OEM warranty penalty debits, and loss of IATF 16949 certification.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Raw Material Batch Traceability Barcode Scan Validation Agents for Automotive Tier-1 Audits in Chennai"
     },
     "blocks": [
@@ -17971,7 +17971,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instantaneous compilation of full component genealogy and material mill certificates."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Raw Material Batch Traceability Barcode Scan Validation Agents for Automotive Tier-1 Audits in Chennai",
         "layout": "left-copy"
       },
@@ -17985,7 +17985,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -18011,7 +18011,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Instantaneous compilation of full component genealogy and material mill certificates."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Raw Material Batch Traceability Barcode Scan Validation Agents for Automotive Tier-1 Audits in Chennai Performance Telemetry",
         "layout": "centered-card"
       }
@@ -18104,7 +18104,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Auto-generate verified Tally Prime manufacturing journals and inventory consumption vouchers directly from machine PLC cycle counts and MES telemetry.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Tally Bill of Materials (BOM) Manufacturing Journal Auto-Generation from MES PLC Telemetry",
     "paragraphs": [
       "Small and mid-sized manufacturing enterprises (MSMEs) in India rely heavily on Tally Prime for accounting and inventory, but run shopfloor operations on automated PLCs and semi-automated machinery. Financial teams manually compute finished goods output and estimate raw material consumption at week-end, resulting in massive inventory variances, inaccurate cost of goods sold (COGS), and delayed GST reconciliation.",
@@ -18200,7 +18200,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Small and mid-sized manufacturing enterprises (MSMEs) in India rely heavily on Tally Prime for accounting and inventory, but run shopfloor operations on automated PLCs and semi-automated machinery. Financial teams manually compute finished goods output and estimate raw material consumption at week-end, resulting in massive inventory variances, inaccurate cost of goods sold (COGS), and delayed GST reconciliation.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Tally Bill of Materials (BOM) Manufacturing Journal Auto-Generation from MES PLC Telemetry"
     },
     "blocks": [
@@ -18233,7 +18233,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time perpetual inventory eliminates end-of-month manual stock counting delays."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Tally Bill of Materials (BOM) Manufacturing Journal Auto-Generation from MES PLC Telemetry",
         "layout": "left-copy"
       },
@@ -18247,7 +18247,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -18273,7 +18273,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Real-time perpetual inventory eliminates end-of-month manual stock counting delays."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Tally Bill of Materials (BOM) Manufacturing Journal Auto-Generation from MES PLC Telemetry Performance Telemetry",
         "layout": "centered-card"
       }
@@ -18366,7 +18366,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Accelerate deep multi-stage automotive quality inspection reasoning models with speculative tree lookahead search at sub-10ms inference latencies.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits",
     "paragraphs": [
       "Automotive manufacturing plants conduct comprehensive end-of-line quality audits involving complex multi-modal diagnostic reasoning. Deep reasoning neural models evaluating engine acoustic profiles, gap-and-flush laser profiles, and paint thickness measurements suffer from high autoregressive generation latencies, requiring up to 250 milliseconds per token. This inference lag throttles high-speed assembly line conveyor speeds.",
@@ -18462,7 +18462,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Automotive manufacturing plants conduct comprehensive end-of-line quality audits involving complex multi-modal diagnostic reasoning. Deep reasoning neural models evaluating engine acoustic profiles, gap-and-flush laser profiles, and paint thickness measurements suffer from high autoregressive generation latencies, requiring up to 250 milliseconds per token. This inference lag throttles high-speed assembly line conveyor speeds.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits"
     },
     "blocks": [
@@ -18495,7 +18495,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete multi-modal defect diagnosis and root-cause narration."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits",
         "layout": "left-copy"
       },
@@ -18509,7 +18509,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -18535,7 +18535,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete multi-modal defect diagnosis and root-cause narration."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Speculative Tree Lookahead Depth Optimizers for Automotive Factory Quality Audits Performance Telemetry",
         "layout": "centered-card"
       }
@@ -18628,7 +18628,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Translate heterogeneous industrial fieldbus protocols between Modbus TCP, OPC-UA, and PROFINET with sub-10ms deterministic packet conversion.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers",
     "paragraphs": [
       "Modern manufacturing plants operate a fragmented ecosystem of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
@@ -18724,7 +18724,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Modern manufacturing plants operate a fragmented ecosystem of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers"
     },
     "blocks": [
@@ -18757,7 +18757,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Simultaneous active connections per industrial edge translation appliance."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers",
         "layout": "left-copy"
       },
@@ -18771,7 +18771,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -18797,7 +18797,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Simultaneous active connections per industrial edge translation appliance."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers Performance Telemetry",
         "layout": "centered-card"
       }
@@ -18890,7 +18890,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Bridge multi-GPU KV caches over peer-to-peer NVLink interconnects for real-time 3D automotive assembly inspection at 900 GB/s bandwidth.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "P2P NVLink Cross-Instance KV-Cache Bridges for Automotive Factory Quality Audits",
     "paragraphs": [
       "Automotive smart factories perform automated 3D volumetric quality audits using multi-camera arrays and LiDAR scans of vehicle underbodies and chassis frames. Processing these massive point clouds through vision-language-action (VLA) AI models requires multi-GPU inference clusters. When GPU nodes exchange key-value (KV) attention caches over standard PCIe buses or Ethernet switches, bandwidth bottlenecks trigger severe inference latency spikes.",
@@ -18986,7 +18986,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Automotive smart factories perform automated 3D volumetric quality audits using multi-camera arrays and LiDAR scans of vehicle underbodies and chassis frames. Processing these massive point clouds through vision-language-action (VLA) AI models requires multi-GPU inference clusters. When GPU nodes exchange key-value (KV) attention caches over standard PCIe buses or Ethernet switches, bandwidth bottlenecks trigger severe inference latency spikes.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "P2P NVLink Cross-Instance KV-Cache Bridges for Automotive Factory Quality Audits"
     },
     "blocks": [
@@ -19019,7 +19019,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Compared to standard PCIe Gen5 cross-instance KV-cache exchange."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "P2P NVLink Cross-Instance KV-Cache Bridges for Automotive Factory Quality Audits",
         "layout": "left-copy"
       },
@@ -19033,7 +19033,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -19059,7 +19059,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Compared to standard PCIe Gen5 cross-instance KV-cache exchange."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "P2P NVLink Cross-Instance KV-Cache Bridges for Automotive Factory Quality Audits Performance Telemetry",
         "layout": "centered-card"
       }
@@ -19152,7 +19152,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Parse high-frequency Modbus TCP binary packets with sub-4ms micro-second bitfield unpacking for automotive body shop automation lines.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors",
     "paragraphs": [
       "Automotive assembly lines rely on hundreds of distributed Modbus TCP slave devices: pneumatic valve manifolds, nut-runner torque controllers, laser distance sensors, and welding robot controllers. Standard software polling engines experience high CPU context-switching overhead and packet parsing latencies, often missing critical millisecond torque spike events or clamp release confirmation bits.",
@@ -19248,7 +19248,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Automotive assembly lines rely on hundreds of distributed Modbus TCP slave devices: pneumatic valve manifolds, nut-runner torque controllers, laser distance sensors, and welding robot controllers. Standard software polling engines experience high CPU context-switching overhead and packet parsing latencies, often missing critical millisecond torque spike events or clamp release confirmation bits.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors"
     },
     "blocks": [
@@ -19281,7 +19281,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete capture of transient torque spikes and under-torqued fastener anomalies."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors",
         "layout": "left-copy"
       },
@@ -19295,7 +19295,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -19321,7 +19321,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete capture of transient torque spikes and under-torqued fastener anomalies."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors Performance Telemetry",
         "layout": "centered-card"
       }
@@ -19414,7 +19414,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Optimize Mixture-of-Experts (MoE) token dispatch across NVLink interconnects for sub-5ms path-planning robotics inference.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "NVLink Expert Dispatch Latency Optimizers for Automotive Assembly Robotic Arms",
     "paragraphs": [
       "Modern robotic automotive assembly lines employ vision-language-action (VLA) AI models to guide multi-axis robotic arms during windshield installation, door hinging, and battery pack insertion. These large Mixture-of-Experts (MoE) neural architectures distribute specialized experts (e.g., trajectory optimization, obstacle avoidance, force-torque compensation) across multiple GPUs. When expert dispatch requires routing tokens across standard buses, dispatch jitter leads to robotic stutter and takt delays.",
@@ -19510,7 +19510,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Modern robotic automotive assembly lines employ vision-language-action (VLA) AI models to guide multi-axis robotic arms during windshield installation, door hinging, and battery pack insertion. These large Mixture-of-Experts (MoE) neural architectures distribute specialized experts (e.g., trajectory optimization, obstacle avoidance, force-torque compensation) across multiple GPUs. When expert dispatch requires routing tokens across standard buses, dispatch jitter leads to robotic stutter and takt delays.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "NVLink Expert Dispatch Latency Optimizers for Automotive Assembly Robotic Arms"
     },
     "blocks": [
@@ -19543,7 +19543,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Elimination of motion jitter caused by neural inference dispatch latency."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "NVLink Expert Dispatch Latency Optimizers for Automotive Assembly Robotic Arms",
         "layout": "left-copy"
       },
@@ -19557,7 +19557,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -19583,7 +19583,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Elimination of motion jitter caused by neural inference dispatch latency."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "NVLink Expert Dispatch Latency Optimizers for Automotive Assembly Robotic Arms Performance Telemetry",
         "layout": "centered-card"
       }
@@ -19676,7 +19676,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Prune neural decision branches dynamically for real-time SCADA predictive maintenance on turbines, compressors, and hydraulic pumps.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance",
     "paragraphs": [
       "Heavy industrial machinery - including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps - generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
@@ -19772,7 +19772,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Heavy industrial machinery - including steam turbines, high-pressure reciprocating compressors, and centrifugal slurry pumps - generates massive streams of high-frequency SCADA telemetry: bearing temperature gradients, oil lubrication dielectric constants, and multi-axis acoustic emissions. Evaluating complex deep learning health models across thousands of operational parameters requires immense computing power, often lagging behind rapid catastrophic failure modes.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance"
     },
     "blocks": [
@@ -19805,7 +19805,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Empirically validated across heavy industrial rotating equipment fleets."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance",
         "layout": "left-copy"
       },
@@ -19819,7 +19819,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -19845,7 +19845,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Empirically validated across heavy industrial rotating equipment fleets."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Dynamic Branch Pruning Controllers for Industrial SCADA Predictive Maintenance Performance Telemetry",
         "layout": "centered-card"
       }
@@ -19938,7 +19938,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Minimize multi-GPU All-Reduce latency over NVLink fabrics for real-time 3D vehicle paint and body gap inspection systems.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection",
     "paragraphs": [
       "High-speed automotive assembly lines utilize multi-camera optical inspection tunnels equipped with up to 32 high-resolution cameras to verify vehicle paint finish, surface waviness, and panel gap-and-flush tolerances in under 15 seconds. Processing these multi-angle vision tensors requires distributed data-parallel and pipeline-parallel multi-GPU clusters. However, frequent All-Reduce tensor synchronization across GPUs creates communication bottlenecks that delay final quality sign-off.",
@@ -20034,7 +20034,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "High-speed automotive assembly lines utilize multi-camera optical inspection tunnels equipped with up to 32 high-resolution cameras to verify vehicle paint finish, surface waviness, and panel gap-and-flush tolerances in under 15 seconds. Processing these multi-angle vision tensors requires distributed data-parallel and pipeline-parallel multi-GPU clusters. However, frequent All-Reduce tensor synchronization across GPUs creates communication bottlenecks that delay final quality sign-off.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection"
     },
     "blocks": [
@@ -20067,7 +20067,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero assembly line slowdown across 60 jobs-per-hour production lines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection",
         "layout": "left-copy"
       },
@@ -20081,7 +20081,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -20107,7 +20107,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero assembly line slowdown across 60 jobs-per-hour production lines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection Performance Telemetry",
         "layout": "centered-card"
       }
@@ -20200,7 +20200,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Monitor and optimize interleaved 1F1B pipeline communication overlap for continuous SCADA machine telemetry neural models.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing",
     "paragraphs": [
       "Manufacturing enterprises monitoring continuous SCADA telemetry across high-speed packaging, stamping, and extrusion lines utilize massive deep sequence models to predict mechanical failures. Training and serving these multi-layer models requires pipeline parallelism. Standard 1F1B (one-forward-one-backward) pipeline schedules experience significant communication bubbles, where GPU stages sit idle waiting for preceding layer activations.",
@@ -20296,7 +20296,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Manufacturing enterprises monitoring continuous SCADA telemetry across high-speed packaging, stamping, and extrusion lines utilize massive deep sequence models to predict mechanical failures. Training and serving these multi-layer models requires pipeline parallelism. Standard 1F1B (one-forward-one-backward) pipeline schedules experience significant communication bubbles, where GPU stages sit idle waiting for preceding layer activations.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing"
     },
     "blocks": [
@@ -20329,7 +20329,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero dropped SCADA data packets during maximum line production speeds."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing",
         "layout": "left-copy"
       },
@@ -20343,7 +20343,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -20369,7 +20369,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero dropped SCADA data packets during maximum line production speeds."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Interleaved 1F1B Stage Communication Overlap Monitors for SCADA Manufacturing Performance Telemetry",
         "layout": "centered-card"
       }
@@ -20462,7 +20462,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Execute multimodal vision-language models in quantized FP8 precision for real-time SCADA factory defect inspection at sub-8ms latencies.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing",
     "paragraphs": [
       "Automated factory lines combining high-speed machine vision with SCADA sensor telemetry require multimodal AI models capable of understanding both image frames (e.g., weld seams, surface scratches) and numeric telemetry (e.g., current draw, pneumatic pressure, laser temperature). Running standard FP16 or BF16 vision models takes over 65ms per frame, far exceeding high-speed production takt times of under 10ms.",
@@ -20558,7 +20558,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Automated factory lines combining high-speed machine vision with SCADA sensor telemetry require multimodal AI models capable of understanding both image frames (e.g., weld seams, surface scratches) and numeric telemetry (e.g., current draw, pneumatic pressure, laser temperature). Running standard FP16 or BF16 vision models takes over 65ms per frame, far exceeding high-speed production takt times of under 10ms.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing"
     },
     "blocks": [
@@ -20591,7 +20591,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero compromise in defect detection precision across industrial components."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing",
         "layout": "left-copy"
       },
@@ -20605,7 +20605,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -20631,7 +20631,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero compromise in defect detection precision across industrial components."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sub-8ms Multimodal Vision FP8 Inference Controllers for SCADA Manufacturing Performance Telemetry",
         "layout": "centered-card"
       }
@@ -20724,7 +20724,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Inspect automotive painted car bodies for orange peel, dust nibs, and paint runs with high-speed deflected-light vision agents.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants",
     "paragraphs": [
       "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
@@ -20820,7 +20820,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Automotive paint shops represent one of the most capital-intensive and quality-sensitive sectors of car manufacturing. Paint defects - such as dust inclusions, clearcoat runs, pinholes, cratering, and orange peel waviness - require labor-intensive manual sanding and costly re-spraying if not caught immediately after the clearcoat drying oven. Manual human inspection under fluorescent tunnels is prone to fatigue, missing up to 20% of micro-defects.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants"
     },
     "blocks": [
@@ -20853,7 +20853,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Validated across solid, metallic, and pearl coat automotive finishes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants",
         "layout": "left-copy"
       },
@@ -20867,7 +20867,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
         "layout": "right-copy"
       },
@@ -20893,7 +20893,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Validated across solid, metallic, and pearl coat automotive finishes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Automotive Paint Shop Surface Defect Inspection Agents for Assembly Plants Performance Telemetry",
         "layout": "centered-card"
       }
@@ -20986,7 +20986,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy air-gapped DeepSeek-R1 reasoning models in sovereign enterprise enclaves with sub-15ms multi-stage telemetry and zero public cloud egress.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore",
     "paragraphs": [
       "Global Capability Centers (GCCs) in Bangalore handle highly sensitive proprietary algorithmic trading IP, defense aerospace engineering specs, and confidential corporate research. Deploying advanced open-weight reasoning models like DeepSeek-R1 via public API endpoints violates corporate data sovereignty covenants, triggers export control compliance breaches, and exposes unreleased product IP to multi-tenant cloud interception.",
@@ -21082,7 +21082,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Global Capability Centers (GCCs) in Bangalore handle highly sensitive proprietary algorithmic trading IP, defense aerospace engineering specs, and confidential corporate research. Deploying advanced open-weight reasoning models like DeepSeek-R1 via public API endpoints violates corporate data sovereignty covenants, triggers export control compliance breaches, and exposes unreleased product IP to multi-tenant cloud interception.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore"
     },
     "blocks": [
@@ -21115,7 +21115,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Sustained aggregate generation across enterprise cluster nodes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore",
         "layout": "left-copy"
       },
@@ -21129,7 +21129,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -21155,7 +21155,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Sustained aggregate generation across enterprise cluster nodes."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped DeepSeek-R1 Enterprise Deployment Telemetry for Global Capability Centers in Bangalore Performance Telemetry",
         "layout": "centered-card"
       }
@@ -21248,7 +21248,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Architect disaggregated prefill and decode enclaves for sovereign defense intelligence processing with sub-8ms inter-enclave RDMA communications.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries",
     "paragraphs": [
       "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
@@ -21344,7 +21344,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "National defense ministries processing classified multi-source intelligence - including satellite imagery reconnaissance, SIGINT intercepts, and tactical radar tracks - require massive large language model inference clusters. Traditional unified inference servers suffer from resource contention between memory-bandwidth-bound token decode phases and compute-bound prompt prefill phases, creating unpredictable latency spikes during critical military operations.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries"
     },
     "blocks": [
@@ -21377,7 +21377,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete electromagnetic and physical containment for defense facilities."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries",
         "layout": "left-copy"
       },
@@ -21391,7 +21391,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -21417,7 +21417,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete electromagnetic and physical containment for defense facilities."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Sovereign Pre-Fill and Decode Enclave Architects for Defense Ministries Performance Telemetry",
         "layout": "centered-card"
       }
@@ -21510,7 +21510,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Eliminate Multi-Head Latent Attention memory pool fragmentation in air-gapped defense enclaves with real-time defragmentation at sub-3ms compaction latencies.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "MLA Latent Memory Pool Defragmentation Managers for Sovereign Air-Gapped Defense Enclaves",
     "paragraphs": [
       "Modern defense intelligence reasoning models utilize Multi-Head Latent Attention (MLA) to compress key-value caches into compact low-dimensional latent vectors. In high-concurrency tactical operations centers, continuous generation of variable-length intelligence reports creates severe external memory fragmentation in GPU VRAM, forcing frequent out-of-memory (OOM) evictions and stalling mission-critical battle management systems.",
@@ -21606,7 +21606,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Modern defense intelligence reasoning models utilize Multi-Head Latent Attention (MLA) to compress key-value caches into compact low-dimensional latent vectors. In high-concurrency tactical operations centers, continuous generation of variable-length intelligence reports creates severe external memory fragmentation in GPU VRAM, forcing frequent out-of-memory (OOM) evictions and stalling mission-critical battle management systems.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "MLA Latent Memory Pool Defragmentation Managers for Sovereign Air-Gapped Defense Enclaves"
     },
     "blocks": [
@@ -21639,7 +21639,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Elimination of OOM crashes across continuous multi-week defense exercises."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "MLA Latent Memory Pool Defragmentation Managers for Sovereign Air-Gapped Defense Enclaves",
         "layout": "left-copy"
       },
@@ -21653,7 +21653,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -21679,7 +21679,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Elimination of OOM crashes across continuous multi-week defense exercises."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "MLA Latent Memory Pool Defragmentation Managers for Sovereign Air-Gapped Defense Enclaves Performance Telemetry",
         "layout": "centered-card"
       }
@@ -21772,7 +21772,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Monitor and mitigate multi-tiered GPU-to-CPU-to-NVMe KV-cache memory fragmentation across air-gapped military intelligence enclaves.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Multi-Tiered KV Memory Fragmentation Monitors for Sovereign Air-Gapped Defense Enclaves",
     "paragraphs": [
       "Defense ministries running multi-modal strategic planning models must maintain days of active mission history across air, land, and naval domains. Caching massive historical context in expensive GPU HBM memory is cost-prohibitive, while swapping key-value caches across multi-tiered memory hierarchies (GPU HBM -> Host DDR5 -> Local NVMe) introduces severe memory fragmentation and swapping latency stalls.",
@@ -21868,7 +21868,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Defense ministries running multi-modal strategic planning models must maintain days of active mission history across air, land, and naval domains. Caching massive historical context in expensive GPU HBM memory is cost-prohibitive, while swapping key-value caches across multi-tiered memory hierarchies (GPU HBM -> Host DDR5 -> Local NVMe) introduces severe memory fragmentation and swapping latency stalls.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Multi-Tiered KV Memory Fragmentation Monitors for Sovereign Air-Gapped Defense Enclaves"
     },
     "blocks": [
@@ -21901,7 +21901,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Elimination of swap churn via predictive tactical context pinning."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Multi-Tiered KV Memory Fragmentation Monitors for Sovereign Air-Gapped Defense Enclaves",
         "layout": "left-copy"
       },
@@ -21915,7 +21915,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -21941,7 +21941,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Elimination of swap churn via predictive tactical context pinning."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Multi-Tiered KV Memory Fragmentation Monitors for Sovereign Air-Gapped Defense Enclaves Performance Telemetry",
         "layout": "centered-card"
       }
@@ -22034,7 +22034,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Lock mission-critical military doctrine and tactical rules of engagement into dedicated GPU attention sink pages with zero eviction latency.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Static Prefix Sink Reservation Daemons for Air-Gapped Sovereign Defense Enclaves",
     "paragraphs": [
       "Joint Operations Centers (JOC) utilize large reasoning models to interpret real-time tactical events against classified Rules of Engagement (ROE), military operational doctrine, and commander's intent. When system prompts and tactical doctrine files are repeatedly re-processed for thousands of incoming sensor events, redundant prefill calculations saturate GPU compute cores and introduce unacceptable response delays.",
@@ -22130,7 +22130,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Joint Operations Centers (JOC) utilize large reasoning models to interpret real-time tactical events against classified Rules of Engagement (ROE), military operational doctrine, and commander's intent. When system prompts and tactical doctrine files are repeatedly re-processed for thousands of incoming sensor events, redundant prefill calculations saturate GPU compute cores and introduce unacceptable response delays.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Static Prefix Sink Reservation Daemons for Air-Gapped Sovereign Defense Enclaves"
     },
     "blocks": [
@@ -22163,7 +22163,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematical guarantee of identical attention states across all command consoles."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Static Prefix Sink Reservation Daemons for Air-Gapped Sovereign Defense Enclaves",
         "layout": "left-copy"
       },
@@ -22177,7 +22177,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -22203,7 +22203,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematical guarantee of identical attention states across all command consoles."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Static Prefix Sink Reservation Daemons for Air-Gapped Sovereign Defense Enclaves Performance Telemetry",
         "layout": "centered-card"
       }
@@ -22296,7 +22296,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Secure autonomous military drone swarm communications with post-quantum ML-KEM-1024 key encapsulation and continuous cryptographic health telemetry.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "ML-KEM-1024 Military-Grade Key Encapsulation Telemetry for Sovereign Defense AI Swarms",
     "paragraphs": [
       "Autonomous unmanned aerial and ground vehicle swarms operating in contested electronic warfare environments require secure, real-time command and consensus links. Looming post-quantum cryptographic threats mean adversary intelligence agencies are actively capturing tactical communications today for future quantum decryption ('Harvest Now, Decrypt Later'). Standard RSA and Elliptic Curve Diffie-Hellman keys are obsolete for long-term defense secrets.",
@@ -22392,7 +22392,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Autonomous unmanned aerial and ground vehicle swarms operating in contested electronic warfare environments require secure, real-time command and consensus links. Looming post-quantum cryptographic threats mean adversary intelligence agencies are actively capturing tactical communications today for future quantum decryption ('Harvest Now, Decrypt Later'). Standard RSA and Elliptic Curve Diffie-Hellman keys are obsolete for long-term defense secrets.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "ML-KEM-1024 Military-Grade Key Encapsulation Telemetry for Sovereign Defense AI Swarms"
     },
     "blocks": [
@@ -22425,7 +22425,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Deterministic physical memory wipe upon chassis intrusion or voltage anomaly."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "ML-KEM-1024 Military-Grade Key Encapsulation Telemetry for Sovereign Defense AI Swarms",
         "layout": "left-copy"
       },
@@ -22439,7 +22439,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -22465,7 +22465,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Deterministic physical memory wipe upon chassis intrusion or voltage anomaly."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "ML-KEM-1024 Military-Grade Key Encapsulation Telemetry for Sovereign Defense AI Swarms Performance Telemetry",
         "layout": "centered-card"
       }
@@ -22558,7 +22558,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Monitor physical True Random Number Generator entropy sources continuously with NIST SP 800-90B real-time statistical health test telemetry.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "True Random Number Generator (TRNG) Continuous Entropy Health Monitoring Telemetry for Sovereign Crypto Enclaves",
     "paragraphs": [
       "Sovereign defense cryptographic enclaves rely on hardware True Random Number Generators (TRNG) based on physical quantum noise, thermal noise, and ring oscillator jitter to generate military master keys, one-time pads, and tactical authentication tokens. Physical component aging, electromagnetic pulse (EMP) interference, or active adversary laser-fault injection can silently reduce entropy output, rendering cryptographic keys predictable without triggering conventional hardware error alarms.",
@@ -22654,7 +22654,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Sovereign defense cryptographic enclaves rely on hardware True Random Number Generators (TRNG) based on physical quantum noise, thermal noise, and ring oscillator jitter to generate military master keys, one-time pads, and tactical authentication tokens. Physical component aging, electromagnetic pulse (EMP) interference, or active adversary laser-fault injection can silently reduce entropy output, rendering cryptographic keys predictable without triggering conventional hardware error alarms.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "True Random Number Generator (TRNG) Continuous Entropy Health Monitoring Telemetry for Sovereign Crypto Enclaves"
     },
     "blocks": [
@@ -22687,7 +22687,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete mathematical proof of entropy source integrity for sovereign defense."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "True Random Number Generator (TRNG) Continuous Entropy Health Monitoring Telemetry for Sovereign Crypto Enclaves",
         "layout": "left-copy"
       },
@@ -22701,7 +22701,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -22727,7 +22727,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete mathematical proof of entropy source integrity for sovereign defense."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "True Random Number Generator (TRNG) Continuous Entropy Health Monitoring Telemetry for Sovereign Crypto Enclaves Performance Telemetry",
         "layout": "centered-card"
       }
@@ -22820,7 +22820,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Telemetry monitoring for PagedAttention virtual memory allocation, page tables, and host-device swapping in air-gapped sovereign military datacenters.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters",
     "paragraphs": [
       "Air-gapped military datacenters serving multi-theater command queries must handle massive concurrent intelligence document summarization, satellite report classification, and automated battle damage assessment. Unpredictable sequence lengths lead to severe GPU memory waste under conventional contiguous tensor allocation, while PagedAttention page table thrashing can cause sudden inference latency spikes during high-intensity military crisis surges.",
@@ -22916,7 +22916,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Air-gapped military datacenters serving multi-theater command queries must handle massive concurrent intelligence document summarization, satellite report classification, and automated battle damage assessment. Unpredictable sequence lengths lead to severe GPU memory waste under conventional contiguous tensor allocation, while PagedAttention page table thrashing can cause sudden inference latency spikes during high-intensity military crisis surges.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters"
     },
     "blocks": [
@@ -22949,7 +22949,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Simultaneous active military intelligence queries on identical GPU hardware."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters",
         "layout": "left-copy"
       },
@@ -22963,7 +22963,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -22989,7 +22989,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Simultaneous active military intelligence queries on identical GPU hardware."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "PagedAttention Virtual Memory Allocation and Page Table Swap Telemetry for Sovereign Air-Gapped Datacenters Performance Telemetry",
         "layout": "centered-card"
       }
@@ -23082,7 +23082,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy air-gapped FlashDecoding++ execution runbooks accelerating long-context military intelligence reasoning with sub-12ms decode latency.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Private Cloud FlashDecoding++ Deployment Runbooks for Defense Installations in India",
     "paragraphs": [
       "Indian defense installations and military intelligence agencies analyzing multi-year border reconnaissance logs, intercepted SIGINT streams, and naval acoustic signatures operate across massive context windows exceeding 64,000 to 128,000 tokens. Conventional FlashAttention and standard decode kernels suffer from severe memory bandwidth bottlenecks during the generation phase, creating multi-second response lags for tactical commanders.",
@@ -23178,7 +23178,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Indian defense installations and military intelligence agencies analyzing multi-year border reconnaissance logs, intercepted SIGINT streams, and naval acoustic signatures operate across massive context windows exceeding 64,000 to 128,000 tokens. Conventional FlashAttention and standard decode kernels suffer from severe memory bandwidth bottlenecks during the generation phase, creating multi-second response lags for tactical commanders.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Air-Gapped Private Cloud FlashDecoding++ Deployment Runbooks for Defense Installations in India"
     },
     "blocks": [
@@ -23211,7 +23211,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete alignment with sovereign defense computing and security guidelines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Private Cloud FlashDecoding++ Deployment Runbooks for Defense Installations in India",
         "layout": "left-copy"
       },
@@ -23225,7 +23225,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -23251,7 +23251,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Complete alignment with sovereign defense computing and security guidelines."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Private Cloud FlashDecoding++ Deployment Runbooks for Defense Installations in India Performance Telemetry",
         "layout": "centered-card"
       }
@@ -23344,7 +23344,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy 4-bit Activation-aware Weight Quantized (AWQ) DeepSeek-R1 reasoning models on ruggedized defense edge servers with zero accuracy loss.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers",
     "paragraphs": [
       "Forward-deployed military command posts, naval combat vessels, and airborne surveillance platforms have strict space, weight, and power (SWaP) constraints. Running full-precision 671B DeepSeek-R1 reasoning models requires multi-rack datacenter clusters that cannot fit inside tactical shelters or naval server rooms. Conventional uncalibrated 4-bit quantization degrades complex mathematical and tactical reasoning capabilities.",
@@ -23440,7 +23440,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Forward-deployed military command posts, naval combat vessels, and airborne surveillance platforms have strict space, weight, and power (SWaP) constraints. Running full-precision 671B DeepSeek-R1 reasoning models requires multi-rack datacenter clusters that cannot fit inside tactical shelters or naval server rooms. Conventional uncalibrated 4-bit quantization degrades complex mathematical and tactical reasoning capabilities.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers"
     },
     "blocks": [
@@ -23473,7 +23473,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Essential for field generators and battery-backed tactical operational centers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers",
         "layout": "left-copy"
       },
@@ -23487,7 +23487,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -23513,7 +23513,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Essential for field generators and battery-backed tactical operational centers."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "AWQ-Quantized DeepSeek-R1 Reasoning Model Deployment Agents for Air-Gapped Defense Servers Performance Telemetry",
         "layout": "centered-card"
       }
@@ -23606,7 +23606,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Evaluate and isolate dynamic Multi-LoRA adapter stability across concurrent military domains on sovereign private defense clouds.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Multi-LoRA Adapter Stability Evaluators for Sovereign Private VPC Defense Intelligences",
     "paragraphs": [
       "Defense intelligence ministries operate across diverse, highly specialized operational domains: naval surface warfare, air combat tactics, electronic warfare signal analysis, and sovereign cyber defense. Serving specialized foundation models for each domain is cost-prohibitive. Serving multiple Low-Rank Adaptation (LoRA) adapters concurrently on a single base foundation model risks adapter interference, catastrophic forgetting, and VRAM thrashing.",
@@ -23702,7 +23702,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Defense intelligence ministries operate across diverse, highly specialized operational domains: naval surface warfare, air combat tactics, electronic warfare signal analysis, and sovereign cyber defense. Serving specialized foundation models for each domain is cost-prohibitive. Serving multiple Low-Rank Adaptation (LoRA) adapters concurrently on a single base foundation model risks adapter interference, catastrophic forgetting, and VRAM thrashing.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Multi-LoRA Adapter Stability Evaluators for Sovereign Private VPC Defense Intelligences"
     },
     "blocks": [
@@ -23735,7 +23735,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematical proof of zero activation leakage between classified adapters."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Multi-LoRA Adapter Stability Evaluators for Sovereign Private VPC Defense Intelligences",
         "layout": "left-copy"
       },
@@ -23749,7 +23749,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -23775,7 +23775,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematical proof of zero activation leakage between classified adapters."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Multi-LoRA Adapter Stability Evaluators for Sovereign Private VPC Defense Intelligences Performance Telemetry",
         "layout": "centered-card"
       }
@@ -23868,7 +23868,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Architect zero-memory-leak streaming AI telemetry agents for mission-critical aerospace avionics conforming to DO-178C Level A standards.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics",
     "paragraphs": [
       "Modern military aircraft and aerospace avionics platforms incorporate streaming autonomous agents to assist pilots with flight trajectory optimization, radar threat classification, and emergency subsystem diagnostics. Software operating in airborne flight management systems must never crash or suffer memory leaks: even a microscopic leak of a few bytes per second can cause flight computer memory exhaustion during long-duration maritime patrol or refueling missions.",
@@ -23964,7 +23964,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Modern military aircraft and aerospace avionics platforms incorporate streaming autonomous agents to assist pilots with flight trajectory optimization, radar threat classification, and emergency subsystem diagnostics. Software operating in airborne flight management systems must never crash or suffer memory leaks: even a microscopic leak of a few bytes per second can cause flight computer memory exhaustion during long-duration maritime patrol or refueling missions.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics"
     },
     "blocks": [
@@ -23997,7 +23997,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Highest criticality flight software safety design compliance."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics",
         "layout": "left-copy"
       },
@@ -24011,7 +24011,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -24037,7 +24037,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Highest criticality flight software safety design compliance."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Zero-Memory-Leak Streaming Agent Architectures for Mission-Critical Aerospace Avionics Performance Telemetry",
         "layout": "centered-card"
       }
@@ -24130,7 +24130,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Evaluate and stabilize dynamic compute routing in Mixture-of-Depths reasoning models for sovereign defense cloud deployments.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Mixture-of-Depths Stability Evaluators for Sovereign Private VPC Defense Intelligences",
     "paragraphs": [
       "Defense intelligence analysts require real-time processing of massive incoming data feeds. In standard transformer models, every token receives identical compute depth, whether it is a simple punctuation mark or a critical military unit identifier. Mixture-of-Depths (MoD) architectures dynamically route tokens through transformer layers, skipping redundant computations for simple tokens and allocating deep processing exclusively to high-entropy tactical data.",
@@ -24226,7 +24226,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Defense intelligence analysts require real-time processing of massive incoming data feeds. In standard transformer models, every token receives identical compute depth, whether it is a simple punctuation mark or a critical military unit identifier. Mixture-of-Depths (MoD) architectures dynamically route tokens through transformer layers, skipping redundant computations for simple tokens and allocating deep processing exclusively to high-entropy tactical data.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Mixture-of-Depths Stability Evaluators for Sovereign Private VPC Defense Intelligences"
     },
     "blocks": [
@@ -24259,7 +24259,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero compromise in complex strategic and tactical intelligence evaluations."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Mixture-of-Depths Stability Evaluators for Sovereign Private VPC Defense Intelligences",
         "layout": "left-copy"
       },
@@ -24273,7 +24273,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -24299,7 +24299,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Zero compromise in complex strategic and tactical intelligence evaluations."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Mixture-of-Depths Stability Evaluators for Sovereign Private VPC Defense Intelligences Performance Telemetry",
         "layout": "centered-card"
       }
@@ -24392,7 +24392,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Partition prefill and decode inference workloads across distributed tactical drone swarms and mobile command vehicles with sub-10ms coordination.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms",
     "paragraphs": [
       "Joint All-Domain Command and Control (JADC2) operations deploy distributed autonomous drone swarms that coordinate reconnaissance, radar electronic countermeasures, and target handoffs. Individual drone nodes have limited battery power and thermal envelopes, while mobile command vehicles have larger compute reserves. Monolithic on-drone inference leads to rapid battery exhaustion and overheating during combat maneuvers.",
@@ -24488,7 +24488,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Joint All-Domain Command and Control (JADC2) operations deploy distributed autonomous drone swarms that coordinate reconnaissance, radar electronic countermeasures, and target handoffs. Individual drone nodes have limited battery power and thermal envelopes, while mobile command vehicles have larger compute reserves. Monolithic on-drone inference leads to rapid battery exhaustion and overheating during combat maneuvers.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms"
     },
     "blocks": [
@@ -24521,7 +24521,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Immediate autonomous failover to local onboard inference with zero flight interruption."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms",
         "layout": "left-copy"
       },
@@ -24535,7 +24535,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -24561,7 +24561,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Immediate autonomous failover to local onboard inference with zero flight interruption."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms Performance Telemetry",
         "layout": "centered-card"
       }
@@ -24654,7 +24654,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Partition hierarchical prefix trees across multi-agent defense intelligence swarms for 5x attention cache reuse on sovereign air-gapped servers.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Multi-Agent Prefix Tree Partitioning Software for Sovereign Cloud Air-Gapped Servers",
     "paragraphs": [
       "Sovereign defense cloud platforms host swarms of specialized autonomous intelligence agents: geospatial analysts, satellite imagery decoders, cyber threat hunters, and naval tracking monitors. Each agent repeatedly evaluates common intelligence dossiers, shared tactical maps, and identical rules-of-engagement context. Storing separate, redundant attention caches for hundreds of autonomous agents exhausts GPU VRAM and limits swarm size.",
@@ -24750,7 +24750,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Sovereign defense cloud platforms host swarms of specialized autonomous intelligence agents: geospatial analysts, satellite imagery decoders, cyber threat hunters, and naval tracking monitors. Each agent repeatedly evaluates common intelligence dossiers, shared tactical maps, and identical rules-of-engagement context. Storing separate, redundant attention caches for hundreds of autonomous agents exhausts GPU VRAM and limits swarm size.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Multi-Agent Prefix Tree Partitioning Software for Sovereign Cloud Air-Gapped Servers"
     },
     "blocks": [
@@ -24783,7 +24783,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "From new agent spawn to active private reasoning execution."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Multi-Agent Prefix Tree Partitioning Software for Sovereign Cloud Air-Gapped Servers",
         "layout": "left-copy"
       },
@@ -24797,7 +24797,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -24823,7 +24823,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "From new agent spawn to active private reasoning execution."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Multi-Agent Prefix Tree Partitioning Software for Sovereign Cloud Air-Gapped Servers Performance Telemetry",
         "layout": "centered-card"
       }
@@ -24916,7 +24916,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy sovereign lossy and lossless KV-cache compression algorithms achieving 4x memory compaction for defense intelligence reasoning servers.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries",
     "paragraphs": [
       "Defense ministries analyzing decades of military archives, treaty documents, and tactical exercise telemetry must maintain continuous reasoning over massive context lengths. However, the memory footprint of key-value caches scales linearly with context length and batch size, requiring expensive, multi-million-dollar GPU cluster expansions just to hold attention states in active VRAM.",
@@ -25012,7 +25012,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Defense ministries analyzing decades of military archives, treaty documents, and tactical exercise telemetry must maintain continuous reasoning over massive context lengths. However, the memory footprint of key-value caches scales linearly with context length and batch size, requiring expensive, multi-million-dollar GPU cluster expansions just to hold attention states in active VRAM.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries"
     },
     "blocks": [
@@ -25045,7 +25045,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Near-zero impact on overall end-to-end token generation latency."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries",
         "layout": "left-copy"
       },
@@ -25059,7 +25059,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -25085,7 +25085,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Near-zero impact on overall end-to-end token generation latency."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Enterprise Sovereign KV-Cache Compression Deployment Advisors for Defense Ministries Performance Telemetry",
         "layout": "centered-card"
       }
@@ -25178,7 +25178,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy bidirectional DualPipe pipeline parallelism for air-gapped defense supercomputing clusters with sub-5% pipeline bubble overhead.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Air-Gapped Defense Ministry DualPipe Inference Infrastructure Deployment Consultants",
     "paragraphs": [
       "National defense supercomputing centers hosting sovereign 500B+ parameter reasoning models utilize pipeline parallelism across multiple server nodes. Standard pipeline parallel algorithms suffer from large pipeline bubbles (idle GPU time) at the start and end of inference batches. In emergency defense situations where immediate situational assessments are required, these compute bubbles delay time-critical battlefield threat analyses.",
@@ -25274,7 +25274,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "National defense supercomputing centers hosting sovereign 500B+ parameter reasoning models utilize pipeline parallelism across multiple server nodes. Standard pipeline parallel algorithms suffer from large pipeline bubbles (idle GPU time) at the start and end of inference batches. In emergency defense situations where immediate situational assessments are required, these compute bubbles delay time-critical battlefield threat analyses.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Air-Gapped Defense Ministry DualPipe Inference Infrastructure Deployment Consultants"
     },
     "blocks": [
@@ -25307,7 +25307,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Near-line-rate utilization of 3.2 Tbps inter-chassis interconnects."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Defense Ministry DualPipe Inference Infrastructure Deployment Consultants",
         "layout": "left-copy"
       },
@@ -25321,7 +25321,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -25347,7 +25347,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Near-line-rate utilization of 3.2 Tbps inter-chassis interconnects."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Air-Gapped Defense Ministry DualPipe Inference Infrastructure Deployment Consultants Performance Telemetry",
         "layout": "centered-card"
       }
@@ -25440,7 +25440,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Lock immutable military rules of engagement and system prompts into cryptographically sealed GPU memory pages for defense contractor enclaves.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Immutable System Prompt KV-Page Locking Frameworks for Sovereign Defense Contractors",
     "paragraphs": [
       "Defense contractors providing intelligence analysis, logistics optimization, and engineering simulations to military ministries must guarantee that classified system prompts, security boundaries, and operational constraints cannot be subverted. Adversarial prompt injection attacks or memory corruption could silently alter rules of engagement or exfiltrate defense design data.",
@@ -25536,7 +25536,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Defense contractors providing intelligence analysis, logistics optimization, and engineering simulations to military ministries must guarantee that classified system prompts, security boundaries, and operational constraints cannot be subverted. Adversarial prompt injection attacks or memory corruption could silently alter rules of engagement or exfiltrate defense design data.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Immutable System Prompt KV-Page Locking Frameworks for Sovereign Defense Contractors"
     },
     "blocks": [
@@ -25569,7 +25569,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Fully satisfies defense contractor cybersecurity requirements for AI workloads."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Immutable System Prompt KV-Page Locking Frameworks for Sovereign Defense Contractors",
         "layout": "left-copy"
       },
@@ -25583,7 +25583,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -25609,7 +25609,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Fully satisfies defense contractor cybersecurity requirements for AI workloads."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Immutable System Prompt KV-Page Locking Frameworks for Sovereign Defense Contractors Performance Telemetry",
         "layout": "centered-card"
       }
@@ -25702,7 +25702,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Deploy sovereign speculative decoding architectures on air-gapped defense servers, achieving 3.6x generation speedups for classified reasoning models.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sovereign Enterprise Speculative Decoding Deployment Advisors for Defense Ministries",
     "paragraphs": [
       "Defense ministries conducting automated strategic wargame simulations, battle damage assessments, and intelligence synthesis rely on massive 70B+ parameter reasoning models. The autoregressive nature of LLM generation (generating one token at a time) creates significant response latency, delaying time-critical military decision-making during fast-moving geopolitical crises.",
@@ -25798,7 +25798,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Defense ministries conducting automated strategic wargame simulations, battle damage assessments, and intelligence synthesis rely on massive 70B+ parameter reasoning models. The autoregressive nature of LLM generation (generating one token at a time) creates significant response latency, delaying time-critical military decision-making during fast-moving geopolitical crises.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Sovereign Enterprise Speculative Decoding Deployment Advisors for Defense Ministries"
     },
     "blocks": [
@@ -25831,7 +25831,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Accelerates wargaming and strategic planning scenario execution."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Enterprise Speculative Decoding Deployment Advisors for Defense Ministries",
         "layout": "left-copy"
       },
@@ -25845,7 +25845,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -25871,7 +25871,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Accelerates wargaming and strategic planning scenario execution."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Enterprise Speculative Decoding Deployment Advisors for Defense Ministries Performance Telemetry",
         "layout": "centered-card"
       }
@@ -25964,7 +25964,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "firstSentence": "Evaluate and stabilize attention sink tokens in streaming defense intelligence reasoning models for infinite-context operations.",
     "wordCount": 1480,
     "mozScore": 98,
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences",
     "paragraphs": [
       "Military command platforms monitoring continuous multi-day telemetry - such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking - require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
@@ -26060,7 +26060,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "subheadline": "Military command platforms monitoring continuous multi-day telemetry - such as border surveillance radar feeds, naval sonar sweeps, and space situational tracking - require streaming AI models that operate indefinitely without crashing or losing context. Standard attention mechanisms suffer catastrophic performance degradation and out-of-memory crashes once the input sequence exceeds the pre-trained context window limit.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
-      "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "heroImage": "https://elesium.online/og-image.png",
       "heroImageAlt": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences"
     },
     "blocks": [
@@ -26093,7 +26093,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematical proof of numerical stability across long-duration operational sweeps."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences",
         "layout": "left-copy"
       },
@@ -26107,7 +26107,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           "State Machine: Deterministic consensus and audit hash chain verification",
           "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Sovereign Defense Architecture Diagram",
         "layout": "right-copy"
       },
@@ -26133,7 +26133,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
             "desc": "Mathematical proof of numerical stability across long-duration operational sweeps."
           }
         ],
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+        "image": "https://elesium.online/og-image.png",
         "imageAlt": "Attention Sink Stability Evaluators for Sovereign Private VPC Defense Intelligences Performance Telemetry",
         "layout": "centered-card"
       }

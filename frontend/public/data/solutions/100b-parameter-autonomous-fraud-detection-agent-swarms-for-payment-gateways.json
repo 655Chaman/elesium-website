@@ -17,7 +17,7 @@
   "firstSentence": "Deploy 100B-parameter multimodal fraud detection agent swarms for payment gateways, analyzing transaction risk graphs in sub-8ms to block distributed carding attacks.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways",
   "paragraphs": [
     "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block sophisticated distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
@@ -113,7 +113,7 @@
     "subheadline": "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block sophisticated distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Minimizes false declines on legitimate cardholder transactions."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign BFSI Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Minimizes false declines on legitimate cardholder transactions."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways Performance Telemetry",
       "layout": "centered-card"
     }

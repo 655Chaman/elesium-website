@@ -92,7 +92,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                     <div className="h-4 w-[1px] bg-white/10" />
 
                     <span className="text-xs font-mono font-medium text-white/80 flex items-center gap-1.5">
-                        <Code2 className="h-3.5 w-3.5 text-cyan-400" />
+                        <Code2 className="h-3.5 w-3.5 text-neutral-200" />
                         {title}
                     </span>
                 </div>
@@ -100,7 +100,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                 {/* Right badges & controls */}
                 <div className="flex items-center gap-2">
                     {complianceBadge && (
-                        <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20">
+                        <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono text-neutral-200 bg-white/10 border border-white/20">
                             <ShieldCheck className="h-3 w-3" />
                             {complianceBadge}
                         </span>
@@ -112,8 +112,8 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                     >
                         {copied ? (
                             <>
-                                <Check className="h-3.5 w-3.5 text-emerald-400" />
-                                <span className="text-emerald-400">Copied!</span>
+                                <Check className="h-3.5 w-3.5 text-neutral-200" />
+                                <span className="text-neutral-200">Copied!</span>
                             </>
                         ) : (
                             <>
@@ -156,7 +156,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                             }}
                             className={`px-3 py-1 rounded-md transition-colors ${
                                 activeTabIdx === idx
-                                    ? 'bg-cyan-500/10 text-cyan-400 font-bold border border-cyan-500/30'
+                                    ? 'bg-white/10 text-neutral-200 font-bold border border-white/30'
                                     : 'text-white/50 hover:text-white'
                             }`}
                         >

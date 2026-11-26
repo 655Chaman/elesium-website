@@ -63,9 +63,9 @@ export default function EnterpriseAgentMemristorCrossbarSimulator() {
     return simulateMemristorCrossbar(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-memristor-crossbar-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-memristor-crossbar-simulator" width="100%" height="720" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Simulated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedCode = () => {
@@ -111,7 +111,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Analog Neuromorphic Crossbar Memristor Compute Simulator | Elesium</title>
         <meta
@@ -124,24 +124,24 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Header Breadcrumbs & Title */}
         <div className="space-y-4">
-          <div className="flex items-center space-x-2 text-sm text-cyan-400 font-mono">
+          <div className="flex items-center space-x-2 text-sm text-neutral-200 font-mono">
             <a href="/solutions/" className="hover:underline">Solutions</a>
             <span>/</span>
             <a href="/resources/" className="hover:underline">Tools</a>
             <span>/</span>
-            <span className="text-slate-400">Memristor Crossbar Simulator</span>
+            <span className="text-neutral-400">Memristor Crossbar Simulator</span>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-slate-800 pb-8">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-neutral-800 pb-8">
             <div className="space-y-2 max-w-3xl">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
-                <Grid className="w-3.5 h-3.5 mr-1 text-cyan-400" />
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-white text-xs font-semibold uppercase tracking-wider">
+                <Grid className="w-3.5 h-3.5 mr-1 text-neutral-200" />
                 Tool #33 · Analog In-Memory Computing &amp; ReRAM Memristor Crossbars
               </div>
               <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                 Enterprise Agent Analog Neuromorphic Crossbar Memristor Compute Simulator
               </h1>
-              <p className="text-slate-400 text-base leading-relaxed">
+              <p className="text-neutral-400 text-base leading-relaxed">
                 Benchmark analog in-memory computing (AIMC) using Resistive RAM (ReRAM) and Phase-Change Memory (PCM) crossbar arrays.
                 Simulate single-step Kirchhoff/Ohm Vector-Matrix Multiplication (VMM), power-law conductance drift, and femtojoule-per-synaptic-op energy scaling against digital GPU baselines.
               </p>
@@ -150,27 +150,27 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             <div className="flex items-center space-x-3 shrink-0">
               <button
                 onClick={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
-                className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-xs font-mono font-medium transition"
+                className="active:scale-[0.97] px-3.5 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-mono font-medium transition"
               >
-                Currency: <span className="text-cyan-400 font-bold">{currency}</span>
+                Currency: <span className="text-white font-bold">{currency}</span>
               </button>
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
                 onClick={() => setIsEmbedOpen(true)}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-neutral-700 text-neutral-300 text-xs font-medium transition"
               >
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed Tool</span>
               </button>
               <button
                 onClick={copyExecutiveMemo}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-medium shadow-lg shadow-cyan-950/50 transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium shadow-lg transition"
               >
                 {hasCopiedMemo ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Audit Memo'}</span>
@@ -182,9 +182,9 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         {/* Status Alert Banner */}
         <div className={`p-4 rounded-xl border flex items-center justify-between gap-4 ${
           results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
-            ? 'bg-emerald-950/30 border-emerald-800/50 text-emerald-300'
+            ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : results.statusClassification === 'ANALOG_COMPENSATED'
-            ? 'bg-cyan-950/30 border-cyan-800/50 text-cyan-300'
+            ? 'bg-white/[0.05] border-white/15 text-neutral-200'
             : 'bg-amber-950/30 border-amber-800/50 text-amber-300'
         }`}>
           <div className="flex items-center space-x-3">
@@ -210,19 +210,19 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         {/* Main Interactive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Controls Column (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-              <Sliders className="w-5 h-5 text-cyan-400" />
+          <div className="lg:col-span-5 space-y-6 bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
+              <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-base font-semibold text-white">Memristor Physical Parameters</h2>
             </div>
 
             {/* Material Technology Dropdown */}
             <div className="space-y-2">
-              <label className="text-xs text-slate-300 font-medium block">Memristor Dielectric Material:</label>
+              <label className="text-xs text-neutral-300 font-medium block">Memristor Dielectric Material:</label>
               <select
                 value={memristorTechnology}
                 onChange={e => setMemristorTechnology(e.target.value as any)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-500"
+                className="w-full bg-neutral-950 border border-neutral-700/80 rounded-lg px-3 py-2 text-xs font-mono text-neutral-200 focus:outline-none focus:border-white/40"
               >
                 <option value="hfox_reram_crossbar">HfOx Filamentary ReRAM (Enterprise Standard)</option>
                 <option value="pcm_chalcogenide_crossbar">Phase-Change Memory (GST Chalcogenide PCM)</option>
@@ -234,18 +234,18 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             {/* Crossbar Dimension Selector */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Crossbar Physical Dimension (N x N):</span>
-                <span className="font-mono text-cyan-400 font-bold">{crossbarDimension} x {crossbarDimension}</span>
+                <span className="text-neutral-300 font-medium">Crossbar Physical Dimension (N x N):</span>
+                <span className="font-mono text-white font-bold">{crossbarDimension} x {crossbarDimension}</span>
               </div>
               <div className="grid grid-cols-5 gap-2">
                 {([64, 128, 256, 512, 1024] as const).map(dim => (
                   <button
                     key={dim}
                     onClick={() => setCrossbarDimension(dim)}
-                    className={`py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
                       crossbarDimension === dim
-                        ? 'bg-cyan-950/80 border-cyan-500 text-cyan-300 shadow-sm shadow-cyan-950'
-                        : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
+                        ? 'bg-white/[0.05] border-white/30 text-neutral-200 shadow-sm'
+                        : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
                     }`}
                   >
                     {dim}
@@ -257,18 +257,18 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             {/* ADC/DAC Resolution Selector */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Peripheral ADC / DAC Quantization:</span>
-                <span className="font-mono text-cyan-400 font-bold">{adcDacResolutionBits}-bit resolution</span>
+                <span className="text-neutral-300 font-medium">Peripheral ADC / DAC Quantization:</span>
+                <span className="font-mono text-white font-bold">{adcDacResolutionBits}-bit resolution</span>
               </div>
               <div className="grid grid-cols-4 gap-2">
                 {([4, 6, 8, 10] as const).map(bits => (
                   <button
                     key={bits}
                     onClick={() => setAdcDacResolutionBits(bits)}
-                    className={`py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
+                    className={`active:scale-[0.97] py-1.5 rounded-lg text-xs font-mono font-medium border transition ${
                       adcDacResolutionBits === bits
-                        ? 'bg-cyan-950/80 border-cyan-500 text-cyan-300 shadow-sm shadow-cyan-950'
-                        : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
+                        ? 'bg-white/[0.05] border-white/30 text-neutral-200 shadow-sm'
+                        : 'bg-neutral-950 border-neutral-800 text-neutral-400 hover:text-white'
                     }`}
                   >
                     {bits}-bit
@@ -280,8 +280,8 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             {/* Conductance Drift Exponent Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Conductance Drift Exponent (ν):</span>
-                <span className="font-mono text-cyan-400 font-bold">{conductanceDriftExponent}</span>
+                <span className="text-neutral-300 font-medium">Conductance Drift Exponent (ν):</span>
+                <span className="font-mono text-white font-bold">{conductanceDriftExponent}</span>
               </div>
               <input
                 type="range"
@@ -290,9 +290,9 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 step="0.01"
                 value={conductanceDriftExponent}
                 onChange={e => setConductanceDriftExponent(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>0.01 (Near-zero drift)</span>
                 <span>0.08 (Typical ReRAM)</span>
                 <span>0.20 (High relaxation)</span>
@@ -302,8 +302,8 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             {/* Ambient Temperature Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Ambient Die Operating Temperature:</span>
-                <span className="font-mono text-cyan-400 font-bold">{ambientTemperatureKelvin} K ({(ambientTemperatureKelvin - 273.15).toFixed(1)}°C)</span>
+                <span className="text-neutral-300 font-medium">Ambient Die Operating Temperature:</span>
+                <span className="font-mono text-white font-bold">{ambientTemperatureKelvin} K ({(ambientTemperatureKelvin - 273.15).toFixed(1)}°C)</span>
               </div>
               <input
                 type="range"
@@ -312,9 +312,9 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 step="5"
                 value={ambientTemperatureKelvin}
                 onChange={e => setAmbientTemperatureKelvin(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>250 K (-23°C)</span>
                 <span>300 K (27°C Room)</span>
                 <span>380 K (107°C Extreme)</span>
@@ -324,8 +324,8 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             {/* Daily Synaptic Events Slider */}
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
-                <span className="text-slate-300 font-medium">Daily Synaptic Operations:</span>
-                <span className="font-mono text-cyan-400 font-bold">{dailySynapticEventsBillions}B ops/day</span>
+                <span className="text-neutral-300 font-medium">Daily Synaptic Operations:</span>
+                <span className="font-mono text-white font-bold">{dailySynapticEventsBillions}B ops/day</span>
               </div>
               <input
                 type="range"
@@ -334,9 +334,9 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 step="1"
                 value={dailySynapticEventsBillions}
                 onChange={e => setDailySynapticEventsBillions(Number(e.target.value))}
-                className="w-full accent-cyan-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
+                className="w-full accent-white h-1.5 bg-neutral-800 rounded-lg cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+              <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
                 <span>1B (Edge Vision)</span>
                 <span>50B</span>
                 <span>100B (Datacenter Cluster)</span>
@@ -349,25 +349,25 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             {/* Top 4 Metric KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Card 1: Analog VMM Latency */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Analog VMM Latency</span>
-                  <Zap className="w-4 h-4 text-cyan-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Analog VMM Latency</span>
+                  <Zap className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-2">
                   <span className="text-3xl font-extrabold font-mono text-white">{results.analogVmmLatencyNs}</span>
-                  <span className="text-sm font-mono text-cyan-400">ns</span>
+                  <span className="text-sm font-mono text-neutral-200">ns</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Kirchhoff Bitline Settle:</span>
-                    <span className="font-mono text-slate-300">Single-cycle</span>
+                    <span className="font-mono text-neutral-300">Single-cycle</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Digital GPU Baseline:</span>
-                    <span className="font-mono text-rose-400">{results.digitalSystolicLatencyNs} ns</span>
+                    <span className="font-mono text-red-400">{results.digitalSystolicLatencyNs} ns</span>
                   </div>
-                  <div className="flex justify-between font-bold text-cyan-300">
+                  <div className="flex justify-between font-bold text-white">
                     <span>Acceleration Speedup:</span>
                     <span>{results.accelerationFactor}x Faster</span>
                   </div>
@@ -375,114 +375,114 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
               </div>
 
               {/* Card 2: Energy per Synaptic Op */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Energy Consumption / Synaptic Op</span>
-                  <Cpu className="w-4 h-4 text-emerald-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Energy Consumption / Synaptic Op</span>
+                  <Cpu className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-3xl font-extrabold font-mono text-emerald-400">{results.energyPerSynapticOpFemtojoules}</span>
-                  <span className="text-sm font-mono text-emerald-300">fJ / SOP</span>
+                  <span className="text-3xl font-extrabold font-mono text-neutral-200">{results.energyPerSynapticOpFemtojoules}</span>
+                  <span className="text-sm font-mono text-neutral-200">fJ / SOP</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Digital GPU Baseline:</span>
-                    <span className="font-mono text-slate-300">{results.digitalEnergyBaselineFj} fJ</span>
+                    <span className="font-mono text-neutral-300">{results.digitalEnergyBaselineFj} fJ</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Energy Efficiency Ratio:</span>
-                    <span className="font-mono text-emerald-400 font-bold">{results.energyEfficiencyRatio}x Lower Energy</span>
+                    <span className="font-mono text-white font-bold">{results.energyEfficiencyRatio}x Lower Energy</span>
                   </div>
                   <div className="flex justify-between">
                     <span>System Throughput:</span>
-                    <span className="font-mono text-cyan-300 font-bold">{results.systemThroughputTops} TOPS</span>
+                    <span className="font-mono text-white font-bold">{results.systemThroughputTops} TOPS</span>
                   </div>
                 </div>
               </div>
 
               {/* Card 3: SNR & Retention Horizon */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Retention Horizon &amp; SNR</span>
+                  <span className="text-xs text-neutral-400 font-medium">Retention Horizon &amp; SNR</span>
                   <Thermometer className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="flex items-baseline space-x-2">
                   <span className="text-3xl font-extrabold font-mono text-white">{results.retentionHorizonHours}</span>
-                  <span className="text-sm font-mono text-slate-400">hours</span>
+                  <span className="text-sm font-mono text-neutral-400">hours</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Effective SNR:</span>
                     <span className="font-mono text-amber-300">{results.effectiveSnrDb} dB</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Drift Exponent:</span>
-                    <span className="font-mono text-slate-300">ν = {conductanceDriftExponent}</span>
+                    <span className="font-mono text-neutral-300">ν = {conductanceDriftExponent}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Weight Integrity:</span>
-                    <span className="font-mono text-emerald-400 font-semibold">{results.retentionHorizonHours >= 8.0 ? 'Preserved' : 'Refresh Req.'}</span>
+                    <span className="font-mono text-white font-semibold">{results.retentionHorizonHours >= 8.0 ? 'Preserved' : 'Refresh Req.'}</span>
                   </div>
                 </div>
               </div>
 
               {/* Card 4: Financial OPEX Saved */}
-              <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-sm space-y-2">
+              <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-5 backdrop-blur-sm space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400 font-medium">Annual Power OPEX Saved</span>
-                  <Activity className="w-4 h-4 text-cyan-400" />
+                  <span className="text-xs text-neutral-400 font-medium">Annual Power OPEX Saved</span>
+                  <Activity className="w-4 h-4 text-neutral-200" />
                 </div>
                 <div className="flex items-baseline space-x-1">
-                  <span className="text-2xl font-extrabold font-mono text-cyan-300">
+                  <span className="text-2xl font-extrabold font-mono text-neutral-200">
                     {currency === 'INR' ? '₹' : '$'}{results.annualPowerCostSavings.toLocaleString()}
                   </span>
-                  <span className="text-xs text-slate-400">/ yr</span>
+                  <span className="text-xs text-neutral-400">/ yr</span>
                 </div>
-                <div className="text-xs text-slate-400 space-y-1">
+                <div className="text-xs text-neutral-400 space-y-1">
                   <div className="flex justify-between">
                     <span>Daily Energy Saved:</span>
-                    <span className="font-mono text-emerald-400 font-semibold">{results.dailyKwhSaved.toLocaleString()} kWh</span>
+                    <span className="font-mono text-white font-semibold">{results.dailyKwhSaved.toLocaleString()} kWh</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Datacenter PUE Factor:</span>
-                    <span className="font-mono text-slate-300">1.35x (Cooling incl.)</span>
+                    <span className="font-mono text-neutral-300">1.35x (Cooling incl.)</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Compute Efficiency:</span>
-                    <span className="font-mono text-cyan-300 font-bold">{results.powerEfficiencyTopsPerWatt} TOPS / Watt</span>
+                    <span className="font-mono text-white font-bold">{results.powerEfficiencyTopsPerWatt} TOPS / Watt</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Crossbar Conductance Cell Grid Visualizer */}
-            <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+              <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
                 <div className="flex items-center space-x-2">
-                  <Grid className="w-4 h-4 text-cyan-400" />
+                  <Grid className="w-4 h-4 text-neutral-200" />
                   <h3 className="text-sm font-semibold text-white">Memristor Crossbar Junction Telemetry Grid</h3>
                 </div>
-                <span className="text-xs font-mono text-cyan-400">{results.crossbarCells.length} Sample Cells Rendered</span>
+                <span className="text-xs font-mono text-neutral-200">{results.crossbarCells.length} Sample Cells Rendered</span>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {results.crossbarCells.map((cell, idx) => (
-                  <div key={idx} className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-3 space-y-1 font-mono text-[11px]">
-                    <div className="flex justify-between text-cyan-300 font-bold">
+                  <div key={idx} className="bg-neutral-950/70 border border-neutral-800/80 rounded-xl p-3 space-y-1 font-mono text-[11px]">
+                    <div className="flex justify-between text-white font-bold">
                       <span>R{cell.rowIndex}:C{cell.colIndex}</span>
                       <span>{cell.conductanceMicroSiemens} µS</span>
                     </div>
-                    <div className="flex justify-between text-slate-400">
+                    <div className="flex justify-between text-neutral-400">
                       <span>Current:</span>
                       <span className="text-white">{cell.currentMicroAmps} µA</span>
                     </div>
-                    <div className="flex justify-between text-slate-400">
+                    <div className="flex justify-between text-neutral-400">
                       <span>Drift σ:</span>
                       <span className="text-amber-300">±{cell.conductanceDriftStdDev} µS</span>
                     </div>
-                    <div className="flex justify-between text-slate-400">
+                    <div className="flex justify-between text-neutral-400">
                       <span>Status:</span>
-                      <span className={cell.isNoiseTolerant ? 'text-emerald-400 font-semibold' : 'text-rose-400 font-semibold'}>
+                      <span className={cell.isNoiseTolerant ? 'text-white font-semibold' : 'text-red-400 font-semibold'}>
                         {cell.isNoiseTolerant ? 'Tolerant' : 'Drift Alert'}
                       </span>
                     </div>
@@ -492,27 +492,27 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
             </div>
 
             {/* In-Memory Computing Architecture Blueprint */}
-            <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-sm space-y-4">
-              <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-                <Layers className="w-4 h-4 text-cyan-400" />
+            <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-xl p-6 backdrop-blur-sm space-y-4">
+              <div className="flex items-center space-x-2 border-b border-neutral-800 pb-3">
+                <Layers className="w-4 h-4 text-neutral-200" />
                 <h3 className="text-sm font-semibold text-white">Analog In-Memory Computing (AIMC) Crossbar Architecture</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <p className="font-semibold text-cyan-300">1. Voltage Activation (Wordline)</p>
-                  <p className="text-slate-400 text-[11px]">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <p className="font-semibold text-white">1. Voltage Activation (Wordline)</p>
+                  <p className="text-neutral-400 text-[11px]">
                     Digital input vectors are converted to analog voltage pulses via {adcDacResolutionBits}-bit DACs and applied across the {crossbarDimension} horizontal wordlines.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <p className="font-semibold text-cyan-300">2. Ohm &amp; Kirchhoff Accumulation</p>
-                  <p className="text-slate-400 text-[11px]">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <p className="font-semibold text-white">2. Ohm &amp; Kirchhoff Accumulation</p>
+                  <p className="text-neutral-400 text-[11px]">
                     Each memristor acts as a variable conductance state ($I = V \cdot G$). Currents sum along the vertical bitlines instantaneously via Kirchhoff&apos;s Current Law in {results.analogVmmLatencyNs} ns.
                   </p>
                 </div>
-                <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800/60 space-y-1">
-                  <p className="font-semibold text-cyan-300">3. Flash ADC Quantization</p>
-                  <p className="text-slate-400 text-[11px]">
+                <div className="p-3 rounded-xl bg-neutral-950/60 border border-neutral-800/60 space-y-1">
+                  <p className="font-semibold text-white">3. Flash ADC Quantization</p>
+                  <p className="text-neutral-400 text-[11px]">
                     Peripheral column ADCs quantize accumulated bitline currents into digital activations, sustaining an effective SNR of {results.effectiveSnrDb} dB for downstream agent routing.
                   </p>
                 </div>
@@ -522,46 +522,46 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         </div>
 
         {/* Technical Deep Dive Section */}
-        <div className="space-y-6 border-t border-slate-800 pt-10">
+        <div className="space-y-6 border-t border-neutral-800 pt-10">
           <div className="space-y-2">
             <h2 className="text-2xl font-bold tracking-tight text-white">
               Analog Neuromorphic In-Memory Computing vs Digital Von Neumann Bottlenecks
             </h2>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-4xl">
+            <p className="text-neutral-400 text-sm leading-relaxed max-w-4xl">
               In traditional GPU architectures, over 80% of total inference energy is consumed simply shuttling matrix weights between high-bandwidth memory (HBM) and the compute registers across metallic buses.
               Analog In-Memory Computing performs computation directly where the weights are stored, executing vector-matrix multiplies in $\mathcal&#123;O&#125;(1)$ time using the laws of physics.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
-                <Zap className="w-4 h-4 text-cyan-400" />
+                <Zap className="w-4 h-4 text-neutral-200" />
                 <span>Kirchhoff&apos;s Current Law Summation</span>
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 By applying Ohm&apos;s law at each crosspoint ($I_&#123;ij&#125; = V_i \cdot G_&#123;ij&#125;$) and Kirchhoff&apos;s Current Law along each column ($I_j = \sum_i I_&#123;ij&#125;$),
                 a complete $N \times N$ matrix multiplication executes passively in a single time step without digital arithmetic logic units (ALUs).
               </p>
             </div>
 
-            <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
                 <Thermometer className="w-4 h-4 text-amber-400" />
                 <span>Conductance Drift Mitigation</span>
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 Non-volatile memristors experience structural relaxation described by power-law kinetics: $G(t) = G_0 \cdot (t / t_0)^&#123;-\nu&#125;$.
                 Elesium integrates periodic write-verify refresh schedules and drift-resilient neural weight mapping to maintain &gt;99% model accuracy across months of continuous inference.
               </p>
             </div>
 
-            <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-5 space-y-3">
+            <div className="bg-neutral-900/40 border border-neutral-800/60 rounded-xl p-5 space-y-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
-                <Cpu className="w-4 h-4 text-emerald-400" />
+                <Cpu className="w-4 h-4 text-neutral-200" />
                 <span>Spike-Timing-Dependent Plasticity (STDP)</span>
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-neutral-400 leading-relaxed">
                 Memristive crossbars natively support online on-chip learning via biological STDP rules.
                 Pre-synaptic and post-synaptic voltage spike overlaps dynamically tune conductance states with sub-50 fJ switching energy, enabling true continuous edge learning.
               </p>
@@ -570,10 +570,10 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         </div>
 
         {/* Enterprise FAQ Accordion */}
-        <div className="space-y-6 border-t border-slate-800 pt-10">
+        <div className="space-y-6 border-t border-neutral-800 pt-10">
           <div className="space-y-1">
             <h2 className="text-2xl font-bold tracking-tight text-white">Frequently Asked Architectural Questions</h2>
-            <p className="text-slate-400 text-sm">Technical guidance for engineering executives evaluating analog neuromorphic hardware.</p>
+            <p className="text-neutral-400 text-sm">Technical guidance for engineering executives evaluating analog neuromorphic hardware.</p>
           </div>
 
           <div className="space-y-3">
@@ -595,16 +595,16 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 a: "Yes. In transformer architectures, linear projection layers (Key, Query, Value, and Feed-Forward Networks) account for >90% of compute cycles. These GEMM operations are offloaded directly to memristive crossbar tiles. Non-linear operations like Softmax, RMSNorm, and attention masking are executed on adjacent low-power digital RISC-V or DSP coprocessors."
               }
             ].map((faq, idx) => (
-              <div key={idx} className="border border-slate-800/80 rounded-xl bg-slate-900/40 overflow-hidden">
+              <div key={idx} className="border border-neutral-800/80 rounded-xl bg-neutral-900/40 overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-slate-200 hover:text-white transition"
+                  className="active:scale-[0.97] w-full px-5 py-4 text-left flex items-center justify-between text-sm font-semibold text-neutral-200 hover:text-white transition"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${openFaq === idx ? 'rotate-180 text-cyan-400' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-neutral-400 transition-transform ${openFaq === idx ? 'rotate-180 text-neutral-200' : ''}`} />
                 </button>
                 {openFaq === idx && (
-                  <div className="px-5 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/40 pt-3">
+                  <div className="px-5 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/40 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -614,15 +614,15 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
         </div>
 
         {/* Audit CTA Card */}
-        <div className="rounded-2xl bg-gradient-to-r from-cyan-950/40 via-slate-900/80 to-blue-950/40 border border-cyan-800/50 p-8 text-center space-y-4">
+        <div className="rounded-xl bg-neutral-950 border border-white/15 p-8 text-center space-y-4">
           <h2 className="text-2xl font-extrabold text-white">Deploy Sovereign Neuromorphic In-Memory Computing Infrastructure</h2>
-          <p className="text-slate-400 text-sm max-w-2xl mx-auto leading-relaxed">
+          <p className="text-neutral-400 text-sm max-w-2xl mx-auto leading-relaxed">
             Break the Von Neumann bottleneck and reduce AI inference power by up to 90%. Partner with Elesium to architect sovereign analog in-memory compute accelerators and multi-agent infrastructure.
           </p>
           <div className="pt-2">
             <ExpandableScreen>
               <ExpandableScreenTrigger>
-                <button className="inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm shadow-lg shadow-cyan-950/60 transition">
+                <button className="active:scale-[0.97] inline-flex items-center space-x-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-sm shadow-lg transition">
                   <span>Schedule Neuromorphic Architecture Audit</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -640,34 +640,34 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
               <h3 className="text-base font-semibold text-white flex items-center space-x-2">
-                <Code className="w-4 h-4 text-cyan-400" />
+                <Code className="w-4 h-4 text-neutral-200" />
                 <span>Embed This Simulator</span>
               </h3>
-              <button onClick={() => setIsEmbedOpen(false)} className="text-slate-400 hover:text-white">
+              <button onClick={() => setIsEmbedOpen(false)} className="active:scale-[0.97] text-neutral-400 hover:text-white">
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-neutral-400">
               Embed the interactive Memristor Crossbar Simulator directly on your internal portal or technical documentation. Includes responsive layout and live telemetry calculations.
             </p>
             <div className="relative">
-              <pre className="bg-slate-950 border border-slate-800 rounded-lg p-3 text-[11px] font-mono text-cyan-300 overflow-x-auto whitespace-pre-wrap">
+              <pre className="bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-[11px] font-mono text-neutral-200 overflow-x-auto whitespace-pre-wrap">
                 {embedCode}
               </pre>
             </div>
             <div className="flex justify-end space-x-3 pt-2">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white text-xs font-medium transition"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg bg-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedCode}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-medium transition"
+                className="active:scale-[0.97] inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-medium transition"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{hasCopiedEmbed ? 'Copied Snippet!' : 'Copy Embed Code'}</span>

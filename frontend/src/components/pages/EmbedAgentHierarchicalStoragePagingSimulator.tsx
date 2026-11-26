@@ -40,24 +40,24 @@ export default function EmbedAgentHierarchicalStoragePagingSimulator() {
   const results = useMemo(() => calculateHierarchicalStoragePaging(inputs), [inputs]);
 
   return (
-    <div className="bg-[#07090e] text-slate-100 p-5 rounded-xl border border-slate-800 max-w-xl mx-auto font-sans shadow-2xl">
+    <div className="bg-black text-neutral-100 p-5 rounded-xl border border-neutral-800 max-w-xl mx-auto font-sans shadow-2xl">
       <Helmet>
         <title>Embed: Hierarchical KV Storage Paging Simulator | Elesium</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-hierarchical-storage-paging-simulator" />
       </Helmet>
 
       {/* Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-4">
+      <div className="flex items-center justify-between pb-3 border-b border-neutral-800/80 mb-4">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-indigo-950/80 border border-indigo-800/60 text-indigo-400">
+          <div className="p-1.5 rounded-lg bg-white/[0.05] border border-white/15 text-neutral-200">
             <Database className="w-4 h-4" />
           </div>
           <div>
-            <h2 className="text-sm font-semibold text-slate-100">Hierarchical KV Storage Paging Simulator</h2>
-            <p className="text-[11px] text-slate-400">HBM3e · CXL 3.0 DRAM · PCIe Gen5 NVMe · Sub-10ms Faults</p>
+            <h2 className="text-sm font-semibold text-neutral-100">Hierarchical KV Storage Paging Simulator</h2>
+            <p className="text-[11px] text-neutral-400">HBM3e · CXL 3.0 DRAM · PCIe Gen5 NVMe · Sub-10ms Faults</p>
           </div>
         </div>
-        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/[0.04] text-neutral-200 border border-white/15">
           Tool #71
         </span>
       </div>
@@ -65,12 +65,12 @@ export default function EmbedAgentHierarchicalStoragePagingSimulator() {
       {/* Controls */}
       <div className="space-y-3 mb-4 text-xs">
         <div>
-          <label className="block text-slate-400 mb-1">Target Foundation Model</label>
+          <label className="block text-neutral-400 mb-1">Target Foundation Model</label>
           <select
             value={modelArchitecture}
             onChange={(e) => setModelArchitecture(e.target.value as HierarchicalModelArchitecture)}
             aria-label="Target Foundation Model"
-            className="w-full bg-slate-900 border border-slate-700/80 rounded px-2.5 py-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded px-2.5 py-1.5 text-neutral-200"
           >
             <option value="llama_3_1_70b">Llama 3.1 70B (Enterprise Workhorse)</option>
             <option value="deepseek_r1_671b_moe">DeepSeek-R1 671B MoE (MLA Compression)</option>
@@ -80,12 +80,12 @@ export default function EmbedAgentHierarchicalStoragePagingSimulator() {
         </div>
 
         <div>
-          <label className="block text-slate-400 mb-1">Storage Hierarchy Mode</label>
+          <label className="block text-neutral-400 mb-1">Storage Hierarchy Mode</label>
           <select
             value={storageHierarchyMode}
             onChange={(e) => setStorageHierarchyMode(e.target.value as StorageHierarchyMode)}
             aria-label="Storage Hierarchy Mode"
-            className="w-full bg-slate-900 border border-slate-700/80 rounded px-2.5 py-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded px-2.5 py-1.5 text-neutral-200"
           >
             <option value="three_tiered_hbm_cxl_nvme">Three-Tiered: HBM3e + CXL 3.0 + NVMe Array (Recommended)</option>
             <option value="two_tiered_hbm_cxl">Two-Tiered: HBM3e + CXL 3.0 DRAM</option>
@@ -95,12 +95,12 @@ export default function EmbedAgentHierarchicalStoragePagingSimulator() {
         </div>
 
         <div>
-          <label className="block text-slate-400 mb-1">Prefetch Engine</label>
+          <label className="block text-neutral-400 mb-1">Prefetch Engine</label>
           <select
             value={prefetchEngine}
             onChange={(e) => setPrefetchEngine(e.target.value as PrefetchEngineType)}
             aria-label="Prefetch Engine"
-            className="w-full bg-slate-900 border border-slate-700/80 rounded px-2.5 py-1.5 text-slate-200"
+            className="w-full bg-neutral-900 border border-neutral-700/80 rounded px-2.5 py-1.5 text-neutral-200"
           >
             <option value="async_cuda_dma_stream">Asynchronous CUDA DMA Stream (Zero-Stall Overlap)</option>
             <option value="gpudirect_storage_gds">GPUDirect Storage (GDS Kernel Bypass)</option>
@@ -111,36 +111,36 @@ export default function EmbedAgentHierarchicalStoragePagingSimulator() {
 
       {/* Metrics Grid */}
       <div className="grid grid-cols-2 gap-2 mb-4 text-xs font-mono">
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">Total KV Footprint</div>
-          <div className="text-sm font-bold text-slate-200">{results.totalKvFootprintGb} GB</div>
-          <div className="text-[10px] text-slate-500">HBM: {results.hbmResidentPercent}% | CXL: {results.cxlResidentPercent}% | NVMe: {results.nvmeResidentPercent}%</div>
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">Total KV Footprint</div>
+          <div className="text-sm font-bold text-neutral-200">{results.totalKvFootprintGb} GB</div>
+          <div className="text-[10px] text-neutral-500">HBM: {results.hbmResidentPercent}% | CXL: {results.cxlResidentPercent}% | NVMe: {results.nvmeResidentPercent}%</div>
         </div>
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">Page Fault Latency</div>
-          <div className="text-sm font-bold text-indigo-400">{results.averagePageFaultLatencyMs} ms</div>
-          <div className="text-[10px] text-slate-500">ITL: {results.effectiveInterTokenLatencyMs} ms</div>
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">Page Fault Latency</div>
+          <div className="text-sm font-bold text-white">{results.averagePageFaultLatencyMs} ms</div>
+          <div className="text-[10px] text-neutral-500">ITL: {results.effectiveInterTokenLatencyMs} ms</div>
         </div>
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">Concurrent Streams</div>
-          <div className="text-sm font-bold text-emerald-400">{results.sustainableConcurrentStreams} streams</div>
-          <div className="text-[10px] text-slate-500">Per 8-GPU Node</div>
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">Concurrent Streams</div>
+          <div className="text-sm font-bold text-white">{results.sustainableConcurrentStreams} streams</div>
+          <div className="text-[10px] text-neutral-500">Per 8-GPU Node</div>
         </div>
-        <div className="bg-slate-900/80 p-2.5 rounded border border-slate-800">
-          <div className="text-[10px] text-slate-400">Hardware TCO Savings</div>
-          <div className="text-sm font-bold text-cyan-400">{results.formattedHardwareSavings}</div>
-          <div className="text-[10px] text-slate-500">Procurement Delta</div>
+        <div className="bg-neutral-900/80 p-2.5 rounded border border-neutral-800">
+          <div className="text-[10px] text-neutral-400">Hardware TCO Savings</div>
+          <div className="text-sm font-bold text-white">{results.formattedHardwareSavings}</div>
+          <div className="text-[10px] text-neutral-500">Procurement Delta</div>
         </div>
       </div>
 
       {/* Footer / CTA */}
-      <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
-        <span className="text-slate-500">Powered by Elesium Sovereign Systems</span>
+      <div className="pt-3 border-t border-neutral-800/80 flex items-center justify-between text-[11px]">
+        <span className="text-neutral-500">Powered by Elesium Sovereign Systems</span>
         <a
           href="https://elesium.online/tools/enterprise-agent-hierarchical-storage-paging-simulator"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-indigo-400 hover:text-indigo-300 font-medium"
+          className="inline-flex items-center gap-1 text-neutral-200 hover:text-white font-medium"
         >
           Full Simulator <ArrowUpRight className="w-3 h-3" />
         </a>

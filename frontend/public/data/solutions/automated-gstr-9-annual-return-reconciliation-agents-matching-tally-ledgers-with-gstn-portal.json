@@ -17,7 +17,7 @@
   "firstSentence": "Reconcile annual GSTR-9 returns with Tally Prime ledgers and GSTR-2B purchase registers, detecting input tax credit discrepancies across Table 8A with 100% audit accuracy.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal",
   "paragraphs": [
     "Corporate finance directors and statutory tax auditors in India face enormous complexity when preparing the mandatory annual GST return (Form GSTR-9) and reconciliation statement (Form GSTR-9C). Reconciling turnover and input tax credit (ITC) across 12 months of monthly GSTR-1 filings, GSTR-3B tax payments, GSTR-2B automated purchase registers, and internal Tally Prime books requires cross-examining hundreds of thousands of ledger entries. Inadvertent discrepancies in Table 8A trigger massive tax demand notices with 18% annual interest.",
@@ -113,7 +113,7 @@
     "subheadline": "Corporate finance directors and statutory tax auditors in India face enormous complexity when preparing the mandatory annual GST return (Form GSTR-9) and reconciliation statement (Form GSTR-9C). Reconciling turnover and input tax credit (ITC) across 12 months of monthly GSTR-1 filings, GSTR-3B tax payments, GSTR-2B automated purchase registers, and internal Tally Prime books requires cross-examining hundreds of thousands of ledger entries. Inadvertent discrepancies in Table 8A trigger massive tax demand notices with 18% annual interest.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Instant export of certified audit documentation and Table 8A annexures."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Logistics & Supply Chain Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Instant export of certified audit documentation and Table 8A annexures."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Automated GSTR-9 Annual Return Reconciliation Agents Matching Tally Ledgers with GSTN Portal Performance Telemetry",
       "layout": "centered-card"
     }

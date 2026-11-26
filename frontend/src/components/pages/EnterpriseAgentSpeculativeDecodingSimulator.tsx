@@ -56,9 +56,9 @@ export default function EnterpriseAgentSpeculativeDecodingSimulator() {
     return simulateAgentSpeculativeDecoding(inputs);
   }, [inputs]);
 
-  const embedCode = `<iframe src="https://elesium.online/embed/agent-speculative-decoding-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #1e293b;"></iframe>
-<div style="font-size:12px;color:#94a3b8;text-align:right;margin-top:6px;font-family:sans-serif;">
-  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#06b6d4;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
+  const embedCode = `<iframe src="https://elesium.online/embed/agent-speculative-decoding-simulator" width="100%" height="700" frameborder="0" style="border-radius:12px;border:1px solid #262626;"></iframe>
+<div style="font-size:12px;color:#a3a3a3;text-align:right;margin-top:6px;font-family:sans-serif;">
+  Calculated via <a href="https://elesium.online/solutions" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:underline;">Elesium Sovereign AI Architecture</a>
 </div>`;
 
   const copyEmbedToClipboard = () => {
@@ -134,7 +134,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8 selection:bg-cyan-500 selection:text-black">
+    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8 selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Agent Speculative Decoding Simulator | Elesium</title>
         <meta
@@ -147,33 +147,33 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
 
       {/* Header Breadcrumbs */}
       <div className="max-w-7xl mx-auto mb-8 flex flex-wrap items-center justify-between gap-4">
-        <div className="flex items-center gap-2 text-sm font-mono text-slate-400">
-          <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
+        <div className="flex items-center gap-2 text-sm font-mono text-neutral-400">
+          <Link to="/" className="hover:text-white transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/solutions/" className="hover:text-cyan-400 transition-colors">Solutions</Link>
+          <Link to="/solutions/" className="hover:text-white transition-colors">Solutions</Link>
           <span>/</span>
-          <span className="text-cyan-400">Speculative Decoding Simulator</span>
+          <span className="text-neutral-200">Speculative Decoding Simulator</span>
         </div>
         <div className="flex items-center gap-3">
           <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
+                className="active:scale-[0.97] inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-semibold shadow-sm transition"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 <span>Chat on WhatsApp</span>
               </button>
               <button
             onClick={() => setIsEmbedOpen(true)}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-700 bg-slate-900 hover:bg-slate-800 text-xs font-mono text-slate-300 hover:text-white transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-xs font-mono text-neutral-300 hover:text-white transition-colors"
           >
-            <Code className="w-3.5 h-3.5 text-cyan-400" />
+            <Code className="w-3.5 h-3.5 text-neutral-200" />
             Embed Tool
           </button>
           <button
             onClick={copyExecutiveMemo}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-cyan-500/30 bg-cyan-950/40 hover:bg-cyan-900/60 text-xs font-mono text-cyan-300 hover:text-cyan-100 transition-colors"
+            className="active:scale-[0.97] inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-white/20 bg-white/[0.05] hover:bg-white/10 text-xs font-mono text-neutral-200 hover:text-white transition-colors"
           >
-            {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-cyan-400" />}
+            {hasCopiedMemo ? <Check className="w-3.5 h-3.5 text-neutral-200" /> : <Copy className="w-3.5 h-3.5 text-neutral-200" />}
             {hasCopiedMemo ? 'Memo Copied!' : 'Copy Exec Memo'}
           </button>
         </div>
@@ -181,36 +181,36 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
 
       {/* Hero Headline */}
       <div className="max-w-7xl mx-auto mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/30 text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/[0.05] text-neutral-200 text-xs font-mono uppercase tracking-widest mb-4">
           <Zap className="w-3.5 h-3.5 " />
           Tool #25 • The Quarter-Century Asset
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
           Enterprise Agent Dynamic Speculative Decoding Simulator
         </h1>
-        <p className="max-w-4xl text-base sm:text-lg text-slate-400 leading-relaxed font-normal">
+        <p className="max-w-4xl text-base sm:text-lg text-neutral-400 leading-relaxed font-normal">
           Model memory-bandwidth bottlenecks in enterprise agent inference. Compare standard autoregressive decoding
-          against static draft horizons and <span className="text-cyan-300 font-medium">sovereign dynamic speculative tree verification</span>.
+          against static draft horizons and <span className="text-neutral-200 font-medium">sovereign dynamic speculative tree verification</span>.
           Quantify token latency reductions, acceptance rates, and GPU compute cost arbitrage.
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
         {/* Sliders Configuration Panel */}
-        <div className="lg:col-span-5 bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-7 shadow-xl space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div className="lg:col-span-5 bg-neutral-900/90 border border-neutral-800 rounded-xl p-6 sm:p-7 shadow-xl space-y-6">
+          <div className="flex items-center justify-between border-b border-neutral-800 pb-4">
             <div className="flex items-center gap-2.5">
-              <Sliders className="w-5 h-5 text-cyan-400" />
+              <Sliders className="w-5 h-5 text-neutral-200" />
               <h2 className="text-lg font-bold text-white font-mono">Inference Parameters</h2>
             </div>
-            <span className="text-xs font-mono text-slate-400">Config Params</span>
+            <span className="text-xs font-mono text-neutral-400">Config Params</span>
           </div>
 
           {/* Slider 1: Monthly Tokens */}
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm font-mono">
-              <span className="text-slate-300">Monthly Inference Tokens</span>
-              <span className="text-cyan-400 font-bold">{monthlyInferenceTokensMillions}M tokens</span>
+              <span className="text-neutral-300">Monthly Inference Tokens</span>
+              <span className="text-white font-bold">{monthlyInferenceTokensMillions}M tokens</span>
             </div>
             <input
               type="range"
@@ -219,9 +219,9 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="25"
               value={monthlyInferenceTokensMillions}
               onChange={(e) => setMonthlyInferenceTokensMillions(Number(e.target.value))}
-              className="w-full accent-cyan-400 bg-slate-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[11px] font-mono text-slate-400">
+            <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>50M (Mid-Market)</span>
               <span>2.5B (Global Enterprise)</span>
             </div>
@@ -230,8 +230,8 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           {/* Slider 2: Target Model Size */}
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm font-mono">
-              <span className="text-slate-300">Target Model Parameters</span>
-              <span className="text-cyan-400 font-bold">{targetModelParameterSizeB}B Parameters</span>
+              <span className="text-neutral-300">Target Model Parameters</span>
+              <span className="text-white font-bold">{targetModelParameterSizeB}B Parameters</span>
             </div>
             <input
               type="range"
@@ -240,9 +240,9 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="5"
               value={targetModelParameterSizeB}
               onChange={(e) => setTargetModelParameterSizeB(Number(e.target.value))}
-              className="w-full accent-cyan-400 bg-slate-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[11px] font-mono text-slate-400">
+            <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>70B (Llama-3.3 70B)</span>
               <span>405B (Llama-3.1 405B)</span>
             </div>
@@ -251,8 +251,8 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           {/* Slider 3: Sequence Length */}
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm font-mono">
-              <span className="text-slate-300">Sequence Length per Call</span>
-              <span className="text-cyan-400 font-bold">{avgSequenceLengthTokens} tokens</span>
+              <span className="text-neutral-300">Sequence Length per Call</span>
+              <span className="text-white font-bold">{avgSequenceLengthTokens} tokens</span>
             </div>
             <input
               type="range"
@@ -261,9 +261,9 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="128"
               value={avgSequenceLengthTokens}
               onChange={(e) => setAvgSequenceLengthTokens(Number(e.target.value))}
-              className="w-full accent-cyan-400 bg-slate-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[11px] font-mono text-slate-400">
+            <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>256 (Fast Chat)</span>
               <span>4,096 (Deep Agentic Plan)</span>
             </div>
@@ -272,8 +272,8 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           {/* Slider 4: GPU Hourly Cost */}
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm font-mono">
-              <span className="text-slate-300">Blended GPU Hourly Spend</span>
-              <span className="text-cyan-400 font-bold">${gpuHourlyCostUSD.toFixed(2)} / GPU-hr</span>
+              <span className="text-neutral-300">Blended GPU Hourly Spend</span>
+              <span className="text-white font-bold">${gpuHourlyCostUSD.toFixed(2)} / GPU-hr</span>
             </div>
             <input
               type="range"
@@ -282,32 +282,32 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               step="0.25"
               value={gpuHourlyCostUSD}
               onChange={(e) => setGpuHourlyCostUSD(Number(e.target.value))}
-              className="w-full accent-cyan-400 bg-slate-800 rounded-lg cursor-pointer"
+              className="w-full accent-white bg-neutral-800 rounded-lg cursor-pointer"
             />
-            <div className="flex justify-between text-[11px] font-mono text-slate-400">
+            <div className="flex justify-between text-[11px] font-mono text-neutral-400">
               <span>$2.50 (L40S / A100)</span>
               <span>$18.00 (8x H100 SXM5)</span>
             </div>
           </div>
 
           {/* Highlight Metrics Box */}
-          <div className="pt-4 border-t border-slate-800 grid grid-cols-2 gap-3">
-            <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-950/20">
-              <div className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider">Speedup Multiplier</div>
-              <div className="text-2xl font-bold font-mono text-emerald-300 mt-1">{results.throughputGainMultiplier}x</div>
-              <div className="text-[11px] text-slate-400 mt-0.5">End-to-End Acceleration</div>
+          <div className="pt-4 border-t border-neutral-800 grid grid-cols-2 gap-3">
+            <div className="p-3.5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-[11px] font-mono text-neutral-200 uppercase tracking-wider">Speedup Multiplier</div>
+              <div className="text-2xl font-bold font-mono text-white mt-1">{results.throughputGainMultiplier}x</div>
+              <div className="text-[11px] text-neutral-400 mt-0.5">End-to-End Acceleration</div>
             </div>
-            <div className="p-3.5 rounded-xl border border-cyan-500/30 bg-cyan-950/20">
-              <div className="text-[11px] font-mono text-cyan-400 uppercase tracking-wider">Latency Reduction</div>
-              <div className="text-2xl font-bold font-mono text-cyan-300 mt-1">-{results.latencyCutPct}%</div>
-              <div className="text-[11px] text-slate-400 mt-0.5">Sub-17ms / Token</div>
+            <div className="p-3.5 rounded-xl border border-white/20 bg-white/[0.05]">
+              <div className="text-[11px] font-mono text-neutral-200 uppercase tracking-wider">Latency Reduction</div>
+              <div className="text-2xl font-bold font-mono text-white mt-1">-{results.latencyCutPct}%</div>
+              <div className="text-[11px] text-neutral-400 mt-0.5">Sub-17ms / Token</div>
             </div>
           </div>
 
           {/* CTA In-Column */}
           <div className="pt-2">
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-mono text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 hover:from-cyan-400 hover:to-blue-500 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all cursor-pointer">
+              <ExpandableScreenTrigger className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-mono text-sm font-semibold border border-white/10 bg-white/5 hover:bg-white/10 text-neutral-200 text-black shadow-lg transition-all cursor-pointer">
                 <span>Deploy Sovereign Speculative Decoding</span>
                 <ArrowRight className="w-4 h-4" />
               </ExpandableScreenTrigger>
@@ -321,7 +321,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
         {/* 3-Way Comparative Architectural Results */}
         <div className="lg:col-span-7 space-y-6">
           {/* Architecture 1: Standard Autoregressive Decoding */}
-          <div className="p-6 rounded-2xl border border-red-900/40 bg-slate-900/60 relative overflow-hidden">
+          <div className="p-6 rounded-xl border border-red-900/40 bg-neutral-900/60 relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
@@ -332,30 +332,30 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">Token Latency</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">Token Latency</div>
                 <div className="text-base font-bold text-red-400">{results.standardAutoregressive.meanLatencyPerTokenMs} ms</div>
               </div>
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">Throughput</div>
-                <div className="text-base font-bold text-slate-200">{results.standardAutoregressive.tokensPerSecondPerStream} tok/s</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">Throughput</div>
+                <div className="text-base font-bold text-neutral-200">{results.standardAutoregressive.tokensPerSecondPerStream} tok/s</div>
               </div>
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">HBM Efficiency</div>
-                <div className="text-base font-bold text-slate-400">{results.standardAutoregressive.memoryBandwidthEfficiencyPct}%</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">HBM Efficiency</div>
+                <div className="text-base font-bold text-neutral-400">{results.standardAutoregressive.memoryBandwidthEfficiencyPct}%</div>
               </div>
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">Annual Cost</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-red-400">${results.standardAutoregressive.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
             </div>
-            <p className="text-xs text-slate-400 font-sans leading-relaxed">
+            <p className="text-xs text-neutral-400 font-sans leading-relaxed">
               {results.standardAutoregressive.architecturalVerdict}
             </p>
           </div>
 
           {/* Architecture 2: Static Draft Speculative Decoding */}
-          <div className="p-6 rounded-2xl border border-amber-900/40 bg-slate-900/60 relative overflow-hidden">
+          <div className="p-6 rounded-xl border border-amber-900/40 bg-neutral-900/60 relative overflow-hidden">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
@@ -366,77 +366,77 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">Token Latency</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">Token Latency</div>
                 <div className="text-base font-bold text-amber-400">{results.staticDraft.meanLatencyPerTokenMs} ms</div>
               </div>
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">Throughput</div>
-                <div className="text-base font-bold text-slate-200">{results.staticDraft.tokensPerSecondPerStream} tok/s</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">Throughput</div>
+                <div className="text-base font-bold text-neutral-200">{results.staticDraft.tokensPerSecondPerStream} tok/s</div>
               </div>
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">Acceptance Rate</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">Acceptance Rate</div>
                 <div className="text-base font-bold text-amber-400">{results.staticDraft.tokenAcceptanceRatePct}%</div>
               </div>
-              <div className="bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
-                <div className="text-[11px] text-slate-400">Annual Cost</div>
+              <div className="bg-neutral-950/60 p-2.5 rounded-lg border border-neutral-800">
+                <div className="text-[11px] text-neutral-400">Annual Cost</div>
                 <div className="text-base font-bold text-amber-400">${results.staticDraft.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
             </div>
-            <p className="text-xs text-slate-400 font-sans leading-relaxed">
+            <p className="text-xs text-neutral-400 font-sans leading-relaxed">
               {results.staticDraft.architecturalVerdict}
             </p>
           </div>
 
           {/* Architecture 3: Elesium Sovereign Dynamic Speculative Decoding */}
-          <div className="p-6 rounded-2xl border border-cyan-500/50 bg-gradient-to-br from-cyan-950/40 via-slate-900 to-blue-950/30 relative overflow-hidden shadow-2xl">
+          <div className="p-6 rounded-xl border border-white/30 bg-neutral-950 relative overflow-hidden shadow-2xl">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 " />
-                <h3 className="font-mono text-base font-bold text-cyan-200">
+                <div className="w-2.5 h-2.5 rounded-full bg-neutral-400 " />
+                <h3 className="font-mono text-base font-bold text-white">
                   3. Elesium Sovereign Dynamic Speculative Decoding (Tree Verification)
                 </h3>
               </div>
-              <span className="text-xs font-mono text-cyan-300 bg-cyan-950/80 px-2.5 py-0.5 rounded border border-cyan-500/40">
+              <span className="text-xs font-mono text-neutral-200 bg-white/[0.05] px-2.5 py-0.5 rounded border border-white/30">
                 2.85x Speedup • 88.4% Alpha
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-sm mb-3">
-              <div className="bg-slate-950/80 p-2.5 rounded-lg border border-cyan-900/50">
-                <div className="text-[11px] text-slate-400">Token Latency</div>
-                <div className="text-base font-bold text-emerald-400">{results.sovereignDynamic.meanLatencyPerTokenMs} ms</div>
+              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+                <div className="text-[11px] text-neutral-400">Token Latency</div>
+                <div className="text-base font-bold text-white">{results.sovereignDynamic.meanLatencyPerTokenMs} ms</div>
               </div>
-              <div className="bg-slate-950/80 p-2.5 rounded-lg border border-cyan-900/50">
-                <div className="text-[11px] text-slate-400">Throughput</div>
-                <div className="text-base font-bold text-cyan-300">{results.sovereignDynamic.tokensPerSecondPerStream} tok/s</div>
+              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+                <div className="text-[11px] text-neutral-400">Throughput</div>
+                <div className="text-base font-bold text-white">{results.sovereignDynamic.tokensPerSecondPerStream} tok/s</div>
               </div>
-              <div className="bg-slate-950/80 p-2.5 rounded-lg border border-cyan-900/50">
-                <div className="text-[11px] text-slate-400">Acceptance Rate</div>
-                <div className="text-base font-bold text-emerald-400">{results.sovereignDynamic.tokenAcceptanceRatePct}%</div>
+              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+                <div className="text-[11px] text-neutral-400">Acceptance Rate</div>
+                <div className="text-base font-bold text-white">{results.sovereignDynamic.tokenAcceptanceRatePct}%</div>
               </div>
-              <div className="bg-slate-950/80 p-2.5 rounded-lg border border-cyan-900/50">
-                <div className="text-[11px] text-slate-400">Annual Cost</div>
-                <div className="text-base font-bold text-emerald-400">${results.sovereignDynamic.annualizedTotalCostUSD.toLocaleString()}</div>
+              <div className="bg-neutral-950/80 p-2.5 rounded-lg border border-white/15">
+                <div className="text-[11px] text-neutral-400">Annual Cost</div>
+                <div className="text-base font-bold text-white">${results.sovereignDynamic.annualizedTotalCostUSD.toLocaleString()}</div>
               </div>
             </div>
-            <p className="text-xs text-slate-300 font-sans leading-relaxed">
+            <p className="text-xs text-neutral-300 font-sans leading-relaxed">
               {results.sovereignDynamic.architecturalVerdict}
             </p>
           </div>
 
           {/* Annual Cost Arbitrage Banner */}
-          <div className="p-5 rounded-xl border border-emerald-500/40 bg-emerald-950/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-5 rounded-xl border border-white/30 bg-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <div className="text-xs font-mono text-emerald-400 uppercase tracking-wider">Net Annual Compute Cost Arbitrage</div>
+              <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider">Net Annual Compute Cost Arbitrage</div>
               <div className="text-2xl font-bold font-mono text-white mt-0.5">
                 ${results.annualCostSavingsUSD.toLocaleString()} / year
               </div>
-              <div className="text-xs text-slate-300 mt-1">
+              <div className="text-xs text-neutral-300 mt-1">
                 Cutting GPU compute hours by {results.costReductionPct}% while slashing generation latency by {results.latencyCutPct}%.
               </div>
             </div>
             <ExpandableScreen>
-              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-mono text-xs font-bold transition-all cursor-pointer shrink-0">
+              <ExpandableScreenTrigger className="px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-mono text-xs font-bold transition-all cursor-pointer shrink-0">
                 Lock Inference Arbitrage
               </ExpandableScreenTrigger>
               <ExpandableScreenContent>
@@ -450,34 +450,34 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
       {/* Deep Technical Architectural Breakdown */}
       <div className="max-w-7xl mx-auto mb-16">
         <h2 className="text-2xl font-bold font-mono text-white mb-6 flex items-center gap-2">
-          <Layers className="w-5 h-5 text-cyan-400" />
+          <Layers className="w-5 h-5 text-neutral-200" />
           Mathematical & Engineering Architecture: Dynamic Speculative Decoding
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-3">
-            <div className="flex items-center gap-2 text-cyan-400 font-mono text-sm font-semibold">
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+            <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Gauge className="w-4 h-4" />
               <span>Speculative Tree Attention</span>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <p className="text-xs text-neutral-300 leading-relaxed">
               Rather than proposing a single linear sequence, the draft engine constructs a candidate token tree with top-p probability branching. Using customized tree attention masks, the target model validates multiple speculative candidate paths simultaneously in a single forward pass, boosting acceptance rate to 88.4%.
             </p>
           </div>
-          <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-3">
-            <div className="flex items-center gap-2 text-cyan-400 font-mono text-sm font-semibold">
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+            <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Cpu className="w-4 h-4" />
               <span>HBM Bandwidth Amortization</span>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <p className="text-xs text-neutral-300 leading-relaxed">
               Standard autoregressive generation reads 140GB of model parameters per single token output. By validating an average of 2.85 tokens per target model forward pass, HBM transfer overhead is amortized across multiple accepted tokens, elevating memory bus utilization from 34% to 92.4%.
             </p>
           </div>
-          <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/60 space-y-3">
-            <div className="flex items-center gap-2 text-cyan-400 font-mono text-sm font-semibold">
+          <div className="p-6 rounded-xl border border-neutral-800 bg-neutral-900/60 space-y-3">
+            <div className="flex items-center gap-2 text-white font-mono text-sm font-semibold">
               <Activity className="w-4 h-4" />
               <span>Zero-Divergence Mathematical Equivalence</span>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <p className="text-xs text-neutral-300 leading-relaxed">
               Tokens rejected during speculative validation are resampled directly from the target distribution adjusted for the draft probability. This rigorously guarantees that output distributions match exact target model inference with zero fidelity degradation or drift.
             </p>
           </div>
@@ -493,17 +493,17 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="border border-slate-800 rounded-xl bg-slate-900/70 overflow-hidden transition-colors"
+              className="border border-neutral-800 rounded-xl bg-neutral-900/70 overflow-hidden transition-colors"
             >
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-mono text-sm font-semibold text-slate-200 hover:text-cyan-300 transition-colors"
+                className="active:scale-[0.97] w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 font-mono text-sm font-semibold text-neutral-200 hover:text-white transition-colors"
               >
                 <span>{faq.q}</span>
-                <ChevronDown className={`w-4 h-4 text-cyan-400 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-neutral-200 shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
               </button>
               {openFaq === idx && (
-                <div className="px-4 sm:px-5 pb-5 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                <div className="px-4 sm:px-5 pb-5 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3">
                   {faq.a}
                 </div>
               )}
@@ -515,18 +515,18 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
       {/* Embed Modal */}
       {isEmbedOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 shadow-2xl relative">
+          <div className="bg-neutral-900 border border-neutral-700 rounded-xl max-w-xl w-full p-6 shadow-2xl relative">
             <button
               onClick={() => setIsEmbedOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+              className="active:scale-[0.97] absolute top-4 right-4 text-neutral-400 hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
             <div className="flex items-center gap-2 mb-3">
-              <Code className="w-5 h-5 text-cyan-400" />
+              <Code className="w-5 h-5 text-neutral-200" />
               <h3 className="text-lg font-bold font-mono text-white">Embed Simulator</h3>
             </div>
-            <p className="text-xs text-slate-300 mb-4 font-sans leading-relaxed">
+            <p className="text-xs text-neutral-300 mb-4 font-sans leading-relaxed">
               Copy and paste this HTML snippet into your technical documentation, intranet portal, or blog post.
               Includes live reactive sliders and an authoritative watermark backlink to Elesium.
             </p>
@@ -535,19 +535,19 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
                 readOnly
                 value={embedCode}
                 rows={5}
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs font-mono text-slate-300 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 focus:outline-none"
               />
             </div>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsEmbedOpen(false)}
-                className="px-4 py-2 rounded-lg border border-slate-700 text-xs font-mono text-slate-300 hover:bg-slate-800"
+                className="active:scale-[0.97] px-4 py-2 rounded-lg border border-neutral-700 text-xs font-mono text-neutral-300 hover:bg-neutral-800"
               >
                 Close
               </button>
               <button
                 onClick={copyEmbedToClipboard}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold transition-colors"
+                className="active:scale-[0.97] inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black font-mono text-xs font-bold transition-colors"
               >
                 {hasCopiedEmbed ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 {hasCopiedEmbed ? 'Copied Code!' : 'Copy Code'}

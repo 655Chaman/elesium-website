@@ -17,7 +17,7 @@
   "firstSentence": "Automate Clinical Establishments Act registration renewals and statutory medical licensing compliance for private hospitals, tracking 150+ statutory operational parameters in real time.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries",
   "paragraphs": [
     "Private hospitals, nursing homes, and diagnostic day-care clinics in India face severe operational shutdown risks and heavy monetary fines if mandatory statutory registrations expire. Compliance mandates under the Clinical Establishments (Registration and Regulation) Act, biomedical waste management authorizations, pharmacy drug licenses, fire safety NOCs, and AERB radiological approvals require tracking hundreds of expiring certificates across multiple municipal and state health authorities. Inadvertent renewal lapses force hospital sealing and patient evacuations.",
@@ -113,7 +113,7 @@
     "subheadline": "Private hospitals, nursing homes, and diagnostic day-care clinics in India face severe operational shutdown risks and heavy monetary fines if mandatory statutory registrations expire. Compliance mandates under the Clinical Establishments (Registration and Regulation) Act, biomedical waste management authorizations, pharmacy drug licenses, fire safety NOCs, and AERB radiological approvals require tracking hundreds of expiring certificates across multiple municipal and state health authorities. Inadvertent renewal lapses force hospital sealing and patient evacuations.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Replaces manual Excel calendar tracking with automated statutory state machines."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Replaces manual Excel calendar tracking with automated statutory state machines."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Private Hospital Statutory Clinical Establishment Act Registration Renewal Telemetry for Legal Fiduciaries Performance Telemetry",
       "layout": "centered-card"
     }

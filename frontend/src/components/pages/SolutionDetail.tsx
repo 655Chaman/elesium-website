@@ -13,8 +13,7 @@ import {
     CheckCircle2,
     FileText,
     BookOpen,
-    MessageSquare,
-    Sparkles
+    MessageSquare
 } from 'lucide-react'
 import { SolutionRecord, getRelatedSolutions, isRetainedSolutionSlug } from '../../data/solutionsHubData'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -115,15 +114,15 @@ export default function SolutionDetail() {
 
     if (loading && !solution) {
         return (
-            <article className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-24">
+            <article className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-pulse space-y-8">
-                    <div className="h-4 w-48 bg-gray-200 dark:bg-white/10 rounded" />
-                    <div className="h-12 w-3/4 bg-gray-200 dark:bg-white/10 rounded" />
-                    <div className="h-6 w-1/2 bg-gray-200 dark:bg-white/10 rounded" />
+                    <div className="h-4 w-48 bg-neutral-200 dark:bg-white/10 rounded" />
+                    <div className="h-12 w-3/4 bg-neutral-200 dark:bg-white/10 rounded" />
+                    <div className="h-6 w-1/2 bg-neutral-200 dark:bg-white/10 rounded" />
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
-                        <div className="h-32 bg-gray-200 dark:bg-white/10 rounded-xl" />
-                        <div className="h-32 bg-gray-200 dark:bg-white/10 rounded-xl" />
-                        <div className="h-32 bg-gray-200 dark:bg-white/10 rounded-xl" />
+                        <div className="h-32 bg-neutral-200 dark:bg-white/10 rounded-xl" />
+                        <div className="h-32 bg-neutral-200 dark:bg-white/10 rounded-xl" />
+                        <div className="h-32 bg-neutral-200 dark:bg-white/10 rounded-xl" />
                     </div>
                 </div>
             </article>
@@ -132,20 +131,20 @@ export default function SolutionDetail() {
 
     if (notFound || !solution) {
         return (
-            <article className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-32 pb-24">
+            <article className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-32 pb-24">
                 <Helmet>
                     <meta name="robots" content="noindex, follow" />
                     <meta name="googlebot" content="noindex, follow" />
                     <title>410 Gone | Content Retired | Elesium</title>
                 </Helmet>
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-red-500/10 text-red-500 border border-red-500/20 mb-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white border border-neutral-200 dark:border-white/10 mb-6">
                         HTTP 410 • Content Retired
                     </div>
                     <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
                         410 Gone
                     </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                    <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed">
                         This programmatic specification has been permanently retired under Elesium&apos;s
                         Algorithmic Quality &amp; Enterprise Architecture Curation mandate.
                         The requested resource is no longer indexed or served.
@@ -153,14 +152,14 @@ export default function SolutionDetail() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
                             to="/solutions/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-black hover:opacity-90 text-white dark:bg-white dark:text-black active:scale-[0.97] font-medium transition-all"
                         >
                             Explore 100 Enterprise Architectures
                             <ArrowRight className="w-4 h-4" />
                         </Link>
                         <Link
                             to="/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-900 dark:text-white font-medium border border-gray-200 dark:border-white/10 transition-colors"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-neutral-50 dark:bg-neutral-950 hover:bg-neutral-100 dark:hover:bg-neutral-900 text-black dark:text-white font-medium border border-neutral-200 dark:border-white/10 active:scale-[0.97] transition-all"
                         >
                             Return Home
                         </Link>
@@ -199,7 +198,7 @@ export default function SolutionDetail() {
 
     return (
         <main id="main-content">
-        <article className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-24 selection:bg-neutral-200 dark:selection:bg-neutral-800">
+        <article className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-24 selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
                 <title>{solution.title}</title>
                 <meta name="description" content={solution.metaDescription} />
@@ -223,16 +222,16 @@ export default function SolutionDetail() {
 
             {/* Breadcrumb Navigation (<= 2 clicks to home, 1 click to hub) */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
                         Home
                     </Link>
-                    <ChevronRight className="w-3 h-3 text-gray-400" />
+                    <ChevronRight className="w-3 h-3 text-neutral-400" />
                     <Link to="/solutions/" className="hover:text-black dark:hover:text-white transition-colors">
                         Solutions
                     </Link>
-                    <ChevronRight className="w-3 h-3 text-gray-400" />
-                    <span className="text-gray-900 dark:text-gray-200 font-medium truncate max-w-[200px] sm:max-w-none">
+                    <ChevronRight className="w-3 h-3 text-neutral-400" />
+                    <span className="text-black dark:text-white font-medium truncate max-w-[200px] sm:max-w-none">
                         {solution.h1}
                     </span>
                 </nav>
@@ -240,25 +239,25 @@ export default function SolutionDetail() {
 
             {/* UPPER HALF (The 80% Unique Copy Rule + Mobile CTA Hierarchy) */}
             <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-gray-100 dark:border-white/10">
+                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-neutral-200 dark:border-white/10">
                     <div className="flex items-center gap-3">
-                        <span className="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider border border-gray-200 dark:border-white/15 bg-gray-50 dark:bg-white/5">
+                        <span className="px-3 py-1 rounded-lg text-xs font-mono uppercase tracking-wider border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                             {solution.hubCategory}
                         </span>
-                        <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400">
+                        <span className="text-xs font-mono text-black dark:text-white">
                             Enterprise Deployment Architecture
                         </span>
-                        <span className="text-xs font-mono text-gray-400">
+                        <span className="text-xs font-mono text-neutral-400">
                             {solution.wordCount} Words
                         </span>
                     </div>
 
                     <button
                         onClick={handleCopyUrl}
-                        className="inline-flex items-center gap-1.5 text-xs font-mono text-gray-500 hover:text-black dark:hover:text-white transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-black dark:hover:text-white transition-colors"
                         title="Copy direct solution URL"
                     >
-                        {copied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Share2 className="w-3.5 h-3.5" />}
+                        {copied ? <Check className="w-3.5 h-3.5 text-black dark:text-white" /> : <Share2 className="w-3.5 h-3.5" />}
                         <span>{copied ? 'Copied' : 'Share URL'}</span>
                     </button>
                 </div>
@@ -273,16 +272,16 @@ export default function SolutionDetail() {
                     {/* Copy Column (Span 8) */}
                     <div className="xl:col-span-8 min-w-0 w-full flex flex-col">
                         {/* 1. EXACT H1 Tag (Tri-Aligned) */}
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-6 text-gray-900 dark:text-white">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-6 text-black dark:text-white">
                             {solution.h1}
                         </h1>
 
                         {/* 2. Intro Paragraph (Target keyword in first sentence) */}
-                        <div className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-normal mb-6">
-                            <p className="font-medium text-gray-900 dark:text-white">
+                        <div className="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed font-normal mb-6">
+                            <p className="font-medium text-black dark:text-white">
                                 {solution.hero.hookSentence}
                             </p>
-                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-2">
+                            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-2">
                                 {solution.hero.subheadline}
                             </p>
                         </div>
@@ -291,25 +290,24 @@ export default function SolutionDetail() {
                         <div className="flex flex-wrap items-center gap-3.5 mb-8 lg:mb-10">
                             <button
                                 onClick={openWhatsApp}
-                                className="px-6 py-3.5 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2 shadow-sm"
+                                className="px-6 py-3.5 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center gap-2"
                             >
-                                <MessageSquare className="w-4 h-4 fill-current text-emerald-500" />
+                                <MessageSquare className="w-4 h-4 fill-current" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
                             <Link
                                 to="/waitlist/"
-                                className="px-5 py-3.5 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 text-gray-800 dark:text-gray-200 shadow-sm"
+                                className="px-5 py-3.5 rounded-lg border border-neutral-200 dark:border-white/20 hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 text-black dark:text-white"
                             >
-                                <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
                                 <span>ele-in SaaS Waitlist &rarr;</span>
                             </Link>
                         </div>
 
                         {/* Additional Structured Micro-Paragraphs from Block 1 (Strict 1-2 sentence constraint) */}
                         {block1 && (
-                            <div className="space-y-3.5 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <div className="space-y-3.5 text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                 {block1.copy.map((p, idx) => (
                                     <p key={idx}>{p}</p>
                                 ))}
@@ -319,53 +317,53 @@ export default function SolutionDetail() {
 
                     {/* 4. Hero Graphic / Terminal Simulator (Sticky on xl+, stacks cleanly below < xl) */}
                     <div className="xl:col-span-4 w-full xl:sticky xl:top-28 space-y-6 mt-8 xl:mt-0 flex flex-col gap-4">
-                        <div className="p-5 sm:p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-neutral-950 font-mono text-xs text-gray-800 dark:text-gray-300 shadow-sm">
-                            <div className="flex items-center justify-between pb-3 mb-4 border-b border-gray-200 dark:border-white/10 text-[11px] text-gray-400">
+                        <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 font-mono text-xs text-neutral-800 dark:text-neutral-300">
+                            <div className="flex items-center justify-between pb-3 mb-4 border-b border-neutral-200 dark:border-white/10 text-[11px] text-neutral-500">
                                 <div className="flex items-center gap-2">
-                                    <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                                    <span className="ml-1 text-gray-500 font-semibold">PRODUCTION_NODE</span>
+                                    <span className="w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600" />
+                                    <span className="w-2 h-2 rounded-full bg-neutral-500" />
+                                    <span className="w-2 h-2 rounded-full bg-black dark:bg-white" />
+                                    <span className="ml-1 text-neutral-600 dark:text-neutral-400 font-semibold">PRODUCTION_NODE</span>
                                 </div>
                                 <span className="truncate max-w-[120px]">{solution.targetPersona}</span>
                             </div>
 
                             <div className="space-y-2.5 leading-relaxed">
-                                <p className="text-emerald-600 dark:text-emerald-400 truncate">
+                                <p className="text-black dark:text-white font-semibold truncate">
                                     &gt; INITIALIZING_PIPELINE: [{solution.slug}]
                                 </p>
-                                <p className="text-gray-500 dark:text-gray-400">
+                                <p className="text-neutral-600 dark:text-neutral-400">
                                     &gt; DEPLOYMENT: Private Dedicated VPC / On-Premise
                                 </p>
-                                <p className="text-gray-700 dark:text-gray-200">
+                                <p className="text-neutral-800 dark:text-neutral-200">
                                     &gt; SLA: Sub-200ms Response Latency
                                 </p>
-                                <div className="p-3 my-2 rounded-lg bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 space-y-1">
-                                    <div className="text-[10px] uppercase tracking-wider text-gray-400">
+                                <div className="p-3 my-2 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 space-y-1">
+                                    <div className="text-[10px] uppercase tracking-wider text-neutral-500">
                                         Hardware & Execution Target
                                     </div>
-                                    <div className="text-gray-900 dark:text-white font-medium">
+                                    <div className="text-black dark:text-white font-medium">
                                         Execution Latency: {solution.trustSection.metrics[0]?.value || '< 200ms'}
                                     </div>
-                                    <div className="text-gray-500 dark:text-gray-400 text-[11px]">
+                                    <div className="text-neutral-600 dark:text-neutral-400 text-[11px]">
                                         Operational Accuracy: {solution.trustSection.metrics[1]?.value || '99.98%'}
                                     </div>
                                 </div>
-                                <p className="text-blue-600 dark:text-blue-400">
+                                <p className="text-black dark:text-white">
                                     &gt; DATA_COMPLIANCE: DPDP Act 2023 & ISO 27001 Verified
                                 </p>
-                                <p className="text-gray-400 dark:text-gray-500">
+                                <p className="text-neutral-500">
                                     &gt; STATE: READY_FOR_DISPATCH [0 err, 0 drop]
                                 </p>
                             </div>
                         </div>
 
                         {/* Quick Technical Specs Snapshot */}
-                        <div className="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-white dark:bg-white/[0.01] space-y-2">
-                            <div className="text-[11px] font-mono uppercase tracking-wider text-gray-400">
+                        <div className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-neutral-950 space-y-2">
+                            <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">
                                 Operational Authority
                             </div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400 font-mono space-y-1">
+                            <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono space-y-1">
                                 <div>• Target: {solution.targetPersona}</div>
                                 <div>• Engine: Python Workflow Engine / LangGraph</div>
                                 <div>• Egress: Zero External API Leakage</div>
@@ -378,14 +376,14 @@ export default function SolutionDetail() {
             {/* BLOCK 1 DETAIL: Feature Bullets */}
             {block1 && block1.bullets && block1.bullets.length > 0 && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-                    <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                        <h2 className="text-sm font-mono uppercase tracking-wider text-gray-400 mb-4">
+                    <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <h2 className="text-sm font-mono uppercase tracking-wider text-neutral-500 mb-4">
                             Operational Capabilities
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {block1.bullets.map((bullet, idx) => (
-                                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
+                                    <CheckCircle2 className="w-4 h-4 text-black dark:text-white shrink-0 mt-0.5" />
                                     <span>{bullet}</span>
                                 </div>
                             ))}
@@ -397,25 +395,25 @@ export default function SolutionDetail() {
             {/* BLOCK 2: Right Copy / Left Architecture Diagram (Visual Rhythm Rule) */}
             {block2 && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
-                    <div className="p-8 sm:p-10 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-[#0c0c0c]">
+                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                             {/* Graphic / Bullets on Left */}
                             <div className="lg:col-span-6 order-2 lg:order-1 font-mono text-xs">
-                                <div className="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black/80 space-y-3">
-                                    <div className="text-[11px] text-gray-400 uppercase tracking-widest pb-1 border-b border-gray-100 dark:border-white/5">
+                                <div className="p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black space-y-3">
+                                    <div className="text-[11px] text-neutral-500 uppercase tracking-widest pb-1 border-b border-neutral-200 dark:border-white/10">
                                         System Architecture Topology
                                     </div>
-                                    <div className="space-y-2 text-gray-800 dark:text-gray-300 leading-relaxed">
+                                    <div className="space-y-2 text-neutral-800 dark:text-neutral-300 leading-relaxed">
                                         <div>&gt; INGESTION_BUS: Multi-modal Payload Parsing</div>
                                         <div>&gt; STATE_VALIDATOR: Strict JSON Schema Assertion</div>
                                         <div>&gt; COMMIT_ENGINE: Two-Phase Transactional Commit</div>
                                         <div>&gt; AUDIT_HASH: SHA-256 Verified Audit Trail</div>
                                     </div>
                                     {block2.bullets && block2.bullets.length > 0 && (
-                                        <div className="pt-2 border-t border-gray-100 dark:border-white/5 space-y-1.5">
+                                        <div className="pt-2 border-t border-neutral-200 dark:border-white/10 space-y-1.5">
                                             {block2.bullets.map((b, idx) => (
-                                                <div key={idx} className="text-gray-600 dark:text-gray-400 flex items-center gap-1.5">
-                                                    <span className="text-emerald-500">✓</span> {b}
+                                                <div key={idx} className="text-neutral-600 dark:text-neutral-400 flex items-center gap-1.5">
+                                                    <span className="text-black dark:text-white">✓</span> {b}
                                                 </div>
                                             ))}
                                         </div>
@@ -425,13 +423,13 @@ export default function SolutionDetail() {
 
                             {/* Copy on Right */}
                             <div className="lg:col-span-6 order-1 lg:order-2 space-y-4">
-                                <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+                                <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
                                     Architectural Execution
                                 </span>
-                                <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
+                                <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white">
                                     {block2.title}
                                 </h2>
-                                <div className="space-y-3 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="space-y-3 text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {block2.copy.map((p, idx) => (
                                         <p key={idx}>{p}</p>
                                     ))}
@@ -445,15 +443,15 @@ export default function SolutionDetail() {
             {/* BLOCK 3: Centered Specification Card with Subtle Divider Lines */}
             {block3 && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
-                    <div className="p-8 sm:p-12 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a] shadow-sm">
+                    <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-neutral-950">
                         <div className="text-center max-w-2xl mx-auto mb-10">
-                            <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
+                            <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
                                 Operational Benchmarks
                             </span>
-                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2">
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-2">
                                 {block3.title}
                             </h2>
-                            <div className="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <div className="mt-3 space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
                                 {block3.copy.map((p, idx) => (
                                     <p key={idx}>{p}</p>
                                 ))}
@@ -461,14 +459,14 @@ export default function SolutionDetail() {
                         </div>
 
                         {block3.specs && block3.specs.length > 0 && (
-                            <div className="divide-y divide-gray-100 dark:divide-white/5">
+                            <div className="divide-y divide-neutral-200 dark:divide-white/10">
                                 {block3.specs.map((spec, idx) => (
                                     <div key={idx} className="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-sm">
                                         <div className="flex flex-col">
-                                            <span className="font-mono text-gray-900 dark:text-white font-medium">{spec.label}</span>
-                                            <span className="text-xs text-gray-500 dark:text-gray-400">{spec.desc}</span>
+                                            <span className="font-mono text-black dark:text-white font-medium">{spec.label}</span>
+                                            <span className="text-xs text-neutral-500 dark:text-neutral-400">{spec.desc}</span>
                                         </div>
-                                        <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">{spec.value}</span>
+                                        <span className="font-mono font-semibold text-black dark:text-white">{spec.value}</span>
                                     </div>
                                 ))}
                             </div>
@@ -509,42 +507,42 @@ export default function SolutionDetail() {
             {solution.pricingTiers && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20" id="pricing">
                     <div className="mb-8">
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
                             Institutional Engagement
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-1">
+                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-1">
                             Enterprise Deployment Tiers &amp; SLAs
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-950 flex flex-col justify-between">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                             <div>
-                                <div className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Pilot Sprint (14 Days)</div>
-                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;1,50,000 - &#8377;3,50,000</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.pilot}</p>
+                                <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Pilot Sprint (14 Days)</div>
+                                <div className="text-xl font-bold mt-2 text-black dark:text-white">&#8377;1,50,000 - &#8377;3,50,000</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-3 leading-relaxed">{solution.pricingTiers.pilot}</p>
                             </div>
-                            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/10 text-xs font-mono text-emerald-600 dark:text-emerald-400">
+                            <div className="mt-6 pt-4 border-t border-neutral-200 dark:border-white/10 text-xs font-mono text-black dark:text-white">
                                 Sub-14 Day Delivery SLA
                             </div>
                         </div>
-                        <div className="p-6 rounded-2xl border border-blue-500/30 bg-blue-50/30 dark:bg-blue-950/20 flex flex-col justify-between relative">
-                            <span className="absolute -top-3 right-4 px-2 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white uppercase tracking-wider">Most Deployed</span>
+                        <div className="p-6 rounded-xl border-2 border-black dark:border-white bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between relative">
+                            <span className="absolute -top-3 right-4 px-2 py-0.5 rounded-md text-[10px] font-bold bg-black text-white dark:bg-white dark:text-black uppercase tracking-wider">Most Deployed</span>
                             <div>
-                                <div className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400">Enterprise Suite (30-45 Days)</div>
-                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;6,00,000 - &#8377;15,00,000</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.enterprise}</p>
+                                <div className="text-xs font-mono uppercase tracking-wider text-black dark:text-white font-semibold">Enterprise Suite (30-45 Days)</div>
+                                <div className="text-xl font-bold mt-2 text-black dark:text-white">&#8377;6,00,000 - &#8377;15,00,000</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-3 leading-relaxed">{solution.pricingTiers.enterprise}</p>
                             </div>
-                            <div className="mt-6 pt-4 border-t border-blue-200 dark:border-blue-900/40 text-xs font-mono text-blue-600 dark:text-blue-400">
+                            <div className="mt-6 pt-4 border-t border-neutral-200 dark:border-white/10 text-xs font-mono text-black dark:text-white font-semibold">
                                 Hard 90-Day ROI Guarantee
                             </div>
                         </div>
-                        <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-neutral-950 flex flex-col justify-between">
+                        <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                             <div>
-                                <div className="text-xs font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Institutional Retainer</div>
-                                <div className="text-xl font-bold mt-2 text-gray-900 dark:text-white">&#8377;4,50,000 / month</div>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">{solution.pricingTiers.institutional}</p>
+                                <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Institutional Retainer</div>
+                                <div className="text-xl font-bold mt-2 text-black dark:text-white">&#8377;4,50,000 / month</div>
+                                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-3 leading-relaxed">{solution.pricingTiers.institutional}</p>
                             </div>
-                            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/10 text-xs font-mono text-emerald-600 dark:text-emerald-400">
+                            <div className="mt-6 pt-4 border-t border-neutral-200 dark:border-white/10 text-xs font-mono text-black dark:text-white">
                                 1-Hour Critical SLA Pod
                             </div>
                         </div>
@@ -555,13 +553,13 @@ export default function SolutionDetail() {
             {/* Sturm Module 10: Underlying Technical Architecture & Whitepaper Evidence Citation */}
             {solution.whitepaperCitation && (
                 <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-14 md:my-16">
-                    <div className="p-8 sm:p-10 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02] relative overflow-hidden">
-                        <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-gray-200 dark:border-white/10">
-                            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
+                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 relative overflow-hidden">
+                        <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-neutral-200 dark:border-white/10">
+                            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-black dark:text-white font-semibold">
                                 <FileText className="w-4 h-4" />
                                 <span>Underlying Technical Architecture & Whitepaper Evidence</span>
                             </div>
-                            <div className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
+                            <div className="flex items-center gap-2 text-xs font-mono text-neutral-500 dark:text-neutral-400">
                                 <BookOpen className="w-3.5 h-3.5" />
                                 <span>Peer-Audited Research · {solution.whitepaperCitation.readTime}</span>
                             </div>
@@ -569,21 +567,21 @@ export default function SolutionDetail() {
 
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                             <div className="lg:col-span-8 space-y-3.5">
-                                <span className="inline-block text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-gray-200 font-medium">
+                                <span className="inline-block text-[11px] font-mono px-2.5 py-0.5 rounded-lg bg-neutral-200 dark:bg-white/10 text-black dark:text-white font-medium">
                                     {solution.whitepaperCitation.category}
                                 </span>
-                                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white leading-snug">
+                                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-black dark:text-white leading-snug">
                                     {solution.whitepaperCitation.title}
                                 </h3>
-                                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
                                     {solution.whitepaperCitation.excerpt}
                                 </p>
 
                                 {solution.whitepaperCitation.keyFindings && solution.whitepaperCitation.keyFindings.length > 0 && (
-                                    <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-gray-700 dark:text-gray-300">
+                                    <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-neutral-700 dark:text-neutral-300">
                                         {solution.whitepaperCitation.keyFindings.map((finding, fIdx) => (
                                             <div key={fIdx} className="flex items-start gap-2">
-                                                <span className="text-emerald-500 font-bold shrink-0">↳</span>
+                                                <span className="text-black dark:text-white font-bold shrink-0">↳</span>
                                                 <span>{finding}</span>
                                             </div>
                                         ))}
@@ -594,12 +592,12 @@ export default function SolutionDetail() {
                             <div className="lg:col-span-4 flex flex-col justify-center items-start lg:items-end gap-2.5">
                                 <Link
                                     to={`/signals/${solution.whitepaperCitation.slug}/`}
-                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs font-mono tracking-wide shadow-sm transition-all"
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs font-mono tracking-wide transition-all"
                                 >
                                     <span>Read Technical Whitepaper</span>
                                     <ArrowRight className="w-3.5 h-3.5" />
                                 </Link>
-                                <span className="text-[11px] font-mono text-gray-500 dark:text-gray-400">
+                                <span className="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
                                     Algorithmic topical equity verification
                                 </span>
                             </div>
@@ -610,24 +608,24 @@ export default function SolutionDetail() {
 
             {/* LOWER HALF: Reusable Enterprise Trust & Security Components */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-14 md:my-16">
-                <div className="p-8 sm:p-10 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.02]">
+                <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="max-w-2xl mb-8 space-y-2">
-                        <span className="text-xs font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
                             Enterprise Sovereignty Standard
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
+                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white">
                             {solution.trustSection.title}
                         </h2>
-                        <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                             {solution.trustSection.slaGuarantee}
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                         {solution.trustSection.complianceBadges.map((badge, idx) => (
-                            <div key={idx} className="p-4 rounded-xl border border-gray-200 dark:border-white/5 bg-white dark:bg-black/50 space-y-1.5">
-                                <div className="flex items-center gap-2 text-xs font-mono font-medium text-gray-900 dark:text-white">
-                                    <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+                            <div key={idx} className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black space-y-1.5">
+                                <div className="flex items-center gap-2 text-xs font-mono font-medium text-black dark:text-white">
+                                    <ShieldCheck className="w-4 h-4 text-black dark:text-white shrink-0" />
                                     <span>{badge}</span>
                                 </div>
                             </div>
@@ -636,10 +634,10 @@ export default function SolutionDetail() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {solution.trustSection.metrics.map((metric, idx) => (
-                            <div key={idx} className="p-4 rounded-xl border border-gray-100 dark:border-white/5 bg-white/60 dark:bg-black/30">
-                                <div className="text-xl font-mono font-semibold text-gray-900 dark:text-white">{metric.value}</div>
-                                <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">{metric.label}</div>
-                                <div className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">{metric.description}</div>
+                            <div key={idx} className="p-4 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                                <div className="text-xl font-mono font-semibold text-black dark:text-white">{metric.value}</div>
+                                <div className="text-xs font-mono text-black dark:text-white mt-0.5">{metric.label}</div>
+                                <div className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1">{metric.description}</div>
                             </div>
                         ))}
                     </div>
@@ -649,41 +647,41 @@ export default function SolutionDetail() {
             {/* FAQ Accordion Section */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
                 <div className="mb-8">
-                    <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
+                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
                         Operational Questions
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-1">
+                    <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-1">
                         Frequently Asked Questions
                     </h2>
                 </div>
 
-                <div className="divide-y divide-gray-100 dark:divide-white/10 border-t border-b border-gray-100 dark:border-white/10">
+                <div className="divide-y divide-neutral-200 dark:divide-white/10 border-t border-b border-neutral-200 dark:border-white/10">
                     {faqs.map((faq, idx) => (
                         <div key={idx} className="py-5">
                             <button
                                 onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
                                 className="w-full flex items-center justify-between text-left gap-4 group"
                             >
-                                <span className="text-base sm:text-lg font-medium text-gray-900 dark:text-gray-100 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                <span className="text-base sm:text-lg font-medium text-black dark:text-white group-hover:opacity-80 transition-opacity">
                                     {faq.question}
                                 </span>
                                 <ChevronDown
-                                    className={`w-5 h-5 text-gray-400 transition-transform duration-200 shrink-0 ${
+                                    className={`w-5 h-5 text-neutral-400 transition-transform duration-200 shrink-0 ${
                                         openFaqIndex === idx ? 'rotate-180 text-black dark:text-white' : ''
                                     }`}
                                 />
                             </button>
 
-                            <AnimatePresence>
+                            <AnimatePresence initial={false}>
                                 {openFaqIndex === idx && (
                                     <motion.div
                                         initial={{ opacity: 0, height: 0 }}
                                         animate={{ opacity: 1, height: 'auto' }}
                                         exit={{ opacity: 0, height: 0 }}
-                                        transition={{ duration: 0.2 }}
-                                        className="overflow-hidden"
+                                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                        className="accordion-panel overflow-hidden"
                                     >
-                                        <p className="pt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        <p className="pt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                             {faq.answer}
                                         </p>
                                     </motion.div>
@@ -698,16 +696,16 @@ export default function SolutionDetail() {
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
                 <div className="flex items-center justify-between mb-8">
                     <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
+                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
                             Topical Cluster
                         </span>
-                        <h2 className="text-xl sm:text-2xl font-medium tracking-tight text-gray-900 dark:text-white mt-1">
+                        <h2 className="text-xl sm:text-2xl font-medium tracking-tight text-black dark:text-white mt-1">
                             Related {solution.hubCategory} Solutions
                         </h2>
                     </div>
                     <Link
                         to="/solutions/"
-                        className="text-xs font-mono text-gray-500 hover:text-black dark:hover:text-white flex items-center gap-1 transition-colors"
+                        className="text-xs font-mono text-neutral-500 hover:text-black dark:hover:text-white flex items-center gap-1 transition-colors"
                     >
                         View All Solutions
                         <ChevronRight className="w-3.5 h-3.5" />
@@ -719,18 +717,18 @@ export default function SolutionDetail() {
                         <Link
                             key={rel.slug}
                             to={`/solutions/${rel.slug}/`}
-                            className="group p-5 rounded-xl border border-gray-200 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02] hover:border-black dark:hover:border-white/30 transition-all flex flex-col justify-between"
+                            className="group p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/30 transition-all flex flex-col justify-between"
                         >
                             <div className="space-y-2">
-                                <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider truncate block">
+                                <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-wider truncate block">
                                     {rel.targetPersona}
                                 </span>
                                 {/* EXACT H1 Title as required */}
-                                <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-black dark:group-hover:text-white transition-colors leading-snug">
+                                <h3 className="text-sm font-medium text-black dark:text-white transition-colors leading-snug">
                                     {rel.h1}
                                 </h3>
                             </div>
-                            <div className="mt-4 pt-3 border-t border-gray-100 dark:border-white/5 text-[11px] font-mono text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                            <div className="mt-4 pt-3 border-t border-neutral-200 dark:border-white/10 text-[11px] font-mono text-black dark:text-white flex items-center gap-1">
                                 Inspect Architecture
                                 <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                             </div>
@@ -741,9 +739,9 @@ export default function SolutionDetail() {
 
             {/* Final Bottom Conversion Card */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-                <div className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-white/[0.03] text-center space-y-6">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/10 text-xs font-mono">
-                        <Terminal className="w-3.5 h-3.5 text-emerald-400" />
+                <div className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-white/20 bg-white/10 text-xs font-mono">
+                        <Terminal className="w-3.5 h-3.5 text-white" />
                         <span>Production Deployment Intake</span>
                     </div>
 
@@ -751,7 +749,7 @@ export default function SolutionDetail() {
                         Ready to Deploy Deterministic Automation for Your Team?
                     </h2>
 
-                    <p className="text-sm text-gray-300 dark:text-gray-400 max-w-lg mx-auto leading-relaxed">
+                    <p className="text-sm text-neutral-300 dark:text-neutral-400 max-w-lg mx-auto leading-relaxed">
                         Book a 30-minute technical session directly with our Principal Systems Architect.
                         Receive a tailored 1-page feasibility memorandum and hard ROI estimation.
                     </p>
@@ -759,7 +757,7 @@ export default function SolutionDetail() {
                     <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                         <button
                             onClick={openWhatsApp}
-                            className="px-8 py-4 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-sm transition-all flex items-center gap-2 shadow-md group"
+                            className="px-8 py-4 rounded-lg bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-sm transition-all flex items-center gap-2 group"
                         >
                             <MessageSquare className="w-4 h-4 fill-current" />
                             <span>Chat on WhatsApp with Lead Architect</span>
@@ -768,16 +766,15 @@ export default function SolutionDetail() {
 
                         <Link
                             to="/waitlist/"
-                            className="px-6 py-4 rounded-full border border-white/20 hover:bg-white/10 text-white font-medium text-sm transition-all flex items-center gap-2"
+                            className="px-6 py-4 rounded-lg border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-medium text-sm transition-all flex items-center gap-2"
                         >
-                            <Sparkles className="w-4 h-4 text-emerald-400" />
                             <span>Join ele-in SaaS Waitlist &rarr;</span>
                         </Link>
                     </div>
 
-                    <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-gray-400">
+                    <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-neutral-400">
                         <span>Regional Deployment Node:</span>
-                        <Link to="/ai-automation-agency-india/" className="text-emerald-400 hover:text-emerald-300 underline transition-colors">
+                        <Link to="/ai-automation-agency-india/" className="text-white hover:underline transition-colors">
                             {getRotatingAnchorText(solution.hubCategory || solution.category)} &rarr;
                         </Link>
                     </div>

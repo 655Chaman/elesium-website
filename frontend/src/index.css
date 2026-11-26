@@ -11,12 +11,18 @@
 @layer utilities {
   .animate-meteor {
     animation: meteor 5s linear infinite;
+    will-change: transform, opacity;
+  }
+
+  .animate-shake {
+    animation: input-shake 0.38s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    will-change: transform;
   }
 }
 
 @keyframes meteor {
   0% {
-    transform: rotate(var(--angle)) translateX(0);
+    transform: rotate(var(--angle, 215deg)) translate3d(0, 0, 0);
     opacity: 1;
   }
 
@@ -25,43 +31,81 @@
   }
 
   100% {
-    transform: rotate(var(--angle)) translateX(-500px);
+    transform: rotate(var(--angle, 215deg)) translate3d(-500px, 0, 0);
     opacity: 0;
   }
 }
 
-
+@keyframes input-shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(-6px, 0, 0);
+  }
+  40% {
+    transform: translate3d(6px, 0, 0);
+  }
+  60% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  80% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
 :root {
-  font-family: 'Inter', sans-serif;
+  interpolate-size: allow-keywords;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-feature-settings: 'cv11', 'ss01';
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  /* overflow-x: hidden; */
+/* Glitch-free theme switching */
+.disable-transitions *,
+.disable-transitions *::before,
+.disable-transitions *::after {
+  transition: none !important;
 }
 
+/* Smooth accordion panel transition using interpolate-size: allow-keywords */
+.accordion-panel {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 280ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease;
+}
 
+.accordion-panel[data-open="true"],
+.accordion-panel[data-state="open"],
+.accordion-panel.open {
+  height: auto;
+  opacity: 1;
+}
 
-
+/* Global tactile active button press scale */
+button:not(:disabled):active,
+[role="button"]:not(:disabled):active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-nav:active {
+  transform: scale(0.97);
+}
 
 body {
   margin: 0;
   padding: 0;
   background: #FAFAFA;
-  color: rgb(18, 19, 23);
-  /* overflow-x: hidden; */
-  transition: background-color 0.4s ease, color 0.4s ease;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Dark mode global overrides */
 html.dark body {
   background: #000000;
-  /* Ensure pitch black */
-  color: #ededed;
+  color: #FFFFFF;
 }
 
 /* Hide outer SEO mesh & prerender fallback on clean portal/connector views */
@@ -84,27 +128,26 @@ html.elesium-clean-route .aeo-empirical-matrix {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(18, 19, 23, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(18, 19, 23, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.16);
 }
 
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.32);
 }
 
 html.dark section {
   background-color: transparent !important;
-  /* Allow body background to show through unless specific */
 }
 
 /* Typography Dark Mode Overrides */
@@ -112,13 +155,13 @@ html.dark .hero-h1,
 html.dark .section-h2,
 html.dark .section-h3,
 html.dark .lead-text {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 html.dark .body-text,
 html.dark .caption-text,
 html.dark .small-label {
-  color: #a1a1aa;
+  color: #A1A1AA;
 }
 
 /* Card Dark Mode */
@@ -133,59 +176,59 @@ html.dark .card:hover {
 
 /* Button Dark Mode */
 html.dark .btn-primary {
-  background: #ffffff;
+  background: #FFFFFF;
   color: #000000;
 }
 
 html.dark .btn-primary:hover {
-  background: #e5e5e5;
+  background: #E5E5E5;
 }
 
 html.dark .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 html.dark .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.16);
 }
 
 html.dark .btn-nav {
-  color: #a1a1aa;
+  color: #A1A1AA;
 }
 
 html.dark .btn-nav:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
-/* Exact Antigravity Typography with precise line-heights and letter-spacing */
+/* Unified Inter Typography with precise line-heights and letter-spacing */
 .hero-h1 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 80px;
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: rgb(18, 19, 23);
+  color: #000000;
 }
 
 .section-h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 42px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: rgb(18, 19, 23);
+  color: #000000;
 }
 
 .section-h3 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: -0.01em;
-  color: rgb(18, 19, 23);
+  color: #000000;
 }
 
 .lead-text {
@@ -193,7 +236,7 @@ html.dark .btn-nav:hover {
   font-weight: 450;
   line-height: 25.92px;
   letter-spacing: -0.07px;
-  color: rgb(18, 19, 23);
+  color: #000000;
 }
 
 .body-text {
@@ -201,7 +244,7 @@ html.dark .btn-nav:hover {
   font-weight: 400;
   line-height: 25.38px;
   letter-spacing: 0.18px;
-  color: rgb(69, 71, 77);
+  color: #52525B;
 }
 
 .caption-text {
@@ -209,7 +252,7 @@ html.dark .btn-nav:hover {
   font-weight: 400;
   line-height: 21.02px;
   letter-spacing: 0.16px;
-  color: rgb(69, 71, 77);
+  color: #52525B;
 }
 
 .small-label {
@@ -217,40 +260,40 @@ html.dark .btn-nav:hover {
   font-weight: 450;
   line-height: 15.5px;
   letter-spacing: 0.11px;
-  color: rgb(69, 71, 77);
+  color: #52525B;
 }
 
-/* Exact Button Styles */
+/* Monochrome Button Styles */
 .btn-primary {
   padding: 10px 24px;
   font-size: 17.5px;
   font-weight: 430;
-  background: rgb(18, 19, 23);
+  background: #000000;
   color: #FFFFFF;
   border-radius: 9999px;
   border: none;
-  transition: all 0.15s ease-out;
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.15s ease-out, color 0.15s ease-out;
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background: rgb(47, 48, 52);
+  background: #27272A;
 }
 
 .btn-secondary {
   padding: 10px 24px;
   font-size: 17.5px;
   font-weight: 430;
-  background: rgba(183, 191, 217, 0.1);
-  color: rgb(18, 19, 23);
+  background: rgba(0, 0, 0, 0.04);
+  color: #000000;
   border-radius: 9999px;
-  border: 1px solid rgba(33, 34, 38, 0.06);
-  transition: all 0.15s ease-out;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out;
   cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background: rgb(240, 241, 245);
+  background: #F4F4F5;
 }
 
 .btn-nav {
@@ -258,63 +301,70 @@ html.dark .btn-nav:hover {
   font-size: 14.5px;
   font-weight: 430;
   background: transparent;
-  color: rgb(69, 71, 77);
+  color: #52525B;
   border-radius: 9999px;
   border: none;
-  transition: all 0.15s ease-out;
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.15s ease-out, color 0.15s ease-out;
   cursor: pointer;
 }
 
 .btn-nav:hover {
-  background: rgba(183, 191, 217, 0.2);
+  background: rgba(0, 0, 0, 0.06);
+  color: #000000;
 }
 
-/* Card Styles - premium glassmorphism */
+/* Card Styles - monochrome glassmorphism */
 .card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 36px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow:
     0 4px 24px -1px rgba(0, 0, 0, 0.05),
     0 0 1px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
+  transform: translate3d(0, -2px, 0);
   box-shadow:
     0 20px 40px -4px rgba(0, 0, 0, 0.1),
-    0 0 1px 0 rgba(0, 0, 0, 0.1);
-  border-color: rgba(255, 255, 255, 0.8);
+    0 0 1px 0 rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.16);
 }
 
 html.dark .card {
-  background: rgba(23, 23, 23, 0.6);
+  background: rgba(23, 23, 23, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
 }
 
 html.dark .card:hover {
-  background: rgba(23, 23, 23, 0.8);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(23, 23, 23, 0.88);
+  border-color: rgba(255, 255, 255, 0.16);
   box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.4);
 }
 
-/* Media Placeholders - simple gray background */
+/* Media Placeholders - strict monochrome neutral background */
 .media-placeholder {
-  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  background: #F4F4F5;
+  border: 1px solid #E4E4E7;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 36px;
 }
 
+html.dark .media-placeholder {
+  background: #18181B;
+  border-color: #27272A;
+}
+
 .media-placeholder-text {
   font-size: 14.5px;
   font-weight: 400;
-  color: #999;
+  color: #71717A;
   text-align: center;
 }
 
@@ -322,7 +372,6 @@ html.dark .card:hover {
    MOBILE RESPONSIVE TYPOGRAPHY
    ======================================== */
 
-/* Mobile-first approach: base styles are for mobile */
 @media (max-width: 767px) {
   .hero-h1 {
     font-size: 38px;
@@ -357,25 +406,21 @@ html.dark .card:hover {
     line-height: 18px;
   }
 
-  /* Reduce section padding on mobile */
   .section-padding {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
 
-  /* Prevent horizontal overflow on mobile */
   html, body {
     overflow-x: hidden;
     max-width: 100vw;
   }
 
-  /* Ensure text wraps properly on mobile */
   h1, h2, h3, h4, h5, h6, p, span, a, li, td {
     word-break: break-word;
     overflow-wrap: break-word;
   }
 
-  /* Mobile buttons */
   .btn-primary {
     padding: 10px 20px;
     font-size: 16px;

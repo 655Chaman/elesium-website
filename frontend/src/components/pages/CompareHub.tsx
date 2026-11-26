@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
     Scale,
     ShieldCheck,
@@ -163,109 +164,108 @@ export default function CompareHub() {
 
                 {/* Hero Header */}
                 <header className="mb-12">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-mono uppercase tracking-wider mb-4">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-neutral-300 text-xs font-mono uppercase tracking-wider mb-4">
                         Programmatic Architectural Battlecards
                     </div>
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
-                        Enterprise AI Framework & Architecture Comparisons
+                        Enterprise AI Framework &amp; Architecture Comparisons
                     </h1>
-                    <p className="text-base sm:text-lg text-gray-300 max-w-4xl leading-relaxed">
-                        Deterministic, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, state machine engines, and enterprise automation delivery models. No superficial vendor marketing: only empirical latency benchmarks, token economics, and failure recovery protocols.
+                    <p className="text-base sm:text-lg text-neutral-300 max-w-4xl leading-relaxed">
+                        Deterministic, mathematically grounded evaluations of multi-agent frameworks, sovereign inference clusters, state machine engines, and enterprise automation delivery models. Empirical latency benchmarks, token economics, and failure recovery protocols.
                     </p>
 
-                    {/* AEO Answer Capsule */}
-                    <div className="answer-capsule mt-6 p-6 rounded-2xl bg-white/[0.03] border border-emerald-500/30 border-l-4 border-l-emerald-500 max-w-4xl">
-                        <div className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-2 flex items-center gap-2">
-                            <Cpu className="w-4 h-4" />
-                            Definitive Answer Capsule • Architectural Specifications
+                    {/* Technical Overview */}
+                    <div className="answer-capsule mt-6 p-6 rounded-xl bg-neutral-950 border border-white/10 border-l-4 border-l-white max-w-4xl">
+                        <div className="text-xs font-mono uppercase tracking-widest text-neutral-400 font-semibold mb-2 flex items-center gap-2">
+                            <Cpu className="w-4 h-4 text-white" />
+                            Architectural Specifications
                         </div>
-                        <p className="text-sm md:text-base text-gray-200 leading-relaxed font-medium">
+                        <p className="text-sm md:text-base text-neutral-200 leading-relaxed font-medium">
                             {aeoAnswerCapsule}
                         </p>
                     </div>
 
                     {/* Trust Badges */}
                     <div className="mt-6 flex flex-wrap gap-3">
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-gray-300 font-mono">
-                            <Activity className="w-3.5 h-3.5 text-gray-400" />
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                            <Activity className="w-3.5 h-3.5 text-neutral-400" />
                             <span>12 In-Depth Technical Battlecards</span>
                         </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-gray-300 font-mono">
-                            <Server className="w-3.5 h-3.5 text-emerald-400" />
-                            <span>Sub-200ms TTFT & FP8 GEMM</span>
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                            <Server className="w-3.5 h-3.5 text-white" />
+                            <span>Sub-200ms TTFT &amp; FP8 GEMM</span>
                         </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-gray-300 font-mono">
-                            <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
-                            <span>DPDP Act 2023 Sec 8(5) & ISO 27001</span>
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                            <ShieldCheck className="w-3.5 h-3.5 text-white" />
+                            <span>DPDP Act 2023 Sec 8(5) &amp; ISO 27001</span>
                         </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-gray-300 font-mono">
-                            <Zap className="w-3.5 h-3.5 text-amber-400" />
-                            <span>Yotta Shakti & CtrlS Clusters</span>
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-950 border border-white/10 text-xs text-neutral-300 font-mono">
+                            <Zap className="w-3.5 h-3.5 text-white" />
+                            <span>Yotta Shakti &amp; CtrlS Clusters</span>
                         </div>
                     </div>
                 </header>
 
                 {/* Empirical Telemetry Comparison Matrix */}
-                <section className="mb-14 p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/10">
+                <section className="mb-14 p-6 md:p-8 rounded-xl bg-neutral-950 border border-white/10">
                     <div className="mb-6">
-                        <div className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-1">
+                        <div className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold mb-1">
                             Audited Production Benchmarks
                         </div>
                         <h2 className="text-2xl font-bold text-white">
                             Sovereign LangGraph Architecture vs Legacy Ecosystems
                         </h2>
-                        <p className="text-sm text-gray-400 mt-1">
+                        <p className="text-sm text-neutral-400 mt-1">
                             Empirical engineering telemetry measured across 1,420+ enterprise workflow executions.
                         </p>
                     </div>
 
                     <div className="overflow-x-auto">
-                        <table className="w-full text-left text-xs md:text-sm text-gray-300 border-collapse">
+                        <table className="w-full text-left text-xs md:text-sm text-neutral-300 border-collapse">
                             <thead>
-                                <tr className="border-b border-white/10 text-gray-400 font-mono text-xs uppercase tracking-wider">
+                                <tr className="border-b border-white/10 text-neutral-400 font-mono text-xs uppercase tracking-wider">
                                     <th className="py-3 px-4">Architectural Metric</th>
-                                    <th className="py-3 px-4 text-emerald-400 font-bold bg-emerald-500/5">Elesium Sovereign Pods</th>
+                                    <th className="py-3 px-4 text-white font-bold bg-white/5">Elesium Sovereign Pods</th>
                                     <th className="py-3 px-4">Public Cloud APIs (ReAct)</th>
                                     <th className="py-3 px-4">Legacy IT / RPA</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-white/5 font-mono text-xs">
+                            <tbody className="divide-y divide-white/10 font-mono text-xs">
                                 <tr>
                                     <td className="py-3.5 px-4 font-semibold text-white font-sans">Execution Paradigm</td>
-                                    <td className="py-3.5 px-4 text-emerald-300 font-bold bg-emerald-500/5">Deterministic FSM (LangGraph)</td>
-                                    <td className="py-3.5 px-4 text-gray-400">Heuristic Loop (CrewAI / AutoGen)</td>
-                                    <td className="py-3.5 px-4 text-gray-400">Brittle Rule Engine (UiPath)</td>
+                                    <td className="py-3.5 px-4 text-white font-bold bg-white/5">Deterministic FSM (LangGraph)</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">Heuristic Loop (CrewAI / AutoGen)</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">Brittle Rule Engine (UiPath)</td>
                                 </tr>
                                 <tr>
                                     <td className="py-3.5 px-4 font-semibold text-white font-sans">Time to First Token (TTFT)</td>
-                                    <td className="py-3.5 px-4 text-emerald-300 font-bold bg-emerald-500/5">&lt; 200ms (vLLM FP8 Kernel)</td>
-                                    <td className="py-3.5 px-4 text-gray-400">850ms - 2,400ms (Shared Gateway)</td>
-                                    <td className="py-3.5 px-4 text-gray-400">N/A (Static Screen Scraping)</td>
+                                    <td className="py-3.5 px-4 text-white font-bold bg-white/5">&lt; 200ms (vLLM FP8 Kernel)</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">850ms - 2,400ms (Shared Gateway)</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">N/A (Static Screen Scraping)</td>
                                 </tr>
                                 <tr>
                                     <td className="py-3.5 px-4 font-semibold text-white font-sans">Memory Allocation</td>
-                                    <td className="py-3.5 px-4 text-emerald-300 font-bold bg-emerald-500/5">PagedAttention (&lt;4% fragmentation)</td>
-                                    <td className="py-3.5 px-4 text-gray-400">Blackbox Multi-Tenant VRAM</td>
-                                    <td className="py-3.5 px-4 text-gray-400">Local OS RAM Swapping</td>
+                                    <td className="py-3.5 px-4 text-white font-bold bg-white/5">PagedAttention (&lt;4% fragmentation)</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">Blackbox Multi-Tenant VRAM</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">Local OS RAM Swapping</td>
                                 </tr>
                                 <tr>
-                                    <td className="py-3.5 px-4 font-semibold text-white font-sans">Data Sovereignty & DPDP</td>
-                                    <td className="py-3.5 px-4 text-emerald-300 font-bold bg-emerald-500/5">Yotta/CtrlS India Tier-IV (Sec 8(5))</td>
-                                    <td className="py-3.5 px-4 text-gray-400">US-West / Global Egress Risk</td>
-                                    <td className="py-3.5 px-4 text-gray-400">On-Premise Legacy Client</td>
+                                    <td className="py-3.5 px-4 font-semibold text-white font-sans">Data Sovereignty &amp; DPDP</td>
+                                    <td className="py-3.5 px-4 text-white font-bold bg-white/5">Yotta/CtrlS India Tier-IV (Sec 8(5))</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">US-West / Global Egress Risk</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">On-Premise Legacy Client</td>
                                 </tr>
                                 <tr>
                                     <td className="py-3.5 px-4 font-semibold text-white font-sans">3-Year Enterprise TCO</td>
-                                    <td className="py-3.5 px-4 text-emerald-300 font-bold bg-emerald-500/5">-68% (Self-Hosted Fixed Compute)</td>
-                                    <td className="py-3.5 px-4 text-gray-400">Unbounded Token Ingestion Billing</td>
-                                    <td className="py-3.5 px-4 text-gray-400">₹40L+ Annual License Seats</td>
+                                    <td className="py-3.5 px-4 text-white font-bold bg-white/5">-68% (Self-Hosted Fixed Compute)</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">Unbounded Token Ingestion Billing</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">₹40L+ Annual License Seats</td>
                                 </tr>
                                 <tr>
                                     <td className="py-3.5 px-4 font-semibold text-white font-sans">Contractual SLA</td>
-                                    <td className="py-3.5 px-4 text-emerald-300 font-bold bg-emerald-500/5">90-Day Cash-Flow ROI Guarantee</td>
-                                    <td className="py-3.5 px-4 text-gray-400">Best-Effort API Uptime</td>
-                                    <td className="py-3.5 px-4 text-gray-400">Billable Hours / No SLA</td>
+                                    <td className="py-3.5 px-4 text-white font-bold bg-white/5">90-Day Cash-Flow ROI Guarantee</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">Best-Effort API Uptime</td>
+                                    <td className="py-3.5 px-4 text-neutral-400">Billable Hours / No SLA</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -273,7 +273,7 @@ export default function CompareHub() {
                 </section>
 
                 {/* Interactive Tool Banner */}
-                <section className="mb-12 p-6 rounded-2xl bg-[#0A0A0A] border border-white/10">
+                <section className="mb-12 p-6 rounded-xl bg-neutral-950 border border-white/10">
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                         <div className="space-y-1">
                             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/10 text-white text-xs font-mono tracking-wide uppercase">
@@ -283,13 +283,13 @@ export default function CompareHub() {
                             <h2 className="text-xl sm:text-2xl font-bold text-white">
                                 Assess Your Stack: 1-Minute Enterprise Architecture Grader
                             </h2>
-                            <p className="text-sm text-gray-300 max-w-2xl">
+                            <p className="text-sm text-neutral-300 max-w-2xl">
                                 Evaluate your current AI agent deployment across workflow concurrency, orchestration topology, inference boundaries, state persistence, and regulatory guardrails. Computes fragility percentage and annual token leakage.
                             </p>
                         </div>
                         <Link
                             to="/tools/agentic-architecture-grader/"
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-black font-medium text-sm transition-all hover:bg-gray-200 shrink-0"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white text-black font-medium text-sm active:scale-[0.97] transition-all hover:bg-neutral-200 shrink-0"
                         >
                             Launch Grader Tool
                             <ArrowRight className="w-4 h-4" />
@@ -303,10 +303,10 @@ export default function CompareHub() {
                         <button
                             key={category}
                             onClick={() => setSelectedCategory(category)}
-                            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all ${
+                            className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-medium whitespace-nowrap active:scale-[0.97] transition-all ${
                                 selectedCategory === category
-                                    ? 'bg-white text-black shadow-sm'
-                                    : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                                    ? 'bg-white text-black'
+                                    : 'bg-white/5 text-neutral-400 hover:bg-white/10 hover:text-white'
                             }`}
                         >
                             {category}
@@ -320,15 +320,15 @@ export default function CompareHub() {
                     {filteredBattlecards.map(item => (
                         <article
                             key={item.id}
-                            className="flex flex-col justify-between p-6 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-white/40 transition-all duration-200 group"
+                            className="flex flex-col justify-between p-6 rounded-xl bg-neutral-950 border border-white/10 hover:border-white/40 transition-all duration-200 group"
                         >
                             <div>
                                 {/* Header badges */}
                                 <div className="flex items-center justify-between gap-2 mb-3">
-                                    <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-white/10 text-gray-300 uppercase tracking-wide">
+                                    <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-white/10 text-neutral-300 uppercase tracking-wide">
                                         {item.category}
                                     </span>
-                                    <span className="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-white/5 text-gray-400 border border-white/10">
+                                    <span className="px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-white/5 text-neutral-400 border border-white/10">
                                         Battlecard #{item.id}
                                     </span>
                                 </div>
@@ -341,18 +341,18 @@ export default function CompareHub() {
                                 </h3>
 
                                 {/* Head to Head Visual Tags */}
-                                <div className="flex items-center gap-2 text-xs font-mono font-medium text-gray-400 mb-4 pb-3 border-b border-white/10">
-                                    <span className="text-gray-200 bg-white/5 px-2 py-1 rounded border border-white/10">
+                                <div className="flex items-center gap-2 text-xs font-mono font-medium text-neutral-400 mb-4 pb-3 border-b border-white/10">
+                                    <span className="text-neutral-200 bg-white/5 px-2 py-1 rounded border border-white/10">
                                         {item.entityALabel}
                                     </span>
-                                    <span className="text-gray-500 font-bold">vs</span>
-                                    <span className="text-gray-200 bg-white/5 px-2 py-1 rounded border border-white/10">
+                                    <span className="text-neutral-500 font-bold">vs</span>
+                                    <span className="text-neutral-200 bg-white/5 px-2 py-1 rounded border border-white/10">
                                         {item.entityBLabel}
                                     </span>
                                 </div>
 
                                 {/* Summary */}
-                                <p className="text-xs text-gray-300 mb-4 line-clamp-3 leading-relaxed">
+                                <p className="text-xs text-neutral-300 mb-4 line-clamp-3 leading-relaxed">
                                     {item.verdictSummary}
                                 </p>
 
@@ -360,7 +360,7 @@ export default function CompareHub() {
                                 <div className="space-y-2 mb-6 bg-black p-3 rounded-xl border border-white/10">
                                     {item.fastFacts.slice(0, 2).map((fact, idx) => (
                                         <div key={idx} className="flex items-center justify-between text-xs">
-                                            <span className="text-gray-400">{fact.label}</span>
+                                            <span className="text-neutral-400">{fact.label}</span>
                                             <span className="font-semibold text-white font-mono">{fact.value}</span>
                                         </div>
                                     ))}
@@ -370,7 +370,7 @@ export default function CompareHub() {
                             {/* Card Action Link */}
                             <Link
                                 to={`/compare/${item.slug}/`}
-                                className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white hover:text-black text-gray-200 text-xs font-semibold transition-all group-hover:shadow-sm"
+                                className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white hover:text-black text-neutral-200 text-xs font-semibold active:scale-[0.97] transition-all"
                             >
                                 <span>Inspect Comparison Matrix</span>
                                 <ArrowRight className="w-3.5 h-3.5" />
@@ -380,46 +380,46 @@ export default function CompareHub() {
                 </section>
 
                 {/* Evaluation Standards */}
-                <section className="mb-16 p-8 rounded-3xl bg-[#0A0A0A] border border-white/10">
+                <section className="mb-16 p-8 rounded-xl bg-neutral-950 border border-white/10">
                     <div className="max-w-3xl mb-8">
-                        <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold">
                             Evaluation Standards
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
                             How Elesium Conducts Architectural Benchmarks
                         </h2>
-                        <p className="text-sm text-gray-300 mt-2">
+                        <p className="text-sm text-neutral-300 mt-2">
                             Unlike developer marketing blogs or generic review directories, our evaluations are grounded in verifiable distributed systems mechanics, production SLA telemetry, and total cost of ownership.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-5 rounded-2xl bg-black border border-white/10">
+                        <div className="p-5 rounded-xl bg-black border border-white/10">
                             <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white mb-3">
-                                <Cpu className="w-4 h-4 text-emerald-400" />
+                                <Cpu className="w-4 h-4 text-white" />
                             </div>
                             <h3 className="font-bold text-sm text-white mb-2">Deterministic State vs Heuristic Loops</h3>
-                            <p className="text-xs text-gray-400 leading-relaxed">
+                            <p className="text-xs text-neutral-400 leading-relaxed">
                                 We measure whether an architecture relies on unconstrained LLM loops (prone to hallucinations and infinite recursions) or deterministic finite state machine (FSM) state graphs with explicit state schemas.
                             </p>
                         </div>
 
-                        <div className="p-5 rounded-2xl bg-black border border-white/10">
+                        <div className="p-5 rounded-xl bg-black border border-white/10">
                             <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white mb-3">
-                                <Server className="w-4 h-4 text-cyan-400" />
+                                <Server className="w-4 h-4 text-white" />
                             </div>
                             <h3 className="font-bold text-sm text-white mb-2">Sovereign Boundary vs Third-Party Telemetry</h3>
-                            <p className="text-xs text-gray-400 leading-relaxed">
+                            <p className="text-xs text-neutral-400 leading-relaxed">
                                 We evaluate data egress, data retention, and residency compliance. Architectures with strict zero third-party retention and dedicated VPC hosting protect enterprises under statutory regulations like DPDP Act 2023.
                             </p>
                         </div>
 
-                        <div className="p-5 rounded-2xl bg-black border border-white/10">
+                        <div className="p-5 rounded-xl bg-black border border-white/10">
                             <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white mb-3">
-                                <Scale className="w-4 h-4 text-amber-400" />
+                                <Scale className="w-4 h-4 text-white" />
                             </div>
                             <h3 className="font-bold text-sm text-white mb-2">Marginal Cost at Scale</h3>
-                            <p className="text-xs text-gray-400 leading-relaxed">
+                            <p className="text-xs text-neutral-400 leading-relaxed">
                                 We model 3-year TCO factoring in exponential token accumulation in multi-agent conversations versus self-hosted quantized models on dedicated GPU clusters (vLLM / TensorRT-LLM).
                             </p>
                         </div>
@@ -427,105 +427,107 @@ export default function CompareHub() {
                 </section>
 
                 {/* 3-Tier Enterprise Commercial Schedule */}
-                <section className="mb-16 p-8 rounded-3xl bg-[#0A0A0A] border border-white/10">
+                <section className="mb-16 p-8 rounded-xl bg-neutral-950 border border-white/10">
                     <div className="text-center max-w-3xl mx-auto mb-10">
-                        <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold">
                             Commercial Investment Matrix
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
                             Transparent Enterprise Engagement Tiers
                         </h2>
-                        <p className="text-sm text-gray-400 mt-2">
+                        <p className="text-sm text-neutral-400 mt-2">
                             Contractually bound engineering sprints backed by our 90-day cash-flow ROI SLA.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 rounded-2xl bg-black border border-white/10 flex flex-col justify-between">
+                        <div className="p-6 rounded-xl bg-black border border-white/10 flex flex-col justify-between">
                             <div>
-                                <div className="text-xs font-mono text-emerald-400 mb-1">TIER 01 • PROTOTYPE</div>
+                                <div className="text-xs font-mono text-neutral-400 mb-1">TIER 01 &middot; PROTOTYPE</div>
                                 <h3 className="text-xl font-bold text-white">Pilot Architecture Sprint</h3>
                                 <div className="text-2xl font-bold text-white mt-3 font-mono">₹1,50,000 - ₹3,50,000</div>
-                                <div className="text-xs text-gray-400 mt-1 mb-4">14-Day Delivery Guarantee</div>
-                                <ul className="space-y-2 text-xs text-gray-300">
+                                <div className="text-xs text-neutral-400 mt-1 mb-4">14-Day Delivery Guarantee</div>
+                                <ul className="space-y-2 text-xs text-neutral-300">
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                                         <span>Single-process LangGraph agent</span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                                         <span>Air-gapped staging VPC deployment</span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                                         <span>FastAPI + Pydantic v2 schemas</span>
                                     </li>
                                 </ul>
                             </div>
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="mt-6 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-all"
+                                className="mt-6 w-full py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs active:scale-[0.97] transition-all"
                             >
                                 Inquire Pilot Sprint
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-black border-2 border-emerald-500/40 relative flex flex-col justify-between">
-                            <span className="absolute -top-3 right-6 bg-emerald-500 text-black text-[10px] font-bold uppercase tracking-wider py-0.5 px-2.5 rounded-full">
-                                Most Deployed
-                            </span>
+                        <div className="p-6 rounded-xl bg-black border-2 border-white relative flex flex-col justify-between">
+                            <div className="mb-2">
+                                <span className="inline-block bg-white text-black text-[10px] font-bold uppercase tracking-wider py-0.5 px-2.5 rounded">
+                                    Most Deployed
+                                </span>
+                            </div>
                             <div>
-                                <div className="text-xs font-mono text-emerald-400 mb-1">TIER 02 • PRODUCTION</div>
+                                <div className="text-xs font-mono text-neutral-400 mb-1">TIER 02 &middot; PRODUCTION</div>
                                 <h3 className="text-xl font-bold text-white">Enterprise Multi-Agent Suite</h3>
                                 <div className="text-2xl font-bold text-white mt-3 font-mono">₹6,00,000 - ₹15,00,000</div>
-                                <div className="text-xs text-gray-400 mt-1 mb-4">30-45 Day Implementation</div>
-                                <ul className="space-y-2 text-xs text-gray-300">
+                                <div className="text-xs text-neutral-400 mt-1 mb-4">30-45 Day Implementation</div>
+                                <ul className="space-y-2 text-xs text-neutral-300">
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                                         <span>Collaborative Multi-Agent Triad</span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                                        <span>SAP S/4HANA & SQL ledger connectors</span>
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
+                                        <span>SAP S/4HANA &amp; SQL ledger connectors</span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                                        <span>99.9% Uptime & 90-Day ROI Guarantee</span>
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
+                                        <span>99.9% Uptime &amp; 90-Day ROI Guarantee</span>
                                     </li>
                                 </ul>
                             </div>
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="mt-6 w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-xs transition-all"
+                                className="mt-6 w-full py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-xs active:scale-[0.97] transition-all"
                             >
                                 Deploy Enterprise Suite
                             </button>
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-black border border-white/10 flex flex-col justify-between">
+                        <div className="p-6 rounded-xl bg-black border border-white/10 flex flex-col justify-between">
                             <div>
-                                <div className="text-xs font-mono text-emerald-400 mb-1">TIER 03 • RETAINED POD</div>
+                                <div className="text-xs font-mono text-neutral-400 mb-1">TIER 03 &middot; RETAINED POD</div>
                                 <h3 className="text-xl font-bold text-white">Autonomous Engineering Pod</h3>
                                 <div className="text-2xl font-bold text-white mt-3 font-mono">₹4,50,000 / mo</div>
-                                <div className="text-xs text-gray-400 mt-1 mb-4">Continuous Scale & Fine-Tuning</div>
-                                <ul className="space-y-2 text-xs text-gray-300">
+                                <div className="text-xs text-neutral-400 mt-1 mb-4">Continuous Scale &amp; Fine-Tuning</div>
+                                <ul className="space-y-2 text-xs text-neutral-300">
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                                         <span>3 Dedicated AI systems engineers</span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                                        <span>Continuous LoRA fine-tuning & vLLM optimization</span>
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
+                                        <span>Continuous LoRA fine-tuning &amp; vLLM optimization</span>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                                         <span>1-Hour Critical Incident Response SLA</span>
                                     </li>
                                 </ul>
                             </div>
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="mt-6 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-all"
+                                className="mt-6 w-full py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs active:scale-[0.97] transition-all"
                             >
                                 Retain Engineering Pod
                             </button>
@@ -536,7 +538,7 @@ export default function CompareHub() {
                 {/* FAQ Accordion Section */}
                 <section className="mb-16 max-w-4xl mx-auto">
                     <div className="text-center mb-10">
-                        <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 font-semibold">
                             Technical Knowledge Base
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
@@ -548,56 +550,63 @@ export default function CompareHub() {
                         {compareFaqs.map((faq, idx) => (
                             <div
                                 key={idx}
-                                className="border border-white/10 rounded-2xl bg-[#0A0A0A] overflow-hidden transition-colors"
+                                className="border border-white/10 rounded-xl bg-neutral-950 overflow-hidden transition-colors"
                             >
                                 <button
                                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm md:text-base text-white hover:text-emerald-400 transition-colors"
+                                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm md:text-base text-white transition-colors"
                                 >
                                     <span>{faq.q}</span>
                                     <ChevronDown
-                                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 shrink-0 ${
-                                            openFaq === idx ? 'rotate-180 text-emerald-400' : ''
+                                        className={`w-4 h-4 text-neutral-400 transition-transform duration-200 shrink-0 ${
+                                            openFaq === idx ? 'rotate-180 text-white' : ''
                                         }`}
                                     />
                                 </button>
-                                {openFaq === idx && (
-                                    <div className="px-5 pb-5 text-xs md:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
-                                        {faq.a}
-                                    </div>
-                                )}
+                                <AnimatePresence initial={false}>
+                                    {openFaq === idx && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            className="accordion-panel overflow-hidden"
+                                        >
+                                            <div className="px-5 pb-5 text-xs md:text-sm text-neutral-300 leading-relaxed border-t border-white/10 pt-3">
+                                                {faq.a}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Conversion & Direct Audit CTA */}
-                <section className="text-center p-8 sm:p-12 rounded-3xl bg-black text-white border border-white/10 shadow-2xl relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+                <section className="text-center p-8 sm:p-12 rounded-xl bg-black text-white border border-white/10 relative overflow-hidden">
                     <div className="relative z-10 max-w-3xl mx-auto space-y-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-mono tracking-wider uppercase">
-                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        <span className="text-xs font-mono tracking-wider uppercase text-neutral-400 block">
                             Direct Principal Consultation
-                        </div>
+                        </span>
                         <h2 className="text-2xl sm:text-4xl font-bold tracking-tight">
                             Need a Custom Architectural Audit for Your Enterprise Stack?
                         </h2>
-                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                        <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
                             Connect directly with Chaman Shah, Principal AI Systems Architect. We will dissect your workflow topologies, benchmark your latency bottlenecks, and design a sovereign, production-hardened roadmap.
                         </p>
                         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
                             <button
                                 onClick={() => openWhatsApp()}
-                                className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-2"
                             >
-                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                                 <span>Chat on WhatsApp with Lead Architect</span>
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
                             <Link
                                 to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                                className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                             >
                                 <span>ele-in SaaS Waitlist</span>
                                 <span>&rarr;</span>

@@ -17,7 +17,7 @@
   "firstSentence": "Deploy air-gapped edge IoT SCADA gateways synchronizing shopfloor programmable logic controllers with SAP S/4HANA ERP systems in sub-12 milliseconds.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises",
   "paragraphs": [
     "Electronics and precision manufacturing facilities across Electronic City, Bangalore, face severe data synchronization gaps between operational technology (OT) sensor rings and enterprise resource planning (ERP) systems. Legacy SCADA systems log millions of telemetry ticks from Siemens and Allen-Bradley PLCs, but manual batch synchronization into SAP S/4HANA causes hours of latency, causing blind inventory allocation, phantom stockouts, and uncoordinated production scheduling.",
@@ -113,7 +113,7 @@
     "subheadline": "Electronics and precision manufacturing facilities across Electronic City, Bangalore, face severe data synchronization gaps between operational technology (OT) sensor rings and enterprise resource planning (ERP) systems. Legacy SCADA systems log millions of telemetry ticks from Siemens and Allen-Bradley PLCs, but manual batch synchronization into SAP S/4HANA causes hours of latency, causing blind inventory allocation, phantom stockouts, and uncoordinated production scheduling.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Continuous operational telemetry with automated offline WAL recovery."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Continuous operational telemetry with automated offline WAL recovery."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Electronic City Edge IoT SCADA and SAP ERP Synchronization Telemetry for Manufacturing Enterprises Performance Telemetry",
       "layout": "centered-card"
     }

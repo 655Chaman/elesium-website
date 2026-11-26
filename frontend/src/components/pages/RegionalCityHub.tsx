@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
     MapPin,
     CheckCircle2,
@@ -65,10 +66,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Bengaluru (Bangalore)',
         regionName: 'Bengaluru & Karnataka Tech Corridor',
         slug: 'enterprise-ai-bangalore',
-        h1: "Best AI & Automation Company & Agency in Bangalore",
-        metaTitle: "Best AI & Automation Company & Agency in Bangalore, Karnataka",
-        metaDescription: "Elesium is a leading enterprise AI and automation company in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga.",
-        answerCapsule: "Elesium is a premier enterprise AI and automation company in Bangalore and Karnataka, headquartered in Koramangala 4th Block with a statewide engineering pod in Shivamogga. We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines across Outer Ring Road, Whitefield, Electronic City, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
+        h1: "Enterprise AI & Automation Engineering in Bangalore",
+        metaTitle: "Enterprise AI & Automation Engineering in Bangalore, Karnataka",
+        metaDescription: "Elesium is an enterprise AI and automation engineering firm in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga.",
+        answerCapsule: "Elesium is an enterprise AI and automation engineering firm in Bangalore and Karnataka, headquartered in Koramangala 4th Block with a statewide engineering pod in Shivamogga. We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines across Outer Ring Road, Whitefield, Electronic City, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
         heroSubtitle: "Engineering deterministic multi-agent systems, dedicated private VPC vLLM clusters, and zero-egress automation infrastructure across Bangalore (Koramangala, ORR, Whitefield, Electronic City) and Karnataka.",
         officeAddress: {
             street: "Koramangala 4th Block, 80 Feet Road",
@@ -155,10 +156,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Mumbai (BKC & Nariman Point)',
         regionName: 'Maharashtra Financial Capital',
         slug: 'enterprise-ai-mumbai',
-        h1: "Best Enterprise AI Company in Mumbai",
-        metaTitle: "Best Enterprise AI Company in Mumbai | Sovereign BFSI AI Automation Agency",
-        metaDescription: "Elesium is the leading enterprise AI company in Mumbai. Engineering deterministic BFSI multi-agent systems, sub-200ms ledger reconciliation, and RBI-compliant private cloud AI.",
-        answerCapsule: "Elesium is Mumbai's top enterprise AI automation company, delivering deterministic multi-agent architectures and sub-200ms ledger reconciliation for BFSI institutions, NBFCs, and conglomerates in BKC and Nariman Point. All systems strictly comply with RBI digital lending guidelines and DPDP Act 2023.",
+        h1: "Enterprise AI & Automation Engineering in Mumbai",
+        metaTitle: "Enterprise AI Engineering in Mumbai | Sovereign BFSI AI Automation",
+        metaDescription: "Elesium is an enterprise AI engineering firm in Mumbai. Engineering deterministic BFSI multi-agent systems, sub-200ms ledger reconciliation, and RBI-compliant private cloud AI.",
+        answerCapsule: "Elesium is a Mumbai enterprise AI automation firm, delivering deterministic multi-agent architectures and sub-200ms ledger reconciliation for BFSI institutions, NBFCs, and conglomerates in BKC and Nariman Point. All systems strictly comply with RBI digital lending guidelines and DPDP Act 2023.",
         heroSubtitle: "Deploying deterministic multi-agent architectures, air-gapped ledger reconciliation, and RBI-compliant private cloud AI for India's financial hub.",
         officeAddress: {
             street: "Bandra Kurla Complex (BKC), G Block",
@@ -225,10 +226,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Delhi NCR (Gurugram & Noida)',
         regionName: 'National Capital Region',
         slug: 'enterprise-ai-delhi-ncr',
-        h1: "Best Enterprise AI Company in Delhi NCR",
-        metaTitle: "Best Enterprise AI Company in Delhi NCR | Enterprise Automation Gurugram & Noida",
-        metaDescription: "Elesium is the top enterprise AI company in Delhi NCR, Gurugram, and Noida. Engineering supply chain dispatch agents, GST Rule 36(4) reconciliation, and sovereign GovTech AI.",
-        answerCapsule: "Elesium is Delhi NCR's leading enterprise AI company, architecting automated logistics dispatch, GST Rule 36(4) invoice reconciliation, and sovereign GovTech multi-agent systems across Gurugram and Noida. Contractually committed 90-day ROI backed by private VPC deployments.",
+        h1: "Enterprise AI & Automation Engineering in Delhi NCR",
+        metaTitle: "Enterprise AI Engineering in Delhi NCR | Enterprise Automation Gurugram & Noida",
+        metaDescription: "Elesium is an enterprise AI engineering firm in Delhi NCR, Gurugram, and Noida. Engineering supply chain dispatch agents, GST Rule 36(4) reconciliation, and sovereign GovTech AI.",
+        answerCapsule: "Elesium is a Delhi NCR enterprise AI engineering firm, architecting automated logistics dispatch, GST Rule 36(4) invoice reconciliation, and sovereign GovTech multi-agent systems across Gurugram and Noida. Contractually committed 90-day ROI backed by private VPC deployments.",
         heroSubtitle: "Engineering autonomous logistics dispatch, GST input tax credit reconciliation, and sovereign AI infrastructure across Gurugram, Noida, and New Delhi.",
         officeAddress: {
             street: "Cyber City, DLF Phase 2, Building 10",
@@ -295,10 +296,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Pune (Hinjawadi & Chakan)',
         regionName: 'Maharashtra Industrial Belt',
         slug: 'enterprise-ai-pune',
-        h1: "Best Enterprise AI Company in Pune",
-        metaTitle: "Best Enterprise AI Company in Pune | Industrial Manufacturing AI Automation",
-        metaDescription: "Elesium is the #1 enterprise AI company in Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi.",
-        answerCapsule: "Elesium is Pune's leading enterprise AI company, engineering sub-50ms computer vision defect inspection, predictive machine telemetry, and bidirectional SAP RFC state machines for automotive OEMs and discrete manufacturing plants across Chakan and Hinjawadi. Delivering audited 3.5x ROI in 90 days.",
+        h1: "Enterprise AI & Automation Engineering in Pune",
+        metaTitle: "Enterprise AI Engineering in Pune | Industrial Manufacturing AI Automation",
+        metaDescription: "Elesium is an enterprise AI engineering firm in Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi.",
+        answerCapsule: "Elesium is a Pune enterprise AI engineering firm, building sub-50ms computer vision defect inspection, predictive machine telemetry, and bidirectional SAP RFC state machines for automotive OEMs and discrete manufacturing plants across Chakan and Hinjawadi. Delivering audited 3.5x ROI in 90 days.",
         heroSubtitle: "Deploying high-speed computer vision defect inspection, predictive IoT state machines, and SAP RFC automation across Chakan and Hinjawadi.",
         officeAddress: {
             street: "Rajiv Gandhi Infotech Park, Phase 1",
@@ -365,10 +366,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Hyderabad (HITEC City & Gachibowli)',
         regionName: 'Telangana IT & Pharma Hub',
         slug: 'enterprise-ai-hyderabad',
-        h1: "Best Enterprise AI Company in Hyderabad",
-        metaTitle: "Best Enterprise AI Company in Hyderabad | Sovereign AI & Pharma GCC Automation",
-        metaDescription: "Elesium is the leading enterprise AI company in Hyderabad. Engineering air-gapped pharma clinical trial intelligence, high-throughput GCC data pipelines, and sub-2s multi-agent systems in HITEC City & Gachibowli.",
-        answerCapsule: "Elesium is Hyderabad's premier enterprise AI company, engineering sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x-5x ROI in 90 days with zero data egress.",
+        h1: "Enterprise AI & Automation Engineering in Hyderabad",
+        metaTitle: "Enterprise AI Engineering in Hyderabad | Sovereign AI & Pharma GCC Automation",
+        metaDescription: "Elesium is an enterprise AI engineering firm in Hyderabad. Engineering air-gapped pharma clinical trial intelligence, high-throughput GCC data pipelines, and sub-2s multi-agent systems in HITEC City & Gachibowli.",
+        answerCapsule: "Elesium is a Hyderabad enterprise AI engineering firm, building sovereign multi-agent architectures, US-FDA 21 CFR Part 11 compliant clinical research parsers, and sub-second GCC workflow automation from our HITEC City engineering node. We deliver guaranteed 3x-5x ROI in 90 days with zero data egress.",
         heroSubtitle: "Deploying sovereign multi-agent systems, validated life-sciences document pipelines, and scalable enterprise intelligence across HITEC City and the Financial District.",
         officeAddress: {
             street: "HITEC City Main Road, Madhapur",
@@ -435,10 +436,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Chennai (OMR & Guindy)',
         regionName: 'Tamil Nadu Automotive & SaaS Corridor',
         slug: 'enterprise-ai-chennai',
-        h1: "Best Enterprise AI Company in Chennai",
-        metaTitle: "Best Enterprise AI Company in Chennai | Automotive & Enterprise SaaS AI Automation",
-        metaDescription: "Elesium is Chennai's top enterprise AI company. Architecting deterministic supply chain agents, automated export container billing, and sovereign SaaS telemetry in OMR & Guindy.",
-        answerCapsule: "Elesium is Chennai's foremost enterprise AI automation agency, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x-5x ROI in 90 days with complete DPDP compliance.",
+        h1: "Enterprise AI & Automation Engineering in Chennai",
+        metaTitle: "Enterprise AI Engineering in Chennai | Automotive & Enterprise SaaS AI Automation",
+        metaDescription: "Elesium is a Chennai enterprise AI engineering firm. Architecting deterministic supply chain agents, automated export container billing, and sovereign SaaS telemetry in OMR & Guindy.",
+        answerCapsule: "Elesium is a Chennai enterprise AI automation firm, delivering deterministic automotive supply chain coordination, export container freight billing OCR, and sovereign SaaS telemetry from our OMR technology hub. We guarantee contractually verified 3x-5x ROI in 90 days with complete DPDP compliance.",
         heroSubtitle: "Architecting sub-second automotive vendor dispatch, export container billing intelligence, and sovereign SaaS telemetry across Old Mahabalipuram Road and Guindy.",
         officeAddress: {
             street: "Rajiv Gandhi Salai (OMR), Taramani",
@@ -505,10 +506,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Ahmedabad (GIFT City & SG Highway)',
         regionName: 'Gujarat Financial & Petrochemical Hub',
         slug: 'enterprise-ai-ahmedabad',
-        h1: "Best Enterprise AI Company in Ahmedabad",
-        metaTitle: "Best Enterprise AI Company in Ahmedabad | GIFT City FinTech & Industrial AI",
-        metaDescription: "Elesium is Ahmedabad's leading enterprise AI company. Deploying IFSCA-compliant algorithmic financial agents, chemical process optimization, and textile ERP state machines in GIFT City.",
-        answerCapsule: "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x-5x ROI in 90 days with strict data residency.",
+        h1: "Enterprise AI & Automation Engineering in Ahmedabad",
+        metaTitle: "Enterprise AI Engineering in Ahmedabad | GIFT City FinTech & Industrial AI",
+        metaDescription: "Elesium is an Ahmedabad enterprise AI engineering firm. Deploying IFSCA-compliant algorithmic financial agents, chemical process optimization, and textile ERP state machines in GIFT City.",
+        answerCapsule: "Elesium is an Ahmedabad enterprise AI engineering firm, building IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x-5x ROI in 90 days with strict data residency.",
         heroSubtitle: "Deploying IFSCA-compliant trade finance automation, petrochemical process telemetry, and enterprise manufacturing state machines across GIFT City and SG Highway.",
         officeAddress: {
             street: "GIFT One Tower, GIFT City",
@@ -575,10 +576,10 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         cityName: 'Kolkata (Sector V Salt Lake & New Town)',
         regionName: 'Eastern India Enterprise & Logistics Hub',
         slug: 'enterprise-ai-kolkata',
-        h1: "Best Enterprise AI Company in Kolkata",
-        metaTitle: "Best Enterprise AI Company in Kolkata | Enterprise AI & Mining Logistics Automation",
-        metaDescription: "Elesium is the top enterprise AI company in Kolkata. Delivering heavy engineering telemetry, cross-border tea & commodity trading state machines, and GovTech AI in Sector V Salt Lake.",
-        answerCapsule: "Elesium is Kolkata's premier enterprise AI automation company, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x-5x ROI in 90 days with zero data egress.",
+        h1: "Enterprise AI & Automation Engineering in Kolkata",
+        metaTitle: "Enterprise AI Engineering in Kolkata | Enterprise AI & Mining Logistics Automation",
+        metaDescription: "Elesium is a Kolkata enterprise AI engineering firm. Delivering heavy engineering telemetry, cross-border tea & commodity trading state machines, and GovTech AI in Sector V Salt Lake.",
+        answerCapsule: "Elesium is a Kolkata enterprise AI automation firm, engineering heavy machinery telemetry, tea/jute commodity supply chain state machines, and GovTech workflow automation across Sector V Salt Lake and New Town. Contractually guaranteed 3x-5x ROI in 90 days with zero data egress.",
         heroSubtitle: "Engineering heavy industrial telemetry, commodity trading state machines, and sovereign public sector AI infrastructure across Sector V Salt Lake and New Town.",
         officeAddress: {
             street: "Sector V, Salt Lake City",
@@ -830,7 +831,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-[#0A0A0A] text-gray-900 dark:text-gray-100 transition-colors">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors">
             <WhatsAppModal />
             <Helmet>
                 <title>{`${cityData.metaTitle} | Elesium`}</title>
@@ -848,42 +849,42 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
             <main className="max-w-6xl mx-auto px-5 md:px-8 pt-24 pb-20">
                 {/* Regional Breadcrumbs */}
-                <nav className="flex items-center gap-2 text-xs font-mono text-gray-500 mb-8" aria-label="Breadcrumbs">
+                <nav className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-8" aria-label="Breadcrumbs">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
-                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+                    <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
                     <Link to="/ai-automation-agency-india/" className="hover:text-black dark:hover:text-white transition-colors">Enterprise AI India</Link>
-                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                    <span className="text-gray-900 dark:text-gray-200 font-semibold">{cityData.cityName}</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
+                    <span className="text-black dark:text-white font-semibold">{cityData.cityName}</span>
                 </nav>
 
                 {/* Hero Section */}
                 <header className="mb-14">
                     <div className="flex flex-wrap items-center gap-2 mb-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-800 dark:text-gray-200 text-xs font-mono">
-                            <MapPin className="w-3.5 h-3.5 text-emerald-500" />
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white text-xs font-mono">
+                            <MapPin className="w-3.5 h-3.5" />
                             <span>{cityData.regionName} • Sovereign Engineering Node</span>
                         </div>
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-700 dark:text-emerald-400 text-xs font-mono">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-700 dark:text-neutral-300 text-xs font-mono">
                             <Building2 className="w-3.5 h-3.5" />
                             <span>{cityData.localLandmark}</span>
                         </div>
                     </div>
 
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.1] mb-6">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black dark:text-white leading-[1.1] mb-6">
                         {cityData.h1}
                     </h1>
 
-                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mb-8">
+                    <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl mb-8">
                         {cityData.heroSubtitle}
                     </p>
 
                     {/* Answer Capsule (Google Direct Snippet Target) */}
-                    <div className="answer-capsule p-6 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] border-l-4 border-l-emerald-500 mb-8 shadow-sm">
-                        <div className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold mb-2 flex items-center gap-2">
+                    <div className="answer-capsule p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 border-l-4 border-l-black dark:border-l-white mb-8">
+                        <div className="text-xs font-mono uppercase tracking-wider text-black dark:text-white font-semibold mb-2 flex items-center gap-2">
                             <TrendingUp className="w-4 h-4" />
                             <span>Regional Engineering Executive Summary • AEO Answer Capsule</span>
                         </div>
-                        <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200 font-medium leading-relaxed">
+                        <p className="text-sm sm:text-base text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed">
                             {cityData.answerCapsule}
                         </p>
                     </div>
@@ -892,16 +893,16 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     <div className="flex flex-col sm:flex-row items-center gap-3.5">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-90 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
                         >
-                            <MessageSquare className="w-4 h-4 text-emerald-500" />
+                            <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
 
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-gray-300 dark:border-white/20 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>
@@ -911,7 +912,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             href={cityData.hasMapUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
                         >
                             <MapPin className="w-4 h-4" />
                             <span>View Verified Google Map Pin</span>
@@ -921,7 +922,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                 {/* 3 Core Architecture Pillars */}
                 <section className="mb-14 md:mb-16">
-                    <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mb-8">
+                    <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mb-8">
                         Deterministic Systems Engineering for {cityData.cityName}
                     </h2>
 
@@ -929,19 +930,19 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         {cityData.corePillars.map((pillar, i) => (
                             <div
                                 key={i}
-                                className="p-6 rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50/50 dark:bg-white/[0.02] flex flex-col justify-between"
+                                className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between"
                             >
                                 <div>
-                                    <div className="text-3xl font-bold font-mono text-emerald-600 dark:text-emerald-400 mb-1">
+                                    <div className="text-3xl font-bold font-mono text-black dark:text-white mb-1">
                                         {pillar.metric}
                                     </div>
-                                    <div className="text-xs font-mono text-gray-500 uppercase tracking-wider mb-4">
+                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-4">
                                         {pillar.metricLabel}
                                     </div>
-                                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                                    <h3 className="text-lg font-medium text-black dark:text-white mb-2">
                                         {pillar.title}
                                     </h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         {pillar.desc}
                                     </p>
                                 </div>
@@ -951,24 +952,24 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 </section>
 
                 {/* Target Local Industries */}
-                <section className="mb-14 md:mb-16 p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
+                <section className="mb-14 md:mb-16 p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="max-w-3xl">
-                        <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                             Enterprise Sector Specialization
                         </span>
-                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-4">
+                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-2 mb-4">
                             High-Leverage Workflows Automated in {cityData.cityName}
                         </h2>
-                        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                            We don't build generic prototypes. We engineer air-gapped, production-grade microservices for the core economic drivers of this metropolitan region.
+                        <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                            We engineer air-gapped, production-grade microservices for the core economic drivers of this metropolitan region.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {cityData.targetIndustries.map((ind, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5">
-                                <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                                <span className="text-sm font-medium text-gray-900 dark:text-white">{ind}</span>
+                            <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                <CheckCircle2 className="w-5 h-5 text-black dark:text-white flex-shrink-0" />
+                                <span className="text-sm font-medium text-black dark:text-white">{ind}</span>
                             </div>
                         ))}
                     </div>
@@ -976,34 +977,34 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                 {/* Verifiable Local Case Study */}
                 <section className="mb-14 md:mb-16">
-                    <div className="p-8 sm:p-10 rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent">
-                        <div className="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">
-                            <TrendingUp className="w-4 h-4" />
+                    <div className="p-8 sm:p-10 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                        <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2">
+                            <TrendingUp className="w-4 h-4 text-black dark:text-white" />
                             <span>Audited Regional Deployment Benchmark</span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mb-3">
+                        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mb-3">
                             {cityData.localCaseStudy.title}
                         </h2>
-                        <div className="text-xs font-mono text-gray-500 mb-6">
+                        <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-6">
                             Client Node: {cityData.localCaseStudy.clientType}
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-sm">
-                            <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
-                                <div className="font-semibold text-gray-900 dark:text-white mb-1">Operational Bottleneck:</div>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                <div className="font-semibold text-black dark:text-white mb-1">Operational Bottleneck:</div>
+                                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {cityData.localCaseStudy.challenge}
                                 </p>
                             </div>
-                            <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-black/5 dark:border-white/5">
-                                <div className="font-semibold text-gray-900 dark:text-white mb-1">Engineered Architecture:</div>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                <div className="font-semibold text-black dark:text-white mb-1">Engineered Architecture:</div>
+                                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                     {cityData.localCaseStudy.solution}
                                 </p>
                             </div>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-mono text-sm">
+                        <div className="p-4 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-sm">
                             <strong>Measured Outcome:</strong> {cityData.localCaseStudy.roiMetric}
                         </div>
                     </div>
@@ -1013,35 +1014,35 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 {cityData.cityId === 'bangalore' && (
                     <>
                         {/* ORR & Whitefield GCC Sovereign Runtimes */}
-                        <section className="mb-14 md:mb-16 p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                        <section className="mb-14 md:mb-16 p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                                 Enterprise GCC Architecture
                             </span>
-                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-4">
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-2 mb-4">
                                 Sovereign AI Runtimes for Global Capability Centers (GCCs) on Outer Ring Road and Whitefield
                             </h2>
-                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                                 Global Capability Centers operating along the Outer Ring Road technology corridor (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield campuses require isolated machine learning inference that eliminates third-party public cloud data transit. Multinational corporate governance models forbid sending proprietary enterprise source code, customer records, and internal banking ledgers through multi-tenant commercial API endpoints.
                             </p>
-                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                                 Elesium provisions dedicated, air-gapped vLLM model runtimes inside client-owned Virtual Private Clouds in AWS ap-south-1 (Mumbai) or local Bengaluru colocation facilities (CtrlS Tier-IV and Sify Infinit Spaces). Utilizing private network peering and dedicated NVIDIA H100 GPU clusters linked via 900 GB/s NVLink interconnects, these runtimes serve open-weights models (DeepSeek-V3, Llama-3.3-70B, Qwen-2.5) with strict network perimeter isolation and zero wide-area network routing.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5">
-                                    <div className="font-semibold text-gray-900 dark:text-white mb-1">Zero WAN Data Egress</div>
-                                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                    <div className="font-semibold text-black dark:text-white mb-1">Zero WAN Data Egress</div>
+                                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Inference clusters execute inside client VPC subnets. Prompts, weights, and embeddings never leave the enterprise perimeter.
                                     </p>
                                 </div>
-                                <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5">
-                                    <div className="font-semibold text-gray-900 dark:text-white mb-1">Sub-200ms TTFT Performance</div>
-                                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                    <div className="font-semibold text-black dark:text-white mb-1">Sub-200ms TTFT Performance</div>
+                                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Audited 148ms Time-To-First-Token latency with FP8 W8A8 quantization kernels, sustaining 124.5 decoded tokens per second per stream.
                                     </p>
                                 </div>
-                                <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5">
-                                    <div className="font-semibold text-gray-900 dark:text-white mb-1">US &amp; EU Dual Governance</div>
-                                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10">
+                                    <div className="font-semibold text-black dark:text-white mb-1">US &amp; EU Dual Governance</div>
+                                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Engineered to satisfy parent-company SOC2 Type II and SEC Rule 17a-4 WORM requirements alongside Indian data localization laws.
                                     </p>
                                 </div>
@@ -1050,38 +1051,38 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                         {/* 4-Corridor Karnataka Coverage Grid */}
                         <section className="mb-14 md:mb-16">
-                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                            <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                                 Karnataka Engineering Footprint
                             </span>
-                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-6">
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-2 mb-6">
                                 Four-Corridor Bangalore &amp; Statewide Karnataka Delivery Coverage
                             </h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Koramangala &amp; Indiranagar</div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">FinTech &amp; High-Velocity B2B SaaS</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Koramangala &amp; Indiranagar</div>
+                                    <h3 className="text-lg font-semibold text-black dark:text-white mb-2">FinTech &amp; High-Velocity B2B SaaS</h3>
+                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Headquarters on 80 Feet Road, Koramangala 4th Block. Low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.
                                     </p>
                                 </div>
-                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Outer Ring Road &amp; Whitefield</div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Multinational GCC Clusters</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Outer Ring Road &amp; Whitefield</div>
+                                    <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Multinational GCC Clusters</h3>
+                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Serving Bellandur, Kadubeesanahalli, Marathahalli, and ITPL Whitefield GCCs with dedicated 8x NVIDIA H100 vLLM clusters and air-gapped ServiceNow/SAP connectors.
                                     </p>
                                 </div>
-                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Electronic City Phases 1 &amp; 2</div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Hardware, SMT &amp; Semiconductor Telemetry</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Electronic City Phases 1 &amp; 2</div>
+                                    <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Hardware, SMT &amp; Semiconductor Telemetry</h3>
+                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Sub-50ms edge vision inspection on SMT assembly lines, cleanroom anomaly state machines, and SAP S/4HANA RFC lot traceability.
                                     </p>
                                 </div>
-                                <div className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase mb-1">Shivamogga Pod &amp; Beyond Bengaluru</div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Karnataka Statewide Enterprise Delivery</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                <div className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Shivamogga Pod &amp; Beyond Bengaluru</div>
+                                    <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Karnataka Statewide Enterprise Delivery</h3>
+                                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                         Statewide engineering pod in Shivamogga aligned with KDEM Beyond Bengaluru hubs (Mysuru, Mangaluru, Hubballi-Dharwad) for agri-processing, NBFC, and industrial automation.
                                     </p>
                                 </div>
@@ -1089,61 +1090,61 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         </section>
 
                         {/* KDEM & Karnataka Cyber Security Policy 2024 */}
-                        <section className="mb-14 md:mb-16 p-8 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02]">
-                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                        <section className="mb-14 md:mb-16 p-8 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                                 State Statutory Governance
                             </span>
-                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-4">
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-2 mb-4">
                                 Karnataka Cyber Security Policy 2024 and KDEM Statutory Compliance
                             </h2>
-                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                                 Bengaluru and Karnataka enterprises operating under the Karnataka Digital Economy Mission (KDEM) and the Karnataka Cyber Security Policy 2024 enforce auditable data protection and breach-prevention controls. Every automated decision path generated by our LangGraph topologies records immutable audit trails, cryptographic receipts, and hardware-level memory zeroization under DPDP Act Section 8(5).
                             </p>
-                            <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-black/5 dark:border-white/5 text-sm text-gray-600 dark:text-gray-400 space-y-2">
-                                <div><strong className="text-gray-900 dark:text-white">KDEM Data Localization:</strong> All tenant inference data, vector indexes, and checkpoint stores reside within Karnataka and Indian sovereign cloud zones.</div>
-                                <div><strong className="text-gray-900 dark:text-white">Cryptographic Zeroization:</strong> Section 8(5) personal data wiping executes DoD 5220.22-M overwriting upon socket termination with Ed25519 receipts stored in client SIEM systems.</div>
-                                <div><strong className="text-gray-900 dark:text-white">FIPS 140-2 Level 3 HSMs:</strong> Dedicated cryptographic key isolation partitions protecting enterprise authentication tokens and model weights.</div>
+                            <div className="p-5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
+                                <div><strong className="text-black dark:text-white">KDEM Data Localization:</strong> All tenant inference data, vector indexes, and checkpoint stores reside within Karnataka and Indian sovereign cloud zones.</div>
+                                <div><strong className="text-black dark:text-white">Cryptographic Zeroization:</strong> Section 8(5) personal data wiping executes DoD 5220.22-M overwriting upon socket termination with Ed25519 receipts stored in client SIEM systems.</div>
+                                <div><strong className="text-black dark:text-white">FIPS 140-2 Level 3 HSMs:</strong> Dedicated cryptographic key isolation partitions protecting enterprise authentication tokens and model weights.</div>
                             </div>
                         </section>
 
                         {/* Sub-200ms FIX Protocol & Open Benchmarks */}
                         <section className="mb-14 md:mb-16">
-                            <span className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
+                            <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-semibold">
                                 FinTech &amp; Reproducible Telemetry
                             </span>
-                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mt-2 mb-4">
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mt-2 mb-4">
                                 Sub-200ms FIX Protocol Trade Automation &amp; Verified H100 Benchmarks
                             </h2>
-                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                                 Koramangala and HSR Layout digital lending platforms, brokerages, and algorithmic asset managers require sub-second execution speeds for FIX 4.2/4.4 streams and ledger reconciliation. Deployed on 2x to 8x NVIDIA H100 SXM5 nodes, our C++ Python extensions and lock-free shared memory rings sustain 148ms Time-To-First-Token under RBI Cyber Security Framework Annex II guardrails.
                             </p>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6">
                                 Inspect our public reproducible telemetry, concurrency sweeps, and statutory verification harnesses in{' '}
                                 <a
                                     href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="font-mono text-emerald-600 dark:text-emerald-400 underline"
+                                    className="font-mono text-black dark:text-white underline"
                                 >
                                     655Chaman/sovereign-enterprise-ai-benchmarks
                                 </a>.
                             </p>
 
                             {/* Empirical Comparison Table */}
-                            <div className="overflow-x-auto rounded-2xl border border-gray-200 dark:border-white/10">
+                            <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-white/10">
                                 <table className="w-full text-left text-xs sm:text-sm">
-                                    <thead className="bg-gray-100 dark:bg-white/5 text-gray-900 dark:text-white font-semibold">
+                                    <thead className="bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-semibold">
                                         <tr>
                                             <th className="p-4">Evaluation Criterion</th>
-                                            <th className="p-4 text-emerald-700 dark:text-emerald-400">Elesium (Koramangala / Shivamogga)</th>
+                                            <th className="p-4 text-black dark:text-white">Elesium (Koramangala / Shivamogga)</th>
                                             <th className="p-4">Traditional Bengaluru IT Consultancies</th>
                                             <th className="p-4">Foreign Cloud API SaaS Wrappers</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-gray-200 dark:divide-white/10 text-gray-700 dark:text-gray-300">
+                                    <tbody className="divide-y divide-neutral-200 dark:divide-white/10 text-neutral-700 dark:text-neutral-300">
                                         <tr>
                                             <td className="p-4 font-medium">Production Pilot SLA</td>
-                                            <td className="p-4 font-semibold text-emerald-700 dark:text-emerald-400">14 Business Days</td>
+                                            <td className="p-4 font-semibold text-black dark:text-white">14 Business Days</td>
                                             <td className="p-4">4 to 9 Months</td>
                                             <td className="p-4">Unbounded Prototype</td>
                                         </tr>
@@ -1180,11 +1181,11 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
 
                 {/* Local Technical FAQs (AEO & AI Search Snippet Targeting) */}
                 <section className="mb-14 md:mb-16">
-                    <div className="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2">
-                        <HelpCircle className="w-4 h-4" />
+                    <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-2">
+                        <HelpCircle className="w-4 h-4 text-black dark:text-white" />
                         <span>Regional Procurement & Architectural FAQs</span>
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white mb-6">
+                    <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-black dark:text-white mb-6">
                         Frequently Asked Questions: Enterprise AI in {cityData.cityName}
                     </h2>
 
@@ -1194,20 +1195,30 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             return (
                                 <div
                                     key={i}
-                                    className="border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden bg-gray-50/50 dark:bg-white/[0.02]"
+                                    className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
                                     <button
                                         onClick={() => setOpenFaqIndex(isOpen ? null : i)}
-                                        className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-gray-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                                        className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
                                     >
                                         <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180 text-emerald-500' : 'text-gray-400'}`} />
+                                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
                                     </button>
-                                    {isOpen && (
-                                        <div className="px-5 pb-5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed border-t border-gray-100 dark:border-white/5 pt-4 faq-answer">
-                                            {faq.answer}
-                                        </div>
-                                    )}
+                                    <AnimatePresence initial={false}>
+                                        {isOpen && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                className="accordion-panel overflow-hidden"
+                                            >
+                                                <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-4 faq-answer">
+                                                    {faq.answer}
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </div>
                             )
                         })}
@@ -1215,14 +1226,14 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 </section>
 
                 {/* Regional Mesh Navigation */}
-                <section className="mb-14 md:mb-16 pt-12 border-t border-gray-200 dark:border-white/10">
+                <section className="mb-14 md:mb-16 pt-12 border-t border-neutral-200 dark:border-white/10">
                     <div className="flex items-center justify-between mb-6">
-                        <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                        <h3 className="text-lg font-medium text-black dark:text-white">
                             Explore Elesium Sovereign Engineering Hubs Across India
                         </h3>
                         <Link
                             to="/ai-automation-agency-india/"
-                            className="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                            className="text-xs font-mono text-black dark:text-white hover:underline flex items-center gap-1"
                         >
                             <span>India Enterprise Overview</span>
                             <span>&rarr;</span>
@@ -1234,63 +1245,63 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             <Link
                                 key={c.cityId}
                                 to={`/${c.slug}/`}
-                                className={`p-4 rounded-2xl border text-left transition-all ${
+                                className={`p-4 rounded-xl border text-left transition-all ${
                                     c.cityId === cityData.cityId
-                                        ? 'border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20'
-                                        : 'border-gray-200 dark:border-white/10 hover:border-black dark:hover:border-white/30'
+                                        ? 'border-black dark:border-white bg-neutral-100 dark:bg-neutral-900'
+                                        : 'border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30'
                                 }`}
                             >
-                                <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">
+                                <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-wider mb-1">
                                     {c.regionName}
                                 </div>
-                                <div className="text-sm font-semibold text-gray-900 dark:text-white">
+                                <div className="text-sm font-semibold text-black dark:text-white">
                                     {c.cityName} &rarr;
                                 </div>
                             </Link>
                         ))}
                     </div>
 
-                    <div className="mt-8 p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/[0.02] flex flex-wrap gap-6 text-xs sm:text-sm font-semibold">
-                        <Link to="/solutions/" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                    <div className="mt-8 p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-wrap gap-6 text-xs sm:text-sm font-semibold">
+                        <Link to="/solutions/" className="text-black dark:text-white hover:underline">
                             Explore 100 Curated Enterprise Solutions &rarr;
                         </Link>
-                        <a href="/commercial-directory.html" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                        <a href="/commercial-directory.html" className="text-black dark:text-white hover:underline">
                             Top 100 Commercial Directory &rarr;
                         </a>
-                        <a href="/tools/enterprise-ai-roi-calculator/" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                        <a href="/tools/enterprise-ai-roi-calculator/" className="text-black dark:text-white hover:underline">
                             Simulate AI Automation ROI &rarr;
                         </a>
-                        <Link to="/signals/" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                        <Link to="/signals/" className="text-black dark:text-white hover:underline">
                             Technical Whitepapers &amp; Signals &rarr;
                         </Link>
                     </div>
                 </section>
 
                 {/* Bottom CTA Card */}
-                <section className="p-8 sm:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-white/[0.03] text-center space-y-6">
-                    <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 border border-emerald-400/30 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+                <section className="p-8 sm:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 text-center space-y-6">
+                    <span className="text-xs font-mono uppercase tracking-wider text-neutral-300 border border-white/20 px-3 py-1 rounded-lg inline-flex items-center gap-1.5">
                         <ShieldCheck className="w-3.5 h-3.5" />
                         <span>Sovereign Production SLA • 90-Day Guaranteed Breakeven</span>
                     </span>
                     <h2 className="text-2xl sm:text-4xl font-medium tracking-tight max-w-xl mx-auto">
                         Ready to Deploy Deterministic AI in {cityData.cityName}?
                     </h2>
-                    <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-sm sm:text-base text-neutral-300 dark:text-neutral-400 max-w-xl mx-auto leading-relaxed">
                         Book an architectural consultation with Principal AI Systems Architect Chaman Shah.
                         Receive a comprehensive 3-year TCO memorandum and fixed-fee implementation blueprint.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto h-11 px-6 rounded-full bg-white text-black hover:bg-gray-100 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg bg-white text-black hover:bg-neutral-200 active:scale-[0.97] font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2"
                         >
-                            <MessageSquare className="w-4 h-4 text-emerald-500" />
+                            <MessageSquare className="w-4 h-4" />
                             <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                            className="w-full sm:w-auto h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>

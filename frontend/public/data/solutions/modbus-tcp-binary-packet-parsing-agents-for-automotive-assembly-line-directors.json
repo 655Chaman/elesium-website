@@ -17,7 +17,7 @@
   "firstSentence": "Parse high-frequency Modbus TCP binary packets with sub-4ms micro-second bitfield unpacking for automotive body shop automation lines.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors",
   "paragraphs": [
     "Automotive assembly lines rely on hundreds of distributed Modbus TCP slave devices: pneumatic valve manifolds, nut-runner torque controllers, laser distance sensors, and welding robot controllers. Standard software polling engines experience high CPU context-switching overhead and packet parsing latencies, often missing critical millisecond torque spike events or clamp release confirmation bits.",
@@ -113,7 +113,7 @@
     "subheadline": "Automotive assembly lines rely on hundreds of distributed Modbus TCP slave devices: pneumatic valve manifolds, nut-runner torque controllers, laser distance sensors, and welding robot controllers. Standard software polling engines experience high CPU context-switching overhead and packet parsing latencies, often missing critical millisecond torque spike events or clamp release confirmation bits.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Complete capture of transient torque spikes and under-torqued fastener anomalies."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Manufacturing & Industrial Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Complete capture of transient torque spikes and under-torqued fastener anomalies."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Modbus TCP Binary Packet Parsing Agents for Automotive Assembly Line Directors Performance Telemetry",
       "layout": "centered-card"
     }

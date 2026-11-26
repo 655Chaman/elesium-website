@@ -136,12 +136,12 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
     };
 
     return (
-        <div className="interactive-asset my-12 p-6 md:p-8 rounded-2xl bg-gradient-to-b from-gray-950 via-[#070b12] to-black border border-blue-500/30 shadow-2xl text-white font-sans">
+        <div className="interactive-asset my-12 p-6 md:p-8 rounded-2xl bg-gradient-to-b from-gray-950 via-[#070b12] to-black border border-white/30 shadow-2xl text-white font-sans">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-6">
                 <div>
                     <div className="flex items-center gap-2 mb-1.5">
-                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/30 flex items-center gap-1">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-white/10 text-neutral-200 border border-white/30 flex items-center gap-1">
                             <Sparkles className="h-3 w-3" />
                             Deterministic Financial Modeler
                         </span>
@@ -167,7 +167,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                             }}
                             className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
                                 currency === 'INR'
-                                    ? 'bg-blue-600 text-white shadow-md'
+                                    ? 'bg-neutral-800 text-white shadow-md'
                                     : 'text-white/60 hover:text-white'
                             }`}
                         >
@@ -183,7 +183,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                             }}
                             className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
                                 currency === 'USD'
-                                    ? 'bg-blue-600 text-white shadow-md'
+                                    ? 'bg-neutral-800 text-white shadow-md'
                                     : 'text-white/60 hover:text-white'
                             }`}
                         >
@@ -225,7 +225,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                     <div className="bg-white/[0.02] p-4 rounded-xl border border-white/5">
                         <div className="flex justify-between items-center text-sm font-semibold mb-2">
                             <span className="text-white/80">Team Size (Analyst / Operations FTEs)</span>
-                            <span className="font-mono text-blue-400 font-bold">{teamSize} Engineers / Analysts</span>
+                            <span className="font-mono text-neutral-200 font-bold">{teamSize} Engineers / Analysts</span>
                         </div>
                         <input
                             type="range"
@@ -237,7 +237,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                                 setTeamSize(Number(e.target.value));
                                 onTelemetry?.('roi_slider_team_size', { value: Number(e.target.value) });
                             }}
-                            className="w-full accent-blue-500 h-2 bg-white/10 rounded-lg cursor-pointer"
+                            className="w-full accent-white h-2 bg-white/10 rounded-lg cursor-pointer"
                         />
                         <div className="flex justify-between text-[10px] font-mono text-white/40 mt-1">
                             <span>2 FTEs (Lean Squad)</span>
@@ -249,7 +249,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                     <div className="bg-white/[0.02] p-4 rounded-xl border border-white/5">
                         <div className="flex justify-between items-center text-sm font-semibold mb-2">
                             <span className="text-white/80">Fully Loaded Hourly Labor Cost</span>
-                            <span className="font-mono text-blue-400 font-bold">
+                            <span className="font-mono text-neutral-200 font-bold">
                                 {currency === 'INR' ? `₹${hourlyRate.toLocaleString()}/hr` : `$${hourlyRate}/hr`}
                             </span>
                         </div>
@@ -263,7 +263,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                                 setHourlyRate(Number(e.target.value));
                                 onTelemetry?.('roi_slider_rate', { value: Number(e.target.value) });
                             }}
-                            className="w-full accent-blue-500 h-2 bg-white/10 rounded-lg cursor-pointer"
+                            className="w-full accent-white h-2 bg-white/10 rounded-lg cursor-pointer"
                         />
                         <div className="flex justify-between text-[10px] font-mono text-white/40 mt-1">
                             <span>{currency === 'INR' ? '₹600/hr (Mid-tier)' : '$25/hr (Offshore)'}</span>
@@ -275,7 +275,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                     <div className="bg-white/[0.02] p-4 rounded-xl border border-white/5">
                         <div className="flex justify-between items-center text-sm font-semibold mb-2">
                             <span className="text-white/80">Manual / Repetitive Hours per Week per FTE</span>
-                            <span className="font-mono text-blue-400 font-bold">{repetitiveHoursPerWeek} hrs / week</span>
+                            <span className="font-mono text-neutral-200 font-bold">{repetitiveHoursPerWeek} hrs / week</span>
                         </div>
                         <input
                             type="range"
@@ -287,7 +287,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                                 setRepetitiveHoursPerWeek(Number(e.target.value));
                                 onTelemetry?.('roi_slider_hours', { value: Number(e.target.value) });
                             }}
-                            className="w-full accent-blue-500 h-2 bg-white/10 rounded-lg cursor-pointer"
+                            className="w-full accent-white h-2 bg-white/10 rounded-lg cursor-pointer"
                         />
                         <div className="flex justify-between text-[10px] font-mono text-white/40 mt-1">
                             <span>5 hrs (Low manual drag)</span>
@@ -299,7 +299,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                     <div className="bg-white/[0.02] p-4 rounded-xl border border-white/5">
                         <div className="flex justify-between items-center text-sm font-semibold mb-2">
                             <span className="text-white/80">Target Workflow Automation Rate</span>
-                            <span className="font-mono text-emerald-400 font-bold">{automationEfficiency}% Automated</span>
+                            <span className="font-mono text-neutral-200 font-bold">{automationEfficiency}% Automated</span>
                         </div>
                         <input
                             type="range"
@@ -311,7 +311,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                                 setAutomationEfficiency(Number(e.target.value));
                                 onTelemetry?.('roi_slider_efficiency', { value: Number(e.target.value) });
                             }}
-                            className="w-full accent-emerald-500 h-2 bg-white/10 rounded-lg cursor-pointer"
+                            className="w-full accent-white h-2 bg-white/10 rounded-lg cursor-pointer"
                         />
                         <div className="flex justify-between text-[10px] font-mono text-white/40 mt-1">
                             <span>50% (Assisted Copilot)</span>
@@ -323,8 +323,8 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                 {/* KPI Breakdown Column */}
                 <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
                     {/* Primary Highlight Card: Annual Savings */}
-                    <div className="bg-gradient-to-br from-blue-950/40 via-blue-900/10 to-black p-6 rounded-2xl border border-blue-500/40 shadow-xl relative overflow-hidden">
-                        <div className="text-xs font-mono text-blue-300 uppercase tracking-wider mb-1">
+                    <div className="bg-gradient-to-br from-neutral-950/40 via-neutral-900/10 to-black p-6 rounded-2xl border border-white/40 shadow-xl relative overflow-hidden">
+                        <div className="text-xs font-mono text-neutral-200 uppercase tracking-wider mb-1">
                             Net Annual Cost Reclaimed
                         </div>
                         <div className="text-3xl md:text-5xl font-black tracking-tight text-white mb-2">
@@ -337,13 +337,13 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                         <div className="grid grid-cols-2 gap-3 pt-3 border-t border-white/10">
                             <div>
                                 <div className="text-[10px] font-mono text-white/40">Payback Breakeven</div>
-                                <div className="text-lg font-bold text-emerald-400 font-mono">
+                                <div className="text-lg font-bold text-neutral-200 font-mono">
                                     {stats.paybackMonths} Months
                                 </div>
                             </div>
                             <div>
                                 <div className="text-[10px] font-mono text-white/40">3-Year Net ROI</div>
-                                <div className="text-lg font-bold text-cyan-400 font-mono">
+                                <div className="text-lg font-bold text-neutral-200 font-mono">
                                     +{stats.threeYearRoiPercent}%
                                 </div>
                             </div>
@@ -354,7 +354,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                     <div className="grid grid-cols-2 gap-3">
                         <div className="bg-white/[0.02] border border-white/10 p-4 rounded-xl">
                             <div className="flex items-center gap-1.5 text-xs text-white/50 mb-1">
-                                <Clock className="h-3.5 w-3.5 text-blue-400" />
+                                <Clock className="h-3.5 w-3.5 text-neutral-200" />
                                 <span>Hours Reclaimed</span>
                             </div>
                             <div className="text-xl font-bold font-mono text-white">
@@ -365,7 +365,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
 
                         <div className="bg-white/[0.02] border border-white/10 p-4 rounded-xl">
                             <div className="flex items-center gap-1.5 text-xs text-white/50 mb-1">
-                                <TrendingUp className="h-3.5 w-3.5 text-emerald-400" />
+                                <TrendingUp className="h-3.5 w-3.5 text-neutral-200" />
                                 <span>Throughput Speed</span>
                             </div>
                             <div className="text-xl font-bold font-mono text-white">
@@ -378,7 +378,7 @@ export const InteractiveRoiCalculator: React.FC<RoiCalculatorProps> = ({
                     {/* Export Action */}
                     <button
                         onClick={handleDownloadSummary}
-                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs tracking-wide transition-all shadow-lg shadow-blue-600/25 active:scale-95"
+                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-neutral-800 hover:bg-white text-white font-semibold text-xs tracking-wide transition-all shadow-lg shadow-neutral-800/25 active:scale-95"
                     >
                         <Download className="h-4 w-4" />
                         Export Financial Audit Brief (.txt)

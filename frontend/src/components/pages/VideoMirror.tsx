@@ -10,7 +10,6 @@ import {
     FileText, 
     ChevronDown, 
     ChevronUp, 
-    Sparkles, 
     Building2, 
     Calendar,
     Play,
@@ -228,7 +227,7 @@ export default function VideoMirror() {
     };
 
     return (
-        <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
                 <title>{activeVideo.title} | Elesium Video Vault</title>
                 <meta name="description" content={activeVideo.executiveSummary} />
@@ -248,18 +247,18 @@ export default function VideoMirror() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Global Breadcrumb & Top Bar */}
-                <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 dark:border-white/10 pb-4 text-xs font-mono">
-                    <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-neutral-200 dark:border-white/10 pb-4 text-xs font-mono">
+                    <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
                         <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
                         <span>/</span>
                         <Link to="/videos/" className="hover:text-black dark:hover:text-white transition-colors">Video Vault</Link>
                         <span>/</span>
-                        <span className="text-gray-900 dark:text-white font-medium truncate max-w-xs sm:max-w-md">{activeVideo.slug}</span>
+                        <span className="text-black dark:text-white font-medium truncate max-w-xs sm:max-w-md">{activeVideo.slug}</span>
                     </div>
 
                     <div className="flex items-center gap-3">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 text-xs font-mono tracking-wider uppercase">
-                            <Sparkles className="w-3.5 h-3.5" />
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 text-xs font-mono tracking-wider uppercase">
+                            <Film className="w-3.5 h-3.5" />
                             {videoMasterclasses.length} Production Breakdowns
                         </span>
                     </div>
@@ -268,37 +267,37 @@ export default function VideoMirror() {
                 {/* ACTIVE VIDEO THEATER SECTION */}
                 <section className="mb-16">
                     <div className="mb-6">
-                        <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 dark:text-gray-400 font-mono mb-3">
-                            <span className="flex items-center gap-1 font-semibold px-2.5 py-1 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white">
+                        <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-3">
+                            <span className="flex items-center gap-1 font-semibold px-2.5 py-1 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
                                 <Building2 className="w-3.5 h-3.5" />
                                 {activeVideo.industry}
                             </span>
-                            <span className="flex items-center gap-1 font-semibold px-2.5 py-1 rounded-lg bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white">
+                            <span className="flex items-center gap-1 font-semibold px-2.5 py-1 rounded-lg bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-black dark:text-white">
                                 <Layers className="w-3.5 h-3.5" />
                                 {activeVideo.category}
                             </span>
-                            <span className="flex items-center gap-1 text-gray-600 dark:text-gray-300">
-                                <Clock className="w-3.5 h-3.5 text-gray-400" />
+                            <span className="flex items-center gap-1 text-neutral-600 dark:text-neutral-400">
+                                <Clock className="w-3.5 h-3.5 text-neutral-400" />
                                 {activeVideo.duration} Runtime
                             </span>
                             <span>•</span>
-                            <span className="flex items-center gap-1 text-gray-400">
+                            <span className="flex items-center gap-1 text-neutral-500">
                                 <Calendar className="w-3.5 h-3.5" />
                                 Updated October 2026
                             </span>
                         </div>
 
-                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-950 dark:text-white mb-4 leading-snug max-w-5xl">
+                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-black dark:text-white mb-4 leading-snug max-w-5xl">
                             {activeVideo.title}
                         </h1>
 
-                        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl">
+                        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-4xl">
                             {activeVideo.executiveSummary}
                         </p>
                     </div>
 
                     {/* Cinema Player Container */}
-                    <div className="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 bg-black shadow-2xl mb-8">
+                    <div className="relative rounded-xl overflow-hidden border border-neutral-200 dark:border-white/10 bg-black mb-8">
                         <div className="aspect-video w-full relative">
                             <iframe
                                 className="w-full h-full"
@@ -310,10 +309,10 @@ export default function VideoMirror() {
                         </div>
 
                         {/* Top Overlay Badge on Video */}
-                        <div className="px-6 py-3 bg-gray-900/90 dark:bg-black/90 border-t border-gray-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+                        <div className="px-6 py-3 bg-neutral-950 dark:bg-black border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
                             <div className="flex items-center gap-2">
-                                <span className="inline-block w-2 h-2 rounded-full bg-emerald-500" />
-                                <span className="text-gray-300">
+                                <span className="inline-block w-1.5 h-1.5 rounded-full bg-white" />
+                                <span className="text-neutral-300">
                                     {activeVideo.videoType === 'short' 
                                         ? '30s Vertical Architecture Breakdown | Sovereign AI Production' 
                                         : 'Deterministic Sovereign VPC Engineering Masterclass'}
@@ -322,7 +321,7 @@ export default function VideoMirror() {
 
                             <button
                                 onClick={() => handleOpenPlayModal(activeVideo)}
-                                className="inline-flex items-center gap-1.5 text-white hover:underline font-semibold"
+                                className="inline-flex items-center gap-1.5 text-white hover:underline font-semibold active:scale-[0.97] transition-transform"
                             >
                                 <Play className="w-3.5 h-3.5" />
                                 Launch Interactive Chapter Player
@@ -335,15 +334,15 @@ export default function VideoMirror() {
                         {activeVideo.roiMetrics.map((m, idx) => (
                             <div
                                 key={idx}
-                                className="p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#0A0A0A] relative overflow-hidden group hover:border-black dark:hover:border-white/30 transition-all duration-300"
+                                className="p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 relative overflow-hidden group hover:border-black dark:hover:border-white/30 transition-all duration-300"
                             >
-                                <div className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-1 font-mono text-gray-900 dark:text-white">
+                                <div className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-1 font-mono text-black dark:text-white">
                                     {m.value}
                                 </div>
-                                <div className="text-sm font-semibold text-gray-900 dark:text-white mb-0.5">
+                                <div className="text-sm font-semibold text-black dark:text-white mb-0.5">
                                     {m.label}
                                 </div>
-                                <div className="text-xs text-gray-500 dark:text-gray-400 font-mono">
+                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono">
                                     {m.detail}
                                 </div>
                             </div>
@@ -351,15 +350,15 @@ export default function VideoMirror() {
                     </div>
 
                     {/* Interactive Workspace (Tabs: Architecture, Moments, Transcript) */}
-                    <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/60 dark:bg-[#0A0A0A] p-6 lg:p-8 mb-12">
+                    <div className="rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-6 lg:p-8 mb-12">
                         {/* Tabs Navigation Header */}
-                        <div className="flex border-b border-gray-200 dark:border-white/10 pb-4 mb-6 gap-6 overflow-x-auto">
+                        <div className="flex border-b border-neutral-200 dark:border-white/10 pb-4 mb-6 gap-6 overflow-x-auto">
                             <button
                                 onClick={() => setActiveTab('architecture')}
                                 className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative shrink-0 ${
                                     activeTab === 'architecture'
-                                        ? 'text-gray-950 dark:text-white'
-                                        : 'text-gray-400 hover:text-black dark:hover:text-white'
+                                        ? 'text-black dark:text-white'
+                                        : 'text-neutral-500 hover:text-black dark:hover:text-white'
                                 }`}
                             >
                                 <Cpu className="w-4 h-4" />
@@ -373,8 +372,8 @@ export default function VideoMirror() {
                                 onClick={() => setActiveTab('moments')}
                                 className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative shrink-0 ${
                                     activeTab === 'moments'
-                                        ? 'text-gray-950 dark:text-white'
-                                        : 'text-gray-400 hover:text-black dark:hover:text-white'
+                                        ? 'text-black dark:text-white'
+                                        : 'text-neutral-500 hover:text-black dark:hover:text-white'
                                 }`}
                             >
                                 <Clock className="w-4 h-4" />
@@ -388,8 +387,8 @@ export default function VideoMirror() {
                                 onClick={() => setActiveTab('transcript')}
                                 className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative shrink-0 ${
                                     activeTab === 'transcript'
-                                        ? 'text-gray-950 dark:text-white'
-                                        : 'text-gray-400 hover:text-black dark:hover:text-white'
+                                        ? 'text-black dark:text-white'
+                                        : 'text-neutral-500 hover:text-black dark:hover:text-white'
                                 }`}
                             >
                                 <FileText className="w-4 h-4" />
@@ -406,32 +405,32 @@ export default function VideoMirror() {
                                 {activeVideo.architectureStages.map((stage, idx) => (
                                     <div
                                         key={idx}
-                                        className="p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#0c0c0c] flex flex-col justify-between hover:border-gray-400 dark:hover:border-white/20 transition-all duration-300"
+                                        className="p-6 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between hover:border-black dark:hover:border-white/30 transition-all duration-300"
                                     >
                                         <div>
                                             <div className="flex items-center justify-between mb-3">
-                                                <span className="text-xs font-mono font-bold text-gray-900 dark:text-white uppercase tracking-wider">
+                                                <span className="text-xs font-mono font-bold text-black dark:text-white uppercase tracking-wider">
                                                     {stage.stage}
                                                 </span>
-                                                <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                                                <ShieldCheck className="w-4 h-4 text-black dark:text-white" />
                                             </div>
-                                            <h3 className="text-lg font-bold text-gray-950 dark:text-white mb-4">
+                                            <h3 className="text-lg font-bold text-black dark:text-white mb-4">
                                                 {stage.name}
                                             </h3>
                                             <ul className="space-y-2.5 mb-6">
                                                 {stage.bullets.map((b, bIdx) => (
-                                                    <li key={bIdx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                                                        <span className="text-emerald-500 font-bold mt-0.5">•</span>
+                                                    <li key={bIdx} className="flex items-start gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+                                                        <span className="text-black dark:text-white font-bold mt-0.5">•</span>
                                                         <span>{b}</span>
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
-                                        <div className="pt-4 border-t border-gray-200 dark:border-white/10">
-                                            <div className="text-[11px] font-mono text-gray-400 uppercase tracking-wider mb-1">
+                                        <div className="pt-4 border-t border-neutral-200 dark:border-white/10">
+                                            <div className="text-[11px] font-mono text-neutral-500 uppercase tracking-wider mb-1">
                                                 Engineered Stack
                                             </div>
-                                            <div className="text-xs font-mono text-gray-900 dark:text-white font-medium">
+                                            <div className="text-xs font-mono text-black dark:text-white font-medium">
                                                 {stage.techStack}
                                             </div>
                                         </div>
@@ -446,24 +445,24 @@ export default function VideoMirror() {
                                 {activeVideo.keyMoments.map((km, idx) => (
                                     <div
                                         key={idx}
-                                        className="p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#0c0c0c] hover:border-gray-400 dark:hover:border-white/20 transition-all flex flex-col sm:flex-row items-start gap-4"
+                                        className="p-5 rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:border-black dark:hover:border-white/30 transition-all flex flex-col sm:flex-row items-start gap-4"
                                     >
-                                        <div className="px-3 py-1.5 rounded-lg bg-gray-200 dark:bg-white/10 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white font-mono text-xs font-bold shrink-0">
+                                        <div className="px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-black dark:text-white font-mono text-xs font-bold shrink-0">
                                             {km.time}
                                         </div>
                                         <div className="flex-1">
-                                            <h4 className="text-base font-semibold text-gray-950 dark:text-white mb-1">
+                                            <h4 className="text-base font-semibold text-black dark:text-white mb-1">
                                                 {km.title}
                                             </h4>
-                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+                                            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
                                                 {km.description}
                                             </p>
                                             
                                             {/* Extra details from timecodes if available */}
                                             {activeVideo.timecodes && activeVideo.timecodes[idx] && (
-                                                <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-gray-200 dark:border-white/10 text-xs font-mono">
-                                                    <span className="text-gray-400">On-Screen Caption:</span>
-                                                    <span className="text-gray-900 dark:text-white bg-gray-200 dark:bg-white/10 px-2 py-0.5 rounded border border-gray-300 dark:border-white/10 font-bold">
+                                                <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-neutral-200 dark:border-white/10 text-xs font-mono">
+                                                    <span className="text-neutral-500">On-Screen Caption:</span>
+                                                    <span className="text-black dark:text-white bg-neutral-100 dark:bg-neutral-900 px-2 py-0.5 rounded border border-neutral-200 dark:border-white/10 font-bold">
                                                         {activeVideo.timecodes[idx].caption}
                                                     </span>
                                                 </div>
@@ -478,22 +477,22 @@ export default function VideoMirror() {
                         {activeTab === 'transcript' && (
                             <div>
                                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                                    <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">
+                                    <span className="text-xs text-neutral-600 dark:text-neutral-400 font-mono">
                                         Word-for-word transcript indexed by Google Video Search algorithm
                                     </span>
                                     
                                     <div className="flex items-center gap-3">
                                         <button
                                             onClick={() => handleCopyTranscript(activeVideo.fullTranscript)}
-                                            className="text-xs font-mono text-gray-900 dark:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 transition-all"
+                                            className="text-xs font-mono text-black dark:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900 active:scale-[0.97] transition-all"
                                         >
-                                            {hasCopiedTranscript ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+                                            {hasCopiedTranscript ? <Check className="w-3.5 h-3.5 text-black dark:text-white" /> : <Copy className="w-3.5 h-3.5" />}
                                             {hasCopiedTranscript ? 'Copied Transcript' : 'Copy Full Transcript'}
                                         </button>
 
                                         <button
                                             onClick={() => setTranscriptExpanded(!transcriptExpanded)}
-                                            className="text-xs font-mono text-gray-400 hover:text-black dark:hover:text-white flex items-center gap-1"
+                                            className="text-xs font-mono text-neutral-500 hover:text-black dark:hover:text-white flex items-center gap-1"
                                         >
                                             {transcriptExpanded ? 'Collapse' : 'Expand All'}
                                             {transcriptExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -501,46 +500,56 @@ export default function VideoMirror() {
                                     </div>
                                 </div>
 
-                                {transcriptExpanded && (
-                                    <div className="p-6 rounded-2xl bg-gray-50 dark:bg-[#0c0c0c] border border-gray-200 dark:border-white/10 font-mono text-xs text-gray-700 dark:text-gray-300 leading-relaxed max-h-[500px] overflow-y-auto whitespace-pre-wrap select-text">
-                                        {activeVideo.fullTranscript}
-                                    </div>
-                                )}
+                                <AnimatePresence initial={false}>
+                                    {transcriptExpanded && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                            className="accordion-panel overflow-hidden"
+                                        >
+                                            <div className="p-6 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 font-mono text-xs text-neutral-700 dark:text-neutral-300 leading-relaxed max-h-[500px] overflow-y-auto whitespace-pre-wrap select-text">
+                                                {activeVideo.fullTranscript}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         )}
                     </div>
                 </section>
 
                 {/* INTERACTIVE VIDEO GALLERY EXPLORER */}
-                <section className="mb-16 pt-8 border-t border-gray-200 dark:border-white/10">
+                <section className="mb-16 pt-8 border-t border-neutral-200 dark:border-white/10">
                     <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
                         <div>
-                            <div className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400 uppercase tracking-widest font-semibold mb-2">
+                            <div className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase tracking-widest font-semibold mb-2">
                                 <Film className="w-4 h-4" />
                                 Comprehensive Video Asset Vault
                             </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white tracking-tight">
+                            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white tracking-tight">
                                 Explore All {videoMasterclasses.length} Architecture Breakdowns & Masterclasses
                             </h2>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 max-w-2xl">
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1 max-w-2xl">
                                 Filter across 30-second vertical BOFU teardowns and deep masterclasses. Every asset features Google Search Central compliant VideoObject JSON-LD.
                             </p>
                         </div>
 
                         {/* Search Input */}
                         <div className="relative w-full md:w-80">
-                            <Search className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                            <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                             <input
                                 type="text"
                                 placeholder="Search keyword, industry, topic..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-gray-100 dark:bg-white/[0.04] border border-gray-200 dark:border-white/10 text-xs text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-black dark:focus:border-white/40 transition-colors"
+                                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white/40 transition-colors"
                             />
                             {searchQuery && (
                                 <button
                                     onClick={() => setSearchQuery('')}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black dark:hover:text-white"
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-black dark:hover:text-white"
                                 >
                                     <X className="w-3.5 h-3.5" />
                                 </button>
@@ -554,10 +563,10 @@ export default function VideoMirror() {
                         <div className="flex flex-wrap items-center gap-2">
                             <button
                                 onClick={() => setActiveFilter('all')}
-                                className={`text-xs px-4 py-2 rounded-xl font-medium transition-all ${
+                                className={`text-xs px-4 py-2 rounded-lg font-medium transition-all active:scale-[0.97] ${
                                     activeFilter === 'all'
-                                        ? 'bg-black text-white dark:bg-white dark:text-black font-semibold shadow-sm'
-                                        : 'bg-gray-100 dark:bg-white/[0.03] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white border border-gray-200 dark:border-white/5'
+                                        ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
+                                        : 'bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-neutral-200 dark:border-white/10'
                                 }`}
                             >
                                 All Video Assets ({videoMasterclasses.length})
@@ -565,10 +574,10 @@ export default function VideoMirror() {
 
                             <button
                                 onClick={() => setActiveFilter('shorts')}
-                                className={`text-xs px-4 py-2 rounded-xl font-medium transition-all flex items-center gap-1.5 ${
+                                className={`text-xs px-4 py-2 rounded-lg font-medium transition-all active:scale-[0.97] flex items-center gap-1.5 ${
                                     activeFilter === 'shorts'
-                                        ? 'bg-black text-white dark:bg-white dark:text-black font-semibold shadow-sm'
-                                        : 'bg-gray-100 dark:bg-white/[0.03] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white border border-gray-200 dark:border-white/5'
+                                        ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
+                                        : 'bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-neutral-200 dark:border-white/10'
                                 }`}
                             >
                                 <Zap className="w-3.5 h-3.5" />
@@ -577,10 +586,10 @@ export default function VideoMirror() {
 
                             <button
                                 onClick={() => setActiveFilter('masterclasses')}
-                                className={`text-xs px-4 py-2 rounded-xl font-medium transition-all flex items-center gap-1.5 ${
+                                className={`text-xs px-4 py-2 rounded-lg font-medium transition-all active:scale-[0.97] flex items-center gap-1.5 ${
                                     activeFilter === 'masterclasses'
-                                        ? 'bg-black text-white dark:bg-white dark:text-black font-semibold shadow-sm'
-                                        : 'bg-gray-100 dark:bg-white/[0.03] text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white border border-gray-200 dark:border-white/5'
+                                        ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
+                                        : 'bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white border border-neutral-200 dark:border-white/10'
                                 }`}
                             >
                                 <Film className="w-3.5 h-3.5" />
@@ -589,8 +598,8 @@ export default function VideoMirror() {
                         </div>
 
                         {/* Industry Chips */}
-                        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-gray-200 dark:border-white/5">
-                            <span className="text-[11px] font-mono text-gray-500 uppercase tracking-wider mr-1">
+                        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-neutral-200 dark:border-white/10">
+                            <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-wider mr-1">
                                 Sector:
                             </span>
                             {allIndustries.map((ind) => (
@@ -600,7 +609,7 @@ export default function VideoMirror() {
                                     className={`text-[11px] font-mono px-2.5 py-1 rounded-md transition-all ${
                                         selectedIndustry === ind
                                             ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
-                                            : 'bg-transparent text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white'
+                                            : 'bg-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white'
                                     }`}
                                 >
                                     {ind === 'all' ? 'All Sectors' : ind}
@@ -611,11 +620,11 @@ export default function VideoMirror() {
 
                     {/* Video Gallery Grid */}
                     {filteredVideos.length === 0 ? (
-                        <div className="p-12 text-center rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/[0.01]">
-                            <p className="text-gray-500 dark:text-gray-400 text-sm">No videos match your current search query or filter.</p>
+                        <div className="p-12 text-center rounded-xl border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
+                            <p className="text-neutral-600 dark:text-neutral-400 text-sm">No videos match your current search query or filter.</p>
                             <button
                                 onClick={() => { setSearchQuery(''); setActiveFilter('all'); setSelectedIndustry('all'); }}
-                                className="mt-4 text-xs font-mono text-gray-900 dark:text-white underline"
+                                className="mt-4 text-xs font-mono text-black dark:text-white underline"
                             >
                                 Reset all filters
                             </button>
@@ -629,17 +638,17 @@ export default function VideoMirror() {
                                 return (
                                     <div
                                         key={video.id}
-                                        className={`rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden group ${
+                                        className={`rounded-xl border transition-all duration-300 flex flex-col justify-between overflow-hidden group ${
                                             isCurrentActive
-                                                ? 'border-black dark:border-white/40 bg-gray-50 dark:bg-[#0A0A0A] shadow-md'
-                                                : 'border-gray-200 dark:border-white/10 bg-gray-50/70 dark:bg-[#0A0A0A] hover:border-black dark:hover:border-white/30'
+                                                ? 'border-black dark:border-white bg-neutral-50 dark:bg-neutral-950'
+                                                : 'border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 hover:border-black dark:hover:border-white/30'
                                         }`}
                                     >
                                         <div>
                                             {/* Thumbnail Mockup */}
-                                            <div className="relative aspect-video w-full overflow-hidden bg-black/60">
+                                            <div className="relative aspect-video w-full overflow-hidden bg-black">
                                                 <img
-                                                    src={video.heroImage || "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"}
+                                                    src={video.heroImage || "https://elesium.online/og-image.png"}
                                                     alt={video.title}
                                                     width="800"
                                                     height="450"
@@ -650,13 +659,13 @@ export default function VideoMirror() {
 
                                                 {/* Top Badges */}
                                                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                                                    <span className="inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2 py-0.5 rounded backdrop-blur-md bg-black/70 text-white border border-white/20">
-                                                        {isShort ? <Zap className="w-2.5 h-2.5 text-emerald-400" /> : <Film className="w-2.5 h-2.5" />}
+                                                    <span className="inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-black/80 text-white border border-white/20">
+                                                        {isShort ? <Zap className="w-2.5 h-2.5 text-white" /> : <Film className="w-2.5 h-2.5" />}
                                                         {isShort ? '30s Breakdown' : 'Deep Masterclass'}
                                                     </span>
 
-                                                    <span className="inline-flex items-center gap-1 text-[10px] font-mono bg-black/70 text-gray-200 px-2 py-0.5 rounded backdrop-blur-md border border-white/10">
-                                                        <Clock className="w-2.5 h-2.5 text-gray-300" />
+                                                    <span className="inline-flex items-center gap-1 text-[10px] font-mono bg-black/80 text-neutral-200 px-2 py-0.5 rounded border border-white/10">
+                                                        <Clock className="w-2.5 h-2.5 text-neutral-300" />
                                                         {video.duration}
                                                     </span>
                                                 </div>
@@ -667,14 +676,14 @@ export default function VideoMirror() {
                                                     className="absolute inset-0 flex items-center justify-center group/btn cursor-pointer"
                                                     aria-label={`Play ${video.title}`}
                                                 >
-                                                    <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover/btn:scale-110 transition-all duration-200">
+                                                    <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center group-hover/btn:scale-110 transition-all duration-200">
                                                         <Play className="w-5 h-5 ml-0.5 fill-current" />
                                                     </div>
                                                 </button>
 
                                                 {/* Bottom Left Industry Tag */}
                                                 <div className="absolute bottom-2.5 left-3 pointer-events-none">
-                                                    <span className="text-[11px] font-mono text-gray-300 bg-black/60 px-2 py-0.5 rounded backdrop-blur-md border border-white/10">
+                                                    <span className="text-[11px] font-mono text-neutral-300 bg-black/70 px-2 py-0.5 rounded border border-white/10">
                                                         {video.industry}
                                                     </span>
                                                 </div>
@@ -682,27 +691,27 @@ export default function VideoMirror() {
 
                                             {/* Card Content */}
                                             <div className="p-5">
-                                                <h3 className="text-base font-bold text-gray-950 dark:text-white mb-2 leading-snug line-clamp-2 group-hover:text-black dark:group-hover:text-white transition-colors">
+                                                <h3 className="text-base font-bold text-black dark:text-white mb-2 leading-snug line-clamp-2 transition-colors">
                                                     {video.title}
                                                 </h3>
 
                                                 {video.keyBenefit && (
-                                                    <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-2 font-medium">
-                                                        ✦ {video.keyBenefit}
+                                                    <div className="text-xs font-mono text-black dark:text-white mb-2 font-medium">
+                                                        {video.keyBenefit}
                                                     </div>
                                                 )}
 
-                                                <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2 leading-relaxed mb-4">
+                                                <p className="text-xs text-neutral-600 dark:text-neutral-400 line-clamp-2 leading-relaxed mb-4">
                                                     {video.executiveSummary}
                                                 </p>
 
                                                 {/* Primary ROI Metric Highlight Pill */}
                                                 {video.roiMetrics && video.roiMetrics[0] && (
-                                                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 mb-4">
-                                                        <span className="text-xs font-bold font-mono text-gray-900 dark:text-white">
+                                                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/10 mb-4">
+                                                        <span className="text-xs font-bold font-mono text-black dark:text-white">
                                                             {video.roiMetrics[0].value}
                                                         </span>
-                                                        <span className="text-[11px] text-gray-500 dark:text-gray-400 font-mono">
+                                                        <span className="text-[11px] text-neutral-600 dark:text-neutral-400 font-mono">
                                                             {video.roiMetrics[0].label}
                                                         </span>
                                                     </div>
@@ -711,17 +720,17 @@ export default function VideoMirror() {
                                         </div>
 
                                         {/* Card Actions */}
-                                        <div className="p-5 pt-0 border-t border-gray-100 dark:border-white/5 mt-auto flex items-center justify-between gap-3 text-xs">
+                                        <div className="p-5 pt-0 border-t border-neutral-200 dark:border-white/10 mt-auto flex items-center justify-between gap-3 text-xs">
                                             <button
                                                 onClick={() => handleOpenPlayModal(video)}
-                                                className="flex-1 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-medium transition-all text-center"
+                                                className="flex-1 py-2 rounded-lg bg-white hover:bg-neutral-100 dark:bg-black dark:hover:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 font-medium active:scale-[0.97] transition-all text-center"
                                             >
                                                 Quick Preview
                                             </button>
 
                                             <Link
                                                 to={`/videos/${video.slug}/`}
-                                                className="flex-1 py-2 rounded-xl bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold transition-all text-center flex items-center justify-center gap-1"
+                                                className="flex-1 py-2 rounded-lg bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold active:scale-[0.97] transition-all text-center flex items-center justify-center gap-1"
                                             >
                                                 Deep Dive
                                                 <ArrowRight className="w-3.5 h-3.5" />
@@ -735,33 +744,30 @@ export default function VideoMirror() {
                 </section>
 
                 {/* BOTTOM HIGH-CONVERTING EXECUTIVE CTA */}
-                <div className="p-8 lg:p-12 rounded-3xl border border-gray-200 dark:border-white/10 bg-black text-white dark:bg-[#0A0A0A] shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-16">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent pointer-events-none" />
+                <div className="p-8 lg:p-12 rounded-xl border border-neutral-200 dark:border-white/10 bg-black text-white dark:bg-neutral-950 relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-16">
                     <div className="relative z-10 max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-mono tracking-wider uppercase mb-3">
-                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/10 text-white text-xs font-mono tracking-wider uppercase mb-3">
                             Deploy Production AI Systems
                         </div>
                         <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3">
                             Ready to Deploy Sovereign Multi-Agent Infrastructure?
                         </h2>
-                        <p className="text-sm sm:text-base text-gray-300 dark:text-gray-400 leading-relaxed">
-                            We don't sell generic advice. We architect and deploy deterministic agentic systems in private VPCs delivering audited 3x-5x cash-flow ROI in 90 days.
+                        <p className="text-sm sm:text-base text-neutral-300 dark:text-neutral-400 leading-relaxed">
+                            We architect and deploy deterministic agentic systems in private VPCs delivering audited 3x-5x cash-flow ROI in 90 days.
                         </p>
                     </div>
 
                     <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3.5 shrink-0 w-full md:w-auto">
                         <button
                             onClick={openWhatsApp}
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-white hover:bg-gray-100 text-black font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-md"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-11 px-6 rounded-lg bg-white hover:bg-neutral-200 active:scale-[0.97] text-black font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200"
                         >
-                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
                             <span>Chat on WhatsApp with Lead Architect</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
                         <Link
                             to="/waitlist/"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 h-11 px-6 rounded-lg border border-white/20 hover:bg-white/10 active:scale-[0.97] text-white font-semibold text-xs sm:text-sm transition-all"
                         >
                             <span>ele-in SaaS Waitlist</span>
                             <span>&rarr;</span>
@@ -786,32 +792,33 @@ export default function VideoMirror() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
                             onClick={handleClosePlayModal}
                             className="absolute inset-0 bg-black/85 backdrop-blur-md"
                         />
 
                         {/* Modal Container */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            initial={{ opacity: 0, scale: 0.97, y: 12 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                            transition={{ duration: 0.25 }}
-                            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0A0A0A] text-gray-900 dark:text-white shadow-2xl flex flex-col z-10"
+                            exit={{ opacity: 0, scale: 0.97, y: 12 }}
+                            transition={{ type: "spring", stiffness: 360, damping: 28 }}
+                            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-xl border border-neutral-200 dark:border-white/10 bg-white dark:bg-black text-black dark:text-white flex flex-col z-10"
                         >
                             {/* Modal Header */}
-                            <div className="p-4 sm:p-5 border-b border-gray-200 dark:border-white/10 flex items-center justify-between gap-4">
+                            <div className="p-4 sm:p-5 border-b border-neutral-200 dark:border-white/10 flex items-center justify-between gap-4">
                                 <div className="flex items-center gap-3 truncate">
-                                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-white/10 shrink-0">
+                                    <span className="px-2.5 py-0.5 rounded-lg text-[10px] font-mono uppercase tracking-wider bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-white/10 shrink-0">
                                         {modalVideo.duration} • {modalVideo.category}
                                     </span>
-                                    <h3 className="text-sm sm:text-base font-bold text-gray-900 dark:text-white truncate">
+                                    <h3 className="text-sm sm:text-base font-bold text-black dark:text-white truncate">
                                         {modalVideo.title}
                                     </h3>
                                 </div>
 
                                 <button
                                     onClick={handleClosePlayModal}
-                                    className="p-1.5 rounded-full text-gray-400 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors shrink-0"
+                                    className="p-1.5 rounded-lg text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors shrink-0"
                                     aria-label="Close modal"
                                 >
                                     <X className="w-5 h-5" />
@@ -830,9 +837,9 @@ export default function VideoMirror() {
                             </div>
 
                             {/* Modal Chapters Navigation */}
-                            <div className="p-4 sm:p-6 bg-gray-50/70 dark:bg-white/[0.02] border-b border-gray-200 dark:border-white/10">
-                                <div className="text-xs font-mono text-gray-500 dark:text-gray-400 mb-3 flex items-center gap-2">
-                                    <Clock className="w-3.5 h-3.5 text-emerald-500" />
+                            <div className="p-4 sm:p-6 bg-neutral-50 dark:bg-neutral-950 border-b border-neutral-200 dark:border-white/10">
+                                <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-3 flex items-center gap-2">
+                                    <Clock className="w-3.5 h-3.5 text-black dark:text-white" />
                                     <span>Time-Stamped Chapters:</span>
                                 </div>
 
@@ -844,10 +851,10 @@ export default function VideoMirror() {
                                             className={`p-2.5 rounded-xl border text-left transition-all ${
                                                 modalActiveMoment === idx
                                                     ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white'
-                                                    : 'bg-white dark:bg-white/[0.03] border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:border-gray-400 dark:hover:border-white/30'
+                                                    : 'bg-white dark:bg-black border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:border-black dark:hover:border-white/30'
                                             }`}
                                         >
-                                            <div className={`text-[10px] font-mono font-bold mb-0.5 ${modalActiveMoment === idx ? 'text-emerald-400 dark:text-emerald-600' : 'text-emerald-600 dark:text-emerald-400'}`}>
+                                            <div className={`text-[10px] font-mono font-bold mb-0.5 ${modalActiveMoment === idx ? 'text-neutral-300 dark:text-neutral-600' : 'text-black dark:text-white'}`}>
                                                 {km.time}
                                             </div>
                                             <div className="text-xs font-medium truncate">
@@ -859,11 +866,11 @@ export default function VideoMirror() {
 
                                 {/* Active Chapter Visual & Voiceover Callout */}
                                 {modalVideo.keyMoments[modalActiveMoment] && (
-                                    <div className="mt-4 p-3.5 rounded-2xl bg-white dark:bg-white/[0.03] border border-gray-200 dark:border-white/10 text-xs">
-                                        <div className="font-semibold text-gray-900 dark:text-white mb-1">
+                                    <div className="mt-4 p-3.5 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-white/10 text-xs">
+                                        <div className="font-semibold text-black dark:text-white mb-1">
                                             {modalVideo.keyMoments[modalActiveMoment].title}
                                         </div>
-                                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-mono text-[11px]">
+                                        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed font-mono text-[11px]">
                                             "{modalVideo.keyMoments[modalActiveMoment].description}"
                                         </p>
                                     </div>
@@ -871,12 +878,12 @@ export default function VideoMirror() {
                             </div>
 
                             {/* Modal Footer Actions */}
-                            <div className="p-4 sm:p-5 bg-gray-50/50 dark:bg-white/[0.02] flex flex-wrap items-center justify-between gap-4">
+                            <div className="p-4 sm:p-5 bg-neutral-50 dark:bg-neutral-950 flex flex-wrap items-center justify-between gap-4">
                                 <button
                                     onClick={() => handleCopyTranscript(modalVideo.fullTranscript, true)}
-                                    className="text-xs font-mono text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center gap-1.5 px-3 py-2 rounded-full border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-all"
+                                    className="text-xs font-mono text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white flex items-center gap-1.5 px-3 py-2 rounded-lg border border-neutral-200 dark:border-white/10 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-900 active:scale-[0.97] transition-all"
                                 >
-                                    {modalCopied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+                                    {modalCopied ? <Check className="w-3.5 h-3.5 text-black dark:text-white" /> : <Copy className="w-3.5 h-3.5" />}
                                     <span>{modalCopied ? 'Copied Full Transcript' : 'Copy Verbatim Transcript'}</span>
                                 </button>
 
@@ -884,7 +891,7 @@ export default function VideoMirror() {
                                     <Link
                                         to={`/videos/${modalVideo.slug}/`}
                                         onClick={handleClosePlayModal}
-                                        className="text-xs font-semibold text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white flex items-center gap-1 px-3 py-2 transition-colors"
+                                        className="text-xs font-semibold text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white flex items-center gap-1 px-3 py-2 transition-colors"
                                     >
                                         <span>Open Full Dossier</span>
                                         <ArrowRight className="w-3.5 h-3.5" />
@@ -893,7 +900,7 @@ export default function VideoMirror() {
                                     <Link
                                         to={resolveVideoActionRoute(modalVideo.slug, modalVideo.industry)}
                                         onClick={handleClosePlayModal}
-                                        className="text-xs font-semibold text-white bg-black dark:text-black dark:bg-white hover:opacity-90 px-4 py-2 rounded-full transition-all shadow-sm"
+                                        className="text-xs font-semibold text-white bg-black dark:text-black dark:bg-white hover:opacity-90 active:scale-[0.97] px-4 py-2 rounded-lg transition-all"
                                     >
                                         Explore Architecture
                                     </Link>

@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { motion } from 'framer-motion'
 import emblem from '../../assets/LOGO_EMBLEM.png'
+
+const entryTransition = {
+    type: 'spring' as const,
+    stiffness: 320,
+    damping: 28,
+}
 
 export default function Gateway() {
     const [hovered, setHovered] = useState<'connector' | 'ai' | null>(null)
@@ -20,32 +27,46 @@ export default function Gateway() {
 
             <div className="grid h-full w-full grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
                 {/* Left / Top: Elesium Connector Model */}
-                <Link
-                    to="/connector/"
-                    onMouseEnter={() => setHovered('connector')}
-                    onMouseLeave={() => setHovered(null)}
-                    className={`group relative flex h-full w-full items-center justify-center px-8 transition-all duration-500 ease-out hover:bg-white/[0.025] focus:outline-none focus-visible:bg-white/[0.04] ${
-                        hovered === 'ai' ? 'opacity-35' : 'opacity-100'
-                    }`}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={entryTransition}
+                    className="h-full w-full"
                 >
-                    <span className="text-center text-xl sm:text-2xl md:text-[26px] lg:text-[32px] font-light tracking-[-0.02em] text-white/80 transition-all duration-500 ease-out group-hover:scale-[1.03] group-hover:text-white">
-                        Elesium Connector Model
-                    </span>
-                </Link>
+                    <Link
+                        to="/connector/"
+                        onMouseEnter={() => setHovered('connector')}
+                        onMouseLeave={() => setHovered(null)}
+                        className={`group relative flex h-full w-full items-center justify-center px-8 transition-all duration-300 ease-out hover:bg-white/[0.025] active:scale-[0.97] focus:outline-none focus-visible:bg-white/[0.04] ${
+                            hovered === 'ai' ? 'opacity-35' : 'opacity-100'
+                        }`}
+                    >
+                        <span className="text-center text-xl sm:text-2xl md:text-[26px] lg:text-[32px] font-light tracking-[-0.02em] text-white/80 transition-all duration-300 ease-out group-hover:scale-[1.03] group-hover:text-white">
+                            Elesium Connector Model
+                        </span>
+                    </Link>
+                </motion.div>
 
                 {/* Right / Bottom: AI & Automation Elesium */}
-                <Link
-                    to="/ai/"
-                    onMouseEnter={() => setHovered('ai')}
-                    onMouseLeave={() => setHovered(null)}
-                    className={`group relative flex h-full w-full items-center justify-center px-8 transition-all duration-500 ease-out hover:bg-white/[0.025] focus:outline-none focus-visible:bg-white/[0.04] ${
-                        hovered === 'connector' ? 'opacity-35' : 'opacity-100'
-                    }`}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={entryTransition}
+                    className="h-full w-full"
                 >
-                    <span className="text-center text-xl sm:text-2xl md:text-[26px] lg:text-[32px] font-light tracking-[-0.02em] text-white/80 transition-all duration-500 ease-out group-hover:scale-[1.03] group-hover:text-white">
-                        AI &amp; Automation Elesium
-                    </span>
-                </Link>
+                    <Link
+                        to="/ai/"
+                        onMouseEnter={() => setHovered('ai')}
+                        onMouseLeave={() => setHovered(null)}
+                        className={`group relative flex h-full w-full items-center justify-center px-8 transition-all duration-300 ease-out hover:bg-white/[0.025] active:scale-[0.97] focus:outline-none focus-visible:bg-white/[0.04] ${
+                            hovered === 'connector' ? 'opacity-35' : 'opacity-100'
+                        }`}
+                    >
+                        <span className="text-center text-xl sm:text-2xl md:text-[26px] lg:text-[32px] font-light tracking-[-0.02em] text-white/80 transition-all duration-300 ease-out group-hover:scale-[1.03] group-hover:text-white">
+                            AI &amp; Automation Elesium
+                        </span>
+                    </Link>
+                </motion.div>
             </div>
 
             {/* Center Dividing Hairline (Vertical on Desktop, Horizontal on Mobile) */}

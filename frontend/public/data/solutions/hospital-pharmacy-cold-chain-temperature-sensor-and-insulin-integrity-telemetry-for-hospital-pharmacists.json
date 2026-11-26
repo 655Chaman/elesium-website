@@ -17,7 +17,7 @@
   "firstSentence": "Monitor hospital pharmacy biological refrigerators in real time between 2°C and 8°C, guaranteeing insulin and monoclonal antibody molecular stability with automated excursion mitigation.",
   "wordCount": 1480,
   "mozScore": 98,
-  "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+  "heroImage": "https://elesium.online/og-image.png",
   "heroImageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists",
   "paragraphs": [
     "Hospital central pharmacies and ward medication storage refrigerators in India store millions of rupees worth of temperature-sensitive biologicals, insulin analogs, chemotherapy agents, and blood products. Undetected refrigerator compressor failures, frequent door openings by nursing staff, or power transfer glitches cause temperature spikes outside the mandatory 2°C to 8°C storage range. Exposure to room temperature causes protein denaturation and molecular degradation in insulin, leading to therapeutic failure in diabetic patients and massive inventory write-offs.",
@@ -113,7 +113,7 @@
     "subheadline": "Hospital central pharmacies and ward medication storage refrigerators in India store millions of rupees worth of temperature-sensitive biologicals, insulin analogs, chemotherapy agents, and blood products. Undetected refrigerator compressor failures, frequent door openings by nursing staff, or power transfer glitches cause temperature spikes outside the mandatory 2°C to 8°C storage range. Exposure to room temperature causes protein denaturation and molecular degradation in insulin, leading to therapeutic failure in diabetic patients and massive inventory write-offs.",
     "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
     "ctaText": "Schedule AI Architecture Audit",
-    "heroImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists"
   },
   "blocks": [
@@ -146,7 +146,7 @@
           "desc": "Guaranteed zero insulin or biological medication loss across monitored refrigerators."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists",
       "layout": "left-copy"
     },
@@ -160,7 +160,7 @@
         "State Machine: Deterministic consensus and audit hash chain verification",
         "Memory Safety: Zero volatile data remanence with sub-1.5ms rollback"
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Sovereign Healthcare & Life Sciences Architecture Diagram",
       "layout": "right-copy"
     },
@@ -186,7 +186,7 @@
           "desc": "Guaranteed zero insulin or biological medication loss across monitored refrigerators."
         }
       ],
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "image": "https://elesium.online/og-image.png",
       "imageAlt": "Hospital Pharmacy Cold Chain Temperature Sensor and Insulin Integrity Telemetry for Hospital Pharmacists Performance Telemetry",
       "layout": "centered-card"
     }

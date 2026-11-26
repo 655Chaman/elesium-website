@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
     Cpu,
     Gauge,
@@ -276,7 +277,7 @@ export default function ToolsHub() {
     }
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+        <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
                 <title>Enterprise AI Calculators &amp; Architecture Simulators | Elesium</title>
                 <meta name="description" content="Interactive enterprise AI engineering simulators, GPU cluster sizers, RAG latency estimators, and DPDP Act compliance calculators by Elesium." />
@@ -294,55 +295,51 @@ export default function ToolsHub() {
             </Helmet>
 
             <div className="relative isolate overflow-hidden pt-24 pb-16">
-                <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-                    <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-cyan-500 to-blue-600 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
-                </div>
-
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Breadcrumbs */}
-                    <nav className="flex items-center space-x-2 text-xs font-mono text-slate-400 mb-8" aria-label="Breadcrumb">
-                        <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
-                        <ChevronRight className="w-3 h-3 text-slate-600" />
-                        <span className="text-slate-200">Tools &amp; Simulators</span>
+                    <nav className="flex items-center space-x-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-8" aria-label="Breadcrumb">
+                        <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
+                        <ChevronRight className="w-3 h-3 text-neutral-500" />
+                        <span className="text-black dark:text-white">Tools &amp; Simulators</span>
                     </nav>
 
                     {/* Header */}
                     <div className="max-w-4xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 mb-4">
-                            <Gauge className="w-3.5 h-3.5" />
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono uppercase tracking-wider bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 mb-4">
+                            <Gauge className="w-3.5 h-3.5 text-black dark:text-white" />
                             Deterministic Telemetry &amp; Unit Economics
                         </div>
-                        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-6">
+                        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white mb-6">
                             Enterprise AI Calculators &amp; Architecture Simulators
                         </h1>
-                        <p className="text-lg text-slate-300 leading-relaxed mb-8">
+                        <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
                             Mathematical modeling tools, GPU cluster sizers, latency simulators, and compliance engines engineered for Chief Technology Officers and Systems Architects.
                         </p>
 
-                        {/* Answer Capsule */}
-                        <div className="answer-capsule bg-slate-900/90 border border-cyan-500/30 border-l-4 border-l-cyan-400 rounded-lg p-5 mb-10 shadow-lg">
-                            <div className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400 mb-1.5 flex items-center gap-2">
-                                <Cpu className="w-4 h-4" />
-                                Architectural Answer Capsule • Interactive Suite Summary
+                        {/* Technical Overview */}
+                        <div className="answer-capsule bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white rounded-xl p-5 mb-10">
+                            <div className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-1.5 flex items-center gap-2">
+                                <Cpu className="w-4 h-4 text-black dark:text-white" />
+                                Interactive Suite Summary
                             </div>
-                            <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
+                            <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
                                 {answerCapsule}
                             </p>
                         </div>
                     </div>
 
                     {/* Filter Bar & Search */}
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-4 border-y border-slate-800 mb-10">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-4 border-y border-neutral-200 dark:border-white/10 mb-10">
                         {/* Category Tabs */}
                         <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
                             {categories.map(cat => (
                                 <button
                                     key={cat}
                                     onClick={() => setSelectedCategory(cat)}
-                                    className={`px-3 py-1.5 rounded-md text-xs font-medium whitespace-nowrap transition-colors ${
+                                    className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap active:scale-[0.97] transition-all ${
                                         selectedCategory === cat
-                                            ? 'bg-cyan-500 text-slate-950 font-semibold shadow'
-                                            : 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800'
+                                            ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
+                                            : 'bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white'
                                     }`}
                                 >
                                     {cat}
@@ -352,13 +349,13 @@ export default function ToolsHub() {
 
                         {/* Search Input */}
                         <div className="relative min-w-[240px]">
-                            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
+                            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500" />
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={e => setSearchQuery(e.target.value)}
                                 placeholder="Search simulators..."
-                                className="w-full bg-slate-900 border border-slate-800 rounded-lg pl-9 pr-4 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                                className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-lg pl-9 pr-4 py-1.5 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white transition-colors"
                             />
                         </div>
                     </div>
@@ -369,29 +366,29 @@ export default function ToolsHub() {
                             <Link
                                 key={tool.slug}
                                 to={`/tools/${tool.slug}/`}
-                                className="group relative flex flex-col justify-between p-6 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/50 hover:bg-slate-900 transition-all duration-200"
+                                className="group relative flex flex-col justify-between p-6 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all duration-200"
                             >
                                 <div>
                                     <div className="flex items-center justify-between gap-2 mb-3">
-                                        <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                                        <span className="text-[11px] font-mono uppercase tracking-wider text-black dark:text-white bg-white dark:bg-black px-2 py-0.5 rounded border border-neutral-200 dark:border-white/10">
                                             {tool.badge}
                                         </span>
-                                        <span className="text-xs text-slate-500">
+                                        <span className="text-xs text-neutral-500">
                                             {tool.category}
                                         </span>
                                     </div>
-                                    <h2 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors mb-2">
+                                    <h2 className="text-lg font-bold text-black dark:text-white mb-2">
                                         {tool.title}
                                     </h2>
-                                    <p className="text-xs text-slate-400 leading-relaxed mb-4">
+                                    <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                                         {tool.description}
                                     </p>
                                 </div>
-                                <div className="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
-                                    <span className="font-mono text-emerald-400 font-semibold">
+                                <div className="pt-4 border-t border-neutral-200 dark:border-white/10 flex items-center justify-between text-xs">
+                                    <span className="font-mono text-black dark:text-white font-semibold">
                                         {tool.metric}
                                     </span>
-                                    <span className="inline-flex items-center gap-1 text-cyan-400 font-medium group-hover:translate-x-0.5 transition-transform">
+                                    <span className="inline-flex items-center gap-1 text-black dark:text-white font-medium group-hover:translate-x-0.5 transition-transform">
                                         Launch &rarr;
                                     </span>
                                 </div>
@@ -400,18 +397,18 @@ export default function ToolsHub() {
                     </div>
 
                     {/* Enterprise Callout */}
-                    <div className="bg-gradient-to-r from-blue-950/50 to-cyan-950/50 border border-cyan-500/30 rounded-2xl p-8 mb-20 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div className="bg-black text-white border border-neutral-200 dark:border-white/10 rounded-xl p-8 mb-20 flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="max-w-2xl">
                             <h3 className="text-2xl font-bold text-white mb-2">
                                 Need Custom Architecture Benchmarking for Your Enterprise?
                             </h3>
-                            <p className="text-sm text-slate-300 leading-relaxed">
+                            <p className="text-sm text-neutral-300 leading-relaxed">
                                 Our sovereign systems engineering pod profiles private LLM latency, token cost arbitrage, and SAP ERP workflow integration with a guaranteed 90-day cash-flow positive ROI SLA.
                             </p>
                         </div>
                         <button
                             onClick={() => openWhatsApp()}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm shadow-lg shadow-cyan-500/20 whitespace-nowrap transition-all"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-neutral-200 text-black font-bold text-sm whitespace-nowrap active:scale-[0.97] transition-all"
                         >
                             Book Architecture Review
                             <ArrowRight className="w-4 h-4" />
@@ -420,31 +417,41 @@ export default function ToolsHub() {
 
                     {/* FAQ Accordion Section */}
                     <div className="max-w-3xl mx-auto mb-20" id="faqs">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white text-center mb-8">
                             Frequently Asked Questions
                         </h2>
                         <div className="space-y-4">
                             {toolsFaqs.map((faq, idx) => (
                                 <div
                                     key={idx}
-                                    className="border border-slate-800 rounded-lg overflow-hidden bg-slate-900/40"
+                                    className="border border-neutral-200 dark:border-white/10 rounded-xl overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
                                     <button
                                         onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                        className="w-full flex items-center justify-between p-4 text-left font-medium text-sm sm:text-base text-slate-200 hover:text-white transition-colors"
+                                        className="w-full flex items-center justify-between p-4 text-left font-medium text-sm sm:text-base text-black dark:text-white transition-colors"
                                     >
                                         <span>{faq.q}</span>
                                         <ChevronDown
-                                            className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                                                openFaq === idx ? 'rotate-180 text-cyan-400' : ''
+                                            className={`w-4 h-4 text-neutral-500 transition-transform duration-200 shrink-0 ${
+                                                openFaq === idx ? 'rotate-180 text-black dark:text-white' : ''
                                             }`}
                                         />
                                     </button>
-                                    {openFaq === idx && (
-                                        <div className="p-4 pt-0 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/40">
-                                            {faq.a}
-                                        </div>
-                                    )}
+                                    <AnimatePresence initial={false}>
+                                        {openFaq === idx && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                                className="accordion-panel overflow-hidden"
+                                            >
+                                                <div className="p-4 pt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10">
+                                                    {faq.a}
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </div>
                             ))}
                         </div>
