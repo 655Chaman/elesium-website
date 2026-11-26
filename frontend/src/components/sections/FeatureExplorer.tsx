@@ -2,6 +2,8 @@ import { motion, useScroll, useTransform, AnimatePresence, PanInfo } from 'frame
 import { useRef, useState } from 'react'
 import { MotionValue } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import logoEmblem from '../../assets/LOGO_EMBLEM.png'
+import MetallicPaint from '../ui/MetallicPaint'
 
 const features = [
     {
@@ -59,15 +61,15 @@ function FeatureItem({ feature, index, total, scrollYProgress }: FeatureItemProp
     return (
         <motion.div
             style={{ opacity, y }}
-            className="col-start-1 row-start-1 pointer-events-none flex flex-col items-center text-center px-4"
+            className="col-start-1 row-start-1 pointer-events-none flex flex-col items-center lg:items-start text-center lg:text-left px-4"
         >
             <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-neutral-500 mb-5">
                 {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
             </span>
-            <h2 className="section-h2 mb-4 text-center text-black dark:text-white transition-colors max-w-2xl">
+            <h2 className="section-h2 mb-4 text-center lg:text-left text-black dark:text-white transition-colors max-w-2xl">
                 {feature.title}
             </h2>
-            <p className="body-text text-neutral-600 dark:text-neutral-400 max-w-lg mx-auto text-center">
+            <p className="body-text text-neutral-600 dark:text-neutral-400 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
                 {feature.description}
             </p>
         </motion.div>
@@ -121,10 +123,10 @@ export default function FeatureExplorer() {
             ref={containerRef}
             className="relative bg-white dark:bg-black transition-colors duration-300 md:h-[3400px] py-16 md:py-0"
         >
-            {/* Desktop Sticky Scroll Explorer */}
+            {/* Desktop Sticky Scroll Explorer + Monochrome Liquid Chrome Showcase */}
             <div className="hidden md:flex sticky top-[56px] h-[calc(100vh-56px)] items-center justify-center">
-                <div className="max-w-5xl w-full mx-auto px-12 flex flex-col items-center justify-center">
-                    <div className="grid grid-cols-1 items-center relative w-full text-center">
+                <div className="max-w-6xl w-full mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 items-center relative w-full text-center lg:text-left">
                         {features.map((feature, index) => (
                             <FeatureItem
                                 key={feature.title}
@@ -134,6 +136,26 @@ export default function FeatureExplorer() {
                                 scrollYProgress={scrollYProgress}
                             />
                         ))}
+                    </div>
+
+                    <div className="relative rounded-xl overflow-hidden bg-neutral-950 border border-white/10 flex items-center justify-center h-[420px] lg:h-[480px] p-12">
+                        <div className="w-64 h-64 lg:w-80 lg:h-80">
+                            <MetallicPaint
+                                imageSrc={logoEmblem}
+                                alt="Elesium Connector Emblem"
+                                scale={2.6}
+                                speed={0.45}
+                                brightness={2.2}
+                                contrast={0.55}
+                                lightColor="#ffffff"
+                                darkColor="#2e2e32"
+                                tintColor="#ffffff"
+                                chromaticSpread={0}
+                                liquid={0.78}
+                                distortion={1.2}
+                                resolution={512}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
