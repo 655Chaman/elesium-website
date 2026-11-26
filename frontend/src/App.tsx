@@ -201,6 +201,15 @@ function App() {
         initNavboostDwellLock();
     }, []);
     
+    // Sync clean route class for Gateway & Connector views
+    useEffect(() => {
+        if (isGateway || isConnector) {
+            document.documentElement.classList.add('elesium-clean-route');
+        } else {
+            document.documentElement.classList.remove('elesium-clean-route');
+        }
+    }, [isGateway, isConnector]);
+
     // Scroll to top on route change
     useEffect(() => {
         // Reset scroll position immediately on route change
@@ -209,8 +218,8 @@ function App() {
 
     return (
         <div className="relative min-h-screen bg-white dark:bg-black transition-colors duration-300 flex flex-col">
-            <SmoothScroll />
-            <NoiseOverlay />
+            {!isGateway && <SmoothScroll />}
+            {!isGateway && <NoiseOverlay />}
             {!hideMainLayout && <InternationalGeoBanner />}
             {!hideMainLayout && <Navbar />}
 

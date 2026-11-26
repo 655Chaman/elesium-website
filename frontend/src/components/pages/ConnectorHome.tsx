@@ -15,7 +15,7 @@ import {
     Handshake, 
     ArrowUpRight
 } from 'lucide-react'
-import logo from '../../assets/LOGO_NEW.png'
+import logo from '../../assets/LOGO_EMBLEM.png'
 import { AnimatedBeam } from '../ui/AnimatedBeam'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 

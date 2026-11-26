@@ -502,11 +502,25 @@
     />
   </noscript>
 
-  <!-- Dark Mode Locked -->
+  <!-- Dark Mode Locked & Clean Gateway Route Mask -->
   <script>
     document.documentElement.classList.add('dark');
     localStorage.setItem('theme', 'dark');
+    (function() {
+      var p = window.location.pathname;
+      if (p === '/' || p === '' || p === '/connector' || p === '/connector/') {
+        document.documentElement.classList.add('elesium-clean-route');
+      }
+    })();
   </script>
+  <style>
+    html.elesium-clean-route .footer-seo-mesh,
+    html.elesium-clean-route #prerendered-homepage,
+    html.elesium-clean-route .tier1-graph-mesh,
+    html.elesium-clean-route .aeo-empirical-matrix {
+      display: none !important;
+    }
+  </style>
 
   <!-- GitHub Pages SPA Router Fix -->
   <!-- Decodes the path that 404.html redirected as a query param -->

@@ -64,6 +64,14 @@ html.dark body {
   color: #ededed;
 }
 
+/* Hide outer SEO mesh & prerender fallback on clean portal/connector views */
+html.elesium-clean-route .footer-seo-mesh,
+html.elesium-clean-route #prerendered-homepage,
+html.elesium-clean-route .tier1-graph-mesh,
+html.elesium-clean-route .aeo-empirical-matrix {
+  display: none !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
