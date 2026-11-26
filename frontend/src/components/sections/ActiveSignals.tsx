@@ -6,43 +6,48 @@ import { useWhatsApp } from '../../hooks/useWhatsApp'
 const workflows = [
     {
         id: 1,
-        sector: 'Finance & Banking',
-        status: 'In Production',
-        description: 'Automated checking of financial statements, tax filings, and bank ledgers—catching mismatches in seconds instead of hours of manual review.',
-        metric: 'Under 2 seconds per check',
-        timeframe: 'Saved 14 hrs/case',
+        sector: 'Inbound Sales & Inbox',
+        status: 'n8n · Voiceflow · GHL',
+        description:
+            'Consolidates incoming leads from WhatsApp, SMS, Instagram, live chat, and email into SQL and CRM—qualifying intent, sending tailored replies per channel, booking meetings, and automating follow-ups.',
+        metric: 'Unified Multi-Channel Inbox',
+        timeframe: 'Zero missed leads',
     },
     {
         id: 2,
-        sector: 'Supply Chain & ERP',
-        status: 'In Production',
-        description: 'Direct integration into SAP and warehouse databases to flag low stock early, compare supplier quotes, and prepare purchase orders automatically.',
-        metric: 'Zero stockout surprises',
-        timeframe: 'Live SAP sync',
+        sector: 'Voice Reception & Booking',
+        status: 'Vapi · Twilio · Airtable',
+        description:
+            'Handles inbound phone and chat inquiries, answers immediate questions, checks live calendar availability, books or reschedules meetings on the spot, and logs every call metric cleanly.',
+        metric: 'Live Call-to-Calendar Sync',
+        timeframe: '24/7 intake',
     },
     {
         id: 3,
-        sector: 'Compliance & Audit',
-        status: 'Private Cloud',
-        description: 'Automated document verification and policy checks running strictly inside your own private servers so sensitive customer records never leave.',
-        metric: '100% internal hosting',
-        timeframe: 'Full audit trail',
+        sector: 'Client Onboarding',
+        status: 'n8n · WhatsApp · Razorpay',
+        description:
+            'Triggers automatically once a contract is signed and paid—sending invoices, provisioning client CRM workspaces, spinning up dedicated WhatsApp groups, and onboarding teams cleanly.',
+        metric: 'Zero-Touch Onboarding',
+        timeframe: 'Instant setup',
     },
     {
         id: 4,
-        sector: 'Manufacturing Ops',
-        status: 'On-Premise',
-        description: 'Real-time monitoring of shop-floor sensors and quality logs to spot machine wear or defects early and alert engineers before downtime hits.',
-        metric: 'Early fault warnings',
-        timeframe: 'Plant-floor ready',
+        sector: 'Hiring & CV Screening',
+        status: 'n8n · OpenAI · Airtable',
+        description:
+            'Extracts structured skills from PDF resumes, scores fit against job criteria, generates role-specific questionnaires for shortlisted applicants, and books interviewer calendar slots.',
+        metric: 'Automated CV Scoring & Booking',
+        timeframe: 'Hours saved weekly',
     },
     {
         id: 5,
-        sector: 'Operations & Support',
-        status: 'In Production',
-        description: 'Structured ticketing, invoice matching, and internal knowledge lookup connected straight into your existing databases and team tools.',
-        metric: '70%+ less manual entry',
-        timeframe: '14-day pilot',
+        sector: 'Growth, Ads & SEO',
+        status: 'Meta API · Whisper · Perplexity',
+        description:
+            'Monitors live Meta ad performance, transcribes top video creatives into fresh script angles, drafts research-backed LinkedIn posts for review, and publishes localized SEO articles.',
+        metric: 'Closed-Loop Creative & SEO',
+        timeframe: 'Compounding reach',
     },
 ]
 
@@ -67,14 +72,14 @@ export default function ActiveSignals() {
                 >
                     <div>
                         <span className="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-500 block mb-2">
-                            What We Automate
+                            Systems Built
                         </span>
                         <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black dark:text-white">
-                            Production workflows across core teams
+                            Automation workflows we build and run
                         </h2>
                     </div>
                     <span className="text-xs font-mono text-neutral-500">
-                        Select a workflow to inspect
+                        Select a system to inspect
                     </span>
                 </motion.div>
 
@@ -84,7 +89,6 @@ export default function ActiveSignals() {
                     transition={{ type: 'spring', stiffness: 260, damping: 28, delay: 0.08 }}
                     className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch"
                 >
-                    {/* Left Selector */}
                     <div className="md:col-span-4 flex flex-col justify-between gap-2.5">
                         {workflows.map((item, i) => (
                             <button
@@ -116,7 +120,6 @@ export default function ActiveSignals() {
                         ))}
                     </div>
 
-                    {/* Right Active Detail */}
                     <div className="md:col-span-8 border border-neutral-200 dark:border-white/10 rounded-[32px] overflow-hidden bg-neutral-50 dark:bg-neutral-950 flex flex-col justify-between">
                         <div className="flex items-center justify-between px-7 py-4 border-b border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
                             <span className="text-xs font-mono text-neutral-500 uppercase tracking-wider">
@@ -149,7 +152,7 @@ export default function ActiveSignals() {
 
                         <div className="px-7 py-5 border-t border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col sm:flex-row items-center justify-between gap-4">
                             <div className="text-xs text-neutral-500">
-                                Scope a workflow for your team in a 30-minute engineering call.
+                                Want a workflow like this adapted to your CRM and stack?
                             </div>
                             <button
                                 type="button"

@@ -1,20 +1,81 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight, ChevronDown } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
 import emblem from '../../assets/LOGO_EMBLEM.png'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
-const pageSpring = {
-    type: 'spring' as const,
-    stiffness: 260,
-    damping: 28,
-    mass: 0.85,
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.06,
+            delayChildren: 0.04,
+        },
+    },
 }
 
+const itemVariants = {
+    hidden: { opacity: 0, y: 12 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: 'spring' as const,
+            stiffness: 280,
+            damping: 26,
+        },
+    },
+}
+
+const systemsBuilt = [
+    {
+        name: 'Ele-in (ele-in.com)',
+        summary: 'Controlled outbound & LinkedIn workflow software built with conditional steps, human approval gates, and isolated client workspaces.',
+        stack: 'Playwright · HubSpot · Apollo · GoHighLevel',
+    },
+    {
+        name: 'Omnichannel Inbound System',
+        summary: 'Unifies WhatsApp, SMS, Instagram, live chat, and email into SQL + CRM, qualifies intent, replies per channel, and automates follow-ups.',
+        stack: 'n8n · Voiceflow · GoHighLevel · SQL',
+    },
+    {
+        name: 'AI Receptionist & Booking Agent',
+        summary: 'Handles inbound calls, checks availability, books or reschedules meetings live, and logs structured call metrics into CRM.',
+        stack: 'Vapi · Twilio · n8n · Airtable',
+    },
+    {
+        name: 'Automated Onboarding & WhatsApp Desk',
+        summary: 'Generates invoices, provisions CRM workspaces, sets up dedicated WhatsApp groups, and invites team members when payment clears.',
+        stack: 'n8n · WhatsApp Business · GoHighLevel · Razorpay',
+    },
+    {
+        name: 'Hiring & CV Screening Pipeline',
+        summary: 'Extracts PDF resumes, scores fit against job criteria, generates tailored questionnaires, and schedules interviewer slots automatically.',
+        stack: 'n8n · OpenAI · Airtable · Google Calendar',
+    },
+    {
+        name: 'VSL & Ad Research Loop',
+        summary: 'Researches customer insights, drafts scripts, monitors live Meta Ads performance, and transcribes winning video ads for next iterations.',
+        stack: 'n8n · Meta Graph API · Whisper · Perplexity',
+    },
+    {
+        name: 'Local SEO Publishing Engine',
+        summary: 'Researches local markets, writes long-form guides, formats docs for review, and auto-publishes pages—achieving #1 local rankings.',
+        stack: 'n8n · Perplexity · Google Sheets · Docs',
+    },
+    {
+        name: 'LinkedIn Content & Lead Systems',
+        summary: 'Drafts research-backed posts held for approval, filters engagement by intent, enriches profiles, and writes tailored outreach scripts.',
+        stack: 'n8n · Claude · Gemini · Apify · Airtable',
+    },
+]
+
 export default function Portfolio() {
-    const prefersReducedMotion = useReducedMotion()
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
+    const [openSystem, setOpenSystem] = useState<string | null>(systemsBuilt[0].name)
 
     const portfolioSchema = {
         '@context': 'https://schema.org',
@@ -25,234 +86,253 @@ export default function Portfolio() {
                 name: 'Chaman Shah',
                 givenName: 'Chaman',
                 familyName: 'Shah',
-                jobTitle: 'Founder',
-                worksFor: {
-                    '@type': 'Organization',
-                    '@id': 'https://elesium.online/#organization',
-                    name: 'Elesium',
-                    legalName: 'Elesium Digital Systems Private Limited',
-                    url: 'https://elesium.online/',
-                },
-                url: 'https://elesium.online/portfolio/',
+                jobTitle: 'Founder, Elesium',
                 image: 'https://elesium.online/chaman-shah.png',
+                url: 'https://elesium.online/portfolio/',
+                email: 'contact@elesium.online',
+                worksFor: {
+                    '@id': 'https://elesium.online/#organization',
+                },
+                address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Bengaluru',
+                    addressRegion: 'Karnataka',
+                    addressCountry: 'IN',
+                },
                 sameAs: [
                     'https://github.com/655Chaman',
                     'https://linkedin.com/in/chaman-shah-elesium',
                     'https://x.com/chamanshah_ai',
+                    'https://elesium.online/authors/chaman-shah/',
                 ],
-                address: {
-                    '@type': 'PostalAddress',
-                    streetAddress: 'Koramangala 4th Block, 80 Feet Road',
-                    addressLocality: 'Bengaluru',
-                    addressRegion: 'Karnataka',
-                    postalCode: '560034',
-                    addressCountry: 'IN',
-                },
                 description:
-                    'Founder of Elesium in Bengaluru, building direct partner-matching systems and enterprise AI automation.',
+                    'Chaman Shah is the Founder of Elesium, connecting enterprise buyers and suppliers and building automated business systems in Bengaluru.',
             },
             {
                 '@type': ['ProfilePage', 'WebPage'],
                 '@id': 'https://elesium.online/portfolio/#webpage',
-                name: 'Chaman Shah — Portfolio',
-                description:
-                    'Portfolio of Chaman Shah, Founder of Elesium in Bengaluru.',
                 url: 'https://elesium.online/portfolio/',
-                mainEntity: {
-                    '@id': 'https://elesium.online/authors/chaman-shah#person',
-                },
+                name: 'Chaman Shah — Portfolio | Elesium',
+                description: 'Portfolio of Chaman Shah, Founder of Elesium. Production automation builds and direct business ventures.',
+                isPartOf: { '@id': 'https://elesium.online/#website' },
+                mainEntity: { '@id': 'https://elesium.online/authors/chaman-shah#person' },
             },
             {
                 '@type': 'BreadcrumbList',
                 '@id': 'https://elesium.online/portfolio/#breadcrumb',
                 itemListElement: [
-                    {
-                        '@type': 'ListItem',
-                        position: 1,
-                        name: 'Elesium',
-                        item: 'https://elesium.online/',
-                    },
-                    {
-                        '@type': 'ListItem',
-                        position: 2,
-                        name: 'Chaman Shah',
-                        item: 'https://elesium.online/portfolio/',
-                    },
+                    { '@type': 'ListItem', position: 1, name: 'Portal', item: 'https://elesium.online/' },
+                    { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://elesium.online/portfolio/' },
                 ],
             },
         ],
     }
 
     return (
-        <div className="dark min-h-[100dvh] bg-black text-white font-sans selection:bg-white selection:text-black flex flex-col justify-between overflow-x-hidden">
+        <div className="dark min-h-[100dvh] bg-black text-white font-sans selection:bg-white selection:text-black flex flex-col justify-between overflow-x-clip">
             <WhatsAppModal />
+
             <Helmet>
-                <title>Chaman Shah — Elesium</title>
+                <title>Chaman Shah — Portfolio | Elesium</title>
                 <meta
                     name="description"
-                    content="Portfolio of Chaman Shah, Founder of Elesium in Bengaluru."
+                    content="Chaman Shah, Founder of Elesium. Production automation systems built and direct partner ventures."
                 />
                 <link rel="canonical" href="https://elesium.online/portfolio/" />
-                <meta
-                    name="robots"
-                    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-                />
+                <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="profile" />
-                <meta property="og:title" content="Chaman Shah — Elesium" />
-                <meta
-                    property="og:description"
-                    content="Portfolio of Chaman Shah, Founder of Elesium in Bengaluru."
-                />
+                <meta property="og:title" content="Chaman Shah — Portfolio | Elesium" />
+                <meta property="og:description" content="Founder of Elesium. Systems built and direct links." />
                 <meta property="og:image" content="https://elesium.online/chaman-shah.png" />
                 <meta property="og:url" content="https://elesium.online/portfolio/" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Chaman Shah — Portfolio | Elesium" />
+                <meta name="twitter:image" content="https://elesium.online/chaman-shah.png" />
                 <script type="application/ld+json">{JSON.stringify(portfolioSchema)}</script>
             </Helmet>
 
             {/* Minimal Top Bar */}
-            <header className="w-full px-6 md:px-12 h-16 flex items-center justify-between">
-                <Link
-                    to="/"
-                    aria-label="Return to Elesium"
-                    className="inline-flex items-center active:scale-[0.97] transition-transform"
-                >
-                    <img
-                        src={emblem}
-                        alt="Elesium"
-                        width="28"
-                        height="28"
-                        loading="eager"
-                        fetchPriority="high"
-                        className="h-7 w-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
-                    />
-                </Link>
+            <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-black/90 backdrop-blur-xl border-b border-white/10">
+                <div className="max-w-2xl mx-auto px-6 h-full flex items-center justify-between">
+                    <Link
+                        to="/"
+                        className="inline-flex items-center justify-center p-1.5 rounded-full hover:bg-white/10 transition active:scale-[0.97]"
+                        aria-label="Return to Elesium Portal"
+                    >
+                        <img src={emblem} alt="Elesium" width="24" height="24" className="h-6 w-6 object-contain" />
+                    </Link>
 
-                <Link
-                    to="/"
-                    className="text-xs font-medium text-white/55 hover:text-white transition-colors active:scale-[0.97]"
-                >
-                    Back
-                </Link>
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition active:scale-[0.97]"
+                    >
+                        <ArrowLeft className="w-3.5 h-3.5" />
+                        <span>Back</span>
+                    </Link>
+                </div>
             </header>
 
-            {/* Centered Editorial Content */}
+            {/* Centered Clean Typography Portfolio */}
             <motion.main
                 id="main-content"
-                initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={pageSpring}
-                className="flex-1 flex items-center justify-center px-6 py-12"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="flex-1 w-full max-w-2xl mx-auto px-6 pt-28 pb-20 flex flex-col justify-center"
             >
-                <div className="w-full max-w-xl mx-auto">
-                    {/* Portrait & Name */}
-                    <div className="flex items-center gap-6 mb-8">
-                        <div className="h-20 w-20 sm:h-24 sm:w-24 shrink-0 overflow-hidden rounded-[24px] bg-neutral-950 border border-white/10">
-                            <img
-                                src="/chaman-shah.png"
-                                alt="Chaman Shah"
-                                width="192"
-                                height="192"
-                                loading="eager"
-                                className="h-full w-full object-cover grayscale contrast-[1.08]"
-                            />
-                        </div>
-                        <div>
-                            <h1 className="text-2xl sm:text-3xl font-medium tracking-tight text-white">
-                                Chaman Shah
-                            </h1>
-                            <p className="mt-1 text-sm text-white/55">
-                                Founder, Elesium &middot; Bengaluru
-                            </p>
-                        </div>
-                    </div>
+                <motion.div variants={itemVariants} className="mb-8">
+                    <img
+                        src="/chaman-shah.png"
+                        alt="Chaman Shah"
+                        width="80"
+                        height="80"
+                        className="h-20 w-20 rounded-full object-cover border border-white/15 grayscale"
+                    />
+                </motion.div>
 
-                    {/* Clean Plain Bio */}
-                    <p className="text-base sm:text-lg font-light text-white/80 leading-relaxed mb-8">
-                        I build systems that connect businesses directly with the right partners, and design intelligent automation that removes repetitive operational work.
+                <motion.h1
+                    variants={itemVariants}
+                    className="text-3xl sm:text-4xl font-medium tracking-[-0.03em] text-white mb-2"
+                >
+                    Chaman Shah
+                </motion.h1>
+
+                <motion.p variants={itemVariants} className="text-sm text-neutral-400 mb-8">
+                    Founder, Elesium &middot; Bengaluru
+                </motion.p>
+
+                <motion.p
+                    variants={itemVariants}
+                    className="answer-capsule text-base sm:text-lg font-light text-neutral-300 leading-relaxed mb-10 max-w-xl"
+                >
+                    I connect businesses directly with the right partners and build practical automation systems—handling inbound leads, voice booking, hiring, onboarding, and growth workflows end to end.
+                </motion.p>
+
+                {/* Direct Contact Links */}
+                <motion.div
+                    variants={itemVariants}
+                    className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm pb-10 border-b border-white/10"
+                >
+                    <a
+                        href="https://github.com/655Chaman"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                    >
+                        GitHub
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/chaman-shah-elesium"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                    >
+                        LinkedIn
+                    </a>
+                    <a
+                        href="https://x.com/chamanshah_ai"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                    >
+                        X
+                    </a>
+                    <a
+                        href="mailto:contact@elesium.online"
+                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                    >
+                        Email
+                    </a>
+                    <button
+                        type="button"
+                        onClick={openWhatsApp}
+                        className="text-white hover:text-neutral-300 underline underline-offset-4 decoration-white/25 hover:decoration-white transition"
+                    >
+                        WhatsApp
+                    </button>
+                </motion.div>
+
+                {/* Minimal Text List of Real Systems Built */}
+                <motion.section variants={itemVariants} className="py-10 border-b border-white/10">
+                    <p className="text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500 mb-5">
+                        Systems Built
+                    </p>
+                    <div className="divide-y divide-white/10">
+                        {systemsBuilt.map((sys) => {
+                            const isOpen = openSystem === sys.name
+                            return (
+                                <div key={sys.name} className="py-3.5">
+                                    <button
+                                        type="button"
+                                        onClick={() => setOpenSystem(isOpen ? null : sys.name)}
+                                        className="w-full flex items-center justify-between gap-4 text-left group"
+                                    >
+                                        <span className="text-sm sm:text-base font-medium text-white group-hover:text-neutral-300 transition-colors">
+                                            {sys.name}
+                                        </span>
+                                        <ChevronDown
+                                            className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${
+                                                isOpen ? 'rotate-180 text-white' : ''
+                                            }`}
+                                        />
+                                    </button>
+                                    <AnimatePresence initial={false}>
+                                        {isOpen && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
+                                                className="accordion-panel overflow-hidden"
+                                            >
+                                                <div className="pt-2.5 space-y-1.5">
+                                                    <p className="text-sm text-neutral-400 leading-relaxed">
+                                                        {sys.summary}
+                                                    </p>
+                                                    <p className="text-xs font-mono text-neutral-500">
+                                                        {sys.stack}
+                                                    </p>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </motion.section>
+
+                {/* Minimal Text Work Links */}
+                <motion.div variants={itemVariants} className="pt-10 space-y-4">
+                    <p className="text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500">
+                        Elesium
                     </p>
 
-                    {/* Plain Text Direct Links */}
-                    <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pb-10 text-sm">
-                        <a
-                            href="https://github.com/655Chaman"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-white/70 hover:text-white underline underline-offset-4 decoration-white/25 hover:decoration-white transition-colors active:scale-[0.97]"
-                        >
-                            <span>GitHub</span>
-                            <ArrowUpRight className="h-3.5 w-3.5" />
-                        </a>
-                        <a
-                            href="https://linkedin.com/in/chaman-shah-elesium"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-white/70 hover:text-white underline underline-offset-4 decoration-white/25 hover:decoration-white transition-colors active:scale-[0.97]"
-                        >
-                            <span>LinkedIn</span>
-                            <ArrowUpRight className="h-3.5 w-3.5" />
-                        </a>
-                        <a
-                            href="https://x.com/chamanshah_ai"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-white/70 hover:text-white underline underline-offset-4 decoration-white/25 hover:decoration-white transition-colors active:scale-[0.97]"
-                        >
-                            <span>X</span>
-                            <ArrowUpRight className="h-3.5 w-3.5" />
-                        </a>
-                        <a
-                            href="mailto:contact@elesium.online"
-                            className="inline-flex items-center gap-1 text-white/70 hover:text-white underline underline-offset-4 decoration-white/25 hover:decoration-white transition-colors active:scale-[0.97]"
-                        >
-                            <span>Email</span>
-                        </a>
-                        <button
-                            type="button"
-                            onClick={openWhatsApp}
-                            className="inline-flex items-center gap-1 text-white/70 hover:text-white underline underline-offset-4 decoration-white/25 hover:decoration-white transition-colors active:scale-[0.97]"
-                        >
-                            <span>WhatsApp</span>
-                        </button>
-                    </div>
-
-                    {/* Clean Work Links (Text Only) */}
-                    <div className="border-t border-white/10 pt-8 space-y-5">
+                    <div className="flex flex-col gap-3">
                         <Link
                             to="/connector/"
-                            className="group flex items-baseline justify-between gap-4 py-1 text-white/80 hover:text-white transition-colors active:scale-[0.99]"
+                            className="inline-flex items-center justify-between py-2 text-base text-neutral-200 hover:text-white transition group"
                         >
-                            <div>
-                                <span className="text-base font-medium text-white block">
-                                    Elesium Connector Model
-                                </span>
-                                <span className="text-sm text-white/50">
-                                    Direct B2B buyer and partner matching
-                                </span>
-                            </div>
-                            <ArrowUpRight className="h-4 w-4 shrink-0 text-white/40 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                            <span>Elesium Connector Model</span>
+                            <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition" />
                         </Link>
 
                         <Link
                             to="/ai/"
-                            className="group flex items-baseline justify-between gap-4 py-1 text-white/80 hover:text-white transition-colors active:scale-[0.99]"
+                            className="inline-flex items-center justify-between py-2 text-base text-neutral-200 hover:text-white transition group"
                         >
-                            <div>
-                                <span className="text-base font-medium text-white block">
-                                    AI &amp; Automation Elesium
-                                </span>
-                                <span className="text-sm text-white/50">
-                                    Enterprise AI systems and private workflow automation
-                                </span>
-                            </div>
-                            <ArrowUpRight className="h-4 w-4 shrink-0 text-white/40 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                            <span>AI &amp; Automation Elesium</span>
+                            <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition" />
                         </Link>
                     </div>
-                </div>
+                </motion.div>
             </motion.main>
 
-            {/* Minimal Bottom Line */}
-            <footer className="w-full px-6 md:px-12 py-6 flex items-center justify-between text-xs text-white/40">
-                <span>Chaman Shah</span>
-                <span>Bengaluru, India</span>
+            <footer className="py-8 px-6 border-t border-white/10">
+                <div className="max-w-2xl mx-auto flex items-center justify-between text-xs text-neutral-500">
+                    <span>Chaman Shah</span>
+                    <span>elesium.online</span>
+                </div>
             </footer>
         </div>
     )

@@ -311,18 +311,18 @@ export default function Waitlist() {
 
                             <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-black dark:text-white leading-[1.15] mb-5">
                                 ele-in <br className="hidden sm:block" />
-                                Sovereign AI Platform
+                                Campaign Orchestration OS
                             </h1>
 
                             <p className="text-[15px] text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                                <strong className="text-black dark:text-white font-semibold">ele-in</strong> is Elesium&apos;s autonomous multi-agent enterprise SaaS platform. Built for engineering teams, CTOs, and operations leaders to deploy deterministic, sovereign AI agents across legacy enterprise workflows with zero token leakage.
+                                <strong className="text-black dark:text-white font-semibold">ele-in</strong> (<a href="https://ele-in.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">ele-in.com</a>) is our controlled outbound and LinkedIn campaign orchestration software—built with conditional workflows, grounded message drafting, human approval checkpoints, and strict workspace isolation.
                             </p>
                         </div>
 
-                        {/* ele-in Core SaaS Architecture Pillars */}
+                        {/* ele-in Core Architecture Pillars */}
                         <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 space-y-4">
                             <h3 className="text-xs font-mono font-semibold tracking-wider uppercase text-neutral-500">
-                                What ele-in Delivers Out of the Box
+                                What ele-in Includes
                             </h3>
                             <div className="space-y-3.5 text-[14px]">
                                 <div className="flex items-start gap-3">
@@ -330,8 +330,8 @@ export default function Waitlist() {
                                         <Layers className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-black dark:text-white font-medium block">Visual Multi-Agent Canvas</strong>
-                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Orchestrate LangGraph cyclic state machines, human-in-the-loop gates, and deterministic fallbacks visually.</span>
+                                        <strong className="text-black dark:text-white font-medium block">Conditional Campaign Builder</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Build multi-step workflows with clear rules, workspace isolation, and clean state handoffs.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -339,8 +339,8 @@ export default function Waitlist() {
                                         <ShieldCheck className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-black dark:text-white font-medium block">Air-Gapped Sovereign Privacy</strong>
-                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Local PII scrubbing (Verhoeff Aadhaar / PAN) and 100% compliance with India&apos;s DPDP Act 2023.</span>
+                                        <strong className="text-black dark:text-white font-medium block">Human-Approval Checkpoints</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Review sensitive outreach steps, conservative pacing controls, and auditable execution logs before sending.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -348,8 +348,8 @@ export default function Waitlist() {
                                         <Cpu className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-black dark:text-white font-medium block">Sub-200ms Execution Latency</strong>
-                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">High-throughput streaming engine with automated rollback checkpoints and verifiable state receipts.</span>
+                                        <strong className="text-black dark:text-white font-medium block">Grounded Personalization</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Generate tailored drafts backed by verified prospect context rather than generic templates.</span>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -357,8 +357,8 @@ export default function Waitlist() {
                                         <Server className="w-4 h-4" />
                                     </div>
                                     <div>
-                                        <strong className="text-black dark:text-white font-medium block">Turnkey ERP &amp; Banking Bridges</strong>
-                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Pre-built connectors into SAP S/4HANA, Salesforce, Tally ERP, and Core Banking APIs.</span>
+                                        <strong className="text-black dark:text-white font-medium block">CRM &amp; Data Integrations</strong>
+                                        <span className="text-neutral-600 dark:text-neutral-400 text-xs">Connects cleanly with HubSpot, Apollo, and GoHighLevel with transparent auditability.</span>
                                     </div>
                                 </div>
                             </div>

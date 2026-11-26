@@ -254,7 +254,7 @@ export default function ConnectorHome() {
                                         For Buyers
                                     </h3>
                                     <p className="text-sm font-light text-neutral-400 leading-relaxed mb-9">
-                                        Share what you need, your requirements, and your timeline. We check capability upfront and introduce you directly to teams ready to deliver.
+                                        We don&apos;t push random agencies or lists. Tell us what you need, your requirements, and your timeline—we check who can actually deliver it and introduce you only when the fit is clear.
                                     </p>
                                 </div>
 
@@ -286,7 +286,7 @@ export default function ConnectorHome() {
                                         For Suppliers
                                     </h3>
                                     <p className="text-sm font-light text-neutral-400 leading-relaxed mb-9">
-                                        Share what you build and your track record. Meet qualified buyers with real budgets and active projects instead of chasing cold lists.
+                                        Access beats cold outreach. Share what you deliver best and who you are strongest with—we connect you directly with buyers holding active budgets and clear projects.
                                     </p>
                                 </div>
 

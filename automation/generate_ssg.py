@@ -12159,9 +12159,9 @@ def generate_ssg():
 <div id="prerendered-portfolio" style="max-width:680px;margin:0 auto;padding:4rem 1.5rem;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#ffffff;background:#000000;">
   <header style="margin-bottom:2rem;">
     <h1 style="font-size:2rem;font-weight:500;letter-spacing:-0.02em;margin:0 0 0.35rem 0;color:#ffffff;">Chaman Shah</h1>
-    <p style="font-size:0.95rem;color:#9ca3af;margin:0 0 1.25rem 0;">Founder, Elesium &bull; Bengaluru, India</p>
-    <p style="font-size:1.05rem;line-height:1.65;color:#d1d5db;margin:0 0 1.5rem 0;">
-      I build systems that connect businesses directly with the right partners, and design intelligent automation that removes repetitive operational work.
+    <p style="font-size:0.95rem;color:#9ca3af;margin:0 0 1.25rem 0;">Founder, Elesium &bull; Bengaluru</p>
+    <p class="answer-capsule" style="font-size:1.05rem;line-height:1.65;color:#d1d5db;margin:0 0 1.5rem 0;">
+      I connect businesses directly with the right partners and build practical automation systems&mdash;handling inbound leads, voice booking, hiring, onboarding, and growth workflows end to end.
     </p>
     <div style="display:flex;gap:1.25rem;flex-wrap:wrap;font-size:0.9rem;">
       <a href="https://github.com/655Chaman" target="_blank" rel="noopener noreferrer" style="color:#d1d5db;">GitHub</a>
@@ -12170,9 +12170,24 @@ def generate_ssg():
       <a href="mailto:contact@elesium.online" style="color:#d1d5db;">Email</a>
     </div>
   </header>
+
+  <section style="padding:1.75rem 0;border-top:1px solid rgba(255,255,255,0.12);">
+    <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:#6b7280;margin:0 0 1rem 0;">Systems Built</p>
+    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;font-size:0.95rem;color:#d1d5db;">
+      <li><strong style="color:#ffffff;">Ele-in (ele-in.com)</strong> &mdash; Controlled outbound &amp; LinkedIn workflow software built with conditional steps, human approval gates, and isolated client workspaces.</li>
+      <li><strong style="color:#ffffff;">Omnichannel Inbound System</strong> &mdash; Unifies WhatsApp, SMS, Instagram, live chat, and email into SQL + CRM with automated follow-ups and booking.</li>
+      <li><strong style="color:#ffffff;">AI Receptionist &amp; Booking Agent</strong> &mdash; Handles inbound calls, checks availability, books or reschedules meetings live, and syncs call metrics to CRM.</li>
+      <li><strong style="color:#ffffff;">Automated Onboarding &amp; WhatsApp Desk</strong> &mdash; Provisions accounts, invoices, and dedicated WhatsApp client groups when payment clears.</li>
+      <li><strong style="color:#ffffff;">Hiring &amp; CV Screening Pipeline</strong> &mdash; Extracts PDF resumes, scores fit, generates tailored questionnaires, and schedules interviewer slots automatically.</li>
+      <li><strong style="color:#ffffff;">VSL &amp; Ad Research Loop</strong> &mdash; Researches product angles, drafts scripts, tracks live Meta Ads, and transcribes winning videos via Whisper.</li>
+      <li><strong style="color:#ffffff;">Local SEO Publishing Engine</strong> &mdash; Automates local keyword research, long-form article drafting, formatting, and CMS publishing.</li>
+      <li><strong style="color:#ffffff;">LinkedIn Content &amp; Lead Systems</strong> &mdash; Drafts research-backed posts held for approval, filters intent on comments, enriches profiles, and prepares scripts.</li>
+    </ul>
+  </section>
+
   <section style="border-top:1px solid rgba(255,255,255,0.12);padding-top:1.5rem;">
     <p style="margin:0 0 1rem 0;"><a href="/connector/" style="color:#ffffff;font-weight:500;text-decoration:none;">Elesium Connector Model</a> &mdash; Direct B2B buyer and partner matching</p>
-    <p style="margin:0;"><a href="/ai/" style="color:#ffffff;font-weight:500;text-decoration:none;">AI &amp; Automation Elesium</a> &mdash; Enterprise AI systems and private workflow automation</p>
+    <p style="margin:0;"><a href="/ai/" style="color:#ffffff;font-weight:500;text-decoration:none;">AI &amp; Automation Elesium</a> &mdash; Practical automation systems for teams</p>
   </section>
 </div>
 </main>
