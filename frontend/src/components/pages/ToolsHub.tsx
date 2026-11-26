@@ -3,14 +3,10 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-    Cpu,
-    Gauge,
     ChevronRight,
     ChevronDown,
-    ArrowRight,
     Search
 } from 'lucide-react'
-import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 interface ToolCard {
     slug: string
@@ -192,7 +188,6 @@ const toolsFaqs = [
 ]
 
 export default function ToolsHub() {
-    const { openWhatsApp, WhatsAppModal } = useWhatsApp()
     const [selectedCategory, setSelectedCategory] = useState<string>('All')
     const [searchQuery, setSearchQuery] = useState<string>('')
     const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -209,8 +204,6 @@ export default function ToolsHub() {
             return matchesCat && matchesSearch
         })
     }, [selectedCategory, searchQuery])
-
-    const answerCapsule = "The Elesium Enterprise AI Interactive Simulator Suite provides deterministic mathematical models, GPU hardware sizers, RAG latency benchmarks, and DPDP Act statutory compliance calculators for enterprise technology leaders. Every tool runs interactive client-side calculations evaluating VRAM allocation, sub-200ms TTFT latency, FP8 compute unit economics, and Indian sovereign cloud data residency safe harbors."
 
     const structuredData = {
         '@context': 'https://schema.org',
@@ -304,28 +297,16 @@ export default function ToolsHub() {
                     </nav>
 
                     {/* Header */}
-                    <div className="max-w-4xl">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-neutral-600 dark:text-neutral-400 mb-4">
-                            <Gauge className="w-3.5 h-3.5 text-black dark:text-white" />
-                            Deterministic Telemetry &amp; Unit Economics
-                        </div>
-                        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white mb-6">
-                            Enterprise AI Calculators &amp; Architecture Simulators
+                    <div className="max-w-3xl mb-10">
+                        <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500 block mb-4">
+                            Engineering Calculators
+                        </span>
+                        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-black dark:text-white mb-5">
+                            AI Cost, Latency &amp; Sizing Calculators
                         </h1>
-                        <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
-                            Mathematical modeling tools, GPU cluster sizers, latency simulators, and compliance engines engineered for Chief Technology Officers and Systems Architects.
+                        <p className="answer-capsule text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            Interactive tools to estimate infrastructure costs, response times, server requirements, and compliance exposure.
                         </p>
-
-                        {/* Technical Overview */}
-                        <div className="answer-capsule bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white rounded-[24px] p-6 mb-10">
-                            <div className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 mb-1.5 flex items-center gap-2">
-                                <Cpu className="w-4 h-4 text-black dark:text-white" />
-                                Interactive Suite Summary
-                            </div>
-                            <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
-                                {answerCapsule}
-                            </p>
-                        </div>
                     </div>
 
                     {/* Filter Bar & Search */}
@@ -396,37 +377,19 @@ export default function ToolsHub() {
                         ))}
                     </div>
 
-                    {/* Enterprise Callout */}
-                    <div className="bg-black text-white border border-neutral-200 dark:border-white/10 rounded-[32px] p-8 sm:p-10 mb-20 flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div className="max-w-2xl">
-                            <h3 className="text-2xl font-bold text-white mb-2">
-                                Need Custom Architecture Benchmarking for Your Enterprise?
-                            </h3>
-                            <p className="text-sm text-neutral-300 leading-relaxed">
-                                Our sovereign systems engineering pod profiles private LLM latency, token cost arbitrage, and SAP ERP workflow integration with a guaranteed 90-day cash-flow positive ROI SLA.
-                            </p>
-                        </div>
-                        <button
-                            onClick={() => openWhatsApp()}
-                            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-sm whitespace-nowrap active:scale-[0.97] transition-all duration-300"
-                        >
-                            Book Architecture Review
-                            <ArrowRight className="w-4 h-4" />
-                        </button>
-                    </div>
-
                     {/* FAQ Accordion Section */}
-                    <div className="max-w-3xl mx-auto mb-20" id="faqs">
+                    <div className="max-w-3xl mx-auto mb-12" id="faqs">
                         <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white text-center mb-8">
-                            Frequently Asked Questions
+                            Common Questions
                         </h2>
                         <div className="space-y-4">
                             {toolsFaqs.map((faq, idx) => (
                                 <div
                                     key={idx}
-                                    className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
+                                    className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
                                     <button
+                                        type="button"
                                         onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                                         className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-medium text-sm sm:text-base text-black dark:text-white transition-colors"
                                     >
@@ -458,8 +421,6 @@ export default function ToolsHub() {
                     </div>
                 </div>
             </div>
-
-            <WhatsAppModal />
         </div>
     )
 }

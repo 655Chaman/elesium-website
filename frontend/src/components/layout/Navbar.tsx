@@ -45,19 +45,19 @@ export default function Navbar() {
                             to="/compare/"
                             className="btn-nav text-xs xl:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-white/10 transition active:scale-[0.97] whitespace-nowrap"
                         >
-                            Architecture
+                            Comparisons
                         </Link>
                         <Link
                             to="/signals/"
                             className="btn-nav text-xs xl:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-white/10 transition active:scale-[0.97] whitespace-nowrap"
                         >
-                            Market Signals
+                            Insights
                         </Link>
                         <Link
                             to="/resources/"
                             className="btn-nav text-xs xl:text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-white/10 transition active:scale-[0.97] whitespace-nowrap"
                         >
-                            Engineering Tools
+                            Tools &amp; Guides
                         </Link>
                         <Link
                             to="/connector/"
@@ -159,21 +159,21 @@ export default function Navbar() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-black dark:text-white py-2 border-b border-neutral-200 dark:border-white/10 active:scale-[0.97] transition"
                             >
-                                Architecture
+                                Comparisons
                             </Link>
                             <Link
                                 to="/signals/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-black dark:text-white py-2 border-b border-neutral-200 dark:border-white/10 active:scale-[0.97] transition"
                             >
-                                Market Signals
+                                Insights
                             </Link>
                             <Link
                                 to="/resources/"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium text-black dark:text-white py-2 border-b border-neutral-200 dark:border-white/10 active:scale-[0.97] transition"
                             >
-                                Engineering Tools
+                                Tools &amp; Guides
                             </Link>
                             <Link
                                 to="/enterprise-ai-bangalore/"

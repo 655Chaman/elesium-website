@@ -21,7 +21,6 @@ import {
     Lock
 } from 'lucide-react'
 import { solutionCategories, getTopHighLeverSolutions, SolutionSummaryItem as SolutionRecord } from '../../data/solutionsHubData'
-import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Truck,
@@ -63,7 +62,6 @@ const solutionFaqs = [
 ]
 
 export default function SolutionsHub() {
-    const { openWhatsApp, WhatsAppModal } = useWhatsApp()
     const [openFaq, setOpenFaq] = useState<number | null>(null)
     const topHighLever = getTopHighLeverSolutions()
 
@@ -173,8 +171,6 @@ export default function SolutionsHub() {
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
-            <WhatsAppModal />
-
             {/* Breadcrumb Navigation (<= 2 clicks crawl guarantee) */}
             <div className="max-w-6xl mx-auto px-6 mb-8">
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
@@ -187,67 +183,38 @@ export default function SolutionsHub() {
             </div>
 
             {/* Hero Header */}
-            <header className="max-w-6xl mx-auto px-6 mb-16 md:mb-24">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 mb-6">
-                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
-                        Sovereign Solutions Directory
-                    </span>
-                </div>
+            <header className="max-w-6xl mx-auto px-6 mb-14">
+                <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500 block mb-4">
+                    Solutions Catalog
+                </span>
 
                 {/* EXACT H1 */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] mb-6 max-w-4xl text-black dark:text-white">
-                    Enterprise AI Solutions & Sovereign Automation Workflows
+                <h1 className="text-3xl sm:text-5xl font-bold tracking-tight leading-[1.12] mb-6 max-w-4xl text-black dark:text-white">
+                    Private Enterprise AI Workflows &amp; Solutions
                 </h1>
 
-                {/* Intro */}
-                <div className="max-w-3xl space-y-4 text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
-                    <p>
-                        Elesium engineers deterministic multi-agent infrastructure for enterprise leaders who cannot afford
-                        the latency, hallucinations, or data leakage risks inherent in generic chatbot integrations.
-                    </p>
-                    <p>
-                        Every solution below represents an operational, production-ready workflow: air-gapped private VPC
-                        deployments, direct SAP and Oracle RFC connectors, sub-200ms general ledger reconciliation, and strict
-                        compliance with the DPDP Act 2023, ISO 27001, and SOC-2 Type II standards.
-                    </p>
-                </div>
+                <p className="answer-capsule max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+                    Explore 100 ready-to-adapt automation workflows across logistics, finance, manufacturing, healthcare, and ERP systems—built to run inside your own private cloud.
+                </p>
 
-                {/* Trust Metrics Bar */}
+                {/* Concise Summary Metrics */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 pt-8 border-t border-neutral-200 dark:border-white/10">
-                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
-                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">&lt; 200ms</div>
-                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Average Execution Latency</div>
+                    <div className="p-5 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
+                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">14 Days</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Initial Pilot Delivery</div>
                     </div>
-                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
+                    <div className="p-5 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
                         <div className="text-2xl font-mono font-semibold text-black dark:text-white">100%</div>
-                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Private VPC Data Isolation</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Private Cloud Hosting</div>
                     </div>
-                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
+                    <div className="p-5 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
                         <div className="text-2xl font-mono font-semibold text-black dark:text-white">Zero</div>
-                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">External Data Retention</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">External Data Sharing</div>
                     </div>
-                    <div className="p-5 rounded-[22px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
-                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">90-Day</div>
-                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Hard Contracted ROI SLA</div>
+                    <div className="p-5 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col justify-between">
+                        <div className="text-2xl font-mono font-semibold text-black dark:text-white">90 Days</div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-400 mt-1">Measurable ROI SLA</div>
                     </div>
-                </div>
-
-                {/* Technical Standards Overview */}
-                <div className="mt-8 p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
-                    <div className="mb-3">
-                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold">
-                            Technical Architecture Standards
-                        </span>
-                    </div>
-                    <h2 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-2">
-                        How Elesium Delivers Deterministic Enterprise Workflows
-                    </h2>
-                    <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-                        <strong>Elesium&apos;s solutions catalog contains 100 verified enterprise AI architectures across logistics, BFSI, manufacturing, and healthcare.</strong> Every deployment runs as an air-gapped deterministic Python LangGraph state graph hosted on sovereign private VPCs or dedicated NVIDIA H100 clusters in tier-IV Indian datacenters (Yotta Shakti and CtrlS).
-                    </p>
-                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        By pairing vLLM PagedAttention with FP8 GEMM quantization and persistent checkpointing, our systems achieve sub-200ms time-to-first-token latency while ensuring strict compliance with Section 8(5) of India&apos;s Digital Personal Data Protection (DPDP) Act 2023. Every enterprise engagement carries a contractual 90-day cash-flow ROI SLA.
-                    </p>
                 </div>
             </header>
 
@@ -368,90 +335,11 @@ export default function SolutionsHub() {
                 })}
             </main>
 
-            {/* Transparent Institutional Pricing Tiers */}
-            <section className="max-w-6xl mx-auto px-6 mt-20">
-                <div className="p-8 sm:p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 block">
-                            Direct Commercial Engagement
-                        </span>
-                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-black dark:text-white">
-                            Institutional AI Engineering Investment Tiers
-                        </h2>
-                        <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-                            Deploy any of our 100 verified enterprise architectures under transparent commercial terms with contractual ROI guarantees.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between h-full">
-                            <div>
-                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 01</span>
-                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Pilot Architecture Sprint</h3>
-                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹1,50,000 - ₹3,50,000</div>
-                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">14-Day Delivery</div>
-                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                                    Single-process deterministic agent validation on private VPC staging with sub-200ms latency baseline.
-                                </p>
-                            </div>
-                            <button
-                                onClick={openWhatsApp}
-                                className="w-full py-2.5 px-5 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all duration-300"
-                            >
-                                Inquire Tier 1 &rarr;
-                            </button>
-                        </div>
-
-                        <div className="p-6 sm:p-7 rounded-[24px] border-2 border-black dark:border-white bg-white dark:bg-black flex flex-col justify-between h-full relative">
-                            <span className="absolute -top-3 left-6 px-3 py-0.5 bg-black text-white dark:bg-white dark:text-black text-[10px] font-bold font-mono rounded-full uppercase tracking-wider">
-                                Most Deployed
-                            </span>
-                            <div>
-                                <span className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase">Tier 02</span>
-                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Enterprise Multi-Agent Suite</h3>
-                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹6,00,000 - ₹15,00,000</div>
-                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">30-45 Day Implementation</div>
-                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                                    Collaborative 3-agent triad with SAP/Oracle connectors, zero-data-retention VPC, and 90-day ROI SLA.
-                                </p>
-                            </div>
-                            <button
-                                onClick={openWhatsApp}
-                                className="w-full py-2.5 px-5 rounded-full bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 font-semibold text-xs font-mono active:scale-[0.97] transition-all duration-300"
-                            >
-                                Deploy Suite &rarr;
-                            </button>
-                        </div>
-
-                        <div className="p-6 sm:p-7 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-white dark:bg-black flex flex-col justify-between h-full">
-                            <div>
-                                <span className="text-xs font-mono text-neutral-500 uppercase">Tier 03</span>
-                                <h3 className="text-lg font-bold text-black dark:text-white mt-1 mb-2">Autonomous Engineering Pod</h3>
-                                <div className="text-2xl font-bold font-mono text-black dark:text-white mb-1">₹4,50,000 / month</div>
-                                <div className="text-xs text-neutral-600 dark:text-neutral-400 font-mono mb-4">Dedicated Team</div>
-                                <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                                    3 AI engineers + 1 principal architect, continuous vLLM fine-tuning, and 1-hour critical production SLA.
-                                </p>
-                            </div>
-                            <button
-                                onClick={openWhatsApp}
-                                className="w-full py-2.5 px-5 rounded-full border border-neutral-200 dark:border-white/10 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-semibold text-xs font-mono active:scale-[0.97] transition-all duration-300"
-                            >
-                                Retain Pod &rarr;
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* FAQ Section */}
-            <section className="max-w-4xl mx-auto px-6 mt-20">
+            <section className="max-w-3xl mx-auto px-6 mt-20">
                 <div className="text-center mb-10">
-                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-1 block">
-                        Architecture &amp; Procurement
-                    </span>
                     <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
-                        Frequently Asked Questions About Solutions Deployment
+                        Common Questions
                     </h2>
                 </div>
 
@@ -459,9 +347,10 @@ export default function SolutionsHub() {
                     {solutionFaqs.map((faq, idx) => (
                         <div
                             key={idx}
-                            className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-black"
+                            className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black"
                         >
                             <button
+                                type="button"
                                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                                 className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                             >
@@ -485,49 +374,6 @@ export default function SolutionsHub() {
                             </AnimatePresence>
                         </div>
                     ))}
-                </div>
-            </section>
-
-            {/* Bottom Call to Action Card */}
-            <section className="max-w-6xl mx-auto px-6 mt-20">
-                <div className="relative overflow-hidden p-8 sm:p-12 md:p-16 rounded-[32px] border border-neutral-200 dark:border-white/10 bg-black text-white">
-                    <div className="relative z-10 max-w-2xl space-y-6">
-                        <span className="text-xs font-mono text-neutral-400 uppercase tracking-widest block">
-                            Sovereign Private VPC Deployment Protocol
-                        </span>
-
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">
-                            Request a Deterministic AI Architecture Audit for Your Enterprise
-                        </h2>
-
-                        <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
-                            Schedule a 30-minute technical evaluation directly with our Systems Engineering Pod.
-                            We review your SAP/Oracle ledgers, legacy workflows, and data governance policies,
-                            delivering a formal 1-page feasibility memorandum with zero obligation.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row items-center gap-3.5 pt-2">
-                            <button
-                                onClick={openWhatsApp}
-                                className="w-full sm:w-auto h-11 px-7 rounded-full bg-white text-black hover:bg-neutral-200 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-2"
-                            >
-                                <span>Chat on WhatsApp with Lead Architect</span>
-                                <ArrowRight className="w-4 h-4" />
-                            </button>
-
-                            <Link
-                                to="/waitlist/"
-                                className="w-full sm:w-auto h-11 px-7 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-1.5"
-                            >
-                                <span>ele-in SaaS Waitlist</span>
-                                <span>&rarr;</span>
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none">
-                        <img src="/assets/logo-square.png" alt="Elesium" width="384" height="384" loading="lazy" className="w-96 h-96 object-contain filter invert" />
-                    </div>
                 </div>
             </section>
         </main>

@@ -1,9 +1,8 @@
 import { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, ExternalLink, Cpu, Shield, Zap, Database, RefreshCw, MessageSquare, ChevronRight } from 'lucide-react';
+import { Search, BookOpen, ExternalLink, Cpu, Shield, Zap, Database, RefreshCw, ChevronRight } from 'lucide-react';
 import { GLOSSARY_TERMS, GlossaryTerm } from '../../data/glossaryData';
-import { useWhatsApp } from '../../hooks/useWhatsApp';
 
 const CATEGORIES = [
   'All',
@@ -17,7 +16,6 @@ const CATEGORIES = [
 export default function Glossary() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
   const filteredTerms = useMemo(() => {
     return GLOSSARY_TERMS.filter((item: GlossaryTerm) => {
@@ -104,7 +102,6 @@ export default function Glossary() {
 
   return (
     <main id="main-content" className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans transition-colors duration-300 pt-24 pb-20">
-      <WhatsAppModal />
       <Helmet>
         <title>AI Architecture Glossary | Elesium</title>
         <meta 
@@ -137,30 +134,18 @@ export default function Glossary() {
         </nav>
 
         {/* Hero Header */}
-        <header className="mb-14 text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-neutral-600 dark:text-neutral-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            <BookOpen className="w-3.5 h-3.5 text-neutral-600 dark:text-neutral-400" />
-            <span>Sovereign Knowledge Graph &middot; Lexicon</span>
-          </div>
-          
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black dark:text-white mb-6">
-            Enterprise AI Systems Glossary
-          </h1>
-          
-          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-8">
-            A peer-reviewed architectural reference for CTOs and Systems Architects. Grounded definitions of deterministic state machines, private VPC enclaves, and high-concurrency LLM serving fabrics.
-          </p>
+        <header className="mb-12 text-center max-w-3xl mx-auto">
+          <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500 block mb-4">
+            Technical Reference
+          </span>
 
-          {/* Technical Overview */}
-          <div className="answer-capsule text-left mb-10 p-6 sm:p-7 rounded-[24px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-3xl mx-auto">
-            <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
-              <Cpu className="w-4 h-4 text-black dark:text-white" />
-              Sovereign AI Engineering Terminology
-            </div>
-            <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
-              {aeoAnswerCapsule}
-            </p>
-          </div>
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-black dark:text-white mb-5">
+            AI &amp; Infrastructure Glossary
+          </h1>
+
+          <p className="answer-capsule text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-8">
+            Plain-English definitions of the infrastructure, compliance, and reliability concepts behind private enterprise AI.
+          </p>
 
           {/* Search Bar */}
           <div className="max-w-xl mx-auto relative mb-6">
@@ -293,31 +278,6 @@ export default function Glossary() {
           </div>
         )}
 
-        {/* Institutional Bottom CTA */}
-        <div className="rounded-[32px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-3">
-            Need Custom Multi-Agent Architecture for Your Enterprise?
-          </h2>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto mb-8 leading-relaxed">
-            Review your production workloads with Principal AI Systems Architect Chaman Shah. Contractually backed 14-day production pilot SLA with a 90-day ROI guarantee.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <button
-              onClick={openWhatsApp}
-              className="w-full sm:w-auto h-11 px-7 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold text-xs sm:text-sm hover:opacity-90 active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <MessageSquare className="w-4 h-4" />
-              <span>Chat on WhatsApp</span>
-            </button>
-            <Link
-              to="/waitlist/"
-              className="w-full sm:w-auto h-11 px-7 rounded-full border border-neutral-200 dark:border-white/10 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/10 font-semibold text-xs sm:text-sm active:scale-[0.97] transition-all duration-300 flex items-center justify-center gap-1.5"
-            >
-              <span>ele-in SaaS Waitlist</span>
-              <span>&rarr;</span>
-            </Link>
-          </div>
-        </div>
       </div>
     </main>
   );

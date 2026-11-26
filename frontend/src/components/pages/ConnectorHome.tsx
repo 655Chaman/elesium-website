@@ -20,19 +20,19 @@ export default function ConnectorHome() {
     const [mobileOpen, setMobileOpen] = useState(false)
 
     return (
-        <div className="dark min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans overflow-x-hidden">
+        <div className="dark min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans overflow-x-clip">
             <WhatsAppModal />
             <Helmet>
-                <title>Elesium Connector Model | Direct B2B Pipeline &amp; Partner Matching</title>
+                <title>Elesium Connector Model | Direct B2B Introductions &amp; Deal Flow</title>
                 <meta
                     name="description"
-                    content="Find the right partners faster with context, qualification, and trust. Elesium Connector Model connects verified enterprise buyers and suppliers directly."
+                    content="Find the right partners faster with context, qualification, and trust. Elesium Connector connects verified enterprise buyers and suppliers directly."
                 />
                 <link rel="canonical" href="https://elesium.online/connector/" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
 
-            {/* Symmetrical 3-Column Monochrome Connector Header */}
+            {/* Symmetrical 3-Column Monochrome Header */}
             <header className="fixed top-0 left-0 right-0 z-50 h-14 bg-black/90 backdrop-blur-xl border-b border-white/10">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-full grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">
                     {/* Left: Emblem */}
@@ -40,7 +40,7 @@ export default function ConnectorHome() {
                         <Link
                             to="/"
                             className="inline-flex items-center justify-center p-1.5 rounded-full hover:bg-white/10 active:scale-[0.97] transition"
-                            aria-label="Return to Elesium Gateway"
+                            aria-label="Return to Elesium Portal"
                         >
                             <img
                                 src={logo}
@@ -66,13 +66,13 @@ export default function ConnectorHome() {
                             href="#platform"
                             className="px-4 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                         >
-                            Architecture
+                            Process
                         </a>
                         <a
                             href="#engage"
                             className="px-4 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                         >
-                            Engage
+                            Connect
                         </a>
                     </nav>
 
@@ -134,14 +134,14 @@ export default function ConnectorHome() {
                                 onClick={() => setMobileOpen(false)}
                                 className="px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                             >
-                                Architecture
+                                Process
                             </a>
                             <a
                                 href="#engage"
                                 onClick={() => setMobileOpen(false)}
                                 className="px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                             >
-                                Engage
+                                Connect
                             </a>
                             <div className="my-2 h-px bg-white/10" />
                             <Link
@@ -173,14 +173,24 @@ export default function ConnectorHome() {
 
             <main>
                 {/* Symmetrical Calm-Luxury Connector Hero */}
-                <section className="min-h-[100svh] pt-[56px] flex items-center justify-center px-6 bg-black">
+                <section className="relative overflow-hidden min-h-[calc(100svh-56px)] mt-[56px] flex items-center justify-center px-6 bg-black">
+                    <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 opacity-40"
+                        style={{
+                            backgroundImage:
+                                'radial-gradient(circle at 50% 42%, rgba(255,255,255,0.08) 0%, transparent 58%), radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px)',
+                            backgroundSize: '100% 100%, 32px 32px',
+                        }}
+                    />
+
                     <motion.div
                         initial={{ opacity: 0, scale: 0.97, y: 14 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         transition={heroSpring}
-                        className="max-w-3xl mx-auto text-center py-16 md:py-24"
+                        className="relative z-10 max-w-3xl mx-auto text-center py-16 md:py-24"
                     >
-                        <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/10 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-8">
+                        <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/12 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-8">
                             Elesium Connector Model
                         </p>
 
@@ -197,7 +207,7 @@ export default function ConnectorHome() {
                                 href="#model"
                                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-black hover:bg-neutral-200 font-medium text-sm transition duration-200 active:scale-[0.97]"
                             >
-                                <span>Explore</span>
+                                <span>See how it works</span>
                                 <ArrowRight className="w-4 h-4" />
                             </a>
                             <button
@@ -205,31 +215,31 @@ export default function ConnectorHome() {
                                 onClick={openWhatsApp}
                                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-white/20 text-white hover:bg-white hover:text-black font-medium text-sm transition duration-200 active:scale-[0.97]"
                             >
-                                <span>Initiate Brief</span>
+                                <span>Talk to us</span>
                             </button>
                         </div>
                     </motion.div>
                 </section>
 
-                {/* Scroll Section 1: Supply -> Elesium -> Demand */}
+                {/* Scroll Section 1: Supply -> Elesium <- Demand */}
                 <div id="model" className="border-t border-white/10">
                     <AgentIntro />
                 </div>
 
-                {/* Scroll Section 2: 5-Slide Feature Explorer */}
+                {/* Scroll Section 2: 5-Step Sticky Explorer */}
                 <div className="border-t border-white/10">
                     <FeatureExplorer />
                 </div>
 
-                {/* Symmetrical Dual Engagement Grid */}
+                {/* Symmetrical Buyer & Supplier Cards */}
                 <section id="engage" className="py-24 md:py-32 px-6 bg-black border-t border-white/10">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
-                            <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/10 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-5">
-                                Direct Engagement
+                            <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/12 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-5">
+                                Get Started
                             </p>
                             <h2 className="text-3xl sm:text-4xl font-medium tracking-[-0.025em] text-white">
-                                Two sides of a qualified introduction
+                                Two sides of every introduction
                             </h2>
                         </div>
 
@@ -244,7 +254,7 @@ export default function ConnectorHome() {
                                         For Buyers
                                     </h3>
                                     <p className="text-sm font-light text-neutral-400 leading-relaxed mb-9">
-                                        Share your technical mandate, compliance scope, and timeline. We pre-vet capability and deliver direct introductions to principals ready to execute.
+                                        Share what you need, your requirements, and your timeline. We check capability upfront and introduce you directly to teams ready to deliver.
                                     </p>
                                 </div>
 
@@ -254,14 +264,14 @@ export default function ConnectorHome() {
                                         onClick={openWhatsApp}
                                         className="flex-1 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-black hover:bg-neutral-200 text-sm font-medium transition duration-200 active:scale-[0.97]"
                                     >
-                                        <span>Initiate Brief</span>
+                                        <span>Talk to us</span>
                                         <ArrowRight className="w-4 h-4" />
                                     </button>
                                     <a
-                                        href="mailto:connect@elesium.online?subject=Buyer%20Mandate%20-%20Elesium%20Connector"
+                                        href="mailto:connect@elesium.online?subject=Buyer%20Inquiry%20-%20Elesium%20Connector"
                                         className="flex-1 inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/15 text-white hover:bg-white/10 text-sm font-medium transition duration-200 active:scale-[0.97]"
                                     >
-                                        Email Mandate
+                                        Email us
                                     </a>
                                 </div>
                             </div>
@@ -276,7 +286,7 @@ export default function ConnectorHome() {
                                         For Suppliers
                                     </h3>
                                     <p className="text-sm font-light text-neutral-400 leading-relaxed mb-9">
-                                        Present your delivery track record and domain focus. Connect directly with qualified buyers holding active budgets and clear evaluation criteria.
+                                        Share what you build and your track record. Meet qualified buyers with real budgets and active projects instead of chasing cold lists.
                                     </p>
                                 </div>
 
@@ -286,14 +296,14 @@ export default function ConnectorHome() {
                                         onClick={openWhatsApp}
                                         className="flex-1 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-black hover:bg-neutral-200 text-sm font-medium transition duration-200 active:scale-[0.97]"
                                     >
-                                        <span>Submit Profile</span>
+                                        <span>Apply to connect</span>
                                         <ArrowRight className="w-4 h-4" />
                                     </button>
                                     <a
-                                        href="mailto:connect@elesium.online?subject=Supplier%20Profile%20-%20Elesium%20Connector"
+                                        href="mailto:connect@elesium.online?subject=Supplier%20Application%20-%20Elesium%20Connector"
                                         className="flex-1 inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-white/15 text-white hover:bg-white/10 text-sm font-medium transition duration-200 active:scale-[0.97]"
                                     >
-                                        Email Portfolio
+                                        Email us
                                     </a>
                                 </div>
                             </div>
@@ -321,10 +331,9 @@ export default function ConnectorHome() {
                         </Link>
                         <Link
                             to="/ai/"
-                            className="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition inline-flex items-center gap-1 active:scale-[0.97]"
+                            className="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                         >
-                            <span>AI &amp; Automation</span>
-                            <ArrowUpRight className="w-3.5 h-3.5" />
+                            AI &amp; Automation
                         </Link>
                     </div>
                 </div>

@@ -1,13 +1,11 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FileText, Download, MessageSquare, ArrowRight, ChevronRight, Cpu } from 'lucide-react'
+import { FileText, Download, ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { resourcesData } from '../../data/resourcesData'
-import { useWhatsApp } from '../../hooks/useWhatsApp'
 
 export default function Resources() {
-    const { openWhatsApp, WhatsAppModal } = useWhatsApp();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -78,7 +76,6 @@ export default function Resources() {
 
     return (
         <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 transition-colors duration-300">
-            <WhatsAppModal />
             <Helmet>
                 <title>AI Automation Resources & Guides | Elesium</title>
                 <meta name="description" content="Free AI automation playbooks, case studies and implementation guides from Elesium, India's leading AI automation agency." />
@@ -115,28 +112,15 @@ export default function Resources() {
                         transition={{ duration: 0.4 }}
                     >
                         {/* Intro Section */}
-                        <div className="mb-10 max-w-3xl">
-                            <div className="mb-4">
-                                <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-neutral-600 dark:text-neutral-400">
-                                    Engineering Playbooks &amp; Benchmarks
-                                </span>
-                            </div>
-                            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-black dark:text-white leading-[1.1]">
+                        <div className="mb-12 max-w-3xl">
+                            <span className="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-500 block mb-4">
+                                Playbooks &amp; Guides
+                            </span>
+                            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-5 text-black dark:text-white leading-[1.12]">
                                 Resources &amp; Guides
                             </h1>
-                            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
-                                Download our production tools, scripts, and workflows. Complete with detailed technical documentation and execution playbooks.
-                            </p>
-                        </div>
-
-                        {/* Technical Overview */}
-                        <div className="answer-capsule mt-2 mb-12 p-6 sm:p-7 rounded-[24px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 border-l-4 border-l-black dark:border-l-white max-w-4xl">
-                            <div className="text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold mb-2 flex items-center gap-2">
-                                <Cpu className="w-4 h-4 text-black dark:text-white" />
-                                Technical Playbooks &amp; Benchmarks
-                            </div>
-                            <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-medium">
-                                {aeoAnswerCapsule}
+                            <p className="answer-capsule text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+                                Practical playbooks, implementation guides, and reference scripts built from real enterprise deployments.
                             </p>
                         </div>
 
@@ -300,35 +284,6 @@ export default function Resources() {
                                     ))}
                                 </div>
                             </section>
-
-                            {/* Direct WhatsApp Intake Card */}
-                            <div className="mt-8 p-8 sm:p-12 rounded-[32px] bg-black text-white border border-neutral-200 dark:border-white/10 text-center space-y-4">
-                                <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block">
-                                    Direct Principal Systems Pairing
-                                </span>
-                                <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white max-w-xl mx-auto">
-                                    Need a Bespoke Architecture Blueprint for Your Team?
-                                </h3>
-                                <p className="text-xs sm:text-sm text-neutral-300 max-w-xl mx-auto leading-relaxed">
-                                    Connect directly with our Principal AI Systems Architect to review private VPC deployment feasibility.
-                                </p>
-                                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-                                    <button
-                                        onClick={openWhatsApp}
-                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white text-black hover:bg-neutral-200 font-semibold px-7 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all duration-300 group"
-                                    >
-                                        <MessageSquare className="w-4 h-4 fill-current" />
-                                        <span>Chat on WhatsApp with Lead Architect</span>
-                                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-                                    </button>
-                                    <Link
-                                        to="/waitlist/"
-                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/20 hover:bg-white/10 text-white font-medium px-6 py-3.5 rounded-full text-sm active:scale-[0.97] transition-all duration-300"
-                                    >
-                                        <span>ele-in SaaS Waitlist &rarr;</span>
-                                    </Link>
-                                </div>
-                            </div>
 
                         </div>
                     </motion.div>

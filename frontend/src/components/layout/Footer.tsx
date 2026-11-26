@@ -52,13 +52,13 @@ export default function DownloadFooter() {
                 <div className="mb-12 p-6 sm:p-8 rounded-[32px] bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
                     <div className="space-y-2 max-w-2xl">
                         <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">
-                            Direct Engineering Intake
+                            Get in Touch
                         </div>
                         <p className="text-xl sm:text-2xl font-bold tracking-tight text-black dark:text-white">
-                            Direct Principal Systems Architect Pairing
+                            Talk Directly With Our Engineering Team
                         </p>
                         <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed">
-                            Connect directly with our principal engineering team in Koramangala, Bengaluru via WhatsApp to evaluate custom multi-agent DAG architectures, latency benchmarks, and DPDP Act compliance.
+                            Reach out on WhatsApp to discuss your workflows, private cloud setup, and timeline with our Bengaluru team.
                         </p>
                     </div>
 

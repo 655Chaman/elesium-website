@@ -31,6 +31,8 @@ interface BeamCoords {
     startY: number
     endX: number
     endY: number
+    width: number
+    height: number
 }
 
 export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
@@ -40,13 +42,13 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     toRef,
     curvature = 0,
     reverse = false,
-    duration = 4,
+    duration = 2.8,
     delay = 0,
-    pathColor = "rgba(255, 255, 255, 0.14)",
+    pathColor = "rgba(255, 255, 255, 0.22)",
     pathWidth = 2,
     pathOpacity = 1,
     gradientStartColor = "#ffffff",
-    gradientStopColor = "#737373",
+    gradientStopColor = "#a3a3a3",
     startXOffset = 0,
     startYOffset = 0,
     endXOffset = 0,
@@ -61,35 +63,46 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     useEffect(() => {
         const updatePath = () => {
             if (containerRef.current && fromRef.current && toRef.current && svgRef.current) {
-                const svgRect = svgRef.current.getBoundingClientRect()
+                const containerRect = containerRef.current.getBoundingClientRect()
                 const rectA = fromRef.current.getBoundingClientRect()
                 const rectB = toRef.current.getBoundingClientRect()
 
-                if (svgRect.width === 0 || svgRect.height === 0) return
+                if (containerRect.width === 0 || containerRect.height === 0) return
 
-                const startX = rectA.left - svgRect.left + rectA.width / 2 + startXOffset
-                const startY = rectA.top - svgRect.top + rectA.height / 2 + startYOffset
-                const endX = rectB.left - svgRect.left + rectB.width / 2 + endXOffset
-                const endY = rectB.top - svgRect.top + rectB.height / 2 + endYOffset
+                const startX = rectA.left - containerRect.left + rectA.width / 2 + startXOffset
+                const startY = rectA.top - containerRect.top + rectA.height / 2 + startYOffset
+                const endX = rectB.left - containerRect.left + rectB.width / 2 + endXOffset
+                const endY = rectB.top - containerRect.top + rectB.height / 2 + endYOffset
 
-                // Hide beam if start and end points collapse onto the same point
                 if (Math.abs(startX - endX) < 1 && Math.abs(startY - endY) < 1) {
                     setPathD("")
                     setCoords(null)
                     return
                 }
 
+                const ax = reverse ? endX : startX
+                const ay = reverse ? endY : startY
+                const bx = reverse ? startX : endX
+                const by = reverse ? startY : endY
+
                 if (vertical) {
-                    const controlX = (startX + endX) / 2 - curvature
-                    const controlY = (startY + endY) / 2
-                    setPathD(`M ${startX},${startY} Q ${controlX},${controlY} ${endX},${endY}`)
+                    const controlX = (ax + bx) / 2 - curvature
+                    const controlY = (ay + by) / 2
+                    setPathD(`M ${ax.toFixed(1)},${ay.toFixed(1)} Q ${controlX.toFixed(1)},${controlY.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`)
                 } else {
-                    const controlX = (startX + endX) / 2
-                    const controlY = (startY + endY) / 2 - curvature
-                    setPathD(`M ${startX},${startY} Q ${controlX},${controlY} ${endX},${endY}`)
+                    const controlX = (ax + bx) / 2
+                    const controlY = (ay + by) / 2 - curvature
+                    setPathD(`M ${ax.toFixed(1)},${ay.toFixed(1)} Q ${controlX.toFixed(1)},${controlY.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`)
                 }
 
-                setCoords({ startX, startY, endX, endY })
+                setCoords({
+                    startX: ax,
+                    startY: ay,
+                    endX: bx,
+                    endY: by,
+                    width: containerRect.width,
+                    height: containerRect.height,
+                })
             }
         }
 
@@ -103,19 +116,22 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
 
         window.addEventListener("resize", updatePath)
         const rafId = requestAnimationFrame(updatePath)
-        const settleTimeoutId = setTimeout(updatePath, 180)
+        const settleA = setTimeout(updatePath, 120)
+        const settleB = setTimeout(updatePath, 420)
 
         return () => {
             resizeObserver.disconnect()
             window.removeEventListener("resize", updatePath)
             cancelAnimationFrame(rafId)
-            clearTimeout(settleTimeoutId)
+            clearTimeout(settleA)
+            clearTimeout(settleB)
         }
     }, [
         containerRef,
         fromRef,
         toRef,
         curvature,
+        reverse,
         startXOffset,
         startYOffset,
         endXOffset,
@@ -123,32 +139,11 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         vertical,
     ])
 
-    const gradientAnimation = coords
-        ? (() => {
-              const ax = reverse ? coords.endX : coords.startX
-              const ay = reverse ? coords.endY : coords.startY
-              const bx = reverse ? coords.startX : coords.endX
-              const by = reverse ? coords.startY : coords.endY
-              const dx = bx - ax
-              const dy = by - ay
-              const pulseSpan = 0.44
-
-              return {
-                  initial: {
-                      x1: ax - dx * pulseSpan,
-                      y1: ay - dy * pulseSpan,
-                      x2: ax,
-                      y2: ay,
-                  },
-                  animate: {
-                      x1: [ax - dx * pulseSpan, bx],
-                      y1: [ay - dy * pulseSpan, by],
-                      x2: [ax, bx + dx * pulseSpan],
-                      y2: [ay, by + dy * pulseSpan],
-                  },
-              }
-          })()
-        : null
+    // Total straight-line span for reliable cross-browser dash-pulse animation
+    const pathLen = coords
+        ? Math.max(40, Math.hypot(coords.endX - coords.startX, coords.endY - coords.startY))
+        : 120
+    const pulseLen = Math.max(24, Math.min(54, pathLen * 0.34))
 
     return (
         <svg
@@ -156,14 +151,31 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
             fill="none"
             width="100%"
             height="100%"
+            viewBox={coords ? `0 0 ${coords.width} ${coords.height}` : undefined}
+            preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
             className={cn(
-                "pointer-events-none absolute top-0 left-0 transform-gpu",
+                "pointer-events-none absolute inset-0 transform-gpu",
                 className
             )}
         >
-            {pathD && (
+            <defs>
+                <linearGradient
+                    id={id}
+                    x1={vertical ? "0%" : "0%"}
+                    y1={vertical ? "0%" : "0%"}
+                    x2={vertical ? "0.5%" : "100%"}
+                    y2={vertical ? "100%" : "0.5%"}
+                >
+                    <stop offset="0%" stopColor={gradientStopColor} stopOpacity="0.25" />
+                    <stop offset="50%" stopColor={gradientStartColor} stopOpacity="0.9" />
+                    <stop offset="100%" stopColor={gradientStartColor} stopOpacity="1" />
+                </linearGradient>
+            </defs>
+
+            {pathD && coords && (
                 <>
+                    {/* Crisp continuous structural rail */}
                     <path
                         d={pathD}
                         stroke={pathColor}
@@ -172,47 +184,54 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
                         strokeLinecap="round"
                         strokeLinejoin="round"
                     />
+
+                    {/* Soft ambient glow rail */}
                     <path
                         d={pathD}
-                        strokeWidth={pathWidth * 2.2}
                         stroke={`url(#${id})`}
-                        strokeOpacity="0.22"
+                        strokeWidth={pathWidth * 2.4}
+                        strokeOpacity="0.16"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                     />
-                    <path
+
+                    {/* Continuous synchronized dash-pulse flowing smoothly from start to end */}
+                    <motion.path
                         d={pathD}
+                        stroke="#ffffff"
                         strokeWidth={pathWidth}
-                        stroke={`url(#${id})`}
-                        strokeOpacity="1"
+                        strokeOpacity="0.95"
                         strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                </>
-            )}
-            <defs>
-                {gradientAnimation && (
-                    <motion.linearGradient
-                        className="transform-gpu"
-                        id={id}
-                        gradientUnits="userSpaceOnUse"
-                        initial={gradientAnimation.initial}
-                        animate={gradientAnimation.animate}
+                        strokeDasharray={`${pulseLen} ${pathLen + pulseLen}`}
+                        initial={{ strokeDashoffset: pulseLen }}
+                        animate={{ strokeDashoffset: -(pathLen) }}
                         transition={{
                             delay,
                             duration,
-                            ease: [0.37, 0, 0.63, 1],
+                            ease: "linear",
                             repeat: Infinity,
-                            repeatDelay: 0.15,
                         }}
-                    >
-                        <stop offset="0%" stopColor={gradientStartColor} stopOpacity="0" />
-                        <stop offset="35%" stopColor={gradientStartColor} stopOpacity="0.95" />
-                        <stop offset="68%" stopColor={gradientStopColor} stopOpacity="0.6" />
-                        <stop offset="100%" stopColor={gradientStopColor} stopOpacity="0" />
-                    </motion.linearGradient>
-                )}
-            </defs>
+                    />
+
+                    {/* Subtle soft halo under the active pulse */}
+                    <motion.path
+                        d={pathD}
+                        stroke="#ffffff"
+                        strokeWidth={pathWidth * 3}
+                        strokeOpacity="0.24"
+                        strokeLinecap="round"
+                        strokeDasharray={`${pulseLen} ${pathLen + pulseLen}`}
+                        initial={{ strokeDashoffset: pulseLen }}
+                        animate={{ strokeDashoffset: -(pathLen) }}
+                        transition={{
+                            delay,
+                            duration,
+                            ease: "linear",
+                            repeat: Infinity,
+                        }}
+                    />
+                </>
+            )}
         </svg>
     )
 }
