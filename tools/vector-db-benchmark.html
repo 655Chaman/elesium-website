@@ -35,18 +35,17 @@
     margin: 0;
     padding: 0;
     background-color: #0a0a0c !important;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   #root {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    contain: paint layout;
   }
-  /* Zero CLS Geometric Reservations for Banners, Nav, and Embeds */
+  /* Zero CLS Geometric Reservations for Banners and Nav */
   .international-geo-banner, [data-geo-banner] {
     min-height: 48px;
     contain-intrinsic-size: 1px 48px;
@@ -54,10 +53,6 @@
   .global-nav-container, header.site-header {
     min-height: 64px;
     contain-intrinsic-size: 1px 64px;
-  }
-  .hero-graphic, .embed-wrapper, iframe {
-    aspect-ratio: 16 / 9;
-    contain: layout paint;
   }
   img, svg {
     max-width: 100%;
@@ -80,27 +75,11 @@
     contain-intrinsic-size: 1px 400px;
   }</style>
 <script id="inp-scheduler-engine">/* ==========================================================================
-     ELESIUM SUB-50ms INP SCHEDULER & PASSIVE EVENT LISTENER POLYFILL (MODULE 03)
+     ELESIUM SUB-50ms INP SCHEDULER (MODULE 03)
      ========================================================================== */
   (function() {
     'use strict';
-    // 1. Passive event listeners by default on touch and wheel events
-    var originalAddEventListener = EventTarget.prototype.addEventListener;
-    var passiveEvents = ['touchstart', 'touchmove', 'wheel', 'mousewheel', 'scroll'];
-    EventTarget.prototype.addEventListener = function(type, listener, options) {
-      if (passiveEvents.indexOf(type) !== -1) {
-        if (typeof options === 'boolean') {
-          options = { capture: options, passive: true };
-        } else if (typeof options === 'object' && options !== null && options.passive === undefined) {
-          options.passive = true;
-        } else if (options === undefined) {
-          options = { passive: true };
-        }
-      }
-      return originalAddEventListener.call(this, type, listener, options);
-    };
-
-    // 2. Microtask slicing and yielding for sub-50ms main thread interactions
+    // 1. Microtask slicing and yielding for sub-50ms main thread interactions
     window.yieldToMain = function() {
       if ('scheduler' in window && 'yield' in window.scheduler) {
         return window.scheduler.yield();
@@ -112,7 +91,7 @@
       });
     };
 
-    // 3. Real-Time INP & Interaction Observer
+    // 2. Real-Time INP & Interaction Observer
     if ('PerformanceObserver' in window) {
       try {
         var inpObserver = new PerformanceObserver(function(list) {
@@ -137,7 +116,7 @@
     }
   })();</script>
 </head>
-<body><span style="display:none !important;visibility:hidden !important;opacity:0 !important;">﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌‌‍​‌‌​‌‌​​‍​‌‌‌​​‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌‌​‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌​‍​‌‌‌​​​​‍​‌‌‌​​‌​‍​‌‌​‌​​‌‍​‌‌‌​​‌‌‍​‌‌​​‌​‌‍​​‌​‌‌​‌‍​‌‌‌​‌‌​‍​‌‌​​‌​‌‍​‌‌​​​‌‌‍​‌‌‌​‌​​‍​‌‌​‌‌‌‌‍​‌‌‌​​‌​‍​​‌​‌‌​‌‍​‌‌​​‌​​‍​‌‌​​​‌​‍​​‌​‌‌​‌‍​‌‌​‌‌​​‍​‌‌​​​​‌‍​‌‌‌​‌​​‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌​​​‌‌‍​‌‌‌‌​​‌‍​​‌​‌‌​‌‍​‌‌​​​‌​‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌​​​‌‌‍​‌‌​‌​​​‍​‌‌​‌‌​‌‍​‌‌​​​​‌‍​‌‌‌​​‌​‍​‌‌​‌​‌‌‍​​‌​‌‌‌‌‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​​‌‌‌​​‌‍​​‌‌​‌​​‍​​‌‌​‌​​‍​​‌‌​​​​‍​‌‌​​‌‌​‍​​‌‌​​​​‍​​‌‌​‌​‌‍​‌‌​​​‌‌‍​‌‌​​‌​‌‍​​‌‌​‌​​‍​​‌‌​‌‌​‍​​‌‌​‌​​‍​‌‌​​‌‌​‍​‌‌​​‌​‌‍​​‌‌​‌‌​‍​‌‌​​​‌‌﻿</span>
+<body>
   <p>Redirecting to <a href="https://elesium.online/tools/enterprise-vector-db-latency-benchmark/">https://elesium.online/tools/enterprise-vector-db-latency-benchmark/</a>...</p>
 </body>
 </html>

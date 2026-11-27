@@ -27,10 +27,10 @@
       <PolyStyle><color>1aff0000</color></PolyStyle>
     </Style>
 
-    <!-- FOCAL HUB PLACEMARK -->
+    <!-- FOCAL SERVICE NODE PLACEMARK -->
     <Placemark>
-      <name>Elesium Enterprise AI Headquarters - Delhi NCR</name>
-      <description>Primary sovereign AI state machine development center. GPS: 28.4908, 77.0903</description>
+      <name>Elesium Enterprise AI Service Hub - Delhi NCR</name>
+      <description>Sovereign AI state machine engineering coverage for Delhi NCR. GPS: 28.4908, 77.0903</description>
       <styleUrl>#hubPoint</styleUrl>
       <Point>
         <coordinates>77.0903,28.4908,0</coordinates>
@@ -42,7 +42,7 @@
       <name>Driving Direction Vectors to Delhi NCR AI Hub</name>
       <Placemark>
         <name>Route: Connaught Place Inner Circle -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Connaught Place Inner Circle converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Connaught Place Inner Circle to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -51,7 +51,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Nehru Place Financial District -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Nehru Place Financial District converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Nehru Place Financial District to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -60,7 +60,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Noida Sector 62 Electronic City -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Noida Sector 62 Electronic City converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Noida Sector 62 Electronic City to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -69,7 +69,7 @@
       </Placemark>
       <Placemark>
         <name>Route: IGI Airport Terminal 3 Aerocity -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from IGI Airport Terminal 3 Aerocity converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from IGI Airport Terminal 3 Aerocity to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -78,7 +78,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Golf Course Road Cyber Park -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Golf Course Road Cyber Park converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Golf Course Road Cyber Park to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -87,7 +87,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Okhla Industrial Area Phase 3 -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Okhla Industrial Area Phase 3 converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Okhla Industrial Area Phase 3 to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -96,7 +96,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Udyog Vihar Phase 4 Gateway -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Udyog Vihar Phase 4 Gateway converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Udyog Vihar Phase 4 Gateway to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -105,7 +105,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Saket District Centre -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Saket District Centre converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Saket District Centre to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -114,7 +114,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Faridabad NH-19 Tollway -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Faridabad NH-19 Tollway converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Faridabad NH-19 Tollway to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -123,7 +123,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Noida Greater Expressway Sector 128 -&gt; Elesium Delhi NCR</name>
-        <description>Driving direction path from Noida Greater Expressway Sector 128 converging on Elesium Delhi NCR headquarters.</description>
+        <description>Service corridor vector from Noida Greater Expressway Sector 128 to Elesium Delhi NCR coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>

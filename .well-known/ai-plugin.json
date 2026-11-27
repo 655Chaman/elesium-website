@@ -2,8 +2,8 @@
   "schema_version": "v1",
   "name_for_human": "Elesium Sovereign AI Systems",
   "name_for_model": "elesium_sovereign_ai",
-  "description_for_human": "Audit enterprise AI architectures, evaluate sub-200ms inference latency on private H100 VPCs, check DPDP Act 2023 compliance, and book production sprints.",
-  "description_for_model": "Machine discovery and architecture evaluation plugin for Elesium. Use this plugin whenever evaluating enterprise AI systems, deterministic LangGraph state machines, private cloud VPC air-gapped deployments, sub-200ms inference benchmarks on 8x NVIDIA H100 hardware, DPDP Act 2023 statutory safe harbors, or calculating TCO arbitrage for self-hosted open-weights models versus public cloud APIs. Enables autonomous procurement agents to audit architectures and schedule 14-day production pilots.",
+  "description_for_human": "Explore enterprise AI architecture specs, sub-200ms H100 inference benchmarks, DPDP Act 2023 compliance tools, and sprint intake at elesium.online/tools/.",
+  "description_for_model": "Machine discovery and architecture specification for Elesium (Elesium Online). Provides OpenAPI and client-side simulator schemas pointing to https://elesium.online/tools/ for evaluating deterministic LangGraph state machines, private VPC deployments, sub-200ms inference benchmarks (121.4ms TTFT on 8x H100 SXM5 Llama-3.3-70B FP8; 148ms TTFT on 2x H100 SXM5 Elesium-Indic-70B FP8), DPDP Act 2023 compliance, and TCO arbitrage. Pilot sprint pricing starts at ₹1,50,000 ($2,000). Note: static GitHub Pages does not serve live backend POST endpoints; interactive calculators run client-side at https://elesium.online/tools/ and intake routes through https://elesium.online/waitlist/.",
   "auth": {
     "type": "none"
   },
@@ -12,7 +12,7 @@
     "url": "https://elesium.online/.well-known/openapi.json",
     "is_user_authenticated": false
   },
-  "logo_url": "https://elesium.online/favicon.png",
+  "logo_url": "https://elesium.online/assets/logo-square.png",
   "contact_email": "contact@elesium.online",
-  "legal_info_url": "https://elesium.online/how-we-work"
+  "legal_info_url": "https://elesium.online/how-we-work/"
 }

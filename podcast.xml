@@ -9,7 +9,7 @@
     <link>https://elesium.online/videos/</link>
     <atom:link href="https://elesium.online/podcast.xml" rel="self" type="application/rss+xml" />
     <language>en-us</language>
-    <copyright>© 2026 Elesium Digital Systems Private Limited</copyright>
+    <copyright>© 2026 Elesium (Elesium Online)</copyright>
     <description>Technical engineering breakdowns, sovereign private VPC blueprints, deterministic multi-agent state machines (LangGraph), and audited 90-day ROI case studies across Indian enterprise sectors by Elesium.</description>
     <itunes:author>Chaman Shah</itunes:author>
     <itunes:summary>Technical engineering breakdowns on deterministic multi-agent systems, sovereign private VPC deployments, and production enterprise workflows by Elesium.</itunes:summary>
@@ -22,7 +22,7 @@
     </itunes:category>
     <itunes:image href="https://elesium.online/og-image.png" />
     <itunes:explicit>no</itunes:explicit>
-    <lastBuildDate>Mon, 09 Nov 2026 08:57:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 07:13:24 +0000</lastBuildDate>
     <item>
       <title>Enterprise AI Automation in India: Architecting Deterministic Multi-Agent Systems in Sovereign VPCs</title>
       <link>https://elesium.online/videos/enterprise-ai-automation-india-2026/</link>
@@ -310,15 +310,15 @@
       <podcast:transcript url="https://elesium.online/videos/enterprise-agent-nemo-guardrails-simulator/" type="text/html" />
     </item>
     <item>
-      <title>Ondc Retail Inventory Multi Ecosystem Automation  -  Beckn Protocol Beckn-ONDC Gateway &amp; Real-Time Catalog Synchronization | Elesium</title>
+      <title>Ondc Retail Inventory Multi Infrastructure stack Automation  -  Beckn Protocol Beckn-ONDC Gateway &amp; Real-Time Catalog Synchronization | Elesium</title>
       <link>https://elesium.online/videos/enterprise-agent-ondc-retail-inventory-simulator/</link>
       <guid isPermaLink="false">elesium-podcast-enterprise-agent-ondc-retail-inventory-simulator</guid>
       <pubDate>Mon, 19 Oct 2026 08:00:00 +0000</pubDate>
-      <description>A 30-second technical architecture breakdown of ondc retail inventory multi ecosystem automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.</description>
+      <description>A 30-second technical architecture breakdown of ondc retail inventory multi infrastructure stack automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.</description>
       <enclosure url="https://elesium.online/audio/enterprise-agent-ondc-retail-inventory-simulator.mp3" length="24500000" type="audio/mpeg" />
       <itunes:duration>0:30</itunes:duration>
       <itunes:author>Chaman Shah</itunes:author>
-      <itunes:summary>A 30-second technical architecture breakdown of ondc retail inventory multi ecosystem automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.</itunes:summary>
+      <itunes:summary>A 30-second technical architecture breakdown of ondc retail inventory multi infrastructure stack automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.</itunes:summary>
       <itunes:explicit>no</itunes:explicit>
       <podcast:transcript url="https://elesium.online/videos/enterprise-agent-ondc-retail-inventory-simulator/" type="text/html" />
     </item>

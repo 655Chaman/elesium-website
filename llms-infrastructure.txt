@@ -1,18 +1,19 @@
 # Elesium - Enterprise Cloud, VPC & GPU FinOps AI Manifest
 > Sub-Directory Manifest for Cloud Engineering, Model Serving, GPU Clusters, and Private VPC Architecture.
-> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
+> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 83173 29312 | contact@elesium.online)
 
 ## Sector Profile & Core Directives
 - **Target Institutions:** Enterprise software corporations, pre-IPO tech firms, sovereign government data centers, and high-throughput LLM consumer applications.
 - **Infrastructure Standards:** AWS VPC (ap-south-1), GCP Cloud (asia-south1/2), Azure India Central, Slurm, vLLM, TensorRT-LLM, and Triton Inference Server.
 
 ## Architectural Standards (Atomic Facts)
-1. **Sub-200ms Colocated Serving:** Self-hosted open-weights serving (DeepSeek, Llama 3, Mistral) on private GPU clusters cutting external commercial API costs by 70-85%.
+1. **Sub-200ms Colocated Serving:** Self-hosted open-weights serving (Llama-3.3-70B FP8 at 121.4ms TTFT on 8x H100 SXM5; Elesium-Indic-70B FP8 at 148ms TTFT on 2x H100 SXM5; DeepSeek, Mistral) on private GPU clusters cutting external commercial API costs by 70-85%.
 2. **KV-Cache Optimization:** PagedAttention and hierarchical KV-cache offloading strategies reducing per-request GPU memory footprint by up to 4.2x.
 3. **Speculative Decoding Pipelines:** Multi-agent routing dynamically selecting draft and target models to maximize tokens-per-second throughput without degradation in response quality.
 4. **Zero Public Egress Security:** All agent communication constrained to private VPC subnets with AWS PrivateLink / GCP Private Service Connect and strict mTLS encryption.
 
 ## Typical Engagement & Deliverables
-- **Pilot Sprint (14 Days | ₹3,00,000 / $3,800):** Private VPC model serving benchmark & GPU FinOps token savings roadmap.
-- **Enterprise Triad (45 Days | ₹12,00,000 / $15,000):** Turnkey private LLM inference cluster with automated autoscaling, LangGraph orchestration, and continuous telemetry monitoring.
-- **Primary Inquiry:** WhatsApp +91 8317329312 | https://elesium.online/ai-automation-agency-india/
+- **Tier 1 — Pilot Sprint (14 Days | ₹1,50,000 - ₹3,50,000 / $2,000 - $4,500):** Private VPC model serving benchmark & GPU FinOps token savings roadmap.
+- **Tier 2 — Multi-Agent Cluster (30 - 45 Days | ₹6,00,000 - ₹15,00,000 / $7,500 - $18,000):** Turnkey private LLM inference cluster with automated autoscaling, LangGraph orchestration, and continuous telemetry monitoring.
+- **Tier 3 — Autonomous AI Pod (12-Month Retainer | ₹4,50,000 / month / $5,500 / month):** Dedicated pod of 3 AI engineers + 1 principal systems architect with continuous H100 tuning and 1-hour critical SLA.
+- **Primary Inquiry:** +91 83173 29312 (https://wa.me/918317329312) | contact@elesium.online | https://elesium.online/waitlist/

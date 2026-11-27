@@ -4,18 +4,36 @@
     {
       "@type": [
         "Organization",
-        "Corporation"
+        "ProfessionalService"
       ],
       "@id": "https://elesium.online/#organization",
-      "name": "Elesium Digital Systems Private Limited",
+      "name": "Elesium",
+      "legalName": "Elesium Online",
       "alternateName": [
-        "Elesium",
+        "Elesium Online",
         "Elesium Sovereign AI"
       ],
       "url": "https://elesium.online",
-      "logo": "https://elesium.online/chaman-shah.png",
-      "description": "Indian sovereign artificial intelligence infrastructure engineering firm specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines.",
+      "logo": "https://elesium.online/assets/logo-square.png",
+      "telephone": "+91 83173 29312",
+      "email": "contact@elesium.online",
+      "description": "Indian sovereign artificial intelligence infrastructure engineering firm operating remotely from Shivamogga, Karnataka, specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Remote Engineering Base, Shivamogga",
+        "addressLocality": "Shivamogga",
+        "addressRegion": "Karnataka",
+        "postalCode": "577205",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.9299,
+        "longitude": 75.5681
+      },
       "areaServed": [
+        "Bengaluru",
+        "Karnataka",
         "India",
         "Global"
       ],

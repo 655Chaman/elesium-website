@@ -1,6 +1,6 @@
 # MUTUAL NON-DISCLOSURE AGREEMENT (NDA)
 
-**EFFECTIVE DATE**: November 09, 2026  
+**EFFECTIVE DATE**: November 27, 2026  
 **GOVERNING LAW**: Indian Contract Act, 1872 (Courts of Bengaluru, Karnataka)  
 **STATUTORY COMPLIANCE**: DPDP Act 2023 (Section 8(5) - Digital Personal Data Protection Act, 2023)  
 
@@ -8,7 +8,7 @@
 
 ### PARTIES:
 
-1. **ELESIUM DIGITAL SYSTEMS PRIVATE LIMITED**, a private company incorporated under the Companies Act, 2013, having its corporate engineering headquarters at Koramangala 4th Block, Bengaluru, Karnataka 560034, India (hereinafter referred to as "**Elesium**", which expression shall include its successors and permitted assigns); and
+1. **ELESIUM (ELESIUM ONLINE)**, an enterprise AI engineering practice operating from Shivamogga, Karnataka 577205, India (hereinafter referred to as "**Elesium**", which expression shall include its successors and permitted assigns); and
 
 2. **[ENTERPRISE CLIENT LEGAL ENTITY NAME]**, a corporate entity having its principal office at [REGISTERED CORPORATE ADDRESS] (hereinafter referred to as the "**Company**", which expression shall include its successors and permitted assigns).
 
@@ -44,14 +44,14 @@ This Agreement is governed by the laws of India. Any dispute arising out of or i
 
 ### IN WITNESS WHEREOF, the Parties have executed this Mutual Non-Disclosure Agreement:
 
-**For ELESIUM DIGITAL SYSTEMS PRIVATE LIMITED**:  
+**For Elesium (Elesium Online)**:  
 Signature: *Chaman Shah*  
 Name: Chaman Shah  
 Title: Founder & Principal Systems Architect  
-Date: November 09, 2026  
+Date: November 27, 2026  
 
 **For [ENTERPRISE CLIENT LEGAL ENTITY NAME]**:  
 Signature: _____________________________________  
 Name: [AUTHORIZED SIGNATORY NAME]  
 Title: [CHIEF EXECUTIVE / CTO / VP TECH]  
-Date: November 09, 2026  
+Date: November 27, 2026  

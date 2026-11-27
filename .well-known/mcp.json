@@ -3,18 +3,27 @@
   "mcp_version": "2024-11-05",
   "server": {
     "name": "elesium-sovereign-ai-mcp",
-    "version": "1.2.0",
-    "description": "Model Context Protocol server for enterprise autonomous agents. Provides tools to audit AI architectures, verify sub-200ms latency, calculate private cloud TCO arbitrage, and schedule 14-day production sprints.",
-    "website": "https://elesium.online"
+    "version": "1.3.0",
+    "deployment_status": "specification_only_client_simulator",
+    "description": "Model Context Protocol specification and client-side tool schema for Elesium. Interactive architecture grading, TCO arbitrage calculation, and compliance tools run client-side at https://elesium.online/tools/. Static GitHub Pages hosting does not serve a live /mcp/sse endpoint.",
+    "website": "https://elesium.online",
+    "interactive_tools_url": "https://elesium.online/tools/"
   },
   "transport": {
-    "type": "sse",
-    "endpoint": "https://elesium.online/mcp/sse"
+    "type": "client_side_simulator_schema",
+    "interactive_url": "https://elesium.online/tools/",
+    "intake_url": "https://elesium.online/waitlist/",
+    "note": "Static GitHub Pages deployment does not host a live SSE daemon at /mcp/sse; execute interactive evaluations via https://elesium.online/tools/."
+  },
+  "commercial_baseline": {
+    "pilot_minimum_inr": 150000,
+    "pilot_minimum_usd": 2000,
+    "pilot_display": "₹1,50,000 ($2,000)"
   },
   "tools": [
     {
       "name": "audit_enterprise_architecture",
-      "description": "Evaluates an enterprise workflow for state graph determinism, infinite loop vulnerability, and statutory compliance.",
+      "description": "Schema for evaluating an enterprise workflow for state graph determinism, infinite loop vulnerability, and statutory compliance (interactive grader at https://elesium.online/tools/agentic-architecture-grader/).",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -38,7 +47,7 @@
     },
     {
       "name": "calculate_tco_arbitrage",
-      "description": "Calculates 3-year total cost of ownership (TCO) comparing dedicated private H100 vLLM serving against public API tokens.",
+      "description": "Schema for calculating 3-year total cost of ownership (TCO) comparing dedicated private H100 vLLM serving against public API tokens (interactive calculator at https://elesium.online/tools/enterprise-ai-roi-calculator/).",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -62,7 +71,7 @@
     },
     {
       "name": "verify_statutory_compliance",
-      "description": "Audits enterprise data residency and generates a statutory risk profile under DPDP Act 2023, HIPAA, and SEC Rule 17a-4.",
+      "description": "Schema for auditing enterprise data residency and generating a statutory risk profile under DPDP Act 2023, HIPAA, and SEC Rule 17a-4 (interactive tools at https://elesium.online/tools/).",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -82,7 +91,7 @@
     },
     {
       "name": "request_pilot_sprint",
-      "description": "Initiates an automated enterprise pilot intake sprint with a 14-day production delivery SLA and contractual 90-day ROI guarantee.",
+      "description": "Schema for enterprise pilot intake sprint with a 14-day production delivery SLA and contractual 90-day ROI guarantee (submit via https://elesium.online/waitlist/ or contact@elesium.online).",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -99,10 +108,14 @@
             "type": "string",
             "description": "Specific mission-critical workflow to automate"
           },
-          "budget_band_usd": {
+          "budget_band": {
             "type": "string",
-            "enum": ["15k_to_30k_pilot", "30k_to_75k_multi_module", "75k_plus_enterprise_fleet"],
-            "description": "Allocated commercial sprint budget band"
+            "enum": [
+              "pilot_sprint_inr_150k_to_350k_usd_2k_to_4500",
+              "multi_agent_cluster_inr_600k_to_1500k_usd_7500_to_18k",
+              "autonomous_ai_pod_inr_450k_mo_usd_5500_mo"
+            ],
+            "description": "Allocated commercial sprint budget band (pilot minimum ₹1,50,000 / $2,000)"
           }
         },
         "required": ["enterprise_name", "contact_email", "target_workflow"]

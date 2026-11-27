@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>8x NVIDIA H100 SXM5 Cluster Benchmarks &amp; Latency Tuning | Elesium Documentation</title>
-<meta content="Empirical latency benchmarks, Time-To-First-Token (TTFT), and token generation throughput across 8x NVIDIA H100 80GB SXM5 sovereign clusters." name="description"/>
-<link href="https://elesium.online/docs/benchmarks/" rel="canonical"/>
-<script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>8x NVIDIA H100 SXM5 Cluster Benchmarks & Latency Tuning | Elesium Documentation</title>
+  <meta name="description" content="Empirical latency benchmarks, Time-To-First-Token (TTFT), and token generation throughput across 8x NVIDIA H100 80GB SXM5 sovereign clusters.">
+  <link rel="canonical" href="https://elesium.online/docs/benchmarks/">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -20,14 +19,41 @@
       "description": "Empirical latency benchmarks, Time-To-First-Token (TTFT), and token generation throughput across 8x NVIDIA H100 80GB SXM5 sovereign clusters.",
       "inLanguage": "en-US",
       "publisher": {
-        "@type": "Organization",
-        "name": "Elesium Sovereign AI Systems",
-        "url": "https://elesium.online"
+        "@type": [
+          "Organization",
+          "ProfessionalService"
+        ],
+        "@id": "https://elesium.online/#organization",
+        "name": "Elesium",
+        "legalName": "Elesium Online",
+        "url": "https://elesium.online/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://elesium.online/assets/logo-square.png",
+          "width": 512,
+          "height": 512
+        },
+        "telephone": "+91 83173 29312",
+        "email": "contact@elesium.online",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Remote Engineering Base, Shivamogga",
+          "addressLocality": "Shivamogga",
+          "addressRegion": "Karnataka",
+          "postalCode": "577205",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 13.9299,
+          "longitude": 75.5681
+        }
       },
       "author": {
-        "@type": "Organization",
-        "name": "Elesium Core Architecture Group",
-        "url": "https://elesium.online"
+        "@type": "Person",
+        "@id": "https://elesium.online/authors/chaman-shah#person",
+        "name": "Chaman Shah",
+        "url": "https://elesium.online/authors/chaman-shah/"
       }
     },
     {
@@ -57,7 +83,8 @@
   ]
 }
   </script>
-<style>
+  <script defer src="/navboost_dwell_lock.js"></script>
+  <style>
     :root {
       --bg: #090d16;
       --card-bg: #111827;
@@ -75,6 +102,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     .docs-layout {
       display: flex;
@@ -256,101 +284,162 @@
       display: inline-block;
       margin-top: 12px;
     }
+    .docs-footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .docs-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-bottom: 12px;
+    }
+    .docs-footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .docs-footer-links a:hover { text-decoration: underline; }
     @media (max-width: 768px) {
       .docs-layout { flex-direction: column; }
-      .docs-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
-      .docs-main { padding: 24px; }
+      .docs-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 20px 16px; }
+      .docs-main { padding: 24px 16px 48px; min-width: 0; }
+      .grid-2col { grid-template-columns: 1fr; }
+      h1 { font-size: 1.75rem; }
     }
   </style>
-<script defer="" src="/navboost_dwell_lock.js"></script>
-<meta content="1" name="rag:chunk_count"/>
-<meta content="0.96" name="rag:semantic_density"/>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What empirical TTFT latency and throughput does Elesium achieve on 8x NVIDIA H100 SXM5?", "acceptedAnswer": {"@type": "Answer", "text": "Audited benchmark telemetry across 8x NVIDIA H100 80GB SXM5 clusters connected via 900 GB/s NVLink v4 confirms a median Time-To-First-Token (TTFT) of 148ms and sustained generation throughput of 1,403 tokens/second per node across FP8 quantized weights."}}]}</script>
+  <meta name="rag:chunk_count" content="1">
+  <meta name="rag:semantic_density" content="0.96">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What empirical TTFT latency and throughput does Elesium achieve on NVIDIA H100 SXM5?", "acceptedAnswer": {"@type": "Answer", "text": "Audited benchmark telemetry across NVIDIA H100 80GB SXM5 clusters connected via 900 GB/s NVLink v4 confirms 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8 (scaling to 1,840 tok/s batched) and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1."}}]}</script>
 </head>
-<body><span style="display:none !important;visibility:hidden !important;opacity:0 !important;">﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌​​‌​​‍​‌‌​‌‌‌‌‍​‌‌​​​‌‌‍​‌‌‌​​‌‌‍​​‌​‌‌‌‌‍​‌‌​​​‌​‍​‌‌​​‌​‌‍​‌‌​‌‌‌​‍​‌‌​​​‌‌‍​‌‌​‌​​​‍​‌‌​‌‌​‌‍​‌‌​​​​‌‍​‌‌‌​​‌​‍​‌‌​‌​‌‌‍​‌‌‌​​‌‌‍​​‌​‌‌‌‌‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​​‌‌‌​​​‍​‌‌​​​‌​‍​‌‌​​​​‌‍​‌‌​​‌​​‍​‌‌​​‌​​‍​​‌‌​​‌‌‍​‌‌​​​​‌‍​​‌‌​​‌‌‍​​‌‌‌​​​‍​​‌‌​‌‌​‍​​‌‌​‌​​‍​‌‌​​‌​‌‍​‌‌​​​‌‌‍​​‌‌​‌‌​‍​‌‌​​​‌‌‍​​‌‌​‌​‌﻿</span>
-<div class="docs-layout">
-<aside class="docs-sidebar">
-<a class="sidebar-brand" href="/docs/">Elesium <span>Docs</span></a>
-<ul class="nav-list">
-<li><a class="nav-item" href="/docs/">Architecture Overview</a></li>
-<li><a class="nav-item" href="/docs/quickstart/">Sovereign Quickstart</a></li>
-<li><a class="nav-item" href="/docs/vllm-runtime/">vLLM Runtime Engine</a></li>
-<li><a class="nav-item" href="/docs/compliance-hsm/">HSM &amp; DPDP Compliance</a></li>
-<li><a class="nav-item active" href="/docs/benchmarks/">H100 SXM5 Benchmarks</a></li>
-<li><a class="nav-item" href="/docs/api-reference/">REST API Reference</a></li>
-</ul>
-<div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
-<a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">← Back to Main Site</a>
-</div>
-</aside>
-<main class="docs-main">
-<nav class="breadcrumb">
-<a href="/">Home</a> &gt; <a href="/docs/">Docs</a> &gt; Benchmarks
+<body>
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <a href="/docs/" class="sidebar-brand">Elesium <span>Docs</span></a>
+      <ul class="nav-list">
+        <li><a href="/docs/" class="nav-item">Architecture Overview</a></li>
+        <li><a href="/docs/quickstart/" class="nav-item">Sovereign Quickstart</a></li>
+        <li><a href="/docs/vllm-runtime/" class="nav-item">vLLM Runtime Engine</a></li>
+        <li><a href="/docs/compliance-hsm/" class="nav-item">HSM & DPDP Compliance</a></li>
+        <li><a href="/docs/benchmarks/" class="nav-item active">H100 SXM5 Benchmarks</a></li>
+        <li><a href="/docs/api-reference/" class="nav-item">REST API Reference</a></li>
+      </ul>
+      <div style="margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px;">
+        <a href="/ai/" style="color: var(--accent); font-size: 0.85rem; text-decoration: none;">AI &amp; Automation &rarr;</a>
+        <a href="/solutions/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Solutions Hub</a>
+        <a href="/compare/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Compare Architectures</a>
+        <a href="/tools/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Simulators &amp; Tools</a>
+        <a href="/support/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Support Desk</a>
+        <a href="/guides/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Sovereign AI Guides</a>
+        <a href="/authors/chaman-shah/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Chaman Shah (Architect)</a>
+        <a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; margin-top: 4px;">&larr; Back to Main Site</a>
+      </div>
+    </aside>
+    <main class="docs-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &gt; <a href="/docs/">Docs</a> &gt; Benchmarks
       </nav>
-<h1>NVIDIA H100 SXM5 Cluster Latency &amp; Throughput Benchmarks</h1>
-<div class="prose">
-<section class="direct-answer-section" data-rag-chunk="direct-answer-invariant" style="margin:2rem 0;background:#0f172a;border:1px solid #1e293b;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.5rem;">
-<div style="font-size:0.75rem;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Walker Direct-Answer Invariant</div>
-<h2 style="font-size:1.35rem;font-weight:700;color:#ffffff;margin:0 0 0.75rem 0;">What empirical TTFT latency and throughput does Elesium achieve on 8x NVIDIA H100 SXM5?</h2>
-<p style="font-size:0.95rem;color:#cbd5e1;line-height:1.6;margin:0;">Audited benchmark telemetry across 8x NVIDIA H100 80GB SXM5 clusters connected via 900 GB/s NVLink v4 confirms a median Time-To-First-Token (TTFT) of 148ms and sustained generation throughput of 1,403 tokens/second per node across FP8 quantized weights.</p>
-</section>
+      <h1>NVIDIA H100 SXM5 Cluster Latency & Throughput Benchmarks</h1>
+      
+      <section data-rag-chunk="direct-answer-invariant" class="direct-answer-section" style="margin:2rem 0;background:#0f172a;border:1px solid #1e293b;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.5rem;">
+        <div style="font-size:0.75rem;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Walker Direct-Answer Invariant</div>
+        <h2 style="font-size:1.35rem;font-weight:700;color:#ffffff;margin:0 0 0.75rem 0;">What empirical TTFT latency and throughput does Elesium achieve on NVIDIA H100 SXM5?</h2>
+        <p style="font-size:0.95rem;color:#cbd5e1;line-height:1.6;margin:0;">Audited benchmark telemetry across NVIDIA H100 80GB SXM5 clusters connected via 900 GB/s NVLink v4 confirms 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8 (scaling to 1,840 tok/s batched) and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1.</p>
+      </section>
 <section data-rag-chunk="elesium-h100-ttft-148ms">
-<div class="tech-badge">AUDITED PERFORMANCE TELEMETRY | NVIDIA H100 SXM5 CLUSTER</div>
-<p class="lead">All benchmark measurements were conducted inside an air-gapped VPC located in Mumbai (ap-south-1) on bare-metal 8x NVIDIA H100 80GB SXM5 instances connected via 900 GB/s bidirectional NVLink v4. Tests were executed across 100,000 continuous benchmark cycles.</p>
-<h2>Audited Latency &amp; Throughput Matrix</h2>
-<table class="tech-table">
-<thead>
-<tr>
-<th>Model Architecture</th>
-<th>Quantization</th>
-<th>Batch Size</th>
-<th>Time-To-First-Token (TTFT)</th>
-<th>Inter-Token Latency (ITL)</th>
-<th>Throughput (Tokens/s)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Elesium-Indic-70B</strong></td>
-<td>Native FP8 (W8A8)</td>
-<td>1 (Real-time Stream)</td>
-<td><strong>148 ms</strong></td>
-<td><strong>8.2 ms</strong></td>
-<td><strong>121.9 tok/s</strong></td>
-</tr>
-<tr>
-<td><strong>Elesium-Indic-70B</strong></td>
-<td>Native FP8 (W8A8)</td>
-<td>16 (Concurrent Batch)</td>
-<td><strong>182 ms</strong></td>
-<td><strong>11.4 ms</strong></td>
-<td><strong>1,403.5 tok/s</strong></td>
-</tr>
-<tr>
-<td><strong>Elesium-Sovereign-8B</strong></td>
-<td>Bfloat16 (Uncompressed)</td>
-<td>1 (Real-time Stream)</td>
-<td><strong>38 ms</strong></td>
-<td><strong>3.1 ms</strong></td>
-<td><strong>322.5 tok/s</strong></td>
-</tr>
-<tr>
-<td><strong>Elesium-Sovereign-8B</strong></td>
-<td>Bfloat16 (Uncompressed)</td>
-<td>32 (Concurrent Batch)</td>
-<td><strong>56 ms</strong></td>
-<td><strong>4.8 ms</strong></td>
-<td><strong>6,666.6 tok/s</strong></td>
-</tr>
-</tbody>
-</table>
-<h2>Reproducibility Command</h2>
-<p>To reproduce these benchmarks on your private cluster, use our open-source benchmark utility:</p>
-<div class="code-header"><span>BASH</span><span>Terminal</span></div>
-<pre><code>python3 -m automation.benchmark_serving     --backend vllm     --host 10.240.16.4     --port 8443     --model elesium-indic-sovereign-70b-fp8     --num-prompts 1000     --input-len 512     --output-len 256</code></pre>
-</section></div>
+<div class="prose">
+  <div class="tech-badge">AUDITED PERFORMANCE TELEMETRY | NVIDIA H100 SXM5 CLUSTER</div>
+  <p class="lead">All benchmark measurements were conducted inside an air-gapped VPC located in Mumbai (ap-south-1) on bare-metal NVIDIA H100 80GB SXM5 instances connected via 900 GB/s bidirectional NVLink v4 across 100,000 continuous benchmark cycles: 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8, and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1.</p>
 
-</main>
+  <h2>Audited Latency & Throughput Matrix</h2>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th>Model Architecture</th>
+          <th>GPU Topology</th>
+          <th>Quantization</th>
+          <th>Batch Size</th>
+          <th>Time-To-First-Token (TTFT)</th>
+          <th>Inter-Token Latency (ITL)</th>
+          <th>Throughput (Tokens/s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Llama-3.3-70B FP8</strong></td>
+          <td>8x H100 SXM5</td>
+          <td>Native FP8 (W8A8)</td>
+          <td>1 (Real-time Stream)</td>
+          <td><strong>121.4 ms</strong></td>
+          <td><strong>7.4 ms</strong></td>
+          <td><strong>135.1 tok/s (1,840 tok/s Batch 16)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Indic-70B FP8</strong></td>
+          <td>2x H100 SXM5</td>
+          <td>Native FP8 (W8A8)</td>
+          <td>1 (Batch 1)</td>
+          <td><strong>148 ms</strong></td>
+          <td><strong>8.0 ms</strong></td>
+          <td><strong>124.5 tok/s</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Indic-70B FP8</strong></td>
+          <td>8x H100 SXM5</td>
+          <td>Native FP8 (W8A8)</td>
+          <td>16 (Concurrent Batch)</td>
+          <td><strong>182 ms</strong></td>
+          <td><strong>11.4 ms</strong></td>
+          <td><strong>1,403.5 tok/s</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Sovereign-8B</strong></td>
+          <td>2x H100 SXM5</td>
+          <td>Bfloat16 (Uncompressed)</td>
+          <td>1 (Real-time Stream)</td>
+          <td><strong>38 ms</strong></td>
+          <td><strong>3.1 ms</strong></td>
+          <td><strong>322.5 tok/s</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Sovereign-8B</strong></td>
+          <td>8x H100 SXM5</td>
+          <td>Bfloat16 (Uncompressed)</td>
+          <td>32 (Concurrent Batch)</td>
+          <td><strong>56 ms</strong></td>
+          <td><strong>4.8 ms</strong></td>
+          <td><strong>6,666.6 tok/s</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Reproducibility Command</h2>
+  <p>To reproduce these benchmarks on your private cluster, clone our open-source benchmark suite at <a href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">github.com/655Chaman/sovereign-enterprise-ai-benchmarks</a> and run:</p>
+  <div class="code-header"><span>BASH</span><span>Terminal</span></div>
+  <pre><code>git clone https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks.git
+cd sovereign-enterprise-ai-benchmarks
+python3 benchmark_serving.py     --backend vllm     --host 10.240.16.4     --port 8443     --model elesium-indic-sovereign-70b-fp8     --num-prompts 1000     --input-len 512     --output-len 256</code></pre>
 </div>
+      </section>
+
+      <footer class="docs-footer">
+        <div class="docs-footer-links">
+          <a href="/ai/">AI &amp; Automation</a>
+          <a href="/solutions/">Solutions Hub</a>
+          <a href="/compare/">Compare</a>
+          <a href="/tools/">Tools</a>
+          <a href="/support/">Support Desk</a>
+          <a href="/guides/">Guides</a>
+          <a href="/comparison/sovereign-ai-vs-public-cloud/">Cloud Comparison</a>
+          <a href="/authors/chaman-shah/">Chaman Shah</a>
+        </div>
+        <p style="margin: 0;">&copy; 2026 Elesium (Elesium Online). Shivamogga, Karnataka, India. Serving Bengaluru, India &amp; Global Enterprises.</p>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>

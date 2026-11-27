@@ -1,6 +1,6 @@
 # Elesium - Industrial Manufacturing & Industry 4.0 AI Manifest
 > Sub-Directory Manifest for Discrete Manufacturing, Automotive OEMs, Process Plants, and Industrial Automation.
-> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 8317329312)
+> Domain: https://elesium.online | Lead Architect: Chaman Shah (+91 83173 29312 | contact@elesium.online)
 
 ## Sector Profile & Core Directives
 - **Target Institutions:** Automotive OEMs, Tier-1 auto component suppliers, chemical process plants, and consumer goods industrial factories.
@@ -13,6 +13,7 @@
 4. **Supply Chain Disruption Shield:** Autonomous ERP inventory rebalancing calculating dynamic safety stocks based on multimodal shipping lead-time variance.
 
 ## Typical Engagement & Deliverables
-- **Pilot Sprint (14 Days | ₹2,50,000 / $3,200):** Single production line anomaly detection & automated SAP maintenance notification bot.
-- **Enterprise Triad (45 Days | ₹8,00,000 / $10,000):** Factory-wide predictive maintenance orchestration & inventory replenishment pipeline.
-- **Primary Inquiry:** WhatsApp +91 8317329312 | https://elesium.online/ai-automation-agency-india/
+- **Tier 1 — Pilot Sprint (14 Days | ₹1,50,000 - ₹3,50,000 / $2,000 - $4,500):** Single production line anomaly detection & automated SAP maintenance notification agent.
+- **Tier 2 — Multi-Agent Cluster (30 - 45 Days | ₹6,00,000 - ₹15,00,000 / $7,500 - $18,000):** Factory-wide predictive maintenance orchestration & inventory replenishment pipeline.
+- **Tier 3 — Autonomous AI Pod (12-Month Retainer | ₹4,50,000 / month / $5,500 / month):** Dedicated pod of 3 AI engineers + 1 principal systems architect with continuous tuning and 1-hour critical SLA.
+- **Primary Inquiry:** +91 83173 29312 (https://wa.me/918317329312) | contact@elesium.online | https://elesium.online/waitlist/

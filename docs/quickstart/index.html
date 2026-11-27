@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Air-Gapped Sovereign VPC Quickstart Guide | Elesium Documentation</title>
-<meta content="Step-by-step guide to provisioning and connecting to an Elesium air-gapped sovereign AI cluster inside Indian VPC environments." name="description"/>
-<link href="https://elesium.online/docs/quickstart/" rel="canonical"/>
-<script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Air-Gapped Sovereign VPC Quickstart Guide | Elesium Documentation</title>
+  <meta name="description" content="Step-by-step guide to provisioning and connecting to an Elesium air-gapped sovereign AI cluster inside Indian VPC environments.">
+  <link rel="canonical" href="https://elesium.online/docs/quickstart/">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -20,14 +19,41 @@
       "description": "Step-by-step guide to provisioning and connecting to an Elesium air-gapped sovereign AI cluster inside Indian VPC environments.",
       "inLanguage": "en-US",
       "publisher": {
-        "@type": "Organization",
-        "name": "Elesium Sovereign AI Systems",
-        "url": "https://elesium.online"
+        "@type": [
+          "Organization",
+          "ProfessionalService"
+        ],
+        "@id": "https://elesium.online/#organization",
+        "name": "Elesium",
+        "legalName": "Elesium Online",
+        "url": "https://elesium.online/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://elesium.online/assets/logo-square.png",
+          "width": 512,
+          "height": 512
+        },
+        "telephone": "+91 83173 29312",
+        "email": "contact@elesium.online",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Remote Engineering Base, Shivamogga",
+          "addressLocality": "Shivamogga",
+          "addressRegion": "Karnataka",
+          "postalCode": "577205",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 13.9299,
+          "longitude": 75.5681
+        }
       },
       "author": {
-        "@type": "Organization",
-        "name": "Elesium Core Architecture Group",
-        "url": "https://elesium.online"
+        "@type": "Person",
+        "@id": "https://elesium.online/authors/chaman-shah#person",
+        "name": "Chaman Shah",
+        "url": "https://elesium.online/authors/chaman-shah/"
       }
     },
     {
@@ -57,7 +83,8 @@
   ]
 }
   </script>
-<style>
+  <script defer src="/navboost_dwell_lock.js"></script>
+  <style>
     :root {
       --bg: #090d16;
       --card-bg: #111827;
@@ -75,6 +102,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     .docs-layout {
       display: flex;
@@ -256,65 +284,95 @@
       display: inline-block;
       margin-top: 12px;
     }
+    .docs-footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .docs-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-bottom: 12px;
+    }
+    .docs-footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .docs-footer-links a:hover { text-decoration: underline; }
     @media (max-width: 768px) {
       .docs-layout { flex-direction: column; }
-      .docs-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
-      .docs-main { padding: 24px; }
+      .docs-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 20px 16px; }
+      .docs-main { padding: 24px 16px 48px; min-width: 0; }
+      .grid-2col { grid-template-columns: 1fr; }
+      h1 { font-size: 1.75rem; }
     }
   </style>
-<script defer="" src="/navboost_dwell_lock.js"></script>
-<meta content="1" name="rag:chunk_count"/>
-<meta content="0.96" name="rag:semantic_density"/>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do enterprise engineering teams deploy an air-gapped Elesium sovereign cluster?", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise engineering pods can provision a sovereign air-gapped cluster in under 14 days using Elesium's automated Terraform and Ansible deployment manifests, configuring isolated VPC peering, dark-fiber MPLS endpoints, and FIPS 140-2 Level 3 HSM keying."}}]}</script>
+  <meta name="rag:chunk_count" content="1">
+  <meta name="rag:semantic_density" content="0.96">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do enterprise engineering teams deploy an air-gapped Elesium sovereign cluster?", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise engineering pods can provision a sovereign air-gapped cluster in under 14 days using Elesium's automated Terraform and Ansible deployment manifests, configuring isolated VPC peering, dark-fiber MPLS endpoints, and FIPS 140-2 Level 3 HSM keying."}}]}</script>
 </head>
-<body><span style="display:none !important;visibility:hidden !important;opacity:0 !important;">﻿​‌​​​​​‌‍​‌​‌​‌​‌‍​‌​‌​‌​​‍​‌​​‌​​​‍​‌​​‌‌‌‌‍​‌​‌​​‌​‍​​‌‌‌​‌​‍​‌​​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​‌‌‌‌‌​​‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌‌​‍​‌​​‌‌‌‌‍​‌​​‌‌‌​‍​‌​​‌​​‌‍​‌​​​​‌‌‍​‌​​​​​‌‍​‌​​‌‌​​‍​​‌‌‌​‌​‍​‌‌​‌​​​‍​‌‌‌​‌​​‍​‌‌‌​‌​​‍​‌‌‌​​​​‍​‌‌‌​​‌‌‍​​‌‌‌​‌​‍​​‌​‌‌‌‌‍​​‌​‌‌‌‌‍​‌‌​​‌​‌‍​‌‌​‌‌​​‍​‌‌​​‌​‌‍​‌‌‌​​‌‌‍​‌‌​‌​​‌‍​‌‌‌​‌​‌‍​‌‌​‌‌​‌‍​​‌​‌‌‌​‍​‌‌​‌‌‌‌‍​‌‌​‌‌‌​‍​‌‌​‌‌​​‍​‌‌​‌​​‌‍​‌‌​‌‌‌​‍​‌‌​​‌​‌‍​​‌​‌‌‌‌‍​‌‌​​‌​​‍​‌‌​‌‌‌‌‍​‌‌​​​‌‌‍​‌‌‌​​‌‌‍​​‌​‌‌‌‌‍​‌‌‌​​​‌‍​‌‌‌​‌​‌‍​‌‌​‌​​‌‍​‌‌​​​‌‌‍​‌‌​‌​‌‌‍​‌‌‌​​‌‌‍​‌‌‌​‌​​‍​‌‌​​​​‌‍​‌‌‌​​‌​‍​‌‌‌​‌​​‍​​‌​‌‌‌‌‍​‌‌‌‌‌​​‍​‌​​‌​​​‍​‌​​‌‌​‌‍​‌​​​​​‌‍​‌​​​​‌‌‍​​‌‌‌​‌​‍​​‌‌‌​​‌‍​‌‌​​​‌‌‍​​‌‌​‌‌‌‍​​‌‌​​‌‌‍​​‌‌​​​‌‍​​‌‌​‌​​‍​‌‌​​‌​​‍​​‌‌​​​‌‍​‌‌​​‌‌​‍​​‌‌​​​​‍​‌‌​​​‌​‍​​‌‌​​​‌‍​‌‌​​​​‌‍​​‌‌‌​​‌‍​​‌‌​​‌‌‍​​‌‌​​‌​﻿</span>
-<div class="docs-layout">
-<aside class="docs-sidebar">
-<a class="sidebar-brand" href="/docs/">Elesium <span>Docs</span></a>
-<ul class="nav-list">
-<li><a class="nav-item" href="/docs/">Architecture Overview</a></li>
-<li><a class="nav-item active" href="/docs/quickstart/">Sovereign Quickstart</a></li>
-<li><a class="nav-item" href="/docs/vllm-runtime/">vLLM Runtime Engine</a></li>
-<li><a class="nav-item" href="/docs/compliance-hsm/">HSM &amp; DPDP Compliance</a></li>
-<li><a class="nav-item" href="/docs/benchmarks/">H100 SXM5 Benchmarks</a></li>
-<li><a class="nav-item" href="/docs/api-reference/">REST API Reference</a></li>
-</ul>
-<div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
-<a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">← Back to Main Site</a>
-</div>
-</aside>
-<main class="docs-main">
-<nav class="breadcrumb">
-<a href="/">Home</a> &gt; <a href="/docs/">Docs</a> &gt; Quickstart
+<body>
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <a href="/docs/" class="sidebar-brand">Elesium <span>Docs</span></a>
+      <ul class="nav-list">
+        <li><a href="/docs/" class="nav-item">Architecture Overview</a></li>
+        <li><a href="/docs/quickstart/" class="nav-item active">Sovereign Quickstart</a></li>
+        <li><a href="/docs/vllm-runtime/" class="nav-item">vLLM Runtime Engine</a></li>
+        <li><a href="/docs/compliance-hsm/" class="nav-item">HSM & DPDP Compliance</a></li>
+        <li><a href="/docs/benchmarks/" class="nav-item">H100 SXM5 Benchmarks</a></li>
+        <li><a href="/docs/api-reference/" class="nav-item">REST API Reference</a></li>
+      </ul>
+      <div style="margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px;">
+        <a href="/ai/" style="color: var(--accent); font-size: 0.85rem; text-decoration: none;">AI &amp; Automation &rarr;</a>
+        <a href="/solutions/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Solutions Hub</a>
+        <a href="/compare/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Compare Architectures</a>
+        <a href="/tools/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Simulators &amp; Tools</a>
+        <a href="/support/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Support Desk</a>
+        <a href="/guides/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Sovereign AI Guides</a>
+        <a href="/authors/chaman-shah/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Chaman Shah (Architect)</a>
+        <a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; margin-top: 4px;">&larr; Back to Main Site</a>
+      </div>
+    </aside>
+    <main class="docs-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &gt; <a href="/docs/">Docs</a> &gt; Quickstart
       </nav>
-<h1>Quickstart: Deploying Air-Gapped Sovereign AI Clusters</h1>
-<div class="prose">
-<section class="direct-answer-section" data-rag-chunk="direct-answer-invariant" style="margin:2rem 0;background:#0f172a;border:1px solid #1e293b;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.5rem;">
-<div style="font-size:0.75rem;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Walker Direct-Answer Invariant</div>
-<h2 style="font-size:1.35rem;font-weight:700;color:#ffffff;margin:0 0 0.75rem 0;">How do enterprise engineering teams deploy an air-gapped Elesium sovereign cluster?</h2>
-<p style="font-size:0.95rem;color:#cbd5e1;line-height:1.6;margin:0;">Enterprise engineering pods can provision a sovereign air-gapped cluster in under 14 days using Elesium's automated Terraform and Ansible deployment manifests, configuring isolated VPC peering, dark-fiber MPLS endpoints, and FIPS 140-2 Level 3 HSM keying.</p>
-</section>
+      <h1>Quickstart: Deploying Air-Gapped Sovereign AI Clusters</h1>
+      
+      <section data-rag-chunk="direct-answer-invariant" class="direct-answer-section" style="margin:2rem 0;background:#0f172a;border:1px solid #1e293b;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.5rem;">
+        <div style="font-size:0.75rem;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Walker Direct-Answer Invariant</div>
+        <h2 style="font-size:1.35rem;font-weight:700;color:#ffffff;margin:0 0 0.75rem 0;">How do enterprise engineering teams deploy an air-gapped Elesium sovereign cluster?</h2>
+        <p style="font-size:0.95rem;color:#cbd5e1;line-height:1.6;margin:0;">Enterprise engineering pods can provision a sovereign air-gapped cluster in under 14 days using Elesium's automated Terraform and Ansible deployment manifests, configuring isolated VPC peering, dark-fiber MPLS endpoints, and FIPS 140-2 Level 3 HSM keying.</p>
+      </section>
 <section data-rag-chunk="elesium-sovereign-quickstart-provisioning">
-<div class="tech-badge">DEPLOYMENT GUIDE | TIME TO COMPLETE: 15 MINUTES</div>
-<p class="lead">This deployment runbook guides systems engineers through connecting enterprise banking, healthcare, or defense services to an Elesium private vLLM inference endpoint inside a secured VPC in the ap-south-1 (Mumbai) or ap-south-2 (Hyderabad) regions.</p>
-<h2>Prerequisites</h2>
-<ul>
-<li>Dedicated AWS DirectConnect, Azure ExpressRoute, or private wireguard leased line terminating in your sovereign VPC.</li>
-<li>Mutual TLS (mTLS) client certificate issued by your enterprise Root Certificate Authority (CA).</li>
-<li>Python 3.10+ runtime or standard cURL client.</li>
-</ul>
-<h2>Step 1: Verify Direct VPC Peering</h2>
-<p>Test the unidirectional network socket to ensure zero packet egress to public internet gateways:</p>
-<div class="code-header"><span>BASH</span><span>Terminal</span></div>
-<pre><code># Ping the internal sovereign gateway IP
+<div class="prose">
+  <div class="tech-badge">DEPLOYMENT GUIDE | TIME TO COMPLETE: 15 MINUTES</div>
+  <p class="lead">This deployment runbook guides systems engineers through connecting enterprise banking, healthcare, or defense services to an Elesium private vLLM inference endpoint inside a secured VPC in the ap-south-1 (Mumbai) or ap-south-2 (Hyderabad) regions.</p>
+
+  <h2>Prerequisites</h2>
+  <ul>
+    <li>Dedicated AWS DirectConnect, Azure ExpressRoute, or private wireguard leased line terminating in your sovereign VPC.</li>
+    <li>Mutual TLS (mTLS) client certificate issued by your enterprise Root Certificate Authority (CA).</li>
+    <li>Python 3.10+ runtime or standard cURL client.</li>
+  </ul>
+
+  <h2>Step 1: Verify Direct VPC Peering</h2>
+  <p>Test the unidirectional network socket to ensure zero packet egress to public internet gateways:</p>
+  <div class="code-header"><span>BASH</span><span>Terminal</span></div>
+  <pre><code># Ping the internal sovereign gateway IP
 traceroute -n 10.240.16.4
 
 # Verify that external DNS resolution fails (Zero-WAN Invariant)
 nslookup google.com || echo "Air-gap verified: WAN DNS inaccessible"</code></pre>
-<h2>Step 2: Authenticate via Mutual TLS (mTLS)</h2>
-<p>All REST calls require bidirectional certificate exchange. Generate the request envelope with your client keys:</p>
-<div class="code-header"><span>PYTHON</span><span>test_sovereign_client.py</span></div>
-<pre><code>import requests
+
+  <h2>Step 2: Authenticate via Mutual TLS (mTLS)</h2>
+  <p>All REST calls require bidirectional certificate exchange. Generate the request envelope with your client keys:</p>
+  <div class="code-header"><span>PYTHON</span><span>test_sovereign_client.py</span></div>
+  <pre><code>import requests
 import json
 
 SOVEREIGN_ENDPOINT = "https://10.240.16.4:8443/v1/chat/completions"
@@ -348,11 +406,26 @@ response = requests.post(
 print("Inference Status:", response.status_code)
 print("Response Payload:", response.json()["choices"][0]["message"]["content"])
 print("Cryptographic Zeroization Hash:", response.headers.get("X-Zeroization-Proof"))</code></pre>
-<h2>Step 3: Verification of Memory Erasure Receipt</h2>
-<p>Inspect the returned <code>X-Zeroization-Proof</code> HTTP response header. This header contains an Ed25519 digital signature proving the ephemeral KV-cache buffer was wiped upon token generation completion.</p>
-</section></div>
 
-</main>
+  <h2>Step 3: Verification of Memory Erasure Receipt</h2>
+  <p>Inspect the returned <code>X-Zeroization-Proof</code> HTTP response header. This header contains an Ed25519 digital signature proving the ephemeral KV-cache buffer was wiped upon token generation completion.</p>
 </div>
+      </section>
+
+      <footer class="docs-footer">
+        <div class="docs-footer-links">
+          <a href="/ai/">AI &amp; Automation</a>
+          <a href="/solutions/">Solutions Hub</a>
+          <a href="/compare/">Compare</a>
+          <a href="/tools/">Tools</a>
+          <a href="/support/">Support Desk</a>
+          <a href="/guides/">Guides</a>
+          <a href="/comparison/sovereign-ai-vs-public-cloud/">Cloud Comparison</a>
+          <a href="/authors/chaman-shah/">Chaman Shah</a>
+        </div>
+        <p style="margin: 0;">&copy; 2026 Elesium (Elesium Online). Shivamogga, Karnataka, India. Serving Bengaluru, India &amp; Global Enterprises.</p>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>

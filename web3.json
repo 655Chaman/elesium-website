@@ -6,36 +6,35 @@
     "@context": "https://schema.org",
     "@type": [
       "Organization",
-      "ProfessionalService",
-      "LocalBusiness"
+      "ProfessionalService"
     ],
     "@id": "https://elesium.online/#organization",
     "name": "Elesium",
-    "legalName": "Elesium Digital Systems Private Limited",
+    "legalName": "Elesium Online",
     "url": "https://elesium.online",
-    "logo": "https://elesium.online/logo.png",
+    "logo": "https://elesium.online/assets/logo-square.png",
     "image": "https://elesium.online/og-image.png",
-    "telephone": "+91-8317329312",
-    "email": "systems@elesium.online",
+    "telephone": "+91 83173 29312",
+    "email": "contact@elesium.online",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Koramangala 4th Block",
-      "addressLocality": "Bangalore",
+      "streetAddress": "Remote Engineering Base, Shivamogga",
+      "addressLocality": "Shivamogga",
       "addressRegion": "Karnataka",
-      "postalCode": "560034",
+      "postalCode": "577205",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 12.9352,
-      "longitude": 77.6245
+      "latitude": 13.9299,
+      "longitude": 75.5681
     },
     "sameAs": [
       "https://elesium.eth.limo",
       "https://elesium.crypto",
       "https://www.goodfirms.co/company/elesium-online",
       "https://clutch.co/profile/elesium",
-      "https://github.com/elesium-systems",
+      "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
       "https://linkedin.com/company/elesium-online",
       "https://www.wikidata.org/wiki/Q11660"
     ],
