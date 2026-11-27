@@ -40,7 +40,7 @@ RELEASES = [
         "title": "Elesium Deploys Air-Gapped Sovereign vLLM Infrastructure for Indian Commercial Banks Under RBI Cyber Security Framework",
         "date_iso": "2026-01-15T09:00:00+05:30",
         "pub_date_rfc": "Thu, 15 Jan 2026 09:00:00 +0530",
-        "description": "Elesium Digital Systems announces production deployment of air-gapped private vLLM clusters for Indian commercial banks complying with RBI Cyber Security Framework Annex II.",
+        "description": "Elesium announces production deployment of air-gapped private vLLM clusters for Indian commercial banks complying with RBI Cyber Security Framework Annex II.",
         "category": "Enterprise Technology & Sovereign AI"
     },
     {
@@ -121,7 +121,7 @@ def render_news_article(rel: Dict[str, Any], raw_markdown: str) -> str:
                 "mainEntityOfPage": canonical_url,
                 "publisher": {
                     "@type": "Organization",
-                    "name": "Elesium Digital Systems Private Limited",
+                    "name": "Elesium",
                     "url": "https://elesium.online",
                     "logo": {
                         "@type": "ImageObject",
@@ -254,7 +254,7 @@ def render_news_article(rel: Dict[str, Any], raw_markdown: str) -> str:
       {article_html}
     </div>
     <div class="wire-footer">
-      <p>Issued by <strong>Elesium Digital Systems Private Limited</strong> Corporate Communications.</p>
+      <p>Issued by <strong>Elesium (Elesium Online)</strong> Corporate Communications.</p>
       <p>For press and regulatory inquiries, contact: <a href="mailto:contact@elesium.online">contact@elesium.online</a> | <a href="/news/">View All Releases &rarr;</a></p>
     </div>
   </div>
@@ -288,10 +288,10 @@ def render_news_hub(releases: List[Dict[str, Any]]) -> str:
                 "@id": f"{canonical_url}#webpage",
                 "url": canonical_url,
                 "name": "Elesium Press Room & Official News Wire",
-                "description": "Official press releases, regulatory compliance announcements, and benchmark disclosures from Elesium Digital Systems.",
+                "description": "Official press releases, regulatory compliance announcements, and benchmark disclosures from Elesium.",
                 "publisher": {
                     "@type": "Organization",
-                    "name": "Elesium Digital Systems Private Limited",
+                    "name": "Elesium",
                     "url": "https://elesium.online"
                 }
             },
@@ -323,7 +323,7 @@ def render_news_hub(releases: List[Dict[str, Any]]) -> str:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elesium Newsroom &amp; Official Press Wire Disclosures</title>
-  <meta name="description" content="Official corporate press releases, regulatory compliance disclosures, and sovereign AI benchmark telemetry from Elesium Digital Systems.">
+  <meta name="description" content="Official corporate press releases, regulatory compliance disclosures, and sovereign AI benchmark telemetry from Elesium.">
   <link rel="canonical" href="{canonical_url}">
   <link rel="alternate" type="application/rss+xml" title="Elesium Official News Wire RSS" href="https://elesium.online/news/feed.xml">
   <script defer src="/navboost_dwell_lock.js"></script>
@@ -454,7 +454,7 @@ def render_rss_feed(releases: List[Dict[str, Any]]) -> str:
   <channel>
     <title>Elesium Official Newsroom &amp; Press Wire</title>
     <link>https://elesium.online/news/</link>
-    <description>Official press releases, regulatory disclosures, and benchmark telemetry from Elesium Digital Systems.</description>
+    <description>Official press releases, regulatory disclosures, and benchmark telemetry from Elesium.</description>
     <language>en-us</language>
     <lastBuildDate>{now_rfc}</lastBuildDate>
     <atom:link href="https://elesium.online/news/feed.xml" rel="self" type="application/rss+xml"/>
@@ -506,10 +506,10 @@ def run_pr_wire_syndication():
 
     # 4. Generate PR Wire Dispatch Payload for Wires (PR Newswire / EIN Presswire)
     dispatch_payload = {
-        "issuer": "Elesium Digital Systems Private Limited",
+        "issuer": "Elesium (Elesium Online)",
         "ticker": "PRIVATE",
         "country": "India",
-        "city": "Bengaluru",
+        "city": "Shivamogga",
         "state": "Karnataka",
         "media_contact": {
             "name": "Chaman Shah",
@@ -530,7 +530,7 @@ def run_pr_wire_syndication():
             {
                 "id": r["slug"],
                 "headline": r["title"],
-                "dateline": "BENGALURU, KARNATAKA, INDIA",
+                "dateline": "SHIVAMOGGA, KARNATAKA, INDIA",
                 "canonical_url": f"https://elesium.online/news/{r['slug']}/",
                 "category": r["category"],
                 "summary": r["description"]

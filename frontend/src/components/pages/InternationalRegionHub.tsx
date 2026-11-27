@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
     Globe2,
     CheckCircle2,
@@ -450,12 +449,39 @@ export default function InternationalRegionHub({ forcedRegionId }: International
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "Organization",
-                "@id": "https://elesium.online/#organization",
-                "name": "Elesium",
-                "url": "https://elesium.online",
+                "@type": ["LocalBusiness", "ProfessionalService"],
+                "@id": `${canonicalUrl}#localbusiness`,
+                "parentOrganization": {
+                    "@id": "https://elesium.online/#organization"
+                },
+                "name": `Elesium - ${regionData.h1}`,
+                "url": canonicalUrl,
                 "logo": "https://elesium.online/assets/logo-square.png",
+                "image": "https://elesium.online/og-image.png",
                 "description": regionData.answerCapsule,
+                "telephone": "+91-8317329312",
+                "email": "contact@elesium.online",
+                "priceRange": "$$$$",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Remote-First Sovereign AI Practice, Shivamogga",
+                    "addressLocality": "Shivamogga",
+                    "addressRegion": "Karnataka",
+                    "postalCode": "577205",
+                    "addressCountry": "IN"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 13.9299,
+                    "longitude": 75.5681
+                },
+                "areaServed": ["Bengaluru", "Karnataka", "India", "Global"],
+                "founder": {
+                    "@type": "Person",
+                    "@id": "https://elesium.online/authors/chaman-shah#person",
+                    "name": "Chaman Shah",
+                    "url": "https://elesium.online/authors/chaman-shah/"
+                },
                 "sameAs": [
                     "https://elesium.online",
                     "https://www.goodfirms.co/company/elesium-online",
@@ -463,9 +489,10 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                     "https://www.g2.com/products/elesium-ai-automation-platform",
                     "https://www.trustpilot.com/review/elesium.online",
                     "https://www.crunchbase.com/organization/elesium-online",
+                    "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
                     "https://github.com/655Chaman/elesium-website",
-                    "https://www.linkedin.com/in/chaman-elesium",
-                    "https://x.com/elesium_ai"
+                    "https://linkedin.com/in/chaman-shah-elesium",
+                    "https://x.com/elesium_online"
                 ]
             },
             {
@@ -791,35 +818,38 @@ export default function InternationalRegionHub({ forcedRegionId }: International
                                     key={i}
                                     className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
-                                    <button
-                                        onClick={() => setOpenFaqIndex(isOpen ? null : i)}
-                                        className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
+                                    <h3 className="m-0">
+                                        <button
+                                            type="button"
+                                            aria-expanded={isOpen}
+                                            aria-controls={`intl-faq-panel-${i}`}
+                                            onClick={() => setOpenFaqIndex(isOpen ? null : i)}
+                                            className="w-full min-h-[44px] p-5 text-left flex items-center justify-between gap-4 font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
+                                        >
+                                            <span>{faq.question}</span>
+                                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
+                                        </button>
+                                    </h3>
+                                    <div
+                                        id={`intl-faq-panel-${i}`}
+                                        aria-hidden={!isOpen}
+                                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                        }`}
                                     >
-                                        <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
-                                    </button>
-                                    <AnimatePresence initial={false}>
-                                        {isOpen && (
-                                            <motion.div
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                                className="accordion-panel overflow-hidden"
-                                            >
-                                                <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-4 faq-answer">
-                                                    {faq.answer}
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
+                                        <div className="overflow-hidden">
+                                            <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-4 faq-answer">
+                                                {faq.answer}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             )
                         })}
                     </div>
                 </section>
 
-                {/* Global Gateway Navigation */}
+                {/* Global Gateway Links */}
                 <section className="mb-14 md:mb-16 pt-12 border-t border-neutral-200 dark:border-white/10">
                     <div className="flex items-center justify-between mb-6">
                         <h3 className="text-lg font-medium text-black dark:text-white">

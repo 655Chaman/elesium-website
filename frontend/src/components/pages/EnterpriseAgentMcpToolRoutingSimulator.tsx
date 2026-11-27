@@ -124,7 +124,7 @@ Note: ${results.recommendationNote}
   }, [results.latencyTrace, results.effectiveP99LatencyMs]);
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans antialiased selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans antialiased selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Agent MCP Tool Routing &amp; Context Pruning Simulator | Elesium</title>
         <meta

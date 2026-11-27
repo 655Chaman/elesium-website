@@ -286,7 +286,7 @@ The Digital Personal Data Protection Act of 2023 is not an obstacle to enterpris
 
 Conversely, enterprises that invest in **Sovereign Enterprise AI** achieve total data ownership, sub-100ms operational latency, and complete immunity from regulatory enforcement.
 
-At **Elesium Digital Systems**, we specialize in designing and deploying sovereign, deterministic AI infrastructure for India’s largest financial institutions and conglomerates. Every engagement is backed by our **contractual 90-day ROI guarantee**: we deliver working, compliant, high-throughput sovereign clusters with measurable business impact, or our professional fees are fully rebated.
+At **Elesium**, we specialize in designing and deploying sovereign, deterministic AI infrastructure for India’s largest financial institutions and conglomerates. Every engagement is backed by our **contractual 90-day ROI guarantee**: we deliver working, compliant, high-throughput sovereign clusters with measurable business impact, or our professional fees are fully rebated.
 
 To discuss your organization’s AI architecture or schedule a confidential briefing with our Principal Systems Engineering Team, explore our comprehensive technical blueprints:
 
@@ -296,4 +296,4 @@ To discuss your organization’s AI architecture or schedule a confidential brie
 - **Direct Architecture Desk (WhatsApp):** [+91 83173 29312](https://wa.me/918317329312)
 
 ---
-*Published by Elesium Digital Systems Private Limited. Bengaluru, India.*
+*Published by Elesium (Elesium Online). Bengaluru, India.*

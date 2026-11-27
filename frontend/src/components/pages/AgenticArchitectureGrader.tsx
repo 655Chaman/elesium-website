@@ -176,8 +176,8 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Header */}
-        <div className="flex items-center justify-between gap-4 mb-6">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-neutral-400">
+        <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 mb-6">
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-xs text-neutral-400 min-w-0">
             <Link to="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -189,17 +189,17 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
             <span className="text-white font-medium">Architecture Grader</span>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <button
               onClick={() => setIsEmbedOpen(!isEmbedOpen)}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-neutral-950 hover:bg-neutral-900 text-neutral-200 text-xs font-medium border border-white/10 active:scale-[0.97] transition-all duration-300"
+              className="min-h-[44px] sm:min-h-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-neutral-950 hover:bg-neutral-900 text-neutral-200 text-xs font-medium border border-white/10 active:scale-[0.97] transition-all duration-300"
             >
               <Code className="w-3.5 h-3.5 text-white" />
               <span>Embed Widget</span>
             </button>
             <button
               onClick={copyDiagnosticMemo}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold active:scale-[0.97] transition-all duration-300"
+              className="min-h-[44px] sm:min-h-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white hover:bg-neutral-200 text-black text-xs font-semibold active:scale-[0.97] transition-all duration-300"
             >
               {hasCopiedMemo ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{hasCopiedMemo ? 'Memo Copied!' : 'Copy Diagnostic Memo'}</span>
@@ -215,25 +215,25 @@ Audit Request: Schedule a 1-on-1 Architecture Teardown with Chaman Shah, Princip
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.97, y: -8 }}
               transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-              className="mb-8 p-6 rounded-[24px] bg-neutral-950 border border-white/15 text-xs space-y-3"
+              className="mb-8 p-5 sm:p-6 rounded-[24px] bg-neutral-950 border border-white/15 text-xs space-y-3"
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-white">Embed Enterprise Architecture Grader</span>
-                <button onClick={() => setIsEmbedOpen(false)} className="text-neutral-400 hover:text-white">✕</button>
+                <button onClick={() => setIsEmbedOpen(false)} aria-label="Close embed drawer" className="min-w-[44px] min-h-[44px] flex items-center justify-center text-neutral-400 hover:text-white">✕</button>
               </div>
               <p className="text-neutral-400">
                 Copy and paste this iframe snippet into your engineering docs, internal wiki, or client portal.
               </p>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                 <input
                   type="text"
                   readOnly
                   value={embedCode}
-                  className="w-full bg-black p-3 rounded-xl border border-white/10 text-neutral-300 font-mono text-xs focus:outline-none"
+                  className="w-full bg-black p-3 rounded-xl border border-white/10 text-neutral-300 font-mono text-base sm:text-xs focus:outline-none"
                 />
                 <button
                   onClick={copyEmbedCode}
-                  className="px-5 py-3 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold shrink-0 active:scale-[0.97] transition-all duration-300"
+                  className="min-h-[44px] px-5 py-3 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold shrink-0 active:scale-[0.97] transition-all duration-300"
                 >
                   {hasCopiedEmbed ? 'Copied!' : 'Copy'}
                 </button>

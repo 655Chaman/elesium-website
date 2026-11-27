@@ -203,7 +203,7 @@ export default function EnterpriseRoiCalculator() {
     };
 
     return (
-        <div className="relative min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 font-sans selection:bg-neutral-200 dark:selection:bg-neutral-800">
+        <div className="relative min-h-[100dvh] bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 font-sans selection:bg-neutral-200 dark:selection:bg-neutral-800">
             <Helmet>
                 <title>Enterprise AI Automation ROI & 3-Year TCO Calculator | Elesium</title>
                 <meta 

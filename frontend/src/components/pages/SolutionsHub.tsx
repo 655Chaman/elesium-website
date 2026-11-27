@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
     Truck,
     ShieldCheck,
@@ -164,14 +163,14 @@ export default function SolutionsHub() {
                 <meta property="og:url" content="https://elesium.online/solutions/" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:site" content="@elesium_online" />
                 <meta name="twitter:title" content="Enterprise AI Solutions &amp; Sovereign Automation | Elesium" />
                 <meta name="twitter:description" content="Directory of deterministic, sovereign enterprise AI automation solutions across logistics, BFSI, manufacturing, healthcare, and ERP integration." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
-            {/* Breadcrumb Navigation (<= 2 clicks crawl guarantee) */}
+            {/* Breadcrumbs (<= 2 clicks crawl guarantee) */}
             <div className="max-w-6xl mx-auto px-6 mb-8">
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-gray-500 dark:text-gray-400">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
@@ -194,7 +193,7 @@ export default function SolutionsHub() {
                 </h1>
 
                 <p className="answer-capsule max-w-3xl text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
-                    Explore 100 ready-to-adapt automation workflows across logistics, finance, manufacturing, healthcare, and ERP systems—built to run inside your own private cloud.
+                    Explore 100 ready-to-adapt automation workflows across logistics, finance, manufacturing, healthcare, and ERP systems - built to run inside your own private cloud.
                 </p>
 
                 {/* Concise Summary Metrics */}
@@ -344,36 +343,41 @@ export default function SolutionsHub() {
                 </div>
 
                 <div className="space-y-3">
-                    {solutionFaqs.map((faq, idx) => (
-                        <div
-                            key={idx}
-                            className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black"
-                        >
-                            <button
-                                type="button"
-                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
+                    {solutionFaqs.map((faq, idx) => {
+                        const isOpen = openFaq === idx
+                        return (
+                            <div
+                                key={idx}
+                                className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black"
                             >
-                                <span>{faq.q}</span>
-                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
-                            </button>
-                            <AnimatePresence initial={false}>
-                                {openFaq === idx && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: 'auto', opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                        className="accordion-panel overflow-hidden"
+                                <h3 className="m-0">
+                                    <button
+                                        type="button"
+                                        aria-expanded={isOpen}
+                                        aria-controls={`solutions-faq-panel-${idx}`}
+                                        onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                        className="w-full min-h-[44px] flex items-center justify-between gap-4 p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                                     >
+                                        <span>{faq.q}</span>
+                                        <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                                    </button>
+                                </h3>
+                                <div
+                                    id={`solutions-faq-panel-${idx}`}
+                                    aria-hidden={!isOpen}
+                                    className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                        isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                    }`}
+                                >
+                                    <div className="overflow-hidden">
                                         <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
                                             {faq.a}
                                         </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    ))}
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
             </section>
         </main>

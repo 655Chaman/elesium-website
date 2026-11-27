@@ -110,7 +110,7 @@ PERFORMANCE AUDIT METRICS:
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>DeepSeek-V3 Grand Unified Serving Fabric Simulator | Elesium</title>
         <meta
@@ -483,7 +483,7 @@ PERFORMANCE AUDIT METRICS:
               readOnly
               value={embedSnippet}
               rows={4}
-              className="w-full p-3 bg-neutral-950 border border-neutral-800 rounded-xl font-mono text-xs text-neutral-300 mb-4 focus:outline-none"
+              className="w-full p-3 bg-neutral-950 border border-neutral-800 rounded-xl font-mono text-base sm:text-xs text-neutral-300 mb-4 focus:outline-none"
             />
             <div className="flex justify-end gap-3">
               <button

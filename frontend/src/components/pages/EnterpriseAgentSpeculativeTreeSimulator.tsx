@@ -127,7 +127,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-speculative-tree-simul
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 font-sans">
       <Helmet>
         <title>Enterprise Speculative Verification Tree Simulator | Tool #69 | Elesium</title>
         <meta

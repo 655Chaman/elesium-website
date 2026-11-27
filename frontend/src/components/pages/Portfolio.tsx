@@ -117,8 +117,9 @@ export default function Portfolio() {
                 },
                 address: {
                     '@type': 'PostalAddress',
-                    addressLocality: 'Bengaluru',
+                    addressLocality: 'Shivamogga',
                     addressRegion: 'Karnataka',
+                    postalCode: '577205',
                     addressCountry: 'IN',
                 },
                 sameAs: [
@@ -128,7 +129,7 @@ export default function Portfolio() {
                     'https://elesium.online/authors/chaman-shah/',
                 ],
                 description:
-                    'Chaman Shah is the Founder of Elesium, connecting enterprise buyers and suppliers and building automated business systems in Bengaluru.',
+                    'Chaman Shah is the Founder of Elesium, connecting enterprise buyers and suppliers and building automated business systems from Shivamogga, Karnataka for Bengaluru and global clients.',
             },
             {
                 '@type': ['ProfilePage', 'WebPage'],
@@ -226,7 +227,7 @@ export default function Portfolio() {
                                     Chaman Shah
                                 </h1>
                                 <p className="text-sm text-neutral-400 mt-1">
-                                    Founder, Elesium &middot; Bengaluru
+                                    Founder, Elesium &middot; Shivamogga, Karnataka
                                 </p>
                             </div>
                         </div>

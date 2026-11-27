@@ -113,7 +113,7 @@ RECOMMENDATION: Deploy ephemeral AST shadow canary verification and automated su
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Autonomous Agent Self-Healing Pipeline & Regression Canary Simulator | Elesium</title>
         <meta

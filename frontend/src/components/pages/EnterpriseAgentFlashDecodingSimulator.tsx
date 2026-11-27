@@ -88,7 +88,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 pt-28 pb-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-28 pb-24 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Agent FlashDecoding & Sequence Parallelism Simulator | Elesium</title>
         <meta
@@ -222,7 +222,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
                 <label className="block text-xs font-mono text-neutral-400 mb-1.5 uppercase">
                   GPU Count
                 </label>
-                <div className="grid grid-cols-4 gap-1.5">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                   {[1, 2, 4, 8].map((g) => (
                     <button
                       key={g}
@@ -243,7 +243,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-flashdeco
                 <label className="block text-xs font-mono text-neutral-400 mb-1.5 uppercase">
                   KV Chunk Size
                 </label>
-                <div className="grid grid-cols-4 gap-1.5">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                   {[128, 256, 512, 1024].map((c) => (
                     <button
                       key={c}

@@ -144,7 +144,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
   }, [results.membraneTrace]);
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Spiking Neural Network (SNN) LIF Neuromorphic Simulator | Elesium</title>
         <meta
@@ -727,7 +727,7 @@ ${results.statusClassification === 'EVENT_DRIVEN_SUPREMACY'
                 readOnly
                 rows={4}
                 value={embedCode}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-200 focus:outline-none"
               />
             </div>
             <div className="flex justify-end space-x-3">

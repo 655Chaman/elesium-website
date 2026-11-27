@@ -60,7 +60,7 @@ export default function EmbedAgentHsmSimulator() {
   }, [results.telemetryTrace]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>Agent HSM PKCS#11 Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-hsm-pkcs11-simulator" />

@@ -122,7 +122,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-hierarchical-storage-p
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent Hierarchical HBM-to-CXL/NVMe Tiered Storage &amp; Paging Simulator | Elesium</title>
         <meta

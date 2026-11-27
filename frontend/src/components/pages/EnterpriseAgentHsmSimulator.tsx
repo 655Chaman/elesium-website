@@ -140,7 +140,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
   }, [results.telemetryTrace]);
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Agent Hardware Security Module (HSM) PKCS#11 Simulator | Elesium</title>
         <meta
@@ -791,7 +791,7 @@ ${results.statusClassification === 'AIR_GAPPED_SOVEREIGN_VAULT'
                   readOnly
                   value={embedCode}
                   rows={4}
-                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none resize-none"
+                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-200 focus:outline-none resize-none"
                 />
               </div>
 

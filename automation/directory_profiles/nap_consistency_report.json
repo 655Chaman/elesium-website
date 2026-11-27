@@ -5,7 +5,7 @@
   "canonical_reference": {
     "brand_name": "Elesium",
     "legal_name": "Elesium Online",
-    "street_address": "Main Road",
+    "street_address": "Remote Engineering Base, Shivamogga",
     "city": "Shivamogga",
     "state": "Karnataka",
     "postal_code": "577205",
@@ -13,24 +13,38 @@
     "country_code": "IN",
     "latitude": 13.9299,
     "longitude": 75.5681,
-    "phone": "+91-8317329312",
+    "phone": "+91 83173 29312",
     "email": "contact@elesium.online",
     "website": "https://elesium.online",
+    "logo": "https://elesium.online/assets/logo-square.png",
     "solutions_hub": "https://elesium.online/solutions",
     "founder_name": "Chaman Shah",
     "founder_title": "Principal AI Systems Architect",
+    "founding_date": "2024-03-15",
     "founding_year": 2024,
     "company_size": "10-49",
     "hourly_rate": "$25 - $49 / hr",
-    "min_project_size": "$10,000+",
-    "primary_category": "Software Company",
+    "min_project_size": "₹1,50,000 ($2,000)",
+    "pricing_tiers": {
+      "pilot_sprint": "₹1,50,000 - ₹3,50,000 ($2,000 - $4,500)",
+      "multi_agent_cluster": "₹6,00,000 - ₹15,00,000 ($7,500 - $18,000)",
+      "autonomous_ai_pod": "₹4,50,000 / month ($5,500 / month)"
+    },
+    "primary_category": "Software company",
     "secondary_categories": [
-      "Artificial Intelligence Development",
-      "Enterprise Workflow Automation",
-      "Computer Consulting"
+      "Computer consultant",
+      "Automation service",
+      "Information technology services",
+      "Data processing service"
     ],
     "tagline": "Replacing 40-hour manual bottlenecks with deterministic, sovereign multi-agent AI systems.",
-    "short_description": "India's premier enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days."
+    "short_description": "Indian enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days.",
+    "area_served": [
+      "Bengaluru",
+      "Karnataka",
+      "India",
+      "Global"
+    ]
   },
   "platforms": [
     {

@@ -9,7 +9,7 @@
 
 Open-source empirical latency benchmarks, KV-cache fragmentation telemetry, high-throughput production configs, and compliance blueprints for running **sovereign, air-gapped Large Language Models (LLMs) and deterministic multi-agent systems** on enterprise hardware within Indian territorial borders.
 
-Engineered and maintained by [Elesium Digital Systems](https://elesium.online), Bangalore, India.
+Engineered and maintained by [Elesium](https://elesium.online), Bangalore, India.
 
 ---
 
@@ -147,7 +147,7 @@ Run our production-hardened launch script configured with FP8 W8A8 GEMM executio
 
 ```bash
 # Clone and enter repo
-git clone https://github.com/elesium-online/sovereign-enterprise-ai-benchmarks.git
+git clone https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks.git
 cd sovereign-enterprise-ai-benchmarks
 
 # Configure environment and execute production daemon
@@ -193,7 +193,7 @@ If you utilize these benchmarks, architectures, or production configs in your re
   title={Empirical Latency, KV-Cache Fragmentation Telemetry, and Sovereign Architecture Specifications for Enterprise Large Language Models},
   author={Shah, Chaman and Elesium Engineering Team},
   year={2026},
-  publisher={Elesium Digital Systems Private Limited},
+  publisher={Elesium (Elesium Online)},
   howpublished={\url{https://elesium.online/signals}},
   note={Specifications and reference implementations available at \url{https://elesium.online/solutions} and \url{https://elesium.online/how-we-work}}
 }
@@ -209,4 +209,5 @@ Elesium partners with Tier-1 banks, insurance conglomerates, and enterprise lead
 - **Technical Signals & Research:** [https://elesium.online/signals](https://elesium.online/signals)
 - **Engagement Framework:** [https://elesium.online/how-we-work](https://elesium.online/how-we-work)
 - **Direct Architecture Desk (WhatsApp):** [+91 83173 29312](https://wa.me/918317329312)
-- **Headquarters:** Koramangala 4th Block, Bangalore, Karnataka 560034, India
+- **Official Ingress Email:** contact@elesium.online
+- **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India

@@ -143,7 +143,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Multi-Agent Deadlock & FSM Circuit Breaker Visualizer | Elesium</title>
         <meta
@@ -530,7 +530,8 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
               )}
 
               {/* SVG Topology Visualization */}
-              <div className="relative w-full h-80 bg-neutral-950/80 rounded-[24px] border border-neutral-800/80 overflow-hidden flex items-center justify-center p-4">
+              <div className="w-full bg-neutral-950/80 rounded-[24px] border border-neutral-800/80 overflow-x-auto overflow-y-hidden p-4">
+                <div className="relative min-w-[480px] w-full h-80 flex items-center justify-center">
                 <svg className="w-full h-full absolute inset-0 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <defs>
                     <marker id="arrow-active" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
@@ -602,6 +603,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                     </div>
                   </div>
                 ))}
+                </div>
               </div>
             </div>
 

@@ -5,7 +5,7 @@
 **Classification:** Confidential / Enterprise Technical Advisory  
 **Target Entity:** Delhivery Limited (CIN: L63090DL2011PLC221234)  
 **Target Recipients:** Chief Technology Officer (CTO), Chief Information Security Officer (CISO), Head of Core Engineering  
-**Issuing Authority:** Elesium Digital Systems (https://elesium.online) - Bangalore, India  
+**Issuing Authority:** Elesium (https://elesium.online) - Bangalore, India  
 **Date of Issuance:** November 2026  
 **Statutory Scope:** Digital Personal Data Protection (DPDP) Act, 2023 (Act No. 22 of 2023) | MeitY Sovereign Data Directives | IT Act Section 43A  
 
@@ -138,7 +138,7 @@ An enterprise of Delhivery's stature and public market listing cannot afford reg
 
 ## 4. The Sovereign Transition Architecture
 
-Elesium Digital Systems engineers and deploys a turnkey, fully sovereign AI architecture that deploys directly into Delhivery's **AWS Mumbai (`ap-south-1`) VPC** or **Tier-IV Private Colocation Enclaves** (CtrlS Navi Mumbai / STT GDC Bangalore).
+Elesium engineers and deploys a turnkey, fully sovereign AI architecture that deploys directly into Delhivery's **AWS Mumbai (`ap-south-1`) VPC** or **Tier-IV Private Colocation Enclaves** (CtrlS Navi Mumbai / STT GDC Bangalore).
 
 ```
                       ELESIUM SOVEREIGN LOGISTICS AI ENCLAVE
@@ -361,4 +361,4 @@ To review Delhivery's live synthetic benchmark replay against an 8x NVIDIA H100 
 - **Lead Infrastructure Architect:** engineering@elesium.online
 - **Official Documentation & Technical Repositories:** [Sovereign Enterprise AI Benchmarks](https://elesium.online/signals)
 
-*Authored by Elesium Digital Systems. All engineering benchmarks, cryptographic specifications, and statutory mappings are certified under Enterprise Release 2026-V1.*
+*Authored by Elesium. All engineering benchmarks, cryptographic specifications, and statutory mappings are certified under Enterprise Release 2026-V1.*

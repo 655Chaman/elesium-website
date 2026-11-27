@@ -3,7 +3,7 @@
 **Primary Compact Keyword:** `autonomous loan underwriting agents for BFSI compliance directors`  
 **Target Duration:** Exactly 45.0 Seconds  
 **Format:** 9:16 Vertical (YouTube Shorts, TikTok, Instagram Reels, LinkedIn Video)  
-**Target BOFU Landing URL:** https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos  
+**Target BOFU Landing URL:** https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors  
 **Central Solutions Hub:** https://elesium.online/solutions  
 
 ---
@@ -21,7 +21,7 @@ In this architectural walkthrough, we break down why low-code wrappers fail at s
 
 🔗 Explore complete enterprise architectures & case studies:
 - Solutions Hub: https://elesium.online/solutions
-- Dedicated Solution: https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos
+- Dedicated Solution: https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors
 - WhatsApp Engineering Desk: +91 8317329312
 
 TIMESTAMPS:
@@ -32,7 +32,7 @@ TIMESTAMPS:
 0:42 - Audit Your Systems
 
 FULL TRANSCRIPT (DESCRIPT FORMAT):
-"Why Indian NBFCs are slashing loan underwriting from 5 days to 1.9 seconds. Your credit analysts waste 72 hours cross-referencing messy scanned GST returns against six months of bank statement PDFs in Excel. Elesium deploys deterministic LangGraph state machines into your private AWS Mumbai VPC. Our pipeline reconciles 1,420 bank line items in 1.9 seconds with zero data leakage under the DPDP Act 2023. Achieved a 65% reduction in underwriting costs and an audited 340% cash-flow ROI in Year 1. Inspect the live underwriting architecture at https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos"
+"Why Indian NBFCs are slashing loan underwriting from 5 days to 1.9 seconds. Your credit analysts waste 72 hours cross-referencing messy scanned GST returns against six months of bank statement PDFs in Excel. Elesium deploys deterministic LangGraph state machines into your private AWS Mumbai VPC. Our pipeline reconciles 1,420 bank line items in 1.9 seconds with zero data leakage under the DPDP Act 2023. Achieved a 65% reduction in underwriting costs and an audited 340% cash-flow ROI in Year 1. Inspect the live underwriting architecture at https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors"
 
 #AIAutomation #EnterpriseAI #Python #LangGraph #SoftwareEngineering #ChiefRiskOfficers&CreditDirectors
 ```
@@ -47,7 +47,7 @@ FULL TRANSCRIPT (DESCRIPT FORMAT):
 | **04 - 12s** | B-Roll: Red terminal error, API timeout warnings, frustrated analyst in Excel. | *"Your credit analysts waste 72 hours cross-referencing messy scanned GST returns against six months of bank statement PDFs in Excel."* | **LOW-CODE = 40 HOURS/WK MANUAL WASTE** |
 | **12 - 28s** | Technical Schematic: LangGraph state machine animated diagram $\to$ Private VPC pod. | *"Elesium deploys deterministic LangGraph state machines into your private AWS Mumbai VPC. Our pipeline reconciles 1,420 bank line items in 1.9 seconds with zero data leakage under the DPDP Act 2023."* | **DETERMINISTIC AGENTS // PRIVATE VPC** |
 | **28 - 38s** | Proof Telemetry: Dashboard showing 82% cycle reduction and audited cash-flow metrics. | *"Achieved a 65% reduction in underwriting costs and an audited 340% cash-flow ROI in Year 1."* | **HARD 90-DAY CASH-FLOW ROI (SLA)** |
-| **38 - 45s** | Direct CTA: Architect pointing to on-screen URL and QR code for WhatsApp engineering desk. | *"Inspect the live underwriting architecture at https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos"* | **TAP LINK // ELESIUM SOLUTIONS HUB** |
+| **38 - 45s** | Direct CTA: Architect pointing to on-screen URL and QR code for WhatsApp engineering desk. | *"Inspect the live underwriting architecture at https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors"* | **TAP LINK // ELESIUM SOLUTIONS HUB** |
 
 ---
 
@@ -64,6 +64,6 @@ FULL TRANSCRIPT (DESCRIPT FORMAT):
   "duration": "PT45S",
   "contentUrl": "https://elesium.online/videos/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors.mp4",
   "embedUrl": "https://elesium.online/embed/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors",
-  "transcript": "Why Indian NBFCs are slashing loan underwriting from 5 days to 1.9 seconds. Your credit analysts waste 72 hours cross-referencing messy scanned GST returns against six months of bank statement PDFs in Excel. Elesium deploys deterministic LangGraph state machines into your private AWS Mumbai VPC. Our pipeline reconciles 1,420 bank line items in 1.9 seconds with zero data leakage under the DPDP Act 2023. Achieved a 65% reduction in underwriting costs and an audited 340% cash-flow ROI in Year 1. Inspect the live underwriting architecture at https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos"
+  "transcript": "Why Indian NBFCs are slashing loan underwriting from 5 days to 1.9 seconds. Your credit analysts waste 72 hours cross-referencing messy scanned GST returns against six months of bank statement PDFs in Excel. Elesium deploys deterministic LangGraph state machines into your private AWS Mumbai VPC. Our pipeline reconciles 1,420 bank line items in 1.9 seconds with zero data leakage under the DPDP Act 2023. Achieved a 65% reduction in underwriting costs and an audited 340% cash-flow ROI in Year 1. Inspect the live underwriting architecture at https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors"
 }
 ```

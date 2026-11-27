@@ -1,19 +1,21 @@
 # G2 Product & Platform Profile - Elesium AI Automation Platform
 
 > **Platform Authority:** DR 91 (Gartner & B2B Software Evaluator)  
-> **Vendor:** Elesium Online
+> **Vendor:** Elesium (Alternate Name: Elesium Online)
 
 ---
 
 ## 1. General & NAP Information
 - **Product Name:** Elesium Enterprise AI Automation Platform
-- **Company / Vendor:** Elesium Online (Brand: Elesium)
+- **Company / Vendor:** Elesium (Alternate Name: Elesium Online)
 - **Website:** https://elesium.online
 - **Solutions Hub:** https://elesium.online/solutions
-- **Headquarters:** Main Road, Shivamogga, Karnataka 577205, India
-- **Phone:** +91-8317329312
+- **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India
+- **Secondary Engineering Pod (Supporting R&D):** Main Road, Shivamogga, Karnataka 577205, India
+- **Phone:** +91 83173 29312
+- **Email:** contact@elesium.online
 - **Founder & Lead Architect:** Chaman Shah (Principal AI Systems Architect)
-- **Founding Year:** 2024
+- **Founding Date:** 2024-03-15
 
 ---
 

@@ -95,10 +95,10 @@ def update_root_index_html(target_file: Path):
     # Enrich areaServed with GEOGRAPHIC_ENTITIES
     updated_org["areaServed"] = list(GEOGRAPHIC_ENTITIES)
 
-    # Preserve any local specific fields from existing node
+    # Preserve any local specific fields from existing node (never re-inject stale address/geo/department)
     if org_idx != -1:
         existing_org = graph[org_idx]
-        for field in ["telephone", "email", "priceRange", "currenciesAccepted", "paymentAccepted", "address", "geo", "hasMap", "department"]:
+        for field in ["telephone", "email", "priceRange", "currenciesAccepted", "paymentAccepted", "address", "geo", "hasMap"]:
             if field in existing_org and field not in updated_org:
                 updated_org[field] = existing_org[field]
         graph[org_idx] = updated_org
@@ -178,7 +178,7 @@ def update_category_pillar_hubs():
             has_org = any("Organization" in n.get("@type", []) for n in graph)
             if not has_org:
                 graph.append({
-                    "@type": "Corporation",
+                    "@type": ["Organization", "ProfessionalService"],
                     "@id": "https://elesium.online/#organization",
                     "name": "Elesium",
                     "url": "https://elesium.online",

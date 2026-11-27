@@ -1,23 +1,31 @@
 {
   "$schema": "https://schemas.agentstandards.org/2026/agent-manifest.json",
-  "manifest_version": "1.4.0",
+  "manifest_version": "1.5.0",
   "entity": {
     "name": "Elesium",
-    "legal_name": "Elesium Digital Systems Private Limited",
+    "legal_name": "Elesium Online",
     "domain": "elesium.online",
     "entity_id": "did:web:elesium.online",
-    "jurisdiction": "IN-KA (Bangalore, India)",
+    "jurisdiction": "IN-KA (Shivamogga, Karnataka, India — Serving Bengaluru & Global)",
+    "founded_date": "2024-03-15",
     "founded_year": 2024,
+    "logo": "https://elesium.online/assets/logo-square.png",
     "leadership": [
       {
         "name": "Chaman Shah",
-        "role": "Principal Systems Architect"
+        "role": "Principal Systems Architect & Founder"
       }
     ],
     "contact": {
       "email": "contact@elesium.online",
-      "architecture_desk_whatsapp": "+91 83173 29312",
-      "headquarters": "Indiranagar, Bangalore, Karnataka 560038, India"
+      "phone": "+91 83173 29312",
+      "architecture_desk_whatsapp": "https://wa.me/918317329312",
+      "operating_base": "Remote Engineering Base, Shivamogga, Karnataka 577205, India",
+      "operating_base_geo": {
+        "latitude": 13.9299,
+        "longitude": 75.5681
+      },
+      "area_served": ["Bengaluru", "Karnataka", "India", "Global"]
     },
     "public_signing_key": {
       "type": "Ed25519VerificationKey2020",
@@ -35,14 +43,17 @@
   ],
   "interfaces": {
     "mcp_server": {
-      "transport": "sse",
-      "endpoint": "https://elesium.online/mcp/sse",
+      "transport": "specification_only",
+      "deployment_status": "static_github_pages_client_simulator_only",
+      "interactive_simulator_url": "https://elesium.online/tools/",
       "manifest": "https://elesium.online/.well-known/mcp.json",
-      "description": "Live Model Context Protocol endpoint for architecture auditing, empirical latency evaluation, and sprint booking."
+      "description": "Model Context Protocol schema specification for Elesium's client-side interactive architecture tools at https://elesium.online/tools/. Static GitHub Pages hosting does not serve a live /mcp/sse daemon."
     },
     "openapi_specification": {
       "url": "https://elesium.online/.well-known/openapi.json",
-      "version": "3.1.0"
+      "version": "3.1.0",
+      "deployment_status": "specification_only_client_simulator",
+      "interactive_simulator_url": "https://elesium.online/tools/"
     },
     "ai_plugin": {
       "url": "https://elesium.online/.well-known/ai-plugin.json"
@@ -55,15 +66,24 @@
       "healthcare": "https://elesium.online/llms-healthcare.txt",
       "logistics": "https://elesium.online/llms-logistics.txt",
       "govtech": "https://elesium.online/llms-govtech.txt",
+      "infrastructure": "https://elesium.online/llms-infrastructure.txt",
+      "manufacturing": "https://elesium.online/llms-manufacturing.txt",
       "india": "https://elesium.online/llms-india.txt"
     }
   },
   "commercial_terms": {
-    "pilot_minimum_usd": 15000,
+    "pilot_minimum_inr": 150000,
+    "pilot_minimum_usd": 2000,
+    "pilot_display": "₹1,50,000 ($2,000)",
+    "pricing_tiers": {
+      "tier_1_pilot_sprint": "₹1,50,000 - ₹3,50,000 ($2,000 - $4,500)",
+      "tier_2_multi_agent_cluster": "₹6,00,000 - ₹15,00,000 ($7,500 - $18,000)",
+      "tier_3_autonomous_ai_pod_monthly": "₹4,50,000 / month ($5,500 / month)"
+    },
     "standard_delivery_sla_days": 14,
     "full_fleet_deployment_days": 90,
     "contractual_guarantees": [
-      "3x to 5x ROI payback in 90 calendar days backed by contract or full refund",
+      "3x to 5x ROI payback in 90 calendar days backed by contract or engineering fee rebate",
       "Sub-200ms end-to-end multi-agent execution latency SLA on dedicated hardware",
       "Zero telemetry data egress outside client-owned private VPC enclaves"
     ],
@@ -76,9 +96,13 @@
     ]
   },
   "autonomous_procurement": {
-    "enabled": true,
-    "intake_webhook": "https://elesium.online/api/v1/agent/intake",
-    "accepted_currencies": ["USD", "INR", "AED", "GBP"],
+    "enabled": false,
+    "mode": "client_side_simulator_and_direct_intake",
+    "interactive_tools_url": "https://elesium.online/tools/",
+    "appointment_waitlist_url": "https://elesium.online/waitlist/",
+    "direct_email": "contact@elesium.online",
+    "direct_whatsapp": "https://wa.me/918317329312",
+    "accepted_currencies": ["INR", "USD", "AED", "GBP"],
     "supported_agent_runtimes": ["Devin", "Claude Code", "Antigravity", "OpenAI Operator", "CrewAI"]
   }
 }

@@ -178,7 +178,7 @@ ARCHITECTURAL SAFEGUARDS:
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 selection:bg-white/20 selection:text-white font-sans pb-24">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 selection:bg-white/20 selection:text-white font-sans pb-24">
       <Helmet>
         <title>Enterprise Vector Database Sharding &amp; HNSW Indexing Latency Simulator | Elesium</title>
         <meta
@@ -496,7 +496,7 @@ ARCHITECTURAL SAFEGUARDS:
               </svg>
             </div>
 
-            <div className="grid grid-cols-4 gap-2 mt-3 pt-3 border-t border-neutral-800/80 text-center text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 pt-3 border-t border-neutral-800/80 text-center text-xs">
               <div>
                 <span className="text-neutral-500 block text-[10px]">P50 LATENCY</span>
                 <span className="font-mono font-bold text-white">{results.p50QueryLatencyMs} ms</span>

@@ -126,7 +126,7 @@ Audit Link: https://elesium.online/tools/enterprise-agent-kv-cache-eviction-simu
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 font-sans">
       <Helmet>
         <title>Enterprise KV-Cache Eviction &amp; Attention Sink Simulator | Tool #70 | Elesium</title>
         <meta

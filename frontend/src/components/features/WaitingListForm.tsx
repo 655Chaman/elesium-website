@@ -12,7 +12,9 @@ import {
     Cpu,
     Check,
     FileText,
-    MessageSquare
+    MessageSquare,
+    AlertCircle,
+    ExternalLink
 } from 'lucide-react'
 import { validateEnterpriseEmail, DomainValidationResult } from '../cro/corporateDomainValidator'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
@@ -111,13 +113,13 @@ type DossierFormData = {
 // ─── Shared input style ───────────────────────────────────────────────────────
 
 const inputBaseClass =
-    'w-full px-4 py-3 rounded-[20px] border bg-white dark:bg-white/5 text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-[15px]'
+    'w-full px-4 py-3 rounded-[20px] border bg-white dark:bg-white/5 text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-base sm:text-[15px]'
 
 const inputNormalBorder = 'border-neutral-200 dark:border-white/10'
 const inputErrorBorder = 'border-black dark:border-white ring-1 ring-black/40 dark:ring-white/40'
 
 const selectBaseClass =
-    'w-full px-4 py-3 rounded-[20px] border bg-white dark:bg-[#111] text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-[15px] cursor-pointer appearance-none'
+    'w-full px-4 py-3 rounded-[20px] border bg-white dark:bg-[#111] text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-all text-base sm:text-[15px] cursor-pointer appearance-none'
 
 const labelClass = 'block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2'
 
@@ -141,6 +143,7 @@ export function MandateApplicationForm({
     const [direction, setDirection] = useState(1)
     const [isLoading, setIsLoading] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
+    const [submitError, setSubmitError] = useState<string | null>(null)
     const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
     const [shakeFields, setShakeFields] = useState<Record<string, boolean>>({})
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
@@ -271,14 +274,32 @@ export function MandateApplicationForm({
 
     const back = () => {
         setFieldErrors({})
+        setSubmitError(null)
         setDirection(-1)
         setStep(s => Math.max(s - 1, 1))
     }
+
+    const whatsappFallbackUrl = useMemo(() => {
+        const msg = [
+            'ELESIUM ARCHITECTURE DOSSIER',
+            `Name: ${formData.name || 'N/A'}`,
+            `Role: ${formData.role || 'N/A'}`,
+            `Company: ${formData.company || 'N/A'}`,
+            `Email: ${formData.email || 'N/A'}`,
+            `Website: ${formData.website || 'N/A'}`,
+            `Perimeter: ${formData.deploymentTarget}`,
+            `Latency: ${formData.concurrencyEnvelope}`,
+            `Compliance: ${formData.complianceMatrix.join(', ')}`,
+            `Workflow: ${formData.targetWorkflow || 'N/A'}`,
+        ].join('\n')
+        return `https://wa.me/918317329312?text=${encodeURIComponent(msg)}`
+    }, [formData])
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault()
         if (!validateCurrentStep()) return
         setIsLoading(true)
+        setSubmitError(null)
 
         const dossierCode = `ELS-ARCH-${Date.now().toString(36).toUpperCase()}`
 
@@ -294,23 +315,36 @@ export function MandateApplicationForm({
             existing.push(submissionPayload)
             localStorage.setItem('els_architecture_dossiers', JSON.stringify(existing))
         } catch {
-            // Local storage error ignored
+            // Local storage unavailable (e.g. private browsing quota)
         }
+
+        const controller = new AbortController()
+        const timeoutId = setTimeout(() => controller.abort(), 15000)
 
         try {
             const apiUrl = import.meta.env.VITE_API_URL || 'https://elesium-website.onrender.com'
 
-            await fetch(`${apiUrl}/api/submit`, {
+            const response = await fetch(`${apiUrl}/api/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(submissionPayload),
-            }).catch(() => null)
+                signal: controller.signal,
+            })
 
-            setIsLoading(false)
+            if (!response.ok) {
+                throw new Error(`Server responded with HTTP ${response.status}`)
+            }
+
             setIsSuccess(true)
-        } catch {
+        } catch (err) {
+            const message =
+                err instanceof Error && err.name === 'AbortError'
+                    ? 'The submission request timed out. Your dossier has not been confirmed by our server—please retry or send it directly via WhatsApp.'
+                    : 'We could not transmit your dossier to our server right now. Please try again or send your brief directly to our Lead Architect on WhatsApp.'
+            setSubmitError(message)
+        } finally {
+            clearTimeout(timeoutId)
             setIsLoading(false)
-            setIsSuccess(true)
         }
     }
 
@@ -387,31 +421,31 @@ export function MandateApplicationForm({
     return (
         <div className="flex flex-col h-full bg-white dark:bg-black font-sans">
             {/* ── Top Dual-Track Tab Switcher ───────────────────────────────────── */}
-            <div className="border-b border-neutral-200 dark:border-white/10 px-6 py-3.5 bg-neutral-50/50 dark:bg-black/40 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-2">
+            <div className="border-b border-neutral-200 dark:border-white/10 px-4 sm:px-6 py-3.5 bg-neutral-50/50 dark:bg-black/40 flex flex-wrap items-center justify-between gap-3">
+                <div className="grid grid-cols-1 sm:flex sm:flex-wrap items-center gap-2 w-full sm:w-auto">
                     <button
                         type="button"
                         onClick={() => setActiveTab('fast-track')}
-                        className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium transition active:scale-[0.97] ${
+                        className={`min-h-[44px] w-full sm:w-auto justify-center flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium transition active:scale-[0.97] ${
                             activeTab === 'fast-track'
                                 ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                 : 'text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10'
                         }`}
                     >
-                        <Calendar className="w-3.5 h-3.5" />
-                        Fast-Track 30-Min Audit
+                        <Calendar className="w-3.5 h-3.5 shrink-0" />
+                        <span>Fast-Track 30-Min Audit</span>
                     </button>
                     <button
                         type="button"
                         onClick={() => setActiveTab('dossier')}
-                        className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium transition active:scale-[0.97] ${
+                        className={`min-h-[44px] w-full sm:w-auto justify-center flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium transition active:scale-[0.97] ${
                             activeTab === 'dossier'
                                 ? 'bg-black text-white dark:bg-white dark:text-black font-semibold'
                                 : 'text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10'
                         }`}
                     >
-                        <FileText className="w-3.5 h-3.5" />
-                        Sovereign Architecture Dossier
+                        <FileText className="w-3.5 h-3.5 shrink-0" />
+                        <span>Sovereign Architecture Dossier</span>
                     </button>
                 </div>
 
@@ -475,7 +509,7 @@ export function MandateApplicationForm({
                         <button
                             type="button"
                             onClick={openWhatsApp}
-                            className="btn-primary h-13 px-8 text-base flex items-center justify-center gap-2 group w-full sm:w-auto active:scale-[0.97]"
+                            className="btn-primary min-h-[48px] py-3 px-8 text-base flex items-center justify-center gap-2 group w-full sm:w-auto active:scale-[0.97]"
                         >
                             <MessageSquare className="w-4 h-4" />
                             Chat on WhatsApp with Lead Architect
@@ -484,7 +518,7 @@ export function MandateApplicationForm({
                         <button
                             type="button"
                             onClick={() => setActiveTab('dossier')}
-                            className="h-13 px-6 rounded-full border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-white/10 text-sm font-medium transition active:scale-[0.97]"
+                            className="min-h-[48px] py-3 px-6 rounded-full border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-white/10 text-sm font-medium transition active:scale-[0.97]"
                         >
                             Or Submit Architecture Dossier (Asynchronous)
                         </button>
@@ -496,7 +530,7 @@ export function MandateApplicationForm({
             {activeTab === 'dossier' && (
                 <div className="flex flex-col md:flex-row flex-1">
                     {/* Left Panel */}
-                    <div className="w-full md:w-5/12 bg-neutral-50 dark:bg-[#0a0a0a] border-r border-neutral-200 dark:border-white/10 p-6 md:p-12 lg:p-14 flex flex-col justify-between">
+                    <div className="w-full md:w-5/12 bg-neutral-50 dark:bg-[#0a0a0a] border-b md:border-b-0 md:border-r border-neutral-200 dark:border-white/10 p-6 md:p-12 lg:p-14 flex flex-col justify-between">
                         <div className="max-w-md mx-auto md:mx-0">
                             {/* Step tracker */}
                             <div className="flex items-center gap-4 mb-8">
@@ -629,7 +663,7 @@ export function MandateApplicationForm({
 
                                         <button
                                             type="submit"
-                                            className="w-full btn-primary h-13 text-base flex items-center justify-center gap-2 group mt-4 active:scale-[0.97]"
+                                            className="w-full btn-primary min-h-[48px] py-3 text-base flex items-center justify-center gap-2 group mt-4 active:scale-[0.97]"
                                         >
                                             Continue to Infrastructure Scope
                                             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -739,17 +773,18 @@ export function MandateApplicationForm({
                                             </div>
                                         </div>
 
-                                        <div className="flex gap-3 pt-2">
+                                        <div className="flex flex-col-reverse sm:flex-row gap-3 pt-2">
                                             <button
                                                 type="button"
                                                 onClick={back}
-                                                className="w-1/4 h-13 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97]"
+                                                className="w-full sm:w-1/3 min-h-[48px] py-3 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97]"
                                             >
                                                 <ArrowLeft className="h-4 w-4" />
+                                                <span>Back</span>
                                             </button>
                                             <button
                                                 type="submit"
-                                                className="flex-1 btn-primary h-13 text-base flex items-center justify-center gap-2 group active:scale-[0.97]"
+                                                className="flex-1 btn-primary min-h-[48px] py-3 text-base flex items-center justify-center gap-2 group active:scale-[0.97]"
                                             >
                                                 Continue to Executive Dossier
                                                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -895,19 +930,48 @@ export function MandateApplicationForm({
                                             )}
                                         </div>
 
-                                        <div className="flex gap-3 pt-2">
+                                        {submitError && (
+                                            <div role="alert" className="p-4 rounded-[20px] border border-red-500/40 bg-red-500/5 text-xs text-black dark:text-white space-y-3">
+                                                <div className="flex items-start gap-2.5">
+                                                    <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                                                    <p className="leading-relaxed font-medium">{submitError}</p>
+                                                </div>
+                                                <div className="flex flex-col sm:flex-row gap-2">
+                                                    <a
+                                                        href={whatsappFallbackUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="min-h-[44px] px-4 py-2 rounded-full bg-black text-white dark:bg-white dark:text-black font-semibold inline-flex items-center justify-center gap-2 active:scale-[0.97] transition"
+                                                    >
+                                                        <MessageSquare className="w-3.5 h-3.5" />
+                                                        <span>Send Dossier via WhatsApp</span>
+                                                        <ExternalLink className="w-3 h-3" />
+                                                    </a>
+                                                    <button
+                                                        type="button"
+                                                        onClick={openWhatsApp}
+                                                        className="min-h-[44px] px-4 py-2 rounded-full border border-neutral-300 dark:border-white/20 text-black dark:text-white font-medium inline-flex items-center justify-center gap-1.5 active:scale-[0.97] transition"
+                                                    >
+                                                        <span>Open WhatsApp Desk</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        <div className="flex flex-col-reverse sm:flex-row gap-3 pt-2">
                                             <button
                                                 type="button"
                                                 onClick={back}
                                                 disabled={isLoading}
-                                                className="w-1/4 h-13 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97] disabled:opacity-40"
+                                                className="w-full sm:w-1/3 min-h-[48px] py-3 flex items-center justify-center gap-1.5 border border-neutral-200 dark:border-white/10 rounded-full text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-white/10 transition active:scale-[0.97] disabled:opacity-40"
                                             >
                                                 <ArrowLeft className="h-4 w-4" />
+                                                <span>Back</span>
                                             </button>
                                             <button
                                                 type="submit"
                                                 disabled={isLoading}
-                                                className="flex-1 btn-primary h-13 text-base flex items-center justify-center gap-2 group active:scale-[0.97] disabled:opacity-60"
+                                                className="flex-1 btn-primary min-h-[48px] py-3 text-base flex items-center justify-center gap-2 group active:scale-[0.97] disabled:opacity-60"
                                             >
                                                 {isLoading ? (
                                                     <Loader2 className="h-5 w-5 animate-spin" />

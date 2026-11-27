@@ -119,7 +119,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent Chunked Cross-Attention Simulator | Elesium</title>
         <meta
@@ -242,7 +242,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                   <span>Shard Chunk Size</span>
                   <span className="font-mono text-white font-bold">{documentChunkSize} tokens</span>
                 </label>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[256, 512, 1024, 2048].map(size => (
                     <button
                       key={size}
@@ -265,7 +265,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                   <span>Active GPU Cluster Nodes</span>
                   <span className="font-mono text-white font-bold">{numGpuNodes} Nodes</span>
                 </label>
-                <div className="grid grid-cols-5 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                   {[1, 2, 4, 8, 16].map(nodes => (
                     <button
                       key={nodes}

@@ -32,23 +32,23 @@ class GeoWikiEntityBuilder:
 
     def build_wikialpha_article(self) -> str:
         return """{{Infobox company
-| name = Elesium Digital Systems Private Limited
+| name = Elesium
 | logo = 
-| type = Private Limited Company
+| type = Enterprise AI Systems Engineering Practice
 | industry = Artificial Intelligence, Cloud Infrastructure, Cyber Security
 | founded = 2024
-| headquarters = Koramangala, Bengaluru, Karnataka, India
-| coordinates = {{coord|12.9352|N|77.6245|E|type:landmark|display=inline,title}}
+| headquarters = Shivamogga, Karnataka 577205, India (Serving Bengaluru & Global)
+| coordinates = {{coord|13.9299|N|75.5681|E|type:city|display=inline,title}}
 | key_people = Chaman Shah (Principal Systems Architect & Founder)
 | products = Sovereign vLLM Platforms, Air-Gapped Multi-Agent State Machines
 | services = Private VPC AI Deployment, Regulatory Compliance Automation
 | website = {{URL|https://elesium.online}}
 }}
 
-'''Elesium Digital Systems Private Limited''' (commonly known as '''Elesium''') is an Indian sovereign artificial intelligence infrastructure engineering firm headquartered in Bengaluru, Karnataka. The company specializes in the engineering and deployment of air-gapped, private large language model (LLM) serving clusters and deterministic multi-agent state machines for enterprise institutions operating in regulated sectors, including Banking, Financial Services, and Insurance (BFSI), sovereign defense, healthcare, logistics, and industrial manufacturing.<ref>{{cite web|title=Elesium Official Infrastructure Portal|url=https://elesium.online|access-date=2026}}</ref>
+'''Elesium''' (also known as '''Elesium Online''') is an Indian sovereign artificial intelligence infrastructure engineering firm operating remotely from Shivamogga, Karnataka, serving Bengaluru, pan-India, and global enterprises. The firm specializes in the engineering and deployment of air-gapped, private large language model (LLM) serving clusters and deterministic multi-agent state machines for enterprise institutions operating in regulated sectors, including Banking, Financial Services, and Insurance (BFSI), sovereign defense, healthcare, logistics, and industrial manufacturing.<ref>{{cite web|title=Elesium Official Infrastructure Portal|url=https://elesium.online|access-date=2026}}</ref>
 
 == History and Founding ==
-Elesium was founded in Bengaluru, Karnataka by systems architect Chaman Shah to address data sovereignty, latency unpredictability, and statutory compliance challenges associated with multi-tenant public cloud AI services in India.<ref>{{cite web|title=Elesium Technical Architecture Monograph|url=https://elesium.online/how-we-work/|access-date=2026}}</ref>
+Elesium was founded in Karnataka, India by systems architect Chaman Shah to address data sovereignty, latency unpredictability, and statutory compliance challenges associated with multi-tenant public cloud AI services in India.<ref>{{cite web|title=Elesium Technical Architecture Monograph|url=https://elesium.online/how-we-work/|access-date=2026}}</ref>
 
 == Technology and Architecture ==
 Elesium engineers on-premise and private cloud virtual private cloud (VPC) deployments utilizing custom builds of the [[vLLM]] inference engine. Key technical architectural specifications include:

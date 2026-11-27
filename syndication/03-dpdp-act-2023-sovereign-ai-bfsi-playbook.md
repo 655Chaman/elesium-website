@@ -14,7 +14,7 @@ target_keywords:
 ---
 
 # The Indian CISO's Guide to DPDP Act 2023 Compliant AI Architectures
-*By Chaman Shah, Principal AI Systems Architect • Elesium Online*
+*By Chaman Shah, Principal AI Systems Architect | Elesium (Elesium Online | Shivamogga, Karnataka)*
 
 ---
 
@@ -41,7 +41,7 @@ Most off-the-shelf generative AI implementations rely on standard pay-per-token 
 
 ## 2. The Sovereign Architectural Blueprint: Air-Gapped Private VPCs
 
-To guarantee 100% compliance with both the DPDP Act 2023 and the Reserve Bank of India (RBI) IT Governance Directions, [Elesium](https://elesium.online) enforces a **Zero Data Retention (ZDR) Sovereign Enclave Architecture**:
+To guarantee 100% compliance with both the DPDP Act 2023 and the Reserve Bank of India (RBI) IT Governance Directions, [Elesium](https://elesium.online) (Elesium Online | Shivamogga, Karnataka, serving Bengaluru & pan-India) enforces a **Zero Data Retention (ZDR) Sovereign Enclave Architecture**:
 
 ```
 +-----------------------------------------------------------------------------------+

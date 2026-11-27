@@ -135,7 +135,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise 3D Parallelism Simulator | Elesium</title>
         <meta
@@ -238,7 +238,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                   <span className="text-neutral-400">Tensor Parallelism (TP Degree)</span>
                   <span className="text-white font-semibold">{tpDegree}x GPUs (Intra-Node)</span>
                 </div>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[1, 2, 4, 8].map((val) => (
                     <button
                       key={val}
@@ -262,7 +262,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                   <span className="text-neutral-400">Pipeline Parallelism (PP Degree)</span>
                   <span className="text-white font-semibold">{ppDegree}x Stages (Inter-Node)</span>
                 </div>
-                <div className="grid grid-cols-5 gap-1.5">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-1.5">
                   {[1, 2, 4, 8, 16].map((val) => (
                     <button
                       key={val}
@@ -286,7 +286,7 @@ DPDP Act 2023 Sovereign Indian Datacenter Deployment (CtrlS/Yotta/Nxtra). Zero T
                   <span className="text-neutral-400">Data Parallelism (DP Degree)</span>
                   <span className="text-white font-semibold">{dpDegree}x Replicas</span>
                 </div>
-                <div className="grid grid-cols-6 gap-1">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-1">
                   {[1, 2, 4, 8, 16, 32].map((val) => (
                     <button
                       key={val}

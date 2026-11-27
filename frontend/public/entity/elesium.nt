@@ -1,8 +1,10 @@
 <https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-<https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Corporation> .
-<https://elesium.online/#organization> <http://www.w3.org/2000/01/rdf-schema#label> "Elesium Digital Systems Private Limited" .
-<https://elesium.online/#organization> <http://schema.org/legalName> "Elesium Digital Systems Private Limited" .
+<https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProfessionalService> .
+<https://elesium.online/#organization> <http://www.w3.org/2000/01/rdf-schema#label> "Elesium" .
+<https://elesium.online/#organization> <http://schema.org/legalName> "Elesium Online" .
 <https://elesium.online/#organization> <http://schema.org/url> <https://elesium.online> .
+<https://elesium.online/#organization> <http://schema.org/areaServed> "Bengaluru" .
+<https://elesium.online/#organization> <http://schema.org/areaServed> "Karnataka" .
 <https://elesium.online/#organization> <http://schema.org/areaServed> "India" .
 <https://elesium.online/#organization> <http://schema.org/knowsAbout> "Sovereign Artificial Intelligence Infrastructure" .
 <https://elesium.online/#organization> <http://schema.org/knowsAbout> "DPDP Act 2023 Section 8(5) Memory Zeroization" .

@@ -1,6 +1,6 @@
 # Benchmarking Air-Gapped vLLM Inference on NVIDIA H100 SXM5: Sub-200ms Latency for Enterprise Private Clouds
 
-By Engineering Architecture Desk, Elesium Digital Systems
+By Engineering Architecture Desk, Elesium
 Published on Medium | Technical Systems Engineering
 
 Running high-throughput large language model inference in an air-gapped private virtual private cloud (VPC) presents distinct architectural challenges compared to consuming hosted REST APIs. Without public WAN access, models must be served locally with strict memory optimization.

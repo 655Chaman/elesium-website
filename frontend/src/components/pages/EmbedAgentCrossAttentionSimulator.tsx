@@ -114,7 +114,7 @@ export default function EmbedAgentCrossAttentionSimulator() {
 
         <div>
           <span className="text-neutral-400 block mb-1">GPU NODES</span>
-          <div className="grid grid-cols-5 gap-1">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-1">
             {[1, 2, 4, 8, 16].map((g) => (
               <button
                 key={g}

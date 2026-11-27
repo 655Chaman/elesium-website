@@ -20,14 +20,21 @@ export function InteractiveHoverButton({
     onMouseEnter,
     onMouseLeave,
     onMouseMove,
+    onPointerDown,
+    onClick,
     ...props
 }: InteractiveHoverButtonProps) {
     const ref = useRef<HTMLButtonElement>(null)
     const [position, setPosition] = useState({ x: 0, y: 0 })
     const [isHovered, setIsHovered] = useState(false)
 
+    const supportsHover = () =>
+        typeof window !== "undefined" &&
+        typeof window.matchMedia === "function" &&
+        window.matchMedia("(hover: hover) and (pointer: fine)").matches
+
     const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
-        if (ref.current) {
+        if (supportsHover() && ref.current) {
             const { clientX, clientY } = e
             const { height, width, left, top } = ref.current.getBoundingClientRect()
             const middleX = clientX - (left + width / 2)
@@ -38,7 +45,9 @@ export function InteractiveHoverButton({
     }
 
     const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
-        setIsHovered(true)
+        if (supportsHover()) {
+            setIsHovered(true)
+        }
         onMouseEnter?.(e)
     }
 
@@ -46,6 +55,22 @@ export function InteractiveHoverButton({
         setIsHovered(false)
         setPosition({ x: 0, y: 0 })
         onMouseLeave?.(e)
+    }
+
+    const handlePointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
+        if (e.pointerType !== "mouse") {
+            setIsHovered(false)
+            setPosition({ x: 0, y: 0 })
+        }
+        onPointerDown?.(e)
+    }
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        if (!supportsHover()) {
+            setIsHovered(false)
+            setPosition({ x: 0, y: 0 })
+        }
+        onClick?.(e)
     }
 
     const { x, y } = position
@@ -59,10 +84,12 @@ export function InteractiveHoverButton({
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onPointerDown={handlePointerDown}
+            onClick={handleClick}
             className={cn(
-                "group relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold transition-colors duration-200",
-                "bg-black text-white border-black hover:bg-white hover:text-black",
-                "dark:bg-white dark:text-black dark:border-white dark:hover:bg-black dark:hover:text-white",
+                "group relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold transition-colors duration-200 active:opacity-90",
+                "bg-black text-white border-black [@media(hover:hover)]:hover:bg-white [@media(hover:hover)]:hover:text-black",
+                "dark:bg-white dark:text-black dark:border-white dark:[@media(hover:hover)]:hover:bg-black dark:[@media(hover:hover)]:hover:text-white",
                 className
             )}
             {...props}

@@ -45,7 +45,7 @@ TARGET_CITIES = [
         "city": "Bangalore",
         "state": "Karnataka",
         "focus_sectors": "Global Capability Centers (GCC), Logistics ERP, DeepTech AI",
-        "recommended_venue": "WeWork Galaxy, Residency Road / Koramangala 4th Block",
+        "recommended_venue": "WeWork Galaxy, Residency Road / Indiranagar, Bengaluru",
         "target_slug": "ai-automation-agency-for-logistics"
     },
     {

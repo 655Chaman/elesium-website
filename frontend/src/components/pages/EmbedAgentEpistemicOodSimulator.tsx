@@ -28,7 +28,7 @@ export default function EmbedAgentEpistemicOodSimulator() {
   }, [inputs]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>Agent Epistemic Uncertainty & OOD Calibrator Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-epistemic-ood-simulator" />

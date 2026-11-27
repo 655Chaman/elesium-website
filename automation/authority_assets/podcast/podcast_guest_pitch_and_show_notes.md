@@ -104,8 +104,8 @@ In this episode, we sit down with **Chaman Shah**, Principal AI Systems Architec
 - **Featured Guest:** [Chaman Shah on LinkedIn](https://www.linkedin.com/in/chaman-elesium)
 - **Enterprise AI Solutions Hub:** Explore verified production architectures and case studies at the [Elesium Enterprise AI Solutions Hub](https://elesium.online/solutions).
 - **Industry Solutions:**
-  - [AI Automation Agency for Logistics ERP](https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing)
-  - [Autonomous Loan Underwriting Agents for BFSI](https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos)
+  - [AI Automation Agency for Logistics ERP](https://elesium.online/solutions/ai-automation-agency-for-logistics-erp)
+  - [Autonomous Loan Underwriting Agents for BFSI](https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors)
 - **Free ROI Calculator:** Compute your operational labor savings and payback period using the [Elesium Interactive AI ROI Engine](https://elesium.online/solutions#roi-calculator).
 ```
 
@@ -116,8 +116,8 @@ In this episode, we sit down with **Chaman Shah**, Principal AI Systems Architec
 <p><strong>Featured Links:</strong></p>
 <ul>
   <li>Explore production case studies at the <a href="https://elesium.online/solutions" target="_blank">Elesium Enterprise AI Solutions Hub</a>.</li>
-  <li>Learn about our specialized <a href="https://elesium.online/solutions/tally-erp-9-tdl-port-9000-socket-communication-telemetry-for-logistics-freight-billing" target="_blank">AI Automation Agency for Logistics ERP</a>.</li>
-  <li>Read our architectural breakdown of <a href="https://elesium.online/solutions/deterministic-automated-loan-underwriting-unified-deepseek-agents-for-fintech-ctos" target="_blank">Autonomous Loan Underwriting Agents for BFSI Compliance</a>.</li>
+  <li>Learn about our specialized <a href="https://elesium.online/solutions/ai-automation-agency-for-logistics-erp" target="_blank">AI Automation Agency for Logistics ERP</a>.</li>
+  <li>Read our architectural breakdown of <a href="https://elesium.online/solutions/autonomous-loan-underwriting-agents-for-bfsi-compliance-directors" target="_blank">Autonomous Loan Underwriting Agents for BFSI Compliance</a>.</li>
   <li>Calculate your payback period with the <a href="https://elesium.online/solutions#roi-calculator" target="_blank">Elesium Interactive AI ROI Calculator</a>.</li>
   <li>Connect with <a href="https://www.linkedin.com/in/chaman-elesium" target="_blank">Chaman Shah on LinkedIn</a>.</li>
 </ul>

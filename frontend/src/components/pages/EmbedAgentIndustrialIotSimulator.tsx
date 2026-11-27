@@ -55,7 +55,7 @@ export default function EmbedAgentIndustrialIotSimulator() {
   }, [results.latencyTrace, results.edgeP99LatencyMs]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>Industrial IoT &amp; OPC-UA Latency Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-industrial-iot-opc-ua-simulator" />

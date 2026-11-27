@@ -116,7 +116,7 @@ RECOMMENDATION: Deploy sovereign BFT state-machine quorum over naive LLM majorit
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20">
       <Helmet>
         <title>Enterprise Multi-Agent Consensus &amp; Byzantine Fault Tolerance Simulator | Elesium</title>
         <meta

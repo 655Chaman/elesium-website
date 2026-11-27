@@ -105,25 +105,28 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                 </div>
 
                 {/* Controls */}
-                <div className="flex items-center gap-1.5">
+                <div className="flex flex-wrap items-center gap-1.5">
                     <button
                         onClick={() => handleZoom(0.15)}
                         title="Zoom In"
-                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        aria-label="Zoom In"
+                        className="min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center p-2.5 sm:p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <ZoomIn className="h-3.5 w-3.5" />
                     </button>
                     <button
                         onClick={() => handleZoom(-0.15)}
                         title="Zoom Out"
-                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        aria-label="Zoom Out"
+                        className="min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center p-2.5 sm:p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <ZoomOut className="h-3.5 w-3.5" />
                     </button>
                     <button
                         onClick={handleReset}
                         title="Reset Zoom"
-                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        aria-label="Reset Zoom"
+                        className="min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center p-2.5 sm:p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <RotateCcw className="h-3.5 w-3.5" />
                     </button>
@@ -132,7 +135,7 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
 
                     <button
                         onClick={handleCopyDsl}
-                        className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        className="min-h-[44px] sm:min-h-0 flex items-center gap-1 px-3.5 py-2 sm:py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 text-white/80 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         {copied ? <Check className="h-3.5 w-3.5 text-neutral-200" /> : <Copy className="h-3.5 w-3.5" />}
                         <span>Mermaid DSL</span>
@@ -141,7 +144,8 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                     <button
                         onClick={handleDownloadSvg}
                         title="Download SVG"
-                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        aria-label="Download SVG"
+                        className="min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center p-2.5 sm:p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <Download className="h-3.5 w-3.5" />
                     </button>
@@ -152,7 +156,8 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
                             onTelemetry?.('mermaid_expand_toggled', { expanded: !isExpanded });
                         }}
                         title={isExpanded ? "Collapse" : "Full Screen"}
-                        className="p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        aria-label={isExpanded ? "Collapse full screen" : "Expand full screen"}
+                        className="min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center p-2.5 sm:p-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         {isExpanded ? <Minimize2 className="h-3.5 w-3.5" /> : <Maximize2 className="h-3.5 w-3.5" />}
                     </button>
@@ -160,12 +165,12 @@ export const InteractiveMermaid: React.FC<InteractiveMermaidProps> = ({
             </div>
 
             {/* Diagram Viewport */}
-            <div className={`relative p-6 overflow-auto flex items-center justify-center bg-radial from-[#0e1422] to-[#06080d] ${
-                isExpanded ? 'flex-1' : 'min-h-[300px]'
+            <div className={`relative p-4 sm:p-6 overflow-x-auto overflow-y-auto flex items-start sm:items-center justify-start sm:justify-center bg-radial from-[#0e1422] to-[#06080d] ${
+                isExpanded ? 'flex-1' : 'min-h-[260px] sm:min-h-[300px]'
             }`}>
                 <div 
-                    style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'center center', transition: 'transform 0.2s ease-out' }}
-                    className="w-full max-w-4xl py-6"
+                    style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'top left', transition: 'transform 0.2s ease-out' }}
+                    className="min-w-[640px] w-full max-w-4xl py-4 sm:py-6"
                 >
                     <svg
                         id="interactive-mermaid-svg"

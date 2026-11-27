@@ -118,7 +118,7 @@ RECOMMENDATION: Deploy sovereign Groth16/PlonK pairing proofs on BN254 to achiev
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Zero-Knowledge Proof State Attestation Simulator | Elesium</title>
         <meta

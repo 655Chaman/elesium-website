@@ -108,7 +108,7 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
 
                     <button
                         onClick={handleCopy}
-                        className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 text-white active:scale-[0.97] transition-all duration-300 border border-white/10"
+                        className="min-h-[44px] sm:min-h-0 flex items-center gap-1.5 px-3.5 py-2 sm:py-1 rounded-full text-xs font-mono bg-white/5 hover:bg-white/10 text-white active:scale-[0.97] transition-all duration-300 border border-white/10"
                     >
                         {copied ? (
                             <>
@@ -126,7 +126,8 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                     <button
                         onClick={handleDownload}
                         title="Download raw file"
-                        className="p-1.5 rounded-full text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        aria-label="Download raw file"
+                        className="min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center p-2.5 sm:p-1.5 rounded-full text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         <Download className="h-3.5 w-3.5" />
                     </button>
@@ -137,7 +138,8 @@ export const InteractiveCodeBlock: React.FC<InteractiveCodeBlockProps> = ({
                             onTelemetry?.('code_expand_toggled', { expanded: !isExpanded });
                         }}
                         title={isExpanded ? "Collapse" : "Full Screen"}
-                        className="p-1.5 rounded-full text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 active:scale-[0.97] transition-all duration-300"
+                        aria-label={isExpanded ? "Collapse full screen" : "Expand full screen"}
+                        className="min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 flex items-center justify-center p-2.5 sm:p-1.5 rounded-full text-white/60 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 active:scale-[0.97] transition-all duration-300"
                     >
                         {isExpanded ? <Minimize2 className="h-3.5 w-3.5" /> : <Maximize2 className="h-3.5 w-3.5" />}
                     </button>

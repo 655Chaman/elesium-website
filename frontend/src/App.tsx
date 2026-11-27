@@ -299,8 +299,6 @@ function App() {
                             <Route path="/tools/gpu-cluster-sizer" element={<Navigate to="/tools/agent-vram-gpu-cluster-sizer/" replace />} />
                             <Route path="/tools/b2b-seo-roi-payback-model" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/b2b-seo-roi-model" element={<Navigate to="/tools/b2b-seo-roi-payback-model/" replace />} />
-                            <Route path="/docs" element={<Navigate to="/resources/" replace />} />
-                            <Route path="/docs/*" element={<Navigate to="/resources/" replace />} />
                             <Route path="/tools/enterprise-ai-roi-calculator" element={<EnterpriseRoiCalculator />} />
                             <Route path="/tools/roi-calculator" element={<Navigate to="/tools/enterprise-ai-roi-calculator/" replace />} />
                             <Route path="/embed/roi-calculator" element={<EmbedRoiCalculator />} />

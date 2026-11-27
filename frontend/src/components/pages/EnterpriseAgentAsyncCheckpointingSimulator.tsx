@@ -130,7 +130,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-async-checkpointing
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Asynchronous GPU Checkpointing & State Migration Simulator | Elesium</title>
         <meta
@@ -254,7 +254,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-async-checkpointing
                   <span className="text-neutral-400">Cluster Size (8 GPUs/Node)</span>
                   <span className="text-white font-semibold">{clusterNodesCount} Nodes ({results.totalGpus} GPUs)</span>
                 </div>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[2, 4, 8, 16].map((val) => (
                     <button
                       key={val}
@@ -517,7 +517,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-async-checkpointing
                 readOnly
                 value={embedSnippet}
                 rows={5}
-                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none"
+                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-300 focus:outline-none"
               />
               <button
                 onClick={copyEmbed}

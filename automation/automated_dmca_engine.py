@@ -116,10 +116,10 @@ VIA ELECTRONIC TRANSMISSION: {abuse_email}
 
 Dear Designated Copyright Agent,
 
-I am writing on behalf of Elesium Digital Systems ("Copyright Owner") pursuant to the Digital Millennium Copyright Act (17 U.S.C. § 512(c)(3)) to notify your service of copyright infringement occurring on servers, hostnames, or routing infrastructure operated or administered by your organization.
+I am writing on behalf of Elesium (Elesium Online) ("Copyright Owner") pursuant to the Digital Millennium Copyright Act (17 U.S.C. § 512(c)(3)) to notify your service of copyright infringement occurring on servers, hostnames, or routing infrastructure operated or administered by your organization.
 
 1. IDENTIFICATION OF COPYRIGHTED WORK:
-The proprietary copyrighted works are original technical software architectures, empirical latency/throughput benchmarks, and bespoke engineering text authored and owned exclusively by Elesium Digital Systems, originally published at:
+The proprietary copyrighted works are original technical software architectures, empirical latency/throughput benchmarks, and bespoke engineering text authored and owned exclusively by Elesium, originally published at:
 ORIGINAL AUTHORITATIVE URL: {original_url}
 TITLE OF WORK: {work_title}{watermark_clause}
 
@@ -135,15 +135,15 @@ I have a good faith belief that the use of the copyrighted material described ab
 I state, under penalty of perjury under the laws of the United States of America, that the information in this notification is accurate, and that I am authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
 
 5. CONTACT INFORMATION & DESIGNATED AGENT:
-Elesium Digital Systems
-Attn: Legal Department & Copyright Enforcement Division
-Address: Bangalore, Karnataka 560034, India
-Email: legal@elesium.online
-Phone: +91-80-4829-1000
+Elesium (Elesium Online)
+Attn: Legal & Copyright Enforcement Desk
+Address: Shivamogga, Karnataka 577205, India
+Email: contact@elesium.online
+Phone: +91 83173 29312
 
 ELECTRONIC SIGNATURE:
 /Chaman Shah/
-Principal AI Systems Architect, Elesium Digital Systems
+Principal AI Systems Architect, Elesium
 """
     return notice
 

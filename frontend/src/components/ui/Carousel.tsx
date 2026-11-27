@@ -120,7 +120,7 @@ export function Carousel({
             {(showControls || showIndicators) && slides.length > 1 && (
                 <div className="mt-4 flex items-center justify-between gap-4">
                     {showIndicators ? (
-                        <div className="flex items-center gap-1.5" role="tablist" aria-label="Carousel slides">
+                        <div className="flex flex-wrap items-center gap-0" role="tablist" aria-label="Carousel slides">
                             {slides.map((_, idx) => (
                                 <button
                                     key={idx}
@@ -129,13 +129,17 @@ export function Carousel({
                                     aria-selected={idx === activeIndex}
                                     aria-label={`Go to slide ${idx + 1}`}
                                     onClick={() => scrollToIndex(idx)}
-                                    className={cn(
-                                        "h-1.5 rounded-full transition-all duration-200",
-                                        idx === activeIndex
-                                            ? "w-6 bg-black dark:bg-white"
-                                            : "w-1.5 bg-neutral-300 dark:bg-neutral-700 hover:bg-neutral-500 dark:hover:bg-neutral-500"
-                                    )}
-                                />
+                                    className="min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-full"
+                                >
+                                    <span
+                                        className={cn(
+                                            "h-1.5 rounded-full transition-all duration-200",
+                                            idx === activeIndex
+                                                ? "w-6 bg-black dark:bg-white"
+                                                : "w-1.5 bg-neutral-300 dark:bg-neutral-700 hover:bg-neutral-500 dark:hover:bg-neutral-500"
+                                        )}
+                                    />
+                                </button>
                             ))}
                         </div>
                     ) : (
@@ -149,7 +153,7 @@ export function Carousel({
                                 aria-label="Previous slide"
                                 onClick={() => scrollToIndex(activeIndex - 1)}
                                 disabled={activeIndex === 0}
-                                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-black text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                                className="inline-flex min-w-[44px] min-h-[44px] h-11 w-11 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-black text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                             >
                                 <ChevronLeft className="h-4 w-4" />
                             </button>
@@ -158,7 +162,7 @@ export function Carousel({
                                 aria-label="Next slide"
                                 onClick={() => scrollToIndex(activeIndex + 1)}
                                 disabled={activeIndex >= slides.length - 1}
-                                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-black text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                                className="inline-flex min-w-[44px] min-h-[44px] h-11 w-11 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-black text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
                             >
                                 <ChevronRight className="h-4 w-4" />
                             </button>

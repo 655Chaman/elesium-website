@@ -1,7 +1,7 @@
 # Sovereign Enterprise AI - DPDP Act 2023 Compliance & Cryptographic Erasure Architecture
 
 **Document Reference:** ELESIUM-ARCH-DPDP-2026-V1  
-**Author:** Elesium Digital Systems (https://elesium.online)  
+**Author:** Elesium (https://elesium.online)  
 **Target Statutory Framework:** Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023, Government of India)  
 **Key Statutory Sections Addressed:** Section 8(5) [Obligation to Cease Retaining Data], Section 16 [Cross-Border Transfer Restrictions], Section 6 [Notice & Consent Framework]  
 **Target Audience:** Enterprise CISOs, Chief Data Officers (CDOs), Legal Counsels, and AI Infrastructure Architects in Indian BFSI, Healthcare, and Telecommunications.

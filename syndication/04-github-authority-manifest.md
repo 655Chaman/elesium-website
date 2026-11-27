@@ -2,7 +2,7 @@
 ### Open-Source Specifications, Architectural Schemas & Telemetry Manifests
 
 [![Website](https://img.shields.io/badge/Website-elesium.online-blue.svg)](https://elesium.online)
-[![Organization](https://img.shields.io/badge/Entity-Elesium%20Digital%20Systems-emerald.svg)](https://elesium.online/#organization)
+[![Organization](https://img.shields.io/badge/Entity-Elesium%20Online-emerald.svg)](https://elesium.online/#organization)
 [![DPDP Act 2023](https://img.shields.io/badge/Compliance-DPDP%20Act%202023%20Sovereign-green.svg)](https://elesium.online/resources/india-enterprise-ai-benchmark-2026)
 [![SLA Guarantee](https://img.shields.io/badge/SLA-14--Day%20Pilot%20%7C%2090--Day%20ROI-orange.svg)](https://elesium.online/ai-automation-agency-india)
 [![Architecture Desk](https://img.shields.io/badge/WhatsApp-Architecture%20Desk-25D366.svg)](https://wa.me/918317329312)
@@ -46,4 +46,4 @@ Explore our suite of 75+ free browser-based architecture simulators:
 - **Principal AI Systems Architect:** Chaman Shah
 - **WhatsApp Architecture Desk:** [+91 83173 29312](https://wa.me/918317329312)
 - **Email:** contact@elesium.online
-- **Headquarters:** Koramangala 4th Block, Bangalore, Karnataka 560034, India
+- **Operating Base:** Shivamogga, Karnataka 577205, India (Serving Bengaluru, India & Global)

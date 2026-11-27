@@ -107,7 +107,7 @@ The following document represents the bilateral commercial engagement verified b
 #### Service Provider (Vendor):
 - **Legal Entity Name:** Elesium Online
 - **Operating Brand:** Elesium
-- **Registered Office:** Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+- **Operating Base:** Shivamogga, Karnataka 577205, India
 - **Website:** `https://elesium.online`
 - **Authorized Representative:** Chaman Syed, Founder & Principal Solutions Architect
 - **Corporate Contact:** `contact@elesium.online` / `chamansyed655@gmail.com`

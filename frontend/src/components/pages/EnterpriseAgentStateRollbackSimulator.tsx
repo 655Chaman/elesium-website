@@ -117,7 +117,7 @@ RECOMMENDATION: Replace naive synchronous DB writes or uncheckpointed execution 
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20">
       <Helmet>
         <title>Enterprise Agentic State Machine Snapshot &amp; Rollback Simulator | Elesium</title>
         <meta

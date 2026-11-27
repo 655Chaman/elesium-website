@@ -33,14 +33,19 @@
             b = document.body,
             st = 'scrollTop',
             sh = 'scrollHeight';
-        var percent = Math.round((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+        var denominator = (h[sh] || b[sh]) - h.clientHeight;
+        if (denominator <= 0) return;
+
+        var percent = Math.min(100, Math.max(0, Math.round((h[st] || b[st]) / denominator * 100)));
         if (percent > maxScrollDepth) {
             maxScrollDepth = percent;
         }
     }, { passive: true });
 
-    // Passive engagement flush on unload/visibility change
+    // Passive engagement flush on unload/visibility change (only when API endpoint is configured)
     function reportEngagement() {
+        var apiUrl = window.ELESIUM_API_URL || window.__ELESIUM_TELEMETRY_URL__;
+        if (!apiUrl) return;
         var dwellSeconds = Math.round((Date.now() - arrivalTime) / 1000);
         var qualified = (Date.now() - arrivalTime) >= qualifiedDwellThreshold;
         if (window.navigator && typeof window.navigator.sendBeacon === "function") {
@@ -53,11 +58,11 @@
                 isSearchReferral: isSearchReferral,
                 timestamp: Date.now()
             });
-            window.navigator.sendBeacon("/api/telemetry/dwell", payload);
+            window.navigator.sendBeacon(String(apiUrl).replace(/\/$/, "") + "/api/telemetry/dwell", payload);
         }
     }
 
-    window.addEventListener("visibilitychange", function() {
+    document.addEventListener("visibilitychange", function() {
         if (document.visibilityState === "hidden") {
             reportEngagement();
         }

@@ -26,7 +26,7 @@ const connectorFaqs = [
     },
     {
         q: 'How do buyers or suppliers start an introduction mandate?',
-        a: 'Share your technical requirements, budget range, and delivery timeline via WhatsApp or connect@elesium.online to initiate direct qualification with our Bengaluru desk.',
+        a: 'Share your technical requirements, budget range, and delivery timeline via WhatsApp or connect@elesium.online to initiate direct qualification with our Shivamogga-based engineering desk serving Bengaluru, India, and global clients.',
     },
 ]
 
@@ -449,7 +449,7 @@ export default function ConnectorHome() {
             {/* Monochrome Connector Footer */}
             <footer className="py-10 px-6 border-t border-white/10 bg-black">
                 <div className="max-w-[1440px] mx-auto px-0 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-                    <p>Elesium Digital Systems Private Limited &bull; Bengaluru</p>
+                    <p>Elesium &bull; Shivamogga, Karnataka (Serving Bengaluru, India &amp; Global)</p>
                     <div className="flex items-center gap-2">
                         <Link
                             to="/"

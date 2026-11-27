@@ -73,18 +73,15 @@ export function ExpandableScreen({
             onExpandChange(isExpanded)
         }
 
-        if (lockScroll) {
-            if (isExpanded) {
-                document.body.style.overflow = "hidden"
-            } else {
-                document.body.style.overflow = ""
-            }
+        if (!lockScroll || !isExpanded || typeof document === "undefined") {
+            return
         }
 
+        const prevOverflow = document.body.style.overflow
+        document.body.style.overflow = "hidden"
+
         return () => {
-            if (lockScroll) {
-                document.body.style.overflow = ""
-            }
+            document.body.style.overflow = prevOverflow
         }
     }, [isExpanded, onExpandChange, lockScroll])
 
@@ -173,9 +170,11 @@ export function ExpandableScreenContent({
         <AnimatePresence>
             {isExpanded && (
                 <motion.div
+                    role="dialog"
+                    aria-modal="true"
                     layoutId={layoutId}
                     className={cn(
-                        "fixed inset-0 z-[100] flex h-screen w-screen flex-col overflow-y-auto bg-white dark:bg-black text-black dark:text-white shadow-2xl",
+                        "fixed inset-0 z-[100] flex h-[100dvh] w-full flex-col overflow-y-auto overscroll-contain bg-white dark:bg-black text-black dark:text-white shadow-2xl",
                         className
                     )}
                     initial={{ opacity: 0, scale: 0.97 }}
@@ -192,7 +191,7 @@ export function ExpandableScreenContent({
                                 collapse()
                             }}
                             className={cn(
-                                "absolute right-4 top-4 z-[101] rounded-full bg-black/5 p-2 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20",
+                                "absolute right-4 top-[max(1rem,env(safe-area-inset-top))] z-[101] min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-black/5 transition-colors hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20",
                                 closeButtonClassName
                             )}
                             aria-label="Close"

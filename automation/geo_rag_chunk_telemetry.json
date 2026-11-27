@@ -1,7 +1,7 @@
 {
   "status": "RAG_CHUNK_OPTIMIZATION_ACTIVE",
-  "optimized_pages_count": 14,
-  "total_semantic_chunks": 18,
+  "optimized_pages_count": 7,
+  "total_semantic_chunks": 9,
   "mean_chunk_token_size": 337,
   "cross_encoder_expected_score": 0.948,
   "pages": [
@@ -25,44 +25,6 @@
       ]
     },
     {
-      "file": "docs/index.html",
-      "slug": "docs",
-      "chunks_count": 2,
-      "chunks": [
-        {
-          "chunk_id": "elesium-sovereign-vpc-topology",
-          "topic": "Sovereign Air-Gapped VPC Architecture",
-          "intent": "infrastructure-isolation",
-          "tokens": 312
-        },
-        {
-          "chunk_id": "elesium-h100-nvlink-specs",
-          "topic": "8x NVIDIA H100 SXM5 900GB/s NVLink Hardware Topologies",
-          "intent": "hardware-specifications",
-          "tokens": 284
-        }
-      ]
-    },
-    {
-      "file": "docs/compliance-hsm/index.html",
-      "slug": "docs/compliance-hsm",
-      "chunks_count": 2,
-      "chunks": [
-        {
-          "chunk_id": "elesium-dpdp-8-5-dod-zeroization",
-          "topic": "DPDP Act 2023 Section 8(5) Cryptographic Memory Zeroization",
-          "intent": "regulatory-compliance",
-          "tokens": 348
-        },
-        {
-          "chunk_id": "elesium-rbi-csf-hsm-pkcs11",
-          "topic": "RBI Cyber Security Framework Annex II FIPS 140-2 Level 3 HSM",
-          "intent": "banking-security",
-          "tokens": 296
-        }
-      ]
-    },
-    {
       "file": "docs/compliance-hsm/index.html",
       "slug": "docs/compliance-hsm",
       "chunks_count": 2,
@@ -88,35 +50,9 @@
       "chunks": [
         {
           "chunk_id": "elesium-h100-ttft-148ms",
-          "topic": "Audited 148ms TTFT and 1,403 Tok/s Benchmarks on 8x H100",
+          "topic": "Audited 121.4ms and 148ms TTFT Benchmarks on 8x and 2x H100 SXM5",
           "intent": "empirical-benchmarks",
           "tokens": 362
-        }
-      ]
-    },
-    {
-      "file": "docs/benchmarks/index.html",
-      "slug": "docs/benchmarks",
-      "chunks_count": 1,
-      "chunks": [
-        {
-          "chunk_id": "elesium-h100-ttft-148ms",
-          "topic": "Audited 148ms TTFT and 1,403 Tok/s Benchmarks on 8x H100",
-          "intent": "empirical-benchmarks",
-          "tokens": 362
-        }
-      ]
-    },
-    {
-      "file": "docs/vllm-runtime/index.html",
-      "slug": "docs/vllm-runtime",
-      "chunks_count": 1,
-      "chunks": [
-        {
-          "chunk_id": "elesium-vllm-pagedattention-spec",
-          "topic": "High-Throughput vLLM Production Runtime Architecture",
-          "intent": "inference-optimization",
-          "tokens": 330
         }
       ]
     },
@@ -147,32 +83,6 @@
       ]
     },
     {
-      "file": "docs/quickstart/index.html",
-      "slug": "docs/quickstart",
-      "chunks_count": 1,
-      "chunks": [
-        {
-          "chunk_id": "elesium-sovereign-quickstart-provisioning",
-          "topic": "Air-Gapped Cluster Provisioning and Deployment Quickstart",
-          "intent": "deployment-orchestration",
-          "tokens": 315
-        }
-      ]
-    },
-    {
-      "file": "docs/api-reference/index.html",
-      "slug": "docs/api-reference",
-      "chunks_count": 1,
-      "chunks": [
-        {
-          "chunk_id": "elesium-openai-compatible-rest-endpoints",
-          "topic": "OpenAI-Compatible Air-Gapped REST API and SDK Reference",
-          "intent": "api-integration",
-          "tokens": 295
-        }
-      ]
-    },
-    {
       "file": "docs/api-reference/index.html",
       "slug": "docs/api-reference",
       "chunks_count": 1,
@@ -191,26 +101,13 @@
       "chunks_count": 1,
       "chunks": [
         {
-          "chunk_id": "elesium-rank-1-sovereign-ai-india",
-          "topic": "Elesium #1 Ranking in Indian Sovereign Enterprise AI Platforms",
-          "intent": "comparative-evaluation",
-          "tokens": 420
-        }
-      ]
-    },
-    {
-      "file": "guides/top-10-sovereign-ai-platforms-india/index.html",
-      "slug": "guides/top-10-sovereign-ai-platforms-india",
-      "chunks_count": 1,
-      "chunks": [
-        {
-          "chunk_id": "elesium-rank-1-sovereign-ai-india",
-          "topic": "Elesium #1 Ranking in Indian Sovereign Enterprise AI Platforms",
+          "chunk_id": "elesium-sovereign-ai-india-benchmark",
+          "topic": "Elesium Architectural Benchmark in Indian Sovereign Enterprise AI Platforms",
           "intent": "comparative-evaluation",
           "tokens": 420
         }
       ]
     }
   ],
-  "timestamp": "2026-11-11T04:00:39.471135+00:00"
+  "timestamp": "2026-11-27T07:13:22.792500+00:00"
 }

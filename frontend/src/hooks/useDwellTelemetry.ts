@@ -38,7 +38,7 @@ export function useDwellTelemetry(pageIdentifier: string) {
     const activeSecondsRef = useRef(0);
     const interactionsRef = useRef(0);
     const maxScrollRef = useRef(0);
-    const isVisibleRef = useRef(!document.hidden);
+    const isVisibleRef = useRef(typeof document !== 'undefined' ? !document.hidden : true);
     const lastActiveTimestampRef = useRef<number>(Date.now());
 
     // Register an active user interaction (clicks, drags, copies, etc.)
@@ -66,6 +66,10 @@ export function useDwellTelemetry(pageIdentifier: string) {
     }, [pageIdentifier]);
 
     useEffect(() => {
+        if (typeof document === 'undefined' || typeof window === 'undefined') {
+            return;
+        }
+
         // Reset tracking on page change
         activeSecondsRef.current = 0;
         interactionsRef.current = 0;
@@ -175,8 +179,12 @@ export function useDwellTelemetry(pageIdentifier: string) {
         // Initial scroll calculation
         handleScroll();
 
-        // 5. Beacon telemetry on unload / navigation
+        // 5. Beacon telemetry on unload / navigation (only when API endpoint is configured)
+        const apiUrl = import.meta.env.VITE_API_URL;
         const handleUnloadBeacon = () => {
+            if (!apiUrl || typeof navigator === 'undefined' || !navigator.sendBeacon) {
+                return;
+            }
             const payload = JSON.stringify({
                 page: pageIdentifier,
                 totalActiveDwellSeconds: activeSecondsRef.current,
@@ -187,10 +195,7 @@ export function useDwellTelemetry(pageIdentifier: string) {
                 exitTimestamp: new Date().toISOString()
             });
 
-            // If an analytics beacon endpoint is configured, fire navigator.sendBeacon
-            if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
-                navigator.sendBeacon('/api/telemetry/navboost', payload);
-            }
+            navigator.sendBeacon(`${apiUrl.replace(/\/$/, '')}/api/telemetry/navboost`, payload);
         };
 
         window.addEventListener('pagehide', handleUnloadBeacon);
@@ -203,7 +208,6 @@ export function useDwellTelemetry(pageIdentifier: string) {
             window.removeEventListener('click', handleUserClick);
             window.removeEventListener('pagehide', handleUnloadBeacon);
             window.removeEventListener('beforeunload', handleUnloadBeacon);
-            handleUnloadBeacon();
         };
     }, [pageIdentifier, trackInteraction]);
 

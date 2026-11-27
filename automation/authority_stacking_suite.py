@@ -36,7 +36,7 @@ QUEUE_FILE = AUTOMATION_DIR / "compact_keywords_queue.json"
 NAP_DATA = {
     "brand_name": "Elesium",
     "legal_name": "Elesium Online",
-    "street_address": "Main Road",
+    "street_address": "Remote Engineering Base, Shivamogga",
     "address_locality": "Shivamogga",
     "address_region": "Karnataka",
     "postal_code": "577205",
@@ -69,7 +69,7 @@ EXPERT_CREDENTIALS = {
     "name": "Chaman Shah",
     "title": "Principal AI Systems Architect",
     "company": "Elesium",
-    "location": "Bengaluru, Karnataka, India",
+    "location": "Shivamogga, Karnataka, India",
     "linkedin": "https://www.linkedin.com/in/chaman-elesium",
     "email": "contact@elesium.online",
     "bio_short": "Chaman Shah is the Principal AI Systems Architect at Elesium (https://elesium.online), an enterprise AI engineering firm that deploys deterministic, sovereign multi-agent infrastructure for BFSI, logistics, and manufacturing enterprises.",
@@ -1081,10 +1081,10 @@ class AuthorityStackingSuite:
 
         # 1. NAP Data Completeness
         assert NAP_DATA["brand_name"] == "Elesium", "Brand name mismatch"
-        assert "560034" in NAP_DATA["postal_code"], "Postal code mismatch"
+        assert "577205" in NAP_DATA["postal_code"], "Postal code mismatch"
         assert "+91-8317329312" in NAP_DATA["phone"], "Phone mismatch"
         assert NAP_DATA["solutions_hub"] == "https://elesium.online/solutions", "Solutions hub mismatch"
-        print(" [PASS] 1. Corporate NAP Data verified (Bengaluru 560034 / +91-8317329312).")
+        print(" [PASS] 1. Corporate NAP Data verified (Shivamogga 577205 / +91-8317329312).")
         checks_passed += 1
 
         # 2. Directory Profile Verification
@@ -1110,7 +1110,7 @@ class AuthorityStackingSuite:
 
         # 5. Semrush Local Verification
         sem_data = self.directory_mgr.generate_semrush_local_feed()
-        assert sem_data["City"] == "Bengaluru"
+        assert sem_data["City"] == "Shivamogga"
         assert sem_data["Solutions Hub URL"] == "https://elesium.online/solutions"
         print(" [PASS] 5. Semrush Local Feed verified for 70+ directory syndication.")
         checks_passed += 1

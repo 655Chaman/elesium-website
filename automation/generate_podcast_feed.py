@@ -107,7 +107,7 @@ def build_podcast_xml(videos) -> str:
     <link>https://elesium.online/videos/</link>
     <atom:link href="https://elesium.online/podcast.xml" rel="self" type="application/rss+xml" />
     <language>en-us</language>
-    <copyright>© 2026 Elesium Digital Systems Private Limited</copyright>
+    <copyright>© 2026 Elesium (Elesium Online)</copyright>
     <description>Technical engineering breakdowns, sovereign private VPC blueprints, deterministic multi-agent state machines (LangGraph), and audited 90-day ROI case studies across Indian enterprise sectors by Elesium.</description>
     <itunes:author>Chaman Shah</itunes:author>
     <itunes:summary>Technical engineering breakdowns on deterministic multi-agent systems, sovereign private VPC deployments, and production enterprise workflows by Elesium.</itunes:summary>

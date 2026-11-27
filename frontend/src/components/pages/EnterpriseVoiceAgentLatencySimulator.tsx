@@ -139,7 +139,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Real-Time Voice Agent VAD & Turn-Taking Latency Simulator | Elesium</title>
         <meta

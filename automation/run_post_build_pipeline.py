@@ -23,8 +23,8 @@ SCRIPTS = [
     ("4/9 Injecting lateral internal link mesh & PageRank bridges", [sys.executable, str(AUTOMATION_DIR / "inject_lateral_link_mesh.py")]),
     ("5/9 Generating high-density AEO empirical citation tables", [sys.executable, str(AUTOMATION_DIR / "generate_aeo_citation_tables.py")]),
     ("6/9 Hardening Core Web Vitals (INP/LCP/CLS) & critical CSS", [sys.executable, str(AUTOMATION_DIR / "optimize_core_web_vitals.py")]),
-    ("7/9 Cryptographically watermarking distribution fleet", [sys.executable, str(AUTOMATION_DIR / "cryptographic_html_watermarker.py"), "--dist-only"]),
-    ("8/9 Gatekeeper JSON-LD Schema AST integrity check", [sys.executable, str(AUTOMATION_DIR / "verify_schema_integrity.py")]),
+    ("7/9 Gatekeeper JSON-LD Schema AST integrity check", [sys.executable, str(AUTOMATION_DIR / "verify_schema_integrity.py")]),
+    ("8/9 Auditing GEO anti-slop & em-dash hygiene", [sys.executable, str(AUTOMATION_DIR / "geo_anti_slop_sanitizer.py"), "--audit"]),
     ("9/9 Parallel multi-core asset pre-compression suite (gzip & brotli)", [sys.executable, str(AUTOMATION_DIR / "compress_assets.py")]),
 ]
 

@@ -7,7 +7,7 @@
 - **Central Solutions Hub:** https://elesium.online/solutions
 - **Direct Phone:** +91-8317329312
 - **Corporate Email:** contact@elesium.online
-- **Office Location:** Main Road, Shivamogga, Karnataka 577205, India
+- **Office Location:** Remote Engineering Base, Shivamogga, Shivamogga, Karnataka 577205, India
 - **Founded:** 2024
 - **Employees:** 10-49
 - **Average Hourly Rate:** $25 - $49 / hr

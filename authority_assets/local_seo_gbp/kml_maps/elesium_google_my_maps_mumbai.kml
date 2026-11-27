@@ -27,10 +27,10 @@
       <PolyStyle><color>1aff0000</color></PolyStyle>
     </Style>
 
-    <!-- FOCAL HUB PLACEMARK -->
+    <!-- FOCAL SERVICE NODE PLACEMARK -->
     <Placemark>
-      <name>Elesium Enterprise AI Headquarters - Mumbai</name>
-      <description>Primary sovereign AI state machine development center. GPS: 19.0657, 72.8687</description>
+      <name>Elesium Enterprise AI Service Hub - Mumbai</name>
+      <description>Sovereign AI state machine engineering coverage for Mumbai. GPS: 19.0657, 72.8687</description>
       <styleUrl>#hubPoint</styleUrl>
       <Point>
         <coordinates>72.8687,19.0657,0</coordinates>
@@ -42,7 +42,7 @@
       <name>Driving Direction Vectors to Mumbai AI Hub</name>
       <Placemark>
         <name>Route: Chhatrapati Shivaji Maharaj Terminus -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Chhatrapati Shivaji Maharaj Terminus converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Chhatrapati Shivaji Maharaj Terminus to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -51,7 +51,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Nariman Point Express Towers -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Nariman Point Express Towers converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Nariman Point Express Towers to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -60,7 +60,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Andheri East MIDC SEEPZ Gate -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Andheri East MIDC SEEPZ Gate converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Andheri East MIDC SEEPZ Gate to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -69,7 +69,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Powai Hiranandani Business Park -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Powai Hiranandani Business Park converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Powai Hiranandani Business Park to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -78,7 +78,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Lower Parel One International Center -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Lower Parel One International Center converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Lower Parel One International Center to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -87,7 +87,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Vashi Navi Mumbai Infotech Park -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Vashi Navi Mumbai Infotech Park converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Vashi Navi Mumbai Infotech Park to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -96,7 +96,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Thane Majiwada Golden Quadrilateral -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Thane Majiwada Golden Quadrilateral converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Thane Majiwada Golden Quadrilateral to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -105,7 +105,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Worli Sea Face Coastal Road Link -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Worli Sea Face Coastal Road Link converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Worli Sea Face Coastal Road Link to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -114,7 +114,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Goregaon NESCO Exhibition Centre -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Goregaon NESCO Exhibition Centre converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Goregaon NESCO Exhibition Centre to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>
@@ -123,7 +123,7 @@
       </Placemark>
       <Placemark>
         <name>Route: Bandra West Linking Road Junction -&gt; Elesium Mumbai</name>
-        <description>Driving direction path from Bandra West Linking Road Junction converging on Elesium Mumbai headquarters.</description>
+        <description>Service corridor vector from Bandra West Linking Road Junction to Elesium Mumbai coverage hub.</description>
         <styleUrl>#vectorRoute</styleUrl>
         <LineString>
           <tessellate>1</tessellate>

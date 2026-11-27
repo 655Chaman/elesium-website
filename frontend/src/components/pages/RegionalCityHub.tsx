@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
     MapPin,
     CheckCircle2,
@@ -68,31 +67,31 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
         slug: 'enterprise-ai-bangalore',
         h1: "Enterprise AI & Automation Engineering in Bangalore",
         metaTitle: "Enterprise AI & Automation Engineering in Bangalore, Karnataka",
-        metaDescription: "Elesium is an enterprise AI and automation engineering firm in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga.",
-        answerCapsule: "Elesium is an enterprise AI and automation engineering firm in Bangalore and Karnataka, headquartered in Koramangala 4th Block with a statewide engineering pod in Shivamogga. We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines across Outer Ring Road, Whitefield, Electronic City, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
-        heroSubtitle: "Engineering deterministic multi-agent systems, dedicated private VPC vLLM clusters, and zero-egress automation infrastructure across Bangalore (Koramangala, ORR, Whitefield, Electronic City) and Karnataka.",
+        metaDescription: "Elesium is a remote-first enterprise AI and automation engineering practice based in Shivamogga, Karnataka serving Bangalore. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation for ORR, Whitefield, Electronic City, and Koramangala clients.",
+        answerCapsule: "Elesium is a remote-first sovereign AI systems engineering practice based in Shivamogga, Karnataka 577205 (13.9299, 75.5681), serving Bengaluru and statewide Karnataka enterprises online and via dedicated private VPC deployments. We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines for clients across Outer Ring Road, Whitefield, Electronic City, Koramangala, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
+        heroSubtitle: "Remote-first sovereign AI engineering from Shivamogga, Karnataka serving Bangalore (ORR, Whitefield, Electronic City, Koramangala) and statewide enterprises with deterministic multi-agent systems and private VPC vLLM clusters.",
         officeAddress: {
-            street: "Koramangala 4th Block, 80 Feet Road",
-            locality: "Bengaluru",
+            street: "Remote-First Sovereign AI Practice, Shivamogga",
+            locality: "Shivamogga",
             region: "Karnataka",
-            postalCode: "560034",
-            lat: 12.9352,
-            lng: 77.6245
+            postalCode: "577205",
+            lat: 13.9299,
+            lng: 75.5681
         },
         wikidataId: "https://www.wikidata.org/wiki/Q1355",
-        localLandmark: "500m from Sony World Signal, 80 Feet Road, Koramangala 4th Block",
-        hasMapUrl: "https://maps.google.com/?q=12.9352,77.6245",
+        localLandmark: "Remote-First Practice · Shivamogga, Karnataka 577205 (Serving Bengaluru & Global)",
+        hasMapUrl: "https://maps.google.com/?q=13.9299,75.5681",
         geoRadius: "50000",
         targetIndustries: [
             "High-Growth Enterprise SaaS & Developer Platforms",
             "Global Capability Centers (GCCs) along ORR & Whitefield",
             "Electronic City Hardware, SMT & Semiconductor Tooling",
-            "Koramangala FinTech Platforms & Karnataka Enterprise Hubs"
+            "Koramangala FinTech Platforms & Karnataka Enterprise Clients"
         ],
         corePillars: [
             {
                 title: "Sovereign Engineering Pods",
-                desc: "Direct daily collaboration with Principal AI Systems Architects stationed in Koramangala, Bengaluru and our Shivamogga Karnataka engineering pod. Zero junior batch outsourcing.",
+                desc: "Direct daily online collaboration with Principal AI Systems Architects based in Shivamogga, Karnataka serving Bengaluru and statewide enterprise teams. Zero junior batch outsourcing.",
                 metric: "14 Days",
                 metricLabel: "To Live Production"
             },
@@ -122,16 +121,16 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
                 answer: "Public commercial AI APIs expose proprietary codebases and customer data to external training pipelines and foreign cloud servers. Elesium deploys open-weights models (DeepSeek-V3, Llama-3.3, Qwen-2.5) directly into your private AWS ap-south-1 or bare-metal GPU clusters in Bengaluru, ensuring 100% compliance with India's DPDP Act 2023 and zero data egress."
             },
             {
-                question: "How fast can Elesium deploy a custom multi-agent LangGraph architecture in Bengaluru?",
-                answer: "Our Koramangala engineering pod operates on a strict 14-day production deployment cycle. Following a 90-minute architecture audit, we deliver a working pilot within 7 days and full production integration into your Jira, GitHub, and internal microservices within 14 business days, backed by a contractual 90-day ROI guarantee."
+                question: "How fast can Elesium deploy a custom multi-agent LangGraph architecture for Bengaluru clients?",
+                answer: "Operating remote-first from Shivamogga, Karnataka, our engineering team runs a strict 14-day production deployment cycle for Bengaluru and Karnataka clients. Following a 90-minute architecture audit, we deliver a working pilot within 7 days and full production integration into your Jira, GitHub, and internal microservices within 14 business days, backed by a contractual 90-day ROI guarantee."
             },
             {
                 question: "What enterprise industries and corridors do you serve across Bangalore and Karnataka?",
-                answer: "We engineer autonomous systems for enterprise B2B SaaS firms in Koramangala and Indiranagar, Global Capability Centers (GCCs) along Outer Ring Road (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield, SMT and semiconductor manufacturers in Electronic City, and statewide Karnataka enterprises supported by our Shivamogga engineering pod."
+                answer: "From our remote-first engineering base in Shivamogga, Karnataka, we build autonomous systems for enterprise B2B SaaS and FinTech clients in Koramangala and Indiranagar, Global Capability Centers (GCCs) along Outer Ring Road (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield, SMT and semiconductor manufacturers in Electronic City, and enterprises statewide."
             },
             {
-                question: "What makes Elesium a top-ranked AI and automation company in Bangalore and Karnataka?",
-                answer: "Elesium engineers deterministic, strictly sovereign multi-agent systems with an audited 148ms Time-To-First-Token on dedicated 8x NVIDIA H100 SXM5 hardware, private VPC deployments inside Indian borders, and full DPDP Act 2023 plus Karnataka Cyber Security Policy 2024 compliance. Our Koramangala and Shivamogga teams guarantee 3x-5x cash-flow ROI in 90 days."
+                question: "What makes Elesium a high-precision AI and automation engineering partner in Bangalore and Karnataka?",
+                answer: "Elesium engineers deterministic, strictly sovereign multi-agent systems with an audited 148ms Time-To-First-Token on dedicated 8x NVIDIA H100 SXM5 hardware, private VPC deployments inside Indian borders, and full DPDP Act 2023 plus Karnataka Cyber Security Policy 2024 compliance. Based in Shivamogga, Karnataka, our online-first engineering team guarantees 3x-5x cash-flow ROI in 90 days."
             },
             {
                 question: "How is Elesium different from generic IT consultancies and automation agencies in Bengaluru?",
@@ -146,8 +145,8 @@ export const REGIONAL_CITIES: Record<string, CityData> = {
                 answer: "Elesium enforces the Karnataka Cyber Security Policy 2024 and Karnataka Digital Economy Mission (KDEM) data localization guidelines through deterministic LangGraph state controls, FIPS 140-2 Level 3 HSM key segregation, and automated DoD 5220.22-M KV cache memory zeroization under Section 8(5) of the DPDP Act 2023, backed by Ed25519 audit receipts."
             },
             {
-                question: "What execution latency does Elesium guarantee for Koramangala FinTech FIX protocol trade automation?",
-                answer: "Elesium achieves an audited 148ms Time-To-First-Token and 124.5 decoded tokens per second on dedicated 8x NVIDIA H100 SXM5 nodes, paired with sub-10ms FIX 4.2/4.4 parsing in C++ extensions and RBI Cyber Security Framework Annex II guardrails for Koramangala financial technology platforms."
+                question: "What execution latency does Elesium guarantee for Bengaluru and Koramangala FinTech FIX protocol trade automation?",
+                answer: "Elesium achieves an audited 148ms Time-To-First-Token and 124.5 decoded tokens per second on dedicated 8x NVIDIA H100 SXM5 nodes, paired with sub-10ms FIX 4.2/4.4 parsing in C++ extensions and RBI Cyber Security Framework Annex II guardrails for Bengaluru financial technology platforms."
             }
         ]
     },
@@ -671,7 +670,8 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                 "name": `Elesium - ${cityData.h1}`,
                 "url": canonicalUrl,
                 "telephone": "+91-8317329312",
-                "priceRange": "₹₹₹₹",
+                "email": "contact@elesium.online",
+                "priceRange": "$$$$",
                 "image": "https://elesium.online/og-image.png",
                 "description": cityData.answerCapsule,
                 "hasMap": cityData.hasMapUrl,
@@ -692,47 +692,36 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     "latitude": cityData.officeAddress.lat,
                     "longitude": cityData.officeAddress.lng
                 },
-                "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": cityData.cityName,
-                    "sameAs": cityData.wikidataId,
-                    ...(cityData.cityId === 'bangalore' ? {
-                        "containedInPlace": {
-                            "@type": "State",
-                            "name": "Karnataka",
-                            "sameAs": "https://www.wikidata.org/wiki/Q1185"
+                "areaServed": cityData.cityId === 'bangalore'
+                    ? [
+                        {
+                            "@type": "AdministrativeArea",
+                            "name": cityData.cityName,
+                            "sameAs": cityData.wikidataId,
+                            "containedInPlace": {
+                                "@type": "State",
+                                "name": "Karnataka",
+                                "sameAs": "https://www.wikidata.org/wiki/Q1185"
+                            },
+                            "containsPlace": [
+                                { "@type": "Place", "name": "Koramangala & Indiranagar Tech Corridor, Bengaluru" },
+                                { "@type": "Place", "name": "Outer Ring Road (ORR) Tech Corridor, Bengaluru" },
+                                { "@type": "Place", "name": "Whitefield IT Corridor, Bengaluru" },
+                                { "@type": "Place", "name": "Electronic City Phases 1 and 2, Bengaluru" },
+                                { "@type": "AdministrativeArea", "name": "Shivamogga, Karnataka", "sameAs": "https://www.wikidata.org/wiki/Q200018" }
+                            ]
                         },
-                        "containsPlace": [
-                            { "@type": "Place", "name": "Koramangala 4th Block, Bengaluru" },
-                            { "@type": "Place", "name": "Outer Ring Road (ORR) Tech Corridor, Bengaluru" },
-                            { "@type": "Place", "name": "Whitefield IT Corridor, Bengaluru" },
-                            { "@type": "Place", "name": "Electronic City Phases 1 and 2, Bengaluru" },
-                            { "@type": "AdministrativeArea", "name": "Shivamogga Engineering Pod, Karnataka", "sameAs": "https://www.wikidata.org/wiki/Q200018" }
-                        ]
-                    } : {})
-                },
-                ...(cityData.cityId === 'bangalore' ? {
-                    "department": {
-                        "@type": "LocalBusiness",
-                        "@id": "https://elesium.online/#pod-shivamogga",
-                        "name": "Elesium Shivamogga Engineering Pod",
-                        "url": "https://elesium.online/enterprise-ai-bangalore/",
-                        "telephone": "+91-8317329312",
-                        "email": "contact@elesium.online",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "Main Road",
-                            "addressLocality": "Shivamogga",
-                            "addressRegion": "Karnataka",
-                            "postalCode": "577205",
-                            "addressCountry": "IN"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": 13.9299,
-                            "longitude": 75.5681
-                        }
+                        "Bengaluru",
+                        "Karnataka",
+                        "India",
+                        "Global"
+                    ]
+                    : {
+                        "@type": "AdministrativeArea",
+                        "name": cityData.cityName,
+                        "sameAs": cityData.wikidataId
                     },
+                ...(cityData.cityId === 'bangalore' ? {
                     "knowsAbout": [
                         "Sovereign AI Infrastructure for Global Capability Centers",
                         "Karnataka Cyber Security Policy 2024 Compliance",
@@ -760,7 +749,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     "@id": "https://elesium.online/authors/chaman-shah#person",
                     "name": "Chaman Shah",
                     "jobTitle": "Principal AI Systems Architect & Founder",
-                    "url": "https://elesium.online/authors/chaman-shah"
+                    "url": "https://elesium.online/authors/chaman-shah/"
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
@@ -775,9 +764,10 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                     "https://www.g2.com/products/elesium-ai-automation-platform",
                     "https://www.trustpilot.com/review/elesium.online",
                     "https://www.crunchbase.com/organization/elesium-online",
+                    "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
                     "https://github.com/655Chaman/elesium-website",
-                    "https://www.linkedin.com/in/chaman-elesium",
-                    "https://x.com/elesium_ai"
+                    "https://linkedin.com/in/chaman-shah-elesium",
+                    "https://x.com/elesium_online"
                 ]
             },
             {
@@ -788,13 +778,13 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Home",
-                        "item": "https://elesium.online"
+                        "item": "https://elesium.online/"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Enterprise AI India",
-                        "item": "https://elesium.online/ai-automation-agency-india"
+                        "item": "https://elesium.online/ai-automation-agency-india/"
                     },
                     {
                         "@type": "ListItem",
@@ -1059,10 +1049,10 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                             </h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
-                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Koramangala &amp; Indiranagar</div>
+                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Koramangala &amp; Indiranagar Clients</div>
                                     <h3 className="text-lg font-semibold text-black dark:text-white mb-2">FinTech &amp; High-Velocity B2B SaaS</h3>
                                     <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                                        Headquarters on 80 Feet Road, Koramangala 4th Block. Low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.
+                                        Serving Koramangala and Indiranagar startups and FinTech teams remotely with low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.
                                     </p>
                                 </div>
                                 <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
@@ -1080,10 +1070,10 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                                     </p>
                                 </div>
                                 <div className="p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 h-full flex flex-col">
-                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Shivamogga Pod &amp; Beyond Bengaluru</div>
+                                    <div className="text-xs font-mono text-neutral-600 dark:text-neutral-400 uppercase mb-1">Shivamogga Base &amp; Beyond Bengaluru</div>
                                     <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Karnataka Statewide Enterprise Delivery</h3>
                                     <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                                        Statewide engineering pod in Shivamogga aligned with KDEM Beyond Bengaluru hubs (Mysuru, Mangaluru, Hubballi-Dharwad) for agri-processing, NBFC, and industrial automation.
+                                        Remote-first engineering base in Shivamogga (577205) serving Bengaluru and KDEM Beyond Bengaluru hubs (Mysuru, Mangaluru, Hubballi-Dharwad) for agri-processing, NBFC, and industrial automation.
                                     </p>
                                 </div>
                             </div>
@@ -1136,7 +1126,7 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                                     <thead className="bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white font-semibold">
                                         <tr>
                                             <th className="p-4">Evaluation Criterion</th>
-                                            <th className="p-4 text-black dark:text-white">Elesium (Koramangala / Shivamogga)</th>
+                                            <th className="p-4 text-black dark:text-white">Elesium (Shivamogga · Remote-First)</th>
                                             <th className="p-4">Traditional Bengaluru IT Consultancies</th>
                                             <th className="p-4">Foreign Cloud API SaaS Wrappers</th>
                                         </tr>
@@ -1197,35 +1187,38 @@ export default function RegionalCityHub({ forcedCityId }: RegionalCityHubProps) 
                                     key={i}
                                     className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
                                 >
-                                    <button
-                                        onClick={() => setOpenFaqIndex(isOpen ? null : i)}
-                                        className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
+                                    <h3 className="m-0">
+                                        <button
+                                            type="button"
+                                            aria-expanded={isOpen}
+                                            aria-controls={`city-faq-panel-${i}`}
+                                            onClick={() => setOpenFaqIndex(isOpen ? null : i)}
+                                            className="w-full min-h-[44px] p-5 text-left flex items-center justify-between gap-4 font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
+                                        >
+                                            <span>{faq.question}</span>
+                                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
+                                        </button>
+                                    </h3>
+                                    <div
+                                        id={`city-faq-panel-${i}`}
+                                        aria-hidden={!isOpen}
+                                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                        }`}
                                     >
-                                        <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180 text-black dark:text-white' : 'text-neutral-400'}`} />
-                                    </button>
-                                    <AnimatePresence initial={false}>
-                                        {isOpen && (
-                                            <motion.div
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                                className="accordion-panel overflow-hidden"
-                                            >
-                                                <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-4 faq-answer">
-                                                    {faq.answer}
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
+                                        <div className="overflow-hidden">
+                                            <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-4 faq-answer">
+                                                {faq.answer}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             )
                         })}
                     </div>
                 </section>
 
-                {/* Regional Mesh Navigation */}
+                {/* Regional Mesh Links */}
                 <section className="mb-14 md:mb-16 pt-12 border-t border-neutral-200 dark:border-white/10">
                     <div className="flex items-center justify-between mb-6">
                         <h3 className="text-lg font-medium text-black dark:text-white">

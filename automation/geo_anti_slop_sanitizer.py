@@ -18,6 +18,7 @@ import os
 import sys
 import re
 import json
+import argparse
 from pathlib import Path
 from typing import Dict, List, Tuple, Any
 
@@ -279,13 +280,42 @@ class GeoAntiSlopSanitizer:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="GEO Anti-Slop Content Sanitizer & Empirical Linter")
+    parser.add_argument("--audit", action="store_true", help="Run non-destructive slop & em-dash audit")
+    parser.add_argument("--strict", action="store_true", help="Exit with code 1 if any violations are detected")
+    parser.add_argument("--dir", type=str, default=None, help="Target directory to audit (defaults to frontend/public and syndication)")
+    args = parser.parse_args()
+
     sanitizer = GeoAntiSlopSanitizer()
-    print("Executing Anti-Slop Audit on frontend/public and selected distribution files...")
-    public_audit = sanitizer.audit_directory(WEBSITE_ROOT / "frontend" / "public")
-    print(f"Public Audit: {public_audit['flagged_files_count']} flagged files out of {public_audit['total_files_audited']}.")
-    print(f"Slop Tokens: {public_audit['aggregate_slop_tokens']}, Em Dashes: {public_audit['aggregate_em_dashes']}")
-    
-    # Save telemetry
+    if args.dir:
+        target_dirs = [Path(args.dir)]
+    else:
+        target_dirs = [WEBSITE_ROOT / "frontend" / "public", WEBSITE_ROOT / "syndication"]
+
+    aggregate_flagged = 0
+    aggregate_slop = 0
+    aggregate_em_dashes = 0
+    combined_report = {}
+
+    print("Executing Anti-Slop Audit...")
+    for t_dir in target_dirs:
+        if not t_dir.exists():
+            continue
+        audit_res = sanitizer.audit_directory(t_dir)
+        label = str(t_dir.relative_to(WEBSITE_ROOT)) if t_dir.is_relative_to(WEBSITE_ROOT) else str(t_dir)
+        print(
+            f"  [{label}] {audit_res['flagged_files_count']} flagged files out of {audit_res['total_files_audited']} "
+            f"(Slop Tokens: {audit_res['aggregate_slop_tokens']}, Em Dashes: {audit_res['aggregate_em_dashes']})"
+        )
+        aggregate_flagged += audit_res["flagged_files_count"]
+        aggregate_slop += audit_res["aggregate_slop_tokens"]
+        aggregate_em_dashes += audit_res["aggregate_em_dashes"]
+        combined_report[label] = audit_res
+
     telemetry_path = BASE_DIR / "geo_slop_audit_telemetry.json"
-    telemetry_path.write_text(json.dumps(public_audit, indent=2), encoding="utf-8")
+    telemetry_path.write_text(json.dumps(combined_report, indent=2), encoding="utf-8")
     print(f"Telemetry saved to {telemetry_path}")
+
+    if args.strict and (aggregate_slop > 0 or aggregate_em_dashes > 0):
+        print("[-] Strict audit failed: slop tokens or em dashes detected.", file=sys.stderr)
+        sys.exit(1)

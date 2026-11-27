@@ -32,7 +32,7 @@ export default function EmbedVectorDbBenchmark() {
   }, [inputs]);
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 p-4 font-sans antialiased">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 p-4 font-sans antialiased">
       <Helmet>
         <title>Enterprise Vector DB & RAG Latency Benchmark Widget | Elesium</title>
         <meta

@@ -118,7 +118,7 @@ Architecture Validated: https://elesium.online/tools/enterprise-agent-smart-cont
         <link rel="canonical" href="https://elesium.online/tools/enterprise-agent-smart-contract-formal-verification-simulator" />
       </Helmet>
 
-      <div className="min-h-screen bg-black text-neutral-100 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-10 text-center sm:text-left flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 border-b border-neutral-800/80 pb-6">

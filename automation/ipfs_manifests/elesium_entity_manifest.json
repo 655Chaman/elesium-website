@@ -10,7 +10,7 @@
       "LocalBusiness"
     ],
     "name": "Elesium",
-    "legalName": "Elesium Digital Systems",
+    "legalName": "Elesium Online",
     "url": "https://elesium.online",
     "telephone": "+91-8317329312",
     "foundingLocation": {
@@ -18,10 +18,10 @@
       "name": "Bangalore",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Koramangala 4th Block",
-        "addressLocality": "Bangalore",
+        "streetAddress": "Remote Engineering Base, Shivamogga",
+        "addressLocality": "Shivamogga",
         "addressRegion": "Karnataka",
-        "postalCode": "560034",
+        "postalCode": "577205",
         "addressCountry": "IN"
       }
     },

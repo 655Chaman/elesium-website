@@ -9,7 +9,7 @@ const workflows = [
         sector: 'Inbound Sales & Inbox',
         status: 'n8n · Voiceflow · GHL',
         description:
-            'Consolidates incoming leads from WhatsApp, SMS, Instagram, live chat, and email into SQL and CRM—qualifying intent, sending tailored replies per channel, booking meetings, and automating follow-ups.',
+            'Consolidates incoming leads from WhatsApp, SMS, Instagram, live chat, and email into SQL and CRM - qualifying intent, sending custom-configured replies per channel, booking meetings, and automating follow-ups.',
         metric: 'Unified Multi-Channel Inbox',
         timeframe: 'Zero missed leads',
     },
@@ -27,7 +27,7 @@ const workflows = [
         sector: 'Client Onboarding',
         status: 'n8n · WhatsApp · Razorpay',
         description:
-            'Triggers automatically once a contract is signed and paid—sending invoices, provisioning client CRM workspaces, spinning up dedicated WhatsApp groups, and onboarding teams cleanly.',
+            'Triggers automatically once a contract is signed and paid - sending invoices, provisioning client CRM workspaces, spinning up dedicated WhatsApp groups, and onboarding teams cleanly.',
         metric: 'Zero-Touch Onboarding',
         timeframe: 'Instant setup',
     },

@@ -109,16 +109,16 @@ export default function EnterpriseOnboarding() {
         const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         return `MUTUAL NON-DISCLOSURE AGREEMENT (NDA)
 EFFECTIVE DATE: ${today}
-GOVERNING LAW: Indian Contract Act, 1872 (Courts of Bengaluru, Karnataka)
+GOVERNING LAW: Indian Contract Act, 1872 (Courts of Karnataka)
 STATUTORY COMPLIANCE: Digital Personal Data Protection (DPDP) Act, 2023 Section 8(5)
 
 PARTIES:
-1. ELESIUM DIGITAL SYSTEMS PRIVATE LIMITED (Koramangala 4th Block, Bengaluru, India)
+1. ELESIUM (Remote-First Sovereign AI Systems Practice, Shivamogga, Karnataka 577205, India)
 2. ${companyName || '[ENTERPRISE CLIENT LEGAL ENTITY]'}
 
 1. PURPOSE & SCOPE: Confidential enterprise AI architecture audits, autonomous multi-agent systems, and private VPC deployment.
 2. STATUTORY ZERO RETENTION: Pursuant to DPDP Act 2023 Section 8(5), all LLM inference executes within client private VPC enclaves with zero external telemetry or foundation model training retention.
-3. JURISDICTION: Exclusive jurisdiction of Bengaluru Courts.
+3. JURISDICTION: Exclusive jurisdiction of Karnataka Courts.
 
 EXECUTED BY:
 Elesium: Chaman Shah (Founder & Principal Systems Architect)
@@ -231,7 +231,7 @@ Date: ${today}`;
                                             value={companyName}
                                             onChange={e => setCompanyName(e.target.value)}
                                             placeholder="e.g. Axis Commercial Capital Partners Ltd" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-base sm:text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                     <div>
@@ -242,7 +242,7 @@ Date: ${today}`;
                                             value={signatoryName}
                                             onChange={e => setSignatoryName(e.target.value)}
                                             placeholder="e.g. Rajesh Subramanian" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-base sm:text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                     <div>
@@ -250,7 +250,7 @@ Date: ${today}`;
                                         <select 
                                             value={signatoryRole}
                                             onChange={e => setSignatoryRole(e.target.value)}
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-base sm:text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         >
                                             <option>Chief Technology Officer (CTO)</option>
                                             <option>VP of Engineering / Technology</option>
@@ -267,7 +267,7 @@ Date: ${today}`;
                                             value={email}
                                             onChange={e => setEmail(e.target.value)}
                                             placeholder="r.subramanian@axiscommercial.in" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-base sm:text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                 </div>
@@ -348,9 +348,9 @@ Date: ${today}`;
                                             onClick={() => setSelectedTier(tier.id)}
                                             className={`p-5 rounded-[24px] border cursor-pointer transition-all ${selectedTier === tier.id ? 'bg-white dark:bg-black border-black dark:border-white' : 'bg-white/60 dark:bg-black/40 border-neutral-200 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/25'}`}
                                         >
-                                            <div className="flex items-center justify-between mb-2">
-                                                <div className="flex items-center gap-3">
-                                                    <div className={`w-4 h-4 rounded-full border flex items-center justify-center ${selectedTier === tier.id ? 'border-black bg-black dark:border-white dark:bg-white' : 'border-neutral-400 dark:border-neutral-600'}`}>
+                                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                                                <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                                                    <div className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${selectedTier === tier.id ? 'border-black bg-black dark:border-white dark:bg-white' : 'border-neutral-400 dark:border-neutral-600'}`}>
                                                         {selectedTier === tier.id && <div className="w-1.5 h-1.5 bg-white dark:bg-black rounded-full" />}
                                                     </div>
                                                     <span className="font-bold text-black dark:text-white text-base">{tier.name}</span>
@@ -360,13 +360,13 @@ Date: ${today}`;
                                                         </span>
                                                     )}
                                                 </div>
-                                                <div className="text-right">
+                                                <div className="pl-7 sm:pl-0 sm:text-right">
                                                     <span className="font-extrabold text-black dark:text-white text-sm sm:text-base">{tier.price}</span>
                                                     <span className="block text-[11px] text-neutral-600 dark:text-neutral-400">{tier.timeline}</span>
                                                 </div>
                                             </div>
-                                            <p className="text-xs text-neutral-600 dark:text-neutral-400 ml-7 mb-3">{tier.description}</p>
-                                            <div className="ml-7 flex flex-wrap gap-x-4 gap-y-1">
+                                            <p className="text-xs text-neutral-600 dark:text-neutral-400 sm:ml-7 mb-3">{tier.description}</p>
+                                            <div className="sm:ml-7 flex flex-wrap gap-x-4 gap-y-1">
                                                 {tier.features.map((feat, idx) => (
                                                     <span key={idx} className="text-[11px] text-neutral-600 dark:text-neutral-400 flex items-center gap-1.5">
                                                         <Check className="w-3 h-3 text-black dark:text-white" /> {feat}
@@ -377,18 +377,18 @@ Date: ${today}`;
                                     ))}
                                 </div>
 
-                                <div className="flex justify-between">
+                                <div className="flex flex-col-reverse sm:flex-row justify-between gap-3">
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(1)}
-                                        className="px-6 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
+                                        className="w-full sm:w-auto px-6 py-3 sm:py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
                                     >
                                         &larr; Back
                                     </button>
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(3)}
-                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-full text-sm active:scale-[0.97] transition-all"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-full text-sm active:scale-[0.97] transition-all"
                                     >
                                         Next: Generate Mutual NDA <ArrowRight className="w-4 h-4" />
                                     </button>
@@ -434,18 +434,18 @@ Date: ${today}`;
                                     </button>
                                 </div>
 
-                                <div className="flex justify-between">
+                                <div className="flex flex-col-reverse sm:flex-row justify-between gap-3">
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(2)}
-                                        className="px-6 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
+                                        className="w-full sm:w-auto px-6 py-3 sm:py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
                                     >
                                         &larr; Back
                                     </button>
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(4)}
-                                        className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-full text-sm active:scale-[0.97] transition-all"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 font-bold rounded-full text-sm active:scale-[0.97] transition-all"
                                     >
                                         Next: Finalize &amp; Schedule <ArrowRight className="w-4 h-4" />
                                     </button>
@@ -476,7 +476,7 @@ Date: ${today}`;
                                             value={phone}
                                             onChange={e => setPhone(e.target.value)}
                                             placeholder="+91 98450 12345" 
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-base sm:text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                     <div>
@@ -486,7 +486,7 @@ Date: ${today}`;
                                             value={scopeBrief}
                                             onChange={e => setScopeBrief(e.target.value)}
                                             placeholder="e.g. Automate 14-day manual underwriting credit appraisal into sub-4min CAM generation multi-agent triad with private VPC enclave in Mumbai."
-                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
+                                            className="w-full bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-[20px] px-4 py-3 text-base sm:text-sm text-black dark:text-white focus:outline-none focus:border-black dark:focus:border-white"
                                         />
                                     </div>
                                 </div>
@@ -498,18 +498,18 @@ Date: ${today}`;
                                     </div>
                                 </div>
 
-                                <div className="flex justify-between">
+                                <div className="flex flex-col-reverse sm:flex-row justify-between gap-3">
                                     <button 
                                         type="button" 
                                         onClick={() => goToStep(3)}
-                                        className="px-6 py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
+                                        className="w-full sm:w-auto px-6 py-3 sm:py-2.5 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-white/10 text-black dark:text-white rounded-full text-xs font-medium active:scale-[0.97] transition-all"
                                     >
                                         &larr; Back
                                     </button>
                                     <button 
                                         type="submit" 
                                         disabled={submitted}
-                                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 disabled:opacity-50 font-extrabold rounded-full text-sm active:scale-[0.97] transition-all"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-black text-white dark:bg-white dark:text-black hover:opacity-90 disabled:opacity-50 font-extrabold rounded-full text-sm active:scale-[0.97] transition-all"
                                     >
                                         <PhoneCall className="w-4 h-4" /> {submitted ? "Routing to WhatsApp Desk..." : "Submit & Open WhatsApp Desk"}
                                     </button>

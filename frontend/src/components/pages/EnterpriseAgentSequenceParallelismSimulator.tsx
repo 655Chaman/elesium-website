@@ -114,7 +114,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Agent Sequence Parallelism Simulator | Elesium</title>
         <meta
@@ -217,7 +217,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
             {/* Sequence Parallel Degree */}
             <div className="space-y-2">
               <label className="text-xs font-medium text-neutral-300">Sequence Parallel (SP) Degree</label>
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                 {[2, 4, 8, 16, 32].map((degree) => (
                   <button
                     key={degree}
@@ -489,7 +489,7 @@ Architected via Elesium Enterprise Sovereign Infrastructure Engine.`;
                 readOnly
                 rows={4}
                 value={embedCode}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-200 focus:outline-none"
               />
               <button
                 onClick={copyEmbedCode}

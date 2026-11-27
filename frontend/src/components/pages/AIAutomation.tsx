@@ -90,18 +90,18 @@ export default function AIAutomation() {
         <main id="main-content" className="pt-24 pb-20 min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300 relative z-10 overflow-hidden">
             <WhatsAppModal />
             <Helmet>
-                <title>Enterprise AI &amp; Automation Systems in Bengaluru | Elesium</title>
-                <meta name="description" content="Enterprise AI and automation systems engineering in Bengaluru, India. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
+                <title>Enterprise AI &amp; Automation Systems | Elesium</title>
+                <meta name="description" content="Remote-first enterprise AI and automation systems engineering from Shivamogga, Karnataka serving Bengaluru, India, and global clients. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
                 <link rel="canonical" href="https://elesium.online/ai-automation/" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Enterprise AI &amp; Automation Systems in Bengaluru | Elesium" />
-                <meta property="og:description" content="Enterprise AI and automation systems engineering in Bengaluru, India. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
+                <meta property="og:title" content="Enterprise AI &amp; Automation Systems | Elesium" />
+                <meta property="og:description" content="Remote-first enterprise AI and automation systems engineering from Shivamogga, Karnataka serving Bengaluru, India, and global clients. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta property="og:url" content="https://elesium.online/ai-automation/" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@elesium_ai" />
-                <meta name="twitter:title" content="Enterprise AI &amp; Automation Systems in Bengaluru | Elesium" />
-                <meta name="twitter:description" content="Enterprise AI and automation systems engineering in Bengaluru, India. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
+                <meta name="twitter:title" content="Enterprise AI &amp; Automation Systems | Elesium" />
+                <meta name="twitter:description" content="Remote-first enterprise AI and automation systems engineering from Shivamogga, Karnataka serving Bengaluru, India, and global clients. Deterministic autonomous agents, private LLMs, and sovereign VPC workflows." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
             </Helmet>
 

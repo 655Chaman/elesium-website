@@ -90,7 +90,7 @@ Architecture Audit Link: https://elesium.online/tools/enterprise-agent-ptq-quant
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 pt-28 pb-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-28 pb-24 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Agent FP8 vs INT4 Quantization & Perplexity Simulator | Elesium</title>
         <meta

@@ -343,7 +343,7 @@ export default function CommercialDirectory() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="Search 100 enterprise solutions by keyword, metro, or regulation..."
-                        className="w-full pl-11 pr-10 py-3.5 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all duration-300"
+                        className="w-full pl-11 pr-10 py-3.5 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 text-base sm:text-sm focus:outline-none focus:border-black dark:focus:border-white transition-all duration-300"
                     />
                     {searchQuery && (
                         <button

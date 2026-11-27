@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
     CheckCircle2,
     XCircle,
@@ -92,10 +92,10 @@ export default function HowWeWork() {
         '@graph': [
             {
                 '@type': 'HowTo',
-                '@id': 'https://elesium.online/how-we-work#howto',
+                '@id': 'https://elesium.online/how-we-work/#howto',
                 name: 'How We Work: 4-Stage Private AI Implementation',
                 description:
-                    'Elesium delivers private AI and automation software across 4 structured stages—from a 14-day pilot to full production inside your infrastructure.',
+                    'Elesium delivers private AI and automation software across 4 structured stages - from a 14-day pilot to full production inside your infrastructure.',
                 totalTime: 'P90D',
                 estimatedCost: {
                     '@type': 'MonetaryAmount',
@@ -112,7 +112,7 @@ export default function HowWeWork() {
             },
             {
                 '@type': 'BreadcrumbList',
-                '@id': 'https://elesium.online/how-we-work#breadcrumb',
+                '@id': 'https://elesium.online/how-we-work/#breadcrumb',
                 itemListElement: [
                     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elesium.online/' },
                     { '@type': 'ListItem', position: 2, name: 'How We Work', item: 'https://elesium.online/how-we-work/' },
@@ -120,7 +120,7 @@ export default function HowWeWork() {
             },
             {
                 '@type': 'FAQPage',
-                '@id': 'https://elesium.online/how-we-work#faq',
+                '@id': 'https://elesium.online/how-we-work/#faq',
                 mainEntity: howWeWorkFaqs.map(faq => ({
                     '@type': 'Question',
                     name: faq.q,
@@ -269,7 +269,7 @@ export default function HowWeWork() {
                         </div>
                         <h3 className="text-base font-bold text-black dark:text-white mb-2">Private Hosting</h3>
                         <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">
-                            Everything runs inside your cloud or servers—zero prompts or files leave your perimeter.
+                            Everything runs inside your cloud or servers - zero prompts or files leave your perimeter.
                         </p>
                     </div>
                 </section>
@@ -311,37 +311,41 @@ export default function HowWeWork() {
                     </div>
 
                     <div className="space-y-3 max-w-3xl mx-auto">
-                        {howWeWorkFaqs.map((faq, idx) => (
-                            <div
-                                key={faq.q}
-                                className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black"
-                            >
-                                <button
-                                    type="button"
-                                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
+                        {howWeWorkFaqs.map((faq, idx) => {
+                            const isOpen = openFaq === idx
+                            return (
+                                <div
+                                    key={faq.q}
+                                    className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black"
                                 >
-                                    <span>{faq.q}</span>
-                                    <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
-                                </button>
-                                <AnimatePresence initial={false}>
-                                    {openFaq === idx && (
-                                        <motion.div
-                                            data-open="true"
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: 'auto', opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-                                            className="accordion-panel overflow-hidden"
+                                    <h3 className="m-0">
+                                        <button
+                                            type="button"
+                                            aria-expanded={isOpen}
+                                            aria-controls={`howwework-faq-panel-${idx}`}
+                                            onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                            className="w-full min-h-[44px] flex items-center justify-between gap-4 p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                                         >
+                                            <span>{faq.q}</span>
+                                            <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                    </h3>
+                                    <div
+                                        id={`howwework-faq-panel-${idx}`}
+                                        aria-hidden={!isOpen}
+                                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                        }`}
+                                    >
+                                        <div className="overflow-hidden">
                                             <div className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
                                                 {faq.a}
                                             </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </section>
             </div>

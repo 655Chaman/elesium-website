@@ -121,7 +121,7 @@ SLA Status: ${results.slaStatus}
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent KV Cache Memory Compaction Simulator | Elesium</title>
         <meta

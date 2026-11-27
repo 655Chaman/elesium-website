@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
-import { ChevronDown, CheckCircle2 } from 'lucide-react'
+import { ChevronDown, CheckCircle2, ArrowUpRight, Terminal } from 'lucide-react'
 import HeroSection from '../sections/Hero'
 import ActiveSignals from '../sections/ActiveSignals'
 import Solutions from '../sections/Solutions'
@@ -27,17 +27,56 @@ const homeFaqs: FaqItem[] = [
     },
     {
         q: 'How does the 90-day guarantee work?',
-        a: 'Before building, we agree on clear baseline numbers—hours saved, error rates, or turnaround time. If the production system fails to deliver the agreed financial return within 90 days of launch, our fees are rebated.',
+        a: 'Before building, we agree on clear baseline numbers - hours saved, error rates, or turnaround time. If the production system fails to deliver the agreed financial return within 90 days of launch, our fees are rebated.',
     },
     {
         q: 'What do typical engagements cost?',
-        a: 'Teams typically start with a 14-day Pilot Sprint (₹1.5L–₹3.5L), move to a Full System rollout (₹6L–₹15L), or retain a dedicated engineering team (₹4.5L/month).',
+        a: 'Teams typically start with a 14-day Pilot Sprint (₹1.5L-₹3.5L), move to a Full System rollout (₹6L-₹15L), or retain a dedicated engineering team (₹4.5L/month).',
     },
 ]
 
 export default function Home() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
-    const [openFaq, setOpenFaq] = useState<number | null>(null)
+    const [openFaq, setOpenFaq] = useState<number | null>(0)
+
+    const homeSchema = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'Service',
+                '@id': 'https://elesium.online/ai/#service',
+                name: 'Enterprise AI & Automation Systems Engineering',
+                serviceType: 'Private VPC AI Automation & Multi-Agent Engineering',
+                url: 'https://elesium.online/ai/',
+                description:
+                    'Private AI and automation software built inside your cloud or on-premise servers, eliminating manual bottlenecks across finance, ERP, and operations with a 90-day ROI guarantee.',
+                provider: {
+                    '@id': 'https://elesium.online/#organization',
+                },
+                areaServed: ['India', 'United States', 'United Kingdom', 'United Arab Emirates'],
+            },
+            {
+                '@type': 'BreadcrumbList',
+                '@id': 'https://elesium.online/ai/#breadcrumb',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elesium.online/' },
+                    { '@type': 'ListItem', position: 2, name: 'Enterprise AI & Automation', item: 'https://elesium.online/ai/' },
+                ],
+            },
+            {
+                '@type': 'FAQPage',
+                '@id': 'https://elesium.online/ai/#faq',
+                mainEntity: homeFaqs.map((faq) => ({
+                    '@type': 'Question',
+                    name: faq.q,
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: faq.a,
+                    },
+                })),
+            },
+        ],
+    }
 
     return (
         <motion.div
@@ -64,13 +103,14 @@ export default function Home() {
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta property="og:url" content="https://elesium.online/ai/" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:site" content="@elesium_online" />
                 <meta name="twitter:title" content="Elesium | AI & Automation Systems for Enterprise Teams" />
                 <meta
                     name="twitter:description"
                     content="Private AI and automation software running inside your infrastructure with a 14-day pilot and 90-day ROI guarantee."
                 />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
+                <script type="application/ld+json">{JSON.stringify(homeSchema)}</script>
             </Helmet>
 
             <WhatsAppModal />
@@ -229,6 +269,44 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* Reproducible Open-Source Evidence */}
+                <section className="py-14 border-t border-neutral-200 dark:border-white/10 bg-white dark:bg-black">
+                    <div className="max-w-6xl mx-auto px-6">
+                        <div className="p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                            <div className="space-y-2 max-w-2xl">
+                                <div className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-500">
+                                    <Terminal className="w-3.5 h-3.5" />
+                                    <span>Reproducible Open-Source Evidence</span>
+                                </div>
+                                <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-black dark:text-white">
+                                    Auditable Benchmarks, Compliance Harnesses &amp; Weights
+                                </h2>
+                                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                    Inspect our public 8x NVIDIA H100 FP8 inference telemetry, <span className="font-mono text-black dark:text-white">DPDP_2023_Compliance_Bench</span> verification suite, and <span className="font-mono text-black dark:text-white">Elesium-Indic-Sovereign-70B-FP8</span> model evaluations.
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap items-center gap-3 shrink-0">
+                                <a
+                                    href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-semibold hover:opacity-90 transition"
+                                >
+                                    <span>GitHub Benchmark Suite</span>
+                                    <ArrowUpRight className="w-3.5 h-3.5" />
+                                </a>
+                                <a
+                                    href="/docs/benchmarks/"
+                                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-neutral-200 dark:border-white/15 text-black dark:text-white text-xs font-semibold hover:bg-neutral-100 dark:hover:bg-white/10 transition"
+                                >
+                                    <span>Docs Benchmarks</span>
+                                    <ArrowUpRight className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Plain-English FAQ */}
                 <section className="py-20 md:py-24 border-t border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950">
                     <div className="max-w-3xl mx-auto px-6">
@@ -242,37 +320,41 @@ export default function Home() {
                         </div>
 
                         <div className="space-y-3">
-                            {homeFaqs.map((faq, idx) => (
-                                <div
-                                    key={faq.q}
-                                    className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black"
-                                >
-                                    <button
-                                        type="button"
-                                        onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                        className="w-full flex items-center justify-between p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
+                            {homeFaqs.map((faq, idx) => {
+                                const isOpen = openFaq === idx
+                                return (
+                                    <div
+                                        key={faq.q}
+                                        className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black"
                                     >
-                                        <span>{faq.q}</span>
-                                        <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`} />
-                                    </button>
-                                    <AnimatePresence initial={false}>
-                                        {openFaq === idx && (
-                                            <motion.div
-                                                data-open="true"
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-                                                className="accordion-panel overflow-hidden"
+                                        <h3 className="m-0">
+                                            <button
+                                                type="button"
+                                                aria-expanded={isOpen}
+                                                aria-controls={`home-faq-panel-${idx}`}
+                                                onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                                className="w-full min-h-[44px] flex items-center justify-between gap-4 p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                                             >
+                                                <span>{faq.q}</span>
+                                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+                                            </button>
+                                        </h3>
+                                        <div
+                                            id={`home-faq-panel-${idx}`}
+                                            aria-hidden={!isOpen}
+                                            className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                                isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                            }`}
+                                        >
+                                            <div className="overflow-hidden">
                                                 <p className="px-5 pb-5 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
                                                     {faq.a}
                                                 </p>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </div>
-                            ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                 </section>

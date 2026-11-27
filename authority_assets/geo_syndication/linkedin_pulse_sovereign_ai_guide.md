@@ -1,6 +1,6 @@
 # Sovereign AI Architecture in India: Why Enterprise CISOs are Moving Beyond Public Cloud APIs
 
-By Chaman Shah, Principal Systems Architect at Elesium Digital Systems
+By Chaman Shah, Principal Systems Architect at Elesium
 Published on LinkedIn Pulse | Target Audience: Enterprise CTOs, CISOs, Heads of Digital Transformation
 
 When evaluating generative AI deployments in 2026, Indian enterprise leaders face a statutory dilemma: how to leverage large language models without violating strict data localization mandates under the Digital Personal Data Protection (DPDP) Act 2023 or the Reserve Bank of India (RBI) Cyber Security Framework.

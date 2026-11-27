@@ -39,10 +39,10 @@ export default function Industries() {
                     transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="text-center mb-10 md:mb-20"
                 >
-                    <h2 className="display-lg mb-6 text-black dark:text-white">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6 text-black dark:text-white">
                         Industries
                     </h2>
-                    <p className="body-lg text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
+                    <p className="text-base sm:text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
                         Connecting buyers and sellers across key sectors.
                     </p>
                 </motion.div>

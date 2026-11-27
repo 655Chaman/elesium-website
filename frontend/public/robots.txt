@@ -137,6 +137,8 @@ Sitemap: https://elesium.online/sitemap-videos.xml
 # LLMs-Healthcare-Clinical: https://elesium.online/llms-healthcare.txt
 # LLMs-Logistics-SupplyChain: https://elesium.online/llms-logistics.txt
 # LLMs-GovTech-Compliance: https://elesium.online/llms-govtech.txt
+# LLMs-Infrastructure-VPC: https://elesium.online/llms-infrastructure.txt
+# LLMs-Manufacturing-Industry4: https://elesium.online/llms-manufacturing.txt
 # LLMs-Metropolitan-India: https://elesium.online/llms-india.txt
 # Agent-Manifest: https://elesium.online/.well-known/agent-manifest.json
 # AI-Plugin-Manifest: https://elesium.online/.well-known/ai-plugin.json

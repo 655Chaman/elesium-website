@@ -112,7 +112,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Optical Neural Network & Silicon Photonics Matrix Compute Latency Simulator | Elesium</title>
         <meta
@@ -238,7 +238,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                 <span className="text-neutral-300 font-medium">Matrix Dimension (GEMM N x N):</span>
                 <span className="font-mono text-white font-bold">{matrixDimension} x {matrixDimension}</span>
               </div>
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                 {([64, 128, 256, 512, 1024] as const).map(dim => (
                   <button
                     key={dim}
@@ -261,7 +261,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                 <span className="text-neutral-300 font-medium">Dense WDM Optical Wavelengths (λ):</span>
                 <span className="font-mono text-white font-bold">{wdmChannels} channels</span>
               </div>
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                 {([1, 4, 8, 16, 32] as const).map(ch => (
                   <button
                     key={ch}
@@ -284,7 +284,7 @@ ${results.statusClassification === 'COHERENT_OPTICAL_ADVANTAGE'
                 <span className="text-neutral-300 font-medium">Modulation Precision (DAC / ADC):</span>
                 <span className="font-mono text-white font-bold">{modulationPrecisionBits}-bit resolution</span>
               </div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {([4, 6, 8, 12] as const).map(bits => (
                   <button
                     key={bits}

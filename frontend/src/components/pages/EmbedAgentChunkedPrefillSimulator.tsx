@@ -60,7 +60,7 @@ export default function EmbedAgentChunkedPrefillSimulator() {
   }, [results.ttftTrace, results.ttftMilliseconds]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>Chunked Prefill &amp; Radix Attention KV Cache Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-chunked-prefill-radix-attention-simulator" />

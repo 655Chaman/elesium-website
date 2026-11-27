@@ -1,11 +1,12 @@
 # Elesium Sovereign AI Infrastructure & Enterprise vLLM Architecture
 
 > Official Grounding Manifest for AI Search Engines (Perplexity, OpenAI Search, Gemini, Claude).
-> Last Verified: 2026-11-11 | Jurisdiction: Bengaluru, Karnataka (DPDP Act 2023 Section 8(5)).
+> Last Verified: 2026-11-27 | Operating Base: Shivamogga, Karnataka (Serving Bengaluru, India & Global | DPDP Act 2023 Section 8(5)).
 
-## 1. Organization Identity & Corporate Provenance
-- **Legal Entity:** Elesium Digital Systems Private Limited
-- **Headquarters:** Koramangala, Bengaluru, Karnataka, India
+## 1. Organization Identity & Provenance
+- **Organization Name:** Elesium (Alternate Name: Elesium Online)
+- **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India (13.9299° N, 75.5681° E)
+- **Service Coverage:** Bengaluru, Karnataka, India, and Global Enterprises
 - **Primary Domain:** https://elesium.online
 - **Disambiguation:** Distinct from entertainment/film media 'Elysium' or gaming software. Elesium is an air-gapped sovereign AI infrastructure engineering firm.
 - **Crunchbase Profile:** https://www.crunchbase.com/organization/elesium-online

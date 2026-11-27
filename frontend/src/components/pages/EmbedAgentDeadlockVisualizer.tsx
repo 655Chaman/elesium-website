@@ -66,7 +66,7 @@ export default function EmbedAgentDeadlockVisualizer() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 p-4 font-sans antialiased flex flex-col justify-between">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 p-4 font-sans antialiased flex flex-col justify-between">
       <Helmet>
         <title>Multi-Agent Deadlock &amp; FSM Circuit Breaker Sandbox | Elesium</title>
         <meta
@@ -141,7 +141,8 @@ export default function EmbedAgentDeadlockVisualizer() {
         </div>
 
         {/* Graph Visual Canvas */}
-        <div className="relative w-full h-56 bg-neutral-950/90 rounded-[24px] border border-neutral-800/90 overflow-hidden flex items-center justify-center p-2 mb-4">
+        <div className="w-full bg-neutral-950/90 rounded-[24px] border border-neutral-800/90 overflow-x-auto overflow-y-hidden p-2 mb-4">
+          <div className="relative min-w-[440px] w-full h-56 flex items-center justify-center">
           <svg className="w-full h-full absolute inset-0 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
               <marker id="embed-arrow-active" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
@@ -199,6 +200,7 @@ export default function EmbedAgentDeadlockVisualizer() {
               <div className="text-[8px] font-mono text-neutral-400">{node.tokensConsumed.toLocaleString()} t</div>
             </div>
           ))}
+          </div>
         </div>
 
         {/* Quantified Metrics Grid */}

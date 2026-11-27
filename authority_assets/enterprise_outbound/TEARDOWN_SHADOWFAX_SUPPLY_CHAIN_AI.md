@@ -5,7 +5,7 @@
 **Classification:** Confidential / C-Suite Engineering Advisory  
 **Target Entity:** Shadowfax Technologies Private Limited  
 **Target Recipients:** Chief Technology Officer (CTO), Head of AI & Machine Learning, VP of Core Logistics Engineering  
-**Issuing Authority:** Elesium Digital Systems (https://elesium.online) - Bangalore, India  
+**Issuing Authority:** Elesium (https://elesium.online) - Bangalore, India  
 **Date of Issuance:** November 2026  
 **Operational Scope:** Quick-Commerce Dispatch | Hyperlocal Rider Batching | Vernacular Voice Agent Latency | DPDP Act Sec 8(5)  
 
@@ -38,7 +38,7 @@ While conversational AI and LLM dispatch copilots promise unprecedented automati
 - **Inference Expense Leakage:** Processing 1.5M daily order dispatches and 350,000 conversational voice verification sessions via public cloud APIs costs Shadowfax upwards of **$180,000 per month (₹1.50 Crore/month)** in variable API tokens, subject to unpredictable USD-INR currency volatility and multi-tenant rate limiting.
 - **State Race Conditions & Hallucinated Dispatches:** Naive linear LLM chains lack deterministic state enforcement, resulting in phantom rider assignments, unhandled edge-case loops, and non-reproducible routing failures.
 
-**The Solution:** Elesium Digital Systems engineers an **On-Premise / Private VPC Sovereign Inference Enclave** deployed on **8x NVIDIA H100 SXM5 / L40S hardware in AWS Mumbai (`ap-south-1`) or local Bangalore colocation (CtrlS/STT)**. By implementing **vLLM Speculative Decoding, Chunked Prefill, PagedAttention v2, and deterministic LangGraph state graphs backed by Redis Enterprise**, Shadowfax slashes voice turnaround latency to **210ms total audio loop (121ms TTFT for 70B models, 28ms for 8B voice copilots)** while **cutting operational inference spend by 68%**.
+**The Solution:** Elesium engineers an **On-Premise / Private VPC Sovereign Inference Enclave** deployed on **8x NVIDIA H100 SXM5 / L40S hardware in AWS Mumbai (`ap-south-1`) or local Bangalore colocation (CtrlS/STT)**. By implementing **vLLM Speculative Decoding, Chunked Prefill, PagedAttention v2, and deterministic LangGraph state graphs backed by Redis Enterprise**, Shadowfax slashes voice turnaround latency to **210ms total audio loop (121ms TTFT for 70B models, 28ms for 8B voice copilots)** while **cutting operational inference spend by 68%**.
 
 ---
 
@@ -96,7 +96,7 @@ A major operational leak in Indian e-commerce is the **False "Customer Not Avail
 
 ## 4. The Sovereign Transition Architecture
 
-Elesium Digital Systems deploys a dedicated, air-gapped sovereign inference stack inside Shadowfax’s **AWS Mumbai (`ap-south-1`) VPC** or **STT Bangalore Tier-IV Datacenter**:
+Elesium deploys a dedicated, air-gapped sovereign inference stack inside Shadowfax’s **AWS Mumbai (`ap-south-1`) VPC** or **STT Bangalore Tier-IV Datacenter**:
 
 ```
                      ELESIUM SOVEREIGN SUPPLY CHAIN ENCLAVE
@@ -306,4 +306,4 @@ To review live synthetic voice benchmark telemetry on an 8x NVIDIA H100 SXM5 clu
 - **Lead Supply Chain Systems Architect:** enterprise@elesium.online
 - **Sovereign Telemetry Repositories:** [Sovereign Enterprise AI Benchmarks](https://elesium.online/signals)
 
-*Authored by Elesium Digital Systems. All engineering benchmarks, latency telemetries, and financial calculations are certified under Enterprise Supply Chain Release 2026-V1.*
+*Authored by Elesium. All engineering benchmarks, latency telemetries, and financial calculations are certified under Enterprise Supply Chain Release 2026-V1.*

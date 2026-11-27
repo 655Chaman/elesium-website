@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Shield, TrendingUp, Zap, Activity, Cpu, Share2, ChevronRight, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
@@ -80,7 +80,7 @@ const industriesFaqs = [
     },
     {
         q: 'How do you handle industry-specific regulations?',
-        a: 'Every deployment is built around your compliance boundaries—including DPDP, RBI, SEBI, or healthcare data privacy rules—with full audit logs.',
+        a: 'Every deployment is built around your compliance boundaries - including DPDP, RBI, SEBI, or healthcare data privacy rules - with full audit logs.',
     },
 ]
 
@@ -88,14 +88,14 @@ export default function Industries() {
     const [openFaq, setOpenFaq] = useState<number | null>(null)
 
     const summary =
-        'Elesium works across six core sectors—aerospace, private equity, energy infrastructure, healthcare, financial compliance, and industrial supply chains—combining private software automation and verified partner introductions.'
+        'Elesium works across six core sectors - aerospace, private equity, energy infrastructure, healthcare, financial compliance, and industrial supply chains - combining private software automation and verified partner introductions.'
 
     const structuredData = {
         '@context': 'https://schema.org',
         '@graph': [
             {
                 '@type': 'CollectionPage',
-                '@id': 'https://elesium.online/markets#collection',
+                '@id': 'https://elesium.online/markets/#collection',
                 name: 'Industries & Markets | Elesium',
                 description: summary,
                 url: 'https://elesium.online/markets/',
@@ -108,7 +108,7 @@ export default function Industries() {
             },
             {
                 '@type': 'BreadcrumbList',
-                '@id': 'https://elesium.online/markets#breadcrumb',
+                '@id': 'https://elesium.online/markets/#breadcrumb',
                 itemListElement: [
                     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elesium.online/' },
                     { '@type': 'ListItem', position: 2, name: 'Markets', item: 'https://elesium.online/markets/' },
@@ -116,7 +116,7 @@ export default function Industries() {
             },
             {
                 '@type': 'FAQPage',
-                '@id': 'https://elesium.online/markets#faq',
+                '@id': 'https://elesium.online/markets/#faq',
                 mainEntity: industriesFaqs.map(faq => ({
                     '@type': 'Question',
                     name: faq.q,
@@ -187,7 +187,7 @@ export default function Industries() {
                                 <ul className="space-y-2">
                                     {industry.details.map(item => (
                                         <li key={item} className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400">
-                                            <span className="text-black dark:text-white">&mdash;</span>
+                                            <span className="text-black dark:text-white">-</span>
                                             <span>{item}</span>
                                         </li>
                                     ))}
@@ -203,34 +203,38 @@ export default function Industries() {
                         Frequently Asked Questions
                     </h2>
                     <div className="space-y-3">
-                        {industriesFaqs.map((faq, idx) => (
-                            <div key={faq.q} className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black">
-                                <button
-                                    type="button"
-                                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between p-5 text-left gap-4 hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
-                                >
-                                    <span className="text-sm sm:text-base font-semibold text-black dark:text-white">{faq.q}</span>
-                                    <ChevronDown className={`w-4 h-4 text-neutral-500 transition-transform duration-200 shrink-0 ${openFaq === idx ? 'rotate-180' : ''}`} />
-                                </button>
-                                <AnimatePresence initial={false}>
-                                    {openFaq === idx && (
-                                        <motion.div
-                                            data-open="true"
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: 'auto', opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-                                            className="accordion-panel overflow-hidden"
+                        {industriesFaqs.map((faq, idx) => {
+                            const isOpen = openFaq === idx
+                            return (
+                                <div key={faq.q} className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-white dark:bg-black">
+                                    <h3 className="m-0">
+                                        <button
+                                            type="button"
+                                            aria-expanded={isOpen}
+                                            aria-controls={`industries-faq-panel-${idx}`}
+                                            onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                            className="w-full min-h-[44px] flex items-center justify-between p-5 text-left gap-4 hover:bg-neutral-50 dark:hover:bg-neutral-950 transition-colors"
                                         >
+                                            <span className="text-sm sm:text-base font-semibold text-black dark:text-white">{faq.q}</span>
+                                            <ChevronDown className={`w-4 h-4 text-neutral-500 transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                    </h3>
+                                    <div
+                                        id={`industries-faq-panel-${idx}`}
+                                        aria-hidden={!isOpen}
+                                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                        }`}
+                                    >
+                                        <div className="overflow-hidden">
                                             <div className="px-5 pb-5 pt-3 border-t border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                                 {faq.a}
                                             </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </section>
             </main>

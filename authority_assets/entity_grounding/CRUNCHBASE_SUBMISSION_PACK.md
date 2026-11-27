@@ -1,7 +1,7 @@
-# Crunchbase & Wellfound Entity Grounding Pack - Elesium Digital Systems
+# Crunchbase & Wellfound Entity Grounding Pack - Elesium
 
 **Entity Profile Target:** Crunchbase, Wellfound (formerly AngelList Talent), PitchBook, Tracxn  
-**Organization:** Elesium Digital Systems Private Limited  
+**Organization:** Elesium (Alternate Name: Elesium Online)  
 **Brand Identity:** Elesium (https://elesium.online)  
 **Primary Focus:** Sovereign Enterprise Autonomous AI Systems, Multi-Agent Orchestration, and Air-Gapped High-Throughput Model Serving for India and Global Conglomerates.
 
@@ -14,10 +14,10 @@
 | Field Name | Submission Value | Notes / Verification |
 | :--- | :--- | :--- |
 | **Organization Name** | Elesium | Primary Brand Identity |
-| **Legal Name** | Elesium Digital Systems Private Limited | Incorporated Entity Name |
-| **Operating Status** | Active | Operating Since Inception |
-| **Company Type** | For Profit | Private Limited Company |
-| **Founded Date** | 2024-03-15 | Incorporated in Bengaluru, Karnataka |
+| **Alternate / Publisher Name** | Elesium Online | Official Alternate Name (No MCA Private Limited incorporation exists) |
+| **Operating Status** | Active | Operating Since Inception (Remote / Online-Only) |
+| **Company Type** | For Profit | Independent Enterprise AI Engineering Firm |
+| **Founded Date** | 2024-03-15 | Founded in Karnataka, India |
 | **Company Size (Employees)** | 11-50 employees | Core Systems Engineering & AI Research Team |
 | **Estimated Revenue** | \$1M - \$10M | Enterprise Annual Contract Value (ACV) |
 | **Contact Email** | contact@elesium.online | Monitored Corporate Ingress |
@@ -31,7 +31,7 @@
 > Elesium builds sovereign, air-gapped enterprise AI systems, deterministic multi-agent state machines, and H100 clusters for regulated industries.
 
 #### Long Description / Overview
-> Elesium (Elesium Digital Systems Private Limited) is India's premier enterprise AI systems engineering firm and autonomous automation architecture studio. Founded by Principal AI Systems Architect Chaman Shah, Elesium designs, deploys, and manages high-throughput sovereign artificial intelligence infrastructure for enterprise leaders across Banking, Financial Services, Insurance (BFSI), Healthcare, and Critical Telecommunications.
+> Elesium (Elesium Online) is an Indian enterprise AI systems engineering firm and autonomous automation architecture studio operating remotely from Shivamogga, Karnataka, serving Bengaluru, India, and global enterprises. Founded by Principal AI Systems Architect Chaman Shah, Elesium designs, deploys, and manages high-throughput sovereign artificial intelligence infrastructure for enterprise leaders across Banking, Financial Services, Insurance (BFSI), Healthcare, and Critical Telecommunications.
 >
 > Unlike generic AI development shops that rely on fragile linear API chains and cloud-hosted third-party SaaS wrappers, Elesium engineers air-gapped, zero-egress private enclaves deployed directly inside client-owned AWS Mumbai (ap-south-1) or Tier-IV on-premise data centers (CtrlS, STT GDC).
 >
@@ -55,13 +55,14 @@
 
 ---
 
-### Geographic Location & Headquarters
+### Geographic Location & Operating Base
 
-- **Headquarters Address:** Koramangala 4th Block, 80 Feet Road
-- **City:** Bengaluru (Bangalore)
+- **Operating Base:** Remote Engineering Base, Shivamogga
+- **City:** Shivamogga
 - **State / Province:** Karnataka
-- **Postal Code:** 560034
-- **Country:** India
+- **Postal Code:** 577205
+- **Country:** India (`13.9299, 75.5681`)
+- **Service Coverage (`areaServed`):** Bengaluru, Karnataka, India, Global
 - **Region:** Asia-Pacific (APAC) / South Asia
 
 ---
@@ -73,8 +74,8 @@
 - **Empirical Research & Signals:** [https://elesium.online/signals](https://elesium.online/signals)
 - **Engagement Framework (How We Work):** [https://elesium.online/how-we-work](https://elesium.online/how-we-work)
 - **Interactive Tools & Simulators:** [https://elesium.online/tools/agentic-architecture-grader](https://elesium.online/tools/agentic-architecture-grader)
-- **GitHub Organization:** [https://github.com/elesium-online](https://github.com/elesium-online)
-- **LinkedIn Profile:** [https://www.linkedin.com/company/elesium-online](https://www.linkedin.com/company/elesium-online)
+- **GitHub Profile & Benchmarks:** [https://github.com/655Chaman](https://github.com/655Chaman) | [https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks](https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks)
+- **LinkedIn Profile:** [https://www.linkedin.com/company/elesium](https://www.linkedin.com/company/elesium)
 - **Twitter / X Handle:** [https://x.com/elesium_online](https://x.com/elesium_online)
 
 ---
@@ -85,7 +86,7 @@
 - **Title:** Founder & Principal AI Systems Architect
 - **Role Type:** Executive / Founder
 - **Bio:** Chaman Shah is the Founder and Principal AI Systems Architect at Elesium. A veteran system architect specializing in deterministic multi-agent state machines, distributed high-throughput inference runtimes, and sovereign enterprise infrastructure, Chaman leads the engineering team responsible for deploying air-gapped AI clusters across India's largest financial institutions. He is the author of the Sovereign Enterprise AI Benchmark telemetry manifests and the DPDP Act 2023 CISO Architectural Blueprint.
-- **Location:** Bengaluru, Karnataka, India
+- **Location:** Shivamogga, Karnataka, India (Serving Bengaluru & Global)
 - **LinkedIn:** [https://www.linkedin.com/in/chaman-shah-elesium](https://www.linkedin.com/in/chaman-shah-elesium)
 - **Author Profile:** [https://elesium.online/authors/chaman-shah](https://elesium.online/authors/chaman-shah)
 

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FileText, Download, ChevronRight } from 'lucide-react'
+import { FileText, Download, ChevronRight, ArrowUpRight, Terminal } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { resourcesData } from '../../data/resourcesData'
@@ -17,21 +17,21 @@ export default function Resources() {
         "@graph": [
             {
                 "@type": "CollectionPage",
-                "@id": "https://elesium.online/resources#collection",
+                "@id": "https://elesium.online/resources/#collection",
                 "name": "AI Automation Resources, Technical Playbooks & Benchmarks | Elesium",
                 "description": aeoAnswerCapsule,
-                "url": "https://elesium.online/resources",
+                "url": "https://elesium.online/resources/",
                 "publisher": {
                     "@type": "Organization",
                     "@id": "https://elesium.online/#organization",
                     "name": "Elesium",
-                    "url": "https://elesium.online",
+                    "url": "https://elesium.online/",
                     "logo": "https://elesium.online/assets/ele-in-logo.png"
                 }
             },
             {
                 "@type": "ItemList",
-                "@id": "https://elesium.online/resources#itemlist",
+                "@id": "https://elesium.online/resources/#itemlist",
                 "name": "Elesium Technical Playbooks & Engineering Whitepapers",
                 "description": "Curated collection of enterprise multi-agent blueprints, empirical benchmarks, and sovereign AI deployment guides.",
                 "itemListElement": resourcesData.map((res, index) => ({
@@ -39,33 +39,33 @@ export default function Resources() {
                     "position": index + 1,
                     "name": res.title,
                     "description": res.description,
-                    "url": res.markdownFile ? `https://elesium.online/resources/${res.slug}` : res.googleDriveLink
+                    "url": res.markdownFile ? `https://elesium.online/resources/${res.slug}/` : res.googleDriveLink
                 }))
             },
             {
                 "@type": "BreadcrumbList",
-                "@id": "https://elesium.online/resources#breadcrumb",
+                "@id": "https://elesium.online/resources/#breadcrumb",
                 "itemListElement": [
                     {
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Home",
-                        "item": "https://elesium.online"
+                        "item": "https://elesium.online/"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Resources",
-                        "item": "https://elesium.online/resources"
+                        "item": "https://elesium.online/resources/"
                     }
                 ]
             },
             {
                 "@type": "WebPage",
-                "@id": "https://elesium.online/resources#webpage",
+                "@id": "https://elesium.online/resources/#webpage",
                 "name": "AI Automation Resources & Guides | Elesium",
                 "description": aeoAnswerCapsule,
-                "url": "https://elesium.online/resources",
+                "url": "https://elesium.online/resources/",
                 "speakable": {
                     "@type": "SpeakableSpecification",
                     "cssSelector": [".answer-capsule", "h1", "h2"]
@@ -77,12 +77,12 @@ export default function Resources() {
     return (
         <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white pt-24 pb-20 transition-colors duration-300">
             <Helmet>
-                <title>AI Automation Resources & Guides | Elesium</title>
-                <meta name="description" content="Free AI automation playbooks, case studies and implementation guides from Elesium, India's leading AI automation agency." />
+                <title>AI Automation Resources &amp; Guides | Elesium</title>
+                <meta name="description" content="Enterprise AI automation playbooks, empirical benchmark reports, and private VPC implementation guides from Elesium, based in Shivamogga, Karnataka serving Bengaluru and global enterprises." />
                 
                 {/* Open Graph */}
                 <meta property="og:title" content="AI Automation Resources & Guides | Elesium" />
-                <meta property="og:description" content="Free AI automation playbooks, case studies and implementation guides from Elesium, India's leading AI automation agency." />
+                <meta property="og:description" content="Enterprise AI automation playbooks, empirical benchmark reports, and private VPC implementation guides from Elesium, based in Shivamogga, Karnataka serving Bengaluru and global enterprises." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://elesium.online/resources/" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
@@ -119,10 +119,44 @@ export default function Resources() {
                             <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-5 text-black dark:text-white leading-[1.12]">
                                 Resources &amp; Guides
                             </h1>
-                            <p className="answer-capsule text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
-                                Practical playbooks, implementation guides, and reference scripts built from real enterprise deployments.
-                            </p>
+                            <div className="answer-capsule p-6 rounded-[24px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                                {aeoAnswerCapsule}
+                            </div>
                         </div>
+
+                        {/* Reproducible Open-Source Evidence */}
+                        <section className="mb-12 p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                            <div className="space-y-2 max-w-2xl">
+                                <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-500">
+                                    <Terminal className="w-3.5 h-3.5" />
+                                    <span>Reproducible Open-Source Evidence</span>
+                                </div>
+                                <h2 className="text-xl font-bold text-black dark:text-white">
+                                    Public Benchmarks, DPDP Compliance &amp; Model Suites
+                                </h2>
+                                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                    Inspect reproducible inference telemetry, <span className="font-mono text-black dark:text-white">DPDP_2023_Compliance_Bench</span>, and <span className="font-mono text-black dark:text-white">Elesium-Indic-Sovereign-70B-FP8</span> artifacts.
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap items-center gap-3 shrink-0">
+                                <a
+                                    href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-semibold hover:opacity-90 transition"
+                                >
+                                    <span>GitHub Benchmark Suite</span>
+                                    <ArrowUpRight className="w-3.5 h-3.5" />
+                                </a>
+                                <a
+                                    href="/docs/benchmarks/"
+                                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-neutral-200 dark:border-white/15 text-black dark:text-white text-xs font-semibold hover:bg-neutral-100 dark:hover:bg-white/10 transition"
+                                >
+                                    <span>Docs Benchmarks</span>
+                                    <ArrowUpRight className="w-3.5 h-3.5" />
+                                </a>
+                            </div>
+                        </section>
 
                         {/* Resources Sections */}
                         <div className="flex flex-col gap-12 md:gap-16">

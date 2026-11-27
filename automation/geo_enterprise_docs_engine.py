@@ -92,7 +92,7 @@ DOCS_PAGES = [
     </div>
     <div class="doc-card">
       <h3>2. vLLM Low-Latency Serving</h3>
-      <p>Customized inference engine utilizing PagedAttention v2 to achieve near-zero memory waste and sub-180ms Time-To-First-Token (TTFT) across 70B parameter models.</p>
+      <p>Customized inference engine utilizing PagedAttention v2 to achieve near-zero memory waste, 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8, and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1.</p>
       <a href="/docs/vllm-runtime/" class="card-link">View vLLM Runtime Architecture &rarr;</a>
     </div>
     <div class="doc-card">
@@ -218,32 +218,34 @@ print("Cryptographic Zeroization Hash:", response.headers.get("X-Zeroization-Pro
     --ssl-certfile /etc/ssl/certs/sovereign_node.crt</code></pre>
 
   <h2>3. Key Parameters Rationale</h2>
-  <table class="tech-table">
-    <thead>
-      <tr>
-        <th>Flag</th>
-        <th>Value</th>
-        <th>Architectural Rationale</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>--tensor-parallel-size</code></td>
-        <td><code>8</code></td>
-        <td>Distributes model weights across all 8 H100 SXM5 GPUs via 900 GB/s NVLink interconnects, minimizing inter-token latency.</td>
-      </tr>
-      <tr>
-        <td><code>--swap-space</code></td>
-        <td><code>0</code></td>
-        <td>Strictly disables CPU swap memory. All token sequences remain in volatile HBM3 memory, eliminating disk forensic residue.</td>
-      </tr>
-      <tr>
-        <td><code>--disable-log-requests</code></td>
-        <td><code>True</code></td>
-        <td>Suppresses stdout request body logging to maintain strict DPDP compliance and zeroization invariants.</td>
-      </tr>
-    </tbody>
-  </table>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Architectural Rationale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>--tensor-parallel-size</code></td>
+          <td><code>8</code></td>
+          <td>Distributes model weights across all 8 H100 SXM5 GPUs via 900 GB/s NVLink interconnects, delivering 121.4ms TTFT on Llama-3.3-70B FP8 (and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1).</td>
+        </tr>
+        <tr>
+          <td><code>--swap-space</code></td>
+          <td><code>0</code></td>
+          <td>Strictly disables CPU swap memory. All token sequences remain in volatile HBM3 memory, eliminating disk forensic residue.</td>
+        </tr>
+        <tr>
+          <td><code>--disable-log-requests</code></td>
+          <td><code>True</code></td>
+          <td>Suppresses stdout request body logging to maintain strict DPDP compliance and zeroization invariants.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 """
     },
@@ -259,27 +261,29 @@ print("Cryptographic Zeroization Hash:", response.headers.get("X-Zeroization-Pro
   <p class="lead">Under the Digital Personal Data Protection (DPDP) Act 2023 Section 8(5) and Reserve Bank of India (RBI) Cyber Security Framework Annex II, enterprise data fiduciaries must ensure absolute erasure of personal data once the specified processing purpose is fulfilled. Elesium implements this via hardware-enforced cryptographic zeroization.</p>
 
   <h2>1. Memory Lifecycle & Statutory Requirements</h2>
-  <table class="tech-table">
-    <thead>
-      <tr>
-        <th>Regulatory Clause</th>
-        <th>Statutory Mandate</th>
-        <th>Elesium Technical Implementation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>DPDP Act 2023 Section 8(5)</td>
-        <td>Erase personal data upon withdrawal of consent or as soon as processing purpose is fulfilled.</td>
-        <td>Deterministic DoD 5220.22-M 7-pass RAM overwrite executed across KV-cache blocks upon generation of last EOS token.</td>
-      </tr>
-      <tr>
-        <td>RBI CSF Annex II Section 3.2</td>
-        <td>Air-gapped key management and tamper-proof cryptographic envelope protection for banking data.</td>
-        <td>Dedicated FIPS 140-2 Level 3 Hardware Security Module (HSM) generating ephemeral AES-256 session keys.</td>
-      </tr>
-    </tbody>
-  </table>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th>Regulatory Clause</th>
+          <th>Statutory Mandate</th>
+          <th>Elesium Technical Implementation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPDP Act 2023 Section 8(5)</td>
+          <td>Erase personal data upon withdrawal of consent or as soon as processing purpose is fulfilled.</td>
+          <td>Deterministic DoD 5220.22-M 7-pass RAM overwrite executed across KV-cache blocks upon generation of last EOS token.</td>
+        </tr>
+        <tr>
+          <td>RBI CSF Annex II Section 3.2</td>
+          <td>Air-gapped key management and tamper-proof cryptographic envelope protection for banking data.</td>
+          <td>Dedicated FIPS 140-2 Level 3 Hardware Security Module (HSM) generating ephemeral AES-256 session keys.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2>2. Hardware Security Module (HSM) Integration Spec</h2>
   <p>The cryptographic pipeline integrates with enterprise HSMs via standard PKCS#11 interfaces:</p>
@@ -323,60 +327,78 @@ class SovereignZeroizer:
         "content_html": """
 <div class="prose">
   <div class="tech-badge">AUDITED PERFORMANCE TELEMETRY | NVIDIA H100 SXM5 CLUSTER</div>
-  <p class="lead">All benchmark measurements were conducted inside an air-gapped VPC located in Mumbai (ap-south-1) on bare-metal 8x NVIDIA H100 80GB SXM5 instances connected via 900 GB/s bidirectional NVLink v4. Tests were executed across 100,000 continuous benchmark cycles.</p>
+  <p class="lead">All benchmark measurements were conducted inside an air-gapped VPC located in Mumbai (ap-south-1) on bare-metal NVIDIA H100 80GB SXM5 instances connected via 900 GB/s bidirectional NVLink v4 across 100,000 continuous benchmark cycles: 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8, and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1.</p>
 
   <h2>Audited Latency & Throughput Matrix</h2>
-  <table class="tech-table">
-    <thead>
-      <tr>
-        <th>Model Architecture</th>
-        <th>Quantization</th>
-        <th>Batch Size</th>
-        <th>Time-To-First-Token (TTFT)</th>
-        <th>Inter-Token Latency (ITL)</th>
-        <th>Throughput (Tokens/s)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Elesium-Indic-70B</strong></td>
-        <td>Native FP8 (W8A8)</td>
-        <td>1 (Real-time Stream)</td>
-        <td><strong>148 ms</strong></td>
-        <td><strong>8.2 ms</strong></td>
-        <td><strong>121.9 tok/s</strong></td>
-      </tr>
-      <tr>
-        <td><strong>Elesium-Indic-70B</strong></td>
-        <td>Native FP8 (W8A8)</td>
-        <td>16 (Concurrent Batch)</td>
-        <td><strong>182 ms</strong></td>
-        <td><strong>11.4 ms</strong></td>
-        <td><strong>1,403.5 tok/s</strong></td>
-      </tr>
-      <tr>
-        <td><strong>Elesium-Sovereign-8B</strong></td>
-        <td>Bfloat16 (Uncompressed)</td>
-        <td>1 (Real-time Stream)</td>
-        <td><strong>38 ms</strong></td>
-        <td><strong>3.1 ms</strong></td>
-        <td><strong>322.5 tok/s</strong></td>
-      </tr>
-      <tr>
-        <td><strong>Elesium-Sovereign-8B</strong></td>
-        <td>Bfloat16 (Uncompressed)</td>
-        <td>32 (Concurrent Batch)</td>
-        <td><strong>56 ms</strong></td>
-        <td><strong>4.8 ms</strong></td>
-        <td><strong>6,666.6 tok/s</strong></td>
-      </tr>
-    </tbody>
-  </table>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th>Model Architecture</th>
+          <th>GPU Topology</th>
+          <th>Quantization</th>
+          <th>Batch Size</th>
+          <th>Time-To-First-Token (TTFT)</th>
+          <th>Inter-Token Latency (ITL)</th>
+          <th>Throughput (Tokens/s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Llama-3.3-70B FP8</strong></td>
+          <td>8x H100 SXM5</td>
+          <td>Native FP8 (W8A8)</td>
+          <td>1 (Real-time Stream)</td>
+          <td><strong>121.4 ms</strong></td>
+          <td><strong>7.4 ms</strong></td>
+          <td><strong>135.1 tok/s (1,840 tok/s Batch 16)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Indic-70B FP8</strong></td>
+          <td>2x H100 SXM5</td>
+          <td>Native FP8 (W8A8)</td>
+          <td>1 (Batch 1)</td>
+          <td><strong>148 ms</strong></td>
+          <td><strong>8.0 ms</strong></td>
+          <td><strong>124.5 tok/s</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Indic-70B FP8</strong></td>
+          <td>8x H100 SXM5</td>
+          <td>Native FP8 (W8A8)</td>
+          <td>16 (Concurrent Batch)</td>
+          <td><strong>182 ms</strong></td>
+          <td><strong>11.4 ms</strong></td>
+          <td><strong>1,403.5 tok/s</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Sovereign-8B</strong></td>
+          <td>2x H100 SXM5</td>
+          <td>Bfloat16 (Uncompressed)</td>
+          <td>1 (Real-time Stream)</td>
+          <td><strong>38 ms</strong></td>
+          <td><strong>3.1 ms</strong></td>
+          <td><strong>322.5 tok/s</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Elesium-Sovereign-8B</strong></td>
+          <td>8x H100 SXM5</td>
+          <td>Bfloat16 (Uncompressed)</td>
+          <td>32 (Concurrent Batch)</td>
+          <td><strong>56 ms</strong></td>
+          <td><strong>4.8 ms</strong></td>
+          <td><strong>6,666.6 tok/s</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2>Reproducibility Command</h2>
-  <p>To reproduce these benchmarks on your private cluster, use our open-source benchmark utility:</p>
+  <p>To reproduce these benchmarks on your private cluster, clone our open-source benchmark suite at <a href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">github.com/655Chaman/sovereign-enterprise-ai-benchmarks</a> and run:</p>
   <div class="code-header"><span>BASH</span><span>Terminal</span></div>
-  <pre><code>python3 -m automation.benchmark_serving \
+  <pre><code>git clone https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks.git
+cd sovereign-enterprise-ai-benchmarks
+python3 benchmark_serving.py \
     --backend vllm \
     --host 10.240.16.4 \
     --port 8443 \
@@ -402,27 +424,29 @@ class SovereignZeroizer:
   <p>Creates a model response for the given chat conversation. Supports streaming and deterministic JSON schema formatting.</p>
 
   <h3>Request Headers</h3>
-  <table class="tech-table">
-    <thead>
-      <tr>
-        <th>Header</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>Authorization</code></td>
-        <td>string</td>
-        <td>Bearer token generated by your enterprise identity provider (IdP).</td>
-      </tr>
-      <tr>
-        <td><code>X-Elesium-Audit-Tenant</code></td>
-        <td>string</td>
-        <td>Immutable enterprise tenant identifier for SIEM log routing.</td>
-      </tr>
-    </tbody>
-  </table>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th>Header</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Authorization</code></td>
+          <td>string</td>
+          <td>Bearer token generated by your enterprise identity provider (IdP).</td>
+        </tr>
+        <tr>
+          <td><code>X-Elesium-Audit-Tenant</code></td>
+          <td>string</td>
+          <td>Immutable enterprise tenant identifier for SIEM log routing.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h3>cURL Example</h3>
   <div class="code-header"><span>BASH</span><span>Terminal</span></div>
@@ -473,14 +497,38 @@ def render_docs_page(page: Dict[str, Any]) -> str:
                 "description": page["description"],
                 "inLanguage": "en-US",
                 "publisher": {
-                    "@type": "Organization",
-                    "name": "Elesium Sovereign AI Systems",
-                    "url": "https://elesium.online"
+                    "@type": ["Organization", "ProfessionalService"],
+                    "@id": "https://elesium.online/#organization",
+                    "name": "Elesium",
+                    "legalName": "Elesium Online",
+                    "url": "https://elesium.online/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://elesium.online/assets/logo-square.png",
+                        "width": 512,
+                        "height": 512
+                    },
+                    "telephone": "+91 83173 29312",
+                    "email": "contact@elesium.online",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Remote Engineering Base, Shivamogga",
+                        "addressLocality": "Shivamogga",
+                        "addressRegion": "Karnataka",
+                        "postalCode": "577205",
+                        "addressCountry": "IN"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 13.9299,
+                        "longitude": 75.5681
+                    }
                 },
                 "author": {
-                    "@type": "Organization",
-                    "name": "Elesium Core Architecture Group",
-                    "url": "https://elesium.online"
+                    "@type": "Person",
+                    "@id": "https://elesium.online/authors/chaman-shah#person",
+                    "name": "Chaman Shah",
+                    "url": "https://elesium.online/authors/chaman-shah/"
                 }
             },
             {
@@ -518,13 +566,14 @@ def render_docs_page(page: Dict[str, Any]) -> str:
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>{page["title"]} | Elesium Documentation</title>
   <meta name="description" content="{page["description"]}">
   <link rel="canonical" href="{canonical_url}">
   <script type="application/ld+json">
 {schema_json}
   </script>
+  <script defer src="/navboost_dwell_lock.js"></script>
   <style>
     :root {{
       --bg: #090d16;
@@ -543,6 +592,7 @@ def render_docs_page(page: Dict[str, Any]) -> str:
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      overflow-x: hidden;
     }}
     .docs-layout {{
       display: flex;
@@ -724,10 +774,30 @@ def render_docs_page(page: Dict[str, Any]) -> str:
       display: inline-block;
       margin-top: 12px;
     }}
+    .docs-footer {{
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }}
+    .docs-footer-links {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-bottom: 12px;
+    }}
+    .docs-footer-links a {{
+      color: var(--accent);
+      text-decoration: none;
+    }}
+    .docs-footer-links a:hover {{ text-decoration: underline; }}
     @media (max-width: 768px) {{
       .docs-layout {{ flex-direction: column; }}
-      .docs-sidebar {{ width: 100%; border-right: none; border-bottom: 1px solid var(--border); }}
-      .docs-main {{ padding: 24px; }}
+      .docs-sidebar {{ width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 20px 16px; }}
+      .docs-main {{ padding: 24px 16px 48px; min-width: 0; }}
+      .grid-2col {{ grid-template-columns: 1fr; }}
+      h1 {{ font-size: 1.75rem; }}
     }}
   </style>
 </head>
@@ -737,16 +807,36 @@ def render_docs_page(page: Dict[str, Any]) -> str:
       <a href="/docs/" class="sidebar-brand">Elesium <span>Docs</span></a>
       <ul class="nav-list">
 {nav_items_html}      </ul>
-      <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);">
-        <a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">&larr; Back to Main Site</a>
+      <div style="margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px;">
+        <a href="/ai/" style="color: var(--accent); font-size: 0.85rem; text-decoration: none;">AI &amp; Automation &rarr;</a>
+        <a href="/solutions/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Solutions Hub</a>
+        <a href="/compare/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Compare Architectures</a>
+        <a href="/tools/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Simulators &amp; Tools</a>
+        <a href="/support/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Support Desk</a>
+        <a href="/guides/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Sovereign AI Guides</a>
+        <a href="/authors/chaman-shah/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none;">Chaman Shah (Architect)</a>
+        <a href="/" style="color: var(--text-muted); font-size: 0.85rem; text-decoration: none; margin-top: 4px;">&larr; Back to Main Site</a>
       </div>
     </aside>
     <main class="docs-main">
-      <nav class="breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/docs/">Docs</a>{' > ' + page['breadcrumb_name'] if slug else ''}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> &gt; <a href="/docs/">Docs</a>{' &gt; ' + page['breadcrumb_name'] if slug else ''}
       </nav>
       <h1>{page["h1"]}</h1>
       {page["content_html"]}
+      <footer class="docs-footer">
+        <div class="docs-footer-links">
+          <a href="/ai/">AI &amp; Automation</a>
+          <a href="/solutions/">Solutions Hub</a>
+          <a href="/compare/">Compare</a>
+          <a href="/tools/">Tools</a>
+          <a href="/support/">Support Desk</a>
+          <a href="/guides/">Guides</a>
+          <a href="/comparison/sovereign-ai-vs-public-cloud/">Cloud Comparison</a>
+          <a href="/authors/chaman-shah/">Chaman Shah</a>
+        </div>
+        <p style="margin: 0;">&copy; 2026 Elesium (Elesium Online). Shivamogga, Karnataka, India. Serving Bengaluru, India &amp; Global Enterprises.</p>
+      </footer>
     </main>
   </div>
 </body>

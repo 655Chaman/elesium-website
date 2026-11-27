@@ -54,7 +54,7 @@ export default function EmbedAgentTallyErpSimulator() {
   }, [results.voucherProcessingTrace]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>Tally ERP LLM Agent Reconciliation Simulator | Elesium Embed</title>
         <meta name="description" content="Embeddable simulator calculating Tally Prime XML-over-HTTP port 9000 latency, straight-through processing rates, and GST Rule 36(4) verification." />

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # Sovereign Enterprise AI Benchmarks — Standalone GitHub Deployment Script
-# Author: Elesium Digital Systems (https://elesium.online)
+# Author: Elesium (https://elesium.online)
 # ==============================================================================
 
 set -euo pipefail

@@ -42,12 +42,19 @@ QUEUE_PATH = ROOT_DIR / "automation" / "compact_keywords_queue.json"
 
 def materialize_tools_hub():
     """
-    Creates or updates the master Interactive Tools Hub at frontend/dist/tools/index.html.
-    Eliminates tool orphans and establishes Depth 1 authority for all calculators & simulators.
+    Preserves the SSG/Vite interactive Tools Hub at frontend/dist/tools/index.html when
+    already built by generate_ssg.py, or writes a fallback hub if absent.
     """
     tools_dir = DIST_DIR / "tools"
     tools_dir.mkdir(parents=True, exist_ok=True)
     hub_path = tools_dir / "index.html"
+    direct_hub_path = DIST_DIR / "tools.html"
+
+    if hub_path.exists():
+        existing_hub = hub_path.read_text(encoding="utf-8")
+        if '<div id="root"' in existing_hub and 'type="module"' in existing_hub:
+            print(f"[INFO] Preserving existing SSG/Vite Interactive Tools Hub at: {hub_path}")
+            return
     
     flagship_tools = [
         {
@@ -122,7 +129,7 @@ def materialize_tools_hub():
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interactive Sovereign AI Architecture Simulators &amp; Engineering Tools | Elesium</title>
   <meta name="description" content="Explore client-side sovereign AI engineering simulators, LLM token cost arbitrage calculators, DPDP Act statutory penalty models, and GPU cluster hardware sizers." />
-  <link rel="canonical" href="https://elesium.online/tools" />
+  <link rel="canonical" href="https://elesium.online/tools/" />
   <meta name="robots" content="index, follow" />
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 0; }}
@@ -268,14 +275,15 @@ def inject_category_hubs_complete_catalog():
     if retained_path.exists():
         try:
             retained_slugs = set(json.loads(retained_path.read_text(encoding="utf-8")))
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"[WARN] Failed to load {retained_path}: {e}", file=sys.stderr)
 
     curated_path = ROOT_DIR / "automation" / "curated_enterprise_solutions.json"
     if curated_path.exists():
         try:
             queue = json.loads(curated_path.read_text(encoding="utf-8"))
-        except Exception:
+        except Exception as e:
+            print(f"[WARN] Failed to load {curated_path}, falling back to {QUEUE_PATH}: {e}", file=sys.stderr)
             with open(QUEUE_PATH, "r", encoding="utf-8") as f:
                 queue = json.load(f)
     else:
@@ -444,7 +452,7 @@ def inject_solution_lateral_mesh():
                 target_file.write_text(content, encoding="utf-8")
                 injected_count += 1
             except Exception as e:
-                pass
+                print(f"[WARN] Failed to inject lateral mesh into {target_file}: {e}", file=sys.stderr)
 
     elapsed = time.time() - start_time
     print(f"[SUCCESS] Injected Lateral Mesh into {injected_count} Solution HTML files in {elapsed:.2f}s.")

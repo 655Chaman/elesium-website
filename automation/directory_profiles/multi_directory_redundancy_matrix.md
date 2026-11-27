@@ -2,7 +2,7 @@
 
 > **Framework:** Michael Merlino Entity Corroboration & Knowledge Graph Grounding Architecture  
 > **Entity Target:** Elesium (`https://elesium.online`)  
-> **Corporate Identity:** Elesium Online, Koramangala 4th Block, Bengaluru, Karnataka, India  
+> **Corporate Identity:** Elesium Online, Shivamogga, Karnataka, India  
 > **Strategic Objective:** Eliminate single-gatekeeper dependency and corroborate Elesium across independent, high-authority entity nodes to force immediate Google Knowledge Graph generation and AI Answer Engine citation.
 
 ---
@@ -66,7 +66,7 @@ Trustpilot is the highest-authority consumer review platform on the web. Reviews
    - Primary: *Software & Computer Consulting*  
    - Secondary: *Internet Marketing & AI Automation*
 4. **NAP Consistency:**
-   - **Address:** Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+   - **Address:** Shivamogga, Karnataka 577205, India
    - **Phone:** `+91-8317329312`
    - **Website:** `https://elesium.online`
 5. **Brand Assets:**
@@ -112,10 +112,10 @@ Google Business Profile is the foundational local entity anchor for the Google K
 | **Business Name** | **Elesium** | Exact brand name; zero keyword-stuffing to avoid suspension. |
 | **Primary Category** | **Software company** | Highest semantic alignment with Google’s core taxonomy. |
 | **Secondary Categories** | *Computer support and services*, *Information technology consulting* | Broadens local commercial query surface. |
-| **Street Address** | Koramangala 4th Block | Exact physical micro-zone matching Schema.org address. |
-| **City, State, PIN** | Bengaluru, Karnataka 560034 | Grounded in Bangalore IT corridor. |
+| **Street Address** | Shivamogga | Exact physical micro-zone matching Schema.org address. |
+| **City, State, PIN** | Shivamogga, Karnataka 577205 | Grounded in Bangalore IT corridor. |
 | **Country** | India (IN) | Primary domestic market. |
-| **Geo Coordinates** | `12.9352° N, 77.6245° E` | Micro-zone centroid for Koramangala 4th Block. |
+| **Geo Coordinates** | `13.9299° N, 75.5681° E` | Operating base centroid for Shivamogga, Karnataka. |
 | **Direct Phone** | `+91-8317329312` | Matches all directory and website footers. |
 | **Website URL** | `https://elesium.online` | Strict HTTPS canonical URL. |
 | **Opening Hours** | Monday - Friday: 09:00 - 19:00 IST | Signals active commercial establishment. |
@@ -164,16 +164,16 @@ Below is the updated, unified JSON-LD schema to maintain within `frontend/index.
       "paymentAccepted": "Wire Transfer, Corporate Invoicing",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Koramangala 4th Block",
+        "streetAddress": "Shivamogga",
         "addressLocality": "Bengaluru",
         "addressRegion": "Karnataka",
-        "postalCode": "560034",
+        "postalCode": "577205",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 12.9352,
-        "longitude": 77.6245
+        "latitude": 13.9299,
+        "longitude": 75.5681
       },
       "areaServed": [
         { "@type": "Country", "name": "India" },
@@ -223,7 +223,7 @@ Before launching a review campaign or announcing new profile listings, execute t
 │                                                                                        │
 │ [ ] 2. Character-for-Character NAP Parity:                                             │
 │     • Name: "Elesium" (Brand) / "Elesium Online" (Legal Entity)                        │
-│     • Address: "Koramangala 4th Block, Bengaluru, Karnataka 560034, India"             │
+│     • Address: "Shivamogga, Karnataka 577205, India"             │
 │     • Phone: "+91-8317329312"                                                          │
 │                                                                                        │
 │ [ ] 3. Schema.org sameAs Population:                                                   │

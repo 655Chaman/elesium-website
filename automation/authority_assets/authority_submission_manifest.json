@@ -1,7 +1,21 @@
 {
   "timestamp": "2026-10-19 14:23:33 IST",
   "canonical_root": "https://elesium.online",
-  "solutions_hub": "https://elesium.online/solutions",
+  "nap_reference": {
+    "brand": "Elesium",
+    "legal_name": "Elesium Online",
+    "phone": "+91 83173 29312",
+    "email": "contact@elesium.online",
+    "logo": "https://elesium.online/assets/logo-square.png",
+    "operating_base": "Remote Engineering Base, Shivamogga, Karnataka 577205, India",
+    "area_served": [
+      "Bengaluru",
+      "Karnataka",
+      "India",
+      "Global"
+    ]
+  },
+  "solutions_hub": "https://elesium.online/solutions/",
   "roi_calculator": "https://elesium.online/tools/enterprise-ai-roi-calculator",
   "embed_calculator": "https://elesium.online/embed/roi-calculator",
   "channels": {
@@ -71,7 +85,7 @@
       "lead_architect": "Chaman Shah",
       "hard_metrics_enforced": [
         "1.9s latency",
-        "\u20b918.4L savings",
+        "₹18.4L savings",
         "98% error cut"
       ]
     },

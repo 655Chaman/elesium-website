@@ -60,7 +60,7 @@ export default function EmbedAgentOndcRetailSimulator() {
   }, [results.telemetryTrace]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>ONDC Retail Inventory &amp; Dynamic Pricing Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-ondc-retail-inventory-simulator" />

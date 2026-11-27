@@ -128,7 +128,7 @@ Cluster operating within deterministic state invariants. Ready for sovereign pro
   }, [results.telemetryTrace]);
 
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 selection:bg-white/20">
+    <div className="min-h-[100dvh] bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 selection:bg-white/20">
       <Helmet>
         <title>Enterprise Agent Graph Consensus & State Verifier Simulator | Elesium</title>
         <meta
@@ -421,7 +421,7 @@ Cluster operating within deterministic state invariants. Ready for sovereign pro
                 </svg>
               </div>
 
-              <div className="grid grid-cols-4 gap-2 pt-2 border-t border-neutral-800/60 text-center font-mono text-[10px]">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-neutral-800/60 text-center font-mono text-[10px]">
                 <div className="p-1.5 rounded bg-neutral-950/80 border border-neutral-800 text-neutral-400">
                   <span>Epoch: </span><span className="text-white font-bold">12 Active</span>
                 </div>
@@ -555,7 +555,7 @@ Cluster operating within deterministic state invariants. Ready for sovereign pro
                 readOnly
                 value={embedCode}
                 rows={4}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-200 focus:outline-none"
               />
               <div className="flex justify-end space-x-3">
                 <button

@@ -14,7 +14,7 @@
     "LocalBusiness"
   ],
   "name": "Elesium",
-  "legalName": "Elesium Digital Systems",
+  "legalName": "Elesium",
   "url": "https://elesium.online",
   "telephone": "+91-8317329312",
   "foundingLocation": {
@@ -22,10 +22,10 @@
     "name": "Bangalore",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Koramangala 4th Block",
+      "streetAddress": "Shivamogga",
       "addressLocality": "Bangalore",
       "addressRegion": "Karnataka",
-      "postalCode": "560034",
+      "postalCode": "577205",
       "addressCountry": "IN"
     }
   },

@@ -108,7 +108,7 @@ RECOMMENDATION: Deploy hierarchical episodic memory and topological DAG delta co
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Autonomous Agent Memory Drift &amp; Long-Horizon Context Compression Simulator | Elesium</title>
         <meta

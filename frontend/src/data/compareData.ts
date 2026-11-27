@@ -72,7 +72,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
     entityALabel: "LangGraph",
     entityBLabel: "CrewAI",
     category: "Framework Architecture",
-    verdictSummary: "CrewAI accelerates early prototyping through intuitive role definitions, but LangGraph is the undisputed enterprise standard for high-throughput production due to explicit cyclic state transitions, append-only PostgreSQL checkpoints, and 98.4% execution determinism.",
+    verdictSummary: "CrewAI accelerates early prototyping through declarative role definitions, but LangGraph is the undisputed enterprise standard for high-throughput production due to explicit cyclic state transitions, append-only PostgreSQL checkpoints, and 98.4% execution determinism.",
     fastFacts: [
       { label: "Execution Determinism", value: "98.4% vs 56.8%", description: "LangGraph prevents runaway tool loops via typed reduction gates." },
       { label: "P95 Concurrency Latency", value: "380ms vs 8,900ms", description: "Checkpoint caching prevents redundant re-prompting of upstream nodes." },
@@ -392,7 +392,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         title: "The ReAct Hallucination Cascade in Enterprise Systems",
         subtitle: "Why autonomous reasoning fails when stakes are high",
         analysisParagraphs: [
-          "The ReAct (Reason + Act) paradigm prompts an LLM to generate a thought, pick an action, observe the tool output, and repeat. While elegant in academic benchmarks, in enterprise production with hundreds of tools, the model often develops cognitive drift.",
+          "The ReAct (Reason + Act) paradigm prompts an LLM to generate a thought, pick an action, observe the tool output, and repeat. While clean in academic benchmarks, in enterprise production with hundreds of tools, the model often develops cognitive drift.",
           "It misinterprets intermediate database outputs, hallucinates parameter names, or enters infinite loops trying to verify its own hallucination. A deterministic state machine restricts the model's responsibility strictly to data extraction and classification within bounded state nodes."
         ],
         keyMetric: {
@@ -686,7 +686,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         subtitle: "Analyzing time-to-first-token in agentic multi-turn loops",
         analysisParagraphs: [
           "In real-time multi-agent loops, time-to-first-token (TTFT) dictates user-perceived responsiveness. Traditional PyTorch runtimes incur substantial kernel launch overhead when dispatching separate kernels for GEMM, LayerNorm, and RoPE operations.",
-          "TensorRT-LLM compiles model graphs into monolithic, kernel-fused execution units tailored directly to Hopper FP8 Tensor Cores. This deep fusion cuts memory bandwidth pressure and reduces TTFT by up to 35% under enterprise batch sizes."
+          "TensorRT-LLM compiles model graphs into monolithic, kernel-fused execution units custom-configured directly to Hopper FP8 Tensor Cores. This deep fusion cuts memory bandwidth pressure and reduces TTFT by up to 35% under enterprise batch sizes."
         ],
         keyMetric: {
           label: "P99 Time to First Token",
@@ -749,7 +749,7 @@ export const compareBattlecards: CompareBattlecardItem[] = [
         optionA: "Code-first framework with LangSmith execution tracing and observability.",
         optionB: "Interactive Web UI for configuring agents, skills, and chat sessions without code.",
         verdict: "Option B Superior",
-        technicalExplanation: "AutoGen Studio provides an intuitive graphical interface that allows non-engineering stakeholders to prototype multi-agent interactions in minutes."
+        technicalExplanation: "AutoGen Studio provides an declarative graphical interface that allows non-engineering stakeholders to prototype multi-agent interactions in minutes."
       },
       {
         dimension: "Production Fault Tolerance & Human-in-the-Loop",

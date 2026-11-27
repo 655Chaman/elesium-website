@@ -5,7 +5,7 @@
 **Classification:** Strictly Confidential / Board & CISO Advisory  
 **Target Entity:** Nextbillion Technology Private Limited (Groww - SEBI Reg. INZ000301838, Depository Participant IN-DP-417-2019)  
 **Target Recipients:** Chief Information Security Officer (CISO), Chief Risk Officer (CRO), Chief Technology Officer (CTO), Head of Compliance  
-**Issuing Authority:** Elesium Digital Systems (https://elesium.online) - Bangalore, India  
+**Issuing Authority:** Elesium (https://elesium.online) - Bangalore, India  
 **Date of Issuance:** November 2026  
 **Statutory Scope:** RBI Master Direction on IT Governance (2023) | SEBI Cybersecurity & Cyber Resilience Framework (CSCRF 2024) | DPDP Act 2023 (Section 8(5) & 16) | Aadhaar Act Section 29  
 
@@ -37,7 +37,7 @@ While these AI capabilities enhance conversion and reduce customer support overh
 - **DPDP Act 2023 Section 8(5) "Right to Erasure" Impasse:** When a retail investor closes their Demat account or revokes consent for algorithmic underwriting, Groww is legally obligated to erase all personal data. Cloud-hosted RAG (Retrieval-Augmented Generation) systems retain Aadhaar, PAN, and financial profile embeddings inside vector database indexes (Pinecone, Milvus, Weaviate, `pgvector`) where physical deletion is mathematically incomplete without expensive index rebuilds.
 - **Prompt Caching & Memory Contamination:** Cloud LLM providers utilize dynamic multi-tenant prompt caching to optimize GPU memory. Ingestion of raw investor net worth, PAN, or trading activity into shared context caches introduces severe side-channel data reconstruction risks.
 
-**The Solution:** Elesium Digital Systems provides an **Air-Gapped Sovereign BFSI Private VPC Enclave** deployed within AWS Mumbai (`ap-south-1`) or dedicated Tier-IV colocation (CtrlS Bangalore / STT Mumbai). Backed by **8x NVIDIA H100 SXM5 accelerators, hardware-isolated in-flight PII masking gateways, deterministic LangGraph state machines with Redis Enterprise binary checkpoints, and per-user KMS envelope encryption**, Groww eliminates 100% of regulatory liability while cutting inference costs by 71%.
+**The Solution:** Elesium provides an **Air-Gapped Sovereign BFSI Private VPC Enclave** deployed within AWS Mumbai (`ap-south-1`) or dedicated Tier-IV colocation (CtrlS Bangalore / STT Mumbai). Backed by **8x NVIDIA H100 SXM5 accelerators, hardware-isolated in-flight PII masking gateways, deterministic LangGraph state machines with Redis Enterprise binary checkpoints, and per-user KMS envelope encryption**, Groww eliminates 100% of regulatory liability while cutting inference costs by 71%.
 
 ---
 
@@ -93,7 +93,7 @@ When an investor deletes their Groww account under DPDP Act Section 12, Groww is
 
 ## 4. The Sovereign BFSI Architecture by Elesium
 
-Elesium Digital Systems replaces fragile SaaS pipelines with an **Air-Gapped Sovereign BFSI Enclave** engineered specifically for high-throughput Indian wealthtech platforms:
+Elesium replaces fragile SaaS pipelines with an **Air-Gapped Sovereign BFSI Enclave** engineered specifically for high-throughput Indian wealthtech platforms:
 
 ```
                          ELESIUM SOVEREIGN BFSI ENCLAVE
@@ -340,4 +340,4 @@ To inspect the live BFSI benchmark telemetry on an 8x NVIDIA H100 SXM5 cluster a
 - **Lead BFSI Systems Architect:** enterprise@elesium.online
 - **Production Benchmarks & Regulatory Blueprints:** [Elesium Sovereign AI Infrastructure](https://elesium.online/signals)
 
-*Authored by Elesium Digital Systems. All engineering benchmarks, cryptographic specifications, and statutory mappings are certified under Enterprise BFSI Release 2026-V1.*
+*Authored by Elesium. All engineering benchmarks, cryptographic specifications, and statutory mappings are certified under Enterprise BFSI Release 2026-V1.*

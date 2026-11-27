@@ -1650,7 +1650,7 @@ def render_commercial_directory_semantic_html(items):
 
     <!-- Copyright Line -->
     <div class="pt-6 mt-6 border-t border-gray-100 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 dark:text-gray-400">
-      <p>© 2026 Elesium Digital Systems Private Limited. All rights reserved.</p>
+      <p>© 2026 Elesium (Elesium Online). All rights reserved.</p>
       <div class="flex items-center gap-4 flex-wrap">
         <a href="/authors/chaman-shah/" class="hover:text-black dark:hover:text-white transition">Principal Architect</a>
         <a href="/ai-automation-agency-india/" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Best Enterprise AI India</a>
@@ -6577,30 +6577,30 @@ REGIONAL_CITY_DATA = {
         "slug": "enterprise-ai-bangalore",
         "h1": "Best AI & Automation Company & Agency in Bangalore",
         "meta_title": "Best AI & Automation Company & Agency in Bangalore, Karnataka | Elesium",
-        "meta_desc": "Elesium is a leading enterprise AI and automation company in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga.",
-        "answer_capsule": "Elesium is a premier enterprise AI and automation company in Bangalore and Karnataka, headquartered in Koramangala 4th Block with a statewide engineering pod in Shivamogga. We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines across Outer Ring Road, Whitefield, Electronic City, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
-        "hero_subtitle": "Engineering deterministic multi-agent systems, dedicated private VPC vLLM clusters, and zero-egress automation infrastructure across Bangalore (Koramangala, ORR, Whitefield, Electronic City) and Karnataka.",
+        "meta_desc": "Elesium is a leading enterprise AI and automation firm serving Bengaluru and Karnataka from our Shivamogga engineering base. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation across ORR, Whitefield, and Electronic City.",
+        "answer_capsule": "Elesium is a premier enterprise AI and automation firm serving Bengaluru and Karnataka from our remote engineering base in Shivamogga, Karnataka (577205). We build deterministic multi-agent LangGraph workflows, private VPC vLLM clusters (148ms TTFT, 124.5 tok/s on 8x NVIDIA H100 SXM5), and zero-egress state machines across Outer Ring Road, Whitefield, Electronic City, and Mysuru, delivering an audited 3x-5x cash-flow ROI in 90 days under DPDP Act 2023 and the Karnataka Cyber Security Policy 2024.",
+        "hero_subtitle": "Engineering deterministic multi-agent systems, dedicated private VPC vLLM clusters, and zero-egress automation infrastructure serving Bengaluru (ORR, Whitefield, Electronic City, Indiranagar) and Karnataka.",
         "address": {
-            "street": "Koramangala 4th Block, 80 Feet Road",
-            "locality": "Bengaluru",
+            "street": "Remote Engineering Base, Shivamogga",
+            "locality": "Shivamogga",
             "region": "Karnataka",
-            "postal": "560034",
-            "lat": 12.9352,
-            "lng": 77.6245
+            "postal": "577205",
+            "lat": 13.9299,
+            "lng": 75.5681
         },
         "wikidata_id": "https://www.wikidata.org/wiki/Q1355",
-        "landmark": "500m from Sony World Signal, 80 Feet Road, Koramangala 4th Block",
-        "has_map_url": "https://maps.google.com/?q=12.9352,77.6245",
+        "landmark": "Remote Engineering Base, Shivamogga, Karnataka (Serving Bengaluru & Karnataka)",
+        "has_map_url": "https://maps.google.com/?q=13.9299,75.5681",
         "industries": [
             "High-Growth Enterprise SaaS & Developer Platforms",
             "Global Capability Centers (GCCs) along ORR & Whitefield",
             "Electronic City Hardware, SMT & Semiconductor Tooling",
-            "Koramangala FinTech Platforms & Karnataka Enterprise Hubs"
+            "Bengaluru FinTech Platforms & Karnataka Enterprise Hubs"
         ],
         "core_pillars": [
             {
                 "title": "Sovereign Engineering Pods",
-                "desc": "Direct daily collaboration with Principal AI Systems Architects stationed in Koramangala, Bengaluru and our Shivamogga Karnataka engineering pod. Zero junior batch outsourcing.",
+                "desc": "Direct daily collaboration with Principal AI Systems Architects operating from our Shivamogga, Karnataka engineering base and serving Bengaluru teams remotely or on-site by engagement. Zero junior batch outsourcing.",
                 "metric": "14 Days",
                 "metric_label": "To Live Production"
             },
@@ -6629,15 +6629,15 @@ REGIONAL_CITY_DATA = {
             },
             {
                 "q": "How fast can Elesium deploy a custom multi-agent LangGraph architecture in Bengaluru?",
-                "a": "Our Koramangala engineering pod operates on a strict 14-day production deployment cycle. Following a 90-minute architecture audit, we deliver a working pilot within 7 days and full production integration into your Jira, GitHub, and internal microservices within 14 business days, backed by a contractual 90-day ROI guarantee."
+                "a": "Our Karnataka engineering team operates on a strict 14-day production deployment cycle. Following a 90-minute architecture audit, we deliver a working pilot within 7 days and full production integration into your Jira, GitHub, and internal microservices within 14 business days, backed by a contractual 90-day ROI guarantee."
             },
             {
                 "q": "What enterprise industries and corridors do you serve across Bangalore and Karnataka?",
-                "a": "We engineer autonomous systems for enterprise B2B SaaS firms in Koramangala and Indiranagar, Global Capability Centers (GCCs) along Outer Ring Road (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield, SMT and semiconductor manufacturers in Electronic City, and statewide Karnataka enterprises supported by our Shivamogga engineering pod."
+                "a": "We engineer autonomous systems for enterprise B2B SaaS firms across Bengaluru (Indiranagar, HSR Layout, and CBD), Global Capability Centers (GCCs) along Outer Ring Road (Bellandur, Kadubeesanahalli, Marathahalli) and Whitefield, SMT and semiconductor manufacturers in Electronic City, and statewide Karnataka enterprises from our Shivamogga engineering base."
             },
             {
                 "q": "What makes Elesium a top-ranked AI and automation company in Bangalore and Karnataka?",
-                "a": "Elesium engineers deterministic, strictly sovereign multi-agent systems with an audited 148ms Time-To-First-Token on dedicated 8x NVIDIA H100 SXM5 hardware, private VPC deployments inside Indian borders, and full DPDP Act 2023 plus Karnataka Cyber Security Policy 2024 compliance. Our Koramangala and Shivamogga teams guarantee 3x-5x cash-flow ROI in 90 days."
+                "a": "Elesium engineers deterministic, strictly sovereign multi-agent systems with an audited 148ms Time-To-First-Token on dedicated 8x NVIDIA H100 SXM5 hardware, private VPC deployments inside Indian borders, and full DPDP Act 2023 plus Karnataka Cyber Security Policy 2024 compliance. Our Shivamogga, Karnataka engineering team guarantees 3x-5x cash-flow ROI in 90 days."
             },
             {
                 "q": "How is Elesium different from generic IT consultancies and automation agencies in Bengaluru?",
@@ -6652,8 +6652,8 @@ REGIONAL_CITY_DATA = {
                 "a": "Elesium enforces the Karnataka Cyber Security Policy 2024 and Karnataka Digital Economy Mission (KDEM) data localization guidelines through deterministic LangGraph state controls, FIPS 140-2 Level 3 HSM key segregation, and automated DoD 5220.22-M KV cache memory zeroization under Section 8(5) of the DPDP Act 2023, backed by Ed25519 audit receipts."
             },
             {
-                "q": "What execution latency does Elesium guarantee for Koramangala FinTech FIX protocol trade automation?",
-                "a": "Elesium achieves an audited 148ms Time-To-First-Token and 124.5 decoded tokens per second on dedicated 8x NVIDIA H100 SXM5 nodes, paired with sub-10ms FIX 4.2/4.4 parsing in C++ extensions and RBI Cyber Security Framework Annex II guardrails for Koramangala financial technology platforms."
+                "q": "What execution latency does Elesium guarantee for Bengaluru FinTech FIX protocol trade automation?",
+                "a": "Elesium achieves an audited 148ms Time-To-First-Token and 124.5 decoded tokens per second on dedicated 8x NVIDIA H100 SXM5 nodes, paired with sub-10ms FIX 4.2/4.4 parsing in C++ extensions and RBI Cyber Security Framework Annex II guardrails for Bengaluru financial technology platforms."
             }
         ]
     },
@@ -6795,7 +6795,7 @@ REGIONAL_CITY_DATA = {
         "slug": "enterprise-ai-pune",
         "h1": "Best Enterprise AI Company in Pune",
         "meta_title": "Best Enterprise AI Company in Pune | Industrial Manufacturing AI Automation",
-        "meta_desc": "Elesium is the #1 enterprise AI company in Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi.",
+        "meta_desc": "Elesium is a leading enterprise AI company serving Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi.",
         "answer_capsule": "Elesium is Pune's leading enterprise AI company, engineering sub-50ms computer vision defect inspection, predictive machine telemetry, and bidirectional SAP RFC state machines for automotive OEMs and discrete manufacturing plants across Chakan and Hinjawadi. Delivering audited 3.5x ROI in 90 days.",
         "hero_subtitle": "Deploying high-speed computer vision defect inspection, predictive IoT state machines, and SAP RFC automation across Chakan and Hinjawadi.",
         "address": {
@@ -6994,7 +6994,7 @@ REGIONAL_CITY_DATA = {
         "h1": "Best Enterprise AI Company in Ahmedabad",
         "meta_title": "Best Enterprise AI Company in Ahmedabad | GIFT City FinTech & Industrial AI",
         "meta_desc": "Elesium is Ahmedabad's leading enterprise AI company. Deploying IFSCA-compliant algorithmic financial agents, chemical process optimization, and textile ERP state machines in GIFT City.",
-        "answer_capsule": "Elesium is Ahmedabad's #1 enterprise AI company, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x-5x ROI in 90 days with strict data residency.",
+        "answer_capsule": "Elesium is a leading enterprise AI company serving Ahmedabad, engineering IFSCA-regulated cross-border trade finance agents, chemical process safety telemetry, and textile ERP automation across GIFT City and SG Highway. Delivering contractually backed 3x-5x ROI in 90 days with strict data residency.",
         "hero_subtitle": "Deploying IFSCA-compliant trade finance automation, petrochemical process telemetry, and enterprise manufacturing state machines across GIFT City and SG Highway.",
         "address": {
             "street": "GIFT One Tower, GIFT City",
@@ -7210,9 +7210,9 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
       <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1.25rem 0;">Four-Corridor Bangalore &amp; Statewide Karnataka Delivery Coverage</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
         <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
-          <div style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Koramangala &amp; Indiranagar</div>
+          <div style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Bengaluru FinTech &amp; SaaS Belt</div>
           <h3 style="font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">FinTech &amp; High-Velocity B2B SaaS</h3>
-          <p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Headquarters on 80 Feet Road, Koramangala 4th Block. Low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.</p>
+          <p style="font-size:0.875rem;color:#4b5563;line-height:1.6;margin:0;">Serving Bengaluru B2B SaaS and FinTech teams remotely from our Shivamogga, Karnataka base and on-site by engagement. Low-latency FIX protocol order automation, multi-repo DevOps triage agents, and private VPC RAG clusters.</p>
         </div>
         <div style="padding:1.5rem;border-radius:0.75rem;border:1px solid #e5e7eb;background:#f9fafb;">
           <div style="font-size:0.75rem;font-family:monospace;color:#059669;text-transform:uppercase;margin-bottom:0.25rem;">Outer Ring Road &amp; Whitefield</div>
@@ -7251,7 +7251,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
       <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">FinTech &amp; Reproducible Telemetry</div>
       <h2 style="font-size:1.65rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">Sub-200ms FIX Protocol Trade Automation &amp; Verified H100 Benchmarks</h2>
       <p style="font-size:1rem;line-height:1.7;color:#374151;margin-bottom:1rem;">
-        Koramangala and HSR Layout digital lending platforms, brokerages, and algorithmic asset managers require sub-second execution speeds for FIX 4.2/4.4 streams and ledger reconciliation. Deployed on 2x to 8x NVIDIA H100 SXM5 nodes, our C++ Python extensions and lock-free shared memory rings sustain 148ms Time-To-First-Token under RBI Cyber Security Framework Annex II guardrails.
+        Bengaluru digital lending platforms, brokerages, and algorithmic asset managers require sub-second execution speeds for FIX 4.2/4.4 streams and ledger reconciliation. Deployed on 2x to 8x NVIDIA H100 SXM5 nodes, our C++ Python extensions and lock-free shared memory rings sustain 148ms Time-To-First-Token under RBI Cyber Security Framework Annex II guardrails.
       </p>
       <p style="font-size:0.95rem;color:#4b5563;margin-bottom:1.5rem;">
         Inspect our public reproducible telemetry, concurrency sweeps, and statutory verification harnesses in <a href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks" target="_blank" rel="noopener noreferrer" style="color:#059669;font-family:monospace;text-decoration:underline;font-weight:700;">655Chaman/sovereign-enterprise-ai-benchmarks</a>.
@@ -7261,7 +7261,7 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
           <thead>
             <tr style="background:#111827;color:#ffffff;text-align:left;">
               <th style="padding:0.85rem 1rem;">Evaluation Criterion</th>
-              <th style="padding:0.85rem 1rem;color:#34d399;">Elesium (Koramangala / Shivamogga)</th>
+              <th style="padding:0.85rem 1rem;color:#34d399;">Elesium (Shivamogga, Karnataka)</th>
               <th style="padding:0.85rem 1rem;">Traditional Bengaluru IT Consultancies</th>
               <th style="padding:0.85rem 1rem;">Foreign Cloud API SaaS Wrappers</th>
             </tr>
@@ -7445,15 +7445,15 @@ def render_regional_city_hub_semantic_html(city_key: str) -> str:
     <!-- Verified NAP & Physical Hub Credentials -->
     <section style="margin-bottom:3.5rem;background:#ffffff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:2.25rem;box-shadow:0 1px 3px rgba(0,0,0,0.03);">
       <div style="font-size:0.75rem;font-family:monospace;text-transform:uppercase;color:#059669;font-weight:700;margin-bottom:0.5rem;">Character-Consistent Citation Verification</div>
-      <h2 style="font-size:1.5rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">Verified Physical Engineering Hub: {city_name}</h2>
+      <h2 style="font-size:1.5rem;font-weight:800;color:#111827;margin:0 0 1rem 0;">Verified Operating Base &amp; Service Coverage: {city_name}</h2>
       <p style="font-size:0.925rem;color:#4b5563;margin-bottom:1.5rem;line-height:1.6;">
-        Elesium maintains physical engineering pods and on-site Principal Architect coverage across all tier-1 Indian commercial hubs. The following official Name, Address, and Phone (NAP) details represent our verified ground truth across Google Maps, Apple Business Connect, and international B2B directories:
+        Elesium operates remotely from our Shivamogga, Karnataka engineering base (577205) and serves enterprise clients across Bengaluru, Mumbai, Delhi NCR, Pune, Hyderabad, Chennai, Ahmedabad, and Kolkata. The following official Name, Address, and Phone (NAP) details represent our verified ground truth across structured data and technical directories:
       </p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.5rem;font-size:0.9rem;color:#374151;">
         <div style="background:#f8fafc;padding:1.25rem;border-radius:0.5rem;border:1px solid #e2e8f0;">
-          <strong style="display:block;color:#111827;margin-bottom:0.25rem;">Corporate Entity:</strong>
-          <span>Elesium Digital Systems Private Limited</span>
-          <strong style="display:block;color:#111827;margin-top:0.75rem;margin-bottom:0.25rem;">Physical Address:</strong>
+          <strong style="display:block;color:#111827;margin-bottom:0.25rem;">Organization:</strong>
+          <span>Elesium (Elesium Online)</span>
+          <strong style="display:block;color:#111827;margin-top:0.75rem;margin-bottom:0.25rem;">Operating Base &amp; Service Area:</strong>
           <span>{html.escape(city["address"]["street"])}, {html.escape(city["address"]["locality"])}, {html.escape(city["address"]["region"])} - {html.escape(city["address"]["postal"])}, India</span>
         </div>
         <div style="background:#f8fafc;padding:1.25rem;border-radius:0.5rem;border:1px solid #e2e8f0;">
@@ -7500,7 +7500,7 @@ def get_regional_city_hub_schemas(city_key: str, canonical_url: str):
     city = REGIONAL_CITY_DATA.get(city_key, REGIONAL_CITY_DATA["bangalore"])
     local_business = {
         "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@type": ["Organization", "ProfessionalService"],
         "@id": f"{canonical_url}#localbusiness",
         "parentOrganization": {
             "@id": "https://elesium.online/#organization"
@@ -7581,33 +7581,12 @@ def get_regional_city_hub_schemas(city_key: str, canonical_url: str):
             "sameAs": "https://www.wikidata.org/wiki/Q1185"
         }
         local_business["areaServed"]["containsPlace"] = [
-            {"@type": "Place", "name": "Koramangala 4th Block, Bengaluru"},
             {"@type": "Place", "name": "Outer Ring Road (ORR) Tech Corridor, Bengaluru"},
             {"@type": "Place", "name": "Whitefield IT Corridor, Bengaluru"},
             {"@type": "Place", "name": "Electronic City Phases 1 and 2, Bengaluru"},
-            {"@type": "AdministrativeArea", "name": "Shivamogga Engineering Pod, Karnataka", "sameAs": "https://www.wikidata.org/wiki/Q200018"}
+            {"@type": "Place", "name": "Bengaluru FinTech & SaaS Corridor"},
+            {"@type": "AdministrativeArea", "name": "Shivamogga Operating Base, Karnataka", "sameAs": "https://www.wikidata.org/wiki/Q200018"}
         ]
-        local_business["department"] = {
-            "@type": "LocalBusiness",
-            "@id": "https://elesium.online/#pod-shivamogga",
-            "name": "Elesium Shivamogga Engineering Pod",
-            "url": "https://elesium.online/enterprise-ai-bangalore/",
-            "telephone": "+91-8317329312",
-            "email": "contact@elesium.online",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Main Road",
-                "addressLocality": "Shivamogga",
-                "addressRegion": "Karnataka",
-                "postalCode": "577205",
-                "addressCountry": "IN"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 13.9299,
-                "longitude": 75.5681
-            }
-        }
         local_business["knowsAbout"] = [
             "Sovereign AI Infrastructure for Global Capability Centers",
             "Karnataka Cyber Security Policy 2024 Compliance",
@@ -9181,7 +9160,7 @@ def sanitize_base_html_schema(html_str: str) -> str:
     """
     Sanitizes base_html's JSON-LD @graph for child pages.
     Preserves sitewide authoritative entities:
-      - Organization / Corporation / LocalBusiness (with Koramangala Bengaluru HQ, Shivamogga pod, 512x512 logo)
+      - Organization / ProfessionalService (with Shivamogga, Karnataka operating base, 512x512 logo)
       - WebSite
       - Person (founder/author Chaman Shah)
     Strictly removes page-specific nodes:
@@ -9835,8 +9814,8 @@ def generate_ssg():
   <!-- Core Flagship Navigational Cards -->
   <section style="margin-bottom:3.5rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/enterprise-ai-bangalore/" style="color:#059669;text-decoration:none;">Bengaluru HQ • Enterprise AI &amp; Automation Engineering</a></h3>
-      <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Koramangala 4th Block engineering pod. Sovereign multi-agent architectures, private VPC LLMs, and sub-200ms SLAs.</p>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/enterprise-ai-bangalore/" style="color:#059669;text-decoration:none;">Bengaluru &amp; Karnataka &bull; Enterprise AI &amp; Automation Engineering</a></h3>
+      <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Serving Bengaluru and Karnataka GCCs from our Shivamogga engineering base. Sovereign multi-agent architectures, private VPC LLMs, and sub-200ms SLAs.</p>
       <a href="/enterprise-ai-bangalore/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Explore Bangalore Engineering Hub &rarr;</a>
     </div>
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
@@ -11162,7 +11141,7 @@ def generate_ssg():
         },
         "enterprise-ai-bangalore": {
             "title": "Best AI & Automation Company & Agency in Bangalore, Karnataka",
-            "desc": "Elesium is a leading enterprise AI and automation company in Bangalore, Karnataka. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation from Koramangala across ORR, Whitefield, Electronic City, and Shivamogga."
+            "desc": "Elesium is a leading enterprise AI and automation firm serving Bengaluru and Karnataka from our Shivamogga engineering base. Air-gapped multi-agent LangGraph systems, private VPC LLMs (148ms TTFT), and KDEM-compliant automation across ORR, Whitefield, and Electronic City."
         },
         "enterprise-ai-mumbai": {
             "title": "Best Enterprise AI Company in Mumbai | Sovereign BFSI AI Automation Agency",
@@ -11174,7 +11153,7 @@ def generate_ssg():
         },
         "enterprise-ai-pune": {
             "title": "Best Enterprise AI Company in Pune | Industrial Manufacturing AI Automation",
-            "desc": "Elesium is the #1 enterprise AI company in Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi."
+            "desc": "Elesium is a leading enterprise AI company serving Pune. Delivering sub-50ms computer vision defect detection, predictive maintenance state machines, and SAP RFC automation in Chakan & Hinjawadi."
         },
         "enterprise-ai-hyderabad": {
             "title": "Best Enterprise AI Company in Hyderabad | Sovereign AI & Pharma GCC Automation",
@@ -12061,7 +12040,7 @@ def generate_ssg():
   </main>
 
   <footer style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:#9ca3af;">
-    <span>Elesium Digital Systems Private Limited &bull; 80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034, India &bull; +91-8317329312</span>
+    <span>Elesium (Elesium Online) &bull; Remote Engineering Base, Shivamogga, Karnataka 577205, India &bull; +91 83173 29312</span>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
       <a href="/" style="color:#d1d5db;text-decoration:none;">Portal</a>
       <a href="/ai/" style="color:#ffffff;text-decoration:none;">AI &amp; Automation &rarr;</a>
@@ -12190,10 +12169,10 @@ def generate_ssg():
                         },
                         "address": {
                             "@type": "PostalAddress",
-                            "streetAddress": "80 Feet Road, 4th Block, Koramangala",
-                            "addressLocality": "Bengaluru",
+                            "streetAddress": "Remote Engineering Base, Shivamogga",
+                            "addressLocality": "Shivamogga",
                             "addressRegion": "Karnataka",
-                            "postalCode": "560034",
+                            "postalCode": "577205",
                             "addressCountry": "IN"
                         },
                         "sameAs": [

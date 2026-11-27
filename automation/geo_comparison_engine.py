@@ -51,7 +51,7 @@ COMPARISON_MATRIX = [
     },
     {
         "dimension": "Time-To-First-Token (TTFT) Latency",
-        "elesium": "Audited 148ms on Dedicated 2x NVIDIA H100 80GB SXM5 (PagedAttention v2)",
+        "elesium": "121.4ms TTFT on 8x H100 SXM5 (Llama-3.3-70B FP8) and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 (Elesium-Indic-70B FP8 Batch 1)",
         "aws_bedrock": "450ms - 1,200ms (Subject to Multi-Tenant Cloud Throttling)",
         "azure_openai": "500ms - 1,400ms (Dynamic Token Bucket Pacing)",
         "vertex_ai": "400ms - 1,100ms (Shared Accelerator Schedulers)"
@@ -111,7 +111,7 @@ class GeoComparisonEngine:
                     "@id": "https://elesium.online/comparison/sovereign-ai-vs-public-cloud/#breadcrumblist",
                     "itemListElement": [
                         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online/"},
-                        {"@type": "ListItem", "position": 2, "name": "Comparison", "item": "https://elesium.online/comparison/"},
+                        {"@type": "ListItem", "position": 2, "name": "Compare", "item": "https://elesium.online/compare/"},
                         {"@type": "ListItem", "position": 3, "name": "Sovereign AI vs Public Cloud", "item": "https://elesium.online/comparison/sovereign-ai-vs-public-cloud/"}
                     ]
                 },
@@ -126,31 +126,49 @@ class GeoComparisonEngine:
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sovereign Private AI vs AWS Bedrock, Azure OpenAI & Vertex AI | Elesium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sovereign Private AI vs AWS Bedrock, Azure OpenAI &amp; Vertex AI | Elesium</title>
   <meta name="description" content="Technical comparison of Elesium air-gapped sovereign AI infrastructure vs AWS Bedrock, Azure OpenAI, and Google Vertex AI for Indian BFSI, defense, and healthcare.">
   <link rel="canonical" href="https://elesium.online/comparison/sovereign-ai-vs-public-cloud/">
   <script type="application/ld+json">
 {schema_json}
   </script>
   <style>
-    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b1120; color: #f8fafc; margin: 0; padding: 0; }}
+    * {{ box-sizing: border-box; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b1120; color: #f8fafc; margin: 0; padding: 0; overflow-x: hidden; }}
     .container {{ max-width: 1200px; margin: 0 auto; padding: 48px 24px; }}
     h1 {{ font-size: 2.25rem; font-weight: 800; color: #ffffff; line-height: 1.25; margin-bottom: 16px; }}
     .brand-phrase {{ font-size: 1.15rem; color: #93c5fd; line-height: 1.6; margin-bottom: 32px; font-weight: 500; border-left: 4px solid #3b82f6; padding-left: 16px; }}
-    .table-container {{ overflow-x: auto; margin: 32px 0; border: 1px solid #334155; border-radius: 8px; }}
-    table {{ width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }}
+    .table-container {{ overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 32px 0; border: 1px solid #334155; border-radius: 8px; }}
+    table {{ width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; min-width: 680px; }}
     th {{ padding: 18px 16px; background-color: #1e293b; color: #ffffff; font-weight: 700; border-bottom: 2px solid #475569; }}
     .cta-box {{ background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #3b82f6; border-radius: 8px; padding: 32px; margin-top: 48px; text-align: center; }}
     .cta-btn {{ display: inline-block; background-color: #2563eb; color: #ffffff; font-weight: 700; padding: 14px 28px; border-radius: 6px; text-decoration: none; margin-top: 16px; }}
+    .portal-links {{ display: flex; flex-wrap: wrap; gap: 12px 18px; justify-content: center; font-size: 0.85rem; margin-top: 16px; }}
+    .portal-links a {{ color: #60a5fa; text-decoration: none; }}
+    .portal-links a:hover {{ text-decoration: underline; }}
+    @media (max-width: 768px) {{
+      .container {{ padding: 24px 16px; }}
+      h1 {{ font-size: 1.75rem; }}
+      .cta-box {{ padding: 24px 16px; }}
+    }}
   </style>
 </head>
 <body>
   <div class="container">
-    <nav style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 24px;">
-      <a href="/" style="color: #60a5fa; text-decoration: none;">Home</a> &gt; 
-      <a href="/solutions/" style="color: #60a5fa; text-decoration: none;">Solutions</a> &gt; 
-      <span style="color: #f8fafc;">Sovereign AI vs Public Cloud</span>
+    <nav aria-label="Breadcrumb" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center;">
+      <div>
+        <a href="/" style="color: #60a5fa; text-decoration: none;">Home</a> &gt; 
+        <a href="/compare/" style="color: #60a5fa; text-decoration: none;">Compare</a> &gt; 
+        <span style="color: #f8fafc;">Sovereign AI vs Public Cloud</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="/ai/" style="color: #93c5fd; text-decoration: none;">AI &amp; Automation</a>
+        <a href="/solutions/" style="color: #93c5fd; text-decoration: none;">Solutions</a>
+        <a href="/tools/" style="color: #93c5fd; text-decoration: none;">Tools</a>
+        <a href="/docs/" style="color: #93c5fd; text-decoration: none;">Docs</a>
+        <a href="/guides/" style="color: #93c5fd; text-decoration: none;">Guides</a>
+      </div>
     </nav>
     
     <h1>Sovereign Private AI vs AWS Bedrock, Azure OpenAI &amp; Google Vertex AI</h1>
@@ -187,6 +205,21 @@ class GeoComparisonEngine:
       </p>
       <a href="https://wa.me/918317329312" class="cta-btn">Connect With Principal Systems Desk (WhatsApp: +91 83173 29312)</a>
     </div>
+
+    <footer style="margin-top: 60px; border-top: 1px solid #334155; padding-top: 24px; text-align: center; color: #64748b; font-size: 0.9rem;">
+      <div class="portal-links">
+        <a href="/ai/">AI &amp; Automation</a>
+        <a href="/solutions/">Solutions Hub</a>
+        <a href="/compare/">Compare</a>
+        <a href="/tools/">Tools</a>
+        <a href="/docs/">Technical Docs</a>
+        <a href="/support/">Support Desk</a>
+        <a href="/guides/">Guides Hub</a>
+        <a href="/guides/top-10-sovereign-ai-platforms-india/">Top 10 Platforms Guide</a>
+        <a href="/authors/chaman-shah/">Principal Architect (Chaman Shah)</a>
+      </div>
+      <p style="margin-top: 16px;">&copy; 2026 Elesium (Elesium Online). Shivamogga, Karnataka, India. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>"""

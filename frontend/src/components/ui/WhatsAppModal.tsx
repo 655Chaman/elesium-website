@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { X, ShieldCheck, Terminal, ArrowRight, MessageSquare, ArrowUpRight } from 'lucide-react';
 import logo from '../../assets/LOGO_NEW.png';
@@ -25,6 +25,25 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
     const [companyError, setCompanyError] = useState(false);
     const [shakeAttempt, setShakeAttempt] = useState(0);
     const companyInputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        if (!isOpen || typeof document === 'undefined') return;
+
+        const prevOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.body.style.overflow = prevOverflow;
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isOpen, onClose]);
 
     const openWhatsAppWindow = (includeCompany: boolean) => {
         let message = `Hello Elesium Engineering Team,\n\nI am requesting a Private AI Architecture Audit for our enterprise.`;
@@ -66,15 +85,19 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
                         onClick={onClose}
+                        aria-hidden="true"
                         className="absolute inset-0 bg-black/60 dark:bg-black/80 backdrop-blur-sm"
                     />
 
                     <motion.div
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="wa-modal-title"
                         initial={{ opacity: 0, scale: 0.97 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.97 }}
                         transition={MODAL_SPRING}
-                        className="relative w-full max-w-lg bg-white dark:bg-[#0A0A0A] border border-neutral-200 dark:border-neutral-800 rounded-3xl p-6 sm:p-8 shadow-2xl z-10 text-black dark:text-white font-sans overflow-hidden transition-colors duration-200"
+                        className="relative w-full max-w-lg max-h-[90dvh] overflow-y-auto overscroll-contain bg-white dark:bg-[#0A0A0A] border border-neutral-200 dark:border-neutral-800 rounded-3xl p-6 sm:p-8 shadow-2xl z-10 text-black dark:text-white font-sans transition-colors duration-200"
                     >
                         {/* Faint static logo watermark */}
                         <div className="absolute -right-8 -top-8 pointer-events-none select-none opacity-[0.04] dark:opacity-[0.07] overflow-hidden">
@@ -97,17 +120,17 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                         </div>
 
                         {/* Modal Header */}
-                        <div className="flex justify-between items-start mb-5 relative z-10">
+                        <div className="flex justify-between items-start gap-3 mb-5 relative z-10">
                             <div className="flex items-center gap-3">
-                                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-black dark:text-white">
+                                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-black dark:text-white shrink-0">
                                     <Terminal className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-semibold tracking-tight text-black dark:text-white">
+                                    <h3 id="wa-modal-title" className="text-xl font-semibold tracking-tight text-black dark:text-white">
                                         Direct Engineering Intake
                                     </h3>
                                     <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                                        Sovereign AI Systems Architecture Desk · Koramangala, Bengaluru
+                                        Elesium Systems Architecture Desk &middot; Shivamogga, Karnataka
                                     </p>
                                 </div>
                             </div>
@@ -115,7 +138,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                 type="button"
                                 onClick={onClose}
                                 aria-label="Close modal"
-                                className="p-2 rounded-full bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors"
+                                className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors shrink-0"
                             >
                                 <X className="w-4 h-4" />
                             </button>
@@ -156,7 +179,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                                 setCompanyError(false);
                                             }
                                         }}
-                                        className={`w-full px-4 py-3 rounded-xl border bg-neutral-50 dark:bg-neutral-900 text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-colors text-sm ${
+                                        className={`w-full px-4 py-3 rounded-xl border bg-neutral-50 dark:bg-neutral-900 text-black dark:text-white placeholder-neutral-400 dark:placeholder-neutral-600 focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-colors text-base sm:text-sm ${
                                             companyError
                                                 ? 'border-black dark:border-white ring-1 ring-black dark:ring-white'
                                                 : 'border-neutral-200 dark:border-neutral-800'
@@ -181,7 +204,7 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                     id="wa-workflow-type"
                                     value={workflowType}
                                     onChange={(e) => setWorkflowType(e.target.value)}
-                                    className="w-full px-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-colors text-sm cursor-pointer"
+                                    className="w-full px-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white outline-none transition-colors text-base sm:text-sm cursor-pointer"
                                 >
                                     <option value="Enterprise Process Automation">Enterprise Process Automation (ERP / SAP S/4HANA)</option>
                                     <option value="Private VPC Multi-Agent Deployment">Private Air-Gapped VPC Multi-Agent Deployment</option>
@@ -204,14 +227,14 @@ export const WhatsAppModal = ({ isOpen, onClose }: WhatsAppModalProps) => {
                                 <button
                                     type="button"
                                     onClick={() => openWhatsAppWindow(false)}
-                                    className="hover:text-black dark:hover:text-white transition-colors underline-offset-2 hover:underline"
+                                    className="py-1.5 hover:text-black dark:hover:text-white transition-colors underline-offset-2 hover:underline"
                                 >
                                     Or launch direct chat without details
                                 </button>
                                 <Link
                                     to="/waitlist/"
                                     onClick={onClose}
-                                    className="inline-flex items-center gap-1 text-black dark:text-white hover:opacity-75 transition-opacity font-medium"
+                                    className="py-1.5 inline-flex items-center gap-1 text-black dark:text-white hover:opacity-75 transition-opacity font-medium"
                                 >
                                     <span>Join ele-in SaaS waitlist</span>
                                     <ArrowUpRight className="w-3.5 h-3.5" />

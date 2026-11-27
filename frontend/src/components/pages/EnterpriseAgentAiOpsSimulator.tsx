@@ -143,7 +143,7 @@ REMEDIATION & GOVERNANCE SAFEGUARDS:
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-white selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Agent AIOps &amp; Kubernetes Incident Remediation Simulator | Elesium</title>
         <meta
@@ -534,7 +534,7 @@ REMEDIATION & GOVERNANCE SAFEGUARDS:
               readOnly
               value={embedCode}
               rows={4}
-              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-200 focus:outline-none"
             />
             <div className="flex justify-end space-x-2">
               <button

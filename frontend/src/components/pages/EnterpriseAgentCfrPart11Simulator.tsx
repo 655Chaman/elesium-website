@@ -146,7 +146,7 @@ ARCHITECTURAL SAFEGUARDS:
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20">
       <Helmet>
         <title>CDSCO &amp; US FDA 21 CFR Part 11 eBMR Validation Simulator | Elesium</title>
         <meta
@@ -584,7 +584,7 @@ ARCHITECTURAL SAFEGUARDS:
               readOnly
               value={embedCode}
               rows={4}
-              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-xs text-neutral-200 focus:outline-none"
+              className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-base sm:text-xs text-neutral-200 focus:outline-none"
             />
 
             <div className="flex justify-end gap-3 pt-2">

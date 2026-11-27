@@ -103,6 +103,8 @@ export function Tooltip({
     const [open, setOpen] = useState(false)
     const openTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
     const isOpenRef = useRef(false)
+    const wrapperRef = useRef<HTMLSpanElement>(null)
+    const isTouchRef = useRef(false)
 
     const clearTimer = useCallback(() => {
         if (openTimerRef.current !== null) {
@@ -154,6 +156,26 @@ export function Tooltip({
     }, [clearTimer, commitOpen, ctx])
 
     useEffect(() => {
+        if (!open) return
+        const handleOutsidePointer = (e: PointerEvent) => {
+            if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+                commitClose()
+            }
+        }
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                commitClose()
+            }
+        }
+        document.addEventListener("pointerdown", handleOutsidePointer)
+        document.addEventListener("keydown", handleKeyDown)
+        return () => {
+            document.removeEventListener("pointerdown", handleOutsidePointer)
+            document.removeEventListener("keydown", handleKeyDown)
+        }
+    }, [open, commitClose])
+
+    useEffect(() => {
         return () => {
             clearTimer()
             if (isOpenRef.current) {
@@ -168,15 +190,46 @@ export function Tooltip({
         }
     }, [clearTimer, ctx])
 
+    const handlePointerEnter = useCallback((e: React.PointerEvent<HTMLSpanElement>) => {
+        isTouchRef.current = e.pointerType !== "mouse"
+    }, [])
+
+    const handlePointerDown = useCallback((e: React.PointerEvent<HTMLSpanElement>) => {
+        isTouchRef.current = e.pointerType !== "mouse"
+    }, [])
+
+    const handleMouseEnter = useCallback(() => {
+        if (isTouchRef.current) return
+        handleTriggerEnter()
+    }, [handleTriggerEnter])
+
+    const handleFocus = useCallback(() => {
+        if (isTouchRef.current) return
+        handleTriggerEnter()
+    }, [handleTriggerEnter])
+
+    const handleClick = useCallback(() => {
+        if (isOpenRef.current) {
+            commitClose()
+        } else {
+            clearTimer()
+            commitOpen()
+        }
+    }, [clearTimer, commitClose, commitOpen])
+
     const offset = sideOffsetInitial[side]
 
     return (
         <span
+            ref={wrapperRef}
             className={cn("relative inline-flex items-center", wrapperClassName)}
-            onMouseEnter={handleTriggerEnter}
+            onPointerEnter={handlePointerEnter}
+            onPointerDown={handlePointerDown}
+            onMouseEnter={handleMouseEnter}
             onMouseLeave={commitClose}
-            onFocus={handleTriggerEnter}
+            onFocus={handleFocus}
             onBlur={commitClose}
+            onClick={handleClick}
         >
             {children}
             <AnimatePresence>
@@ -188,7 +241,7 @@ export function Tooltip({
                         exit={{ opacity: 0, scale: 0.97, ...offset }}
                         transition={TOOLTIP_SPRING}
                         className={cn(
-                            "pointer-events-none absolute z-50 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-medium shadow-lg",
+                            "pointer-events-none absolute z-50 max-w-[calc(100vw-2rem)] whitespace-normal sm:whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-medium shadow-lg",
                             "bg-black text-white border border-neutral-800",
                             "dark:bg-white dark:text-black dark:border-neutral-200",
                             sidePositionClasses[side],

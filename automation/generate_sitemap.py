@@ -164,6 +164,22 @@ def generate_sitemap():
         })
     print(f"Mapped {len(docs_slugs)} Enterprise Docs pages to sitemap-core.xml.")
 
+    # Map Static GEO Portals (/support/, /guides/, /comparison/)
+    geo_portal_routes = [
+        {"path": "/support/", "priority": "0.85", "changefreq": "weekly", "file": "frontend/public/support/index.html"},
+        {"path": "/guides/", "priority": "0.85", "changefreq": "weekly", "file": "frontend/public/guides/index.html"},
+        {"path": "/guides/top-10-sovereign-ai-platforms-india/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/public/guides/top-10-sovereign-ai-platforms-india/index.html"},
+        {"path": "/comparison/sovereign-ai-vs-public-cloud/", "priority": "0.9", "changefreq": "weekly", "file": "frontend/public/comparison/sovereign-ai-vs-public-cloud/index.html"},
+    ]
+    for gp in geo_portal_routes:
+        core_urls.append({
+            "loc": f"{BASE_URL}{gp['path']}",
+            "priority": gp["priority"],
+            "changefreq": gp["changefreq"],
+            "lastmod": date_map.get(gp["file"], fallback_date)
+        })
+    print(f"Mapped {len(geo_portal_routes)} Static GEO Portals to sitemap-core.xml.")
+
     # Map 12 Canonical Facet Hubs
     try:
         from automation.faceted_navigation_engine import FACET_DEFINITIONS

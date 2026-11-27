@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import { ShieldCheck, MapPin, Github, Linkedin, Twitter, BookOpen, Layers, Terminal, Award, ChevronRight, ArrowUpRight } from 'lucide-react'
+import { ShieldCheck, MapPin, Github, Linkedin, Twitter, BookOpen, Layers, Terminal, Award, ChevronRight, ChevronDown, ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const FEATURED_ARTICLES = [
@@ -34,9 +35,25 @@ const FEATURED_ARTICLES = [
   },
 ]
 
+const authorFaqs = [
+  {
+    q: 'What is Chaman Shah’s role at Elesium?',
+    a: 'Chaman Shah is the Founder and Principal AI Systems Architect of Elesium, leading private-cloud LangGraph workflow engineering and direct B2B partner matchmaking from Shivamogga, Karnataka for Bengaluru, Indian, and global clients.',
+  },
+  {
+    q: 'Where is Elesium’s engineering desk based?',
+    a: 'Elesium operates as a remote-first sovereign AI systems engineering practice based in Shivamogga, Karnataka 577205, India, serving Bengaluru, pan-India, and global enterprise clients online.',
+  },
+  {
+    q: 'What open-source benchmarks and compliance artifacts has Chaman Shah published?',
+    a: 'Public inference telemetry on 8x NVIDIA H100 nodes (148ms TTFT, 124.5 tok/s), the DPDP_2023_Compliance_Bench harness, and Elesium-Indic-Sovereign-70B-FP8 weights are hosted in the 655Chaman/sovereign-enterprise-ai-benchmarks repository.',
+  },
+]
+
 export default function AuthorProfile() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0)
   const bioSummary =
-    'Chaman Shah is the Founder of Elesium, building private AI automation software and direct business partner pipelines from Bengaluru.'
+    'Chaman Shah is the Founder of Elesium, building private AI automation software and direct business partner pipelines from Shivamogga, Karnataka for Bengaluru and global clients.'
 
   const authorSchema = {
     '@context': 'https://schema.org',
@@ -58,7 +75,7 @@ export default function AuthorProfile() {
         sameAs: [
           'https://github.com/655Chaman',
           'https://linkedin.com/in/chaman-shah-elesium',
-          'https://x.com/chamanshah_ai',
+          'https://x.com/elesium_online',
           'https://elesium.online/portfolio/',
         ],
         description: bioSummary,
@@ -68,8 +85,7 @@ export default function AuthorProfile() {
         '@id': 'https://elesium.online/authors/chaman-shah#breadcrumb',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elesium.online/' },
-          { '@type': 'ListItem', position: 2, name: 'Leadership', item: 'https://elesium.online/team/' },
-          { '@type': 'ListItem', position: 3, name: 'Chaman Shah', item: 'https://elesium.online/authors/chaman-shah/' },
+          { '@type': 'ListItem', position: 2, name: 'Chaman Shah', item: 'https://elesium.online/authors/chaman-shah/' },
         ],
       },
       {
@@ -79,6 +95,18 @@ export default function AuthorProfile() {
         description: bioSummary,
         url: 'https://elesium.online/authors/chaman-shah/',
         mainEntity: { '@id': 'https://elesium.online/authors/chaman-shah#person' },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://elesium.online/authors/chaman-shah#faq',
+        mainEntity: authorFaqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+          },
+        })),
       },
     ],
   }
@@ -127,7 +155,7 @@ export default function AuthorProfile() {
                   <ShieldCheck className="w-3.5 h-3.5" /> Author &amp; Founder
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs font-mono text-neutral-500">
-                  <MapPin className="w-3.5 h-3.5" /> Bengaluru, India
+                  <MapPin className="w-3.5 h-3.5" /> Shivamogga, Karnataka (Serving Bengaluru &amp; Global)
                 </span>
               </div>
 
@@ -150,7 +178,7 @@ export default function AuthorProfile() {
                   <a href="https://linkedin.com/in/chaman-shah-elesium" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
                     <Linkedin className="w-4 h-4" /> LinkedIn
                   </a>
-                  <a href="https://x.com/chamanshah_ai" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+                  <a href="https://x.com/elesium_online" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
                     <Twitter className="w-4 h-4" /> X
                   </a>
                 </div>
@@ -196,7 +224,7 @@ export default function AuthorProfile() {
         </div>
 
         {/* Articles */}
-        <div>
+        <div className="mb-14">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-black dark:text-white flex items-center gap-2">
               <BookOpen className="w-5 h-5" /> Selected Writing
@@ -221,6 +249,84 @@ export default function AuthorProfile() {
             ))}
           </div>
         </div>
+
+        {/* Reproducible Open-Source Evidence */}
+        <section className="mb-14 p-6 sm:p-8 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[28px] flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-500">
+              <Terminal className="w-3.5 h-3.5" />
+              <span>Reproducible Open-Source Evidence</span>
+            </div>
+            <h2 className="text-xl font-bold text-black dark:text-white">
+              Published Benchmarks &amp; Statutory Compliance Harnesses
+            </h2>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Verify 8x H100 inference throughput, <span className="font-mono text-black dark:text-white">DPDP_2023_Compliance_Bench</span>, and <span className="font-mono text-black dark:text-white">Elesium-Indic-Sovereign-70B-FP8</span> artifacts.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-semibold hover:opacity-90 transition"
+            >
+              <span>GitHub Benchmarks</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="/docs/benchmarks/"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-neutral-200 dark:border-white/15 text-black dark:text-white text-xs font-semibold hover:bg-neutral-100 dark:hover:bg-white/10 transition"
+            >
+              <span>Docs Benchmarks</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </section>
+
+        {/* Direct-Answer Q&A */}
+        <section>
+          <h2 className="text-xl font-bold text-black dark:text-white mb-6">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-3">
+            {authorFaqs.map((faq, idx) => {
+              const isOpen = openFaq === idx
+              return (
+                <div
+                  key={faq.q}
+                  className="border border-neutral-200 dark:border-white/10 rounded-[24px] overflow-hidden bg-neutral-50 dark:bg-neutral-950"
+                >
+                  <h3 className="m-0">
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={`author-faq-panel-${idx}`}
+                      onClick={() => setOpenFaq(isOpen ? null : idx)}
+                      className="w-full min-h-[44px] flex items-center justify-between gap-4 p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03] transition-colors"
+                    >
+                      <span>{faq.q}</span>
+                      <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                  </h3>
+                  <div
+                    id={`author-faq-panel-${idx}`}
+                    aria-hidden={!isOpen}
+                    className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                      isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="px-5 pb-5 pt-3 border-t border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        {faq.a}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </section>
       </div>
     </motion.main>
   )

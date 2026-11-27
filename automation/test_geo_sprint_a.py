@@ -34,8 +34,10 @@ class TestGeoSprintA:
             assert path.exists()
             content = path.read_text(encoding="utf-8")
             assert "FOR IMMEDIATE RELEASE" in content
-            assert "BENGALURU, KARNATAKA, INDIA" in content
-            assert "About Elesium Digital Systems Private Limited" in content
+            assert "SHIVAMOGGA, KARNATAKA, INDIA" in content
+            assert "About Elesium (Elesium Online)" in content
+            assert "Private Limited" not in content
+            assert "Koramangala" not in content
             assert "Chaman Shah" in content
             assert "—" not in content, f"Em dash found in {p}"
 

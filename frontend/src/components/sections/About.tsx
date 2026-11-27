@@ -21,10 +21,10 @@ export default function About() {
                     transition={{ type: 'spring', stiffness: 260, damping: 28 }}
                     className="text-center mb-16 md:mb-20"
                 >
-                    <h2 className="display-lg mb-6 text-black dark:text-white">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6 text-black dark:text-white">
                         Who We Are
                     </h2>
-                    <p className="body-lg text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto mb-4">
+                    <p className="text-base sm:text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto mb-4">
                         Elesium is an India-based AI engineering firm focused exclusively on enterprise architecture. Founded by engineers who spent the last decade architecting high-frequency data pipelines and scaling B2B revenue operations, we build deterministic, multi-agent systems that integrate deeply with legacy Indian enterprise stacks.
                     </p>
                     <p className="text-lg font-medium text-black dark:text-white max-w-3xl mx-auto">

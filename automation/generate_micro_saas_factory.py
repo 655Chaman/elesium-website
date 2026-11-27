@@ -343,10 +343,10 @@ def generate_schema_json(tool: Dict[str, Any]) -> str:
                 ]
             },
             {
-                "@type": ["Organization", "Corporation"],
+                "@type": ["Organization", "ProfessionalService"],
                 "@id": "https://elesium.online/#organization",
-                "name": "Elesium - Enterprise AI & Automation",
-                "legalName": "Elesium Digital Systems Private Limited",
+                "name": "Elesium",
+                "legalName": "Elesium Online",
                 "url": "https://elesium.online",
                 "logo": {
                     "@type": "ImageObject",
@@ -355,20 +355,20 @@ def generate_schema_json(tool: Dict[str, Any]) -> str:
                     "width": "512",
                     "height": "512"
                 },
-                "telephone": "+91-8317329312",
+                "telephone": "+91 83173 29312",
                 "email": "contact@elesium.online",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "80 Feet Road, 4th Block, Koramangala",
-                    "addressLocality": "Bengaluru",
+                    "streetAddress": "Remote Engineering Base, Shivamogga",
+                    "addressLocality": "Shivamogga",
                     "addressRegion": "Karnataka",
-                    "postalCode": "560034",
+                    "postalCode": "577205",
                     "addressCountry": "IN"
                 },
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 12.9352,
-                    "longitude": 77.6245
+                    "latitude": 13.9299,
+                    "longitude": 75.5681
                 }
             },
             {

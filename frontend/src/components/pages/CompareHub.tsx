@@ -1,12 +1,13 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
     ArrowRight,
+    ArrowUpRight,
     ChevronRight,
     ChevronDown,
-    Gauge
+    Gauge,
+    Terminal
 } from 'lucide-react'
 import { compareData, CompareBattlecardItem } from '../../data/compareData'
 
@@ -69,9 +70,10 @@ export default function CompareHub() {
                     'description': item.metaDescription,
                     'author': {
                         '@type': 'Person',
-                        '@id': 'https://elesium.online/authors/chaman-shah/#person',
+                        '@id': 'https://elesium.online/authors/chaman-shah#person',
                         'name': 'Chaman Shah',
-                        'jobTitle': 'Principal AI Systems Architect'
+                        'jobTitle': 'Principal AI Systems Architect',
+                        'url': 'https://elesium.online/authors/chaman-shah/'
                     }
                 }))
             },
@@ -136,7 +138,7 @@ export default function CompareHub() {
                 <meta property="og:url" content="https://elesium.online/compare/" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:site" content="@elesium_online" />
                 <meta name="twitter:title" content="Enterprise AI Comparisons &amp; Battlecards | Elesium" />
                 <meta name="twitter:description" content="Objective evaluations of multi-agent frameworks, sovereign inference clusters, deterministic state machines, and enterprise automation delivery models." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
@@ -214,6 +216,53 @@ export default function CompareHub() {
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+
+                    <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                        <span className="text-xs text-neutral-400">
+                            Technical TCO &amp; compliance matrix comparing air-gapped VPCs against public cloud endpoints:
+                        </span>
+                        <a
+                            href="/comparison/sovereign-ai-vs-public-cloud/"
+                            className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-white hover:underline"
+                        >
+                            <span>Sovereign AI vs Public Cloud Guide</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                    </div>
+                </section>
+
+                {/* Reproducible Open-Source Evidence */}
+                <section className="mb-12 p-6 sm:p-8 rounded-[28px] bg-neutral-950 border border-white/10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div className="space-y-2 max-w-2xl">
+                        <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-neutral-400">
+                            <Terminal className="w-3.5 h-3.5" />
+                            <span>Reproducible Open-Source Evidence</span>
+                        </div>
+                        <h2 className="text-xl font-bold text-white">
+                            Verify All Latency, Memory &amp; DPDP Claims Directly
+                        </h2>
+                        <p className="text-sm text-neutral-300 leading-relaxed">
+                            Inspect raw 8x H100 vLLM telemetry, <span className="font-mono text-white">DPDP_2023_Compliance_Bench</span>, and <span className="font-mono text-white">Elesium-Indic-Sovereign-70B-FP8</span> reproducible runs.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-3 shrink-0">
+                        <a
+                            href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white text-black text-xs font-semibold hover:bg-neutral-200 transition"
+                        >
+                            <span>GitHub Benchmark Suite</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                        <a
+                            href="/docs/benchmarks/"
+                            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-white/15 text-white text-xs font-semibold hover:bg-white/10 transition"
+                        >
+                            <span>Docs Benchmarks</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
                     </div>
                 </section>
 
@@ -333,40 +382,45 @@ export default function CompareHub() {
                     </div>
 
                     <div className="space-y-4">
-                        {compareFaqs.map((faq, idx) => (
-                            <div
-                                key={idx}
-                                className="border border-white/10 rounded-[24px] bg-neutral-950 overflow-hidden transition-colors"
-                            >
-                                <button
-                                    type="button"
-                                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm md:text-base text-white transition-colors"
+                        {compareFaqs.map((faq, idx) => {
+                            const isOpen = openFaq === idx
+                            return (
+                                <div
+                                    key={idx}
+                                    className="border border-white/10 rounded-[24px] bg-neutral-950 overflow-hidden transition-colors"
                                 >
-                                    <span>{faq.q}</span>
-                                    <ChevronDown
-                                        className={`w-4 h-4 text-neutral-400 transition-transform duration-300 shrink-0 ${
-                                            openFaq === idx ? 'rotate-180 text-white' : ''
-                                        }`}
-                                    />
-                                </button>
-                                <AnimatePresence initial={false}>
-                                    {openFaq === idx && (
-                                        <motion.div
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: 'auto', opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                            className="accordion-panel overflow-hidden"
+                                    <h3 className="m-0">
+                                        <button
+                                            type="button"
+                                            aria-expanded={isOpen}
+                                            aria-controls={`compare-hub-faq-panel-${idx}`}
+                                            onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                            className="w-full min-h-[44px] p-5 text-left flex items-center justify-between gap-4 font-semibold text-sm md:text-base text-white transition-colors"
                                         >
+                                            <span>{faq.q}</span>
+                                            <ChevronDown
+                                                className={`w-4 h-4 text-neutral-400 transition-transform duration-300 shrink-0 ${
+                                                    isOpen ? 'rotate-180 text-white' : ''
+                                                }`}
+                                            />
+                                        </button>
+                                    </h3>
+                                    <div
+                                        id={`compare-hub-faq-panel-${idx}`}
+                                        aria-hidden={!isOpen}
+                                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                        }`}
+                                    >
+                                        <div className="overflow-hidden">
                                             <div className="px-5 pb-5 text-xs md:text-sm text-neutral-300 leading-relaxed border-t border-white/10 pt-3">
                                                 {faq.a}
                                             </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </section>
             </div>

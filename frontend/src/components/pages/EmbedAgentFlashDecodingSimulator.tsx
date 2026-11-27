@@ -115,7 +115,7 @@ export default function EmbedAgentFlashDecodingSimulator() {
         <div className="grid grid-cols-2 gap-2">
           <div>
             <span className="text-neutral-400 block mb-1">GPU NODES</span>
-            <div className="grid grid-cols-4 gap-1">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1">
               {[1, 2, 4, 8].map((g) => (
                 <button
                   key={g}
@@ -134,7 +134,7 @@ export default function EmbedAgentFlashDecodingSimulator() {
 
           <div>
             <span className="text-neutral-400 block mb-1">KV CHUNK</span>
-            <div className="grid grid-cols-4 gap-1">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1">
               {[128, 256, 512, 1024].map((c) => (
                 <button
                   key={c}

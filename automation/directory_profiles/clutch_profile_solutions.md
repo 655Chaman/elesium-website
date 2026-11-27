@@ -8,22 +8,23 @@
 
 ## 1. Statutory NAP & Company Details
 - **Company Display Name:** Elesium
-- **Legal Entity Name:** Elesium Online
+- **Organization / Alternate Name:** Elesium (Elesium Online)
 - **Primary Website:** https://elesium.online
 - **Central Solutions Hub:** https://elesium.online/solutions
-- **Physical Headquarters:** Main Road, Shivamogga, Karnataka 577205, India
-- **Direct Phone:** +91-8317329312
+- **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India
+- **Secondary Engineering Pod (Supporting R&D):** Main Road, Shivamogga, Karnataka 577205, India
+- **Direct Phone:** +91 83173 29312
 - **Corporate Email:** contact@elesium.online
 - **Founder & Lead Architect:** Chaman Shah (Principal AI Systems Architect)
-- **Year Founded:** 2024
+- **Founded:** 2024-03-15
 - **Company Size:** 10-49
 - **Average Hourly Rate:** $25 - $49 / hr
-- **Minimum Project Size:** $10,000+
+- **Minimum Project Size:** ₹1,50,000 ($2,000)
 
 ---
 
 ## 2. Authoritative Company Description
-India's premier enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days.
+Indian enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days.
 
 Elesium eliminates fragile low-code automation (Zapier, Make) and unreliable public cloud chatbots. We deploy fault-tolerant Python LangGraph state machines directly into client-isolated private VPC environments (AWS Mumbai, Azure India, or on-premise infrastructure). Our architectures guarantee zero data retention under India's Digital Personal Data Protection (DPDP) Act 2023.
 

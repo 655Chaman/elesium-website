@@ -1,7 +1,7 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, CheckCircle2, Calculator, MessageSquare, Calendar, ChevronRight, ChevronDown } from 'lucide-react'
+import { Terminal, Shield, Network, Zap, Code2, Lock, ArrowRight, ArrowUpRight, CheckCircle2, Calculator, MessageSquare, Calendar, ChevronRight, ChevronDown } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useWhatsApp } from '../../hooks/useWhatsApp'
 
@@ -49,9 +49,9 @@ const agentWorkflows = {
             "> Scanning 4,203 open pipeline accounts across Salesforce & HubSpot...",
             "[OK] CRM authenticated. Ingesting Q3 corporate earnings signals...",
             "> Identified 14 Tier-1 accounts showing active AI modernization intent.",
-            "> Synthesizing bespoke 1-pager technical blueprints per account...",
+            "> Synthesizing dedicated 1-pager technical blueprints per account...",
             "> Simulating CXO engagement probability: 89.4% confidence.",
-            "[SUCCESS] 14 tailored briefs dispatched to Enterprise AE queue.",
+            "[SUCCESS] 14 custom-configured briefs dispatched to Enterprise AE queue.",
             "[COMPLETE] Operation completed in 2.4s. Human hours saved: 18h."
         ]
     }
@@ -278,8 +278,8 @@ const enterprisePricingTiers: PricingTier[] = [
 
 const faqs = [
     {
-        question: "What is a leading AI automation agency in India?",
-        answer: "If you need basic Zapier workflows, hire a freelancer. If you require deterministic, autonomous multi-agent infrastructure that connects directly to SAP S/4HANA via SAP RFC connectors, reconciles 1,420+ ledger items in 1.9s, and complies with DPDP Act 2023 and ISO 27001, Elesium is India's leading AI automation agency. We engineer production Python LangGraph state machines delivering verified 3.5x ROI within 90 days."
+        question: "What differentiates Elesium from generic AI automation agencies in India?",
+        answer: "If you need basic Zapier workflows, hire a freelancer. If you require deterministic, autonomous multi-agent infrastructure that connects directly to SAP S/4HANA via SAP RFC connectors, reconciles 1,420+ ledger items in 1.9s, and complies with DPDP Act 2023 and ISO 27001, Elesium engineers production Python LangGraph state machines inside private VPCs delivering verified 3.5x ROI within 90 days."
     },
     {
         question: "How much does AI automation cost in India?",
@@ -317,7 +317,7 @@ export default function AIAutomationIndia() {
             : 'Tier 3: Autonomous AI Engineering Pod (₹4.5L/mo Retainer)';
 
     const handleTransmitIntake = () => {
-        const text = `Hello Elesium Architecture Team,\n\nI completed the Enterprise AI Architecture Intake on elesium.online:\n• Workflow Focus: ${intakeWorkflow}\n• Core ERP/Stack: ${intakeErp}\n• Current Manual Load: ${intakeHours} hours/week\n• Security Constraint: ${intakeSecurity}\n• Projected Annual Hours Saved: ${calculatedAnnualHoursSaved.toLocaleString('en-IN')} hrs\n• Projected Annual Cost Savings: ₹${calculatedAnnualCostSavings.toLocaleString('en-IN')}\n• Recommended Tier: ${recommendedSprint}\n\nPlease share the bespoke technical feasibility blueprint and proof-of-concept timeline.`;
+        const text = `Hello Elesium Architecture Team,\n\nI completed the Enterprise AI Architecture Intake on elesium.online:\n• Workflow Focus: ${intakeWorkflow}\n• Core ERP/Stack: ${intakeErp}\n• Current Manual Load: ${intakeHours} hours/week\n• Security Constraint: ${intakeSecurity}\n• Projected Annual Hours Saved: ${calculatedAnnualHoursSaved.toLocaleString('en-IN')} hrs\n• Projected Annual Cost Savings: ₹${calculatedAnnualCostSavings.toLocaleString('en-IN')}\n• Recommended Tier: ${recommendedSprint}\n\nPlease share the dedicated technical feasibility blueprint and proof-of-concept timeline.`;
         const encoded = encodeURIComponent(text);
         window.open(`https://wa.me/918317329312?text=${encoded}`, '_blank', 'noopener,noreferrer');
     };
@@ -326,6 +326,52 @@ export default function AIAutomationIndia() {
         const text = `Hello Elesium Engineering Team,\n\nI want to initiate the ${tierName} (${budget}) for our enterprise.\n\nPlease share your architecture roadmap and onboarding availability.`;
         const encoded = encodeURIComponent(text);
         window.open(`https://wa.me/918317329312?text=${encoded}`, '_blank', 'noopener,noreferrer');
+    };
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Service",
+                "@id": "https://elesium.online/ai-automation-agency-india/#service",
+                "name": "Enterprise AI & Automation Engineering in India",
+                "serviceType": "Sovereign Enterprise AI Automation & LangGraph Engineering",
+                "url": "https://elesium.online/ai-automation-agency-india/",
+                "description": "Enterprise AI automation engineering in India. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and contractual 90-day ROI.",
+                "provider": {
+                    "@id": "https://elesium.online/#organization"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "India"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Enterprise AI Automation Engineering Tiers",
+                    "itemListElement": enterprisePricingTiers.map((t) => t.schemaOffer)
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://elesium.online/ai-automation-agency-india/#breadcrumb",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online/" },
+                    { "@type": "ListItem", "position": 2, "name": "Enterprise AI Engineering India", "item": "https://elesium.online/ai-automation-agency-india/" }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://elesium.online/ai-automation-agency-india/#faq",
+                "mainEntity": faqs.map((faq) => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            }
+        ]
     };
 
     return (
@@ -340,14 +386,15 @@ export default function AIAutomationIndia() {
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta property="og:url" content="https://elesium.online/ai-automation-agency-india/" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:site" content="@elesium_online" />
                 <meta name="twitter:title" content="Enterprise AI &amp; Automation Engineering in India | Elesium" />
                 <meta name="twitter:description" content="Enterprise AI automation engineering in India. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and contractual enterprise 90-day ROI." />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
+                <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
             <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
-                {/* Breadcrumb Navigation */}
+                {/* Breadcrumbs */}
                 <nav className="flex items-center gap-2 text-xs font-mono text-neutral-600 dark:text-neutral-400 mb-8" aria-label="Breadcrumb">
                     <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">Home</Link>
                     <ChevronRight className="w-3.5 h-3.5 text-neutral-400" />
@@ -778,7 +825,7 @@ export default function AIAutomationIndia() {
                             </div>
                             <h3 className="text-xl font-bold text-black dark:text-white mb-2">90-Day ROI Mandate</h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                                Measured against contractual cash-flow hurdles (hours saved + error reductions). Full professional fee rebate if targets are unmet.
+                                Measured against contractual cash-flow targets (hours saved + error reductions). Full professional fee rebate if targets are unmet.
                             </p>
                         </div>
                         <div className="p-6 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 hover:border-black dark:hover:border-white/30 transition-all h-full">
@@ -956,7 +1003,7 @@ export default function AIAutomationIndia() {
                                         'Autonomous Support & Case Resolution',
                                         'Cross-System ERP-CRM Synchronization',
                                         'Regulatory Compliance & Audit Trails',
-                                        'Bespoke Multi-Agent Operational Pod'
+                                        'Dedicated Multi-Agent Operational Pod'
                                     ].map((opt) => (
                                         <button
                                             key={opt}
@@ -1114,6 +1161,40 @@ export default function AIAutomationIndia() {
                     </div>
                 </div>
 
+                {/* Reproducible Open-Source Evidence */}
+                <div className="mb-14 md:mb-16 p-6 sm:p-8 rounded-[28px] bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div className="space-y-2 max-w-2xl">
+                        <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-600 dark:text-neutral-400">
+                            <Terminal className="w-3.5 h-3.5" />
+                            <span>Reproducible Open-Source Evidence</span>
+                        </div>
+                        <h2 className="text-xl sm:text-2xl font-medium text-black dark:text-white">
+                            Public Benchmarks, Compliance Suite &amp; Indic Model Weights
+                        </h2>
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            Audit our reproducible H100 inference sweeps, <span className="font-mono text-black dark:text-white">DPDP_2023_Compliance_Bench</span> verification harness, and <span className="font-mono text-black dark:text-white">Elesium-Indic-Sovereign-70B-FP8</span> telemetry.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-3 shrink-0">
+                        <a
+                            href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-semibold hover:opacity-90 transition"
+                        >
+                            <span>GitHub Benchmark Repo</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                        <a
+                            href="/docs/benchmarks/"
+                            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-neutral-200 dark:border-white/15 text-black dark:text-white text-xs font-semibold hover:bg-neutral-100 dark:hover:bg-white/10 transition"
+                        >
+                            <span>Benchmarks Docs</span>
+                            <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                    </div>
+                </div>
+
                 {/* FAQ Section */}
                 <div className="mb-14 md:mb-16 max-w-3xl mx-auto">
                     <div className="text-center mb-12">
@@ -1129,30 +1210,31 @@ export default function AIAutomationIndia() {
                             const isOpen = openFaqIndex === i;
                             return (
                                 <div key={i} className="bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden">
-                                    <button
-                                        type="button"
-                                        onClick={() => setOpenFaqIndex(isOpen ? null : i)}
-                                        className="w-full p-6 text-left flex items-center justify-between gap-4 font-medium text-lg md:text-xl text-black dark:text-white hover:opacity-80 transition-opacity"
+                                    <h3 className="m-0">
+                                        <button
+                                            type="button"
+                                            aria-expanded={isOpen}
+                                            aria-controls={`india-faq-panel-${i}`}
+                                            onClick={() => setOpenFaqIndex(isOpen ? null : i)}
+                                            className="w-full min-h-[44px] p-6 text-left flex items-center justify-between gap-4 font-medium text-lg md:text-xl text-black dark:text-white hover:opacity-80 transition-opacity"
+                                        >
+                                            <span>{faq.question}</span>
+                                            <ChevronDown className={`w-5 h-5 shrink-0 text-neutral-500 transition-transform duration-200 ${isOpen ? 'rotate-180 text-black dark:text-white' : ''}`} />
+                                        </button>
+                                    </h3>
+                                    <div
+                                        id={`india-faq-panel-${i}`}
+                                        aria-hidden={!isOpen}
+                                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                        }`}
                                     >
-                                        <span>{faq.question}</span>
-                                        <ChevronDown className={`w-5 h-5 shrink-0 text-neutral-500 transition-transform duration-200 ${isOpen ? 'rotate-180 text-black dark:text-white' : ''}`} />
-                                    </button>
-                                    <AnimatePresence initial={false}>
-                                        {isOpen && (
-                                            <motion.div
-                                                data-open="true"
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-                                                className="accordion-panel overflow-hidden"
-                                            >
-                                                <div className="px-6 pb-6 pt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10">
-                                                    {faq.answer}
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
+                                        <div className="overflow-hidden">
+                                            <div className="px-6 pb-6 pt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10">
+                                                {faq.answer}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             );
                         })}

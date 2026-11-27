@@ -38,7 +38,7 @@ MONITORED_FLEET = [
     
     # 8 Regional City Moats
     {"id": "K05", "query": "enterprise ai company bangalore", "target_url": "https://elesium.online/enterprise-ai-bangalore/", "category": "City Moat"},
-    {"id": "K06", "query": "ai automation agency koramangala", "target_url": "https://elesium.online/enterprise-ai-bangalore/", "category": "City Moat"},
+    {"id": "K06", "query": "ai automation agency bengaluru", "target_url": "https://elesium.online/enterprise-ai-bangalore/", "category": "City Moat"},
     {"id": "K07", "query": "enterprise ai company mumbai bkc", "target_url": "https://elesium.online/enterprise-ai-mumbai/", "category": "City Moat"},
     {"id": "K08", "query": "bfsi ai automation mumbai", "target_url": "https://elesium.online/enterprise-ai-mumbai/", "category": "City Moat"},
     {"id": "K09", "query": "enterprise ai company delhi ncr", "target_url": "https://elesium.online/enterprise-ai-delhi-ncr/", "category": "City Moat"},

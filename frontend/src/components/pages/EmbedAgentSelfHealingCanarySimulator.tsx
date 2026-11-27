@@ -38,7 +38,7 @@ export default function EmbedAgentSelfHealingCanarySimulator() {
   }, [inputs]);
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 p-4 sm:p-6 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 p-4 sm:p-6 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Agent Self-Healing Pipeline &amp; Regression Canary Simulator Sandbox</title>
         <meta

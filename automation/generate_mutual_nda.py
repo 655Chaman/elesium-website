@@ -8,7 +8,7 @@ Governing Law: Indian Contract Act, 1872 (Exclusive Jurisdiction of Bengaluru)
 Statutory Data Protection: Digital Personal Data Protection (DPDP) Act, 2023 Section 8(5)
 Purpose:
   Provides instant client-side and server-side executable Mutual Non-Disclosure
-  Agreements pre-filled with client legal entity details and Elesium Digital Systems Private Limited.
+  Agreements pre-filled with client legal entity details and Elesium (Elesium Online).
 ================================================================================
 """
 
@@ -30,7 +30,7 @@ NDA_TEMPLATE = """# MUTUAL NON-DISCLOSURE AGREEMENT (NDA)
 
 ### PARTIES:
 
-1. **ELESIUM DIGITAL SYSTEMS PRIVATE LIMITED**, a private company incorporated under the Companies Act, 2013, having its corporate engineering headquarters at Koramangala 4th Block, Bengaluru, Karnataka 560034, India (hereinafter referred to as "**Elesium**", which expression shall include its successors and permitted assigns); and
+1. **ELESIUM (ELESIUM ONLINE)**, an enterprise AI engineering practice operating from Shivamogga, Karnataka 577205, India (hereinafter referred to as "**Elesium**", which expression shall include its successors and permitted assigns); and
 
 2. **{client_company_name}**, a corporate entity having its principal office at {client_address} (hereinafter referred to as the "**Company**", which expression shall include its successors and permitted assigns).
 
@@ -66,7 +66,7 @@ This Agreement is governed by the laws of India. Any dispute arising out of or i
 
 ### IN WITNESS WHEREOF, the Parties have executed this Mutual Non-Disclosure Agreement:
 
-**For ELESIUM DIGITAL SYSTEMS PRIVATE LIMITED**:  
+**For Elesium (Elesium Online)**:  
 Signature: *Chaman Shah*  
 Name: Chaman Shah  
 Title: Founder & Principal Systems Architect  

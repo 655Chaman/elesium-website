@@ -36,29 +36,31 @@ def build_semantic_triples():
 @prefix wd: <http://www.wikidata.org/entity/> .
 
 <https://elesium.online/#organization>
-    rdf:type schema:Organization, schema:Corporation ;
-    rdfs:label "Elesium Digital Systems Private Limited" ;
-    schema:legalName "Elesium Digital Systems Private Limited" ;
-    schema:alternateName "Elesium", "Elesium Sovereign AI" ;
+    rdf:type schema:Organization, schema:ProfessionalService ;
+    rdfs:label "Elesium" ;
+    schema:legalName "Elesium Online" ;
+    schema:alternateName "Elesium Online", "Elesium Sovereign AI" ;
     schema:url <https://elesium.online> ;
-    schema:logo <https://elesium.online/chaman-shah.png> ;
-    schema:description "Indian sovereign artificial intelligence infrastructure engineering firm specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines." ;
-    schema:foundingDate "2026-01-01"^^xsd:date ;
+    schema:logo <https://elesium.online/assets/logo-square.png> ;
+    schema:telephone "+91 83173 29312" ;
+    schema:email "contact@elesium.online" ;
+    schema:description "Indian sovereign artificial intelligence infrastructure engineering firm operating remotely from Shivamogga, Karnataka, specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines." ;
+    schema:foundingDate "2024-03-15"^^xsd:date ;
     schema:founder <https://elesium.online/authors/chaman-shah#person> ;
     schema:address [
         rdf:type schema:PostalAddress ;
-        schema:streetAddress "Koramangala 4th Block, 80 Feet Road" ;
-        schema:addressLocality "Bengaluru" ;
+        schema:streetAddress "Remote Engineering Base, Shivamogga" ;
+        schema:addressLocality "Shivamogga" ;
         schema:addressRegion "Karnataka" ;
-        schema:postalCode "560034" ;
-        schema:addressCountry "India"
+        schema:postalCode "577205" ;
+        schema:addressCountry "IN"
     ] ;
     schema:geo [
         rdf:type schema:GeoCoordinates ;
-        schema:latitude "12.9352"^^xsd:float ;
-        schema:longitude "77.6245"^^xsd:float
+        schema:latitude "13.9299"^^xsd:float ;
+        schema:longitude "75.5681"^^xsd:float
     ] ;
-    schema:areaServed "India", "Global" ;
+    schema:areaServed "Bengaluru", "Karnataka", "India", "Global" ;
     schema:knowsAbout
         "Sovereign Artificial Intelligence Infrastructure",
         "Air-Gapped Large Language Model Serving",
@@ -85,10 +87,12 @@ def build_semantic_triples():
 
     # 2. N-Triples (.nt)
     ntriples_content = """<https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-<https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Corporation> .
-<https://elesium.online/#organization> <http://www.w3.org/2000/01/rdf-schema#label> "Elesium Digital Systems Private Limited" .
-<https://elesium.online/#organization> <http://schema.org/legalName> "Elesium Digital Systems Private Limited" .
+<https://elesium.online/#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProfessionalService> .
+<https://elesium.online/#organization> <http://www.w3.org/2000/01/rdf-schema#label> "Elesium" .
+<https://elesium.online/#organization> <http://schema.org/legalName> "Elesium Online" .
 <https://elesium.online/#organization> <http://schema.org/url> <https://elesium.online> .
+<https://elesium.online/#organization> <http://schema.org/areaServed> "Bengaluru" .
+<https://elesium.online/#organization> <http://schema.org/areaServed> "Karnataka" .
 <https://elesium.online/#organization> <http://schema.org/areaServed> "India" .
 <https://elesium.online/#organization> <http://schema.org/knowsAbout> "Sovereign Artificial Intelligence Infrastructure" .
 <https://elesium.online/#organization> <http://schema.org/knowsAbout> "DPDP Act 2023 Section 8(5) Memory Zeroization" .
@@ -109,14 +113,30 @@ def build_semantic_triples():
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": ["Organization", "Corporation"],
+                "@type": ["Organization", "ProfessionalService"],
                 "@id": "https://elesium.online/#organization",
-                "name": "Elesium Digital Systems Private Limited",
-                "alternateName": ["Elesium", "Elesium Sovereign AI"],
+                "name": "Elesium",
+                "legalName": "Elesium Online",
+                "alternateName": ["Elesium Online", "Elesium Sovereign AI"],
                 "url": "https://elesium.online",
-                "logo": "https://elesium.online/chaman-shah.png",
-                "description": "Indian sovereign artificial intelligence infrastructure engineering firm specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines.",
-                "areaServed": ["India", "Global"],
+                "logo": "https://elesium.online/assets/logo-square.png",
+                "telephone": "+91 83173 29312",
+                "email": "contact@elesium.online",
+                "description": "Indian sovereign artificial intelligence infrastructure engineering firm operating remotely from Shivamogga, Karnataka, specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Remote Engineering Base, Shivamogga",
+                    "addressLocality": "Shivamogga",
+                    "addressRegion": "Karnataka",
+                    "postalCode": "577205",
+                    "addressCountry": "IN"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 13.9299,
+                    "longitude": 75.5681
+                },
+                "areaServed": ["Bengaluru", "Karnataka", "India", "Global"],
                 "knowsAbout": [
                     "Sovereign Artificial Intelligence Infrastructure",
                     "Air-Gapped Large Language Model Serving",

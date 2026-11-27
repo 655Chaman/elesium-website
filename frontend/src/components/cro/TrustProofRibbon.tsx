@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, Lock, CheckCircle2, X } from 'lucide-react';
 
@@ -83,6 +83,25 @@ const ATTESTATIONS: AttestationSeal[] = [
 export function TrustProofRibbon() {
   const [selectedSeal, setSelectedSeal] = useState<AttestationSeal | null>(null);
 
+  useEffect(() => {
+    if (!selectedSeal || typeof document === 'undefined') return;
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedSeal(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedSeal]);
+
   return (
     <>
       <div className="w-full py-4 px-5 sm:px-6 rounded-[24px] bg-neutral-950 border border-white/10">
@@ -126,28 +145,34 @@ export function TrustProofRibbon() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedSeal(null)}
+              aria-hidden="true"
               className="absolute inset-0"
             />
             <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="trust-seal-modal-title"
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
               transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-              className="relative w-full max-w-lg bg-neutral-950 border border-white/15 rounded-[28px] p-6 sm:p-8 shadow-2xl z-10 text-white font-sans space-y-5"
+              className="relative w-full max-w-lg max-h-[90dvh] overflow-y-auto overscroll-contain bg-neutral-950 border border-white/15 rounded-[28px] p-6 sm:p-8 shadow-2xl z-10 text-white font-sans space-y-5"
             >
-              <div className="flex justify-between items-start">
+              <div className="flex justify-between items-start gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-white/5 border border-white/10 text-white">
+                  <div className="p-2.5 rounded-2xl bg-white/5 border border-white/10 text-white shrink-0">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-white tracking-tight">{selectedSeal.fullName}</h4>
+                    <h4 id="trust-seal-modal-title" className="text-lg font-bold text-white tracking-tight">{selectedSeal.fullName}</h4>
                     <p className="text-xs text-neutral-400 font-mono">{selectedSeal.authority}</p>
                   </div>
                 </div>
                 <button
+                  type="button"
                   onClick={() => setSelectedSeal(null)}
-                  className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97] transition-all"
+                  aria-label="Close verification modal"
+                  className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white active:scale-[0.97] transition-all shrink-0"
                 >
                   <X className="w-4 h-4" />
                 </button>

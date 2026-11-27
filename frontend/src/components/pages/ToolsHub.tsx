@@ -329,14 +329,14 @@ export default function ToolsHub() {
                         </div>
 
                         {/* Search Input */}
-                        <div className="relative min-w-[240px]">
+                        <div className="relative w-full md:w-auto md:min-w-[240px]">
                             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-500" />
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={e => setSearchQuery(e.target.value)}
                                 placeholder="Search simulators..."
-                                className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full pl-10 pr-4 py-2 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white transition-colors"
+                                className="w-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full pl-10 pr-4 py-2.5 sm:py-2 text-base sm:text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white transition-colors"
                             />
                         </div>
                     </div>

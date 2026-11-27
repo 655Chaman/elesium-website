@@ -184,7 +184,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-white selection:bg-white/20 selection:text-white">
+      <div className="min-h-[100dvh] bg-black text-white selection:bg-white/20 selection:text-white">
         {/* Navigation Breadcrumb */}
         <div className="border-b border-neutral-800/80 bg-neutral-900/40 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between text-xs sm:text-sm">
@@ -657,7 +657,7 @@ Audit performed via https://elesium.online/tools/enterprise-structured-output-la
                   readOnly
                   value={embedCodeSnippet}
                   rows={4}
-                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none resize-none"
+                  className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-300 focus:outline-none resize-none"
                 />
                 <button
                   onClick={copyEmbedCode}

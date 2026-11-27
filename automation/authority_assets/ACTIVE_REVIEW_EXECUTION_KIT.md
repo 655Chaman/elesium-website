@@ -1,8 +1,8 @@
 # Active Review Execution Kit: Authority Stacking & Verification Operations
 
 > **Document Status:** Active Commercial Operations & Directory Unblocking Kit  
-> **Vendor:** Elesium Online (`https://elesium.online`)  
-> **Corporate Identity:** Chaman Shah - Principal AI Systems Architect (`contact@elesium.online` / `chamansyed655@gmail.com`)  
+> **Vendor:** Elesium (`Elesium` (`Elesium Online`), `https://elesium.online`)  
+> **Corporate Identity:** Chaman Shah - Principal AI Systems Architect (`contact@elesium.online`)  
 > **Target Platforms:** GoodFirms, Clutch.co, Trustpilot, G2  
 > **Framework:** Michael Merlino Entity Corroboration & Edward Sturm Authority Stacking Protocols  
 > **Generated:** October 2026  
@@ -20,7 +20,7 @@ This kit provides the tactical, copy-paste operational action pack to unlock, ve
 │ Platform              │ Domain DR  │ Verification Mechanism      │ Target Impact            │
 ├───────────────────────┼────────────┼─────────────────────────────┼──────────────────────────┤
 │ GoodFirms             │ DR 86      │ Formal Human Appeal + PCE   │ Top AI Agency Ranking    │
-│ Clutch.co             │ DR 92      │ 15-Min Analyst Phone Call   │ Leaders Matrix #1 Tier   │
+│ Clutch.co             │ DR 92      │ 15-Min Analyst Phone Call   │ Verified Leaders Matrix  │
 │ Trustpilot            │ DR 93      │ DNS TXT Verified Business   │ Global Trust Anchor      │
 │ G2.com                │ DR 91      │ LinkedIn Admin + Work Email │ High Performer Grid      │
 └───────────────────────┴────────────┴─────────────────────────────┴──────────────────────────┘
@@ -82,9 +82,9 @@ Chaman Shah
 Founder & Principal AI Systems Architect
 Elesium Online
 Website: https://elesium.online
-Direct: +91-8317329312
-Email: contact@elesium.online / chamansyed655@gmail.com
-Office: Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+Direct: +91 83173 29312
+Email: contact@elesium.online
+Office: Remote Engineering Base, Shivamogga, Karnataka 577205, India
 ```
 
 ---
@@ -324,30 +324,30 @@ Every claim, verification record, and profile entry across Trustpilot, G2, and a
 ```json
 {
   "brand_name": "Elesium",
-  "legal_name": "Elesium Online",
+  "legal_name": "Elesium (Elesium Online)",
   "corporate_type": "Private Enterprise AI Engineering & Systems Consultancy",
-  "street_address": "Koramangala 4th Block",
+  "street_address": "Remote Engineering Base, Shivamogga",
   "city": "Bengaluru",
   "state": "Karnataka",
-  "postal_code": "560034",
+  "postal_code": "577205",
   "country": "India",
   "country_code": "IN",
   "geo": {
-    "latitude": 12.9352,
-    "longitude": 77.6245
+    "latitude": 13.9299,
+    "longitude": 75.5681
   },
-  "phone": "+91-8317329312",
+  "phone": "+91 83173 29312",
   "email": "contact@elesium.online",
-  "support_email": "chamansyed655@gmail.com",
   "canonical_website": "https://elesium.online",
   "solutions_hub": "https://elesium.online/solutions",
   "signals_hub": "https://elesium.online/signals",
   "founder_name": "Chaman Shah",
   "founder_title": "Principal AI Systems Architect",
+  "founding_date": "2024-03-15",
   "founding_year": 2024,
   "company_size": "10-49 employees",
   "hourly_rate": "$25 - $49 / hr",
-  "min_project_size": "$10,000+",
+  "min_project_size": "₹1,50,000 ($2,000)",
   "primary_category": "Software Company",
   "secondary_categories": [
     "Artificial Intelligence Development",
@@ -355,7 +355,7 @@ Every claim, verification record, and profile entry across Trustpilot, G2, and a
     "Computer Consulting"
   ],
   "tagline": "Replacing 40-hour manual bottlenecks with deterministic, sovereign multi-agent AI systems.",
-  "short_description": "India's premier enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days."
+  "short_description": "Indian enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days."
 }
 ```
 
@@ -393,9 +393,9 @@ Every claim, verification record, and profile entry across Trustpilot, G2, and a
   > 
   > Clients achieve audited outcomes including 95%+ latency reductions (from days to minutes) and full cash-flow payback in under 90 days. Explore our client solutions at https://elesium.online/solutions.
 - **Corporate Contact Coordinates:**
-  - Phone: `+91-8317329312`
+  - Phone: `+91 83173 29312`
   - Email: `contact@elesium.online`
-  - Address: Koramangala 4th Block, Bengaluru, Karnataka 560034, India
+  - Address: Remote Engineering Base, Shivamogga, Karnataka 577205, India
 - **Commercial BOFU Deep Links Configured:**
   1. Solutions Hub: `https://elesium.online/solutions`
   2. Logistics AI Automation: `https://elesium.online/solutions/ai-automation-agency-for-logistics`
@@ -414,7 +414,7 @@ Thank you for partnering with Elesium on your recent enterprise automation deplo
 
 We are committed to delivering rigorous, deterministic software engineering. Could you take 60 seconds to share your authentic feedback on our verified Trustpilot profile?
 
-Leave your review here: https://www.trustpilot.com/evaluate/elesium.online
+Review page: https://www.trustpilot.com/review/elesium.online
 
 Thank you for your ongoing partnership!
 
@@ -483,7 +483,7 @@ G2 is currently compiling their Enterprise Grid Report for AI Agents & Workflow 
 
 Would you be open to leaving a verified review on our G2 profile? G2 typically offers a $25 gift card as a token of appreciation for enterprise software reviews.
 
-Direct review link: https://www.g2.com/products/elesium-ai-automation-platform/take_survey
+Product review profile: https://www.g2.com/products/elesium-ai-automation-platform
 
 Thank you for championing our engineering team!
 

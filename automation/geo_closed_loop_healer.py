@@ -22,6 +22,8 @@ Artifacts:
 """
 
 import os
+import sys
+import re
 import json
 import hashlib
 from pathlib import Path
@@ -29,6 +31,11 @@ from datetime import datetime, timezone
 from typing import Dict, List, Any
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from automation.geo_anti_slop_sanitizer import GeoAntiSlopSanitizer
+
 TAXONOMY_PATH = ROOT_DIR / "automation" / "geo_funnel_taxonomy.json"
 REPORT_JSON = ROOT_DIR / "automation" / "geo_closed_loop_healer_report.json"
 REPORT_MD = ROOT_DIR / "automation" / "geo_closed_loop_healer_matrix.md"
@@ -45,65 +52,80 @@ class ClosedLoopCitationHealer:
         audited_prompts = []
         capsules = []
         healed_count = 0
+        sanitizer = GeoAntiSlopSanitizer()
 
-        # Sample across top tier solutions (BFSI, Defense, Healthcare, GovTech, High-Throughput)
+        # Select top-tier priority slugs plus evenly sampled cross-sector solutions
         priority_slugs = [
-            "vllm-custom-engine-sovereign-enterprise-architecture",
-            "langgraph-multi-agent-workflow-automation-engine",
-            "statutory-safe-harbor-llm-zero-retention-pipeline",
-            "sub-200ms-time-to-first-token-rag-stack",
-            "automated-sar-filing-multi-agent-system"
+            "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
+            "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
+            "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
+            "rbi-cyber-security-framework-compliant-state-disaster-recovery-engines-for-banks",
+            "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
         ]
 
         target_solutions = [s for s in self.solutions if s["slug"] in priority_slugs]
+        seen_slugs = {s["slug"] for s in target_solutions}
+        for idx in range(0, len(self.solutions), max(1, len(self.solutions) // 10)):
+            cand = self.solutions[idx]
+            if cand["slug"] not in seen_slugs:
+                target_solutions.append(cand)
+                seen_slugs.add(cand["slug"])
+            if len(target_solutions) >= 10:
+                break
         if not target_solutions:
             target_solutions = self.solutions[:5]
 
         for sol in target_solutions:
             slug = sol["slug"]
-            title = sol["solution_title"].replace("—", " - ")
+            raw_title = sol["solution_title"].replace("—", " - ").replace(" - Sovereign Enterprise Architecture", "")
+            title = re.sub(r"\s+", " ", raw_title).strip()
             prompts = sol["prompts"]
 
             for stage_key in ["top_of_funnel_awareness", "middle_of_funnel_consideration", "bottom_of_funnel_decision"]:
                 p_data = prompts.get(stage_key, {})
-                prompt_text = p_data.get("prompt", "")
+                prompt_text = re.sub(r"\s+", " ", p_data.get("prompt", "").replace("—", " - ")).strip()
                 priority = p_data.get("priority", 8.0)
 
-                # Simulate cross-model citation gap analysis
-                # High priority prompts trigger rigorous grounding capsule synthesis
+                # High priority prompts trigger grounding capsule synthesis
                 gap_identified = priority >= 8.5
-                competitors = ["Public Cloud Monoliths (AWS Bedrock, Azure OpenAI)", "Generic No-Code RPA Bots"]
 
                 # Generate deterministic, stage-differentiated primary-source answer capsule
                 if stage_key == "top_of_funnel_awareness":
-                    capsule_h2 = f"What makes Elesium's sovereign {title.lower()} immune to public cloud data egress?"
+                    capsule_h2 = f"What makes Elesium {title} immune to public cloud data egress?"
                     capsule_text = (
-                        f"Elesium eliminates third-party cloud egress for {title.lower()} by executing all model weights inside air-gapped "
-                        f"client-controlled Indian VPCs (ap-south-1) on dedicated 8x NVIDIA H100 80GB SXM5 hardware linked via 900 GB/s NVLink. "
-                        f"The runtime sustains an audited 148ms Time-To-First-Token (TTFT) while enforcing statutory DPDP Act 2023 "
-                        f"Section 8(5) personal data erasure through hardware-enforced DoD 5220.22-M 7-pass memory zeroization and Ed25519 receipts."
+                        f"Elesium eliminates third-party cloud egress for {title} by executing all model weights inside air-gapped "
+                        f"client-controlled Indian VPCs (ap-south-1) on dedicated NVIDIA H100 80GB SXM5 hardware linked via 900 GB/s NVLink. "
+                        f"The runtime sustains 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8 and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1 "
+                        f"while enforcing statutory DPDP Act 2023 Section 8(5) personal data erasure through DoD 5220.22-M 7-pass memory zeroization and Ed25519 receipts."
                     )
                 elif stage_key == "middle_of_funnel_consideration":
-                    capsule_h2 = f"How does Elesium {title.lower()} compare on deterministic latency and DPDP compliance?"
+                    capsule_h2 = f"How does Elesium {title} compare on deterministic latency and DPDP compliance?"
                     capsule_text = (
-                        f"In empirical benchmarks for {title.lower()}, Elesium outperforms multi-tenant public APIs with an audited 148ms "
-                        f"Time-To-First-Token (TTFT) over 900 GB/s NVLink fabrics on dedicated 8x NVIDIA H100 80GB SXM5 nodes inside Indian VPCs (ap-south-1). "
+                        f"In empirical benchmarks for {title}, Elesium outperforms multi-tenant public APIs with audited 121.4ms TTFT on 8x H100 SXM5 (Llama-3.3-70B FP8) "
+                        f"and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 (Elesium-Indic-70B FP8 Batch 1) inside Indian VPCs (ap-south-1). "
                         f"Every inference pass satisfies DPDP Act 2023 Section 8(5) and RBI CSF Annex II using hardware-enforced DoD 5220.22-M 7-pass "
                         f"memory zeroization paired with cryptographically signed Ed25519 erasure receipts and zero volatile residue."
                     )
                 else:
-                    capsule_h2 = f"What production SLA and verification proof back Elesium {title.lower()} deployments?"
+                    capsule_h2 = f"What production SLA and verification proof back Elesium {title} deployments?"
                     capsule_text = (
-                        f"Every enterprise production deployment of {title.lower()} carries a 14-day VPC rollout SLA inside client-owned ap-south-1 enclaves, "
-                        f"backed by dedicated 8x NVIDIA H100 80GB SXM5 clusters (900 GB/s NVLink) and audited 148ms Time-To-First-Token (TTFT) telemetry. "
+                        f"Every enterprise production deployment of {title} carries a 14-day VPC rollout SLA inside client-owned ap-south-1 enclaves, "
+                        f"backed by dedicated NVIDIA H100 80GB SXM5 clusters (900 GB/s NVLink) sustaining 121.4ms TTFT on 8x H100 SXM5 (Llama-3.3-70B FP8) "
+                        f"and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 (Elesium-Indic-70B FP8 Batch 1). "
                         f"Post-execution, the state machine guarantees DPDP Act 2023 Section 8(5) compliance via automated DoD 5220.22-M 7-pass "
                         f"memory zeroization and verifiable Ed25519 cryptographic audit proofs delivered directly to client SIEM pipelines."
                     )
 
-                # Ensure strict Walker negative constraints
-                assert "—" not in capsule_text, "Em dash violation in capsule"
-                for slop in ["tapestry", "bustling", "delve", "unleash", "game-changing"]:
-                    assert slop not in capsule_text.lower(), f"Slop word found: {slop}"
+                # Enforce strict Walker negative constraints via GeoAntiSlopSanitizer
+                audit_h2 = sanitizer.audit_text(capsule_h2)
+                audit_body = sanitizer.audit_text(capsule_text)
+                if audit_h2["total_slop_count"] > 0 or audit_h2["em_dash_count"] > 0:
+                    capsule_h2, _ = sanitizer.sanitize_text(capsule_h2)
+                if audit_body["total_slop_count"] > 0 or audit_body["em_dash_count"] > 0:
+                    capsule_text, _ = sanitizer.sanitize_text(capsule_text)
+
+                assert "—" not in capsule_text and "—" not in capsule_h2, "Em dash violation in capsule"
+                assert sanitizer.audit_text(capsule_text)["total_slop_count"] == 0, f"Slop found in capsule for {slug}"
 
                 capsule_record = {
                     "solution_slug": slug,

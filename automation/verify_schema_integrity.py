@@ -211,23 +211,25 @@ class SchemaIntegrityAuditor:
                     if w and h and w != h:
                         self.record_error(file_path, line_no, f"{type_label} logo aspect ratio violation: width ({w}) must equal height ({h}) for Google compliance.", type_label)
 
-            # Invariant 4: Bengaluru HQ NAP for #organization
+            # Invariant 4: Shivamogga Operating Base NAP & truthful entity identity for #organization
             if node.get("@id") == "https://elesium.online/#organization":
+                if "private limited" in str(name or "").lower() or "private limited" in str(node.get("legalName", "")).lower():
+                    self.record_error(file_path, line_no, "Organization legalName/name violation: 'Private Limited' claim is prohibited.", type_label)
                 addr = node.get("address", {})
                 if isinstance(addr, dict):
                     loc = addr.get("addressLocality", "")
                     post = addr.get("postalCode", "")
-                    if loc not in ["Bengaluru", "Bangalore"]:
-                        self.record_error(file_path, line_no, f"Organization addressLocality violation: Expected 'Bengaluru', found '{loc}'.", type_label)
-                    if post != "560034":
-                        self.record_error(file_path, line_no, f"Organization postalCode violation: Expected '560034', found '{post}'.", type_label)
+                    if loc != "Shivamogga":
+                        self.record_error(file_path, line_no, f"Organization addressLocality violation: Expected 'Shivamogga', found '{loc}'.", type_label)
+                    if post != "577205":
+                        self.record_error(file_path, line_no, f"Organization postalCode violation: Expected '577205', found '{post}'.", type_label)
                 geo = node.get("geo", {})
                 if isinstance(geo, dict):
                     try:
                         lat = float(geo.get("latitude", 0))
                         lon = float(geo.get("longitude", 0))
-                        if abs(lat - 12.9352) > 0.05 or abs(lon - 77.6245) > 0.05:
-                            self.record_error(file_path, line_no, f"Organization geo coordinates violation: Expected near (12.9352, 77.6245), found ({lat}, {lon}).", type_label)
+                        if abs(lat - 13.9299) > 0.05 or abs(lon - 75.5681) > 0.05:
+                            self.record_error(file_path, line_no, f"Organization geo coordinates violation: Expected near (13.9299, 75.5681), found ({lat}, {lon}).", type_label)
                     except (ValueError, TypeError):
                         self.record_error(file_path, line_no, "Organization geo coordinates invalid format.", type_label)
 

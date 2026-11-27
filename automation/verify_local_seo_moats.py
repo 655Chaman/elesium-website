@@ -37,7 +37,7 @@ CITIES = [
 ]
 
 EXPECTED_COORDINATES = {
-    "bangalore": (12.9352, 77.6245),
+    "bangalore": (13.9299, 75.5681),
     "mumbai": (19.0657, 72.8687),
     "delhi-ncr": (28.4908, 77.0903),
     "pune": (18.5913, 73.7389),
@@ -137,7 +137,7 @@ def run_gates_2_to_5():
 
                     for sc in schemas:
                         stype = sc.get("@type", "")
-                        if stype in ["LocalBusiness", "ProfessionalService"] or (isinstance(stype, list) and any(t in ["LocalBusiness", "ProfessionalService"] for t in stype)):
+                        if stype in ["Organization", "LocalBusiness", "ProfessionalService"] or (isinstance(stype, list) and any(t in ["Organization", "LocalBusiness", "ProfessionalService"] for t in stype)):
                             has_local_biz = True
                             if "hasMap" in sc and sc["hasMap"]:
                                 has_has_map = True

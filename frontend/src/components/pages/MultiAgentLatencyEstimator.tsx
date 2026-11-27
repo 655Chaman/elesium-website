@@ -134,7 +134,7 @@ export default function MultiAgentLatencyEstimator() {
         <script type="application/ld+json">{JSON.stringify(jsonLdSchema)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-neutral-100 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-12">

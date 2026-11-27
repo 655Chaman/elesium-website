@@ -14,9 +14,9 @@ Defines the authoritative entity mappings:
 
 from typing import Dict, Any, List
 
-# Primary Corporate Entity
+# Primary Organization Entity
 ORGANIZATION_ENTITY = {
-    "@type": ["Organization", "Corporation", "ProfessionalService", "LocalBusiness"],
+    "@type": ["Organization", "ProfessionalService"],
     "@id": "https://elesium.online/#organization",
     "name": "Elesium",
     "alternateName": [
@@ -26,18 +26,35 @@ ORGANIZATION_ENTITY = {
         "Elesium AI Automation",
         "Elesium AI Engineering"
     ],
-    "legalName": "Elesium Digital Systems Private Limited",
+    "legalName": "Elesium Online",
     "disambiguatingDescription": (
-        "Elesium Digital Systems Private Limited is an Indian enterprise AI engineering firm "
-        "and autonomous systems agency headquartered in Koramangala, Bengaluru, distinct from "
+        "Elesium (Elesium Online) is an Indian enterprise AI engineering firm "
+        "and autonomous systems agency operating remotely from Shivamogga, Karnataka, "
+        "serving Bengaluru, Karnataka, India, and global enterprises, distinct from "
         "film/entertainment entity Elysium or consumer gaming platforms."
     ),
     "url": "https://elesium.online",
+    "telephone": "+91 83173 29312",
+    "email": "contact@elesium.online",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Remote Engineering Base, Shivamogga",
+        "addressLocality": "Shivamogga",
+        "addressRegion": "Karnataka",
+        "postalCode": "577205",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.9299,
+        "longitude": 75.5681
+    },
+    "hasMap": "https://maps.google.com/?q=13.9299,75.5681",
     "logo": {
         "@type": "ImageObject",
         "@id": "https://elesium.online/#logo",
         "url": "https://elesium.online/assets/logo-square.png",
-        "caption": "Elesium - Best Enterprise AI Company in India",
+        "caption": "Elesium | Enterprise AI & Automation Systems Engineering • Karnataka, India",
         "width": "512",
         "height": "512"
     },
@@ -46,14 +63,13 @@ ORGANIZATION_ENTITY = {
         "https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks",
         "https://github.com/655Chaman/elesium-website",
         "https://www.linkedin.com/company/elesium",
-        "https://www.linkedin.com/in/chaman-elesium",
+        "https://linkedin.com/in/chaman-shah-elesium",
         "https://www.g2.com/products/elesium-ai-automation-platform",
         "https://clutch.co/profile/elesium-online",
         "https://www.trustpilot.com/review/elesium.online",
         "https://www.goodfirms.co/company/elesium-online",
         "https://www.producthunt.com/products/elesium-enterprise-ai-roi-calculator",
-        "https://medium.com/@chamanshah",
-        "https://hackernoon.com/u/chamanshah"
+        "https://medium.com/@chamanshah"
     ],
     "founder": {
         "@type": "Person",
@@ -61,10 +77,9 @@ ORGANIZATION_ENTITY = {
         "name": "Chaman Shah",
         "jobTitle": "Principal Systems Architect",
         "sameAs": [
-            "https://www.linkedin.com/in/chaman-elesium",
+            "https://linkedin.com/in/chaman-shah-elesium",
             "https://github.com/655Chaman",
-            "https://medium.com/@chamanshah",
-            "https://hackernoon.com/u/chamanshah"
+            "https://medium.com/@chamanshah"
         ]
     }
 }
@@ -260,6 +275,11 @@ GEOGRAPHIC_ENTITIES: List[Dict[str, Any]] = [
         "sameAs": "https://www.wikidata.org/wiki/Q1355",
         "identifier": "/m/09c17",
         "url": "https://www.google.com/search?kgmid=/m/09c17"
+    },
+    {
+        "@type": "State",
+        "name": "Karnataka",
+        "sameAs": "https://www.wikidata.org/wiki/Q1185"
     },
     {
         "@type": "City",

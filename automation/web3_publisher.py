@@ -57,27 +57,27 @@ def compile_organization_entity() -> Dict[str, Any]:
     """Compiles Elesium's core Knowledge Graph entity profile with geographic coordinates."""
     return {
         "@context": "https://schema.org",
-        "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
+        "@type": ["Organization", "ProfessionalService"],
         "@id": "https://elesium.online/#organization",
         "name": "Elesium",
-        "legalName": "Elesium Digital Systems Private Limited",
+        "legalName": "Elesium Online",
         "url": "https://elesium.online",
         "logo": "https://elesium.online/assets/logo-square.png",
         "image": "https://elesium.online/og-image.png",
-        "telephone": "+91-8317329312",
-        "email": "systems@elesium.online",
+        "telephone": "+91 83173 29312",
+        "email": "contact@elesium.online",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Koramangala 4th Block",
-            "addressLocality": "Bangalore",
+            "streetAddress": "Remote Engineering Base, Shivamogga",
+            "addressLocality": "Shivamogga",
             "addressRegion": "Karnataka",
-            "postalCode": "560034",
+            "postalCode": "577205",
             "addressCountry": "IN"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 12.9352,
-            "longitude": 77.6245
+            "latitude": 13.9299,
+            "longitude": 75.5681
         },
         "sameAs": [
             "https://elesium.eth.limo",
@@ -273,8 +273,8 @@ def run_self_test() -> bool:
 
     # Test 3: Entity profile validation
     entity = compile_organization_entity()
-    assert entity["@type"] == ["Organization", "ProfessionalService", "LocalBusiness"]
-    assert "geo" in entity and entity["geo"]["latitude"] == 12.9352
+    assert entity["@type"] == ["Organization", "ProfessionalService"]
+    assert "geo" in entity and entity["geo"]["latitude"] == 13.9299
     assert len(entity["knowsAbout"]) >= 6
     print("  [PASS] Test 3: Organization entity schema and geo-coordinates verified.")
 

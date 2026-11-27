@@ -38,7 +38,11 @@ class TestEntitySyndicateEngine:
     def test_llms_full_grounding_content(self):
         """llms-full.txt must contain organization identity, sectors, benchmarks, and hubs."""
         content = (DIST_DIR / "llms-full.txt").read_text(encoding="utf-8")
-        assert "Elesium Digital Systems Private Limited" in content
+        assert "Elesium" in content
+        assert "Shivamogga" in content
+        assert "577205" in content
+        assert "Private Limited" not in content
+        assert "Koramangala" not in content
         assert "Q131149202" not in content
         assert "crunchbase.com" in content
         assert "DPDP Act 2023 Section 8(5)" in content
@@ -79,7 +83,9 @@ class TestEntitySyndicateEngine:
         """citations.bib must contain valid BibTeX entry for Elesium sovereign AI."""
         bib = (DIST_DIR / "citations.bib").read_text(encoding="utf-8")
         assert "@software{elesium_sovereign_ai_2026" in bib
-        assert "Elesium Digital Systems Private Limited" in bib
+        assert "Elesium (Elesium Online)" in bib
+        assert "Shivamogga, Karnataka, India" in bib
+        assert "Private Limited" not in bib
         assert "https://elesium.online" in bib
 
     def test_huggingface_manifest_structure(self):

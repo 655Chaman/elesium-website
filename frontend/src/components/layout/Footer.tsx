@@ -5,17 +5,27 @@ import { useWhatsApp } from '../../hooks/useWhatsApp'
 export default function DownloadFooter() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp();
 
-    const mainNavigation = [
+    const mainLinks = [
         { name: 'Portal', path: '/' },
         { name: 'Connector Model', path: '/connector/' },
         { name: 'How We Work', path: '/how-we-work/' },
         { name: 'Solutions Hub', path: '/solutions/' },
+        { name: 'Engineering Tools', path: '/tools/' },
+        { name: 'Principal Architect', path: '/authors/chaman-shah/' },
         { name: 'Commercial Directory', path: '/commercial-directory.html' },
         { name: 'Technical Research', path: '/signals/' },
         { name: 'Architecture Comparisons', path: '/compare/' },
         { name: 'Video Masterclasses', path: '/videos/' },
         { name: 'Engineering Glossary', path: '/glossary/' },
         { name: 'ele-in Waitlist', path: '/waitlist/' },
+    ];
+
+    const staticPortals = [
+        { name: 'Docs', href: '/docs/' },
+        { name: 'Guides', href: '/guides/top-10-sovereign-ai-platforms-india/' },
+        { name: 'Support', href: '/support/' },
+        { name: 'Benchmarks Docs', href: '/docs/benchmarks/' },
+        { name: 'Sovereign vs Cloud Guide', href: '/comparison/sovereign-ai-vs-public-cloud/' },
     ];
 
     const featuredTools = [
@@ -58,7 +68,7 @@ export default function DownloadFooter() {
                             Talk Directly With Our Engineering Team
                         </p>
                         <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed">
-                            Reach out on WhatsApp to discuss your workflows, private cloud setup, and timeline with our Bengaluru team.
+                            Reach out on WhatsApp to discuss your workflows, private cloud setup, and timeline with our Shivamogga engineering desk serving Bengaluru, India, and global clients.
                         </p>
                     </div>
 
@@ -80,21 +90,31 @@ export default function DownloadFooter() {
                     </div>
                 </div>
 
-                {/* 4-Column Navigation Layout */}
+                {/* 4-Column Directory Layout */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-neutral-200 dark:border-white/10">
 
-                    {/* Column 1: Main Navigation */}
+                    {/* Column 1: Primary Platform & Static Portals */}
                     <div className="flex flex-col gap-4">
-                        <p className="font-semibold text-xs tracking-wider uppercase text-black dark:text-white">Navigation</p>
-                        <ul className="flex flex-col gap-2.5">
-                            {mainNavigation.map((item) => (
+                        <p className="font-semibold text-xs tracking-wider uppercase text-black dark:text-white">Platform &amp; Docs</p>
+                        <ul className="flex flex-col gap-1">
+                            {mainLinks.map((item) => (
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left"
+                                        className="py-1 inline-block text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left"
                                     >
                                         {item.name}
                                     </Link>
+                                </li>
+                            ))}
+                            {staticPortals.map((item) => (
+                                <li key={item.name}>
+                                    <a
+                                        href={item.href}
+                                        className="py-1 inline-block text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left font-medium"
+                                    >
+                                        {item.name}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -103,12 +123,12 @@ export default function DownloadFooter() {
                     {/* Column 2: Solutions Hub */}
                     <div className="flex flex-col gap-4">
                         <p className="font-semibold text-xs tracking-wider uppercase text-black dark:text-white">Enterprise Solutions</p>
-                        <ul className="flex flex-col gap-2.5">
+                        <ul className="flex flex-col gap-1">
                             {highLeverSolutions.map((item) => (
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        className="py-1 inline-block text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -118,7 +138,7 @@ export default function DownloadFooter() {
                             <li className="pt-1">
                                 <Link
                                     to="/solutions/"
-                                    className="text-xs font-semibold text-black dark:text-white hover:underline flex items-center gap-1"
+                                    className="py-1 text-xs font-semibold text-black dark:text-white hover:underline inline-flex items-center gap-1"
                                 >
                                     Explore All Architectures &rarr;
                                 </Link>
@@ -129,12 +149,12 @@ export default function DownloadFooter() {
                     {/* Column 3: Engineering Simulators */}
                     <div className="flex flex-col gap-4">
                         <p className="font-semibold text-xs tracking-wider uppercase text-black dark:text-white">Engineering Tools</p>
-                        <ul className="flex flex-col gap-2.5">
+                        <ul className="flex flex-col gap-1">
                             {featuredTools.map((item) => (
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        className="py-1 inline-block text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -144,7 +164,7 @@ export default function DownloadFooter() {
                             <li className="pt-1">
                                 <Link
                                     to="/resources/"
-                                    className="text-xs font-semibold text-black dark:text-white hover:underline flex items-center gap-1"
+                                    className="py-1 text-xs font-semibold text-black dark:text-white hover:underline inline-flex items-center gap-1"
                                 >
                                     View All Engineering Tools &rarr;
                                 </Link>
@@ -155,12 +175,12 @@ export default function DownloadFooter() {
                     {/* Column 4: Architecture Battlecards */}
                     <div className="flex flex-col gap-4">
                         <p className="font-semibold text-xs tracking-wider uppercase text-black dark:text-white">Architecture</p>
-                        <ul className="flex flex-col gap-2.5">
+                        <ul className="flex flex-col gap-1">
                             {battlecardLinks.map((item) => (
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
+                                        className="py-1 inline-block text-neutral-500 hover:text-black dark:hover:text-white transition-colors text-xs text-left line-clamp-1"
                                         title={item.name}
                                     >
                                         {item.name}
@@ -170,7 +190,7 @@ export default function DownloadFooter() {
                             <li className="pt-1">
                                 <Link
                                     to="/compare/"
-                                    className="text-xs font-semibold text-black dark:text-white hover:underline flex items-center gap-1"
+                                    className="py-1 text-xs font-semibold text-black dark:text-white hover:underline inline-flex items-center gap-1"
                                 >
                                     View All Comparisons &rarr;
                                 </Link>
@@ -179,27 +199,27 @@ export default function DownloadFooter() {
                     </div>
                 </div>
 
-                {/* Regional Engineering Pods Across India */}
+                {/* Regional Service Hubs Across India */}
                 <div className="pt-6 border-t border-neutral-200 dark:border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs">
                     <span className="font-mono text-neutral-500 uppercase tracking-wider text-[11px] shrink-0">
-                        Regional Engineering Pods:
+                        Service Regions:
                     </span>
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-neutral-500">
-                        <Link to="/enterprise-ai-bangalore/" className="hover:text-black dark:hover:text-white transition font-medium">Bengaluru HQ (Koramangala)</Link>
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-500">
+                        <Link to="/enterprise-ai-bangalore/" className="py-1 inline-block hover:text-black dark:hover:text-white transition font-medium">Bengaluru &amp; Karnataka Services</Link>
                         <span>&bull;</span>
-                        <Link to="/enterprise-ai-mumbai/" className="hover:text-black dark:hover:text-white transition">Mumbai (BKC)</Link>
+                        <Link to="/enterprise-ai-mumbai/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Mumbai (BKC)</Link>
                         <span>&bull;</span>
-                        <Link to="/enterprise-ai-delhi-ncr/" className="hover:text-black dark:hover:text-white transition">Delhi NCR</Link>
+                        <Link to="/enterprise-ai-delhi-ncr/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Delhi NCR</Link>
                         <span>&bull;</span>
-                        <Link to="/enterprise-ai-pune/" className="hover:text-black dark:hover:text-white transition">Pune (Hinjawadi)</Link>
+                        <Link to="/enterprise-ai-pune/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Pune (Hinjawadi)</Link>
                         <span>&bull;</span>
-                        <Link to="/enterprise-ai-hyderabad/" className="hover:text-black dark:hover:text-white transition">Hyderabad (HITEC)</Link>
+                        <Link to="/enterprise-ai-hyderabad/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Hyderabad (HITEC)</Link>
                         <span>&bull;</span>
-                        <Link to="/enterprise-ai-chennai/" className="hover:text-black dark:hover:text-white transition">Chennai (OMR)</Link>
+                        <Link to="/enterprise-ai-chennai/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Chennai (OMR)</Link>
                         <span>&bull;</span>
-                        <Link to="/enterprise-ai-ahmedabad/" className="hover:text-black dark:hover:text-white transition">Ahmedabad (GIFT City)</Link>
+                        <Link to="/enterprise-ai-ahmedabad/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Ahmedabad (GIFT City)</Link>
                         <span>&bull;</span>
-                        <Link to="/enterprise-ai-kolkata/" className="hover:text-black dark:hover:text-white transition">Kolkata (Sector V)</Link>
+                        <Link to="/enterprise-ai-kolkata/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Kolkata (Sector V)</Link>
                     </div>
                 </div>
 
@@ -207,10 +227,10 @@ export default function DownloadFooter() {
                 <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div className="flex flex-col gap-1.5">
                         <span className="text-xs font-semibold tracking-wider text-black dark:text-white uppercase">
-                            Elesium Digital Systems Private Limited
+                            Elesium
                         </span>
                         <p className="text-xs text-neutral-500 leading-relaxed max-w-2xl">
-                            80 Feet Road, 4th Block, Koramangala, Bengaluru 560034, Karnataka, India. Contact: +91-8317329312 | contact@elesium.online
+                            Remote-First Sovereign AI Systems Practice &middot; Shivamogga, Karnataka 577205, India (Serving Bengaluru, India &amp; Global). Contact: +91-8317329312 | contact@elesium.online
                         </p>
                     </div>
 
@@ -225,14 +245,18 @@ export default function DownloadFooter() {
 
                 {/* Copyright Line */}
                 <div className="pt-6 mt-6 border-t border-neutral-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500">
-                    <p>&copy; {new Date().getFullYear()} Elesium Digital Systems Private Limited. All rights reserved.</p>
-                    <div className="flex items-center gap-4 flex-wrap">
-                        <Link to="/" className="hover:text-black dark:hover:text-white transition">Portal</Link>
-                        <Link to="/portfolio/" className="hover:text-black dark:hover:text-white transition">Portfolio</Link>
-                        <Link to="/connector/" className="hover:text-black dark:hover:text-white transition">Connector Model</Link>
-                        <Link to="/authors/chaman-shah/" className="hover:text-black dark:hover:text-white transition">Principal Architect</Link>
-                        <Link to="/resources/" className="hover:text-black dark:hover:text-white transition">Resources</Link>
-                        <Link to="/sitemap.xml" className="hover:text-black dark:hover:text-white transition">Sitemap</Link>
+                    <p>&copy; {new Date().getFullYear()} Elesium. All rights reserved.</p>
+                    <div className="flex items-center gap-x-4 gap-y-1 flex-wrap">
+                        <Link to="/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Portal</Link>
+                        <Link to="/portfolio/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Portfolio</Link>
+                        <Link to="/connector/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Connector Model</Link>
+                        <Link to="/authors/chaman-shah/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Principal Architect</Link>
+                        <Link to="/tools/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Tools</Link>
+                        <a href="/docs/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Docs</a>
+                        <a href="/guides/top-10-sovereign-ai-platforms-india/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Guides</a>
+                        <a href="/support/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Support</a>
+                        <Link to="/resources/" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Resources</Link>
+                        <a href="/sitemap.xml" className="py-1 inline-block hover:text-black dark:hover:text-white transition">Sitemap</a>
                     </div>
                 </div>
 

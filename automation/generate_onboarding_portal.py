@@ -39,7 +39,6 @@ BASE_HTML = """<!doctype html>
   <meta name="theme-color" content="#0a0a0c" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0c" />
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0a0a0c" />
-  <link rel="manifest" href="/manifest.json" />
   <link rel="canonical" href="https://elesium.online/onboarding/" />
   <link rel="alternate" hreflang="x-default" href="https://elesium.online/onboarding/" />
   <link rel="alternate" hreflang="en-in" href="https://elesium.online/onboarding/" />
@@ -81,19 +80,15 @@ BASE_HTML = """<!doctype html>
       margin: 0;
       padding: 0;
       background-color: #0a0a0c !important;
-      min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
+      overflow-x: clip;
     }
     #root {
-      min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
-      contain: paint layout;
-    }
-    .hero-graphic, .embed-wrapper, iframe {
-      aspect-ratio: 16 / 9;
-      contain: layout paint;
     }
     .international-geo-banner {
       min-height: 48px;
@@ -111,16 +106,6 @@ BASE_HTML = """<!doctype html>
   <script id="inp-scheduler-engine">
     (function() {
       'use strict';
-      var originalAddEventListener = EventTarget.prototype.addEventListener;
-      var passiveEvents = ['touchstart', 'touchmove', 'wheel', 'scroll'];
-      EventTarget.prototype.addEventListener = function(type, listener, options) {
-        if (passiveEvents.indexOf(type) !== -1) {
-          if (typeof options === 'boolean') options = { capture: options, passive: true };
-          else if (typeof options === 'object' && options !== null && options.passive === undefined) options.passive = true;
-          else if (options === undefined) options = { passive: true };
-        }
-        return originalAddEventListener.call(this, type, listener, options);
-      };
       window.yieldToMain = function() {
         if ('scheduler' in window && 'yield' in window.scheduler) return window.scheduler.yield();
         return new Promise(function(res) { var ch = new MessageChannel(); ch.port1.onmessage = res; ch.port2.postMessage(null); });

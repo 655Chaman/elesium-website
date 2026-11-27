@@ -111,7 +111,7 @@ export default function EmbedAgentMultiLoraSimulator() {
 
         <div>
           <span className="text-neutral-400 block mb-1">ADAPTER RANK (r)</span>
-          <div className="grid grid-cols-4 gap-1">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-1">
             {([8, 16, 32, 64] as const).map((r) => (
               <button
                 key={r}

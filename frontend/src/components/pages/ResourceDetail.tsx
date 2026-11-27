@@ -66,10 +66,48 @@ export default function ResourceDetail() {
         return (
             <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white pt-32 text-center">
                 <p className="text-gray-500">Resource not found.</p>
-                <button onClick={() => navigate('/resources')} className="text-black dark:text-white underline mt-4 inline-block font-medium">Back to Resources</button>
+                <button onClick={() => navigate('/resources/')} className="text-black dark:text-white underline mt-4 inline-block font-medium">Back to Resources</button>
             </div>
         );
     }
+
+    const canonicalUrl = `https://elesium.online/resources/${resource.slug}/`;
+    const resourceSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "TechArticle",
+                "@id": `${canonicalUrl}#article`,
+                "headline": resource.title,
+                "description": resource.description,
+                "url": canonicalUrl,
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": canonicalUrl
+                },
+                "articleSection": resource.category,
+                "author": {
+                    "@type": "Person",
+                    "@id": "https://elesium.online/authors/chaman-shah#person",
+                    "name": "Chaman Shah",
+                    "jobTitle": "Principal AI Systems Architect",
+                    "url": "https://elesium.online/authors/chaman-shah/"
+                },
+                "publisher": {
+                    "@id": "https://elesium.online/#organization"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": `${canonicalUrl}#breadcrumb`,
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://elesium.online/" },
+                    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://elesium.online/resources/" },
+                    { "@type": "ListItem", "position": 3, "name": resource.title, "item": canonicalUrl }
+                ]
+            }
+        ]
+    };
 
     return (
         <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white font-sans pt-24 pb-20 selection:bg-neutral-200 dark:selection:bg-neutral-800 transition-colors duration-300">
@@ -81,8 +119,9 @@ export default function ResourceDetail() {
                 <meta property="og:title" content={`${resource.title} | Resources | Elesium`} />
                 <meta property="og:description" content={resource.description} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={`https://elesium.online/resources/${resource.slug}/`} />
-                <link rel="canonical" href={`https://elesium.online/resources/${resource.slug}/`} />
+                <meta property="og:url" content={canonicalUrl} />
+                <link rel="canonical" href={canonicalUrl} />
+                <script type="application/ld+json">{JSON.stringify(resourceSchema)}</script>
             </Helmet>
 
             <main className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
@@ -292,7 +331,7 @@ export default function ResourceDetail() {
                                 Implement This Architecture in Production
                             </h3>
                             <p className="text-xs sm:text-sm text-neutral-300 max-w-xl mx-auto leading-relaxed">
-                                Connect directly with our Principal AI Systems Architect in Shivamogga to model hardware sizing, latency envelopes, and private VPC deployment parameters.
+                                Connect directly with our Principal AI Systems Architect at our Shivamogga engineering desk (serving Bengaluru, India, and global enterprises) to model hardware sizing, latency envelopes, and private VPC deployment parameters.
                             </p>
                             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                                 <button
@@ -312,7 +351,7 @@ export default function ResourceDetail() {
                             </div>
                         </div>
 
-                        {/* Article Footer Navigation */}
+                        {/* Article Footer Links */}
                         <div className="border-t border-gray-100 dark:border-white/5 mt-16 pt-10 flex items-center justify-between">
                             <Link
                                 to="/resources/"

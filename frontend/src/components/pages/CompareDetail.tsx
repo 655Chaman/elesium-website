@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
     Scale,
     ArrowRight,
@@ -59,9 +58,10 @@ export default function CompareDetail() {
                 'dateModified': battlecard.dateModified,
                 'author': {
                     '@type': 'Person',
+                    '@id': 'https://elesium.online/authors/chaman-shah#person',
                     'name': 'Chaman Shah',
                     'jobTitle': 'Principal AI Systems Architect',
-                    'url': 'https://elesium.online'
+                    'url': 'https://elesium.online/authors/chaman-shah/'
                 },
                 'publisher': {
                     '@type': 'Organization',
@@ -129,7 +129,7 @@ export default function CompareDetail() {
                 <meta property="og:type" content="article" />
                 <meta property="og:image" content="https://elesium.online/og-image.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@elesium_ai" />
+                <meta name="twitter:site" content="@elesium_online" />
                 <meta name="twitter:title" content={`${battlecard.title} | Elesium`} />
                 <meta name="twitter:description" content={battlecard.metaDescription} />
                 <meta name="twitter:image" content="https://elesium.online/og-image.png" />
@@ -138,8 +138,8 @@ export default function CompareDetail() {
 
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Breadcrumbs & Share */}
-                <div className="flex items-center justify-between gap-4 mb-6">
-                    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 mb-6">
+                    <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-xs text-gray-500 dark:text-gray-400 min-w-0">
                         <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
                             Home
                         </Link>
@@ -385,28 +385,31 @@ export default function CompareDetail() {
                                     key={idx}
                                     className="rounded-[20px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 overflow-hidden"
                                 >
-                                    <button
-                                        onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                                        className="w-full p-4 sm:p-5 flex items-center justify-between text-left text-sm font-semibold text-black dark:text-white transition-colors"
+                                    <h3 className="m-0">
+                                        <button
+                                            type="button"
+                                            aria-expanded={isOpen}
+                                            aria-controls={`compare-detail-faq-panel-${idx}`}
+                                            onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
+                                            className="w-full min-h-[44px] p-4 sm:p-5 flex items-center justify-between gap-4 text-left text-sm font-semibold text-black dark:text-white transition-colors"
+                                        >
+                                            <span>{faq.question}</span>
+                                            <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                    </h3>
+                                    <div
+                                        id={`compare-detail-faq-panel-${idx}`}
+                                        aria-hidden={!isOpen}
+                                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                            isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                        }`}
                                     >
-                                        <span>{faq.question}</span>
-                                        <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-                                    </button>
-                                    <AnimatePresence initial={false}>
-                                        {isOpen && (
-                                            <motion.div
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                                className="accordion-panel overflow-hidden"
-                                            >
-                                                <div className="p-4 sm:p-5 pt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200 dark:border-white/10 leading-relaxed">
-                                                    {faq.answer}
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
+                                        <div className="overflow-hidden">
+                                            <div className="p-4 sm:p-5 pt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200 dark:border-white/10 leading-relaxed">
+                                                {faq.answer}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             )
                         })}

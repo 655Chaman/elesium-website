@@ -1,7 +1,7 @@
 # Meetup Group Takeover & Co-Hosting Playbook: Bangalore
 > **Target Hub:** Bangalore, Karnataka
 > **Sector Focus:** Global Capability Centers (GCC), Logistics ERP, DeepTech AI
-> **Recommended Venue:** WeWork Galaxy, Residency Road / Koramangala 4th Block
+> **Recommended Venue:** WeWork Galaxy, Residency Road / Shivamogga
 > **Deep Anchor:** https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers
 
 ---
@@ -26,7 +26,7 @@ I lead enterprise AI systems engineering at **Elesium** (https://elesium.online/
 
 We would love to step in and fully support the community:
 1. **100% Platform Fee Sponsorship:** We will cover all ongoing Meetup Pro organizer subscription fees ($19.99/mo).
-2. **Venue & Refreshments Funding:** We will sponsor meeting spaces (WeWork Galaxy, Residency Road / Koramangala 4th Block) and high-quality catering for upcoming in-person roundtables.
+2. **Venue & Refreshments Funding:** We will sponsor meeting spaces (WeWork Galaxy, Residency Road / Shivamogga) and high-quality catering for upcoming in-person roundtables.
 3. **Founder Emeritus Status:** You remain permanently listed as the Founding Organizer with zero administrative burden or recurring costs.
 4. **Zero Sales Pitches:** All sessions will focus strictly on production engineering (deterministic LangGraph state machines, private VPC open-weights LLMs, and ERP middleware).
 
@@ -53,7 +53,7 @@ We are excited to share that our community is officially active again under the 
 ### Our Strict Engineering Charter
 1. **Zero Vendor Pitches:** No generic sales presentations or fluffy AI hype. Every talk must demonstrate working source code, architectural schematics, or benchmarked metrics.
 2. **Deep Enterprise Focus:** We specialize in deterministic multi-agent state machines, private VPC open-weights LLM deployments (zero data retention under the DPDP Act 2023), and sub-second ERP synchronization.
-3. **In-Person Peer Exchange:** Hosted regularly in Bangalore at WeWork Galaxy, Residency Road / Koramangala 4th Block.
+3. **In-Person Peer Exchange:** Hosted regularly in Bangalore at WeWork Galaxy, Residency Road / Shivamogga.
 
 ### Free Open-Source Architecture Blueprints
 Before our first in-person session, explore our technical architectural pods and case studies:
@@ -80,7 +80,7 @@ We are proposing a high-impact joint masterclass for our combined communities in
 **"Beyond the Wrapper: Architecting Deterministic LangGraph Multi-Agent Systems in Private Clouds"**
 
 ### What Elesium Will Provide & Sponsor:
-- **Full Venue & AV Sponsorship:** Hosted at WeWork Galaxy, Residency Road / Koramangala 4th Block for up to 100 developers.
+- **Full Venue & AV Sponsorship:** Hosted at WeWork Galaxy, Residency Road / Shivamogga for up to 100 developers.
 - **Catering & Refreshments:** High-quality food and beverages for all attendees.
 - **Deep-Dive Technical Session:** A 45-minute live architecture teardown and live code demonstration by Chaman Shah (Principal AI Systems Architect).
 - **Physical Architecture Blueprint Handouts:** Printed reference posters with backlink references to [https://elesium.online/solutions/ai-automation-agency-for-logistics](https://elesium.online/solutions/interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers).

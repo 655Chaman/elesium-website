@@ -1,22 +1,57 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Elesium Sovereign Enterprise AI Systems API",
-    "version": "1.2.0",
-    "description": "Standardized OpenAPI 3.1.0 specification for autonomous procurement agents, systems architects, and machine-to-machine commerce. Enables programmatic architectural audits, private cloud TCO arbitrage calculation, statutory compliance verification, and 14-day production pilot sprint booking."
+    "title": "Elesium Sovereign Enterprise AI Systems Specification",
+    "version": "1.3.0",
+    "description": "OpenAPI 3.1.0 schema specification documenting Elesium's client-side interactive architecture tools and intake workflows at https://elesium.online/tools/ and https://elesium.online/waitlist/. Note: static GitHub Pages hosting does not serve live server-side /api/v1/* POST endpoints; interactive calculators execute client-side at https://elesium.online/tools/.",
+    "contact": {
+      "name": "Elesium (Elesium Online)",
+      "url": "https://elesium.online/tools/",
+      "email": "contact@elesium.online"
+    },
+    "x-commercial-baseline": {
+      "pilot_minimum_inr": 150000,
+      "pilot_minimum_usd": 2000,
+      "pilot_display": "₹1,50,000 ($2,000)"
+    }
   },
   "servers": [
     {
-      "url": "https://elesium.online",
-      "description": "Production Sovereign Cloud Ingress"
+      "url": "https://elesium.online/tools/",
+      "description": "Client-side interactive architecture simulator hub (static GitHub Pages host; no live /api/v1/* POST runtime)"
     }
   ],
   "paths": {
+    "/agentic-architecture-grader/": {
+      "get": {
+        "summary": "Interactive Enterprise AI Architecture Grader (Client-Side)",
+        "description": "Client-side simulator evaluating multi-agent topologies against determinism, state rollback resilience, and statutory compliance.",
+        "operationId": "openArchitectureGrader",
+        "responses": {
+          "200": {
+            "description": "Interactive architecture audit web application"
+          }
+        }
+      }
+    },
+    "/enterprise-ai-roi-calculator/": {
+      "get": {
+        "summary": "Interactive Self-Hosted TCO & ROI Arbitrage Calculator (Client-Side)",
+        "description": "Client-side calculator comparing private dedicated NVIDIA H100 vLLM serving against commercial public cloud APIs.",
+        "operationId": "openTcoRoiCalculator",
+        "responses": {
+          "200": {
+            "description": "Interactive TCO and ROI calculator web application"
+          }
+        }
+      }
+    },
     "/api/v1/architecture/audit": {
       "post": {
-        "summary": "Audit Enterprise AI Architecture",
-        "description": "Evaluates a proposed or existing multi-agent topology against determinism, state rollback resilience, and statutory compliance.",
-        "operationId": "auditEnterpriseArchitecture",
+        "summary": "Architecture Audit Schema (Client-Side Simulator Reference)",
+        "description": "Specification schema corresponding to client-side evaluation at https://elesium.online/tools/agentic-architecture-grader/. Not served as a live POST endpoint on static GitHub Pages.",
+        "operationId": "auditEnterpriseArchitectureSpec",
+        "x-execution-mode": "client_side_simulator_only",
         "requestBody": {
           "required": true,
           "content": {
@@ -29,7 +64,7 @@
         },
         "responses": {
           "200": {
-            "description": "Comprehensive architectural audit report",
+            "description": "Schema for architectural audit report",
             "content": {
               "application/json": {
                 "schema": {
@@ -43,9 +78,10 @@
     },
     "/api/v1/tco/calculate": {
       "post": {
-        "summary": "Calculate Self-Hosted TCO Arbitrage",
-        "description": "Computes 3-year cost of ownership comparing private dedicated 8x NVIDIA H100 vLLM serving against commercial public cloud APIs.",
-        "operationId": "calculateTcoArbitrage",
+        "summary": "Self-Hosted TCO Arbitrage Schema (Client-Side Simulator Reference)",
+        "description": "Specification schema corresponding to client-side TCO calculation at https://elesium.online/tools/enterprise-ai-roi-calculator/. Not served as a live POST endpoint on static GitHub Pages.",
+        "operationId": "calculateTcoArbitrageSpec",
+        "x-execution-mode": "client_side_simulator_only",
         "requestBody": {
           "required": true,
           "content": {
@@ -58,7 +94,7 @@
         },
         "responses": {
           "200": {
-            "description": "Detailed 3-year TCO breakdown and break-even analysis",
+            "description": "Schema for 3-year TCO breakdown and break-even analysis",
             "content": {
               "application/json": {
                 "schema": {
@@ -72,9 +108,10 @@
     },
     "/api/v1/compliance/verify": {
       "post": {
-        "summary": "Verify Statutory Safe Harbors",
-        "description": "Analyzes data pipeline parameters against DPDP Act 2023, HIPAA Security Rule, and SEC Rule 17a-4 compliance mandates.",
-        "operationId": "verifyStatutoryCompliance",
+        "summary": "Statutory Safe Harbors Schema (Client-Side Simulator Reference)",
+        "description": "Specification schema for DPDP Act 2023, HIPAA Security Rule, and SEC Rule 17a-4 compliance evaluation at https://elesium.online/tools/. Not served as a live POST endpoint on static GitHub Pages.",
+        "operationId": "verifyStatutoryComplianceSpec",
+        "x-execution-mode": "client_side_simulator_only",
         "requestBody": {
           "required": true,
           "content": {
@@ -87,7 +124,7 @@
         },
         "responses": {
           "200": {
-            "description": "Statutory risk score and safe harbor enclave specification",
+            "description": "Schema for statutory risk score and safe harbor enclave specification",
             "content": {
               "application/json": {
                 "schema": {
@@ -101,9 +138,10 @@
     },
     "/api/v1/agent/intake": {
       "post": {
-        "summary": "Autonomous Agent Procurement Intake",
-        "description": "Submits a verified enterprise pilot sprint request with 14-day delivery SLA and contractual 90-day ROI payback.",
-        "operationId": "submitAgentIntake",
+        "summary": "Pilot Sprint Intake Schema (Waitlist & Direct Desk Reference)",
+        "description": "Schema for submitting enterprise pilot sprint inquiries (minimum ₹1,50,000 / $2,000). Submit live inquiries via https://elesium.online/waitlist/ or contact@elesium.online.",
+        "operationId": "submitAgentIntakeSpec",
+        "x-execution-mode": "waitlist_form_and_direct_desk",
         "requestBody": {
           "required": true,
           "content": {
@@ -116,7 +154,7 @@
         },
         "responses": {
           "201": {
-            "description": "Sprint intake confirmed with dispatch tracking token",
+            "description": "Schema for sprint intake confirmation",
             "content": {
               "application/json": {
                 "schema": {
@@ -218,10 +256,16 @@
           "enterprise_name": {"type": "string"},
           "contact_email": {"type": "string", "format": "email"},
           "target_workflow": {"type": "string"},
-          "budget_band_usd": {
+          "budget_band": {
             "type": "string",
-            "enum": ["15k_to_30k_pilot", "30k_to_75k_multi_module", "75k_plus_enterprise_fleet"]
-          }
+            "enum": [
+              "pilot_sprint_inr_150k_to_350k_usd_2k_to_4500",
+              "multi_agent_cluster_inr_600k_to_1500k_usd_7500_to_18k",
+              "autonomous_ai_pod_inr_450k_mo_usd_5500_mo"
+            ]
+          },
+          "pilot_minimum_inr": {"type": "integer", "example": 150000},
+          "pilot_minimum_usd": {"type": "integer", "example": 2000}
         }
       },
       "AgentIntakeResponse": {

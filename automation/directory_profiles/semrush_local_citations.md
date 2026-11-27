@@ -7,14 +7,16 @@
 
 ## 1. Canonical Syndication Record
 - **Business Name:** Elesium
-- **Legal Name:** Elesium Online
-- **Address:** Main Road, Shivamogga, Karnataka 577205, India
-- **Phone:** +91-8317329312
+- **Organization / Alternate Name:** Elesium (Elesium Online)
+- **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India
+- **Secondary Engineering Pod (Supporting R&D):** Main Road, Shivamogga, Karnataka 577205, India
+- **Phone:** +91 83173 29312
+- **Email:** contact@elesium.online
 - **Website:** https://elesium.online
 - **Founder:** Chaman Shah
-- **Year Founded:** 2024
+- **Founded:** 2024-03-15
 - **Solutions Hub Link:** https://elesium.online/solutions
-- **Categories:** Software Company | Artificial Intelligence Development; Enterprise Workflow Automation; Computer Consulting
+- **Categories:** Software company | Computer consultant; Automation service; Information technology services
 
 ---
 

@@ -100,7 +100,7 @@ ${results.complianceStatus}`;
   };
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-white selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Agent Differential Privacy & Gradient Sanitizer Simulator | Elesium</title>
         <meta

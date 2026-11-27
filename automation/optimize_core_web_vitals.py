@@ -18,6 +18,7 @@ Actions:
 ================================================================================
 """
 
+import json
 import os
 import re
 import sys
@@ -54,18 +55,17 @@ CRITICAL_CSS = """
     margin: 0;
     padding: 0;
     background-color: #0a0a0c !important;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   #root {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    contain: paint layout;
   }
-  /* Zero CLS Geometric Reservations for Banners, Nav, and Embeds */
+  /* Zero CLS Geometric Reservations for Banners and Nav */
   .international-geo-banner, [data-geo-banner] {
     min-height: 48px;
     contain-intrinsic-size: 1px 48px;
@@ -73,10 +73,6 @@ CRITICAL_CSS = """
   .global-nav-container, header.site-header {
     min-height: 64px;
     contain-intrinsic-size: 1px 64px;
-  }
-  .hero-graphic, .embed-wrapper, iframe {
-    aspect-ratio: 16 / 9;
-    contain: layout paint;
   }
   img, svg {
     max-width: 100%;
@@ -102,27 +98,11 @@ CRITICAL_CSS = """
 
 INP_SCHEDULER_SCRIPT = """
   /* ==========================================================================
-     ELESIUM SUB-50ms INP SCHEDULER & PASSIVE EVENT LISTENER POLYFILL (MODULE 03)
+     ELESIUM SUB-50ms INP SCHEDULER (MODULE 03)
      ========================================================================== */
   (function() {
     'use strict';
-    // 1. Passive event listeners by default on touch and wheel events
-    var originalAddEventListener = EventTarget.prototype.addEventListener;
-    var passiveEvents = ['touchstart', 'touchmove', 'wheel', 'mousewheel', 'scroll'];
-    EventTarget.prototype.addEventListener = function(type, listener, options) {
-      if (passiveEvents.indexOf(type) !== -1) {
-        if (typeof options === 'boolean') {
-          options = { capture: options, passive: true };
-        } else if (typeof options === 'object' && options !== null && options.passive === undefined) {
-          options.passive = true;
-        } else if (options === undefined) {
-          options = { passive: true };
-        }
-      }
-      return originalAddEventListener.call(this, type, listener, options);
-    };
-
-    // 2. Microtask slicing and yielding for sub-50ms main thread interactions
+    // 1. Microtask slicing and yielding for sub-50ms main thread interactions
     window.yieldToMain = function() {
       if ('scheduler' in window && 'yield' in window.scheduler) {
         return window.scheduler.yield();
@@ -134,7 +114,7 @@ INP_SCHEDULER_SCRIPT = """
       });
     };
 
-    // 3. Real-Time INP & Interaction Observer
+    // 2. Real-Time INP & Interaction Observer
     if ('PerformanceObserver' in window) {
       try {
         var inpObserver = new PerformanceObserver(function(list) {
@@ -248,18 +228,24 @@ def run_cwv_optimization():
         for tf in tools_dir.glob("*.html"):
             target_files.append(tf)
 
-    # Add a representative sample of programmatic solutions
+    # Optimize the 100 retained programmatic solutions from retained_solution_slugs.json
     solutions_dir = DIST_DIR / "solutions"
-    if solutions_dir.exists():
-        count = 0
-        for sol_dir in solutions_dir.iterdir():
-            if sol_dir.is_dir() and sol_dir.name != "category":
-                idx = sol_dir / "index.html"
+    retained_path = ROOT_DIR / "automation" / "retained_solution_slugs.json"
+    if solutions_dir.exists() and retained_path.exists():
+        try:
+            retained_items = json.loads(retained_path.read_text(encoding="utf-8"))
+            for item in retained_items:
+                slug = item.get("slug") if isinstance(item, dict) else str(item)
+                if not slug:
+                    continue
+                idx = solutions_dir / slug / "index.html"
                 if idx.exists():
                     target_files.append(idx)
-                    count += 1
-                    if count >= 100:  # Batch optimize top 100 sample solutions
-                        break
+                direct = solutions_dir / f"{slug}.html"
+                if direct.exists():
+                    target_files.append(direct)
+        except Exception as e:
+            print(f"[WARN] Failed to load retained_solution_slugs.json: {e}", file=sys.stderr)
 
     optimized_count = 0
     for target in target_files:

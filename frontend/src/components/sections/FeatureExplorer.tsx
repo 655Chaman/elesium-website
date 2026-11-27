@@ -8,7 +8,7 @@ import {
     AnimatePresence,
     PanInfo,
 } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import logoEmblem from '../../assets/LOGO_EMBLEM.png'
 import MetallicPaint from '../ui/MetallicPaint'
@@ -130,6 +130,20 @@ export default function FeatureExplorer() {
     const [activeDesktopSlide, setActiveDesktopSlide] = useState(0)
     const [activeSlide, setActiveSlide] = useState(0)
     const [direction, setDirection] = useState(1)
+    const [isDesktop, setIsDesktop] = useState(false)
+
+    useEffect(() => {
+        if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return
+        const mq = window.matchMedia('(min-width: 768px)')
+        const update = () => setIsDesktop(mq.matches)
+        update()
+        if (typeof mq.addEventListener === 'function') {
+            mq.addEventListener('change', update)
+            return () => mq.removeEventListener('change', update)
+        }
+        mq.addListener(update)
+        return () => mq.removeListener(update)
+    }, [])
 
     useMotionValueEvent(smoothProgress, 'change', (latest) => {
         const clamped = Math.min(features.length - 1, Math.max(0, Math.floor(latest * features.length)))
@@ -170,7 +184,7 @@ export default function FeatureExplorer() {
         <section
             id="platform"
             ref={containerRef}
-            className="relative bg-black text-white md:h-[2100px] py-20 md:py-0"
+            className="scroll-mt-16 relative bg-black text-white md:h-[2100px] py-20 md:py-0"
         >
             {/* Desktop Sticky Scroll Explorer + Synchronized Emblem Showcase */}
             <div className="hidden md:flex sticky top-[56px] h-[calc(100svh-56px)] items-center justify-center">
@@ -248,21 +262,23 @@ export default function FeatureExplorer() {
                         </div>
 
                         <div className="relative z-10 w-52 h-52 lg:w-64 lg:h-64 flex items-center justify-center">
-                            <MetallicPaint
-                                imageSrc={logoEmblem}
-                                alt="Elesium Connector Emblem"
-                                scale={2.6}
-                                speed={0.45}
-                                brightness={2.2}
-                                contrast={0.55}
-                                lightColor="#ffffff"
-                                darkColor="#2e2e32"
-                                tintColor="#ffffff"
-                                chromaticSpread={0}
-                                liquid={0.78}
-                                distortion={1.2}
-                                resolution={512}
-                            />
+                            {isDesktop && (
+                                <MetallicPaint
+                                    imageSrc={logoEmblem}
+                                    alt="Elesium Connector Emblem"
+                                    scale={2.6}
+                                    speed={0.45}
+                                    brightness={2.2}
+                                    contrast={0.55}
+                                    lightColor="#ffffff"
+                                    darkColor="#2e2e32"
+                                    tintColor="#ffffff"
+                                    chromaticSpread={0}
+                                    liquid={0.78}
+                                    distortion={1.2}
+                                    resolution={512}
+                                />
+                            )}
                         </div>
 
                         <div className="relative z-10 w-full flex items-center justify-between pt-4 border-t border-white/10 text-xs text-neutral-400">
@@ -306,27 +322,31 @@ export default function FeatureExplorer() {
                     </AnimatePresence>
                 </div>
 
-                <div className="flex items-center justify-between mt-5 px-2">
+                <div className="flex items-center justify-between mt-5 px-1">
                     <button
                         type="button"
                         onClick={() => goToSlide(activeSlide - 1)}
                         aria-label="Previous step"
-                        className="p-2.5 rounded-full border border-white/12 text-neutral-300 hover:text-white hover:bg-white/10 active:scale-[0.97] transition"
+                        className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full border border-white/12 text-neutral-300 hover:text-white hover:bg-white/10 active:scale-[0.97] transition"
                     >
                         <ChevronLeft className="w-4 h-4" />
                     </button>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-0">
                         {features.map((f, idx) => (
                             <button
                                 key={f.title}
                                 type="button"
                                 onClick={() => goToSlide(idx)}
                                 aria-label={`Go to step ${idx + 1}`}
-                                className={`h-1.5 rounded-full transition-all duration-300 ${
-                                    idx === activeSlide ? 'w-6 bg-white' : 'w-1.5 bg-white/25'
-                                }`}
-                            />
+                                className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full"
+                            >
+                                <span
+                                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                                        idx === activeSlide ? 'w-6 bg-white' : 'w-1.5 bg-white/25'
+                                    }`}
+                                />
+                            </button>
                         ))}
                     </div>
 
@@ -334,7 +354,7 @@ export default function FeatureExplorer() {
                         type="button"
                         onClick={() => goToSlide(activeSlide + 1)}
                         aria-label="Next step"
-                        className="p-2.5 rounded-full border border-white/12 text-neutral-300 hover:text-white hover:bg-white/10 active:scale-[0.97] transition"
+                        className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full border border-white/12 text-neutral-300 hover:text-white hover:bg-white/10 active:scale-[0.97] transition"
                     >
                         <ChevronRight className="w-4 h-4" />
                     </button>

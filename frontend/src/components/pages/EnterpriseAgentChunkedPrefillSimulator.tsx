@@ -180,7 +180,7 @@ TECHNICAL RECOMMENDATIONS:
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 selection:bg-white/20 selection:text-white font-sans pb-24">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 selection:bg-white/20 selection:text-white font-sans pb-24">
       <Helmet>
         <title>Enterprise Chunked Prefill &amp; Radix Attention KV Cache Simulator | Elesium</title>
         <meta
@@ -508,7 +508,7 @@ TECHNICAL RECOMMENDATIONS:
               </svg>
             </div>
 
-            <div className="grid grid-cols-4 gap-2 mt-3 pt-3 border-t border-neutral-800/80 text-center text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 pt-3 border-t border-neutral-800/80 text-center text-xs">
               <div>
                 <span className="text-neutral-500 block text-[10px]">CURRENT TTFT</span>
                 <span className="font-mono font-bold text-white">{results.ttftMilliseconds} ms</span>

@@ -112,7 +112,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent Sliding-Window Attention &amp; Ring KV Simulator | Elesium</title>
         <meta
@@ -235,7 +235,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                   <span>Sliding Window Size (W)</span>
                   <span className="font-mono text-white font-bold">{slidingWindowSize.toLocaleString()} tokens</span>
                 </label>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[1024, 2048, 4096, 8192].map(size => (
                     <button
                       key={size}
@@ -258,7 +258,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                   <span>Attention Sinks (Anchor Tokens)</span>
                   <span className="font-mono text-white font-bold">{numAttentionSinks} tokens</span>
                 </label>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[2, 4, 8, 16].map(sinks => (
                     <button
                       key={sinks}

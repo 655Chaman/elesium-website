@@ -24,9 +24,9 @@ METRO_HUBS = {
     "bangalore": {
         "city": "Bengaluru",
         "state": "Karnataka",
-        "lat": 12.9352,
-        "lon": 77.6245,
-        "address": "Koramangala 4th Block, 80 Feet Road, Bengaluru, Karnataka 560034",
+        "lat": 13.9299,
+        "lon": 75.5681,
+        "address": "Remote Engineering Base, Shivamogga, Karnataka 577205, India (Serving Bengaluru)",
         "landmarks": [
             ("Electronic City Tollway Junction", 12.8399, 77.6770),
             ("Whitefield ITPL Main Entrance", 12.9863, 77.7381),
@@ -135,10 +135,10 @@ def build_kml_for_metro(metro_key: str, metro_data: Dict) -> str:
         '      <PolyStyle><color>1aff0000</color></PolyStyle>',
         '    </Style>',
         '',
-        '    <!-- FOCAL HUB PLACEMARK -->',
+        '    <!-- FOCAL SERVICE NODE PLACEMARK -->',
         '    <Placemark>',
-        f'      <name>Elesium Enterprise AI Headquarters - {city}</name>',
-        f'      <description>Primary sovereign AI state machine development center. {coord_label}</description>',
+        f'      <name>Elesium Enterprise AI Service Hub - {city}</name>',
+        f'      <description>Sovereign AI state machine engineering coverage for {city}. {coord_label}</description>',
         '      <styleUrl>#hubPoint</styleUrl>',
         '      <Point>',
         f'        <coordinates>{hub_lon},{hub_lat},0</coordinates>',
@@ -153,7 +153,7 @@ def build_kml_for_metro(metro_key: str, metro_data: Dict) -> str:
     for name, lm_lat, lm_lon in landmarks:
         kml.append('      <Placemark>')
         kml.append(f'        <name>Route: {name} -&gt; Elesium {city}</name>')
-        kml.append(f'        <description>Driving direction path from {name} converging on Elesium {city} headquarters.</description>')
+        kml.append(f'        <description>Service corridor vector from {name} to Elesium {city} coverage hub.</description>')
         kml.append('        <styleUrl>#vectorRoute</styleUrl>')
         kml.append('        <LineString>')
         kml.append('          <tessellate>1</tessellate>')

@@ -102,7 +102,7 @@ ${results.nistSecurityLevel >= 3
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Post-Quantum Cryptography & ML-KEM/Dilithium State Attestation Simulator | Elesium</title>
         <meta

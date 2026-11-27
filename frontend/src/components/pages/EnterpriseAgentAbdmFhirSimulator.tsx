@@ -127,7 +127,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
   }, [results.telemetryTrace]);
 
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 selection:bg-white/20">
+    <div className="min-h-[100dvh] bg-black text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8 selection:bg-white/20">
       <Helmet>
         <title>Enterprise Agent ABDM FHIR Privacy & De-Identification Simulator | Elesium</title>
         <meta
@@ -416,7 +416,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 </svg>
               </div>
 
-              <div className="grid grid-cols-4 gap-2 pt-2 border-t border-neutral-800/60 text-center font-mono text-[10px]">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-neutral-800/60 text-center font-mono text-[10px]">
                 <div className="p-1.5 rounded bg-neutral-950/80 border border-neutral-800 text-neutral-400">
                   <span>Batch: </span><span className="text-white font-bold">12 Streams</span>
                 </div>
@@ -549,7 +549,7 @@ Hospital network satisfies DPDP Act 2023 Section 8 sensitive personal data manda
                 readOnly
                 value={embedCode}
                 rows={4}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-200 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-200 focus:outline-none"
               />
               <div className="flex justify-end space-x-3">
                 <button

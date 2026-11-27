@@ -1,6 +1,6 @@
 # Clutch.co & GoodFirms B2B Directory Verification Dossier
-**Target Company:** Elesium Online (Elesium Digital Systems Private Limited)  
-**Categories:** Top AI Automation Agencies in India, Best Enterprise Software Development Companies Bangalore  
+**Target Company:** Elesium (`Elesium` (`Elesium Online`))  
+**Categories:** AI Automation Agencies in India, Enterprise Software Development Companies Bengaluru  
 **Canonical Domain:** `https://elesium.online`  
 **Target Location:** Bengaluru, India  
 
@@ -9,13 +9,15 @@
 ## 1. Clutch.co Directory Profile Information
 
 * **Company Name:** Elesium
-* **Tagline:** India's #1 Enterprise AI Company & Autonomous Multi-Agent Engineering Firm
-* **Min Project Size:** $10,000 / ₹8,00,000
+* **Organization / Alternate Name:** Elesium (Elesium Online)
+* **Tagline:** Sovereign Enterprise AI & Autonomous Multi-Agent Engineering Firm
+* **Min Project Size:** ₹1,50,000 ($2,000) Pilot / ₹6,00,000+ Enterprise
 * **Avg Hourly Rate:** $50 - $99 / hr
 * **Employees:** 10 - 49
-* **Founded:** 2024
-* **Headquarters:** Main Road, Shivamogga, Karnataka 577205, India
-* **Phone:** +91-8317329312
+* **Founded:** 2024-03-15
+* **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India
+* **Secondary Engineering Pod (Supporting R&D):** Main Road, Shivamogga, Karnataka 577205, India
+* **Phone:** +91 83173 29312
 * **Contact Email:** contact@elesium.online
 * **Website:** https://elesium.online
 * **Focus Areas:**
@@ -29,7 +31,7 @@
   - Healthcare & Life Sciences (15%)
 
 ### Clutch Company Overview (Copy & Paste)
-> Elesium is a premier enterprise AI engineering firm based in Bengaluru, India. We engineer deterministic multi-agent state machines and sovereign private VPC inference infrastructure that replace fragile manual workflows with automated execution. 
+> Elesium (Elesium (Elesium Online)) is an enterprise AI engineering firm operating remotely from Shivamogga, Karnataka, India (serving Bengaluru & Global). We engineer deterministic multi-agent state machines and sovereign private VPC inference infrastructure that replace fragile manual workflows with automated execution. 
 > 
 > Calibrated for enterprise leaders across BFSI, supply chain logistics, and manufacturing, our systems deliver verified 3x-5x cash-flow ROI within 90 days. We specialize in air-gapped on-premise GPU clusters running quantized open-source models (vLLM, DeepSeek-R1, Llama 3) with full DPDP Act 2023, ISO 27001, and SOC-2 Type II compliance guarantees.
 

@@ -145,7 +145,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
         ],
         keyMoments: [
             { time: "00:00", seconds: 0, title: "The Low-Code Ceiling: When n8n Hits Enterprise Limits", description: "Why visual DAG builders break under complex multi-branch conditional loops and high-throughput data volumes." },
-            { time: "03:50", seconds: 230, title: "LangGraph Architecture: Cycles, State, and Memory", description: "Deep dive into state schemas, checkpointing to PostgreSQL, and resuming execution from failed nodes." },
+            { time: "03:50", seconds: 230, title: "LangGraph Architecture: Cycles, State, and Memory", description: "Deep inspect into state schemas, checkpointing to PostgreSQL, and resuming execution from failed nodes." },
             { time: "08:15", seconds: 495, title: "Handling Asynchronous Human-in-the-Loop Interrupts", description: "Pausing agent execution cleanly while awaiting senior compliance officer review without thread blocking." },
             { time: "13:20", seconds: 800, title: "Benchmarking Cost and Infrastructure Footprint", description: "Comparing managed low-code licensing costs against private Kubernetes deployments." },
             { time: "16:40", seconds: 1000, title: "The Hybrid Enterprise Strategy", description: "Using n8n for rapid internal utility automation while reserving LangGraph for core revenue-generating systems." }
@@ -3029,7 +3029,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
     {
         "id": "sfv-19",
         "slug": "enterprise-agent-ondc-retail-inventory-simulator",
-        "title": "Ondc Retail Inventory Multi Ecosystem Automation  -  Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium",
+        "title": "Ondc Retail Inventory Multi Infrastructure stack Automation  -  Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization | Elesium",
         "youtubeId": "Ond2rI108h",
         "duration": "0:30",
         "durationIso": "PT30S",
@@ -3037,11 +3037,11 @@ export const videoMasterclasses: VideoMasterclass[] = [
         "industry": "E-Commerce, FMCG & Retail Logistics",
         "category": "30s Short-Form Breakdown",
         "videoType": "short",
-        "keyword": "ondc retail inventory multi ecosystem automation",
+        "keyword": "ondc retail inventory multi infrastructure stack automation",
         "keyBenefit": "Beckn Protocol Beckn-ONDC Gateway & Real-Time Catalog Synchronization",
         "heroImage": "https://elesium.online/og-image.png",
         "targetPersona": "Chief Omnichannel Officers & E-Commerce VPs",
-        "executiveSummary": "A 30-second technical architecture breakdown of ondc retail inventory multi ecosystem automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
+        "executiveSummary": "A 30-second technical architecture breakdown of ondc retail inventory multi infrastructure stack automation for enterprise leaders. Covers operational friction, deterministic LangGraph state machines in sovereign private VPCs, and audited balance-sheet ROI metrics.",
         "roiMetrics": [
             {
                 "label": "Sync Latency",
@@ -3073,7 +3073,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "time": "00:00",
                 "seconds": 0,
                 "title": "Exact Spoken Keyword Hook",
-                "description": "Searching for ONDC retail inventory multi ecosystem automation that stops overselling?"
+                "description": "Searching for ONDC retail inventory multi infrastructure stack automation that stops overselling?"
             },
             {
                 "time": "00:03",
@@ -3097,7 +3097,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "time": "00:26",
                 "seconds": 26,
                 "title": "Frictionless Conversion Action",
-                "description": "Simulate your multi-ecosystem ONDC gateway now at elesium.online."
+                "description": "Simulate your multi-infrastructure stack ONDC gateway now at elesium.online."
             }
         ],
         "architectureStages": [
@@ -3113,7 +3113,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
             },
             {
                 "stage": "Stage 02",
-                "name": "Multi-Ecosystem Catalog Sync State Graph",
+                "name": "Multi-Infrastructure stack Catalog Sync State Graph",
                 "bullets": [
                     "LangGraph coordination across Zepto, Blinkit, Amazon, and ONDC channels",
                     "Dynamic inventory reservation buffers preventing phantom out-of-stock events",
@@ -3138,8 +3138,8 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "seconds": 0,
                 "title": "Exact Spoken Keyword Hook",
                 "visual": "Dynamic ONDC network node map connecting multiple buyer apps to seller ERP inventories with flashing live orders.",
-                "voiceover": "Searching for ONDC retail inventory multi ecosystem automation that stops overselling?",
-                "caption": "ONDC RETAIL INVENTORY MULTI ECOSYSTEM AUTOMATION"
+                "voiceover": "Searching for ONDC retail inventory multi infrastructure stack automation that stops overselling?",
+                "caption": "ONDC RETAIL INVENTORY MULTI INFRASTRUCTURE STACK AUTOMATION"
             },
             {
                 "time": "00:03 - 00:08",
@@ -3170,11 +3170,11 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "seconds": 26,
                 "title": "Frictionless Conversion Action",
                 "visual": "Avatar directing retailers to test the live ONDC catalog simulator at elesium.online.",
-                "voiceover": "Simulate your multi-ecosystem ONDC gateway now at elesium.online.",
+                "voiceover": "Simulate your multi-infrastructure stack ONDC gateway now at elesium.online.",
                 "caption": "SIMULATE ONDC GATEWAY // ELESIUM.ONLINE"
             }
         ],
-        "fullTranscript": "Searching for ONDC retail inventory multi ecosystem automation that stops overselling? Selling across Blinkit, Zepto, and ONDC causes inventory desynchronization, phantom stockouts, and brutal marketplace cancellation penalties. Elesium deploys deterministic Beckn protocol gateways. Our multi-agent state machines synchronize SKUs, lock inventory in sub-250ms, and route orders to the closest warehouse. Cut stockouts by 74%, scaled throughput past 12,000 transactions per second, and saved \u20b938 Lakhs in monthly order cancellation penalties. Simulate your multi-ecosystem ONDC gateway now at elesium.online."
+        "fullTranscript": "Searching for ONDC retail inventory multi infrastructure stack automation that stops overselling? Selling across Blinkit, Zepto, and ONDC causes inventory desynchronization, phantom stockouts, and brutal marketplace cancellation penalties. Elesium deploys deterministic Beckn protocol gateways. Our multi-agent state machines synchronize SKUs, lock inventory in sub-250ms, and route orders to the closest warehouse. Cut stockouts by 74%, scaled throughput past 12,000 transactions per second, and saved \u20b938 Lakhs in monthly order cancellation penalties. Simulate your multi-infrastructure stack ONDC gateway now at elesium.online."
     },
     {
         "id": "sfv-20",
@@ -6397,7 +6397,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "time": "00:26",
                 "seconds": 26,
                 "title": "Frictionless Conversion Call to Action",
-                "description": "Unlock two-million-token context windows across your GPU clusters today. Run the Context Parallelism simulator on elesium.online."
+                "description": "Enable two-million-token context windows across your GPU clusters today. Run the Context Parallelism simulator on elesium.online."
             }
         ],
         "architectureStages": [
@@ -6470,11 +6470,11 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "seconds": 26,
                 "title": "Frictionless Conversion Call to Action",
                 "visual": "The Elesium Context Parallelism Simulator UI with interactive sequence horizon and CP degree sliders and instant architecture audit booking.",
-                "voiceover": "Unlock two-million-token context windows across your GPU clusters today. Run the Context Parallelism simulator on elesium.online.",
+                "voiceover": "Enable two-million-token context windows across your GPU clusters today. Run the Context Parallelism simulator on elesium.online.",
                 "caption": "SIMULATE CONTEXT PARALLELISM AT ELESIUM.ONLINE"
             }
         ],
-        "fullTranscript": "Searching for context parallelism with Ring KV communication overlap to run two-million-token LLM inference without out-of-memory crashes? Unpartitioned KV caches explode past 512 gigabytes at two-million tokens, causing immediate CUDA out-of-memory crashes on single GPU nodes. Elesium shards the sequence dimension across GPU ranks, streaming peer-to-peer Ring KV chunks concurrently with local matrix multiplication. We achieve 96.4% communication overlap efficiency, sustain sub-10.4ms forward steps, and eliminate OOM crashes across 2M tokens. Unlock two-million-token context windows across your GPU clusters today. Run the Context Parallelism simulator on elesium.online."
+        "fullTranscript": "Searching for context parallelism with Ring KV communication overlap to run two-million-token LLM inference without out-of-memory crashes? Unpartitioned KV caches explode past 512 gigabytes at two-million tokens, causing immediate CUDA out-of-memory crashes on single GPU nodes. Elesium shards the sequence dimension across GPU ranks, streaming peer-to-peer Ring KV chunks concurrently with local matrix multiplication. We achieve 96.4% communication overlap efficiency, sustain sub-10.4ms forward steps, and eliminate OOM crashes across 2M tokens. Enable two-million-token context windows across your GPU clusters today. Run the Context Parallelism simulator on elesium.online."
     },
     {
         "id": "sfv-42",
@@ -7273,7 +7273,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "time": "00:00",
                 "seconds": 0,
                 "title": "Exact Spoken Keyword Hook",
-                "description": "Dynamic KV-cache eviction and attention sink compression daemons unlock infinite two-million token context windows without OOM crashes."
+                "description": "Dynamic KV-cache eviction and attention sink compression daemons enable infinite two-million token context windows without OOM crashes."
             },
             {
                 "time": "00:03",
@@ -7339,7 +7339,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "title": "Exact Spoken Keyword Hook",
                 "caption": "Dynamic KV-Cache Eviction & Attention Sink Compression",
                 "visual": "Dual-node H100 GPU cluster telemetry dashboard displaying real-time KV cache memory allocation and active context token counts.",
-                "voiceover": "Dynamic KV-cache eviction and attention sink compression daemons unlock infinite two-million token context windows without OOM crashes."
+                "voiceover": "Dynamic KV-cache eviction and attention sink compression daemons enable infinite two-million token context windows without OOM crashes."
             },
             {
                 "time": "00:03 - 00:08",
@@ -7374,7 +7374,7 @@ export const videoMasterclasses: VideoMasterclass[] = [
                 "voiceover": "Visit elesium dot online to simulate your KV-cache eviction architecture and claim your sovereign long-context deployment roadmap."
             }
         ],
-        "fullTranscript": "Dynamic KV-cache eviction and attention sink compression daemons unlock infinite two-million token context windows without OOM crashes. Standard uncompressed KV caches consume over two hundred gigabytes of high-bandwidth memory at million-token scales, collapsing multi-tenant concurrency. Our architecture preserves initial attention sink tokens to stabilize softmax entropy while dynamically retaining heavy-hitter tokens via custom Triton eviction kernels. This slashes VRAM requirements by over four-fold, sustains sub-one percent perplexity degradation, and quad-scales concurrent long-context agent swarms. Visit elesium dot online to simulate your KV-cache eviction architecture and claim your sovereign long-context deployment roadmap."
+        "fullTranscript": "Dynamic KV-cache eviction and attention sink compression daemons enable infinite two-million token context windows without OOM crashes. Standard uncompressed KV caches consume over two hundred gigabytes of high-bandwidth memory at million-token scales, collapsing multi-tenant concurrency. Our architecture preserves initial attention sink tokens to stabilize softmax entropy while dynamically retaining heavy-hitter tokens via custom Triton eviction kernels. This slashes VRAM requirements by over four-fold, sustains sub-one percent perplexity degradation, and quad-scales concurrent long-context agent swarms. Visit elesium dot online to simulate your KV-cache eviction architecture and claim your sovereign long-context deployment roadmap."
     },
     {
         "id": "sfv-48",

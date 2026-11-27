@@ -132,7 +132,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Disaggregated Pre-fill &amp; Chunked KV Routing Simulator | Elesium</title>
         <meta
@@ -508,7 +508,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-disaggregated-prefi
                 readOnly
                 value={embedSnippet}
                 rows={5}
-                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none"
+                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-300 focus:outline-none"
               />
               <button
                 onClick={copyEmbed}

@@ -100,7 +100,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-20 selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Vector DB & RAG Latency Benchmark Simulator | Elesium</title>
         <meta
@@ -204,7 +204,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 <span className="text-neutral-400">Embedding Dimensions</span>
                 <span className="text-white font-semibold">{dimensions} dims</span>
               </div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {[
                   { dim: 384, label: '384 (MiniLM)' },
                   { dim: 768, label: '768 (BGE-base)' },
@@ -254,7 +254,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
                 <span className="text-neutral-400">Quantization &amp; Compression</span>
                 <span className="text-white font-semibold">{quantizationType.toUpperCase()}</span>
               </div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {[
                   { type: 'fp32', label: 'FP32 (Exact)' },
                   { type: 'fp16', label: 'FP16 (Half)' },
@@ -569,7 +569,7 @@ Generated via Elesium Sovereign AI Engineering (https://elesium.online)
             <textarea
               readOnly
               value={embedCodeSnippet}
-              className="w-full h-32 p-3 font-mono text-xs rounded-xl border border-neutral-800 bg-neutral-950 text-neutral-300 resize-none focus:outline-none"
+              className="w-full h-32 p-3 font-mono text-base sm:text-xs rounded-xl border border-neutral-800 bg-neutral-950 text-neutral-300 resize-none focus:outline-none"
             />
             <div className="flex justify-end gap-3 mt-4">
               <button

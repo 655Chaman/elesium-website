@@ -133,7 +133,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>FP8 & MXFP8 Microscaling Simulator | Enterprise Autonomous Agent Inference | Elesium</title>
         <meta
@@ -257,7 +257,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
                   <span className="text-neutral-400">Micro-Block Size (Vector Partition)</span>
                   <span className="text-white font-semibold">k={blockSize} Elements</span>
                 </div>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[16, 32, 64, 128].map((val) => (
                     <button
                       key={val}
@@ -522,7 +522,7 @@ Generated via: https://elesium.online/tools/enterprise-agent-fp8-microscaling-si
                 readOnly
                 value={embedSnippet}
                 rows={5}
-                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none"
+                className="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-300 focus:outline-none"
               />
               <button
                 onClick={copyEmbed}

@@ -2,7 +2,7 @@
 ## Sovereign Enterprise AI Acquisition Campaigns: Delhivery, Groww, and Shadowfax
 
 **Document Reference:** ELESIUM-OUTBOUND-ARTILLERY-2026-V1  
-**Author:** Elesium Digital Systems (https://elesium.online) - Bangalore, India  
+**Author:** Elesium (https://elesium.online) - Bangalore, India  
 **Target C-Suite Profiles:** CTOs, CISOs, Chief Risk Officers (CROs), and VPs of Core Infrastructure  
 **Booking Protocol:** Private Architecture Briefing (https://elesium.online/how-we-work) | Signal/WhatsApp (+91 83173 29312)  
 
@@ -46,7 +46,7 @@
 > Open to reviewing the technical audit?
 > 
 > Regards,  
-> **Enterprise Architecture Desk** | Elesium Digital Systems  
+> **Enterprise Architecture Desk** | Elesium  
 > https://elesium.online/how-we-work
 
 ---
@@ -80,7 +80,7 @@
 > Respectfully,
 > 
 > **Lead Infrastructure Architect**  
-> Elesium Digital Systems - Bangalore  
+> Elesium - Bangalore  
 > https://elesium.online
 
 ---
@@ -123,7 +123,7 @@
 > Worth a brief peer-to-peer review?
 > 
 > Regards,  
-> **Enterprise BFSI Architecture Desk** | Elesium Digital Systems  
+> **Enterprise BFSI Architecture Desk** | Elesium  
 > https://elesium.online/how-we-work
 
 ---
@@ -156,7 +156,7 @@
 > Respectfully,
 > 
 > **Lead BFSI Systems Architect**  
-> Elesium Digital Systems - Bangalore  
+> Elesium - Bangalore  
 > https://elesium.online
 
 ---
@@ -201,7 +201,7 @@
 > Open to a quick peer-to-peer look?
 > 
 > Regards,  
-> **Enterprise Architecture Desk** | Elesium Digital Systems  
+> **Enterprise Architecture Desk** | Elesium  
 > https://elesium.online/how-we-work
 
 ---
@@ -232,7 +232,7 @@
 > Respectfully,
 > 
 > **Lead Supply Chain Systems Architect**  
-> Elesium Digital Systems - Bangalore  
+> Elesium - Bangalore  
 > https://elesium.online
 
 ---
@@ -334,4 +334,4 @@ Every outreach touchpoint and response script routes directly to Elesium’s hig
    *Experience:* Transparent access to empirical TTFT benchmarks, PagedAttention v2 memory fragmentation analyses, and SEBI/RBI/DPDP statutory compliance mappings.
 
 ---
-*Authored by Elesium Digital Systems. All rights reserved. Enterprise Outbound Artillery Release 2026-V1.*
+*Authored by Elesium. All rights reserved. Enterprise Outbound Artillery Release 2026-V1.*

@@ -33,7 +33,7 @@ export default function EmbedAgentPostQuantumSimulator() {
   }, [inputs]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>Agent Post-Quantum Cryptography &amp; ML-KEM Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-post-quantum-simulator" />

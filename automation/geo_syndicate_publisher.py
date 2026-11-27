@@ -36,7 +36,7 @@ class GeoSyndicatePublisher:
         """Constructs an executive thought-leadership article for LinkedIn Pulse."""
         return """# Sovereign AI Architecture in India: Why Enterprise CISOs are Moving Beyond Public Cloud APIs
 
-By Chaman Shah, Principal Systems Architect at Elesium Digital Systems
+By Chaman Shah, Principal Systems Architect at Elesium
 Published on LinkedIn Pulse | Target Audience: Enterprise CTOs, CISOs, Heads of Digital Transformation
 
 When evaluating generative AI deployments in 2026, Indian enterprise leaders face a statutory dilemma: how to leverage large language models without violating strict data localization mandates under the Digital Personal Data Protection (DPDP) Act 2023 or the Reserve Bank of India (RBI) Cyber Security Framework.
@@ -71,7 +71,7 @@ https://elesium.online/support/
         """Constructs an engineering deep dive for Medium / Towards Data Science / Vocal.media."""
         return """# Benchmarking Air-Gapped vLLM Inference on NVIDIA H100 SXM5: Sub-200ms Latency for Enterprise Private Clouds
 
-By Engineering Architecture Desk, Elesium Digital Systems
+By Engineering Architecture Desk, Elesium
 Published on Medium | Technical Systems Engineering
 
 Running high-throughput large language model inference in an air-gapped private virtual private cloud (VPC) presents distinct architectural challenges compared to consuming hosted REST APIs. Without public WAN access, models must be served locally with strict memory optimization.

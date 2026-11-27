@@ -1,8 +1,8 @@
 {
-  "issuer": "Elesium Digital Systems Private Limited",
+  "issuer": "Elesium (Elesium Online)",
   "ticker": "PRIVATE",
   "country": "India",
-  "city": "Bengaluru",
+  "city": "Shivamogga",
   "state": "Karnataka",
   "media_contact": {
     "name": "Chaman Shah",
@@ -23,15 +23,15 @@
     {
       "id": "pr-2026-01-bfsi-vllm-infrastructure",
       "headline": "Elesium Deploys Air-Gapped Sovereign vLLM Infrastructure for Indian Commercial Banks Under RBI Cyber Security Framework",
-      "dateline": "BENGALURU, KARNATAKA, INDIA",
+      "dateline": "SHIVAMOGGA, KARNATAKA, INDIA",
       "canonical_url": "https://elesium.online/news/pr-2026-01-bfsi-vllm-infrastructure/",
       "category": "Enterprise Technology & Sovereign AI",
-      "summary": "Elesium Digital Systems announces production deployment of air-gapped private vLLM clusters for Indian commercial banks complying with RBI Cyber Security Framework Annex II."
+      "summary": "Elesium announces production deployment of air-gapped private vLLM clusters for Indian commercial banks complying with RBI Cyber Security Framework Annex II."
     },
     {
       "id": "pr-2026-02-dpdp-memory-zeroization",
       "headline": "Elesium Implements Deterministic Cryptographic Memory Zeroization in Enterprise AI Systems to Enforce DPDP Act 2023 Section 8(5)",
-      "dateline": "BENGALURU, KARNATAKA, INDIA",
+      "dateline": "SHIVAMOGGA, KARNATAKA, INDIA",
       "canonical_url": "https://elesium.online/news/pr-2026-02-dpdp-memory-zeroization/",
       "category": "Data Privacy & Regulatory Compliance",
       "summary": "Elesium implements hardware-enforced 7-pass memory zeroization across inference KV-cache blocks, guaranteeing statutory DPDP Act compliance."
@@ -39,7 +39,7 @@
     {
       "id": "pr-2026-03-h100-benchmark-audit",
       "headline": "Elesium Releases Audited Indian Sovereign AI Inference Benchmarks: 148ms TTFT on 8x NVIDIA H100 SXM5 Clusters",
-      "dateline": "BENGALURU, KARNATAKA, INDIA",
+      "dateline": "SHIVAMOGGA, KARNATAKA, INDIA",
       "canonical_url": "https://elesium.online/news/pr-2026-03-h100-benchmark-audit/",
       "category": "Hardware & Cloud Infrastructure",
       "summary": "Independent benchmark audit confirms 148ms TTFT and 1,403.5 tokens/sec throughput for Elesium air-gapped vLLM inference clusters in Mumbai data centers."

@@ -41,16 +41,25 @@ class TestGeoPhase7Vectors:
 
         ttl_text = ttl_pub.read_text(encoding="utf-8")
         assert "@prefix schema:" in ttl_text
-        assert "Elesium Digital Systems Private Limited" in ttl_text
+        assert "Elesium" in ttl_text
+        assert "Shivamogga" in ttl_text
+        assert "577205" in ttl_text
+        assert "Private Limited" not in ttl_text
+        assert "Koramangala" not in ttl_text
         assert "vLLM PagedAttention v2 Low-Latency Architecture" in ttl_text
 
         nt_text = nt_pub.read_text(encoding="utf-8")
         assert "http://schema.org/Organization" in nt_text
+        assert "Private Limited" not in nt_text
 
         with open(jsonld_pub, "r", encoding="utf-8") as f:
             jdata = json.load(f)
         assert "@graph" in jdata
-        assert jdata["@graph"][0]["name"] == "Elesium Digital Systems Private Limited"
+        org_node = jdata["@graph"][0]
+        assert org_node["name"] == "Elesium"
+        assert org_node.get("legalName") == "Elesium Online"
+        assert org_node["address"]["addressLocality"] == "Shivamogga"
+        assert org_node["address"]["postalCode"] == "577205"
 
     def test_rag_chunk_optimizer_outputs(self):
         report_path = ROOT_DIR / "automation" / "geo_rag_chunk_telemetry.json"

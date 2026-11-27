@@ -544,7 +544,7 @@ export default function VideoMirror() {
                                 placeholder="Search keyword, industry, topic..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full pl-11 pr-4 py-2.5 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white/40 transition-colors"
+                                className="w-full pl-11 pr-10 py-2.5 rounded-full bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 text-base sm:text-xs text-black dark:text-white placeholder-neutral-500 focus:outline-none focus:border-black dark:focus:border-white/40 transition-colors"
                             />
                             {searchQuery && (
                                 <button

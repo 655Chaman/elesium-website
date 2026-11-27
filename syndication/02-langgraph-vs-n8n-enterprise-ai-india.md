@@ -14,7 +14,7 @@ target_keywords:
 ---
 
 # LangGraph vs n8n for Enterprise Multi-Agent Systems: A 2026 Production Post-Mortem
-*By Chaman Shah, Principal AI Systems Architect • Elesium Online*
+*By Chaman Shah, Principal AI Systems Architect | Elesium (Elesium Online | Shivamogga, Karnataka)*
 
 ---
 
@@ -22,7 +22,7 @@ As enterprise engineering teams across Bangalore, Mumbai, and Hyderabad rush to 
 
 > *"Should we build our workflow automation using a visual low-code orchestrator like n8n, or should we invest in custom, compiled Python state machines using LangGraph?"*
 
-At [Elesium](https://elesium.online), we have deployed, benchmarked, and load-tested both paradigms under rigorous production conditions across Indian banking, manufacturing, and supply-chain enterprises.
+At [Elesium](https://elesium.online) (Elesium Online | Shivamogga, Karnataka, serving Bengaluru & pan-India), we have deployed, benchmarked, and load-tested both paradigms under rigorous production conditions across Indian banking, manufacturing, and supply-chain enterprises.
 
 Here is the unvarnished engineering post-mortem: where each tool excels, where each breaks under load, and how to choose the right architecture for your organization.
 

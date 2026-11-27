@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: 'pages'
@@ -28,27 +26,15 @@ jobs:
         working-directory: ./frontend
       - run: npm run build
         working-directory: ./frontend
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/dist
           cname: elesium.online
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./frontend/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/deploy-pages@v4
-        id: deployment
-        continue-on-error: true
-
+          enable_jekyll: false
+          exclude_assets: '.github'
       - name: Ping Bing Sitemap
         run: |
-          curl -s "https://www.bing.com/ping?sitemap=https://elesium.online/sitemap.xml" \
+          curl -s --max-time 15 "https://www.bing.com/ping?sitemap=https://elesium.online/sitemap.xml" \
             -o /dev/null -w "Bing ping status: %{http_code}\n"

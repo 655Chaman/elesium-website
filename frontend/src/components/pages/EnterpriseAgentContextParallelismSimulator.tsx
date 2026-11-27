@@ -134,7 +134,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8 font-sans">
       <Helmet>
         <title>Enterprise Context Parallelism & Ring KV Simulator | Elesium</title>
         <meta
@@ -233,7 +233,7 @@ Link: https://elesium.online/tools/enterprise-agent-context-parallelism-simulato
                   <span>Context Parallel Degree (CP)</span>
                   <span className="text-neutral-200 font-mono">CP-{cpDegree} ({cpDegree} GPUs)</span>
                 </div>
-                <div className="grid grid-cols-6 gap-1.5">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-1.5">
                   {[2, 4, 8, 16, 32, 64].map((degree) => (
                     <button
                       key={degree}

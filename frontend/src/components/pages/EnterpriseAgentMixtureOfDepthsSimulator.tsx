@@ -114,7 +114,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
   ];
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 font-sans selection:bg-white/20 selection:text-white">
       <Helmet>
         <title>Enterprise Autonomous Agent Mixture-of-Depths (MoD) Simulator | Elesium</title>
         <meta
@@ -243,7 +243,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
                     <span className="font-medium">LAYER CAPACITY FACTOR (C)</span>
                     <span className="text-white font-bold">{Math.round(capacityFactor * 100)}% computing</span>
                   </div>
-                  <div className="grid grid-cols-4 gap-2 text-xs font-mono mb-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono mb-2">
                     {[
                       { val: 0.125, label: '12.5%' },
                       { val: 0.25, label: '25%' },
@@ -588,7 +588,7 @@ Issued by: Elesium AI Systems Architecture Advisory (https://elesium.online)`;
             <textarea
               readOnly
               value={embedSnippet}
-              className="w-full h-28 bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-300 select-all mb-4 focus:outline-none focus:border-white/40"
+              className="w-full h-28 bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-300 select-all mb-4 focus:outline-none focus:border-white/40"
             />
             <div className="flex justify-end gap-2">
               <button

@@ -155,7 +155,7 @@ export default function Glossary() {
               placeholder="Search concepts, acronyms (e.g. EDAF, MLA, DPDP)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full text-black dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white text-sm transition-all duration-300"
+              className="w-full pl-11 pr-4 py-3 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10 rounded-full text-black dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white text-base sm:text-sm transition-all duration-300"
             />
           </div>
 

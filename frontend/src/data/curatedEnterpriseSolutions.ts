@@ -3435,7 +3435,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms",
     "paragraphs": [
-      "Digital lending apps and instant personal loan platforms in India face escalating losses from sophisticated fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
+      "Digital lending apps and instant personal loan platforms in India face escalating losses from hardened fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
       "Our sovereign fraud defense engine deploys real-time cryptographic validation pipelines inside air-gapped private VPC enclaves. The system directly parses and cryptographically validates UIDAI offline XML signatures and secure QR codes from m-Aadhaar documents. Concurrently, it queries the NSDL/Income Tax PAN verification API over secure mutual TLS, matching applicant names, father's names, and dates of birth with fuzzy phonetic logic adapted for Indian vernacular naming conventions.",
       "The fraud defense state machine evaluates onboarding telemetry across a multi-layered risk model in under 45ms. It executes deepfake liveness detection on selfie video streams, checking micro-vascular pulse patterns and optical reflection anomalies. If mismatched face vectors or synthetic document artifacts are detected, the transaction state immediately transitions to quarantine, logging forensic device fingerprints and IP telemetry to the fraud registry.",
       "Statutory compliance satisfies RBI Master Direction on Know Your Customer (KYC) 2016, PMLA rules, and UIDAI security regulations. The engine processes 3,800 verification streams per second with a 99.85% fraud detection rate, reducing customer onboarding turnaround from 24 hours to under 30 seconds."
@@ -3525,7 +3525,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     },
     "hero": {
       "hookSentence": "Defend digital lending platforms against synthetic identity fraud with real-time Aadhaar e-KYC XML verification, NSDL PAN cross-checking, and deepfake liveness telemetry.",
-      "subheadline": "Digital lending apps and instant personal loan platforms in India face escalating losses from sophisticated fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
+      "subheadline": "Digital lending apps and instant personal loan platforms in India face escalating losses from hardened fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
       "heroImage": "https://elesium.online/og-image.png",
@@ -3535,7 +3535,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Deterministic Operational Capabilities & Aadhaar e-KYC and PAN Verification Fraud Defense Telemetry for Digital Lending Platforms",
         "copy": [
-          "Digital lending apps and instant personal loan platforms in India face escalating losses from sophisticated fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
+          "Digital lending apps and instant personal loan platforms in India face escalating losses from hardened fraud syndicates using forged PAN cards, stolen Aadhaar numbers, and deepfake video injection during onboarding. Traditional OCR verification methods only check text alignment, failing to detect AI-generated synthetic identities or tampered QR codes. Onboarding delays caused by manual review teams increase customer abandonment rates by over 40%.",
           "Our sovereign fraud defense engine deploys real-time cryptographic validation pipelines inside air-gapped private VPC enclaves. The system directly parses and cryptographically validates UIDAI offline XML signatures and secure QR codes from m-Aadhaar documents. Concurrently, it queries the NSDL/Income Tax PAN verification API over secure mutual TLS, matching applicant names, father's names, and dates of birth with fuzzy phonetic logic adapted for Indian vernacular naming conventions."
         ],
         "bullets": [
@@ -4221,7 +4221,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways",
     "paragraphs": [
-      "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block sophisticated distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
+      "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block hardened distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
       "Our sovereign fraud detection architecture deploys a 100B-parameter Mixture-of-Experts (MoE) agent swarm across dedicated NVIDIA H100 SXM5 GPU clusters in private banking VPCs. Ingress payment authorization payloads enter through zero-copy shared memory queues via mutual TLS. The swarm executes specialized expert models in parallel: behavioral velocity analysis, device fingerprint graph embedding, biometric typing rhythm evaluation, and historical cardholder risk scoring.",
       "The fraud detection state machine calculates a unified composite risk score in under 7.8 milliseconds. It updates real-time transaction graph nodes across millions of concurrent payment streams, identifying coordinated botnet IP clusters and stolen credential reuse across disparate merchants. Transactions exceeding risk thresholds trigger automated challenge workflows (such as step-up biometric authentication) or instant zero-latency transaction rejection.",
       "Compliance strictly adheres to RBI Master Directions on Card Payment Security, PCI-DSS Level 1 mandates, and Section 8(5) of the DPDP Act 2023. The cluster processes 4,100 authorization evaluations per second per node with a 99.94% fraud detection rate, reducing false positive rejections by 78% and protecting billions in daily transaction volume."
@@ -4311,7 +4311,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     },
     "hero": {
       "hookSentence": "Deploy 100B-parameter multimodal fraud detection agent swarms for payment gateways, analyzing transaction risk graphs in sub-8ms to block distributed carding attacks.",
-      "subheadline": "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block sophisticated distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
+      "subheadline": "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block hardened distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
       "heroImage": "https://elesium.online/og-image.png",
@@ -4321,7 +4321,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Deterministic Operational Capabilities & 100B-Parameter Autonomous Fraud Detection Agent Swarms for Payment Gateways",
         "copy": [
-          "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block sophisticated distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
+          "Tier-1 payment gateways and merchant acquirers process thousands of financial transactions every second, leaving less than a 10-millisecond window to identify and block hardened distributed fraud attacks. Traditional rule-based fraud filters and shallow machine learning models fail to detect organized carding botnets, BIN attack waves, and coordinated merchant identity theft across distributed merchant accounts. False positives disrupt legitimate shoppers, causing catastrophic merchant revenue loss.",
           "Our sovereign fraud detection architecture deploys a 100B-parameter Mixture-of-Experts (MoE) agent swarm across dedicated NVIDIA H100 SXM5 GPU clusters in private banking VPCs. Ingress payment authorization payloads enter through zero-copy shared memory queues via mutual TLS. The swarm executes specialized expert models in parallel: behavioral velocity analysis, device fingerprint graph embedding, biometric typing rhythm evaluation, and historical cardholder risk scoring."
         ],
         "bullets": [
@@ -4748,7 +4748,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "Financial intelligence units at Indian commercial banks investigating complex multi-layered money laundering syndicates struggle with GPU memory limits when analyzing long-context transaction graphs. Traditional self-attention mechanisms exhibit quadratic memory scaling ($O(N^2)$), running out of VRAM when graph sequences exceed 32,000 tokens. As a result, forensic analysts are forced to truncate historical transaction data, missing critical shell company layering transactions spread across multi-month intervals.",
       "Our sovereign fraud forensics architecture deploys distributed Ring Attention controllers across NVIDIA H100 SXM5 clusters interconnected by 4th Generation NVLink running at 900 GB/s. The system chunks million-token transaction histories into localized blocks, streaming key-value vectors in a physical NVLink ring topology between adjacent GPUs while computing local attention concurrently with inter-device memory transfers.",
       "The ring attention state machine maintains perfect computation-communication overlap without storing the full global attention matrix in any single GPU's memory. If communication latency fluctuations occur across the NVLink fabric, the saturation controller dynamically adjusts chunk block sizing, maintaining 98.5% link saturation without pipeline stalls. Suspicious transaction sub-graphs are flagged and extracted into tamper-evident forensic case files.",
-      "Statutory compliance satisfies Prevention of Money Laundering Act (PMLA) mandates, RBI Cyber Security Framework Section 4 on incident investigation, and FIU-IND reporting guidelines. The cluster processes context windows exceeding 1,000,000 tokens in under 142ms, enabling forensic investigators to uncover sophisticated money laundering rings across millions of historical accounts without data truncation."
+      "Statutory compliance satisfies Prevention of Money Laundering Act (PMLA) mandates, RBI Cyber Security Framework Section 4 on incident investigation, and FIU-IND reporting guidelines. The cluster processes context windows exceeding 1,000,000 tokens in under 142ms, enabling forensic investigators to uncover hardened money laundering rings across millions of historical accounts without data truncation."
     ],
     "capabilities": [
       {
@@ -4892,7 +4892,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Production Empirical Telemetry & SLAs",
         "copy": [
-          "Statutory compliance satisfies Prevention of Money Laundering Act (PMLA) mandates, RBI Cyber Security Framework Section 4 on incident investigation, and FIU-IND reporting guidelines. The cluster processes context windows exceeding 1,000,000 tokens in under 142ms, enabling forensic investigators to uncover sophisticated money laundering rings across millions of historical accounts without data truncation."
+          "Statutory compliance satisfies Prevention of Money Laundering Act (PMLA) mandates, RBI Cyber Security Framework Section 4 on incident investigation, and FIU-IND reporting guidelines. The cluster processes context windows exceeding 1,000,000 tokens in under 142ms, enabling forensic investigators to uncover hardened money laundering rings across millions of historical accounts without data truncation."
         ],
         "specs": [
           {
@@ -6049,7 +6049,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "secondaryCta": "Deploy Sovereign VPC Architecture",
     "primaryCtaText": "Schedule AI Architecture Audit",
     "primaryCtaLink": "/waitlist",
-    "firstSentence": "Automate zero-rated export invoice filing under Letter of Undertaking (LUT) with Tally Prime, ensuring seamless GST Form RFD-11 compliance and instant Shipping Bill reconciliation.",
+    "firstSentence": "Automate zero-rated export invoice filing under Letter of Undertaking (LUT) with Tally Prime, ensuring low-overhead GST Form RFD-11 compliance and instant Shipping Bill reconciliation.",
     "wordCount": 1480,
     "mozScore": 98,
     "heroImage": "https://elesium.online/og-image.png",
@@ -6144,7 +6144,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "institutional": "Corporate export conglomerate deployment, multi-STPI unit integration, dedicated foreign trade compliance retainer."
     },
     "hero": {
-      "hookSentence": "Automate zero-rated export invoice filing under Letter of Undertaking (LUT) with Tally Prime, ensuring seamless GST Form RFD-11 compliance and instant Shipping Bill reconciliation.",
+      "hookSentence": "Automate zero-rated export invoice filing under Letter of Undertaking (LUT) with Tally Prime, ensuring low-overhead GST Form RFD-11 compliance and instant Shipping Bill reconciliation.",
       "subheadline": "Export-oriented units (EOUs) and software services exporters in India executing zero-rated supplies under Letter of Undertaking (LUT) face complex accounting and documentation burdens. Issuing export invoices without paying integrated tax requires strict adherence to statutory LUT validity periods, foreign currency realization tracking, and precise disclosure in GSTR-1 Table 6A. Errors in export invoice endorsement phrases or currency conversion dates lead to frozen export refunds and tax demand notices.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
@@ -9463,7 +9463,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "paragraphs": [
       "Hyperlocal quick-commerce platforms and urban dark stores promising 10-minute grocery and essentials delivery face severe operational bottlenecks during evening demand surges. Picker congestion in narrow aisles, out-of-stock item substitutions, and misaligned delivery rider queues cause order preparation times to exceed 6 to 8 minutes, making sub-10-minute delivery physically impossible. Rider idle waiting times inflate delivery partner payouts and degrade customer retention.",
       "Our sovereign micro-fulfillment orchestration engine deploys real-time edge dispatch state machines directly within dark store local area networks. Incoming customer shopping baskets are analyzed instantly, generating optimal pick paths that minimize aisle transit distance and prevent picker congestion. Items are batched into synchronized picking waves based on shelf coordinates and product categories.",
-      "The dispatch queue state machine coordinates warehouse pickers, packers, and awaiting delivery riders through low-latency WebSocket interfaces. Pickers receive dynamic visual item verification prompts on handheld scanners, bounding pick times to under 120 seconds. In parallel, the system tracks incoming delivery rider GPS coordinates, assigning orders to arriving riders in real time to achieve seamless handoffs at the dispatch staging dock.",
+      "The dispatch queue state machine coordinates warehouse pickers, packers, and awaiting delivery riders through low-latency WebSocket interfaces. Pickers receive dynamic visual item verification prompts on handheld scanners, bounding pick times to under 120 seconds. In parallel, the system tracks incoming delivery rider GPS coordinates, assigning orders to arriving riders in real time to achieve low-overhead handoffs at the dispatch staging dock.",
       "Compliance monitoring adheres to local shop and establishment labor safety guidelines and cold-chain temperature preservation rules for perishable goods. Operating at sub-45ms telemetry latency, the engine reduces average order packing turnaround from 380 seconds to under 135 seconds, enabling dark stores to achieve 98.6% on-time sub-10-minute delivery SLAs."
     ],
     "capabilities": [
@@ -9594,7 +9594,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Air-Gapped Sovereign Logistics & Supply Chain Topology",
         "copy": [
-          "The dispatch queue state machine coordinates warehouse pickers, packers, and awaiting delivery riders through low-latency WebSocket interfaces. Pickers receive dynamic visual item verification prompts on handheld scanners, bounding pick times to under 120 seconds. In parallel, the system tracks incoming delivery rider GPS coordinates, assigning orders to arriving riders in real time to achieve seamless handoffs at the dispatch staging dock."
+          "The dispatch queue state machine coordinates warehouse pickers, packers, and awaiting delivery riders through low-latency WebSocket interfaces. Pickers receive dynamic visual item verification prompts on handheld scanners, bounding pick times to under 120 seconds. In parallel, the system tracks incoming delivery rider GPS coordinates, assigning orders to arriving riders in real time to achieve low-overhead handoffs at the dispatch staging dock."
         ],
         "bullets": [
           "Protocol Ingestion: Native Logistics & Supply Chain domain protocol stream parsing",
@@ -11557,7 +11557,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots",
     "paragraphs": [
-      "Hospital clinical informatics teams attempting to deploy AI clinical copilots face insurmountable GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
+      "Hospital clinical informatics teams attempting to deploy AI clinical copilots face prohibitive GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
       "Our sovereign clinical architecture deploys chunked-sequence attention weight partitioners on dedicated NVIDIA H100 SXM5 accelerators within private hospital networks. Long-sequence Electronic Health Records are divided into semantically coherent chronological episodes. The partitioner streams attention key-value blocks in fixed chunks through high-bandwidth memory, computing local and inter-chunk attention weights concurrently without materializing the full quadratic attention matrix in VRAM.",
       "The clinical reasoning state machine reconstructs longitudinal patient timelines with complete historical fidelity. It evaluates chronic disease trajectories, cumulative medication toxicities, and contraindicated drug combinations across multi-decade records in under 118 milliseconds. If a doctor queries a specific historical surgical event, the engine retrieves exact original clinical notes and lab values with verbatim page citations.",
       "Statutory compliance satisfies Indian Electronic Health Record (EHR) Standards 2016, Ayushman Bharat Digital Mission (ABDM) guidelines, and Section 8(5) of the DPDP Act 2023. Operating at 99.999% numerical stability, the chunked attention engine enables clinicians to analyze full-lifetime patient health records with zero data truncation, cutting diagnostic review times by 65%."
@@ -11647,7 +11647,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     },
     "hero": {
       "hookSentence": "Partition long-sequence attention weights across multi-year patient Electronic Health Records (EHR), analyzing 250,000+ token longitudinal medical histories in sub-120ms without VRAM overflow.",
-      "subheadline": "Hospital clinical informatics teams attempting to deploy AI clinical copilots face insurmountable GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
+      "subheadline": "Hospital clinical informatics teams attempting to deploy AI clinical copilots face prohibitive GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
       "heroImage": "https://elesium.online/og-image.png",
@@ -11657,7 +11657,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Deterministic Operational Capabilities & Chunked-Sequence Attention Weight Partitioners for Hospital Clinical EHR Copilots",
         "copy": [
-          "Hospital clinical informatics teams attempting to deploy AI clinical copilots face insurmountable GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
+          "Hospital clinical informatics teams attempting to deploy AI clinical copilots face prohibitive GPU memory barriers when analyzing multi-year longitudinal patient records. Chronic disease patients accumulate extensive medical histories comprising decades of lab results, surgical notes, medication orders, and radiological findings spanning 250,000+ tokens. Standard quadratic self-attention algorithms crash GPU memory, forcing clinicians to truncate patient histories and miss critical drug allergies or historical surgical complications.",
           "Our sovereign clinical architecture deploys chunked-sequence attention weight partitioners on dedicated NVIDIA H100 SXM5 accelerators within private hospital networks. Long-sequence Electronic Health Records are divided into semantically coherent chronological episodes. The partitioner streams attention key-value blocks in fixed chunks through high-bandwidth memory, computing local and inter-chunk attention weights concurrently without materializing the full quadratic attention matrix in VRAM."
         ],
         "bullets": [
@@ -13129,7 +13129,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries",
     "paragraphs": [
-      "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Sophisticated adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
+      "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Hardened adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
       "Our sovereign de-identification architecture deploys formal privacy-preserving transformations directly on raw clinical database records within hospital datacenters. The engine ingests structured EHR tables and unstructured clinical narratives over secure mTLS 1.3 channels. An automated natural language entity scrubber identifies and redacts all 18 HIPAA Safe Harbor identifiers and regional Indian identity markers (Aadhaar, ABHA, voter ID numbers) in memory.",
       "The re-identification defense state machine enforces mathematical privacy guarantees using $k$-anonymity ($k \\ge 10$), $l$-diversity, and $t$-closeness algorithms. Quasi-identifiers such as age and postal codes are algorithmically generalized into standardized demographic bins, while rare diagnostic codes are protected using localized differential privacy noise injection. The system continuously evaluates linkage attack vulnerability, blocking query combinations that could uniquely identify individual patients.",
       "Statutory compliance satisfies the Digital Information Security in Healthcare Act (DISHA), the ICMR National Ethical Guidelines for Biomedical Research, and Section 8(5) of the DPDP Act 2023. The platform processes 100,000 patient records in under 3 minutes with a guaranteed re-identification risk below 0.001%, enabling safe clinical data sharing for medical research."
@@ -13219,7 +13219,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     },
     "hero": {
       "hookSentence": "Sanitize Electronic Health Records for clinical trial registries with cryptographic k-anonymity and differential privacy, preventing linkage and re-identification attacks under DISHA mandates.",
-      "subheadline": "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Sophisticated adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
+      "subheadline": "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Hardened adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
       "heroImage": "https://elesium.online/og-image.png",
@@ -13229,7 +13229,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Deterministic Operational Capabilities & Electronic Health Record Cryptographic De-Identification and Re-Identification Defense Telemetry for Clinical Registries",
         "copy": [
-          "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Sophisticated adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
+          "Clinical research registries, medical genomics consortia, and epidemiological institutes in India face severe data privacy risks when sharing longitudinal electronic health records for medical research. Standard rule-based de-identification tools that simply remove patient names and phone numbers leave residual quasi-identifiers (such as rare diagnosis dates, zip codes, and demographic outliers) intact. Hardened adversaries can cross-reference sanitized clinical datasets with voter lists or public registries, re-identifying vulnerable patients.",
           "Our sovereign de-identification architecture deploys formal privacy-preserving transformations directly on raw clinical database records within hospital datacenters. The engine ingests structured EHR tables and unstructured clinical narratives over secure mTLS 1.3 channels. An automated natural language entity scrubber identifies and redacts all 18 HIPAA Safe Harbor identifiers and regional Indian identity markers (Aadhaar, ABHA, voter ID numbers) in memory."
         ],
         "bullets": [
@@ -13443,8 +13443,8 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "answer": "The microsegmentation policy selectively blocks unauthorized lateral IT traffic (SMB, SSH, HTTP) while maintaining active serial/clinical telemetry to bedside nurse monitoring stations."
       },
       {
-        "question": "Can the system discover unmanaged medical devices plugged in by visiting doctors or vendors?",
-        "answer": "Yes. The platform uses passive network fingerprinting and DHCP/ARP snooping to discover, identify, and profile new medical devices in seconds without active scanning."
+        "question": "Can the system evaluate unmanaged medical devices plugged in by visiting doctors or vendors?",
+        "answer": "Yes. The platform uses passive network fingerprinting and DHCP/ARP snooping to evaluate, identify, and profile new medical devices in seconds without active scanning."
       },
       {
         "question": "Does the platform satisfy CERT-In mandatory incident reporting guidelines?",
@@ -15490,7 +15490,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "Clinical diagnostic centers, pathology laboratory chains, and private hospitals participating in the Ayushman Bharat Digital Mission (ABDM) face complex cryptographic integration requirements when acting as Health Information Users (HIU). When a patient grants consent via their ABHA mobile app to share historical medical records, the diagnostic center must retrieve encrypted health information, validate the digital signature of the consent artifact, and decrypt multi-source FHIR bundles using Ephemeral Diffie-Hellman (ECDH) key exchanges. Cryptographic handshake timeouts delay patient consultations and violate National Health Authority (NHA) performance standards.",
       "Our sovereign ABDM M3 integration architecture deploys high-speed cryptographic gateway engines inside private VPC enclaves on Indian soil. The system interfaces directly with the National Health Authority (NHA) gateway over secure mutual TLS 1.3. When an ABHA consent notification arrives, the agent validates the patient's digital signature and checks consent parameters (purpose of access, date range, data categories).",
       "The decryption state machine establishes an ephemeral ECDH key agreement, decrypts incoming health data blocks, and validates the SHA-256 integrity checksum of every FHIR resource in under 42 milliseconds. Decrypted clinical records are parsed into standardized diagnostic view models for physician review. Private decryption keys are maintained exclusively in volatile memory and zeroized immediately post-session, ensuring zero persistent key exposure.",
-      "Statutory compliance satisfies Ayushman Bharat Digital Mission (ABDM) Milestone 3 Sandbox certification requirements, NHA Health Data Management Policy, and Section 8(5) of the DPDP Act 2023. The platform processes 4,100 consent handshakes per second with sub-45ms latency, enabling clinical diagnostic centers to deliver seamless ABHA-linked health record access with 100% cryptographic assurance."
+      "Statutory compliance satisfies Ayushman Bharat Digital Mission (ABDM) Milestone 3 Sandbox certification requirements, NHA Health Data Management Policy, and Section 8(5) of the DPDP Act 2023. The platform processes 4,100 consent handshakes per second with sub-45ms latency, enabling clinical diagnostic centers to deliver low-overhead ABHA-linked health record access with 100% cryptographic assurance."
     ],
     "capabilities": [
       {
@@ -15634,7 +15634,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Production Empirical Telemetry & SLAs",
         "copy": [
-          "Statutory compliance satisfies Ayushman Bharat Digital Mission (ABDM) Milestone 3 Sandbox certification requirements, NHA Health Data Management Policy, and Section 8(5) of the DPDP Act 2023. The platform processes 4,100 consent handshakes per second with sub-45ms latency, enabling clinical diagnostic centers to deliver seamless ABHA-linked health record access with 100% cryptographic assurance."
+          "Statutory compliance satisfies Ayushman Bharat Digital Mission (ABDM) Milestone 3 Sandbox certification requirements, NHA Health Data Management Policy, and Section 8(5) of the DPDP Act 2023. The platform processes 4,100 consent handshakes per second with sub-45ms latency, enabling clinical diagnostic centers to deliver low-overhead ABHA-linked health record access with 100% cryptographic assurance."
         ],
         "specs": [
           {
@@ -16359,7 +16359,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "pricingTiers": {
       "pilot": "Single trim line pilot, RFID tracking integration, EDI sequence generator test, 3-week delivery.",
       "enterprise": "Full automotive assembly plant deployment, multi-shop multi-agent orchestration, Tier-1 supplier sync.",
-      "institutional": "Enterprise OEM multi-plant deployment, bespoke vehicle configuration engines, 24/7 dedicated site engineering."
+      "institutional": "Enterprise OEM multi-plant deployment, dedicated vehicle configuration engines, 24/7 dedicated site engineering."
     },
     "hero": {
       "hookSentence": "Orchestrate deterministic multi-agent state machines driving just-in-time automotive assembly line sequencing with sub-15ms broadcast coordination.",
@@ -16800,7 +16800,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "Sterile pharmaceutical manufacturing suites producing injectables and biologics are governed by strict US FDA 21 CFR Part 11 and EU GMP Annex 1 regulations. Connecting cleanroom Supervisory Control and Data Acquisition (SCADA) networks directly to enterprise IT exposes critical environmental control systems - such as HVAC blowers, differential pressure dampers, and particle monitors - to ransomware and cyber intrusions.",
       "Our sovereign isolation architecture implements strict Purdue Enterprise Reference Architecture (PERA) Level 2 separation using hardware data diodes and air-gapped unidirectional optical data links. Critical cleanroom environmental parameters - including room differential pressure (Pascals), relative humidity, laminar airflow velocity, and temperature - are mirrored to Level 3 historians without permitting any reverse IP ingress.",
       "The telemetry processor enforces immutable cryptographic hash chaining on every transmitted data frame. If differential pressure between Grade A aseptic filling suites and Grade B preparation corridors drifts outside strict 15 Pa specifications, the Level 2 controller triggers autonomous physical interlocks while the isolated diode replicates the out-of-spec alarm to enterprise monitoring consoles.",
-      "The deployment guarantees zero cyber attack surface for mission-critical cleanroom environmental controllers while providing complete continuous compliance documentation. Validated under GAMP 5 computerized system guidelines, the platform eliminates manual chart recorder reviews and ensures seamless US FDA and WHO regulatory audit readiness."
+      "The deployment guarantees zero cyber attack surface for mission-critical cleanroom environmental controllers while providing complete continuous compliance documentation. Validated under GAMP 5 computerized system guidelines, the platform eliminates manual chart recorder reviews and ensures low-overhead US FDA and WHO regulatory audit readiness."
     ],
     "capabilities": [
       {
@@ -16944,7 +16944,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Production Empirical Telemetry & SLAs",
         "copy": [
-          "The deployment guarantees zero cyber attack surface for mission-critical cleanroom environmental controllers while providing complete continuous compliance documentation. Validated under GAMP 5 computerized system guidelines, the platform eliminates manual chart recorder reviews and ensures seamless US FDA and WHO regulatory audit readiness."
+          "The deployment guarantees zero cyber attack surface for mission-critical cleanroom environmental controllers while providing complete continuous compliance documentation. Validated under GAMP 5 computerized system guidelines, the platform eliminates manual chart recorder reviews and ensures low-overhead US FDA and WHO regulatory audit readiness."
         ],
         "specs": [
           {
@@ -18631,7 +18631,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImage": "https://elesium.online/og-image.png",
     "heroImageAlt": "Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers",
     "paragraphs": [
-      "Modern manufacturing plants operate a fragmented ecosystem of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
+      "Modern manufacturing plants operate a fragmented infrastructure stack of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
       "Our sovereign edge protocol translation agents run on hardened industrial Linux micro-servers with real-time kernel extensions (PREEMPT_RT). Utilizing zero-copy ring buffers and lock-free memory architectures, the agent ingests raw binary protocol datagrams directly from network interface cards, transforming register bitfields, holding registers, and complex OPC-UA nodes into standardized JSON-LD or MQTT telemetry streams in sub-10ms.",
       "The translation engine enforces cyclic redundancy check (CRC) verification, byte endianness normalization, and floating-point IEEE-754 conversions on the fly. In the event of network congestion or packet collisions, priority-queued message pipes ensure emergency stop (E-stop) and safety interlock signals bypass telemetry packets without jitter.",
       "Operating continuously across 250+ connected shopfloor devices with sub-8ms deterministic latency, the agent eliminates vendor lock-in, enables unified SCADA and MES visibility, and maintains robust 99.999% communications uptime in harsh electromagnetic industrial environments."
@@ -18721,7 +18721,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     },
     "hero": {
       "hookSentence": "Translate heterogeneous industrial fieldbus protocols between Modbus TCP, OPC-UA, and PROFINET with sub-10ms deterministic packet conversion.",
-      "subheadline": "Modern manufacturing plants operate a fragmented ecosystem of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
+      "subheadline": "Modern manufacturing plants operate a fragmented infrastructure stack of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
       "microNote": "All agent operations run in air-gapped sovereign VPC environments with zero third-party token consumption.",
       "ctaText": "Schedule AI Architecture Audit",
       "heroImage": "https://elesium.online/og-image.png",
@@ -18731,7 +18731,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Deterministic Operational Capabilities & Sub-10ms Edge Protocol Translation Agents for Industrial Manufacturing Engineers",
         "copy": [
-          "Modern manufacturing plants operate a fragmented ecosystem of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
+          "Modern manufacturing plants operate a fragmented infrastructure stack of industrial machinery spanning different eras and vendors: Japanese CNCs running Mitsubishi Melsec, German presses communicating over PROFINET, legacy chillers using Modbus RTU/TCP, and modern packaging robots using OPC-UA. Bridging these disparate protocols through legacy software middleware creates latency spikes exceeding 300ms, causing synchronization errors in automated transfer lines.",
           "Our sovereign edge protocol translation agents run on hardened industrial Linux micro-servers with real-time kernel extensions (PREEMPT_RT). Utilizing zero-copy ring buffers and lock-free memory architectures, the agent ingests raw binary protocol datagrams directly from network interface cards, transforming register bitfields, holding registers, and complex OPC-UA nodes into standardized JSON-LD or MQTT telemetry streams in sub-10ms."
         ],
         "bullets": [
@@ -19942,7 +19942,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImageAlt": "NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection",
     "paragraphs": [
       "High-speed automotive assembly lines utilize multi-camera optical inspection tunnels equipped with up to 32 high-resolution cameras to verify vehicle paint finish, surface waviness, and panel gap-and-flush tolerances in under 15 seconds. Processing these multi-angle vision tensors requires distributed data-parallel and pipeline-parallel multi-GPU clusters. However, frequent All-Reduce tensor synchronization across GPUs creates communication bottlenecks that delay final quality sign-off.",
-      "Our sovereign NVLink All-Reduce latency optimizer implements custom non-blocking ring-all-reduce and tree-all-reduce CUDA algorithms tailored specifically for industrial vision clusters. Bypassing standard communication libraries, the optimizer streams gradient and tensor updates directly through NVLink crossbars with zero CPU synchronization barriers.",
+      "Our sovereign NVLink All-Reduce latency optimizer implements custom non-blocking ring-all-reduce and tree-all-reduce CUDA algorithms custom-configured specifically for industrial vision clusters. Bypassing standard communication libraries, the optimizer streams gradient and tensor updates directly through NVLink crossbars with zero CPU synchronization barriers.",
       "The optimization engine overlaps tensor communication directly with subsequent layer feature map computations. While back-end GPUs compute surface micro-defect classifications, forward GPUs simultaneously reduce intermediate embedding tensors over high-speed NVLink channels, eliminating GPU idle bubbles.",
       "Achieving an 82.5% reduction in multi-GPU synchronization latency, the solution enables comprehensive 360-degree automotive surface inspection at full line speed. It guarantees sub-10ms tensor reduction cycles, allowing 100% of vehicles to be thoroughly inspected without slowing conveyor movement."
     ],
@@ -20042,7 +20042,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "title": "Deterministic Operational Capabilities & NVLink All-Reduce Latency Optimizers for Automotive Factory Quality Inspection",
         "copy": [
           "High-speed automotive assembly lines utilize multi-camera optical inspection tunnels equipped with up to 32 high-resolution cameras to verify vehicle paint finish, surface waviness, and panel gap-and-flush tolerances in under 15 seconds. Processing these multi-angle vision tensors requires distributed data-parallel and pipeline-parallel multi-GPU clusters. However, frequent All-Reduce tensor synchronization across GPUs creates communication bottlenecks that delay final quality sign-off.",
-          "Our sovereign NVLink All-Reduce latency optimizer implements custom non-blocking ring-all-reduce and tree-all-reduce CUDA algorithms tailored specifically for industrial vision clusters. Bypassing standard communication libraries, the optimizer streams gradient and tensor updates directly through NVLink crossbars with zero CPU synchronization barriers."
+          "Our sovereign NVLink All-Reduce latency optimizer implements custom non-blocking ring-all-reduce and tree-all-reduce CUDA algorithms custom-configured specifically for industrial vision clusters. Bypassing standard communication libraries, the optimizer streams gradient and tensor updates directly through NVLink crossbars with zero CPU synchronization barriers."
         ],
         "bullets": [
           "Custom Fused NVLink All-Reduce: Bypasses standard OS communication layers for direct hardware tensor reduction.",
@@ -21075,7 +21075,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "pricingTiers": {
       "pilot": "Single-node distilled model pilot, air-gapped VPC setup, enterprise DLP integration, 2 weeks.",
       "enterprise": "Cluster-wide deployment for 671B MoE, multi-node InfiniBand tuning, continuous telemetry dashboard.",
-      "institutional": "Enterprise multi-GCC sovereign agreement, bespoke reasoning kernel optimization, 24/7 dedicated site support."
+      "institutional": "Enterprise multi-GCC sovereign agreement, dedicated reasoning kernel optimization, 24/7 dedicated site support."
     },
     "hero": {
       "hookSentence": "Deploy air-gapped DeepSeek-R1 reasoning models in sovereign enterprise enclaves with sub-15ms multi-stage telemetry and zero public cloud egress.",
@@ -21337,7 +21337,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "pricingTiers": {
       "pilot": "Tactical TOC pilot deployment, 2-node prefill/decode split, RDMA fabric benchmarking, 3 weeks.",
       "enterprise": "Defense command datacenter deployment, multi-node disaggregated cluster, classified network integration.",
-      "institutional": "National sovereign defense contract, bespoke cryptographic architecture, 24/7 mission-critical engineering retainer."
+      "institutional": "National sovereign defense contract, dedicated cryptographic architecture, 24/7 mission-critical engineering retainer."
     },
     "hero": {
       "hookSentence": "Architect disaggregated prefill and decode enclaves for sovereign defense intelligence processing with sub-8ms inter-enclave RDMA communications.",
@@ -21778,7 +21778,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "Defense ministries running multi-modal strategic planning models must maintain days of active mission history across air, land, and naval domains. Caching massive historical context in expensive GPU HBM memory is cost-prohibitive, while swapping key-value caches across multi-tiered memory hierarchies (GPU HBM -> Host DDR5 -> Local NVMe) introduces severe memory fragmentation and swapping latency stalls.",
       "Our sovereign multi-tiered fragmentation monitor tracks memory page allocation topologies across all three tiers simultaneously. Utilizing high-frequency eBPF memory tracing and CUDA unified memory events, the monitor identifies fragmented memory blocks and predicts swapping bottlenecks before they impact operational command responsiveness.",
       "The monitoring state machine orchestrates predictive tiered pre-fetching. Frequently accessed tactical mission profiles are retained in GPU HBM, while intermediate situational updates are pinned in Host DDR5 RAM, and older battle logs are compressed into high-speed NVMe storage with zstandard encryption. Memory pages are proactively defragmented prior to cross-tier promotion.",
-      "Operating with sub-5ms monitoring overhead, the platform prevents tier-swapping latency cliffs, extends effective LLM context capacity to 1 Million tokens per tactical workstation, and ensures seamless situational awareness across complex military command networks."
+      "Operating with sub-5ms monitoring overhead, the platform prevents tier-swapping latency cliffs, extends effective LLM context capacity to 1 Million tokens per tactical workstation, and ensures low-overhead situational awareness across complex military command networks."
     ],
     "capabilities": [
       {
@@ -21922,7 +21922,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Production Empirical Telemetry & SLAs",
         "copy": [
-          "Operating with sub-5ms monitoring overhead, the platform prevents tier-swapping latency cliffs, extends effective LLM context capacity to 1 Million tokens per tactical workstation, and ensures seamless situational awareness across complex military command networks."
+          "Operating with sub-5ms monitoring overhead, the platform prevents tier-swapping latency cliffs, extends effective LLM context capacity to 1 Million tokens per tactical workstation, and ensures low-overhead situational awareness across complex military command networks."
         ],
         "specs": [
           {
@@ -23433,7 +23433,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "pricingTiers": {
       "pilot": "Tactical mobile command vehicle pilot, AWQ quantization validation, power and thermal profiling, 2 weeks.",
       "enterprise": "Naval vessel command suite deployment, ruggedized server cluster setup, autonomous tactical simulation.",
-      "institutional": "Joint defense forces procurement contract, bespoke military corpus calibration, 24/7 mission-critical support."
+      "institutional": "Joint defense forces procurement contract, dedicated military corpus calibration, 24/7 mission-critical support."
     },
     "hero": {
       "hookSentence": "Deploy 4-bit Activation-aware Weight Quantized (AWQ) DeepSeek-R1 reasoning models on ruggedized defense edge servers with zero accuracy loss.",
@@ -23695,7 +23695,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "pricingTiers": {
       "pilot": "Three-domain adapter pilot (Naval/Air/Cyber), stability evaluation benchmarking, VPC setup, 2 weeks.",
       "enterprise": "Ministry-wide deployment across 20 specialized military adapters, centralized adapter governance, 24/7 telemetry.",
-      "institutional": "National defense AI command agreement, bespoke adapter architecture design, classified engineering retainer."
+      "institutional": "National defense AI command agreement, dedicated adapter architecture design, classified engineering retainer."
     },
     "hero": {
       "hookSentence": "Evaluate and isolate dynamic Multi-LoRA adapter stability across concurrent military domains on sovereign private defense clouds.",
@@ -24136,7 +24136,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       "Defense intelligence analysts require real-time processing of massive incoming data feeds. In standard transformer models, every token receives identical compute depth, whether it is a simple punctuation mark or a critical military unit identifier. Mixture-of-Depths (MoD) architectures dynamically route tokens through transformer layers, skipping redundant computations for simple tokens and allocating deep processing exclusively to high-entropy tactical data.",
       "Our sovereign Mixture-of-Depths stability evaluator monitors and optimizes dynamic routing routers in private defense VPC clusters. Operating at the tensor core level, the evaluator profiles routing router logits, token drop probabilities, and capacity factors across all neural layers in real time.",
       "The stability state machine prevents router collapse and token starvation. If a high-intensity crisis scenario causes routing routers to bias compute toward narrow feature subspaces, the evaluator applies dynamic load balancing and entropy regularization within 4ms, ensuring that subtle strategic indicators receive full reasoning depth.",
-      "Achieving a 2.8x speedup in throughput while maintaining identical tactical intelligence reasoning precision, the solution enables sovereign defense intelligence servers to process massive multi-source dossiers at unprecedented speed without expanding datacenter footprints."
+      "Achieving a 2.8x speedup in throughput while maintaining identical tactical intelligence reasoning precision, the solution enables sovereign defense intelligence servers to process massive multi-source dossiers at measurable speed without expanding datacenter footprints."
     ],
     "capabilities": [
       {
@@ -24219,7 +24219,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "pricingTiers": {
       "pilot": "Single-cluster MoD evaluation pilot, router stability calibration, throughput benchmarking, 2 weeks.",
       "enterprise": "Intelligence datacenter rollout, multi-layer routing telemetry, classified dossier processing pipeline.",
-      "institutional": "National intelligence agency contract, bespoke routing kernel optimization, dedicated scientific advisory retainer."
+      "institutional": "National intelligence agency contract, dedicated routing kernel optimization, dedicated scientific advisory retainer."
     },
     "hero": {
       "hookSentence": "Evaluate and stabilize dynamic compute routing in Mixture-of-Depths reasoning models for sovereign defense cloud deployments.",
@@ -24280,7 +24280,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "title": "Production Empirical Telemetry & SLAs",
         "copy": [
-          "Achieving a 2.8x speedup in throughput while maintaining identical tactical intelligence reasoning precision, the solution enables sovereign defense intelligence servers to process massive multi-source dossiers at unprecedented speed without expanding datacenter footprints."
+          "Achieving a 2.8x speedup in throughput while maintaining identical tactical intelligence reasoning precision, the solution enables sovereign defense intelligence servers to process massive multi-source dossiers at measurable speed without expanding datacenter footprints."
         ],
         "specs": [
           {
@@ -24396,7 +24396,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "heroImageAlt": "Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms",
     "paragraphs": [
       "Joint All-Domain Command and Control (JADC2) operations deploy distributed autonomous drone swarms that coordinate reconnaissance, radar electronic countermeasures, and target handoffs. Individual drone nodes have limited battery power and thermal envelopes, while mobile command vehicles have larger compute reserves. Monolithic on-drone inference leads to rapid battery exhaustion and overheating during combat maneuvers.",
-      "Our sovereign prefill-decode workload partitioning tool dynamically splits neural intelligence workloads between tactical edge nodes and regional command nodes. Long-context situational dossiers (prefill) are processed on high-power mobile command servers, while fast real-time navigation and threat evasion tokens (decode) are streamed to and executed on autonomous flight controllers.",
+      "Our sovereign prefill-decode workload partitioning tool dynamically splits neural intelligence workloads between tactical edge nodes and regional command nodes. Long-context situational dossiers (prefill) are processed on high-power mobile command servers, while fast real-time routing and threat evasion tokens (decode) are streamed to and executed on autonomous flight controllers.",
       "The partitioning state machine continuously monitors tactical radio link bandwidth, packet loss rates, and drone battery state-of-charge. If enemy electronic jamming degrades the communications link, the partitioning tool seamlessly migrates decode workloads back to local drone micro-processors within 8ms, ensuring uninterrupted autonomous flight safety.",
       "Delivering a 45.8% extension in autonomous drone swarm mission endurance and maintaining sub-10ms control response loops, the system provides frontline military commanders with resilient, distributed AI capabilities that adapt dynamically to electronic warfare environments."
     ],
@@ -24428,7 +24428,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
       {
         "label": "Partitioning Rebalance Latency",
         "value": "< 8 ms",
-        "detail": "Seamless workload migration between ground command and airborne flight computers."
+        "detail": "Low-overhead workload migration between ground command and airborne flight computers."
       },
       {
         "label": "Drone Battery Life Extension",
@@ -24496,7 +24496,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
         "title": "Deterministic Operational Capabilities & Prefill-Decode Workload Partitioning Tools for Sovereign Defense Intelligence Swarms",
         "copy": [
           "Joint All-Domain Command and Control (JADC2) operations deploy distributed autonomous drone swarms that coordinate reconnaissance, radar electronic countermeasures, and target handoffs. Individual drone nodes have limited battery power and thermal envelopes, while mobile command vehicles have larger compute reserves. Monolithic on-drone inference leads to rapid battery exhaustion and overheating during combat maneuvers.",
-          "Our sovereign prefill-decode workload partitioning tool dynamically splits neural intelligence workloads between tactical edge nodes and regional command nodes. Long-context situational dossiers (prefill) are processed on high-power mobile command servers, while fast real-time navigation and threat evasion tokens (decode) are streamed to and executed on autonomous flight controllers."
+          "Our sovereign prefill-decode workload partitioning tool dynamically splits neural intelligence workloads between tactical edge nodes and regional command nodes. Long-context situational dossiers (prefill) are processed on high-power mobile command servers, while fast real-time routing and threat evasion tokens (decode) are streamed to and executed on autonomous flight controllers."
         ],
         "bullets": [
           "Dynamic Swarm-to-Host Partitioning: Intelligently balances compute load between airborne drones and ground command vehicles.",
@@ -24508,7 +24508,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           {
             "label": "Partitioning Rebalance Latency",
             "value": "< 8 ms",
-            "desc": "Seamless workload migration between ground command and airborne flight computers."
+            "desc": "Low-overhead workload migration between ground command and airborne flight computers."
           },
           {
             "label": "Drone Battery Life Extension",
@@ -24548,7 +24548,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
           {
             "label": "Partitioning Rebalance Latency",
             "value": "< 8 ms",
-            "desc": "Seamless workload migration between ground command and airborne flight computers."
+            "desc": "Low-overhead workload migration between ground command and airborne flight computers."
           },
           {
             "label": "Drone Battery Life Extension",
@@ -25267,7 +25267,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     "pricingTiers": {
       "pilot": "Eight-node supercomputing cluster pilot, DualPipe kernel profiling, throughput benchmarking, 3 weeks.",
       "enterprise": "Full facility deployment across 64 GPU nodes, classified intelligence pipeline integration, 24/7 telemetry.",
-      "institutional": "National military supercomputing command agreement, bespoke pipeline scheduling optimization, classified support."
+      "institutional": "National military supercomputing command agreement, dedicated pipeline scheduling optimization, classified support."
     },
     "hero": {
       "hookSentence": "Deploy bidirectional DualPipe pipeline parallelism for air-gapped defense supercomputing clusters with sub-5% pipeline bubble overhead.",
@@ -25491,7 +25491,7 @@ export const curatedEnterpriseSolutions: SolutionRecord[] = [
     ],
     "faqs": [
       {
-        "question": "How does this prevent sophisticated indirect prompt injection attacks?",
+        "question": "How does this prevent hardened indirect prompt injection attacks?",
         "answer": "The locked system prompt is cryptographically decoupled from the user input context window; user tokens cannot alter the pre-computed attention matrix of the system prompt."
       },
       {

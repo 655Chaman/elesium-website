@@ -134,7 +134,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8 selection:bg-white/20 selection:text-black">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8 selection:bg-white/20 selection:text-black">
       <Helmet>
         <title>Enterprise Agent Speculative Decoding Simulator | Elesium</title>
         <meta
@@ -535,7 +535,7 @@ RECOMMENDATION: Deploy dynamic tree speculative verification to eliminate memory
                 readOnly
                 value={embedCode}
                 rows={5}
-                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-xs font-mono text-neutral-300 focus:outline-none"
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl p-3 text-base sm:text-xs font-mono text-neutral-300 focus:outline-none"
               />
             </div>
             <div className="flex justify-end gap-3">

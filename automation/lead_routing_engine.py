@@ -108,7 +108,7 @@ def format_slack_webhook(payload: Dict[str, Any], score: int, priority: str) -> 
                     {"title": "Statutory Mandates", "value": ", ".join(payload.get("compliance_requirements", [])), "short": False},
                     {"title": "Scope Brief", "value": payload.get("workflow_scope", "N/A"), "short": False}
                 ],
-                "footer": "Elesium Autonomous Lead Router • Bengaluru HQ",
+                "footer": "Elesium Autonomous Lead Router • Shivamogga, Karnataka",
                 "ts": int(datetime.now(timezone.utc).timestamp())
             }
         ]

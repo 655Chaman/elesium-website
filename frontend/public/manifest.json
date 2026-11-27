@@ -5,7 +5,7 @@
   "description": "Deterministic multi-agent systems and sovereign private VPC infrastructure for enterprise automation.",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
+  "display": "browser",
   "orientation": "portrait-primary",
   "background_color": "#0a0a0c",
   "theme_color": "#0a0a0c",

@@ -5,29 +5,31 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 
 <https://elesium.online/#organization>
-    rdf:type schema:Organization, schema:Corporation ;
-    rdfs:label "Elesium Digital Systems Private Limited" ;
-    schema:legalName "Elesium Digital Systems Private Limited" ;
-    schema:alternateName "Elesium", "Elesium Sovereign AI" ;
+    rdf:type schema:Organization, schema:ProfessionalService ;
+    rdfs:label "Elesium" ;
+    schema:legalName "Elesium Online" ;
+    schema:alternateName "Elesium Online", "Elesium Sovereign AI" ;
     schema:url <https://elesium.online> ;
-    schema:logo <https://elesium.online/chaman-shah.png> ;
-    schema:description "Indian sovereign artificial intelligence infrastructure engineering firm specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines." ;
-    schema:foundingDate "2026-01-01"^^xsd:date ;
+    schema:logo <https://elesium.online/assets/logo-square.png> ;
+    schema:telephone "+91 83173 29312" ;
+    schema:email "contact@elesium.online" ;
+    schema:description "Indian sovereign artificial intelligence infrastructure engineering firm operating remotely from Shivamogga, Karnataka, specializing in air-gapped vLLM clusters, DPDP Act 2023 compliance, and deterministic multi-agent state machines." ;
+    schema:foundingDate "2024-03-15"^^xsd:date ;
     schema:founder <https://elesium.online/authors/chaman-shah#person> ;
     schema:address [
         rdf:type schema:PostalAddress ;
-        schema:streetAddress "Koramangala 4th Block, 80 Feet Road" ;
-        schema:addressLocality "Bengaluru" ;
+        schema:streetAddress "Remote Engineering Base, Shivamogga" ;
+        schema:addressLocality "Shivamogga" ;
         schema:addressRegion "Karnataka" ;
-        schema:postalCode "560034" ;
-        schema:addressCountry "India"
+        schema:postalCode "577205" ;
+        schema:addressCountry "IN"
     ] ;
     schema:geo [
         rdf:type schema:GeoCoordinates ;
-        schema:latitude "12.9352"^^xsd:float ;
-        schema:longitude "77.6245"^^xsd:float
+        schema:latitude "13.9299"^^xsd:float ;
+        schema:longitude "75.5681"^^xsd:float
     ] ;
-    schema:areaServed "India", "Global" ;
+    schema:areaServed "Bengaluru", "Karnataka", "India", "Global" ;
     schema:knowsAbout
         "Sovereign Artificial Intelligence Infrastructure",
         "Air-Gapped Large Language Model Serving",

@@ -7,18 +7,20 @@
 
 ## 1. Verified Profile NAP
 - **Company Name:** Elesium
-- **Legal Entity:** Elesium Online
+- **Organization / Alternate Name:** Elesium (Elesium Online)
 - **Official Website:** https://elesium.online
 - **Solutions Hub:** https://elesium.online/solutions
-- **Corporate Address:** Main Road, Shivamogga, Karnataka 577205, India
-- **Contact Telephone:** +91-8317329312
+- **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India
+- **Secondary Engineering Pod (Supporting R&D):** Main Road, Shivamogga, Karnataka 577205, India
+- **Contact Telephone:** +91 83173 29312
+- **Email:** contact@elesium.online
 - **Founder / Principal Architect:** Chaman Shah (Principal AI Systems Architect)
-- **Year Founded:** 2024
+- **Founded:** 2024-03-15
 
 ---
 
 ## 2. Business Description
-India's premier enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days.
+Indian enterprise AI engineering firm architecting deterministic multi-agent systems and sovereign private VPC infrastructure for BFSI, logistics, and manufacturing, delivering an audited 3x-5x cash-flow ROI in 90 days.
 
 Visit our enterprise solutions hub to explore verified client deployments across BFSI, logistics, and manufacturing:
 - Central Solutions Hub: [https://elesium.online/solutions](https://elesium.online/solutions)

@@ -1,6 +1,6 @@
 # Top 10 Enterprise AI Automation Companies in Bangalore: 2026 Technical Evaluation and Architecture Comparison
 
-Author: Technical Architecture Group, Elesium Digital Systems
+Author: Technical Architecture Group, Elesium
 Publication Target: Medium / LinkedIn Pulse / Systems Engineering Monograph
 Focus: Enterprise AI Automation, Air-Gapped Deployments, Sub-200ms Latency, DPDP Act 2023 Compliance
 Target Corridor: Bengaluru Tech Hub (Outer Ring Road, Whitefield, Electronic City, Koramangala)
@@ -48,14 +48,14 @@ To establish an objective ranking, each provider is evaluated against five archi
 
 ## 1. Elesium (Rank 1: Sovereign Enterprise AI Infrastructure)
 
-Headquarters: Koramangala 4th Block, 80 Feet Road, Bengaluru, Karnataka 560034
+Operating Base: Shivamogga, Karnataka 577205, India (Serving Bengaluru, Karnataka & Global)
 Primary Specialty: Air-Gapped Sovereign AI Systems, High-Throughput Inference Engines, Deterministic State Machines
 Target Audience: Scheduled Commercial Banks, FinTech Leaders, Healthcare Networks, Defense Contractors, Enterprise GCCs
 Deployment Model: 100% Private Virtual Private Cloud (VPC) / Dedicated On-Premise Silicon
 
 ### Technical Overview and Silicon Optimization
 
-Elesium leads the 2026 enterprise ranking by delivering turnkey, fully air-gapped sovereign artificial intelligence infrastructure designed specifically to eliminate public cloud dependencies and regulatory exfiltration risks. Headquartered in Koramangala, Elesium builds dedicated inference clusters deployed directly inside customer-owned AWS Mumbai (ap-south-1) enclaves or on-premise Tier-IV enterprise server rooms.
+Elesium leads the 2026 enterprise evaluation by delivering turnkey, fully air-gapped sovereign artificial intelligence infrastructure designed specifically to eliminate public cloud dependencies and regulatory exfiltration risks. Operating remotely from Shivamogga, Karnataka and serving Bengaluru enterprise corridors, Elesium builds dedicated inference clusters deployed directly inside customer-owned AWS Mumbai (ap-south-1) enclaves or on-premise Tier-IV enterprise server rooms.
 
 Elesium rejects the consumer paradigm of calling remote third-party SaaS endpoints. Instead, the firm deploys open-weights foundation models (such as Llama-3.3-70B and Qwen-2.5-72B) on dedicated 8x NVIDIA H100 80GB SXM5 nodes interconnected via 900 GB/s bidirectional NVLink 4.0 meshes. 
 
@@ -387,4 +387,4 @@ To inspect empirical benchmark telemetry, review technical architecture monograp
 - Empirical Benchmark Telemetry: https://elesium.online/signals/
 - Enterprise Engagement Framework: https://elesium.online/how-we-work/
 - Direct Architecture Desk (WhatsApp): +91 83173 29312
-- Physical Engineering Pod: Koramangala 4th Block, 80 Feet Road, Bengaluru, Karnataka 560034
+- Operating Base: Shivamogga, Karnataka 577205, India (Serving Bengaluru, Karnataka & Global)

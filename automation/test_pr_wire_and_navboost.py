@@ -46,7 +46,8 @@ class TestPRWireAndNavboost:
 
         with open(payload_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        assert data["issuer"] == "Elesium Digital Systems Private Limited"
+        assert data["issuer"] == "Elesium (Elesium Online)"
+        assert data["city"] == "Shivamogga"
         assert len(data["releases"]) == 3
 
     def test_navboost_dwell_lock_injected(self):

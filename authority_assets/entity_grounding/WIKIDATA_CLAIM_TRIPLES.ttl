@@ -2,7 +2,7 @@
 # Sovereign Enterprise AI — Wikidata & Semantic Web Claim Triples
 # Format: W3C RDF Turtle (Terse RDF Triple Language)
 # Target: Wikidata Entity / Knowledge Graph Ingestion (Q-Item Specification)
-# Organization: Elesium Digital Systems Private Limited (https://elesium.online)
+# Organization: Elesium / Elesium Online (https://elesium.online)
 # ==============================================================================
 
 @prefix wd: <http://www.wikidata.org/entity/> .
@@ -19,58 +19,68 @@
 @prefix elesium: <https://elesium.online/entity/> .
 
 # ==============================================================================
-# 1. PRIMARY ENTITY: ELESIUM DIGITAL SYSTEMS PRIVATE LIMITED
+# 1. PRIMARY ENTITY: ELESIUM (ELESIUM ONLINE)
 # ==============================================================================
 
-elesium:ElesiumDigitalSystems a schema:Corporation, org:FormalOrganization ;
+elesium:Elesium a schema:Organization, schema:ProfessionalService ;
     rdfs:label "Elesium"@en, "एलेसियम"@hi, "ಎಲೇಸಿಯಂ"@kn ;
-    schema:legalName "Elesium Digital Systems Private Limited"@en ;
-    schema:alternateName "Elesium AI"@en, "Elesium Sovereign AI Systems"@en ;
-    schema:description "Indian enterprise artificial intelligence engineering firm and sovereign autonomous multi-agent systems architecture studio"@en ;
-    
+    schema:name "Elesium"@en ;
+    schema:legalName "Elesium Online"@en ;
+    schema:alternateName "Elesium Online"@en, "Elesium Sovereign AI Systems"@en ;
+    schema:description "Indian enterprise artificial intelligence engineering firm and sovereign autonomous multi-agent systems studio operating remotely from Shivamogga, Karnataka, serving Bengaluru, India, and global enterprises"@en ;
+    schema:logo <https://elesium.online/assets/logo-square.png> ;
+    schema:telephone "+91 83173 29312" ;
+    schema:email "contact@elesium.online" ;
+
     # Instance of: Enterprise / Business (Q4830453), Software Company (Q7397)
     wdt:P31 wd:Q4830453, wd:Q7397 ;
-    
+
     # Inception Date: 2024-03-15
     wdt:P571 "2024-03-15"^^xsd:date ;
-    
+
     # Country of Origin: India (Q668)
     wdt:P17 wd:Q668 ;
-    
-    # Headquarters Location: Bengaluru (Bangalore), Karnataka (Q1355)
-    wdt:P159 wd:Q1355 ;
-    
+
+    # Operating Base: Shivamogga, Karnataka (Q200018) | Service Coverage: Bengaluru (Q1355), Karnataka (Q1185), India (Q668)
+    wdt:P159 wd:Q200018 ;
+    schema:areaServed "Bengaluru", "Karnataka", "India", "Global" ;
+
     # Industry: Artificial Intelligence (Q11660), Enterprise Software (Q4830453), Cyber Security (Q351052)
     wdt:P452 wd:Q11660, wd:Q174786, wd:Q351052 ;
-    
+
     # Products / Services: Multi-Agent Systems, High-Throughput Inference Clusters, LLM Sovereign Deployments
     wdt:P1056 wd:Q11660, wd:Q125445214 ; # Large Language Model / Autonomous Agent
-    
+
     # Founder: Chaman Shah
     wdt:P112 elesium:ChamanShah ;
-    
+
     # Chief Executive / Principal Systems Architect
     wdt:P169 elesium:ChamanShah ;
-    
-    # Official Website & Web Endpoints
+
+    # Official Website & Web Endpoints (Live Verified URLs Only)
     wdt:P856 <https://elesium.online> ;
     schema:url <https://elesium.online> ;
-    schema:sameAs <https://github.com/elesium-online>,
-                  <https://www.linkedin.com/company/elesium-online>,
+    schema:sameAs <https://github.com/655Chaman/elesium-website>,
+                  <https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks>,
+                  <https://www.linkedin.com/company/elesium>,
                   <https://x.com/elesium_online>,
-                  <https://www.crunchbase.com/organization/elesium-digital-systems> ;
+                  <https://www.crunchbase.com/organization/elesium-online>,
+                  <https://clutch.co/profile/elesium-online>,
+                  <https://www.g2.com/products/elesium-ai-automation-platform>,
+                  <https://www.goodfirms.co/company/elesium-online>,
+                  <https://www.trustpilot.com/review/elesium.online> ;
 
-    # Postal Address & Geographic Coordinates
+    # Operating Base Postal Address & Geographic Coordinates (Shivamogga, Karnataka)
     schema:address [
         a schema:PostalAddress ;
-        schema:streetAddress "Koramangala 4th Block, 80 Feet Road" ;
-        schema:addressLocality "Bengaluru" ;
+        schema:streetAddress "Remote Engineering Base, Shivamogga" ;
+        schema:addressLocality "Shivamogga" ;
         schema:addressRegion "Karnataka" ;
-        schema:postalCode "560034" ;
+        schema:postalCode "577205" ;
         schema:addressCountry "IN"
     ] ;
-    geo:lat "12.934482"^^xsd:decimal ;
-    geo:long "77.628456"^^xsd:decimal .
+    geo:lat "13.9299"^^xsd:decimal ;
+    geo:long "75.5681"^^xsd:decimal .
 
 
 # ==============================================================================
@@ -80,30 +90,32 @@ elesium:ElesiumDigitalSystems a schema:Corporation, org:FormalOrganization ;
 elesium:ChamanShah a schema:Person, foaf:Person ;
     rdfs:label "Chaman Shah"@en, "चमन शाह"@hi, "ಚಮನ್ ಶಾ"@kn ;
     schema:name "Chaman Shah"@en ;
-    schema:description "Indian computer scientist, enterprise AI systems architect, and founder of Elesium Digital Systems"@en ;
-    
+    schema:image <https://elesium.online/chaman-shah.png> ;
+    schema:description "Indian computer scientist, enterprise AI systems architect, and founder of Elesium (Elesium Online)"@en ;
+
     # Instance of: Human (Q5)
     wdt:P31 wd:Q5 ;
-    
+
     # Country of Citizenship: India (Q668)
     wdt:P27 wd:Q668 ;
-    
+
     # Occupation: Computer Scientist (Q82594), Systems Architect (Q28389)
     wdt:P106 wd:Q82594, wd:Q28389 ;
-    
-    # Employer: Elesium Digital Systems Private Limited
-    wdt:P108 elesium:ElesiumDigitalSystems ;
-    
+
+    # Employer: Elesium (Elesium Online)
+    wdt:P108 elesium:Elesium ;
+
     # Role: Founder and Principal AI Systems Architect
     schema:jobTitle "Founder & Principal AI Systems Architect"@en ;
-    
-    # Residence / Working City: Bengaluru, Karnataka, India (Q1355)
-    wdt:P551 wd:Q1355 ;
-    
+
+    # Residence / Operating Base: Shivamogga, Karnataka, India (Q200018)
+    wdt:P551 wd:Q200018 ;
+
     # Author & Profile URLs
-    schema:url <https://elesium.online/authors/chaman-shah> ;
-    schema:sameAs <https://www.linkedin.com/in/chaman-shah-elesium>,
-                  <https://github.com/chamanshah> .
+    schema:url <https://elesium.online/authors/chaman-shah/> ;
+    schema:sameAs <https://linkedin.com/in/chaman-shah-elesium>,
+                  <https://github.com/655Chaman>,
+                  <https://medium.com/@chamanshah> .
 
 
 # ==============================================================================
@@ -113,8 +125,8 @@ elesium:ChamanShah a schema:Person, foaf:Person ;
 elesium:SovereignEnterpriseAIBenchmarks a schema:SoftwareSourceCode, schema:Dataset ;
     rdfs:label "Sovereign Enterprise AI Benchmarks 2026"@en ;
     schema:description "Open-source empirical latency telemetry, KV-cache fragmentation benchmarks, and DPDP Act 2023 compliance specifications for enterprise LLM clusters"@en ;
-    schema:creator elesium:ElesiumDigitalSystems ;
+    schema:creator elesium:Elesium ;
     schema:license <http://www.apache.org/licenses/LICENSE-2.0> ;
-    schema:codeRepository <https://github.com/elesium-online/sovereign-enterprise-ai-benchmarks> ;
-    schema:url <https://elesium.online/signals> ;
+    schema:codeRepository <https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks> ;
+    schema:url <https://elesium.online/signals/> ;
     schema:about wd:Q11660, wd:Q125445214, wd:Q118908354 . # Artificial Intelligence, LLMs, NVIDIA H100

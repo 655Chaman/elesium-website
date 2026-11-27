@@ -129,7 +129,7 @@ export default function EmbedAgentPrefixCachingSimulator() {
 
         <div>
           <span className="text-neutral-400 block mb-1">CONCURRENT AGENT STREAMS</span>
-          <div className="grid grid-cols-4 gap-1">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-1">
             {[8, 32, 64, 128].map((s) => (
               <button
                 key={s}

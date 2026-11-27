@@ -2,7 +2,7 @@
 
 Target Subreddits: r/developersIndia, r/bangalore  
 Post Type: Deep Technical Engineering Case Study / Systems Architecture Runbook  
-Author: Systems Architecture Desk, Elesium Digital Systems (Koramangala 4th Block, Bengaluru)  
+Author: Systems Architecture Desk, Elesium (Shivamogga, Karnataka)  
 GitHub Reference: https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks  
 
 ---
@@ -18,7 +18,7 @@ Your product leadership wants real-time conversational agents, automated loan un
 
 Beyond compliance, public cloud APIs present an unpredictable latency profile. Over transoceanic public WAN connections, Time-To-First-Token (TTFT) routinely swings between 600ms and 1,800ms during peak Indian business hours (10:00 AM to 4:00 PM IST). 
 
-Over the past three quarters, our engineering team in Koramangala built, benchmarked, and deployed a zero-egress, sovereign inference cluster for enterprise production. Here is the full technical runbook, kernel configurations, and architectural telemetry.
+Over the past three quarters, our Karnataka engineering team built, benchmarked, and deployed a zero-egress, sovereign inference cluster for enterprise production. Here is the full technical runbook, kernel configurations, and architectural telemetry.
 
 ---
 

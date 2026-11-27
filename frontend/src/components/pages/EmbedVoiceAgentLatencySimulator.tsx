@@ -73,7 +73,7 @@ export default function EmbedVoiceAgentLatencySimulator() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 p-4 font-sans antialiased flex flex-col justify-between">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 p-4 font-sans antialiased flex flex-col justify-between">
       <Helmet>
         <title>Real-Time Voice Agent Latency &amp; VAD Sandbox | Elesium</title>
         <meta

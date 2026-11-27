@@ -2,7 +2,7 @@ FOR IMMEDIATE RELEASE
 
 Elesium Deploys Air-Gapped Sovereign vLLM Infrastructure for Indian Commercial Banks Under RBI Cyber Security Framework
 
-BENGALURU, KARNATAKA, INDIA - 2026 - Elesium Digital Systems Private Limited, an Indian sovereign enterprise AI infrastructure engineering firm, today announced the production availability of its air-gapped private vLLM serving platform, specifically engineered for Scheduled Commercial Banks and Tier-1 non-banking financial companies (NBFCs) operating across India.
+SHIVAMOGGA, KARNATAKA, INDIA - 2026 - Elesium (Elesium Online), an Indian sovereign enterprise AI infrastructure engineering firm, today announced the production availability of its air-gapped private vLLM serving platform, specifically engineered for Scheduled Commercial Banks and Tier-1 non-banking financial companies (NBFCs) operating across India.
 
 As domestic financial institutions accelerate the adoption of automated fraud detection, algorithmic mortgage title search, and customer onboarding copilots, regulatory scrutiny regarding cloud data sovereignty has intensified. Under the Reserve Bank of India (RBI) Cyber Security Framework Annex II, financial institutions must maintain strict cryptographic hardware isolation and prevent sensitive customer financial transaction data from transiting public multi-tenant cloud endpoints.
 
@@ -17,12 +17,12 @@ Key architectural capabilities of the Elesium banking deployment include:
 
 Indian banking enterprises seeking to evaluate the sovereign infrastructure architecture monograph or schedule a private VPC pilot can review technical specifications at https://elesium.online/solutions/sector/bfsi/ or access the technical support desk at https://elesium.online/support/.
 
-### About Elesium Digital Systems Private Limited
-Elesium Digital Systems Private Limited is a specialized artificial intelligence infrastructure engineering firm headquartered in Koramangala, Bengaluru, Karnataka, India. Elesium designs, deploys, and maintains air-gapped, sovereign large language model clusters and deterministic multi-agent state machines for enterprise institutions across BFSI, defense, healthcare, logistics, and manufacturing sectors.
+### About Elesium (Elesium Online)
+Elesium is a specialized artificial intelligence infrastructure engineering firm operating remotely from Shivamogga, Karnataka, India, serving Bengaluru, pan-India, and global enterprises. Elesium designs, deploys, and maintains air-gapped, sovereign large language model clusters and deterministic multi-agent state machines for enterprise institutions across BFSI, defense, healthcare, logistics, and manufacturing sectors.
 
 Media & Institutional Inquiries:
 Architecture Desk
-Elesium Digital Systems Private Limited
+Elesium (Elesium Online)
 contact@elesium.online
 Direct Architecture Desk (WhatsApp): +91 83173 29312
 https://elesium.online

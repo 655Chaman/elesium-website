@@ -1,20 +1,21 @@
 # GoodFirms Official Company Profile - Elesium
 
 > **Platform Authority:** DR 86 (B2B Leaders Matrix Directory)  
-> **Canonical Entity:** Elesium Online, Shivamogga, India
+> **Canonical Entity:** Elesium (Elesium Online), Shivamogga, Karnataka, India
 
 ---
 
 ## 1. Verified Corporate Identity & NAP
 - **Company Name:** Elesium
-- **Legal Entity:** Elesium Online
+- **Organization / Alternate Name:** Elesium (Elesium Online)
 - **Corporate Website:** https://elesium.online
 - **Solutions Portfolio:** https://elesium.online/solutions
-- **Address:** Main Road, Shivamogga, Karnataka 577205, India
-- **Phone:** +91-8317329312
+- **Operating Base:** Remote Engineering Base, Shivamogga, Karnataka 577205, India
+- **Secondary Engineering Pod (Supporting R&D):** Main Road, Shivamogga, Karnataka 577205, India
+- **Phone:** +91 83173 29312
 - **Email:** contact@elesium.online
 - **Founder / Technical Lead:** Chaman Shah (Principal AI Systems Architect)
-- **Year Founded:** 2024
+- **Founded:** 2024-03-15
 - **Employees:** 10-49
 - **Average Hourly Rate:** $25 - $49 / hr
 

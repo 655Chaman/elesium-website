@@ -54,7 +54,7 @@ def classify_serp_depth(keyword: str, serp_html: str) -> SerpInteractionProfile:
             dominant_above_fold_feature="LOCAL_PACK",
             interaction_depth_score=1,
             triage_channel="GEO_MICRO_ZONE_ALIGNMENT",
-            actionable_directive="Ground post in Bangalore tech corridors (Koramangala, Indiranagar, Whitefield, Outer Ring Road)."
+            actionable_directive="Ground post in Bangalore tech corridors (Indiranagar, Whitefield, Outer Ring Road, Electronic City)."
         )
     else:
         return SerpInteractionProfile(

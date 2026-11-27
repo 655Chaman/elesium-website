@@ -170,7 +170,7 @@ export default function EnterpriseGpuCostCalculator() {
         <script type="application/ld+json">{JSON.stringify(schemaJson)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-neutral-100 selection:bg-white/20 selection:text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-[100dvh] bg-black text-neutral-100 selection:bg-white/20 selection:text-white pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           
           {/* Breadcrumb & Navigation */}

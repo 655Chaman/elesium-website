@@ -1,7 +1,7 @@
 # Sovereign Enterprise AI Press & Media Syndication Package
 ## First Empirical Benchmark of Sovereign, Air-Gapped LLM Deployments Under India's DPDP Act 2023
 
-**Issued by:** Elesium Digital Systems Private Limited (Bengaluru, India)  
+**Issued by:** Elesium (Elesium Online) (Bengaluru, India)  
 **Lead Spokesperson:** Chaman Shah, Principal AI Systems Architect  
 **Contact:** `contact@elesium.online` | Direct Desk: `+91 83173 29312` | WhatsApp: [https://wa.me/918317329312](https://wa.me/918317329312)  
 **Open-Source Benchmark Repository:** [https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks](https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks)  
@@ -66,7 +66,7 @@ Would you be open to an embargoed briefing or a 20-minute chat this week?
 Best regards,
 
 Chaman Shah
-Principal AI Systems Architect, Elesium Digital Systems
+Principal AI Systems Architect, Elesium
 Bengaluru, India | +91 83173 29312 | contact@elesium.online
 https://elesium.online/signals
 ```
@@ -142,7 +142,7 @@ Would this be of interest to MediaNama’s readership?
 Sincerely,
 
 Chaman Shah
-Principal Systems Architect, Elesium Digital Systems
+Principal Systems Architect, Elesium
 +91 83173 29312 | contact@elesium.online
 ```
 
@@ -244,7 +244,7 @@ Bengaluru-based Elesium has published the first empirical benchmark of sovereign
 
 ## Spokesperson Biography: Chaman Shah
 
-**Chaman Shah** is the Principal AI Systems Architect at **Elesium Digital Systems Private Limited** (Bengaluru, India). He specializes in designing deterministic, high-throughput sovereign AI infrastructure, GPU kernel optimization (Hopper FP8 GEMM, PagedAttention), and air-gapped state-machine architectures for regulated enterprises across banking, financial services, healthcare, and telecommunications.
+**Chaman Shah** is the Principal AI Systems Architect at **Elesium (Elesium Online)** (Bengaluru, India). He specializes in designing deterministic, high-throughput sovereign AI infrastructure, GPU kernel optimization (Hopper FP8 GEMM, PagedAttention), and air-gapped state-machine architectures for regulated enterprises across banking, financial services, healthcare, and telecommunications.
 
 * **Media Inquiries:** `contact@elesium.online`
 * **Direct Engineering Desk:** `+91 83173 29312`

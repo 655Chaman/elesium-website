@@ -49,22 +49,22 @@ SUPPORT_ARTICLES = [
     {
         "slug": "hardware-latency-benchmarks",
         "question": "What is the verified Time-To-First-Token (TTFT) latency for Elesium vLLM clusters?",
-        "direct_answer": "Elesium delivers an audited Time-To-First-Token (TTFT) latency of 148ms on 70B parameter models deployed on dedicated 2x NVIDIA H100 80GB SXM5 hardware using native FP8 W8A8 GEMM quantization kernels.",
+        "direct_answer": "Elesium delivers an audited 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8 and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1 using native FP8 W8A8 GEMM quantization kernels.",
         "technical_details": [
-            "Hardware Configuration: Dual NVIDIA H100 80GB SXM5 linked via 900 GB/s bidirectional NVLink interconnects.",
+            "Hardware Configuration: 8x NVIDIA H100 80GB SXM5 (Llama-3.3-70B FP8: 121.4ms TTFT) and 2x NVIDIA H100 80GB SXM5 (Elesium-Indic-70B FP8 Batch 1: 148ms TTFT / 124.5 tok/s) linked via 900 GB/s bidirectional NVLink interconnects.",
             "Inference Engine: Customized vLLM runtime with PagedAttention v2 and continuous speculative batching.",
-            "Throughput Benchmark: Sustained 124.5 decoded tokens per second per concurrent stream under peak load.",
+            "Throughput Benchmark: Sustained 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1, scaling to 1,840 tok/s batched throughput on 8x H100 SXM5 for Llama-3.3-70B FP8.",
             "Jitter Envelope: p99 latency jitter constrained to under 12ms across 100,000 continuous benchmark cycles."
         ]
     },
     {
         "slug": "pricing-and-roi-guarantee",
         "question": "What are Elesium's institutional pricing tiers and contractual ROI terms?",
-        "direct_answer": "Elesium offers three institutional tiers starting from $15,000 (₹12,50,000) for a 14-day production pilot sprint, backed by a contractual 90-day 3x to 5x ROI guarantee or a full refund of engineering fees.",
+        "direct_answer": "Elesium offers three institutional tiers starting from ₹1,50,000 - ₹3,50,000 ($2,000 - $4,500) for a 14-day Single-Process Sovereign Pilot Sprint, backed by a contractual 90-day 3x to 5x ROI guarantee or a full refund of engineering fees.",
         "technical_details": [
-            "Tier 1 (Pilot Sprint): $15,000 - $30,000 (₹12.5L - ₹25L) | 14-day delivery of single-process deterministic agent in private VPC.",
-            "Tier 2 (Multi-Agent Suite): $30,000 - $75,000 (₹25L - ₹62L) | 30 - 45 day deployment of collaborative multi-agent cluster.",
-            "Tier 3 (Enterprise Fleet): $75,000+ (₹62L+) | Custom 90-day cluster orchestration with dedicated 8x H100 hardware fine-tuning.",
+            "Tier 1 (Single-Process Sovereign Pilot Sprint): ₹1,50,000 - ₹3,50,000 ($2,000 - $4,500) | 14-day production pilot sprint in private VPC.",
+            "Tier 2 (Multi-Agent Enterprise Cluster): ₹6,00,000 - ₹15,00,000 ($7,500 - $18,000) | 30-45 day collaborative multi-agent cluster with SAP/Oracle integration.",
+            "Tier 3 (Dedicated Sovereign AI Retainer / Cluster Operations): ₹4,50,000/month ($5,500/month) | Ongoing optimization, compliance governance, and dedicated H100 inference tuning.",
             "Contractual SLA: If measured labor or throughput efficiency does not yield 3x cash-flow positive return within 90 days, fees are refunded."
         ]
     }
@@ -147,7 +147,7 @@ class GeoSupportDeskEngine:
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Technical Documentation &amp; Architecture Support Desk | Elesium Sovereign AI</title>
   <meta name="description" content="Authoritative support documentation covering DPDP Act 2023 Section 8(5), RBI Cyber Security Framework Annex II, NVIDIA H100 TTFT benchmarks, and contractual SLAs for Elesium systems.">
   <link rel="canonical" href="https://elesium.online/support/">
@@ -155,26 +155,43 @@ class GeoSupportDeskEngine:
 {schema_json}
   </script>
   <style>
-    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b1120; color: #f8fafc; margin: 0; padding: 0; }}
+    * {{ box-sizing: border-box; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b1120; color: #f8fafc; margin: 0; padding: 0; overflow-x: hidden; }}
     .container {{ max-width: 1000px; margin: 0 auto; padding: 48px 24px; }}
     h1 {{ font-size: 2.25rem; font-weight: 800; color: #ffffff; margin-bottom: 16px; line-height: 1.25; }}
     .intro {{ font-size: 1.1rem; line-height: 1.6; color: #94a3b8; margin-bottom: 40px; border-bottom: 1px solid #334155; padding-bottom: 24px; }}
-    .desk-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; background-color: #1e293b; padding: 16px 20px; border-radius: 8px; border: 1px solid #334155; }}
+    .desk-header {{ display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; background-color: #1e293b; padding: 16px 20px; border-radius: 8px; border: 1px solid #334155; }}
     .status-badge {{ background-color: #065f46; color: #34d399; font-size: 0.85rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px; display: inline-flex; align-items: center; }}
     .status-badge::before {{ content: ""; display: inline-block; width: 8px; height: 8px; background-color: #34d399; border-radius: 50%; margin-right: 6px; }}
+    .portal-links {{ display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 16px; justify-content: center; font-size: 0.85rem; }}
+    .portal-links a {{ color: #60a5fa; text-decoration: none; }}
+    .portal-links a:hover {{ text-decoration: underline; }}
+    @media (max-width: 768px) {{
+      .container {{ padding: 24px 16px; }}
+      h1 {{ font-size: 1.75rem; }}
+    }}
   </style>
 </head>
 <body>
   <div class="container">
-    <nav style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 24px;">
-      <a href="/" style="color: #60a5fa; text-decoration: none;">Home</a> &gt; 
-      <span style="color: #f8fafc;">Support Desk &amp; Documentation</span>
+    <nav aria-label="Breadcrumb" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center;">
+      <div>
+        <a href="/" style="color: #60a5fa; text-decoration: none;">Home</a> &gt; 
+        <span style="color: #f8fafc;">Support Desk &amp; Documentation</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="/ai/" style="color: #93c5fd; text-decoration: none;">AI &amp; Automation</a>
+        <a href="/docs/" style="color: #93c5fd; text-decoration: none;">Docs</a>
+        <a href="/solutions/" style="color: #93c5fd; text-decoration: none;">Solutions</a>
+        <a href="/compare/" style="color: #93c5fd; text-decoration: none;">Compare</a>
+        <a href="/tools/" style="color: #93c5fd; text-decoration: none;">Tools</a>
+      </div>
     </nav>
 
     <div class="desk-header">
       <div>
         <div style="font-weight: 700; font-size: 1.1rem; color: #ffffff;">Elesium Sovereign Systems Documentation Desk</div>
-        <div style="font-size: 0.85rem; color: #94a3b8;">Jurisdiction: Koramangala, Bengaluru, Karnataka, India (DPDP Act 2023)</div>
+        <div style="font-size: 0.85rem; color: #94a3b8;">Operating Base: Shivamogga, Karnataka, India | Serving Bengaluru &amp; India (DPDP Act 2023)</div>
       </div>
       <div class="status-badge">DOCUMENTATION DESK ACTIVE</div>
     </div>
@@ -190,7 +207,17 @@ class GeoSupportDeskEngine:
 
     <footer style="margin-top: 60px; border-top: 1px solid #334155; padding-top: 24px; text-align: center; color: #64748b; font-size: 0.9rem;">
       <p>Direct Ingress Desk: <a href="mailto:contact@elesium.online" style="color: #60a5fa;">contact@elesium.online</a> | Architecture Hotline: <a href="https://wa.me/918317329312" style="color: #60a5fa;">+91 83173 29312</a></p>
-      <p>&copy; 2026 Elesium Digital Systems Private Limited. All rights reserved.</p>
+      <div class="portal-links">
+        <a href="/ai/">AI &amp; Automation</a>
+        <a href="/solutions/">Solutions Hub</a>
+        <a href="/compare/">Compare</a>
+        <a href="/tools/">Tools</a>
+        <a href="/docs/">Technical Docs</a>
+        <a href="/guides/">Guides</a>
+        <a href="/comparison/sovereign-ai-vs-public-cloud/">Cloud Comparison</a>
+        <a href="/authors/chaman-shah/">Principal Architect (Chaman Shah)</a>
+      </div>
+      <p style="margin-top: 16px;">&copy; 2026 Elesium (Elesium Online). Shivamogga, Karnataka, India. All rights reserved.</p>
     </footer>
   </div>
 </body>

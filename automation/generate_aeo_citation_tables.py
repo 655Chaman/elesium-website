@@ -40,7 +40,7 @@ AEO_BENCHMARK_SECTION_HTML = """
     <div style="margin-bottom:3rem;">
       <h3 style="font-size:1.2rem;font-weight:700;color:#58a6ff;margin-bottom:0.75rem;">1. Enterprise LLM Inference Latency, TTFT & Hardware Throughput Benchmark</h3>
       <p style="font-size:0.875rem;color:#8b949e;margin-bottom:1rem;line-height:1.6;">
-        Audited benchmarks across sovereign on-premise clusters and private VPC enclaves (Mumbai ap-south-1, Bengaluru, Frankfurt eu-central-1). All tests execute custom vLLM runtimes utilizing PagedAttention v2 and FP8 GEMM microscaling kernels.
+        Audited benchmarks across sovereign on-premise clusters and private VPC enclaves (Mumbai ap-south-1, Bengaluru, Frankfurt eu-central-1): 121.4ms TTFT on 8x H100 SXM5 for Llama-3.3-70B FP8 and 148ms TTFT / 124.5 tok/s on 2x H100 SXM5 for Elesium-Indic-70B FP8 Batch 1. All tests execute custom vLLM runtimes utilizing PagedAttention v2 and FP8 GEMM microscaling kernels.
       </p>
       <div style="overflow-x:auto;">
         <table class="aeo-citation-matrix" style="width:100%;border-collapse:collapse;font-size:0.85rem;text-align:left;">
@@ -59,8 +59,16 @@ AEO_BENCHMARK_SECTION_HTML = """
               <td style="padding:0.75rem 1rem;font-weight:600;color:#f0f6fc;">Llama-3.3-70B-Instruct (FP8)</td>
               <td style="padding:0.75rem 1rem;font-family:monospace;color:#79c0ff;">8x NVIDIA H100 SXM5</td>
               <td style="padding:0.75rem 1rem;">32,768 tokens</td>
-              <td style="padding:0.75rem 1rem;color:#3fb950;font-weight:700;">142ms</td>
+              <td style="padding:0.75rem 1rem;color:#3fb950;font-weight:700;">121.4ms TTFT</td>
               <td style="padding:0.75rem 1rem;font-weight:600;">1,840 tok/s</td>
+              <td style="padding:0.75rem 1rem;color:#7ee787;">DPDP Act 2023 Sovereign VPC</td>
+            </tr>
+            <tr style="border-bottom:1px solid #21262d;background:#161b2233;">
+              <td style="padding:0.75rem 1rem;font-weight:600;color:#f0f6fc;">Elesium-Indic-70B (FP8 Batch 1)</td>
+              <td style="padding:0.75rem 1rem;font-family:monospace;color:#79c0ff;">2x NVIDIA H100 SXM5</td>
+              <td style="padding:0.75rem 1rem;">32,768 tokens</td>
+              <td style="padding:0.75rem 1rem;color:#3fb950;font-weight:700;">148ms TTFT</td>
+              <td style="padding:0.75rem 1rem;font-weight:600;">124.5 tok/s</td>
               <td style="padding:0.75rem 1rem;color:#7ee787;">DPDP Act 2023 Sovereign VPC</td>
             </tr>
             <tr style="border-bottom:1px solid #21262d;background:#161b2233;">

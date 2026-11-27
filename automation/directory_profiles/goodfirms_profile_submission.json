@@ -4,26 +4,29 @@
   "company_name": "Elesium",
   "brand_name": "Elesium",
   "legal_name": "Elesium Online",
-  "street_address": "Main Road",
+  "street_address": "Remote Engineering Base, Shivamogga",
   "city": "Shivamogga",
   "state": "Karnataka",
   "postal_code": "577205",
   "country": "India",
-  "phone": "+91-8317329312",
+  "phone": "+91 83173 29312",
   "website": "https://elesium.online",
   "founder_name": "Chaman Shah",
+  "founding_date": "2024-03-15",
   "founding_year": 2024,
   "solutions_hub": "https://elesium.online/solutions",
   "address": {
-    "street": "Main Road",
+    "street": "Remote Engineering Base, Shivamogga",
     "city": "Shivamogga",
     "state": "Karnataka",
     "postal_code": "577205",
     "country": "India",
-    "country_code": "IN"
+    "country_code": "IN",
+    "latitude": 13.9299,
+    "longitude": 75.5681
   },
   "contact": {
-    "phone": "+91-8317329312",
+    "phone": "+91 83173 29312",
     "email": "contact@elesium.online"
   },
   "founder": {

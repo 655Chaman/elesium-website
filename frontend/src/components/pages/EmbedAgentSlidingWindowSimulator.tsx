@@ -110,7 +110,7 @@ export default function EmbedAgentSlidingWindowSimulator() {
 
         <div>
           <span className="text-neutral-400 block mb-1">ATTENTION SINKS (ANCHORS)</span>
-          <div className="grid grid-cols-4 gap-1">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-1">
             {[2, 4, 8, 16].map((s) => (
               <button
                 key={s}

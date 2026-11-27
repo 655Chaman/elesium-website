@@ -58,7 +58,7 @@ export default function EmbedAgentVectorShardingSimulator() {
   }, [results.latencyTrace, results.p99QueryLatencyMs]);
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 sm:p-6 font-sans">
+    <div className="min-h-[100dvh] bg-black text-white p-4 sm:p-6 font-sans">
       <Helmet>
         <title>Vector DB Sharding &amp; HNSW Latency Simulator | Elesium Embed</title>
         <link rel="canonical" href="https://elesium.online/embed/agent-vector-db-sharding-simulator" />

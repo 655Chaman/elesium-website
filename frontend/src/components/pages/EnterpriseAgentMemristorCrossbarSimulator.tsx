@@ -111,7 +111,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[100dvh] bg-black text-neutral-100 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
         <title>Enterprise Autonomous Agent Analog Neuromorphic Crossbar Memristor Compute Simulator | Elesium</title>
         <meta
@@ -237,7 +237,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 <span className="text-neutral-300 font-medium">Crossbar Physical Dimension (N x N):</span>
                 <span className="font-mono text-white font-bold">{crossbarDimension} x {crossbarDimension}</span>
               </div>
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                 {([64, 128, 256, 512, 1024] as const).map(dim => (
                   <button
                     key={dim}
@@ -260,7 +260,7 @@ ${results.statusClassification === 'NEUROMORPHIC_SUPREMACY'
                 <span className="text-neutral-300 font-medium">Peripheral ADC / DAC Quantization:</span>
                 <span className="font-mono text-white font-bold">{adcDacResolutionBits}-bit resolution</span>
               </div>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {([4, 6, 8, 10] as const).map(bits => (
                   <button
                     key={bits}

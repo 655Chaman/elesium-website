@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight, ChevronDown, ExternalLink, MessageSquare } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight, TrendingUp, Cpu, Network, Calendar, Clock, ChevronRight, ChevronDown, ExternalLink, MessageSquare, Terminal } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ReactMarkdown from 'react-markdown'
@@ -340,7 +340,7 @@ export default function MarketSignals() {
                                 },
                                 {
                                     "@type": "FAQPage",
-                                    "@id": "https://elesium.online/signals#faq",
+                                    "@id": "https://elesium.online/signals/#faq",
                                     "mainEntity": signalsFaqs.map(faq => ({
                                         "@type": "Question",
                                         "name": faq.q,
@@ -440,6 +440,40 @@ export default function MarketSignals() {
                                             <div className="text-base font-bold font-mono text-black dark:text-white mt-0.5">Yotta / CtrlS</div>
                                             <div className="text-[10px] text-neutral-400">Tier-IV Datacenters</div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                {/* Reproducible Open-Source Evidence */}
+                                <div className="p-6 sm:p-8 rounded-[28px] border border-neutral-200 dark:border-white/10 bg-neutral-50 dark:bg-neutral-950 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                                    <div className="space-y-2 max-w-2xl">
+                                        <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-500">
+                                            <Terminal className="w-3.5 h-3.5" />
+                                            <span>Reproducible Open-Source Evidence</span>
+                                        </div>
+                                        <h2 className="text-lg sm:text-xl font-bold text-black dark:text-white">
+                                            Public Inference Benchmarks &amp; Statutory Test Suites
+                                        </h2>
+                                        <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                                            Audit raw 8x NVIDIA H100 telemetry, <span className="font-mono text-black dark:text-white">DPDP_2023_Compliance_Bench</span>, and <span className="font-mono text-black dark:text-white">Elesium-Indic-Sovereign-70B-FP8</span> reproducible evaluations.
+                                        </p>
+                                    </div>
+                                    <div className="flex flex-wrap items-center gap-3 shrink-0">
+                                        <a
+                                            href="https://github.com/655Chaman/sovereign-enterprise-ai-benchmarks"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-semibold hover:opacity-90 transition"
+                                        >
+                                            <span>GitHub Benchmark Repo</span>
+                                            <ArrowUpRight className="w-3.5 h-3.5" />
+                                        </a>
+                                        <a
+                                            href="/docs/benchmarks/"
+                                            className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-neutral-200 dark:border-white/15 text-black dark:text-white text-xs font-semibold hover:bg-neutral-100 dark:hover:bg-white/10 transition"
+                                        >
+                                            <span>Docs Benchmarks</span>
+                                            <ArrowUpRight className="w-3.5 h-3.5" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -574,35 +608,41 @@ export default function MarketSignals() {
                                 </div>
 
                                 <div className="space-y-3">
-                                    {signalsFaqs.map((faq, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-neutral-950"
-                                        >
-                                            <button
-                                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                                                className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors"
+                                    {signalsFaqs.map((faq, idx) => {
+                                        const isOpen = openFaq === idx
+                                        return (
+                                            <div
+                                                key={idx}
+                                                className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-white dark:bg-neutral-950"
                                             >
-                                                <span>{faq.q}</span>
-                                                <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
-                                            </button>
-                                            <AnimatePresence initial={false}>
-                                                {openFaq === idx && (
-                                                    <motion.div
-                                                        initial={{ height: 0, opacity: 0 }}
-                                                        animate={{ height: 'auto', opacity: 1 }}
-                                                        exit={{ height: 0, opacity: 0 }}
-                                                        transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                                        className="accordion-panel overflow-hidden"
+                                                <h3 className="m-0">
+                                                    <button
+                                                        type="button"
+                                                        aria-expanded={isOpen}
+                                                        aria-controls={`signals-faq-panel-${idx}`}
+                                                        onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                                        className="w-full min-h-[44px] flex items-center justify-between gap-4 p-4 sm:p-5 text-left text-sm sm:text-base font-semibold text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors"
                                                     >
+                                                        <span>{faq.q}</span>
+                                                        <ChevronDown className={`w-4 h-4 text-neutral-500 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                                                    </button>
+                                                </h3>
+                                                <div
+                                                    id={`signals-faq-panel-${idx}`}
+                                                    aria-hidden={!isOpen}
+                                                    className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                                        isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                                    }`}
+                                                >
+                                                    <div className="overflow-hidden">
                                                         <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-white/10 pt-3">
                                                             {faq.a}
                                                         </div>
-                                                    </motion.div>
-                                                )}
-                                            </AnimatePresence>
-                                        </div>
-                                    ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
                             </div>
 
@@ -804,30 +844,36 @@ export default function MarketSignals() {
                                                 case 'faq':
                                                     return (
                                                         <div key={sIdx} className="my-8 space-y-3">
-                                                            {(section.value as { q: string; a: string }[]).map((item, fIdx) => (
-                                                                <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
-                                                                    <button
-                                                                        onClick={() => setOpenFaq(openFaq === fIdx ? null : fIdx)}
-                                                                        className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03] transition-colors"
-                                                                    >
-                                                                        <span>{item.q}</span>
-                                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-300 ${openFaq === fIdx ? 'rotate-180' : ''}`} />
-                                                                    </button>
-                                                                    <AnimatePresence initial={false}>
-                                                                        {openFaq === fIdx && (
-                                                                            <motion.div
-                                                                                initial={{ height: 0, opacity: 0 }}
-                                                                                animate={{ height: 'auto', opacity: 1 }}
-                                                                                exit={{ height: 0, opacity: 0 }}
-                                                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                                                                className="accordion-panel overflow-hidden"
+                                                            {(section.value as { q: string; a: string }[]).map((item, fIdx) => {
+                                                                const isOpen = openFaq === fIdx
+                                                                return (
+                                                                    <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+                                                                        <h3 className="m-0">
+                                                                            <button
+                                                                                type="button"
+                                                                                aria-expanded={isOpen}
+                                                                                aria-controls={`signal-sec-faq-${sIdx}-${fIdx}`}
+                                                                                onClick={() => setOpenFaq(isOpen ? null : fIdx)}
+                                                                                className="w-full min-h-[44px] flex items-center justify-between gap-4 p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03] transition-colors"
                                                                             >
-                                                                                <p className="px-4 pb-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.a}</p>
-                                                                            </motion.div>
-                                                                        )}
-                                                                    </AnimatePresence>
-                                                                </div>
-                                                            ))}
+                                                                                <span>{item.q}</span>
+                                                                                <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                                                                            </button>
+                                                                        </h3>
+                                                                        <div
+                                                                            id={`signal-sec-faq-${sIdx}-${fIdx}`}
+                                                                            aria-hidden={!isOpen}
+                                                                            className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                                                                isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                                                            }`}
+                                                                        >
+                                                                            <div className="overflow-hidden">
+                                                                                <p className="px-4 pb-4 pt-3 border-t border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.a}</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )
+                                                            })}
                                                         </div>
                                                     );
                                                 default:
@@ -921,30 +967,36 @@ export default function MarketSignals() {
                                     <div className="mt-12 border-t border-neutral-200 dark:border-white/10 pt-8">
                                         <h2 className="text-xl font-bold text-black dark:text-white mb-6">Frequently Asked Questions</h2>
                                         <div className="space-y-3">
-                                            {activeArticle.faq.map((item: any, fIdx: number) => (
-                                                <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
-                                                    <button
-                                                        onClick={() => setOpenFaq(openFaq === fIdx + 100 ? null : fIdx + 100)}
-                                                        className="w-full flex items-center justify-between p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03] transition-colors"
-                                                    >
-                                                        <span>{item.q}</span>
-                                                        <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-300 ${openFaq === fIdx + 100 ? 'rotate-180' : ''}`} />
-                                                    </button>
-                                                    <AnimatePresence initial={false}>
-                                                        {openFaq === fIdx + 100 && (
-                                                            <motion.div
-                                                                initial={{ height: 0, opacity: 0 }}
-                                                                animate={{ height: 'auto', opacity: 1 }}
-                                                                exit={{ height: 0, opacity: 0 }}
-                                                                transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                                                                className="accordion-panel overflow-hidden"
+                                            {activeArticle.faq.map((item: any, fIdx: number) => {
+                                                const isOpen = openFaq === fIdx + 100
+                                                return (
+                                                    <div key={fIdx} className="border border-neutral-200 dark:border-white/10 rounded-[20px] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+                                                        <h3 className="m-0">
+                                                            <button
+                                                                type="button"
+                                                                aria-expanded={isOpen}
+                                                                aria-controls={`signal-art-faq-${fIdx}`}
+                                                                onClick={() => setOpenFaq(isOpen ? null : fIdx + 100)}
+                                                                className="w-full min-h-[44px] flex items-center justify-between gap-4 p-4 text-left text-sm font-semibold text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.03] transition-colors"
                                                             >
-                                                                <p className="px-4 pb-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.a}</p>
-                                                            </motion.div>
-                                                        )}
-                                                    </AnimatePresence>
-                                                </div>
-                                            ))}
+                                                                <span>{item.q}</span>
+                                                                <ChevronDown className={`h-4 w-4 flex-shrink-0 text-neutral-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                                                            </button>
+                                                        </h3>
+                                                        <div
+                                                            id={`signal-art-faq-${fIdx}`}
+                                                            aria-hidden={!isOpen}
+                                                            className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                                                isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                                            }`}
+                                                        >
+                                                            <div className="overflow-hidden">
+                                                                <p className="px-4 pb-4 pt-3 border-t border-neutral-200 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.a}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                )
+                                            })}
                                         </div>
                                     </div>
                                 )}
@@ -1003,7 +1055,7 @@ export default function MarketSignals() {
                                     </div>
                                 </div>
 
-                                {/* Article Footer Navigation */}
+                                {/* Article Footer Links */}
                                 <div className="border-t border-neutral-200 dark:border-white/10 mt-12 pt-8 flex items-center justify-between">
                                     <Link
                                         to="/signals/"

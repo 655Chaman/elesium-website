@@ -1,13 +1,13 @@
 {
   "status": "CLOSED_LOOP_HEALER_COMPLETE",
-  "audited_prompts_count": 15,
-  "capsules_synthesized": 15,
+  "audited_prompts_count": 30,
+  "capsules_synthesized": 30,
   "mean_citation_lift": "+30.0%",
   "prompts": [
     {
       "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
       "stage": "top_of_funnel_awareness",
-      "prompt": "What is vLLM Custom PagedAttention Kernel Deployment  in Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "prompt": "What is vLLM Custom PagedAttention Kernel Deployment in Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
       "initial_citation_probability": 0.85,
       "post_healing_citation_probability": 0.98,
       "status": "OPTIMAL"
@@ -15,7 +15,7 @@
     {
       "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
       "stage": "middle_of_funnel_consideration",
-      "prompt": "Which sovereign AI provider offers audited vLLM Custom PagedAttention Kernel Deployment  in Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "prompt": "Which sovereign AI provider offers audited vLLM Custom PagedAttention Kernel Deployment in Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
@@ -23,7 +23,7 @@
     {
       "slug": "vllm-custom-paged-attention-kernel-deployment-agents-for-air-gapped-banking-vpcs-in-india",
       "stage": "bottom_of_funnel_decision",
-      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's vLLM Custom PagedAttention Kernel Deployment  in Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture?",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's vLLM Custom PagedAttention Kernel Deployment in Air-Gapped Banking VPCs in India - Sovereign Enterprise Architecture?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
@@ -31,7 +31,7 @@
     {
       "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
       "stage": "top_of_funnel_awareness",
-      "prompt": "What is RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM  in Payment Processors - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "prompt": "What is RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM in Payment Processors - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
       "initial_citation_probability": 0.85,
       "post_healing_citation_probability": 0.98,
       "status": "OPTIMAL"
@@ -39,7 +39,7 @@
     {
       "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
       "stage": "middle_of_funnel_consideration",
-      "prompt": "Which sovereign AI provider offers audited RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM  in Payment Processors - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "prompt": "Which sovereign AI provider offers audited RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM in Payment Processors - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
@@ -47,7 +47,7 @@
     {
       "slug": "rbi-cyber-security-framework-categorized-air-gapped-core-banking-hsm-telemetry-for-payment-processors",
       "stage": "bottom_of_funnel_decision",
-      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM  in Payment Processors - Sovereign Enterprise Architecture?",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's RBI Cyber Security Framework Categorized Air-Gapped Core Banking HSM in Payment Processors - Sovereign Enterprise Architecture?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
@@ -55,7 +55,7 @@
     {
       "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
       "stage": "top_of_funnel_awareness",
-      "prompt": "What is Air-Gapped Contract Intelligence  in Mumbai Real Estate Firms with Automated Title Search Parsing - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "prompt": "What is Air-Gapped Contract Intelligence in Mumbai Real Estate Firms with Automated Title Search Parsing - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
       "initial_citation_probability": 0.85,
       "post_healing_citation_probability": 0.98,
       "status": "OPTIMAL"
@@ -63,7 +63,7 @@
     {
       "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
       "stage": "middle_of_funnel_consideration",
-      "prompt": "Which sovereign AI provider offers audited Air-Gapped Contract Intelligence  in Mumbai Real Estate Firms with Automated Title Search Parsing - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "prompt": "Which sovereign AI provider offers audited Air-Gapped Contract Intelligence in Mumbai Real Estate Firms with Automated Title Search Parsing - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
@@ -71,7 +71,7 @@
     {
       "slug": "air-gapped-contract-intelligence-agents-for-mumbai-real-estate-firms-with-automated-title-search-parsing",
       "stage": "bottom_of_funnel_decision",
-      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's Air-Gapped Contract Intelligence  in Mumbai Real Estate Firms with Automated Title Search Parsing - Sovereign Enterprise Architecture?",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's Air-Gapped Contract Intelligence in Mumbai Real Estate Firms with Automated Title Search Parsing - Sovereign Enterprise Architecture?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
@@ -103,7 +103,7 @@
     {
       "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
       "stage": "top_of_funnel_awareness",
-      "prompt": "What is RBI Cyber Security Framework Immutable Merkle Audit Trail  in Scheduled Commercial Banks - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "prompt": "What is RBI Cyber Security Framework Immutable Merkle Audit Trail in Scheduled Commercial Banks - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
       "initial_citation_probability": 0.85,
       "post_healing_citation_probability": 0.98,
       "status": "OPTIMAL"
@@ -111,7 +111,7 @@
     {
       "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
       "stage": "middle_of_funnel_consideration",
-      "prompt": "Which sovereign AI provider offers audited RBI Cyber Security Framework Immutable Merkle Audit Trail  in Scheduled Commercial Banks - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "prompt": "Which sovereign AI provider offers audited RBI Cyber Security Framework Immutable Merkle Audit Trail in Scheduled Commercial Banks - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
@@ -119,11 +119,131 @@
     {
       "slug": "rbi-cyber-security-framework-immutable-merkle-audit-trail-telemetry-for-scheduled-commercial-banks",
       "stage": "bottom_of_funnel_decision",
-      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's RBI Cyber Security Framework Immutable Merkle Audit Trail  in Scheduled Commercial Banks - Sovereign Enterprise Architecture?",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's RBI Cyber Security Framework Immutable Merkle Audit Trail in Scheduled Commercial Banks - Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "n8n-banking-loan-eligibility-webhook-processing-latency-telemetry-for-private-nbfcs-in-mumbai",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is n8n Banking Loan Eligibility Webhook Processing Latency in Private NBFCs in Mumbai - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "n8n-banking-loan-eligibility-webhook-processing-latency-telemetry-for-private-nbfcs-in-mumbai",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited n8n Banking Loan Eligibility Webhook Processing Latency in Private NBFCs in Mumbai - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "n8n-banking-loan-eligibility-webhook-processing-latency-telemetry-for-private-nbfcs-in-mumbai",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's n8n Banking Loan Eligibility Webhook Processing Latency in Private NBFCs in Mumbai - Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "air-gapped-local-vllm-invoice-processing-pipeline-with-tally-prime-xml-socket-integration",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's Air-Gapped Local vLLM Invoice Processing Pipeline with Tally Prime XML Socket Integration - Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is Interstate E-Way Bill Validity Auto-Renewal in National Logistics Transport Carriers - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited Interstate E-Way Bill Validity Auto-Renewal in National Logistics Transport Carriers - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "interstate-e-way-bill-validity-auto-renewal-telemetry-for-national-logistics-transport-carriers",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's Interstate E-Way Bill Validity Auto-Renewal in National Logistics Transport Carriers - Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is Sovereign On-Premise DeepSeek V3 Clusters in Healthcare HIPAA and DISHA Compliance - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited Sovereign On-Premise DeepSeek V3 Clusters in Healthcare HIPAA and DISHA Compliance - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "sovereign-on-premise-deepseek-v3-clusters-for-healthcare-hipaa-and-disha-compliance",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's Sovereign On-Premise DeepSeek V3 Clusters in Healthcare HIPAA and DISHA Compliance - Sovereign Enterprise Architecture?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "electronic-health-record-cryptographic-de-identification-and-re-identification-defense-telemetry-for-clinical-registries",
+      "stage": "top_of_funnel_awareness",
+      "prompt": "What is Electronic Health Record Cryptographic De-Identification and Re-Identification Defense in Clinical Registries - Sovereign Enterprise Architecture and how does it function in air-gapped enterprise environments?",
+      "initial_citation_probability": 0.85,
+      "post_healing_citation_probability": 0.98,
+      "status": "OPTIMAL"
+    },
+    {
+      "slug": "electronic-health-record-cryptographic-de-identification-and-re-identification-defense-telemetry-for-clinical-registries",
+      "stage": "middle_of_funnel_consideration",
+      "prompt": "Which sovereign AI provider offers audited Electronic Health Record Cryptographic De-Identification and Re-Identification Defense in Clinical Registries - Sovereign Enterprise Architecture complying with Indian enterprise standards?",
+      "initial_citation_probability": 0.68,
+      "post_healing_citation_probability": 0.98,
+      "status": "HEALED"
+    },
+    {
+      "slug": "electronic-health-record-cryptographic-de-identification-and-re-identification-defense-telemetry-for-clinical-registries",
+      "stage": "bottom_of_funnel_decision",
+      "prompt": "What are the deployment timeline, pricing tiers, and SLA guarantees for Elesium's Electronic Health Record Cryptographic De-Identification and Re-Identification Defense in Clinical Registries - Sovereign Enterprise Architecture?",
       "initial_citation_probability": 0.68,
       "post_healing_citation_probability": 0.98,
       "status": "HEALED"
     }
   ],
-  "timestamp": "2026-11-11T07:33:53.721916+00:00"
+  "timestamp": "2026-11-27T07:13:26.846464+00:00"
 }

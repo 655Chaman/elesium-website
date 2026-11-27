@@ -102,7 +102,7 @@ export default function InternationalGeoBanner() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 16, scale: 0.97 }}
                     transition={{ type: 'spring', stiffness: 280, damping: 28 }}
-                    className="fixed bottom-5 right-5 left-5 sm:left-auto sm:max-w-md z-50"
+                    className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 left-4 sm:right-5 sm:left-auto sm:max-w-md z-50"
                 >
                     <div className="p-5 sm:p-6 rounded-[28px] bg-white/95 dark:bg-black/95 backdrop-blur-md border border-neutral-200 dark:border-white/10 shadow-2xl text-black dark:text-white flex flex-col gap-3">
                         <div className="flex items-start justify-between gap-3">
@@ -120,9 +120,10 @@ export default function InternationalGeoBanner() {
                                 </div>
                             </div>
                             <button
+                                type="button"
                                 onClick={handleDismiss}
                                 aria-label="Dismiss recommendation"
-                                className="text-neutral-500 hover:text-black dark:hover:text-white p-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors active:scale-[0.97]"
+                                className="min-w-[44px] min-h-[44px] flex items-center justify-center -mr-2 -mt-2 text-neutral-500 hover:text-black dark:hover:text-white rounded-full hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors active:scale-[0.97] shrink-0"
                             >
                                 <X className="w-4 h-4" />
                             </button>
@@ -132,18 +133,19 @@ export default function InternationalGeoBanner() {
                             {recommendation.subtitle}
                         </p>
 
-                        <div className="flex items-center gap-2.5 pt-1">
+                        <div className="flex flex-col min-[380px]:flex-row items-stretch min-[380px]:items-center gap-2.5 pt-1">
                             <Link
                                 to={recommendation.path}
                                 onClick={() => setIsVisible(false)}
-                                className="flex-1 py-2.5 px-4 rounded-full bg-black text-white dark:bg-white dark:text-black font-semibold text-xs transition active:scale-[0.97] hover:opacity-90 flex items-center justify-center gap-1.5"
+                                className="flex-1 py-2.5 px-4 rounded-full bg-black text-white dark:bg-white dark:text-black font-semibold text-xs transition active:scale-[0.97] hover:opacity-90 flex items-center justify-center gap-1.5 text-center"
                             >
                                 <span>Switch to {recommendation.regionName} Portal</span>
-                                <ArrowRight className="w-3.5 h-3.5" />
+                                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                             </Link>
                             <button
+                                type="button"
                                 onClick={handleDismiss}
-                                className="py-2.5 px-4 rounded-full border border-neutral-200 dark:border-white/10 text-neutral-500 hover:text-black dark:hover:text-white text-xs font-medium transition active:scale-[0.97]"
+                                className="py-2.5 px-4 rounded-full border border-neutral-200 dark:border-white/10 text-neutral-500 hover:text-black dark:hover:text-white text-xs font-medium transition active:scale-[0.97] text-center"
                             >
                                 Stay on Global
                             </button>
