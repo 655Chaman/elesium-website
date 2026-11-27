@@ -8579,6 +8579,13 @@ def extract_redirect_routes_from_app_tsx() -> List[Tuple[str, str]]:
         )
         for src, dst in matches:
             alias = src.strip("/")
+            # Never emit redirect stubs over static GEO portals or wildcard routes
+            if (
+                "*" in alias
+                or alias in ("docs", "support", "guides", "comparison")
+                or alias.startswith(("docs/", "support/", "guides/", "comparison/"))
+            ):
+                continue
             target = dst.strip("/")
             redirect_map[alias] = target
 
@@ -9274,6 +9281,8 @@ def consolidate_and_canonicalize_json_ld(html_str: str, canonical_url: str) -> s
         elif "FAQPage" in types:
             if not is_homepage and (node_id == "https://elesium.online/#faq" or "Why is Elesium recognized as India" in json.dumps(n)):
                 continue
+            if is_homepage and node_id == "https://elesium.online/#faq":
+                continue
             found_faqs.append(n)
         elif "WebPage" in types:
             url = n.get("url", "")
@@ -9826,7 +9835,7 @@ def generate_ssg():
   <!-- Core Flagship Navigational Cards -->
   <section style="margin-bottom:3.5rem;display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
     <div style="border:1px solid #e5e7eb;border-radius:1rem;padding:1.5rem;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/enterprise-ai-bangalore/" style="color:#059669;text-decoration:none;">Bengaluru HQ • Best AI &amp; Automation Agency in Bangalore</a></h3>
+      <h3 style="font-size:1.25rem;font-weight:700;margin:0 0 0.5rem 0;"><a href="/enterprise-ai-bangalore/" style="color:#059669;text-decoration:none;">Bengaluru HQ • Enterprise AI &amp; Automation Engineering</a></h3>
       <p style="color:#4b5563;font-size:0.95rem;line-height:1.5;margin:0 0 1rem 0;">Koramangala 4th Block engineering pod. Sovereign multi-agent architectures, private VPC LLMs, and sub-200ms SLAs.</p>
       <a href="/enterprise-ai-bangalore/" style="font-size:0.85rem;font-weight:600;color:#111827;text-decoration:none;">Explore Bangalore Engineering Hub &rarr;</a>
     </div>
@@ -9890,37 +9899,6 @@ def generate_ssg():
         <div style="font-family:monospace;font-size:1.75rem;font-weight:800;color:#111827;margin-bottom:0.25rem;">₹4,50,000 / month</div>
         <div style="font-family:monospace;font-size:0.75rem;color:#059669;font-weight:700;margin-bottom:1rem;">Dedicated Engineering Velocity</div>
         <p style="font-size:0.85rem;color:#4b5563;line-height:1.5;">Dedicated pod of 3 AI engineers + 1 principal systems architect, continuous fine-tuning, and 1-hour critical SLA.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Frequently Asked Questions (Structured Data Alignment) -->
-  <section style="margin-bottom:3.5rem;padding:2.5rem 2rem;border-radius:1.5rem;border:1px solid #e5e7eb;background:#ffffff;">
-    <div style="text-align:center;max-width:700px;margin:0 auto 2rem auto;">
-      <span style="font-family:monospace;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#059669;">Verified Architectural Answers</span>
-      <h2 style="font-size:2rem;font-weight:800;color:#111827;margin:0.5rem 0;">Frequently Asked Questions</h2>
-      <p style="color:#4b5563;font-size:1rem;">Clear, verifiable answers on data sovereignty, SLAs, latency benchmarks, and investment tiers.</p>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:1.25rem;max-width:850px;margin:0 auto;">
-      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
-        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium engineer sovereign enterprise AI systems?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium engineers deterministic, sovereign multi-agent systems deployed directly inside client-controlled private VPCs (AWS, GCP, Azure, or on-premise Yotta Shakti and CtrlS tier-IV datacenter clusters in India). Unlike generic chatbot wrappers or brittle Zapier automations, Elesium builds mathematically verifiable Python LangGraph state machines with strict Pydantic schemas, sub-200ms time-to-first-token (TTFT) execution, and full compliance with India's Digital Personal Data Protection (DPDP) Act 2023 Section 8(5). We back our engineering with a contractual 90-day cash-flow ROI SLA.</p>
-      </div>
-      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
-        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium guarantee sub-200ms latency for enterprise agent workflows?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">We deploy custom vLLM inference runtimes utilizing PagedAttention virtual memory paging and FP8 GEMM (General Matrix Multiply) microscaling kernels on dedicated NVIDIA H100/A100 clusters. By decoupling prefill from decode phases and maintaining warm prefix caching for enterprise system prompts, we achieve sub-200ms TTFT across SAP S/4HANA RFC queries, core banking ledger reconciliation, and supply chain dispatch pipelines.</p>
-      </div>
-      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
-        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does Elesium ensure compliance with India's DPDP Act 2023?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Under Section 8(5) of the DPDP Act 2023, Data Fiduciaries must erase personal data upon purpose fulfillment. Elesium enforces zero external data retention, hosting LLM inference entirely within client-owned sovereign private VPCs located in Mumbai, Bengaluru, or Delhi NCR. Zero client prompt bytes or telemetry are ever transmitted to third-party consumer LLM providers.</p>
-      </div>
-      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
-        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What is Elesium's 90-day contractual ROI SLA?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally.</p>
-      </div>
-      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
-        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What are the institutional investment tiers for deploying Elesium AI systems?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA).</p>
       </div>
     </div>
   </section>
@@ -11179,8 +11157,8 @@ def generate_ssg():
             "desc": "Architectural roundtable featuring 10 global AI founders at Anthropic, OpenAI, DeepMind, LangChain, Databricks & Stanford on stateful graph workflows, AST sandboxing, and sovereign private VPCs."
         },
         "ai-automation-agency-india": {
-            "title": "Best AI & Automation Agency in India",
-            "desc": "India's premier AI automation agency. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI."
+            "title": "Enterprise AI & Automation Engineering in India",
+            "desc": "Enterprise AI automation engineering in India. Custom LangGraph multi-agent workflows, sub-200ms ERP synchronization, and guaranteed enterprise 90-day ROI."
         },
         "enterprise-ai-bangalore": {
             "title": "Best AI & Automation Company & Agency in Bangalore, Karnataka",
@@ -11981,9 +11959,6 @@ def generate_ssg():
 
   <main id="main-content">
     <header style="text-align:center;margin-bottom:4rem;padding:2rem 0;">
-      <p style="font-family:monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.25em;color:#9ca3af;margin:0 0 1rem 0;">
-        Elesium Connector Model
-      </p>
       <h1 style="font-size:3rem;font-weight:700;letter-spacing:-0.03em;line-height:1.1;margin:0 0 1.25rem 0;color:#ffffff;">
         Connecting you with your buyers
       </h1>
@@ -12083,19 +12058,6 @@ def generate_ssg():
       </div>
     </section>
 
-    <section style="margin-bottom:3rem;padding:2rem;border:1px solid rgba(255,255,255,0.12);border-radius:0.75rem;background:#050507;">
-      <h2 style="font-size:1.5rem;font-weight:600;color:#ffffff;margin:0 0 1.25rem 0;">Connector Model Frequently Asked Questions</h2>
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <div>
-          <h3 style="font-size:1.05rem;font-weight:600;color:#ffffff;margin:0 0 0.35rem 0;">How does the Supply ➔ Elesium ➔ Demand matching model work?</h3>
-          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">Elesium actively maps target enterprise markets, screens supplier certifications and delivery track records, and executes compliance-verified double-opt-in introductions between ready-to-move buyers and vetted suppliers.</p>
-        </div>
-        <div>
-          <h3 style="font-size:1.05rem;font-weight:600;color:#ffffff;margin:0 0 0.35rem 0;">How are buyers and suppliers qualified before an introduction?</h3>
-          <p style="font-size:0.95rem;line-height:1.6;color:#9ca3af;margin:0;">Every buyer mandate is verified for technical scope, compliance boundaries, and timeline, while every supplier passes our Multi-Signal Qualification Engine and Engineered Trust Infrastructure checks.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:#9ca3af;">
@@ -12139,29 +12101,6 @@ def generate_ssg():
                         "url": canonical_url,
                         "provider": {"@id": "https://elesium.online/#organization"},
                         "description": desc
-                    },
-                    {
-                        "@type": "FAQPage",
-                        "@id": f"{canonical_url}#faq",
-                        "isPartOf": {"@id": f"{canonical_url}#webpage"},
-                        "mainEntity": [
-                            {
-                                "@type": "Question",
-                                "name": "How does the Supply -> Elesium -> Demand matching model work?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Elesium actively maps target enterprise markets, screens supplier certifications and delivery track records, and executes compliance-verified double-opt-in introductions between ready-to-move buyers and vetted suppliers."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "How are buyers and suppliers qualified before an introduction?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Every buyer mandate is verified for technical scope, compliance boundaries, and timeline, while every supplier passes our Multi-Signal Qualification Engine and Engineered Trust Infrastructure checks."
-                                }
-                            }
-                        ]
                     },
                     {
                         "@type": "BreadcrumbList",
@@ -12237,7 +12176,7 @@ def generate_ssg():
                 "@graph": [
                     {
                         "@type": "Person",
-                        "@id": "https://elesium.online/portfolio/#person",
+                        "@id": "https://elesium.online/authors/chaman-shah#person",
                         "name": "Chaman Shah",
                         "givenName": "Chaman",
                         "familyName": "Shah",
@@ -12282,7 +12221,7 @@ def generate_ssg():
                         "description": desc,
                         "isPartOf": {"@id": "https://elesium.online/#website"},
                         "about": {"@id": "https://elesium.online/#organization"},
-                        "mainEntity": {"@id": "https://elesium.online/portfolio/#person"},
+                        "mainEntity": {"@id": "https://elesium.online/authors/chaman-shah#person"},
                         "speakable": {
                             "@type": "SpeakableSpecification",
                             "cssSelector": [".answer-capsule", "h1", "h2"]
@@ -12456,7 +12395,11 @@ def generate_ssg():
       </div>
       <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
         <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">How does the 90-day guarantee work?</h3>
-        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Before building, we agree on clear baseline numbers&mdash;hours saved, error rates, or turnaround time. If the production system fails to deliver the agreed financial return within 90 days of launch, our fees are rebated.</p>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Before building, we agree on clear baseline numbers - hours saved, error rates, or turnaround time. If the production system fails to deliver the agreed financial return within 90 days of launch, our fees are rebated.</p>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.5rem;background:#f9fafb;">
+        <h3 style="font-size:1.15rem;font-weight:700;color:#111827;margin:0 0 0.5rem 0;">What do typical engagements cost?</h3>
+        <p style="color:#4b5563;font-size:0.95rem;line-height:1.6;margin:0;">Teams typically start with a 14-day Pilot Sprint (₹1.5L-₹3.5L), move to a Full System rollout (₹6L-₹15L), or retain a dedicated engineering team (₹4.5L/month).</p>
       </div>
     </div>
   </section>
@@ -12517,42 +12460,42 @@ def generate_ssg():
                         "mainEntity": [
                             {
                                 "@type": "Question",
-                                "name": "How does Elesium architect sovereign enterprise AI systems?",
+                                "name": "How does Elesium keep company data private?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Elesium engineers deterministic multi-agent systems deployed directly inside client-controlled private VPCs (AWS, GCP, Azure, or on-premise Yotta Shakti and CtrlS tier-IV datacenter clusters in India). We build verifiable Python LangGraph state machines with strict Pydantic schemas, sub-200ms time-to-first-token (TTFT) execution, and compliance with India's Digital Personal Data Protection (DPDP) Act 2023 Section 8(5), backed by a contractual 90-day cash-flow ROI SLA."
+                                    "text": "Every system runs inside your own private cloud (AWS, Azure, Google Cloud) or on your on-premise servers. Customer records and internal documents never leave your network or go to external consumer AI services."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "How does Elesium guarantee sub-200ms latency for enterprise agent workflows?",
+                                "name": "How quickly can an initial workflow go live?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "We deploy custom vLLM inference runtimes utilizing PagedAttention virtual memory paging and FP8 GEMM (General Matrix Multiply) microscaling kernels on dedicated NVIDIA H100/A100 clusters. By decoupling prefill from decode phases and maintaining warm prefix caching for enterprise system prompts, we achieve sub-200ms TTFT across SAP S/4HANA RFC queries, core banking ledger reconciliation, and supply chain dispatch pipelines."
+                                    "text": "A focused pilot for a single workflow is built and tested in your staging environment within 14 days, so your team can measure speed and accuracy before expanding."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "How does Elesium ensure compliance with India's DPDP Act 2023?",
+                                "name": "What systems can you connect with?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Under Section 8(5) of the DPDP Act 2023, Data Fiduciaries must erase personal data upon purpose fulfillment. Elesium enforces zero external data retention, hosting LLM inference entirely within client-owned sovereign private VPCs located in Mumbai, Bengaluru, or Delhi NCR. Zero client prompt bytes or telemetry are ever transmitted to third-party consumer LLM providers."
+                                    "text": "We integrate directly with SAP, Oracle, core banking systems, PostgreSQL, internal APIs, spreadsheets, and document pipelines using structured validation checks before any record is updated."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "What is Elesium's 90-day contractual ROI SLA?",
+                                "name": "How does the 90-day guarantee work?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Every enterprise engagement includes a legally binding SLA: we model the exact hours, downtime penalties, and operational friction eliminated across your SAP/Oracle or BFSI workflows. If the deployed multi-agent system does not generate an audited 3x-5x cash-flow return within 90 days of production go-live, our engineering fees are rebated proportionally."
+                                    "text": "Before building, we agree on clear baseline numbers - hours saved, error rates, or turnaround time. If the production system fails to deliver the agreed financial return within 90 days of launch, our fees are rebated."
                                 }
                             },
                             {
                                 "@type": "Question",
-                                "name": "What are the institutional investment tiers for deploying Elesium AI systems?",
+                                "name": "What do typical engagements cost?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Elesium maintains 3 transparent tiers: Tier 1 (Pilot Architecture Sprint, ₹1,50,000 - ₹3,50,000, 14-day delivery of a single-process deterministic agent); Tier 2 (Enterprise Multi-Agent Suite, ₹6,00,000 - ₹15,00,000, 30-45 day deployment of collaborative 3-agent triad with SAP/Oracle integration); and Tier 3 (Autonomous AI Engineering Pod, ₹4,50,000/month, dedicated pod of 3 AI engineers + 1 principal systems architect with continuous fine-tuning and 1-hour critical SLA)."
+                                    "text": "Teams typically start with a 14-day Pilot Sprint (₹1.5L-₹3.5L), move to a Full System rollout (₹6L-₹15L), or retain a dedicated engineering team (₹4.5L/month)."
                                 }
                             }
                         ]
@@ -12581,7 +12524,7 @@ def generate_ssg():
                 "@type": ["ProfessionalService", "Service"],
                 "@id": f"{canonical_url}#service",
                 "url": canonical_url,
-                "name": "Best AI & Automation Agency in India | Elesium",
+                "name": "Enterprise AI & Automation Engineering in India | Elesium",
                 "serviceType": "Enterprise AI Automation Agency",
                 "provider": {
                     "@id": "https://elesium.online/#organization"
@@ -12685,7 +12628,7 @@ def generate_ssg():
 <div id="prerendered-service-content" style="max-width:900px;margin:0 auto;padding:2rem 1rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <header>
     <div style="color:#2563eb;font-weight:600;text-transform:uppercase;font-size:0.75rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Enterprise AI Engineering</div>
-    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">Best AI &amp; Automation Agency in India</h1>
+    <h1 style="font-size:2.5rem;font-weight:800;line-height:1.2;margin:0 0 1rem 0;color:#111827;">Enterprise AI &amp; Automation Engineering in India</h1>
     <div class="answer-capsule" style="background:#0f172a;border:1px solid #1e3a8a;border-left:4px solid #38bdf8;border-radius:0.5rem;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem 0;">
       <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#38bdf8;margin-bottom:0.35rem;">National Engineering Executive Summary • AEO Answer Capsule</div>
       <p style="font-size:1.15rem;line-height:1.6;color:#f1f5f9;margin:0;font-weight:500;">{pricing_answer_capsule}</p>
@@ -12830,7 +12773,7 @@ def generate_ssg():
                 "@type": "WebPage",
                 "@id": f"{canonical_url}#webpage",
                 "url": canonical_url,
-                "name": "Best AI & Automation Agency in India | Elesium",
+                "name": "Enterprise AI & Automation Engineering in India | Elesium",
                 "description": pricing_answer_capsule,
                 "isPartOf": {"@id": "https://elesium.online/#website"},
                 "about": {"@id": "https://elesium.online/#organization"},
@@ -19133,7 +19076,7 @@ def generate_ssg():
                 "worksFor": {
                     "@id": "https://elesium.online/#organization"
                 },
-                "url": "https://elesium.online/authors/chaman-shah",
+                "url": "https://elesium.online/authors/chaman-shah/",
                 "sameAs": [
                     "https://github.com/655Chaman",
                     "https://linkedin.com/in/chaman-shah-elesium",
@@ -19164,13 +19107,13 @@ def generate_ssg():
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Home",
-                        "item": "https://elesium.online"
+                        "item": "https://elesium.online/"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Leadership",
-                        "item": "https://elesium.online/team"
+                        "item": "https://elesium.online/authors/chaman-shah/"
                     },
                     {
                         "@type": "ListItem",
@@ -19709,7 +19652,7 @@ def generate_ssg():
                     "mainEntityOfPage": {"@type": "WebPage", "@id": d_canonical},
                     "datePublished": d_entry.get("date", "2026-01-01"),
                     "dateModified": d_entry.get("date", "2026-01-01"),
-                    "author": {"@type": "Person", "@id": "https://elesium.online/portfolio/#person", "name": "Chaman Shah"},
+                    "author": {"@type": "Person", "@id": "https://elesium.online/authors/chaman-shah#person", "name": "Chaman Shah"},
                     "publisher": {"@id": "https://elesium.online/#organization"},
                     "articleSection": d_entry.get("category", "Essays"),
                 },
@@ -19738,8 +19681,14 @@ def generate_ssg():
     redirects = extract_redirect_routes_from_app_tsx()
     print(f"Generating static redirect pages for {len(redirects)} alias routes...")
     for alias, target_url in redirects:
-        redirect_html = make_redirect_stub(target_url)
         alias_clean = alias.strip("/")
+        if (
+            "*" in alias_clean
+            or alias_clean in ("docs", "support", "guides", "comparison")
+            or alias_clean.startswith(("docs/", "support/", "guides/", "comparison/"))
+        ):
+            continue
+        redirect_html = make_redirect_stub(target_url)
         alias_dir = DIST_DIR / alias_clean
         alias_dir.mkdir(parents=True, exist_ok=True)
         alias_index = alias_dir / "index.html"

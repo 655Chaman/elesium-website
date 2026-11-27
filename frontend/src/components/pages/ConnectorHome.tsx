@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, ArrowUpRight, Menu, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Menu, X, ChevronDown } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import logo from '../../assets/LOGO_EMBLEM.png'
 import AgentIntro from '../sections/AgentIntro'
@@ -15,12 +15,82 @@ const heroSpring = {
     mass: 0.9,
 }
 
+const connectorFaqs = [
+    {
+        q: 'How does the Elesium Connector Model qualify buyers and suppliers?',
+        a: 'Elesium verifies active enterprise budgets, technical delivery capacity, and compliance readiness before making a direct introduction, eliminating cold outreach and unqualified vendor lists.',
+    },
+    {
+        q: 'Which enterprise sectors does Elesium Connector cover?',
+        a: 'We broker qualified B2B introductions across enterprise AI systems, industrial supply chains, precision manufacturing, BFSI infrastructure, and cross-border commercial procurement.',
+    },
+    {
+        q: 'How do buyers or suppliers start an introduction mandate?',
+        a: 'Share your technical requirements, budget range, and delivery timeline via WhatsApp or connect@elesium.online to initiate direct qualification with our Bengaluru desk.',
+    },
+]
+
 export default function ConnectorHome() {
     const { openWhatsApp, WhatsAppModal } = useWhatsApp()
     const [mobileOpen, setMobileOpen] = useState(false)
+    const [openFaq, setOpenFaq] = useState<number | null>(0)
+
+    const connectorSchema = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'Service',
+                '@id': 'https://elesium.online/connector/#service',
+                name: 'Elesium Connector Model',
+                serviceType: 'Qualified B2B Enterprise Partner Introductions & Deal Flow',
+                url: 'https://elesium.online/connector/',
+                description:
+                    'Find the right partners faster with context, qualification, and trust. Elesium Connector connects verified enterprise buyers and suppliers directly.',
+                provider: {
+                    '@id': 'https://elesium.online/#organization',
+                },
+            },
+            {
+                '@type': 'BreadcrumbList',
+                '@id': 'https://elesium.online/connector/#breadcrumb',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Portal', item: 'https://elesium.online/' },
+                    { '@type': 'ListItem', position: 2, name: 'Connector Model', item: 'https://elesium.online/connector/' },
+                ],
+            },
+            {
+                '@type': 'FAQPage',
+                '@id': 'https://elesium.online/connector/#faq',
+                mainEntity: connectorFaqs.map((faq) => ({
+                    '@type': 'Question',
+                    name: faq.q,
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: faq.a,
+                    },
+                })),
+            },
+        ],
+    }
+
+    useEffect(() => {
+        if (!mobileOpen) return
+        const prevOverflow = document.body.style.overflow
+        document.body.style.overflow = 'hidden'
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                setMobileOpen(false)
+            }
+        }
+        window.addEventListener('keydown', handleKeyDown)
+        return () => {
+            document.body.style.overflow = prevOverflow
+            window.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [mobileOpen])
 
     return (
-        <div className="dark min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans overflow-x-clip">
+        <div className="dark min-h-[100dvh] bg-black text-white selection:bg-white selection:text-black font-sans overflow-x-clip">
             <WhatsAppModal />
             <Helmet>
                 <title>Elesium Connector Model | Direct B2B Introductions &amp; Deal Flow</title>
@@ -30,6 +100,7 @@ export default function ConnectorHome() {
                 />
                 <link rel="canonical" href="https://elesium.online/connector/" />
                 <meta name="robots" content="index, follow" />
+                <script type="application/ld+json">{JSON.stringify(connectorSchema)}</script>
             </Helmet>
 
             {/* Symmetrical 3-Column Monochrome Header */}
@@ -104,8 +175,10 @@ export default function ConnectorHome() {
                         <button
                             type="button"
                             onClick={() => setMobileOpen(prev => !prev)}
-                            aria-label="Toggle connector navigation"
-                            className="p-2 rounded-full text-neutral-300 hover:text-white hover:bg-white/10 active:scale-[0.97] transition"
+                            aria-label="Toggle connector menu"
+                            aria-expanded={mobileOpen}
+                            aria-controls="connector-mobile-drawer"
+                            className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-neutral-300 hover:text-white hover:bg-white/10 active:scale-[0.97] transition"
                         >
                             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                         </button>
@@ -116,30 +189,31 @@ export default function ConnectorHome() {
                 <AnimatePresence>
                     {mobileOpen && (
                         <motion.div
+                            id="connector-mobile-drawer"
                             initial={{ opacity: 0, scale: 0.97, y: -6 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.97, y: -6 }}
                             transition={{ type: 'spring', stiffness: 340, damping: 30, mass: 0.8 }}
-                            className="md:hidden origin-top bg-black/95 backdrop-blur-xl border-b border-white/10 rounded-b-[28px] px-6 py-6 flex flex-col gap-2"
+                            className="md:hidden origin-top bg-black/95 backdrop-blur-xl border-b border-white/10 rounded-b-[28px] px-6 py-6 flex flex-col gap-1.5 relative z-50"
                         >
                             <a
                                 href="#model"
                                 onClick={() => setMobileOpen(false)}
-                                className="px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
+                                className="min-h-[44px] flex items-center px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                             >
                                 Model
                             </a>
                             <a
                                 href="#platform"
                                 onClick={() => setMobileOpen(false)}
-                                className="px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
+                                className="min-h-[44px] flex items-center px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                             >
                                 Process
                             </a>
                             <a
                                 href="#engage"
                                 onClick={() => setMobileOpen(false)}
-                                className="px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
+                                className="min-h-[44px] flex items-center px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                             >
                                 Connect
                             </a>
@@ -147,7 +221,7 @@ export default function ConnectorHome() {
                             <Link
                                 to="/ai/"
                                 onClick={() => setMobileOpen(false)}
-                                className="px-4 py-2.5 rounded-full border border-white/15 text-sm text-white flex items-center justify-between hover:bg-white/10 transition active:scale-[0.97]"
+                                className="min-h-[44px] px-4 py-2.5 rounded-full border border-white/15 text-sm text-white flex items-center justify-between hover:bg-white/10 transition active:scale-[0.97]"
                             >
                                 <span>AI &amp; Automation</span>
                                 <ArrowUpRight className="w-4 h-4" />
@@ -155,14 +229,14 @@ export default function ConnectorHome() {
                             <Link
                                 to="/portfolio/"
                                 onClick={() => setMobileOpen(false)}
-                                className="px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
+                                className="min-h-[44px] flex items-center px-4 py-2.5 rounded-full text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                             >
                                 Portfolio
                             </Link>
                             <Link
                                 to="/"
                                 onClick={() => setMobileOpen(false)}
-                                className="px-4 py-2.5 rounded-full text-sm text-neutral-400 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
+                                className="min-h-[44px] flex items-center px-4 py-2.5 rounded-full text-sm text-neutral-400 hover:text-white hover:bg-white/10 transition active:scale-[0.97]"
                             >
                                 Portal
                             </Link>
@@ -170,6 +244,19 @@ export default function ConnectorHome() {
                     )}
                 </AnimatePresence>
             </header>
+
+            <AnimatePresence>
+                {mobileOpen && (
+                    <motion.div
+                        aria-hidden="true"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setMobileOpen(false)}
+                        className="fixed inset-0 top-14 z-40 bg-black/60 md:hidden"
+                    />
+                )}
+            </AnimatePresence>
 
             <main>
                 {/* Symmetrical Calm-Luxury Connector Hero */}
@@ -190,10 +277,6 @@ export default function ConnectorHome() {
                         transition={heroSpring}
                         className="relative z-10 max-w-3xl mx-auto text-center py-16 md:py-24"
                     >
-                        <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/12 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-8">
-                            Elesium Connector Model
-                        </p>
-
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-[-0.03em] text-white leading-[1.08] mb-6">
                             Connecting you with your buyers
                         </h1>
@@ -222,7 +305,7 @@ export default function ConnectorHome() {
                 </section>
 
                 {/* Scroll Section 1: Supply -> Elesium <- Demand */}
-                <div id="model" className="border-t border-white/10">
+                <div id="model" className="scroll-mt-16 border-t border-white/10">
                     <AgentIntro />
                 </div>
 
@@ -232,7 +315,7 @@ export default function ConnectorHome() {
                 </div>
 
                 {/* Symmetrical Buyer & Supplier Cards */}
-                <section id="engage" className="py-24 md:py-32 px-6 bg-black border-t border-white/10">
+                <section id="engage" className="scroll-mt-16 py-24 md:py-32 px-6 bg-black border-t border-white/10">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
                             <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/12 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-5">
@@ -254,7 +337,7 @@ export default function ConnectorHome() {
                                         For Buyers
                                     </h3>
                                     <p className="text-sm font-light text-neutral-400 leading-relaxed mb-9">
-                                        We don&apos;t push random agencies or lists. Tell us what you need, your requirements, and your timeline—we check who can actually deliver it and introduce you only when the fit is clear.
+                                        We don&apos;t push random agencies or lists. Tell us what you need, your requirements, and your timeline - we check who can actually deliver it and introduce you only when the fit is clear.
                                     </p>
                                 </div>
 
@@ -286,7 +369,7 @@ export default function ConnectorHome() {
                                         For Suppliers
                                     </h3>
                                     <p className="text-sm font-light text-neutral-400 leading-relaxed mb-9">
-                                        Access beats cold outreach. Share what you deliver best and who you are strongest with—we connect you directly with buyers holding active budgets and clear projects.
+                                        Access beats cold outreach. Share what you deliver best and who you are strongest with - we connect you directly with buyers holding active budgets and clear projects.
                                     </p>
                                 </div>
 
@@ -307,6 +390,57 @@ export default function ConnectorHome() {
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Direct-Answer Q&A */}
+                <section className="py-20 px-6 bg-black border-t border-white/10">
+                    <div className="max-w-3xl mx-auto">
+                        <div className="text-center mb-10">
+                            <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/12 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-4">
+                                Direct Answers
+                            </p>
+                            <h2 className="text-2xl sm:text-3xl font-medium tracking-[-0.02em] text-white">
+                                Frequently Asked Questions
+                            </h2>
+                        </div>
+                        <div className="space-y-3">
+                            {connectorFaqs.map((faq, idx) => {
+                                const isOpen = openFaq === idx
+                                return (
+                                    <div
+                                        key={faq.q}
+                                        className="rounded-[24px] border border-white/12 bg-neutral-950/90 overflow-hidden"
+                                    >
+                                        <h3 className="m-0">
+                                            <button
+                                                type="button"
+                                                aria-expanded={isOpen}
+                                                aria-controls={`connector-faq-panel-${idx}`}
+                                                onClick={() => setOpenFaq(isOpen ? null : idx)}
+                                                className="w-full min-h-[44px] flex items-center justify-between gap-4 p-5 text-left text-sm sm:text-base font-medium text-white hover:bg-white/[0.03] transition-colors"
+                                            >
+                                                <span>{faq.q}</span>
+                                                <ChevronDown className={`w-4 h-4 text-neutral-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-white' : ''}`} />
+                                            </button>
+                                        </h3>
+                                        <div
+                                            id={`connector-faq-panel-${idx}`}
+                                            aria-hidden={!isOpen}
+                                            className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                                                isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                            }`}
+                                        >
+                                            <div className="overflow-hidden">
+                                                <p className="px-5 pb-5 pt-3 border-t border-white/10 text-sm font-light text-neutral-300 leading-relaxed">
+                                                    {faq.a}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                 </section>
