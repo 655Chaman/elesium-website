@@ -127,8 +127,8 @@ export default function PortfolioEssay() {
                 transition={{ type: 'spring', stiffness: 280, damping: 26 }}
                 className="relative z-10 flex-1 w-full max-w-2xl mx-auto px-6 pt-28 pb-24"
             >
-                <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full border border-white/10 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.16em] text-neutral-400 mb-6">
-                    <span className="text-white">{entry.category}</span>
+                <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-500 mb-5">
+                    <span className="text-neutral-300">{entry.category}</span>
                     <span>&middot;</span>
                     <span>{entry.readTime}</span>
                     {entry.date && (

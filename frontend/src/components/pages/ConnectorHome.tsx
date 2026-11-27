@@ -318,7 +318,7 @@ export default function ConnectorHome() {
                 <section id="engage" className="scroll-mt-16 py-24 md:py-32 px-6 bg-black border-t border-white/10">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
-                            <p className="inline-flex items-center px-4 py-1.5 rounded-[18px] border border-white/12 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.28em] text-neutral-400 mb-5">
+                            <p className="text-[11px] font-mono uppercase tracking-[0.24em] text-neutral-500 mb-4">
                                 Get Started
                             </p>
                             <h2 className="text-3xl sm:text-4xl font-medium tracking-[-0.025em] text-white">
@@ -330,7 +330,7 @@ export default function ConnectorHome() {
                             {/* Left: For Buyers */}
                             <div className="bg-neutral-950/90 rounded-[32px] border border-white/12 p-8 md:p-12 flex flex-col justify-between transition-colors duration-300 hover:border-white/25">
                                 <div>
-                                    <span className="inline-flex items-center px-3.5 py-1 rounded-[18px] border border-white/10 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-400 mb-5">
+                                    <span className="block text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500 mb-4">
                                         Demand
                                     </span>
                                     <h3 className="text-2xl font-medium text-white tracking-[-0.02em] mb-4">
@@ -362,7 +362,7 @@ export default function ConnectorHome() {
                             {/* Right: For Suppliers */}
                             <div className="bg-neutral-950/90 rounded-[32px] border border-white/12 p-8 md:p-12 flex flex-col justify-between transition-colors duration-300 hover:border-white/25">
                                 <div>
-                                    <span className="inline-flex items-center px-3.5 py-1 rounded-[18px] border border-white/10 bg-white/[0.03] text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-400 mb-5">
+                                    <span className="block text-[11px] font-mono uppercase tracking-[0.22em] text-neutral-500 mb-4">
                                         Supply
                                     </span>
                                     <h3 className="text-2xl font-medium text-white tracking-[-0.02em] mb-4">
